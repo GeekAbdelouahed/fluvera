@@ -5,10 +5,6 @@ import 'package:uix/src/helpers/uix_converter.dart';
 part 'uix.freezed.dart';
 part 'uix.g.dart';
 
-abstract class BaseUIX {
-  UIX get uix;
-}
-
 @freezed
 abstract class UIX with _$UIX {
   const factory UIX.sizedBox({
