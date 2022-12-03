@@ -6,7 +6,7 @@ class UIXContainer extends UIX<ContainerAttributes> {
   @override
   Widget build() {
     return Container(
-      key: attributes.key,
+      key: attributes.key != null ? Key(attributes.key) : null,
       color: attributes.color,
       height: attributes.height,
       width: attributes.width,

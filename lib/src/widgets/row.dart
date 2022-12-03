@@ -6,7 +6,7 @@ class UIXRow extends UIX<RowAttributes> {
   @override
   Widget build() {
     return Row(
-      key: attributes.key,
+      key: attributes.key != null ? Key(attributes.key) : null,
       children: attributes.children,
     );
   }
