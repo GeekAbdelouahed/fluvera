@@ -25,7 +25,7 @@ extension UIXExtension on UIX {
 
 extension ColorExtension on String {
   Color get toColor {
-    var hexColor = replaceAll('#', '');
+    String hexColor = replaceAll('#', '');
     if (hexColor.length == 6) {
       hexColor = 'FF$hexColor';
     }
