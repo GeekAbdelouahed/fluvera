@@ -11,7 +11,7 @@ class UIXContainer extends StatelessWidget implements BaseUIX {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: attributes.color?.toColor,
+      color: attributes.color,
       height: attributes.height,
       width: attributes.width,
       child: attributes.child,

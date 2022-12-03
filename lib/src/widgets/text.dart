@@ -12,6 +12,12 @@ class UIXText extends StatelessWidget implements BaseUIX {
   Widget build(BuildContext context) {
     return Text(
       attributes.text,
+      style: TextStyle(
+        color: attributes.style?.color,
+        fontSize: attributes.style?.fontSize,
+        fontWeight: attributes.style?.fontWeight,
+        overflow: attributes.style?.overflow,
+      ),
     );
   }
 

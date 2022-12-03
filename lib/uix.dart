@@ -1,6 +1,6 @@
 library uix;
 
-export 'src/helpers/extensions.dart';
+export 'src/attributes/uix/uix.dart';
+export 'src/converters/converters.dart';
 export 'src/helpers/uix_extension.dart';
-export 'src/models/uix.dart';
 export 'src/widgets/widgets.dart';

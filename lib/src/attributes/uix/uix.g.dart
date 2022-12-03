@@ -46,7 +46,8 @@ _$ContainerAttributes _$$ContainerAttributesFromJson(
       type: json['type'] as String,
       height: (json['height'] as num?)?.toDouble(),
       width: (json['width'] as num?)?.toDouble(),
-      color: json['color'] as String?,
+      color: _$JsonConverterFromJson<String, dynamic>(
+          json['color'], const ColorConverter().fromJson),
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
           json['child'], const WidgetConverter().fromJson),
     );
@@ -58,7 +59,7 @@ Map<String, dynamic> _$$ContainerAttributesToJson(
       'type': instance.type,
       'height': instance.height,
       'width': instance.width,
-      'color': instance.color,
+      'color': const ColorConverter().toJson(instance.color),
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
           instance.child, const WidgetConverter().toJson),
     };
@@ -68,6 +69,9 @@ _$TextAttributes _$$TextAttributesFromJson(Map<String, dynamic> json) =>
       key: json['key'],
       type: json['type'] as String,
       text: json['text'] as String,
+      style: json['style'] == null
+          ? null
+          : UIXTextStyle.fromJson(json['style'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$TextAttributesToJson(_$TextAttributes instance) =>
@@ -75,6 +79,7 @@ Map<String, dynamic> _$$TextAttributesToJson(_$TextAttributes instance) =>
       'key': instance.key,
       'type': instance.type,
       'text': instance.text,
+      'style': instance.style,
     };
 
 _$ColumnAttributes _$$ColumnAttributesFromJson(Map<String, dynamic> json) =>

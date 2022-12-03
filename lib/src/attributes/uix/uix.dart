@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uix/src/helpers/uix_converter.dart';
+import 'package:uix/src/attributes/text_style.dart/text_style.dart';
+import 'package:uix/uix.dart';
 
 part 'uix.freezed.dart';
 part 'uix.g.dart';
 
 @freezed
-abstract class UIX with _$UIX {
+class UIX with _$UIX {
   const factory UIX.sizedBox({
     dynamic key,
     required String type,
@@ -20,7 +21,7 @@ abstract class UIX with _$UIX {
     required String type,
     double? height,
     double? width,
-    String? color,
+    @ColorConverter() Color? color,
     @WidgetConverter() Widget? child,
   }) = ContainerAttributes;
 
@@ -28,6 +29,7 @@ abstract class UIX with _$UIX {
     dynamic key,
     required String type,
     required String text,
+    UIXTextStyle? style,
   }) = TextAttributes;
 
   const factory UIX.column({
