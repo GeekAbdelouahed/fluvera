@@ -7,7 +7,7 @@ class UIXWidgetConverter
   @override
   Widget fromJson(Map<String, dynamic> json) {
     final uix = UIXAttributes.fromJson(json);
-    return uix.toWidget();
+    return uix.build();
   }
 
   @override

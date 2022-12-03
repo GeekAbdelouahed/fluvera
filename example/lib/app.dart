@@ -9,7 +9,7 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: UIXAttributes.fromJson(json).toWidget(),
+      body: UIXAttributes.fromJson(json).build(),
     );
   }
 }
