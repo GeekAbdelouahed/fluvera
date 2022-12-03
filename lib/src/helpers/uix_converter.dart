@@ -26,8 +26,8 @@ class WidgetsConverter
   List<Widget> fromJson(List<Map<String, dynamic>> jsonList) {
     List<Widget> widgets = [];
     for (final json in jsonList) {
-      final uix = const WidgetConverter().fromJson(json);
-      widgets.add(uix);
+      final widget = const WidgetConverter().fromJson(json);
+      widgets.add(widget);
     }
     return widgets;
   }
