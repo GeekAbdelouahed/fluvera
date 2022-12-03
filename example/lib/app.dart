@@ -8,6 +8,8 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: UIX.fromJson(json).toWidget);
+    return Scaffold(
+      body: UIX.fromJson(json).toWidget,
+    );
   }
 }
