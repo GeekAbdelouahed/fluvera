@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uix/src/models/widget_x.dart';
-import 'package:uix/src/widgets/widget_x.dart';
+import 'package:uix/src/widgets/i_widget_x.dart';
 
 class UIXSizedBox extends StatelessWidget implements IWidgetX {
   const UIXSizedBox({
