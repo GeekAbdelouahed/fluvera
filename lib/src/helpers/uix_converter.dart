@@ -33,10 +33,10 @@ class WidgetsConverter
   }
 
   @override
-  List<Map<String, dynamic>> toJson(List<Widget> dataList) {
+  List<Map<String, dynamic>> toJson(List<Widget> widgetList) {
     List<Map<String, dynamic>> jsonList = [];
-    for (final data in dataList) {
-      final json = const WidgetConverter().toJson(data);
+    for (final widget in widgetList) {
+      final json = const WidgetConverter().toJson(widget);
       jsonList.add(json);
     }
     return jsonList;
