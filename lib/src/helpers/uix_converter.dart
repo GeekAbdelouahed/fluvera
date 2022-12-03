@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uix/src/helpers/extension.dart';
-import 'package:uix/src/models/uix.dart';
+import 'package:uix/uix.dart';
 
 class WidgetConverter implements JsonConverter<Widget, Map<String, dynamic>> {
   const WidgetConverter();
@@ -25,7 +24,6 @@ class WidgetsConverter
 
   @override
   List<Widget> fromJson(List<Map<String, dynamic>> jsonList) {
-
     List<Widget> widgets = [];
     for (final json in jsonList) {
       final uix = const WidgetConverter().fromJson(json);
