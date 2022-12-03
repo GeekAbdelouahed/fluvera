@@ -13,8 +13,8 @@ class WidgetConverter implements JsonConverter<Widget, Map<String, dynamic>> {
 
   @override
   Map<String, dynamic> toJson(Widget widget) {
-    final uix = widget as BaseUIX;
-    return uix.uix.toJson();
+    final uixWidget = widget as BaseUIX;
+    return uixWidget.uix.toJson();
   }
 }
 
