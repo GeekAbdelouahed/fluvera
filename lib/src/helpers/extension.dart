@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:uix/uix.dart';
 
-extension UIXExtension on UIXAttributes {
+extension UIXAttributeExtension on UIXAttributes {
   Widget toWidget() {
-    return map(
+    return map<UIX>(
       sizedBox: (attributes) => UIXSizedBox(attributes),
       container: (attributes) => UIXContainer(attributes),
       text: (attributes) => UIXText(attributes),

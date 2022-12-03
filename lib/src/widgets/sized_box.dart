@@ -1,9 +1,7 @@
 part of 'widgets.dart';
 
-class UIXSizedBox implements BaseUIX {
-  const UIXSizedBox(this.attrs);
-
-  final SizedBoxAttributes attrs;
+class UIXSizedBox extends UIX<SizedBoxAttributes> {
+  const UIXSizedBox(attrs) : super(attrs);
 
   @override
   Widget build() {
@@ -14,7 +12,4 @@ class UIXSizedBox implements BaseUIX {
       child: attrs.child,
     );
   }
-
-  @override
-  UIXAttributes get attributes => attrs;
 }

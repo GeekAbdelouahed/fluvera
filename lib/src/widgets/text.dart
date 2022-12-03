@@ -1,9 +1,7 @@
 part of 'widgets.dart';
 
-class UIXText implements BaseUIX {
-  const UIXText(this.attrs);
-
-  final TextAttributes attrs;
+class UIXText extends UIX<TextAttributes> {
+  const UIXText(attrs) : super(attrs);
 
   @override
   Widget build() {
@@ -18,7 +16,4 @@ class UIXText implements BaseUIX {
       ),
     );
   }
-
-  @override
-  UIXAttributes get attributes => attrs;
 }

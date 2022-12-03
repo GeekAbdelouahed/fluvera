@@ -12,7 +12,7 @@ class UIXWidgetConverter
 
   @override
   Map<String, dynamic> toJson(Widget data) {
-    final uixWidget = data as BaseUIX;
+    final uixWidget = data as UIX;
     return uixWidget.attributes.toJson();
   }
 }

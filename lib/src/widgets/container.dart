@@ -1,9 +1,7 @@
 part of 'widgets.dart';
 
-class UIXContainer implements BaseUIX {
-  const UIXContainer(this.attrs);
-
-  final ContainerAttributes attrs;
+class UIXContainer extends UIX<ContainerAttributes> {
+  const UIXContainer(attrs) : super(attrs);
 
   @override
   Widget build() {
@@ -15,7 +13,4 @@ class UIXContainer implements BaseUIX {
       child: attrs.child,
     );
   }
-
-  @override
-  UIXAttributes get attributes => attrs;
 }

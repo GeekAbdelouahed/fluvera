@@ -1,9 +1,7 @@
 part of 'widgets.dart';
 
-class UIXRow implements BaseUIX {
-  const UIXRow(this.attrs);
-
-  final RowAttributes attrs;
+class UIXRow extends UIX<RowAttributes> {
+  const UIXRow(attrs) : super(attrs);
 
   @override
   Widget build() {
@@ -12,7 +10,4 @@ class UIXRow implements BaseUIX {
       children: attrs.children,
     );
   }
-
-  @override
-  UIXAttributes get attributes => attrs;
 }

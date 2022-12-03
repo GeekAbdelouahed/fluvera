@@ -1,9 +1,7 @@
 part of 'widgets.dart';
 
-class UIXColumn implements BaseUIX {
-  const UIXColumn(this.attrs);
-
-  final ColumnAttributes attrs;
+class UIXColumn extends UIX<ColumnAttributes> {
+  const UIXColumn(attrs) : super(attrs);
 
   @override
   Widget build() {
@@ -12,7 +10,4 @@ class UIXColumn implements BaseUIX {
       children: attrs.children,
     );
   }
-
-  @override
-  UIXAttributes get attributes => attrs;
 }

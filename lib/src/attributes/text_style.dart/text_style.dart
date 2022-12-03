@@ -8,10 +8,10 @@ part 'text_style.g.dart';
 @freezed
 class UIXTextStyle with _$UIXTextStyle {
   const factory UIXTextStyle({
-    @UIXColorConverter() Color? color,
     double? fontSize,
-    @UIXFontWeightConverter() FontWeight? fontWeight,
     TextOverflow? overflow,
+    @UIXColorConverter() Color? color,
+    @UIXFontWeightConverter() FontWeight? fontWeight,
   }) = _UIXTextStyle;
 
   factory UIXTextStyle.fromJson(Map<String, dynamic> json) =>
