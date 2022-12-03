@@ -8,27 +8,21 @@ part of 'text_style.dart';
 
 _$_UIXTextStyle _$$_UIXTextStyleFromJson(Map<String, dynamic> json) =>
     _$_UIXTextStyle(
+      fontSize: (json['fontSize'] as num?)?.toDouble(),
+      overflow: $enumDecodeNullable(_$TextOverflowEnumMap, json['overflow']),
       color: _$JsonConverterFromJson<String, dynamic>(
           json['color'], const UIXColorConverter().fromJson),
-      fontSize: (json['fontSize'] as num?)?.toDouble(),
       fontWeight: _$JsonConverterFromJson<String, dynamic>(
           json['fontWeight'], const UIXFontWeightConverter().fromJson),
-      overflow: $enumDecodeNullable(_$TextOverflowEnumMap, json['overflow']),
     );
 
 Map<String, dynamic> _$$_UIXTextStyleToJson(_$_UIXTextStyle instance) =>
     <String, dynamic>{
-      'color': const UIXColorConverter().toJson(instance.color),
       'fontSize': instance.fontSize,
-      'fontWeight': const UIXFontWeightConverter().toJson(instance.fontWeight),
       'overflow': _$TextOverflowEnumMap[instance.overflow],
+      'color': const UIXColorConverter().toJson(instance.color),
+      'fontWeight': const UIXFontWeightConverter().toJson(instance.fontWeight),
     };
-
-Value? _$JsonConverterFromJson<Json, Value>(
-  Object? json,
-  Value? Function(Json json) fromJson,
-) =>
-    json == null ? null : fromJson(json as Json);
 
 const _$TextOverflowEnumMap = {
   TextOverflow.clip: 'clip',
@@ -36,3 +30,9 @@ const _$TextOverflowEnumMap = {
   TextOverflow.ellipsis: 'ellipsis',
   TextOverflow.visible: 'visible',
 };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);

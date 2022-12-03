@@ -26,6 +26,8 @@ UIXAttributes _$UIXAttributesFromJson(Map<String, dynamic> json) {
       return ColumnAttributes.fromJson(json);
     case 'Row':
       return RowAttributes.fromJson(json);
+    case 'ElevatedButton':
+      return ElevatedButtonAttributes.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'type', 'UIXAttributes',
@@ -59,6 +61,9 @@ mixin _$UIXAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        elevatedButton,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -83,6 +88,9 @@ mixin _$UIXAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -107,6 +115,9 @@ mixin _$UIXAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -117,6 +128,7 @@ mixin _$UIXAttributes {
     required TResult Function(TextAttributes value) text,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(ElevatedButtonAttributes value) elevatedButton,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -126,6 +138,7 @@ mixin _$UIXAttributes {
     TResult? Function(TextAttributes value)? text,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -135,6 +148,7 @@ mixin _$UIXAttributes {
     TResult Function(TextAttributes value)? text,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(RowAttributes value)? row,
+    TResult Function(ElevatedButtonAttributes value)? elevatedButton,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -317,6 +331,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        elevatedButton,
   }) {
     return sizedBox(key, type, height, width, child);
   }
@@ -344,6 +361,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
   }) {
     return sizedBox?.call(key, type, height, width, child);
   }
@@ -371,6 +391,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
     required TResult orElse(),
   }) {
     if (sizedBox != null) {
@@ -387,6 +410,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     required TResult Function(TextAttributes value) text,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(ElevatedButtonAttributes value) elevatedButton,
   }) {
     return sizedBox(this);
   }
@@ -399,6 +423,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult? Function(TextAttributes value)? text,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
   }) {
     return sizedBox?.call(this);
   }
@@ -411,6 +436,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult Function(TextAttributes value)? text,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(RowAttributes value)? row,
+    TResult Function(ElevatedButtonAttributes value)? elevatedButton,
     required TResult orElse(),
   }) {
     if (sizedBox != null) {
@@ -604,6 +630,9 @@ class _$ContainerAttributes implements ContainerAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        elevatedButton,
   }) {
     return container(key, type, height, width, color, child);
   }
@@ -631,6 +660,9 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
   }) {
     return container?.call(key, type, height, width, color, child);
   }
@@ -658,6 +690,9 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
     required TResult orElse(),
   }) {
     if (container != null) {
@@ -674,6 +709,7 @@ class _$ContainerAttributes implements ContainerAttributes {
     required TResult Function(TextAttributes value) text,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(ElevatedButtonAttributes value) elevatedButton,
   }) {
     return container(this);
   }
@@ -686,6 +722,7 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult? Function(TextAttributes value)? text,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
   }) {
     return container?.call(this);
   }
@@ -698,6 +735,7 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult Function(TextAttributes value)? text,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(RowAttributes value)? row,
+    TResult Function(ElevatedButtonAttributes value)? elevatedButton,
     required TResult orElse(),
   }) {
     if (container != null) {
@@ -872,6 +910,9 @@ class _$TextAttributes implements TextAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        elevatedButton,
   }) {
     return text(key, type, this.text, style);
   }
@@ -899,6 +940,9 @@ class _$TextAttributes implements TextAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
   }) {
     return text?.call(key, type, this.text, style);
   }
@@ -926,6 +970,9 @@ class _$TextAttributes implements TextAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
     required TResult orElse(),
   }) {
     if (text != null) {
@@ -942,6 +989,7 @@ class _$TextAttributes implements TextAttributes {
     required TResult Function(TextAttributes value) text,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(ElevatedButtonAttributes value) elevatedButton,
   }) {
     return text(this);
   }
@@ -954,6 +1002,7 @@ class _$TextAttributes implements TextAttributes {
     TResult? Function(TextAttributes value)? text,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
   }) {
     return text?.call(this);
   }
@@ -966,6 +1015,7 @@ class _$TextAttributes implements TextAttributes {
     TResult Function(TextAttributes value)? text,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(RowAttributes value)? row,
+    TResult Function(ElevatedButtonAttributes value)? elevatedButton,
     required TResult orElse(),
   }) {
     if (text != null) {
@@ -1125,6 +1175,9 @@ class _$ColumnAttributes implements ColumnAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        elevatedButton,
   }) {
     return column(key, type, children);
   }
@@ -1152,6 +1205,9 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
   }) {
     return column?.call(key, type, children);
   }
@@ -1179,6 +1235,9 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
     required TResult orElse(),
   }) {
     if (column != null) {
@@ -1195,6 +1254,7 @@ class _$ColumnAttributes implements ColumnAttributes {
     required TResult Function(TextAttributes value) text,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(ElevatedButtonAttributes value) elevatedButton,
   }) {
     return column(this);
   }
@@ -1207,6 +1267,7 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult? Function(TextAttributes value)? text,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
   }) {
     return column?.call(this);
   }
@@ -1219,6 +1280,7 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult Function(TextAttributes value)? text,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(RowAttributes value)? row,
+    TResult Function(ElevatedButtonAttributes value)? elevatedButton,
     required TResult orElse(),
   }) {
     if (column != null) {
@@ -1378,6 +1440,9 @@ class _$RowAttributes implements RowAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        elevatedButton,
   }) {
     return row(key, type, children);
   }
@@ -1405,6 +1470,9 @@ class _$RowAttributes implements RowAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
   }) {
     return row?.call(key, type, children);
   }
@@ -1432,6 +1500,9 @@ class _$RowAttributes implements RowAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
     required TResult orElse(),
   }) {
     if (row != null) {
@@ -1448,6 +1519,7 @@ class _$RowAttributes implements RowAttributes {
     required TResult Function(TextAttributes value) text,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(ElevatedButtonAttributes value) elevatedButton,
   }) {
     return row(this);
   }
@@ -1460,6 +1532,7 @@ class _$RowAttributes implements RowAttributes {
     TResult? Function(TextAttributes value)? text,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
   }) {
     return row?.call(this);
   }
@@ -1472,6 +1545,7 @@ class _$RowAttributes implements RowAttributes {
     TResult Function(TextAttributes value)? text,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(RowAttributes value)? row,
+    TResult Function(ElevatedButtonAttributes value)? elevatedButton,
     required TResult orElse(),
   }) {
     if (row != null) {
@@ -1508,4 +1582,258 @@ abstract class RowAttributes implements UIXAttributes {
   @JsonKey(ignore: true)
   _$$RowAttributesCopyWith<_$RowAttributes> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ElevatedButtonAttributesCopyWith<$Res>
+    implements $UIXAttributesCopyWith<$Res> {
+  factory _$$ElevatedButtonAttributesCopyWith(_$ElevatedButtonAttributes value,
+          $Res Function(_$ElevatedButtonAttributes) then) =
+      __$$ElevatedButtonAttributesCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({dynamic key, String type, @UIXWidgetConverter() Widget? child});
+}
+
+/// @nodoc
+class __$$ElevatedButtonAttributesCopyWithImpl<$Res>
+    extends _$UIXAttributesCopyWithImpl<$Res, _$ElevatedButtonAttributes>
+    implements _$$ElevatedButtonAttributesCopyWith<$Res> {
+  __$$ElevatedButtonAttributesCopyWithImpl(_$ElevatedButtonAttributes _value,
+      $Res Function(_$ElevatedButtonAttributes) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? type = null,
+    Object? child = freezed,
+  }) {
+    return _then(_$ElevatedButtonAttributes(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      child: freezed == child
+          ? _value.child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
+  const _$ElevatedButtonAttributes(
+      {this.key, required this.type, @UIXWidgetConverter() this.child});
+
+  factory _$ElevatedButtonAttributes.fromJson(Map<String, dynamic> json) =>
+      _$$ElevatedButtonAttributesFromJson(json);
+
+  @override
+  final dynamic key;
+  @override
+  final String type;
+  @override
+  @UIXWidgetConverter()
+  final Widget? child;
+
+  @override
+  String toString() {
+    return 'UIXAttributes.elevatedButton(key: $key, type: $type, child: $child)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ElevatedButtonAttributes &&
+            const DeepCollectionEquality().equals(other.key, key) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.child, child) || other.child == child));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(key), type, child);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ElevatedButtonAttributesCopyWith<_$ElevatedButtonAttributes>
+      get copyWith =>
+          __$$ElevatedButtonAttributesCopyWithImpl<_$ElevatedButtonAttributes>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(dynamic key, String type, double? height,
+            double? width, @UIXWidgetConverter() Widget? child)
+        sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)
+        container,
+    required TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)
+        text,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        column,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        elevatedButton,
+  }) {
+    return elevatedButton(key, type, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult? Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+  }) {
+    return elevatedButton?.call(key, type, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    required TResult orElse(),
+  }) {
+    if (elevatedButton != null) {
+      return elevatedButton(key, type, child);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ContainerAttributes value) container,
+    required TResult Function(TextAttributes value) text,
+    required TResult Function(ColumnAttributes value) column,
+    required TResult Function(RowAttributes value) row,
+    required TResult Function(ElevatedButtonAttributes value) elevatedButton,
+  }) {
+    return elevatedButton(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ContainerAttributes value)? container,
+    TResult? Function(TextAttributes value)? text,
+    TResult? Function(ColumnAttributes value)? column,
+    TResult? Function(RowAttributes value)? row,
+    TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
+  }) {
+    return elevatedButton?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ContainerAttributes value)? container,
+    TResult Function(TextAttributes value)? text,
+    TResult Function(ColumnAttributes value)? column,
+    TResult Function(RowAttributes value)? row,
+    TResult Function(ElevatedButtonAttributes value)? elevatedButton,
+    required TResult orElse(),
+  }) {
+    if (elevatedButton != null) {
+      return elevatedButton(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ElevatedButtonAttributesToJson(
+      this,
+    );
+  }
+}
+
+abstract class ElevatedButtonAttributes implements UIXAttributes {
+  const factory ElevatedButtonAttributes(
+      {final dynamic key,
+      required final String type,
+      @UIXWidgetConverter() final Widget? child}) = _$ElevatedButtonAttributes;
+
+  factory ElevatedButtonAttributes.fromJson(Map<String, dynamic> json) =
+      _$ElevatedButtonAttributes.fromJson;
+
+  @override
+  dynamic get key;
+  @override
+  String get type;
+  @UIXWidgetConverter()
+  Widget? get child;
+  @override
+  @JsonKey(ignore: true)
+  _$$ElevatedButtonAttributesCopyWith<_$ElevatedButtonAttributes>
+      get copyWith => throw _privateConstructorUsedError;
 }

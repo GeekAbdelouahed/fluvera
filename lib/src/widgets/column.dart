@@ -1,13 +1,13 @@
 part of 'widgets.dart';
 
 class UIXColumn extends UIX<ColumnAttributes> {
-  const UIXColumn(attrs) : super(attrs);
+  const UIXColumn(ColumnAttributes attributes) : super(attributes);
 
   @override
   Widget build() {
     return Column(
-      key: attrs.key,
-      children: attrs.children,
+      key: attributes.key,
+      children: attributes.children,
     );
   }
 }

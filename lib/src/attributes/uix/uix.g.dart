@@ -111,3 +111,21 @@ Map<String, dynamic> _$$RowAttributesToJson(_$RowAttributes instance) =>
       'type': instance.type,
       'children': const UIXWidgetsConverter().toJson(instance.children),
     };
+
+_$ElevatedButtonAttributes _$$ElevatedButtonAttributesFromJson(
+        Map<String, dynamic> json) =>
+    _$ElevatedButtonAttributes(
+      key: json['key'],
+      type: json['type'] as String,
+      child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
+          json['child'], const UIXWidgetConverter().fromJson),
+    );
+
+Map<String, dynamic> _$$ElevatedButtonAttributesToJson(
+        _$ElevatedButtonAttributes instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'type': instance.type,
+      'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
+          instance.child, const UIXWidgetConverter().toJson),
+    };

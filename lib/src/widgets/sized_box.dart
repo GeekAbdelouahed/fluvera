@@ -1,15 +1,15 @@
 part of 'widgets.dart';
 
 class UIXSizedBox extends UIX<SizedBoxAttributes> {
-  const UIXSizedBox(attrs) : super(attrs);
+  const UIXSizedBox(SizedBoxAttributes attributes) : super(attributes);
 
   @override
   Widget build() {
     return SizedBox(
-      key: attrs.key,
-      height: attrs.height,
-      width: attrs.width,
-      child: attrs.child,
+      key: attributes.key,
+      height: attributes.height,
+      width: attributes.width,
+      child: attributes.child,
     );
   }
 }

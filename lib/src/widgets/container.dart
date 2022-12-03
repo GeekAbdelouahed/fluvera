@@ -1,16 +1,16 @@
 part of 'widgets.dart';
 
 class UIXContainer extends UIX<ContainerAttributes> {
-  const UIXContainer(attrs) : super(attrs);
+  const UIXContainer(ContainerAttributes attributes) : super(attributes);
 
   @override
   Widget build() {
     return Container(
-      key: attrs.key,
-      color: attrs.color,
-      height: attrs.height,
-      width: attrs.width,
-      child: attrs.child,
+      key: attributes.key,
+      color: attributes.color,
+      height: attributes.height,
+      width: attributes.width,
+      child: attributes.child,
     );
   }
 }

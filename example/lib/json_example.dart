@@ -48,6 +48,22 @@ const Map<String, dynamic> json = {
           },
         },
       ],
-    }
+    },
+    {
+      'type': 'SizedBox',
+      'height': 20,
+    },
+    {
+      'type': 'ElevatedButton',
+      'child': {
+        'type': 'Text',
+        'text': 'Click me',
+        'style': {
+          'color': '#FF0000',
+          'fontSize': 30,
+          'fontWeight': 'w500',
+        },
+      },
+    },
   ],
 };

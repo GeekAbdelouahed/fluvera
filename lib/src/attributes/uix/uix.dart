@@ -44,6 +44,12 @@ abstract class UIXAttributes with _$UIXAttributes {
     @UIXWidgetsConverter() required List<Widget> children,
   }) = RowAttributes;
 
+  const factory UIXAttributes.elevatedButton({
+    dynamic key,
+    required String type,
+    @UIXWidgetConverter() Widget? child,
+  }) = ElevatedButtonAttributes;
+
   factory UIXAttributes.fromJson(Map<String, dynamic> json) =>
       _$UIXAttributesFromJson(json);
 }

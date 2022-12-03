@@ -1,18 +1,18 @@
 part of 'widgets.dart';
 
 class UIXText extends UIX<TextAttributes> {
-  const UIXText(attrs) : super(attrs);
+  const UIXText(TextAttributes attributes) : super(attributes);
 
   @override
   Widget build() {
     return Text(
-      attrs.text,
-      key: attrs.key,
+      attributes.text,
+      key: attributes.key,
       style: TextStyle(
-        color: attrs.style?.color,
-        fontSize: attrs.style?.fontSize,
-        fontWeight: attrs.style?.fontWeight,
-        overflow: attrs.style?.overflow,
+        color: attributes.style?.color,
+        fontSize: attributes.style?.fontSize,
+        fontWeight: attributes.style?.fontWeight,
+        overflow: attributes.style?.overflow,
       ),
     );
   }

@@ -20,12 +20,12 @@ UIXTextStyle _$UIXTextStyleFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$UIXTextStyle {
+  double? get fontSize => throw _privateConstructorUsedError;
+  TextOverflow? get overflow => throw _privateConstructorUsedError;
   @UIXColorConverter()
   Color? get color => throw _privateConstructorUsedError;
-  double? get fontSize => throw _privateConstructorUsedError;
   @UIXFontWeightConverter()
   FontWeight? get fontWeight => throw _privateConstructorUsedError;
-  TextOverflow? get overflow => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -40,10 +40,10 @@ abstract class $UIXTextStyleCopyWith<$Res> {
       _$UIXTextStyleCopyWithImpl<$Res, UIXTextStyle>;
   @useResult
   $Res call(
-      {@UIXColorConverter() Color? color,
-      double? fontSize,
-      @UIXFontWeightConverter() FontWeight? fontWeight,
-      TextOverflow? overflow});
+      {double? fontSize,
+      TextOverflow? overflow,
+      @UIXColorConverter() Color? color,
+      @UIXFontWeightConverter() FontWeight? fontWeight});
 }
 
 /// @nodoc
@@ -59,28 +59,28 @@ class _$UIXTextStyleCopyWithImpl<$Res, $Val extends UIXTextStyle>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? color = freezed,
     Object? fontSize = freezed,
-    Object? fontWeight = freezed,
     Object? overflow = freezed,
+    Object? color = freezed,
+    Object? fontWeight = freezed,
   }) {
     return _then(_value.copyWith(
-      color: freezed == color
-          ? _value.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as Color?,
       fontSize: freezed == fontSize
           ? _value.fontSize
           : fontSize // ignore: cast_nullable_to_non_nullable
               as double?,
-      fontWeight: freezed == fontWeight
-          ? _value.fontWeight
-          : fontWeight // ignore: cast_nullable_to_non_nullable
-              as FontWeight?,
       overflow: freezed == overflow
           ? _value.overflow
           : overflow // ignore: cast_nullable_to_non_nullable
               as TextOverflow?,
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      fontWeight: freezed == fontWeight
+          ? _value.fontWeight
+          : fontWeight // ignore: cast_nullable_to_non_nullable
+              as FontWeight?,
     ) as $Val);
   }
 }
@@ -94,10 +94,10 @@ abstract class _$$_UIXTextStyleCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@UIXColorConverter() Color? color,
-      double? fontSize,
-      @UIXFontWeightConverter() FontWeight? fontWeight,
-      TextOverflow? overflow});
+      {double? fontSize,
+      TextOverflow? overflow,
+      @UIXColorConverter() Color? color,
+      @UIXFontWeightConverter() FontWeight? fontWeight});
 }
 
 /// @nodoc
@@ -111,28 +111,28 @@ class __$$_UIXTextStyleCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? color = freezed,
     Object? fontSize = freezed,
-    Object? fontWeight = freezed,
     Object? overflow = freezed,
+    Object? color = freezed,
+    Object? fontWeight = freezed,
   }) {
     return _then(_$_UIXTextStyle(
-      color: freezed == color
-          ? _value.color
-          : color // ignore: cast_nullable_to_non_nullable
-              as Color?,
       fontSize: freezed == fontSize
           ? _value.fontSize
           : fontSize // ignore: cast_nullable_to_non_nullable
               as double?,
-      fontWeight: freezed == fontWeight
-          ? _value.fontWeight
-          : fontWeight // ignore: cast_nullable_to_non_nullable
-              as FontWeight?,
       overflow: freezed == overflow
           ? _value.overflow
           : overflow // ignore: cast_nullable_to_non_nullable
               as TextOverflow?,
+      color: freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      fontWeight: freezed == fontWeight
+          ? _value.fontWeight
+          : fontWeight // ignore: cast_nullable_to_non_nullable
+              as FontWeight?,
     ));
   }
 }
@@ -141,28 +141,28 @@ class __$$_UIXTextStyleCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_UIXTextStyle implements _UIXTextStyle {
   const _$_UIXTextStyle(
-      {@UIXColorConverter() this.color,
-      this.fontSize,
-      @UIXFontWeightConverter() this.fontWeight,
-      this.overflow});
+      {this.fontSize,
+      this.overflow,
+      @UIXColorConverter() this.color,
+      @UIXFontWeightConverter() this.fontWeight});
 
   factory _$_UIXTextStyle.fromJson(Map<String, dynamic> json) =>
       _$$_UIXTextStyleFromJson(json);
 
   @override
+  final double? fontSize;
+  @override
+  final TextOverflow? overflow;
+  @override
   @UIXColorConverter()
   final Color? color;
   @override
-  final double? fontSize;
-  @override
   @UIXFontWeightConverter()
   final FontWeight? fontWeight;
-  @override
-  final TextOverflow? overflow;
 
   @override
   String toString() {
-    return 'UIXTextStyle(color: $color, fontSize: $fontSize, fontWeight: $fontWeight, overflow: $overflow)';
+    return 'UIXTextStyle(fontSize: $fontSize, overflow: $overflow, color: $color, fontWeight: $fontWeight)';
   }
 
   @override
@@ -170,23 +170,23 @@ class _$_UIXTextStyle implements _UIXTextStyle {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_UIXTextStyle &&
-            const DeepCollectionEquality().equals(other.color, color) &&
             (identical(other.fontSize, fontSize) ||
                 other.fontSize == fontSize) &&
-            const DeepCollectionEquality()
-                .equals(other.fontWeight, fontWeight) &&
             (identical(other.overflow, overflow) ||
-                other.overflow == overflow));
+                other.overflow == overflow) &&
+            const DeepCollectionEquality().equals(other.color, color) &&
+            const DeepCollectionEquality()
+                .equals(other.fontWeight, fontWeight));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(color),
       fontSize,
-      const DeepCollectionEquality().hash(fontWeight),
-      overflow);
+      overflow,
+      const DeepCollectionEquality().hash(color),
+      const DeepCollectionEquality().hash(fontWeight));
 
   @JsonKey(ignore: true)
   @override
@@ -204,24 +204,25 @@ class _$_UIXTextStyle implements _UIXTextStyle {
 
 abstract class _UIXTextStyle implements UIXTextStyle {
   const factory _UIXTextStyle(
-      {@UIXColorConverter() final Color? color,
-      final double? fontSize,
-      @UIXFontWeightConverter() final FontWeight? fontWeight,
-      final TextOverflow? overflow}) = _$_UIXTextStyle;
+          {final double? fontSize,
+          final TextOverflow? overflow,
+          @UIXColorConverter() final Color? color,
+          @UIXFontWeightConverter() final FontWeight? fontWeight}) =
+      _$_UIXTextStyle;
 
   factory _UIXTextStyle.fromJson(Map<String, dynamic> json) =
       _$_UIXTextStyle.fromJson;
 
   @override
+  double? get fontSize;
+  @override
+  TextOverflow? get overflow;
+  @override
   @UIXColorConverter()
   Color? get color;
   @override
-  double? get fontSize;
-  @override
   @UIXFontWeightConverter()
   FontWeight? get fontWeight;
-  @override
-  TextOverflow? get overflow;
   @override
   @JsonKey(ignore: true)
   _$$_UIXTextStyleCopyWith<_$_UIXTextStyle> get copyWith =>

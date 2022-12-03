@@ -9,6 +9,7 @@ extension UIXAttributeExtension on UIXAttributes {
       text: (attributes) => UIXText(attributes),
       column: (attributes) => UIXColumn(attributes),
       row: (attributes) => UIXRow(attributes),
+      elevatedButton: (attributes) => UIXElevatedButton(attributes),
     ).build();
   }
 }
