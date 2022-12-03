@@ -1,16 +1,17 @@
 part of 'widgets.dart';
 
-class UIXSizedBox extends StatelessWidget implements BaseUIX {
-  const UIXSizedBox({
+class UIXContainer extends StatelessWidget implements BaseUIX {
+  const UIXContainer({
     Key? key,
     required this.attributes,
   }) : super(key: key);
 
-  final SizedBoxAttributes attributes;
+  final ContainerAttributes attributes;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      color: attributes.color?.toColor,
       height: attributes.height,
       width: attributes.width,
       child: attributes.child,
