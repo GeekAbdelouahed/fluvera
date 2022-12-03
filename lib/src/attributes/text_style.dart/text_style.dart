@@ -8,9 +8,9 @@ part 'text_style.g.dart';
 @freezed
 class UIXTextStyle with _$UIXTextStyle {
   const factory UIXTextStyle({
-    @ColorConverter() Color? color,
+    @UIXColorConverter() Color? color,
     double? fontSize,
-    @FontWeightConverter() FontWeight? fontWeight,
+    @UIXFontWeightConverter() FontWeight? fontWeight,
     TextOverflow? overflow,
   }) = _UIXTextStyle;
 

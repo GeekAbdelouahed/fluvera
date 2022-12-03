@@ -1,7 +1,7 @@
 part of 'converters.dart';
 
-class FontWeightConverter implements JsonConverter<FontWeight?, String> {
-  const FontWeightConverter();
+class UIXFontWeightConverter implements JsonConverter<FontWeight?, String> {
+  const UIXFontWeightConverter();
 
   @override
   FontWeight fromJson(String json) {
