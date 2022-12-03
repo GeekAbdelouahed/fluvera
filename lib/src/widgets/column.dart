@@ -1,21 +1,18 @@
 part of 'widgets.dart';
 
-class UIXColumn extends StatelessWidget implements BaseUIX {
-  const UIXColumn({
-    Key? key,
-    required this.attributes,
-  }) : super(key: key);
+class UIXColumn implements BaseUIX {
+  const UIXColumn(this.attrs);
 
-  final ColumnAttributes attributes;
+  final ColumnAttributes attrs;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build() {
     return Column(
-      key: attributes.key,
-      children: attributes.children,
+      key: attrs.key,
+      children: attrs.children,
     );
   }
 
   @override
-  UIX get uix => attributes;
+  UIXAttributes get attributes => attrs;
 }

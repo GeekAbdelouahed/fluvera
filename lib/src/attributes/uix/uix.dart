@@ -7,8 +7,8 @@ part 'uix.freezed.dart';
 part 'uix.g.dart';
 
 @freezed
-class UIX with _$UIX {
-  const factory UIX.sizedBox({
+abstract class UIXAttributes with _$UIXAttributes {
+  const factory UIXAttributes.sizedBox({
     dynamic key,
     required String type,
     double? height,
@@ -16,7 +16,7 @@ class UIX with _$UIX {
     @UIXWidgetConverter() Widget? child,
   }) = SizedBoxAttributes;
 
-  const factory UIX.container({
+  const factory UIXAttributes.container({
     dynamic key,
     required String type,
     double? height,
@@ -25,24 +25,25 @@ class UIX with _$UIX {
     @UIXWidgetConverter() Widget? child,
   }) = ContainerAttributes;
 
-  const factory UIX.text({
+  const factory UIXAttributes.text({
     dynamic key,
     required String type,
     required String text,
     UIXTextStyle? style,
   }) = TextAttributes;
 
-  const factory UIX.column({
+  const factory UIXAttributes.column({
     dynamic key,
     required String type,
     @UIXWidgetsConverter() required List<Widget> children,
   }) = ColumnAttributes;
 
-  const factory UIX.row({
+  const factory UIXAttributes.row({
     dynamic key,
     required String type,
     @UIXWidgetsConverter() required List<Widget> children,
   }) = RowAttributes;
 
-  factory UIX.fromJson(Map<String, dynamic> json) => _$UIXFromJson(json);
+  factory UIXAttributes.fromJson(Map<String, dynamic> json) =>
+      _$UIXAttributesFromJson(json);
 }

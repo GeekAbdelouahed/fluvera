@@ -1,24 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:uix/uix.dart';
 
-extension UIXExtension on UIX {
+extension UIXExtension on UIXAttributes {
   Widget toWidget() {
     return map(
-      sizedBox: (attributes) => UIXSizedBox(
-        attributes: attributes,
-      ),
-      container: (attributes) => UIXContainer(
-        attributes: attributes,
-      ),
-      text: (attributes) => UIXText(
-        attributes: attributes,
-      ),
-      column: (attributes) => UIXColumn(
-        attributes: attributes,
-      ),
-      row: (attributes) => UIXRow(
-        attributes: attributes,
-      ),
-    );
+      sizedBox: (attributes) => UIXSizedBox(attributes),
+      container: (attributes) => UIXContainer(attributes),
+      text: (attributes) => UIXText(attributes),
+      column: (attributes) => UIXColumn(attributes),
+      row: (attributes) => UIXRow(attributes),
+    ).build();
   }
 }

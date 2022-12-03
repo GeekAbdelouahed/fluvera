@@ -1,5 +1,7 @@
 part of 'widgets.dart';
 
 abstract class BaseUIX {
-  UIX get uix;
+  Widget build();
+
+  UIXAttributes get attributes;
 }

@@ -20,10 +20,10 @@ UIXTextStyle _$UIXTextStyleFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$UIXTextStyle {
-  @ColorConverter()
+  @UIXColorConverter()
   Color? get color => throw _privateConstructorUsedError;
   double? get fontSize => throw _privateConstructorUsedError;
-  @FontWeightConverter()
+  @UIXFontWeightConverter()
   FontWeight? get fontWeight => throw _privateConstructorUsedError;
   TextOverflow? get overflow => throw _privateConstructorUsedError;
 
@@ -40,9 +40,9 @@ abstract class $UIXTextStyleCopyWith<$Res> {
       _$UIXTextStyleCopyWithImpl<$Res, UIXTextStyle>;
   @useResult
   $Res call(
-      {@ColorConverter() Color? color,
+      {@UIXColorConverter() Color? color,
       double? fontSize,
-      @FontWeightConverter() FontWeight? fontWeight,
+      @UIXFontWeightConverter() FontWeight? fontWeight,
       TextOverflow? overflow});
 }
 
@@ -94,9 +94,9 @@ abstract class _$$_UIXTextStyleCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@ColorConverter() Color? color,
+      {@UIXColorConverter() Color? color,
       double? fontSize,
-      @FontWeightConverter() FontWeight? fontWeight,
+      @UIXFontWeightConverter() FontWeight? fontWeight,
       TextOverflow? overflow});
 }
 
@@ -141,21 +141,21 @@ class __$$_UIXTextStyleCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_UIXTextStyle implements _UIXTextStyle {
   const _$_UIXTextStyle(
-      {@ColorConverter() this.color,
+      {@UIXColorConverter() this.color,
       this.fontSize,
-      @FontWeightConverter() this.fontWeight,
+      @UIXFontWeightConverter() this.fontWeight,
       this.overflow});
 
   factory _$_UIXTextStyle.fromJson(Map<String, dynamic> json) =>
       _$$_UIXTextStyleFromJson(json);
 
   @override
-  @ColorConverter()
+  @UIXColorConverter()
   final Color? color;
   @override
   final double? fontSize;
   @override
-  @FontWeightConverter()
+  @UIXFontWeightConverter()
   final FontWeight? fontWeight;
   @override
   final TextOverflow? overflow;
@@ -204,21 +204,21 @@ class _$_UIXTextStyle implements _UIXTextStyle {
 
 abstract class _UIXTextStyle implements UIXTextStyle {
   const factory _UIXTextStyle(
-      {@ColorConverter() final Color? color,
+      {@UIXColorConverter() final Color? color,
       final double? fontSize,
-      @FontWeightConverter() final FontWeight? fontWeight,
+      @UIXFontWeightConverter() final FontWeight? fontWeight,
       final TextOverflow? overflow}) = _$_UIXTextStyle;
 
   factory _UIXTextStyle.fromJson(Map<String, dynamic> json) =
       _$_UIXTextStyle.fromJson;
 
   @override
-  @ColorConverter()
+  @UIXColorConverter()
   Color? get color;
   @override
   double? get fontSize;
   @override
-  @FontWeightConverter()
+  @UIXFontWeightConverter()
   FontWeight? get fontWeight;
   @override
   TextOverflow? get overflow;

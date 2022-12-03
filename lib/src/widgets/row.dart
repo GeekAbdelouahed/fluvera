@@ -1,20 +1,18 @@
 part of 'widgets.dart';
 
-class UIXRow extends StatelessWidget implements BaseUIX {
-  const UIXRow({
-    Key? key,
-    required this.attributes,
-  }) : super(key: key);
+class UIXRow implements BaseUIX {
+  const UIXRow(this.attrs);
 
-  final RowAttributes attributes;
+  final RowAttributes attrs;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build() {
     return Row(
-      children: attributes.children,
+      key: attrs.key,
+      children: attrs.children,
     );
   }
 
   @override
-  UIX get uix => attributes;
+  UIXAttributes get attributes => attrs;
 }

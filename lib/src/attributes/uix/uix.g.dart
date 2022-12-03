@@ -13,7 +13,7 @@ _$SizedBoxAttributes _$$SizedBoxAttributesFromJson(Map<String, dynamic> json) =>
       height: (json['height'] as num?)?.toDouble(),
       width: (json['width'] as num?)?.toDouble(),
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
-          json['child'], const WidgetConverter().fromJson),
+          json['child'], const UIXWidgetConverter().fromJson),
     );
 
 Map<String, dynamic> _$$SizedBoxAttributesToJson(
@@ -24,7 +24,7 @@ Map<String, dynamic> _$$SizedBoxAttributesToJson(
       'height': instance.height,
       'width': instance.width,
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
-          instance.child, const WidgetConverter().toJson),
+          instance.child, const UIXWidgetConverter().toJson),
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(
@@ -47,9 +47,9 @@ _$ContainerAttributes _$$ContainerAttributesFromJson(
       height: (json['height'] as num?)?.toDouble(),
       width: (json['width'] as num?)?.toDouble(),
       color: _$JsonConverterFromJson<String, dynamic>(
-          json['color'], const ColorConverter().fromJson),
+          json['color'], const UIXColorConverter().fromJson),
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
-          json['child'], const WidgetConverter().fromJson),
+          json['child'], const UIXWidgetConverter().fromJson),
     );
 
 Map<String, dynamic> _$$ContainerAttributesToJson(
@@ -59,9 +59,9 @@ Map<String, dynamic> _$$ContainerAttributesToJson(
       'type': instance.type,
       'height': instance.height,
       'width': instance.width,
-      'color': const ColorConverter().toJson(instance.color),
+      'color': const UIXColorConverter().toJson(instance.color),
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
-          instance.child, const WidgetConverter().toJson),
+          instance.child, const UIXWidgetConverter().toJson),
     };
 
 _$TextAttributes _$$TextAttributesFromJson(Map<String, dynamic> json) =>
@@ -86,7 +86,7 @@ _$ColumnAttributes _$$ColumnAttributesFromJson(Map<String, dynamic> json) =>
     _$ColumnAttributes(
       key: json['key'],
       type: json['type'] as String,
-      children: const WidgetsConverter()
+      children: const UIXWidgetsConverter()
           .fromJson(json['children'] as List<Map<String, dynamic>>),
     );
 
@@ -94,14 +94,14 @@ Map<String, dynamic> _$$ColumnAttributesToJson(_$ColumnAttributes instance) =>
     <String, dynamic>{
       'key': instance.key,
       'type': instance.type,
-      'children': const WidgetsConverter().toJson(instance.children),
+      'children': const UIXWidgetsConverter().toJson(instance.children),
     };
 
 _$RowAttributes _$$RowAttributesFromJson(Map<String, dynamic> json) =>
     _$RowAttributes(
       key: json['key'],
       type: json['type'] as String,
-      children: const WidgetsConverter()
+      children: const UIXWidgetsConverter()
           .fromJson(json['children'] as List<Map<String, dynamic>>),
     );
 
@@ -109,5 +109,5 @@ Map<String, dynamic> _$$RowAttributesToJson(_$RowAttributes instance) =>
     <String, dynamic>{
       'key': instance.key,
       'type': instance.type,
-      'children': const WidgetsConverter().toJson(instance.children),
+      'children': const UIXWidgetsConverter().toJson(instance.children),
     };

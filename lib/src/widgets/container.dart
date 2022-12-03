@@ -1,23 +1,21 @@
 part of 'widgets.dart';
 
-class UIXContainer extends StatelessWidget implements BaseUIX {
-  const UIXContainer({
-    Key? key,
-    required this.attributes,
-  }) : super(key: key);
+class UIXContainer implements BaseUIX {
+  const UIXContainer(this.attrs);
 
-  final ContainerAttributes attributes;
+  final ContainerAttributes attrs;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build() {
     return Container(
-      color: attributes.color,
-      height: attributes.height,
-      width: attributes.width,
-      child: attributes.child,
+      key: attrs.key,
+      color: attrs.color,
+      height: attrs.height,
+      width: attrs.width,
+      child: attrs.child,
     );
   }
 
   @override
-  UIX get uix => attributes;
+  UIXAttributes get attributes => attrs;
 }

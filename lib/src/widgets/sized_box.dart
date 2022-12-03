@@ -1,22 +1,20 @@
 part of 'widgets.dart';
 
-class UIXSizedBox extends StatelessWidget implements BaseUIX {
-  const UIXSizedBox({
-    Key? key,
-    required this.attributes,
-  }) : super(key: key);
+class UIXSizedBox implements BaseUIX {
+  const UIXSizedBox(this.attrs);
 
-  final SizedBoxAttributes attributes;
+  final SizedBoxAttributes attrs;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build() {
     return SizedBox(
-      height: attributes.height,
-      width: attributes.width,
-      child: attributes.child,
+      key: attrs.key,
+      height: attrs.height,
+      width: attrs.width,
+      child: attrs.child,
     );
   }
 
   @override
-  UIX get uix => attributes;
+  UIXAttributes get attributes => attrs;
 }

@@ -14,7 +14,7 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-UIX _$UIXFromJson(Map<String, dynamic> json) {
+UIXAttributes _$UIXAttributesFromJson(Map<String, dynamic> json) {
   switch (json['type']) {
     case 'SizedBox':
       return SizedBoxAttributes.fromJson(json);
@@ -28,74 +28,84 @@ UIX _$UIXFromJson(Map<String, dynamic> json) {
       return RowAttributes.fromJson(json);
 
     default:
-      throw CheckedFromJsonException(
-          json, 'type', 'UIX', 'Invalid union type "${json['type']}"!');
+      throw CheckedFromJsonException(json, 'type', 'UIXAttributes',
+          'Invalid union type "${json['type']}"!');
   }
 }
 
 /// @nodoc
-mixin _$UIX {
+mixin _$UIXAttributes {
   dynamic get key => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(dynamic key, String type, double? height,
-            double? width, @WidgetConverter() Widget? child)
+            double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             double? height,
             double? width,
-            @ColorConverter() Color? color,
-            @WidgetConverter() Widget? child)
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
         text,
-    required TResult Function(
-            dynamic key, String type, @WidgetsConverter() List<Widget> children)
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
         column,
-    required TResult Function(
-            dynamic key, String type, @WidgetsConverter() List<Widget> children)
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
         row,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(dynamic key, String type, double? height, double? width,
-            @WidgetConverter() Widget? child)?
+            @UIXWidgetConverter() Widget? child)?
         sizedBox,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @ColorConverter() Color? color, @WidgetConverter() Widget? child)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
         text,
     TResult? Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         row,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(dynamic key, String type, double? height, double? width,
-            @WidgetConverter() Widget? child)?
+            @UIXWidgetConverter() Widget? child)?
         sizedBox,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @ColorConverter() Color? color, @WidgetConverter() Widget? child)?
+    TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
         text,
     TResult Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         row,
     required TResult orElse(),
   }) =>
@@ -130,20 +140,23 @@ mixin _$UIX {
       throw _privateConstructorUsedError;
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UIXCopyWith<UIX> get copyWith => throw _privateConstructorUsedError;
+  $UIXAttributesCopyWith<UIXAttributes> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UIXCopyWith<$Res> {
-  factory $UIXCopyWith(UIX value, $Res Function(UIX) then) =
-      _$UIXCopyWithImpl<$Res, UIX>;
+abstract class $UIXAttributesCopyWith<$Res> {
+  factory $UIXAttributesCopyWith(
+          UIXAttributes value, $Res Function(UIXAttributes) then) =
+      _$UIXAttributesCopyWithImpl<$Res, UIXAttributes>;
   @useResult
   $Res call({dynamic key, String type});
 }
 
 /// @nodoc
-class _$UIXCopyWithImpl<$Res, $Val extends UIX> implements $UIXCopyWith<$Res> {
-  _$UIXCopyWithImpl(this._value, this._then);
+class _$UIXAttributesCopyWithImpl<$Res, $Val extends UIXAttributes>
+    implements $UIXAttributesCopyWith<$Res> {
+  _$UIXAttributesCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -171,7 +184,7 @@ class _$UIXCopyWithImpl<$Res, $Val extends UIX> implements $UIXCopyWith<$Res> {
 
 /// @nodoc
 abstract class _$$SizedBoxAttributesCopyWith<$Res>
-    implements $UIXCopyWith<$Res> {
+    implements $UIXAttributesCopyWith<$Res> {
   factory _$$SizedBoxAttributesCopyWith(_$SizedBoxAttributes value,
           $Res Function(_$SizedBoxAttributes) then) =
       __$$SizedBoxAttributesCopyWithImpl<$Res>;
@@ -182,12 +195,12 @@ abstract class _$$SizedBoxAttributesCopyWith<$Res>
       String type,
       double? height,
       double? width,
-      @WidgetConverter() Widget? child});
+      @UIXWidgetConverter() Widget? child});
 }
 
 /// @nodoc
 class __$$SizedBoxAttributesCopyWithImpl<$Res>
-    extends _$UIXCopyWithImpl<$Res, _$SizedBoxAttributes>
+    extends _$UIXAttributesCopyWithImpl<$Res, _$SizedBoxAttributes>
     implements _$$SizedBoxAttributesCopyWith<$Res> {
   __$$SizedBoxAttributesCopyWithImpl(
       _$SizedBoxAttributes _value, $Res Function(_$SizedBoxAttributes) _then)
@@ -235,7 +248,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
       required this.type,
       this.height,
       this.width,
-      @WidgetConverter() this.child});
+      @UIXWidgetConverter() this.child});
 
   factory _$SizedBoxAttributes.fromJson(Map<String, dynamic> json) =>
       _$$SizedBoxAttributesFromJson(json);
@@ -249,12 +262,12 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   @override
   final double? width;
   @override
-  @WidgetConverter()
+  @UIXWidgetConverter()
   final Widget? child;
 
   @override
   String toString() {
-    return 'UIX.sizedBox(key: $key, type: $type, height: $height, width: $width, child: $child)';
+    return 'UIXAttributes.sizedBox(key: $key, type: $type, height: $height, width: $width, child: $child)';
   }
 
   @override
@@ -285,24 +298,24 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(dynamic key, String type, double? height,
-            double? width, @WidgetConverter() Widget? child)
+            double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             double? height,
             double? width,
-            @ColorConverter() Color? color,
-            @WidgetConverter() Widget? child)
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
         text,
-    required TResult Function(
-            dynamic key, String type, @WidgetsConverter() List<Widget> children)
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
         column,
-    required TResult Function(
-            dynamic key, String type, @WidgetsConverter() List<Widget> children)
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
         row,
   }) {
     return sizedBox(key, type, height, width, child);
@@ -312,19 +325,24 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(dynamic key, String type, double? height, double? width,
-            @WidgetConverter() Widget? child)?
+            @UIXWidgetConverter() Widget? child)?
         sizedBox,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @ColorConverter() Color? color, @WidgetConverter() Widget? child)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
         text,
     TResult? Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         row,
   }) {
     return sizedBox?.call(key, type, height, width, child);
@@ -334,19 +352,24 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(dynamic key, String type, double? height, double? width,
-            @WidgetConverter() Widget? child)?
+            @UIXWidgetConverter() Widget? child)?
         sizedBox,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @ColorConverter() Color? color, @WidgetConverter() Widget? child)?
+    TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
         text,
     TResult Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         row,
     required TResult orElse(),
   }) {
@@ -404,13 +427,13 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   }
 }
 
-abstract class SizedBoxAttributes implements UIX {
+abstract class SizedBoxAttributes implements UIXAttributes {
   const factory SizedBoxAttributes(
       {final dynamic key,
       required final String type,
       final double? height,
       final double? width,
-      @WidgetConverter() final Widget? child}) = _$SizedBoxAttributes;
+      @UIXWidgetConverter() final Widget? child}) = _$SizedBoxAttributes;
 
   factory SizedBoxAttributes.fromJson(Map<String, dynamic> json) =
       _$SizedBoxAttributes.fromJson;
@@ -421,7 +444,7 @@ abstract class SizedBoxAttributes implements UIX {
   String get type;
   double? get height;
   double? get width;
-  @WidgetConverter()
+  @UIXWidgetConverter()
   Widget? get child;
   @override
   @JsonKey(ignore: true)
@@ -431,7 +454,7 @@ abstract class SizedBoxAttributes implements UIX {
 
 /// @nodoc
 abstract class _$$ContainerAttributesCopyWith<$Res>
-    implements $UIXCopyWith<$Res> {
+    implements $UIXAttributesCopyWith<$Res> {
   factory _$$ContainerAttributesCopyWith(_$ContainerAttributes value,
           $Res Function(_$ContainerAttributes) then) =
       __$$ContainerAttributesCopyWithImpl<$Res>;
@@ -442,13 +465,13 @@ abstract class _$$ContainerAttributesCopyWith<$Res>
       String type,
       double? height,
       double? width,
-      @ColorConverter() Color? color,
-      @WidgetConverter() Widget? child});
+      @UIXColorConverter() Color? color,
+      @UIXWidgetConverter() Widget? child});
 }
 
 /// @nodoc
 class __$$ContainerAttributesCopyWithImpl<$Res>
-    extends _$UIXCopyWithImpl<$Res, _$ContainerAttributes>
+    extends _$UIXAttributesCopyWithImpl<$Res, _$ContainerAttributes>
     implements _$$ContainerAttributesCopyWith<$Res> {
   __$$ContainerAttributesCopyWithImpl(
       _$ContainerAttributes _value, $Res Function(_$ContainerAttributes) _then)
@@ -501,8 +524,8 @@ class _$ContainerAttributes implements ContainerAttributes {
       required this.type,
       this.height,
       this.width,
-      @ColorConverter() this.color,
-      @WidgetConverter() this.child});
+      @UIXColorConverter() this.color,
+      @UIXWidgetConverter() this.child});
 
   factory _$ContainerAttributes.fromJson(Map<String, dynamic> json) =>
       _$$ContainerAttributesFromJson(json);
@@ -516,15 +539,15 @@ class _$ContainerAttributes implements ContainerAttributes {
   @override
   final double? width;
   @override
-  @ColorConverter()
+  @UIXColorConverter()
   final Color? color;
   @override
-  @WidgetConverter()
+  @UIXWidgetConverter()
   final Widget? child;
 
   @override
   String toString() {
-    return 'UIX.container(key: $key, type: $type, height: $height, width: $width, color: $color, child: $child)';
+    return 'UIXAttributes.container(key: $key, type: $type, height: $height, width: $width, color: $color, child: $child)';
   }
 
   @override
@@ -562,24 +585,24 @@ class _$ContainerAttributes implements ContainerAttributes {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(dynamic key, String type, double? height,
-            double? width, @WidgetConverter() Widget? child)
+            double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             double? height,
             double? width,
-            @ColorConverter() Color? color,
-            @WidgetConverter() Widget? child)
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
         text,
-    required TResult Function(
-            dynamic key, String type, @WidgetsConverter() List<Widget> children)
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
         column,
-    required TResult Function(
-            dynamic key, String type, @WidgetsConverter() List<Widget> children)
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
         row,
   }) {
     return container(key, type, height, width, color, child);
@@ -589,19 +612,24 @@ class _$ContainerAttributes implements ContainerAttributes {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(dynamic key, String type, double? height, double? width,
-            @WidgetConverter() Widget? child)?
+            @UIXWidgetConverter() Widget? child)?
         sizedBox,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @ColorConverter() Color? color, @WidgetConverter() Widget? child)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
         text,
     TResult? Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         row,
   }) {
     return container?.call(key, type, height, width, color, child);
@@ -611,19 +639,24 @@ class _$ContainerAttributes implements ContainerAttributes {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(dynamic key, String type, double? height, double? width,
-            @WidgetConverter() Widget? child)?
+            @UIXWidgetConverter() Widget? child)?
         sizedBox,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @ColorConverter() Color? color, @WidgetConverter() Widget? child)?
+    TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
         text,
     TResult Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         row,
     required TResult orElse(),
   }) {
@@ -681,14 +714,14 @@ class _$ContainerAttributes implements ContainerAttributes {
   }
 }
 
-abstract class ContainerAttributes implements UIX {
+abstract class ContainerAttributes implements UIXAttributes {
   const factory ContainerAttributes(
       {final dynamic key,
       required final String type,
       final double? height,
       final double? width,
-      @ColorConverter() final Color? color,
-      @WidgetConverter() final Widget? child}) = _$ContainerAttributes;
+      @UIXColorConverter() final Color? color,
+      @UIXWidgetConverter() final Widget? child}) = _$ContainerAttributes;
 
   factory ContainerAttributes.fromJson(Map<String, dynamic> json) =
       _$ContainerAttributes.fromJson;
@@ -699,9 +732,9 @@ abstract class ContainerAttributes implements UIX {
   String get type;
   double? get height;
   double? get width;
-  @ColorConverter()
+  @UIXColorConverter()
   Color? get color;
-  @WidgetConverter()
+  @UIXWidgetConverter()
   Widget? get child;
   @override
   @JsonKey(ignore: true)
@@ -710,7 +743,8 @@ abstract class ContainerAttributes implements UIX {
 }
 
 /// @nodoc
-abstract class _$$TextAttributesCopyWith<$Res> implements $UIXCopyWith<$Res> {
+abstract class _$$TextAttributesCopyWith<$Res>
+    implements $UIXAttributesCopyWith<$Res> {
   factory _$$TextAttributesCopyWith(
           _$TextAttributes value, $Res Function(_$TextAttributes) then) =
       __$$TextAttributesCopyWithImpl<$Res>;
@@ -723,7 +757,7 @@ abstract class _$$TextAttributesCopyWith<$Res> implements $UIXCopyWith<$Res> {
 
 /// @nodoc
 class __$$TextAttributesCopyWithImpl<$Res>
-    extends _$UIXCopyWithImpl<$Res, _$TextAttributes>
+    extends _$UIXAttributesCopyWithImpl<$Res, _$TextAttributes>
     implements _$$TextAttributesCopyWith<$Res> {
   __$$TextAttributesCopyWithImpl(
       _$TextAttributes _value, $Res Function(_$TextAttributes) _then)
@@ -790,7 +824,7 @@ class _$TextAttributes implements TextAttributes {
 
   @override
   String toString() {
-    return 'UIX.text(key: $key, type: $type, text: $text, style: $style)';
+    return 'UIXAttributes.text(key: $key, type: $type, text: $text, style: $style)';
   }
 
   @override
@@ -819,24 +853,24 @@ class _$TextAttributes implements TextAttributes {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(dynamic key, String type, double? height,
-            double? width, @WidgetConverter() Widget? child)
+            double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             double? height,
             double? width,
-            @ColorConverter() Color? color,
-            @WidgetConverter() Widget? child)
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
         text,
-    required TResult Function(
-            dynamic key, String type, @WidgetsConverter() List<Widget> children)
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
         column,
-    required TResult Function(
-            dynamic key, String type, @WidgetsConverter() List<Widget> children)
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
         row,
   }) {
     return text(key, type, this.text, style);
@@ -846,19 +880,24 @@ class _$TextAttributes implements TextAttributes {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(dynamic key, String type, double? height, double? width,
-            @WidgetConverter() Widget? child)?
+            @UIXWidgetConverter() Widget? child)?
         sizedBox,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @ColorConverter() Color? color, @WidgetConverter() Widget? child)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
         text,
     TResult? Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         row,
   }) {
     return text?.call(key, type, this.text, style);
@@ -868,19 +907,24 @@ class _$TextAttributes implements TextAttributes {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(dynamic key, String type, double? height, double? width,
-            @WidgetConverter() Widget? child)?
+            @UIXWidgetConverter() Widget? child)?
         sizedBox,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @ColorConverter() Color? color, @WidgetConverter() Widget? child)?
+    TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
         text,
     TResult Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         row,
     required TResult orElse(),
   }) {
@@ -938,7 +982,7 @@ class _$TextAttributes implements TextAttributes {
   }
 }
 
-abstract class TextAttributes implements UIX {
+abstract class TextAttributes implements UIXAttributes {
   const factory TextAttributes(
       {final dynamic key,
       required final String type,
@@ -961,19 +1005,20 @@ abstract class TextAttributes implements UIX {
 }
 
 /// @nodoc
-abstract class _$$ColumnAttributesCopyWith<$Res> implements $UIXCopyWith<$Res> {
+abstract class _$$ColumnAttributesCopyWith<$Res>
+    implements $UIXAttributesCopyWith<$Res> {
   factory _$$ColumnAttributesCopyWith(
           _$ColumnAttributes value, $Res Function(_$ColumnAttributes) then) =
       __$$ColumnAttributesCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {dynamic key, String type, @WidgetsConverter() List<Widget> children});
+      {dynamic key, String type, @UIXWidgetsConverter() List<Widget> children});
 }
 
 /// @nodoc
 class __$$ColumnAttributesCopyWithImpl<$Res>
-    extends _$UIXCopyWithImpl<$Res, _$ColumnAttributes>
+    extends _$UIXAttributesCopyWithImpl<$Res, _$ColumnAttributes>
     implements _$$ColumnAttributesCopyWith<$Res> {
   __$$ColumnAttributesCopyWithImpl(
       _$ColumnAttributes _value, $Res Function(_$ColumnAttributes) _then)
@@ -1009,7 +1054,7 @@ class _$ColumnAttributes implements ColumnAttributes {
   const _$ColumnAttributes(
       {this.key,
       required this.type,
-      @WidgetsConverter() required final List<Widget> children})
+      @UIXWidgetsConverter() required final List<Widget> children})
       : _children = children;
 
   factory _$ColumnAttributes.fromJson(Map<String, dynamic> json) =>
@@ -1021,7 +1066,7 @@ class _$ColumnAttributes implements ColumnAttributes {
   final String type;
   final List<Widget> _children;
   @override
-  @WidgetsConverter()
+  @UIXWidgetsConverter()
   List<Widget> get children {
     if (_children is EqualUnmodifiableListView) return _children;
     // ignore: implicit_dynamic_type
@@ -1030,7 +1075,7 @@ class _$ColumnAttributes implements ColumnAttributes {
 
   @override
   String toString() {
-    return 'UIX.column(key: $key, type: $type, children: $children)';
+    return 'UIXAttributes.column(key: $key, type: $type, children: $children)';
   }
 
   @override
@@ -1061,24 +1106,24 @@ class _$ColumnAttributes implements ColumnAttributes {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(dynamic key, String type, double? height,
-            double? width, @WidgetConverter() Widget? child)
+            double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             double? height,
             double? width,
-            @ColorConverter() Color? color,
-            @WidgetConverter() Widget? child)
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
         text,
-    required TResult Function(
-            dynamic key, String type, @WidgetsConverter() List<Widget> children)
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
         column,
-    required TResult Function(
-            dynamic key, String type, @WidgetsConverter() List<Widget> children)
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
         row,
   }) {
     return column(key, type, children);
@@ -1088,19 +1133,24 @@ class _$ColumnAttributes implements ColumnAttributes {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(dynamic key, String type, double? height, double? width,
-            @WidgetConverter() Widget? child)?
+            @UIXWidgetConverter() Widget? child)?
         sizedBox,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @ColorConverter() Color? color, @WidgetConverter() Widget? child)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
         text,
     TResult? Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         row,
   }) {
     return column?.call(key, type, children);
@@ -1110,19 +1160,24 @@ class _$ColumnAttributes implements ColumnAttributes {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(dynamic key, String type, double? height, double? width,
-            @WidgetConverter() Widget? child)?
+            @UIXWidgetConverter() Widget? child)?
         sizedBox,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @ColorConverter() Color? color, @WidgetConverter() Widget? child)?
+    TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
         text,
     TResult Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         row,
     required TResult orElse(),
   }) {
@@ -1180,11 +1235,11 @@ class _$ColumnAttributes implements ColumnAttributes {
   }
 }
 
-abstract class ColumnAttributes implements UIX {
+abstract class ColumnAttributes implements UIXAttributes {
   const factory ColumnAttributes(
           {final dynamic key,
           required final String type,
-          @WidgetsConverter() required final List<Widget> children}) =
+          @UIXWidgetsConverter() required final List<Widget> children}) =
       _$ColumnAttributes;
 
   factory ColumnAttributes.fromJson(Map<String, dynamic> json) =
@@ -1194,7 +1249,7 @@ abstract class ColumnAttributes implements UIX {
   dynamic get key;
   @override
   String get type;
-  @WidgetsConverter()
+  @UIXWidgetsConverter()
   List<Widget> get children;
   @override
   @JsonKey(ignore: true)
@@ -1203,19 +1258,20 @@ abstract class ColumnAttributes implements UIX {
 }
 
 /// @nodoc
-abstract class _$$RowAttributesCopyWith<$Res> implements $UIXCopyWith<$Res> {
+abstract class _$$RowAttributesCopyWith<$Res>
+    implements $UIXAttributesCopyWith<$Res> {
   factory _$$RowAttributesCopyWith(
           _$RowAttributes value, $Res Function(_$RowAttributes) then) =
       __$$RowAttributesCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {dynamic key, String type, @WidgetsConverter() List<Widget> children});
+      {dynamic key, String type, @UIXWidgetsConverter() List<Widget> children});
 }
 
 /// @nodoc
 class __$$RowAttributesCopyWithImpl<$Res>
-    extends _$UIXCopyWithImpl<$Res, _$RowAttributes>
+    extends _$UIXAttributesCopyWithImpl<$Res, _$RowAttributes>
     implements _$$RowAttributesCopyWith<$Res> {
   __$$RowAttributesCopyWithImpl(
       _$RowAttributes _value, $Res Function(_$RowAttributes) _then)
@@ -1251,7 +1307,7 @@ class _$RowAttributes implements RowAttributes {
   const _$RowAttributes(
       {this.key,
       required this.type,
-      @WidgetsConverter() required final List<Widget> children})
+      @UIXWidgetsConverter() required final List<Widget> children})
       : _children = children;
 
   factory _$RowAttributes.fromJson(Map<String, dynamic> json) =>
@@ -1263,7 +1319,7 @@ class _$RowAttributes implements RowAttributes {
   final String type;
   final List<Widget> _children;
   @override
-  @WidgetsConverter()
+  @UIXWidgetsConverter()
   List<Widget> get children {
     if (_children is EqualUnmodifiableListView) return _children;
     // ignore: implicit_dynamic_type
@@ -1272,7 +1328,7 @@ class _$RowAttributes implements RowAttributes {
 
   @override
   String toString() {
-    return 'UIX.row(key: $key, type: $type, children: $children)';
+    return 'UIXAttributes.row(key: $key, type: $type, children: $children)';
   }
 
   @override
@@ -1303,24 +1359,24 @@ class _$RowAttributes implements RowAttributes {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(dynamic key, String type, double? height,
-            double? width, @WidgetConverter() Widget? child)
+            double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             double? height,
             double? width,
-            @ColorConverter() Color? color,
-            @WidgetConverter() Widget? child)
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
         text,
-    required TResult Function(
-            dynamic key, String type, @WidgetsConverter() List<Widget> children)
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
         column,
-    required TResult Function(
-            dynamic key, String type, @WidgetsConverter() List<Widget> children)
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
         row,
   }) {
     return row(key, type, children);
@@ -1330,19 +1386,24 @@ class _$RowAttributes implements RowAttributes {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(dynamic key, String type, double? height, double? width,
-            @WidgetConverter() Widget? child)?
+            @UIXWidgetConverter() Widget? child)?
         sizedBox,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @ColorConverter() Color? color, @WidgetConverter() Widget? child)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
         text,
     TResult? Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         row,
   }) {
     return row?.call(key, type, children);
@@ -1352,19 +1413,24 @@ class _$RowAttributes implements RowAttributes {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(dynamic key, String type, double? height, double? width,
-            @WidgetConverter() Widget? child)?
+            @UIXWidgetConverter() Widget? child)?
         sizedBox,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @ColorConverter() Color? color, @WidgetConverter() Widget? child)?
+    TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
         text,
     TResult Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(dynamic key, String type,
-            @WidgetsConverter() List<Widget> children)?
+            @UIXWidgetsConverter() List<Widget> children)?
         row,
     required TResult orElse(),
   }) {
@@ -1422,11 +1488,11 @@ class _$RowAttributes implements RowAttributes {
   }
 }
 
-abstract class RowAttributes implements UIX {
+abstract class RowAttributes implements UIXAttributes {
   const factory RowAttributes(
           {final dynamic key,
           required final String type,
-          @WidgetsConverter() required final List<Widget> children}) =
+          @UIXWidgetsConverter() required final List<Widget> children}) =
       _$RowAttributes;
 
   factory RowAttributes.fromJson(Map<String, dynamic> json) =
@@ -1436,7 +1502,7 @@ abstract class RowAttributes implements UIX {
   dynamic get key;
   @override
   String get type;
-  @WidgetsConverter()
+  @UIXWidgetsConverter()
   List<Widget> get children;
   @override
   @JsonKey(ignore: true)
