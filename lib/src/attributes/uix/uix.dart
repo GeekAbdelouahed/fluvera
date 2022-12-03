@@ -50,6 +50,13 @@ abstract class UIXAttributes with _$UIXAttributes {
     @UIXWidgetConverter() Widget? child,
   }) = ElevatedButtonAttributes;
 
+  const factory UIXAttributes.padding({
+    dynamic key,
+    required String type,
+    @UIXEdgeInsetsConverter() required EdgeInsetsGeometry padding,
+    @UIXWidgetConverter() Widget? child,
+  }) = PaddingAttributes;
+
   factory UIXAttributes.fromJson(Map<String, dynamic> json) =>
       _$UIXAttributesFromJson(json);
 }

@@ -28,6 +28,8 @@ UIXAttributes _$UIXAttributesFromJson(Map<String, dynamic> json) {
       return RowAttributes.fromJson(json);
     case 'ElevatedButton':
       return ElevatedButtonAttributes.fromJson(json);
+    case 'Padding':
+      return PaddingAttributes.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'type', 'UIXAttributes',
@@ -64,6 +66,12 @@ mixin _$UIXAttributes {
     required TResult Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)
         elevatedButton,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)
+        padding,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -91,6 +99,12 @@ mixin _$UIXAttributes {
     TResult? Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -118,6 +132,12 @@ mixin _$UIXAttributes {
     TResult Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -129,6 +149,7 @@ mixin _$UIXAttributes {
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(RowAttributes value) row,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
+    required TResult Function(PaddingAttributes value) padding,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -139,6 +160,7 @@ mixin _$UIXAttributes {
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult? Function(PaddingAttributes value)? padding,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -149,6 +171,7 @@ mixin _$UIXAttributes {
     TResult Function(ColumnAttributes value)? column,
     TResult Function(RowAttributes value)? row,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult Function(PaddingAttributes value)? padding,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -334,6 +357,12 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     required TResult Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)
         elevatedButton,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)
+        padding,
   }) {
     return sizedBox(key, type, height, width, child);
   }
@@ -364,6 +393,12 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult? Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
   }) {
     return sizedBox?.call(key, type, height, width, child);
   }
@@ -394,6 +429,12 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
     required TResult orElse(),
   }) {
     if (sizedBox != null) {
@@ -411,6 +452,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(RowAttributes value) row,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
+    required TResult Function(PaddingAttributes value) padding,
   }) {
     return sizedBox(this);
   }
@@ -424,6 +466,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult? Function(PaddingAttributes value)? padding,
   }) {
     return sizedBox?.call(this);
   }
@@ -437,6 +480,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult Function(ColumnAttributes value)? column,
     TResult Function(RowAttributes value)? row,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult Function(PaddingAttributes value)? padding,
     required TResult orElse(),
   }) {
     if (sizedBox != null) {
@@ -633,6 +677,12 @@ class _$ContainerAttributes implements ContainerAttributes {
     required TResult Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)
         elevatedButton,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)
+        padding,
   }) {
     return container(key, type, height, width, color, child);
   }
@@ -663,6 +713,12 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult? Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
   }) {
     return container?.call(key, type, height, width, color, child);
   }
@@ -693,6 +749,12 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
     required TResult orElse(),
   }) {
     if (container != null) {
@@ -710,6 +772,7 @@ class _$ContainerAttributes implements ContainerAttributes {
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(RowAttributes value) row,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
+    required TResult Function(PaddingAttributes value) padding,
   }) {
     return container(this);
   }
@@ -723,6 +786,7 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult? Function(PaddingAttributes value)? padding,
   }) {
     return container?.call(this);
   }
@@ -736,6 +800,7 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult Function(ColumnAttributes value)? column,
     TResult Function(RowAttributes value)? row,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult Function(PaddingAttributes value)? padding,
     required TResult orElse(),
   }) {
     if (container != null) {
@@ -913,6 +978,12 @@ class _$TextAttributes implements TextAttributes {
     required TResult Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)
         elevatedButton,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)
+        padding,
   }) {
     return text(key, type, this.text, style);
   }
@@ -943,6 +1014,12 @@ class _$TextAttributes implements TextAttributes {
     TResult? Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
   }) {
     return text?.call(key, type, this.text, style);
   }
@@ -973,6 +1050,12 @@ class _$TextAttributes implements TextAttributes {
     TResult Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
     required TResult orElse(),
   }) {
     if (text != null) {
@@ -990,6 +1073,7 @@ class _$TextAttributes implements TextAttributes {
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(RowAttributes value) row,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
+    required TResult Function(PaddingAttributes value) padding,
   }) {
     return text(this);
   }
@@ -1003,6 +1087,7 @@ class _$TextAttributes implements TextAttributes {
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult? Function(PaddingAttributes value)? padding,
   }) {
     return text?.call(this);
   }
@@ -1016,6 +1101,7 @@ class _$TextAttributes implements TextAttributes {
     TResult Function(ColumnAttributes value)? column,
     TResult Function(RowAttributes value)? row,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult Function(PaddingAttributes value)? padding,
     required TResult orElse(),
   }) {
     if (text != null) {
@@ -1178,6 +1264,12 @@ class _$ColumnAttributes implements ColumnAttributes {
     required TResult Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)
         elevatedButton,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)
+        padding,
   }) {
     return column(key, type, children);
   }
@@ -1208,6 +1300,12 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult? Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
   }) {
     return column?.call(key, type, children);
   }
@@ -1238,6 +1336,12 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
     required TResult orElse(),
   }) {
     if (column != null) {
@@ -1255,6 +1359,7 @@ class _$ColumnAttributes implements ColumnAttributes {
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(RowAttributes value) row,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
+    required TResult Function(PaddingAttributes value) padding,
   }) {
     return column(this);
   }
@@ -1268,6 +1373,7 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult? Function(PaddingAttributes value)? padding,
   }) {
     return column?.call(this);
   }
@@ -1281,6 +1387,7 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult Function(ColumnAttributes value)? column,
     TResult Function(RowAttributes value)? row,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult Function(PaddingAttributes value)? padding,
     required TResult orElse(),
   }) {
     if (column != null) {
@@ -1443,6 +1550,12 @@ class _$RowAttributes implements RowAttributes {
     required TResult Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)
         elevatedButton,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)
+        padding,
   }) {
     return row(key, type, children);
   }
@@ -1473,6 +1586,12 @@ class _$RowAttributes implements RowAttributes {
     TResult? Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
   }) {
     return row?.call(key, type, children);
   }
@@ -1503,6 +1622,12 @@ class _$RowAttributes implements RowAttributes {
     TResult Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
     required TResult orElse(),
   }) {
     if (row != null) {
@@ -1520,6 +1645,7 @@ class _$RowAttributes implements RowAttributes {
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(RowAttributes value) row,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
+    required TResult Function(PaddingAttributes value) padding,
   }) {
     return row(this);
   }
@@ -1533,6 +1659,7 @@ class _$RowAttributes implements RowAttributes {
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult? Function(PaddingAttributes value)? padding,
   }) {
     return row?.call(this);
   }
@@ -1546,6 +1673,7 @@ class _$RowAttributes implements RowAttributes {
     TResult Function(ColumnAttributes value)? column,
     TResult Function(RowAttributes value)? row,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult Function(PaddingAttributes value)? padding,
     required TResult orElse(),
   }) {
     if (row != null) {
@@ -1698,6 +1826,12 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     required TResult Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)
         elevatedButton,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)
+        padding,
   }) {
     return elevatedButton(key, type, child);
   }
@@ -1728,6 +1862,12 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult? Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
   }) {
     return elevatedButton?.call(key, type, child);
   }
@@ -1758,6 +1898,12 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult Function(
             dynamic key, String type, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
     required TResult orElse(),
   }) {
     if (elevatedButton != null) {
@@ -1775,6 +1921,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(RowAttributes value) row,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
+    required TResult Function(PaddingAttributes value) padding,
   }) {
     return elevatedButton(this);
   }
@@ -1788,6 +1935,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult? Function(PaddingAttributes value)? padding,
   }) {
     return elevatedButton?.call(this);
   }
@@ -1801,6 +1949,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult Function(ColumnAttributes value)? column,
     TResult Function(RowAttributes value)? row,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult Function(PaddingAttributes value)? padding,
     required TResult orElse(),
   }) {
     if (elevatedButton != null) {
@@ -1836,4 +1985,296 @@ abstract class ElevatedButtonAttributes implements UIXAttributes {
   @JsonKey(ignore: true)
   _$$ElevatedButtonAttributesCopyWith<_$ElevatedButtonAttributes>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PaddingAttributesCopyWith<$Res>
+    implements $UIXAttributesCopyWith<$Res> {
+  factory _$$PaddingAttributesCopyWith(
+          _$PaddingAttributes value, $Res Function(_$PaddingAttributes) then) =
+      __$$PaddingAttributesCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {dynamic key,
+      String type,
+      @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+      @UIXWidgetConverter() Widget? child});
+}
+
+/// @nodoc
+class __$$PaddingAttributesCopyWithImpl<$Res>
+    extends _$UIXAttributesCopyWithImpl<$Res, _$PaddingAttributes>
+    implements _$$PaddingAttributesCopyWith<$Res> {
+  __$$PaddingAttributesCopyWithImpl(
+      _$PaddingAttributes _value, $Res Function(_$PaddingAttributes) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? type = null,
+    Object? padding = null,
+    Object? child = freezed,
+  }) {
+    return _then(_$PaddingAttributes(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      padding: null == padding
+          ? _value.padding
+          : padding // ignore: cast_nullable_to_non_nullable
+              as EdgeInsetsGeometry,
+      child: freezed == child
+          ? _value.child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$PaddingAttributes implements PaddingAttributes {
+  const _$PaddingAttributes(
+      {this.key,
+      required this.type,
+      @UIXEdgeInsetsConverter() required this.padding,
+      @UIXWidgetConverter() this.child});
+
+  factory _$PaddingAttributes.fromJson(Map<String, dynamic> json) =>
+      _$$PaddingAttributesFromJson(json);
+
+  @override
+  final dynamic key;
+  @override
+  final String type;
+  @override
+  @UIXEdgeInsetsConverter()
+  final EdgeInsetsGeometry padding;
+  @override
+  @UIXWidgetConverter()
+  final Widget? child;
+
+  @override
+  String toString() {
+    return 'UIXAttributes.padding(key: $key, type: $type, padding: $padding, child: $child)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PaddingAttributes &&
+            const DeepCollectionEquality().equals(other.key, key) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.padding, padding) || other.padding == padding) &&
+            (identical(other.child, child) || other.child == child));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType,
+      const DeepCollectionEquality().hash(key), type, padding, child);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PaddingAttributesCopyWith<_$PaddingAttributes> get copyWith =>
+      __$$PaddingAttributesCopyWithImpl<_$PaddingAttributes>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(dynamic key, String type, double? height,
+            double? width, @UIXWidgetConverter() Widget? child)
+        sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)
+        container,
+    required TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)
+        text,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        column,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        elevatedButton,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)
+        padding,
+  }) {
+    return padding(key, type, this.padding, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult? Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+  }) {
+    return padding?.call(key, type, this.padding, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    required TResult orElse(),
+  }) {
+    if (padding != null) {
+      return padding(key, type, this.padding, child);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ContainerAttributes value) container,
+    required TResult Function(TextAttributes value) text,
+    required TResult Function(ColumnAttributes value) column,
+    required TResult Function(RowAttributes value) row,
+    required TResult Function(ElevatedButtonAttributes value) elevatedButton,
+    required TResult Function(PaddingAttributes value) padding,
+  }) {
+    return padding(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ContainerAttributes value)? container,
+    TResult? Function(TextAttributes value)? text,
+    TResult? Function(ColumnAttributes value)? column,
+    TResult? Function(RowAttributes value)? row,
+    TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult? Function(PaddingAttributes value)? padding,
+  }) {
+    return padding?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ContainerAttributes value)? container,
+    TResult Function(TextAttributes value)? text,
+    TResult Function(ColumnAttributes value)? column,
+    TResult Function(RowAttributes value)? row,
+    TResult Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult Function(PaddingAttributes value)? padding,
+    required TResult orElse(),
+  }) {
+    if (padding != null) {
+      return padding(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PaddingAttributesToJson(
+      this,
+    );
+  }
+}
+
+abstract class PaddingAttributes implements UIXAttributes {
+  const factory PaddingAttributes(
+      {final dynamic key,
+      required final String type,
+      @UIXEdgeInsetsConverter() required final EdgeInsetsGeometry padding,
+      @UIXWidgetConverter() final Widget? child}) = _$PaddingAttributes;
+
+  factory PaddingAttributes.fromJson(Map<String, dynamic> json) =
+      _$PaddingAttributes.fromJson;
+
+  @override
+  dynamic get key;
+  @override
+  String get type;
+  @UIXEdgeInsetsConverter()
+  EdgeInsetsGeometry get padding;
+  @UIXWidgetConverter()
+  Widget? get child;
+  @override
+  @JsonKey(ignore: true)
+  _$$PaddingAttributesCopyWith<_$PaddingAttributes> get copyWith =>
+      throw _privateConstructorUsedError;
 }

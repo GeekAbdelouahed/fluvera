@@ -129,3 +129,22 @@ Map<String, dynamic> _$$ElevatedButtonAttributesToJson(
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
           instance.child, const UIXWidgetConverter().toJson),
     };
+
+_$PaddingAttributes _$$PaddingAttributesFromJson(Map<String, dynamic> json) =>
+    _$PaddingAttributes(
+      key: json['key'],
+      type: json['type'] as String,
+      padding: const UIXEdgeInsetsConverter()
+          .fromJson(json['padding'] as Map<String, dynamic>),
+      child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
+          json['child'], const UIXWidgetConverter().fromJson),
+    );
+
+Map<String, dynamic> _$$PaddingAttributesToJson(_$PaddingAttributes instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'type': instance.type,
+      'padding': const UIXEdgeInsetsConverter().toJson(instance.padding),
+      'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
+          instance.child, const UIXWidgetConverter().toJson),
+    };
