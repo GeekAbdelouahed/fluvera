@@ -22,6 +22,7 @@ const Map<String, dynamic> json = {
           'type': 'Container',
           'height': 100,
           'width': 300,
+          'alignment': 'topEnd',
           'color': '#0000FF',
           'child': {
             'type': 'Text',

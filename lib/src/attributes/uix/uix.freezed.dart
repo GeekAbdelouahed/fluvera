@@ -51,6 +51,7 @@ mixin _$UIXAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)
         container,
@@ -84,6 +85,7 @@ mixin _$UIXAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)?
         container,
@@ -117,6 +119,7 @@ mixin _$UIXAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)?
         container,
@@ -342,6 +345,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)
         container,
@@ -378,6 +382,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)?
         container,
@@ -414,6 +419,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)?
         container,
@@ -535,6 +541,7 @@ abstract class _$$ContainerAttributesCopyWith<$Res>
       String type,
       double? height,
       double? width,
+      @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
       @UIXColorConverter() Color? color,
       @UIXWidgetConverter() Widget? child});
 }
@@ -554,6 +561,7 @@ class __$$ContainerAttributesCopyWithImpl<$Res>
     Object? type = null,
     Object? height = freezed,
     Object? width = freezed,
+    Object? alignment = freezed,
     Object? color = freezed,
     Object? child = freezed,
   }) {
@@ -574,6 +582,10 @@ class __$$ContainerAttributesCopyWithImpl<$Res>
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as double?,
+      alignment: freezed == alignment
+          ? _value.alignment
+          : alignment // ignore: cast_nullable_to_non_nullable
+              as AlignmentGeometry?,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -594,6 +606,7 @@ class _$ContainerAttributes implements ContainerAttributes {
       required this.type,
       this.height,
       this.width,
+      @UIXAlignmentGeometryConverter() this.alignment,
       @UIXColorConverter() this.color,
       @UIXWidgetConverter() this.child});
 
@@ -609,6 +622,9 @@ class _$ContainerAttributes implements ContainerAttributes {
   @override
   final double? width;
   @override
+  @UIXAlignmentGeometryConverter()
+  final AlignmentGeometry? alignment;
+  @override
   @UIXColorConverter()
   final Color? color;
   @override
@@ -617,7 +633,7 @@ class _$ContainerAttributes implements ContainerAttributes {
 
   @override
   String toString() {
-    return 'UIXAttributes.container(key: $key, type: $type, height: $height, width: $width, color: $color, child: $child)';
+    return 'UIXAttributes.container(key: $key, type: $type, height: $height, width: $width, alignment: $alignment, color: $color, child: $child)';
   }
 
   @override
@@ -629,6 +645,8 @@ class _$ContainerAttributes implements ContainerAttributes {
             (identical(other.type, type) || other.type == type) &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.width, width) || other.width == width) &&
+            (identical(other.alignment, alignment) ||
+                other.alignment == alignment) &&
             const DeepCollectionEquality().equals(other.color, color) &&
             (identical(other.child, child) || other.child == child));
   }
@@ -641,6 +659,7 @@ class _$ContainerAttributes implements ContainerAttributes {
       type,
       height,
       width,
+      alignment,
       const DeepCollectionEquality().hash(color),
       child);
 
@@ -662,6 +681,7 @@ class _$ContainerAttributes implements ContainerAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)
         container,
@@ -684,7 +704,7 @@ class _$ContainerAttributes implements ContainerAttributes {
             @UIXWidgetConverter() Widget? child)
         padding,
   }) {
-    return container(key, type, height, width, color, child);
+    return container(key, type, height, width, alignment, color, child);
   }
 
   @override
@@ -698,6 +718,7 @@ class _$ContainerAttributes implements ContainerAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)?
         container,
@@ -720,7 +741,7 @@ class _$ContainerAttributes implements ContainerAttributes {
             @UIXWidgetConverter() Widget? child)?
         padding,
   }) {
-    return container?.call(key, type, height, width, color, child);
+    return container?.call(key, type, height, width, alignment, color, child);
   }
 
   @override
@@ -734,6 +755,7 @@ class _$ContainerAttributes implements ContainerAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)?
         container,
@@ -758,7 +780,7 @@ class _$ContainerAttributes implements ContainerAttributes {
     required TResult orElse(),
   }) {
     if (container != null) {
-      return container(key, type, height, width, color, child);
+      return container(key, type, height, width, alignment, color, child);
     }
     return orElse();
   }
@@ -823,6 +845,7 @@ abstract class ContainerAttributes implements UIXAttributes {
       required final String type,
       final double? height,
       final double? width,
+      @UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
       @UIXColorConverter() final Color? color,
       @UIXWidgetConverter() final Widget? child}) = _$ContainerAttributes;
 
@@ -835,6 +858,8 @@ abstract class ContainerAttributes implements UIXAttributes {
   String get type;
   double? get height;
   double? get width;
+  @UIXAlignmentGeometryConverter()
+  AlignmentGeometry? get alignment;
   @UIXColorConverter()
   Color? get color;
   @UIXWidgetConverter()
@@ -963,6 +988,7 @@ class _$TextAttributes implements TextAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)
         container,
@@ -999,6 +1025,7 @@ class _$TextAttributes implements TextAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)?
         container,
@@ -1035,6 +1062,7 @@ class _$TextAttributes implements TextAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)?
         container,
@@ -1249,6 +1277,7 @@ class _$ColumnAttributes implements ColumnAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)
         container,
@@ -1285,6 +1314,7 @@ class _$ColumnAttributes implements ColumnAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)?
         container,
@@ -1321,6 +1351,7 @@ class _$ColumnAttributes implements ColumnAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)?
         container,
@@ -1535,6 +1566,7 @@ class _$RowAttributes implements RowAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)
         container,
@@ -1571,6 +1603,7 @@ class _$RowAttributes implements RowAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)?
         container,
@@ -1607,6 +1640,7 @@ class _$RowAttributes implements RowAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)?
         container,
@@ -1811,6 +1845,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)
         container,
@@ -1847,6 +1882,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)?
         container,
@@ -1883,6 +1919,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)?
         container,
@@ -2100,6 +2137,7 @@ class _$PaddingAttributes implements PaddingAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)
         container,
@@ -2136,6 +2174,7 @@ class _$PaddingAttributes implements PaddingAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)?
         container,
@@ -2172,6 +2211,7 @@ class _$PaddingAttributes implements PaddingAttributes {
             String type,
             double? height,
             double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
             @UIXWidgetConverter() Widget? child)?
         container,

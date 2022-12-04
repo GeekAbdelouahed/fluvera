@@ -21,6 +21,7 @@ abstract class UIXAttributes with _$UIXAttributes {
     required String type,
     double? height,
     double? width,
+    @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
     @UIXColorConverter() Color? color,
     @UIXWidgetConverter() Widget? child,
   }) = ContainerAttributes;

@@ -46,6 +46,8 @@ _$ContainerAttributes _$$ContainerAttributesFromJson(
       type: json['type'] as String,
       height: (json['height'] as num?)?.toDouble(),
       width: (json['width'] as num?)?.toDouble(),
+      alignment: const UIXAlignmentGeometryConverter()
+          .fromJson(json['alignment'] as String?),
       color: const UIXColorConverter().fromJson(json['color'] as String?),
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
           json['child'], const UIXWidgetConverter().fromJson),
@@ -58,6 +60,8 @@ Map<String, dynamic> _$$ContainerAttributesToJson(
       'type': instance.type,
       'height': instance.height,
       'width': instance.width,
+      'alignment':
+          const UIXAlignmentGeometryConverter().toJson(instance.alignment),
       'color': const UIXColorConverter().toJson(instance.color),
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
           instance.child, const UIXWidgetConverter().toJson),
