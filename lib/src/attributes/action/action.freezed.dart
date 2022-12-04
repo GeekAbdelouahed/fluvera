@@ -34,17 +34,21 @@ UIXAction _$UIXActionFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$UIXAction {
   String get type => throw _privateConstructorUsedError;
+  bool get synchronized => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String type, String routeName, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)
         push,
-    required TResult Function(String type, Map<String, dynamic>? queries) pop,
-    required TResult Function(String type, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
+        pop,
+    required TResult Function(String type, bool synchronized,
+            bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
+            bool synchronized,
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
@@ -54,15 +58,18 @@ mixin _$UIXAction {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            String type, String routeName, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
         push,
-    TResult? Function(String type, Map<String, dynamic>? queries)? pop,
-    TResult? Function(String type, bool barrierDismissible,
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        pop,
+    TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
+            bool synchronized,
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
@@ -72,15 +79,18 @@ mixin _$UIXAction {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String type, String routeName, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
         push,
-    TResult Function(String type, Map<String, dynamic>? queries)? pop,
-    TResult Function(String type, bool barrierDismissible,
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        pop,
+    TResult Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
+            bool synchronized,
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
@@ -125,7 +135,7 @@ abstract class $UIXActionCopyWith<$Res> {
   factory $UIXActionCopyWith(UIXAction value, $Res Function(UIXAction) then) =
       _$UIXActionCopyWithImpl<$Res, UIXAction>;
   @useResult
-  $Res call({String type});
+  $Res call({String type, bool synchronized});
 }
 
 /// @nodoc
@@ -142,12 +152,17 @@ class _$UIXActionCopyWithImpl<$Res, $Val extends UIXAction>
   @override
   $Res call({
     Object? type = null,
+    Object? synchronized = null,
   }) {
     return _then(_value.copyWith(
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
+      synchronized: null == synchronized
+          ? _value.synchronized
+          : synchronized // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -159,7 +174,11 @@ abstract class _$$PushActionCopyWith<$Res> implements $UIXActionCopyWith<$Res> {
       __$$PushActionCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String type, String routeName, Map<String, dynamic>? queries});
+  $Res call(
+      {String type,
+      bool synchronized,
+      String routeName,
+      Map<String, dynamic>? queries});
 }
 
 /// @nodoc
@@ -174,6 +193,7 @@ class __$$PushActionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? type = null,
+    Object? synchronized = null,
     Object? routeName = null,
     Object? queries = freezed,
   }) {
@@ -182,6 +202,10 @@ class __$$PushActionCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
+      synchronized: null == synchronized
+          ? _value.synchronized
+          : synchronized // ignore: cast_nullable_to_non_nullable
+              as bool,
       routeName: null == routeName
           ? _value.routeName
           : routeName // ignore: cast_nullable_to_non_nullable
@@ -199,6 +223,7 @@ class __$$PushActionCopyWithImpl<$Res>
 class _$PushAction implements PushAction {
   const _$PushAction(
       {required this.type,
+      this.synchronized = false,
       required this.routeName,
       final Map<String, dynamic>? queries})
       : _queries = queries;
@@ -208,6 +233,9 @@ class _$PushAction implements PushAction {
 
   @override
   final String type;
+  @override
+  @JsonKey()
+  final bool synchronized;
   @override
   final String routeName;
   final Map<String, dynamic>? _queries;
@@ -222,7 +250,7 @@ class _$PushAction implements PushAction {
 
   @override
   String toString() {
-    return 'UIXAction.push(type: $type, routeName: $routeName, queries: $queries)';
+    return 'UIXAction.push(type: $type, synchronized: $synchronized, routeName: $routeName, queries: $queries)';
   }
 
   @override
@@ -231,6 +259,8 @@ class _$PushAction implements PushAction {
         (other.runtimeType == runtimeType &&
             other is _$PushAction &&
             (identical(other.type, type) || other.type == type) &&
+            (identical(other.synchronized, synchronized) ||
+                other.synchronized == synchronized) &&
             (identical(other.routeName, routeName) ||
                 other.routeName == routeName) &&
             const DeepCollectionEquality().equals(other._queries, _queries));
@@ -238,7 +268,7 @@ class _$PushAction implements PushAction {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, type, routeName,
+  int get hashCode => Object.hash(runtimeType, type, synchronized, routeName,
       const DeepCollectionEquality().hash(_queries));
 
   @JsonKey(ignore: true)
@@ -250,57 +280,66 @@ class _$PushAction implements PushAction {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String type, String routeName, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)
         push,
-    required TResult Function(String type, Map<String, dynamic>? queries) pop,
-    required TResult Function(String type, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
+        pop,
+    required TResult Function(String type, bool synchronized,
+            bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
+            bool synchronized,
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)
         showBottomSheet,
   }) {
-    return push(type, routeName, queries);
+    return push(type, synchronized, routeName, queries);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            String type, String routeName, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
         push,
-    TResult? Function(String type, Map<String, dynamic>? queries)? pop,
-    TResult? Function(String type, bool barrierDismissible,
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        pop,
+    TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
+            bool synchronized,
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
   }) {
-    return push?.call(type, routeName, queries);
+    return push?.call(type, synchronized, routeName, queries);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String type, String routeName, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
         push,
-    TResult Function(String type, Map<String, dynamic>? queries)? pop,
-    TResult Function(String type, bool barrierDismissible,
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        pop,
+    TResult Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
+            bool synchronized,
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
@@ -309,7 +348,7 @@ class _$PushAction implements PushAction {
     required TResult orElse(),
   }) {
     if (push != null) {
-      return push(type, routeName, queries);
+      return push(type, synchronized, routeName, queries);
     }
     return orElse();
   }
@@ -362,6 +401,7 @@ class _$PushAction implements PushAction {
 abstract class PushAction implements UIXAction {
   const factory PushAction(
       {required final String type,
+      final bool synchronized,
       required final String routeName,
       final Map<String, dynamic>? queries}) = _$PushAction;
 
@@ -370,6 +410,8 @@ abstract class PushAction implements UIXAction {
 
   @override
   String get type;
+  @override
+  bool get synchronized;
   String get routeName;
   Map<String, dynamic>? get queries;
   @override
@@ -385,7 +427,7 @@ abstract class _$$PopActionCopyWith<$Res> implements $UIXActionCopyWith<$Res> {
       __$$PopActionCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String type, Map<String, dynamic>? queries});
+  $Res call({String type, bool synchronized, Map<String, dynamic>? queries});
 }
 
 /// @nodoc
@@ -400,6 +442,7 @@ class __$$PopActionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? type = null,
+    Object? synchronized = null,
     Object? queries = freezed,
   }) {
     return _then(_$PopAction(
@@ -407,6 +450,10 @@ class __$$PopActionCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
+      synchronized: null == synchronized
+          ? _value.synchronized
+          : synchronized // ignore: cast_nullable_to_non_nullable
+              as bool,
       queries: freezed == queries
           ? _value._queries
           : queries // ignore: cast_nullable_to_non_nullable
@@ -418,7 +465,10 @@ class __$$PopActionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PopAction implements PopAction {
-  const _$PopAction({required this.type, final Map<String, dynamic>? queries})
+  const _$PopAction(
+      {required this.type,
+      this.synchronized = false,
+      final Map<String, dynamic>? queries})
       : _queries = queries;
 
   factory _$PopAction.fromJson(Map<String, dynamic> json) =>
@@ -426,6 +476,9 @@ class _$PopAction implements PopAction {
 
   @override
   final String type;
+  @override
+  @JsonKey()
+  final bool synchronized;
   final Map<String, dynamic>? _queries;
   @override
   Map<String, dynamic>? get queries {
@@ -438,7 +491,7 @@ class _$PopAction implements PopAction {
 
   @override
   String toString() {
-    return 'UIXAction.pop(type: $type, queries: $queries)';
+    return 'UIXAction.pop(type: $type, synchronized: $synchronized, queries: $queries)';
   }
 
   @override
@@ -447,13 +500,15 @@ class _$PopAction implements PopAction {
         (other.runtimeType == runtimeType &&
             other is _$PopAction &&
             (identical(other.type, type) || other.type == type) &&
+            (identical(other.synchronized, synchronized) ||
+                other.synchronized == synchronized) &&
             const DeepCollectionEquality().equals(other._queries, _queries));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, type, const DeepCollectionEquality().hash(_queries));
+  int get hashCode => Object.hash(runtimeType, type, synchronized,
+      const DeepCollectionEquality().hash(_queries));
 
   @JsonKey(ignore: true)
   @override
@@ -464,57 +519,66 @@ class _$PopAction implements PopAction {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String type, String routeName, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)
         push,
-    required TResult Function(String type, Map<String, dynamic>? queries) pop,
-    required TResult Function(String type, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
+        pop,
+    required TResult Function(String type, bool synchronized,
+            bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
+            bool synchronized,
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)
         showBottomSheet,
   }) {
-    return pop(type, queries);
+    return pop(type, synchronized, queries);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            String type, String routeName, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
         push,
-    TResult? Function(String type, Map<String, dynamic>? queries)? pop,
-    TResult? Function(String type, bool barrierDismissible,
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        pop,
+    TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
+            bool synchronized,
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
   }) {
-    return pop?.call(type, queries);
+    return pop?.call(type, synchronized, queries);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String type, String routeName, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
         push,
-    TResult Function(String type, Map<String, dynamic>? queries)? pop,
-    TResult Function(String type, bool barrierDismissible,
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        pop,
+    TResult Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
+            bool synchronized,
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
@@ -523,7 +587,7 @@ class _$PopAction implements PopAction {
     required TResult orElse(),
   }) {
     if (pop != null) {
-      return pop(type, queries);
+      return pop(type, synchronized, queries);
     }
     return orElse();
   }
@@ -576,12 +640,15 @@ class _$PopAction implements PopAction {
 abstract class PopAction implements UIXAction {
   const factory PopAction(
       {required final String type,
+      final bool synchronized,
       final Map<String, dynamic>? queries}) = _$PopAction;
 
   factory PopAction.fromJson(Map<String, dynamic> json) = _$PopAction.fromJson;
 
   @override
   String get type;
+  @override
+  bool get synchronized;
   Map<String, dynamic>? get queries;
   @override
   @JsonKey(ignore: true)
@@ -599,6 +666,7 @@ abstract class _$$ShowDialogActionCopyWith<$Res>
   @useResult
   $Res call(
       {String type,
+      bool synchronized,
       bool barrierDismissible,
       @UIXWidgetConverter() Widget child});
 }
@@ -615,6 +683,7 @@ class __$$ShowDialogActionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? type = null,
+    Object? synchronized = null,
     Object? barrierDismissible = null,
     Object? child = null,
   }) {
@@ -623,6 +692,10 @@ class __$$ShowDialogActionCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
+      synchronized: null == synchronized
+          ? _value.synchronized
+          : synchronized // ignore: cast_nullable_to_non_nullable
+              as bool,
       barrierDismissible: null == barrierDismissible
           ? _value.barrierDismissible
           : barrierDismissible // ignore: cast_nullable_to_non_nullable
@@ -640,6 +713,7 @@ class __$$ShowDialogActionCopyWithImpl<$Res>
 class _$ShowDialogAction implements ShowDialogAction {
   const _$ShowDialogAction(
       {required this.type,
+      this.synchronized = false,
       this.barrierDismissible = true,
       @UIXWidgetConverter() required this.child});
 
@@ -650,6 +724,9 @@ class _$ShowDialogAction implements ShowDialogAction {
   final String type;
   @override
   @JsonKey()
+  final bool synchronized;
+  @override
+  @JsonKey()
   final bool barrierDismissible;
   @override
   @UIXWidgetConverter()
@@ -657,7 +734,7 @@ class _$ShowDialogAction implements ShowDialogAction {
 
   @override
   String toString() {
-    return 'UIXAction.showDialog(type: $type, barrierDismissible: $barrierDismissible, child: $child)';
+    return 'UIXAction.showDialog(type: $type, synchronized: $synchronized, barrierDismissible: $barrierDismissible, child: $child)';
   }
 
   @override
@@ -666,6 +743,8 @@ class _$ShowDialogAction implements ShowDialogAction {
         (other.runtimeType == runtimeType &&
             other is _$ShowDialogAction &&
             (identical(other.type, type) || other.type == type) &&
+            (identical(other.synchronized, synchronized) ||
+                other.synchronized == synchronized) &&
             (identical(other.barrierDismissible, barrierDismissible) ||
                 other.barrierDismissible == barrierDismissible) &&
             (identical(other.child, child) || other.child == child));
@@ -673,7 +752,8 @@ class _$ShowDialogAction implements ShowDialogAction {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, type, barrierDismissible, child);
+  int get hashCode =>
+      Object.hash(runtimeType, type, synchronized, barrierDismissible, child);
 
   @JsonKey(ignore: true)
   @override
@@ -684,57 +764,66 @@ class _$ShowDialogAction implements ShowDialogAction {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String type, String routeName, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)
         push,
-    required TResult Function(String type, Map<String, dynamic>? queries) pop,
-    required TResult Function(String type, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
+        pop,
+    required TResult Function(String type, bool synchronized,
+            bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
+            bool synchronized,
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)
         showBottomSheet,
   }) {
-    return showDialog(type, barrierDismissible, child);
+    return showDialog(type, synchronized, barrierDismissible, child);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            String type, String routeName, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
         push,
-    TResult? Function(String type, Map<String, dynamic>? queries)? pop,
-    TResult? Function(String type, bool barrierDismissible,
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        pop,
+    TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
+            bool synchronized,
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
   }) {
-    return showDialog?.call(type, barrierDismissible, child);
+    return showDialog?.call(type, synchronized, barrierDismissible, child);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String type, String routeName, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
         push,
-    TResult Function(String type, Map<String, dynamic>? queries)? pop,
-    TResult Function(String type, bool barrierDismissible,
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        pop,
+    TResult Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
+            bool synchronized,
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
@@ -743,7 +832,7 @@ class _$ShowDialogAction implements ShowDialogAction {
     required TResult orElse(),
   }) {
     if (showDialog != null) {
-      return showDialog(type, barrierDismissible, child);
+      return showDialog(type, synchronized, barrierDismissible, child);
     }
     return orElse();
   }
@@ -796,6 +885,7 @@ class _$ShowDialogAction implements ShowDialogAction {
 abstract class ShowDialogAction implements UIXAction {
   const factory ShowDialogAction(
       {required final String type,
+      final bool synchronized,
       final bool barrierDismissible,
       @UIXWidgetConverter() required final Widget child}) = _$ShowDialogAction;
 
@@ -804,6 +894,8 @@ abstract class ShowDialogAction implements UIXAction {
 
   @override
   String get type;
+  @override
+  bool get synchronized;
   bool get barrierDismissible;
   @UIXWidgetConverter()
   Widget get child;
@@ -823,6 +915,7 @@ abstract class _$$ShowBottomSheetActionCopyWith<$Res>
   @useResult
   $Res call(
       {String type,
+      bool synchronized,
       bool? enableDrag,
       double? elevation,
       @UIXColorConverter() Color? backgroundColor,
@@ -841,6 +934,7 @@ class __$$ShowBottomSheetActionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? type = null,
+    Object? synchronized = null,
     Object? enableDrag = freezed,
     Object? elevation = freezed,
     Object? backgroundColor = freezed,
@@ -851,6 +945,10 @@ class __$$ShowBottomSheetActionCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
+      synchronized: null == synchronized
+          ? _value.synchronized
+          : synchronized // ignore: cast_nullable_to_non_nullable
+              as bool,
       enableDrag: freezed == enableDrag
           ? _value.enableDrag
           : enableDrag // ignore: cast_nullable_to_non_nullable
@@ -876,6 +974,7 @@ class __$$ShowBottomSheetActionCopyWithImpl<$Res>
 class _$ShowBottomSheetAction implements ShowBottomSheetAction {
   const _$ShowBottomSheetAction(
       {required this.type,
+      this.synchronized = false,
       this.enableDrag,
       this.elevation,
       @UIXColorConverter() this.backgroundColor,
@@ -886,6 +985,9 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
 
   @override
   final String type;
+  @override
+  @JsonKey()
+  final bool synchronized;
   @override
   final bool? enableDrag;
   @override
@@ -899,7 +1001,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
 
   @override
   String toString() {
-    return 'UIXAction.showBottomSheet(type: $type, enableDrag: $enableDrag, elevation: $elevation, backgroundColor: $backgroundColor, child: $child)';
+    return 'UIXAction.showBottomSheet(type: $type, synchronized: $synchronized, enableDrag: $enableDrag, elevation: $elevation, backgroundColor: $backgroundColor, child: $child)';
   }
 
   @override
@@ -908,6 +1010,8 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
         (other.runtimeType == runtimeType &&
             other is _$ShowBottomSheetAction &&
             (identical(other.type, type) || other.type == type) &&
+            (identical(other.synchronized, synchronized) ||
+                other.synchronized == synchronized) &&
             (identical(other.enableDrag, enableDrag) ||
                 other.enableDrag == enableDrag) &&
             (identical(other.elevation, elevation) ||
@@ -919,8 +1023,8 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, type, enableDrag, elevation,
-      const DeepCollectionEquality().hash(backgroundColor), child);
+  int get hashCode => Object.hash(runtimeType, type, synchronized, enableDrag,
+      elevation, const DeepCollectionEquality().hash(backgroundColor), child);
 
   @JsonKey(ignore: true)
   @override
@@ -932,36 +1036,43 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String type, String routeName, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)
         push,
-    required TResult Function(String type, Map<String, dynamic>? queries) pop,
-    required TResult Function(String type, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
+        pop,
+    required TResult Function(String type, bool synchronized,
+            bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
+            bool synchronized,
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)
         showBottomSheet,
   }) {
-    return showBottomSheet(type, enableDrag, elevation, backgroundColor, child);
+    return showBottomSheet(
+        type, synchronized, enableDrag, elevation, backgroundColor, child);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            String type, String routeName, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
         push,
-    TResult? Function(String type, Map<String, dynamic>? queries)? pop,
-    TResult? Function(String type, bool barrierDismissible,
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        pop,
+    TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
+            bool synchronized,
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
@@ -969,21 +1080,24 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
         showBottomSheet,
   }) {
     return showBottomSheet?.call(
-        type, enableDrag, elevation, backgroundColor, child);
+        type, synchronized, enableDrag, elevation, backgroundColor, child);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String type, String routeName, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
         push,
-    TResult Function(String type, Map<String, dynamic>? queries)? pop,
-    TResult Function(String type, bool barrierDismissible,
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        pop,
+    TResult Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
+            bool synchronized,
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
@@ -993,7 +1107,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
   }) {
     if (showBottomSheet != null) {
       return showBottomSheet(
-          type, enableDrag, elevation, backgroundColor, child);
+          type, synchronized, enableDrag, elevation, backgroundColor, child);
     }
     return orElse();
   }
@@ -1046,6 +1160,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
 abstract class ShowBottomSheetAction implements UIXAction {
   const factory ShowBottomSheetAction(
           {required final String type,
+          final bool synchronized,
           final bool? enableDrag,
           final double? elevation,
           @UIXColorConverter() final Color? backgroundColor,
@@ -1057,6 +1172,8 @@ abstract class ShowBottomSheetAction implements UIXAction {
 
   @override
   String get type;
+  @override
+  bool get synchronized;
   bool? get enableDrag;
   double? get elevation;
   @UIXColorConverter()

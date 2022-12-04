@@ -62,24 +62,29 @@ const Map<String, dynamic> json = {
       },
       'child': {
         'type': 'ElevatedButton',
-        'onPressed': {
-          'type': 'ShowBottomSheet',
-          'backgroundColor': '#77a0aa',
-          'child': {
-            'type': 'FractionallySizedBox',
-            'heightFactor': 0.5,
-            'widthFactor': 1,
+        'onPressed': [
+          {
+            'type': 'ShowBottomSheet',
+            'backgroundColor': '#AAAACC',
             'child': {
-              'type': 'Text',
-              'text': 'Dart',
-              'style': {
-                'color': '#FF0000',
-                'fontSize': 30,
-                'fontWeight': 'w500',
+              'type': 'FractionallySizedBox',
+              'heightFactor': 0.5,
+              'widthFactor': 1,
+              'child': {
+                'type': 'Align',
+                'child': {
+                  'type': 'Text',
+                  'text': 'Hey from bottom sheet',
+                  'style': {
+                    'color': '#AA1100',
+                    'fontSize': 30,
+                    'fontWeight': 'w500',
+                  },
+                },
               },
             },
-          }
-        },
+          },
+        ],
         'child': {
           'type': 'Text',
           'text': 'Show BottomSheet',
@@ -99,30 +104,57 @@ const Map<String, dynamic> json = {
       },
       'child': {
         'type': 'ElevatedButton',
-        'onPressed': {
-          'type': 'ShowDialog',
-          'child': {
-            'type': 'FractionallySizedBox',
-            'heightFactor': 0.5,
-            'widthFactor': 0.5,
+        'onPressed': [
+          {
+            'type': 'ShowDialog',
+            'synchronized': true,
             'child': {
-              'type': 'Container',
-              'color': '#AA0000',
+              'type': 'FractionallySizedBox',
+              'heightFactor': 0.5,
+              'widthFactor': 0.5,
               'child': {
-                'type': 'Align',
+                'type': 'Container',
+                'color': '#AA0000',
                 'child': {
-                  'type': 'Text',
-                  'text': 'Dart',
-                  'style': {
-                    'color': '#FFFFFF',
-                    'fontSize': 30,
-                    'fontWeight': 'w500',
+                  'type': 'Align',
+                  'child': {
+                    'type': 'Text',
+                    'text': 'First dialog',
+                    'style': {
+                      'color': '#FFFFFF',
+                      'fontSize': 30,
+                      'fontWeight': 'w500',
+                    },
                   },
                 },
               },
             },
           },
-        },
+          {
+            'type': 'ShowDialog',
+            'child': {
+              'type': 'FractionallySizedBox',
+              'heightFactor': 0.5,
+              'widthFactor': 0.5,
+              'child': {
+                'type': 'Container',
+                'color': '#AA0000',
+                'child': {
+                  'type': 'Align',
+                  'child': {
+                    'type': 'Text',
+                    'text': 'Second dialog',
+                    'style': {
+                      'color': '#FFFFFF',
+                      'fontSize': 30,
+                      'fontWeight': 'w500',
+                    },
+                  },
+                },
+              },
+            },
+          },
+        ],
         'child': {
           'type': 'Text',
           'text': 'Show Dialog',

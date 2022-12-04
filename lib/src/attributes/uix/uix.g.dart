@@ -120,12 +120,12 @@ _$ElevatedButtonAttributes _$$ElevatedButtonAttributesFromJson(
     _$ElevatedButtonAttributes(
       key: json['key'],
       type: json['type'] as String,
-      onPressed: json['onPressed'] == null
-          ? null
-          : UIXAction.fromJson(json['onPressed'] as Map<String, dynamic>),
-      onLongPress: json['onLongPress'] == null
-          ? null
-          : UIXAction.fromJson(json['onLongPress'] as Map<String, dynamic>),
+      onPressed: (json['onPressed'] as List<dynamic>?)
+          ?.map((e) => UIXAction.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      onLongPress: (json['onLongPress'] as List<dynamic>?)
+          ?.map((e) => UIXAction.fromJson(e as Map<String, dynamic>))
+          .toList(),
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
           json['child'], const UIXWidgetConverter().fromJson),
     );

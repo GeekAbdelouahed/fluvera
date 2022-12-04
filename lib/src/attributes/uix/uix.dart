@@ -49,8 +49,8 @@ abstract class UIXAttributes with _$UIXAttributes {
   const factory UIXAttributes.elevatedButton({
     dynamic key,
     required String type,
-    UIXAction? onPressed,
-    UIXAction? onLongPress,
+    List<UIXAction>? onPressed,
+    List<UIXAction>? onLongPress,
     @UIXWidgetConverter() Widget? child,
   }) = ElevatedButtonAttributes;
 

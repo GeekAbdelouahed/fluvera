@@ -10,8 +10,28 @@ class UIXElevatedButton extends UIX<ElevatedButtonAttributes> {
       builder: (context) {
         return ElevatedButton(
           key: attributes.key != null ? Key(attributes.key) : null,
-          onPressed: attributes.onPressed?.act(context),
-          onLongPress: attributes.onLongPress?.act(context),
+          onPressed: attributes.onPressed == null
+              ? null
+              : () async {
+                  for (final action in attributes.onPressed!) {
+                    if (action.synchronized) {
+                      await action.act(context);
+                    } else {
+                      action.act(context);
+                    }
+                  }
+                },
+          onLongPress: attributes.onLongPress == null
+              ? null
+              : () async {
+                  for (final action in attributes.onLongPress!) {
+                    if (action.synchronized) {
+                      await action.act(context);
+                    } else {
+                      action.act(context);
+                    }
+                  }
+                },
           child: attributes.child,
         );
       },

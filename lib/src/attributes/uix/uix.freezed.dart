@@ -72,8 +72,12 @@ mixin _$UIXAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress,
+            @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -124,8 +128,8 @@ mixin _$UIXAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -176,8 +180,8 @@ mixin _$UIXAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -435,8 +439,12 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress,
+            @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -490,8 +498,8 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -545,8 +553,8 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -840,8 +848,12 @@ class _$ContainerAttributes implements ContainerAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress,
+            @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -895,8 +907,8 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -950,8 +962,8 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -1216,8 +1228,12 @@ class _$TextAttributes implements TextAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress,
+            @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -1271,8 +1287,8 @@ class _$TextAttributes implements TextAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -1326,8 +1342,8 @@ class _$TextAttributes implements TextAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -1574,8 +1590,12 @@ class _$ColumnAttributes implements ColumnAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress,
+            @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -1629,8 +1649,8 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -1684,8 +1704,8 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -1932,8 +1952,12 @@ class _$RowAttributes implements RowAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress,
+            @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -1987,8 +2011,8 @@ class _$RowAttributes implements RowAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -2042,8 +2066,8 @@ class _$RowAttributes implements RowAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -2179,12 +2203,9 @@ abstract class _$$ElevatedButtonAttributesCopyWith<$Res>
   $Res call(
       {dynamic key,
       String type,
-      UIXAction? onPressed,
-      UIXAction? onLongPress,
+      List<UIXAction>? onPressed,
+      List<UIXAction>? onLongPress,
       @UIXWidgetConverter() Widget? child});
-
-  $UIXActionCopyWith<$Res>? get onPressed;
-  $UIXActionCopyWith<$Res>? get onLongPress;
 }
 
 /// @nodoc
@@ -2214,42 +2235,18 @@ class __$$ElevatedButtonAttributesCopyWithImpl<$Res>
           : type // ignore: cast_nullable_to_non_nullable
               as String,
       onPressed: freezed == onPressed
-          ? _value.onPressed
+          ? _value._onPressed
           : onPressed // ignore: cast_nullable_to_non_nullable
-              as UIXAction?,
+              as List<UIXAction>?,
       onLongPress: freezed == onLongPress
-          ? _value.onLongPress
+          ? _value._onLongPress
           : onLongPress // ignore: cast_nullable_to_non_nullable
-              as UIXAction?,
+              as List<UIXAction>?,
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
               as Widget?,
     ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $UIXActionCopyWith<$Res>? get onPressed {
-    if (_value.onPressed == null) {
-      return null;
-    }
-
-    return $UIXActionCopyWith<$Res>(_value.onPressed!, (value) {
-      return _then(_value.copyWith(onPressed: value));
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $UIXActionCopyWith<$Res>? get onLongPress {
-    if (_value.onLongPress == null) {
-      return null;
-    }
-
-    return $UIXActionCopyWith<$Res>(_value.onLongPress!, (value) {
-      return _then(_value.copyWith(onLongPress: value));
-    });
   }
 }
 
@@ -2259,9 +2256,11 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
   const _$ElevatedButtonAttributes(
       {this.key,
       required this.type,
-      this.onPressed,
-      this.onLongPress,
-      @UIXWidgetConverter() this.child});
+      final List<UIXAction>? onPressed,
+      final List<UIXAction>? onLongPress,
+      @UIXWidgetConverter() this.child})
+      : _onPressed = onPressed,
+        _onLongPress = onLongPress;
 
   factory _$ElevatedButtonAttributes.fromJson(Map<String, dynamic> json) =>
       _$$ElevatedButtonAttributesFromJson(json);
@@ -2270,10 +2269,26 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
   final dynamic key;
   @override
   final String type;
+  final List<UIXAction>? _onPressed;
   @override
-  final UIXAction? onPressed;
+  List<UIXAction>? get onPressed {
+    final value = _onPressed;
+    if (value == null) return null;
+    if (_onPressed is EqualUnmodifiableListView) return _onPressed;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<UIXAction>? _onLongPress;
   @override
-  final UIXAction? onLongPress;
+  List<UIXAction>? get onLongPress {
+    final value = _onLongPress;
+    if (value == null) return null;
+    if (_onLongPress is EqualUnmodifiableListView) return _onLongPress;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @UIXWidgetConverter()
   final Widget? child;
@@ -2290,10 +2305,10 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             other is _$ElevatedButtonAttributes &&
             const DeepCollectionEquality().equals(other.key, key) &&
             (identical(other.type, type) || other.type == type) &&
-            (identical(other.onPressed, onPressed) ||
-                other.onPressed == onPressed) &&
-            (identical(other.onLongPress, onLongPress) ||
-                other.onLongPress == onLongPress) &&
+            const DeepCollectionEquality()
+                .equals(other._onPressed, _onPressed) &&
+            const DeepCollectionEquality()
+                .equals(other._onLongPress, _onLongPress) &&
             (identical(other.child, child) || other.child == child));
   }
 
@@ -2303,8 +2318,8 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
       runtimeType,
       const DeepCollectionEquality().hash(key),
       type,
-      onPressed,
-      onLongPress,
+      const DeepCollectionEquality().hash(_onPressed),
+      const DeepCollectionEquality().hash(_onLongPress),
       child);
 
   @JsonKey(ignore: true)
@@ -2339,8 +2354,12 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress,
+            @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -2394,8 +2413,8 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -2449,8 +2468,8 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -2557,8 +2576,8 @@ abstract class ElevatedButtonAttributes implements UIXAttributes {
   const factory ElevatedButtonAttributes(
       {final dynamic key,
       required final String type,
-      final UIXAction? onPressed,
-      final UIXAction? onLongPress,
+      final List<UIXAction>? onPressed,
+      final List<UIXAction>? onLongPress,
       @UIXWidgetConverter() final Widget? child}) = _$ElevatedButtonAttributes;
 
   factory ElevatedButtonAttributes.fromJson(Map<String, dynamic> json) =
@@ -2568,8 +2587,8 @@ abstract class ElevatedButtonAttributes implements UIXAttributes {
   dynamic get key;
   @override
   String get type;
-  UIXAction? get onPressed;
-  UIXAction? get onLongPress;
+  List<UIXAction>? get onPressed;
+  List<UIXAction>? get onLongPress;
   @UIXWidgetConverter()
   Widget? get child;
   @override
@@ -2704,8 +2723,12 @@ class _$PaddingAttributes implements PaddingAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress,
+            @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -2759,8 +2782,8 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -2814,8 +2837,8 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -3072,8 +3095,12 @@ class _$AlignAttributes implements AlignAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress,
+            @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -3127,8 +3154,8 @@ class _$AlignAttributes implements AlignAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -3182,8 +3209,8 @@ class _$AlignAttributes implements AlignAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -3473,8 +3500,12 @@ class _$FractionallySizedBoxAttributes
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress,
+            @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -3529,8 +3560,8 @@ class _$FractionallySizedBoxAttributes
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -3585,8 +3616,8 @@ class _$FractionallySizedBoxAttributes
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -3843,8 +3874,12 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress,
+            @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -3898,8 +3933,8 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -3953,8 +3988,8 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -4190,8 +4225,12 @@ class _$SpacerAttributes implements SpacerAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress,
+            @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -4245,8 +4284,8 @@ class _$SpacerAttributes implements SpacerAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -4300,8 +4339,8 @@ class _$SpacerAttributes implements SpacerAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(dynamic key, String type, UIXAction? onPressed,
-            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
