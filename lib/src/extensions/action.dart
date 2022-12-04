@@ -1,26 +1,26 @@
 part of 'extension.dart';
 
 extension UIXActionExtension on UIXAction {
-  Future<void> act(BuildContext ctx) {
+  Future<void> act(BuildContext context) {
     return map(
       push: (attributes) {
-        return Navigator.of(ctx).pushNamed(
+        return Navigator.of(context).pushNamed(
           attributes.routeName,
           arguments: attributes.queries,
         );
       },
       pop: (attributes) async {
-        return Navigator.of(ctx).pop(
+        return Navigator.of(context).pop(
           attributes.queries,
         );
       },
       showDialog: (attributes) {
         return showDialog(
-          context: ctx,
+          context: context,
           barrierDismissible: attributes.barrierDismissible,
-          builder: (context) {
+          builder: (_) {
             return UIXProvider<UIXAttributesNotifier>(
-              value: UIXProvider.of<UIXAttributesNotifier>(ctx).value,
+              value: UIXProvider.of<UIXAttributesNotifier>(context).value,
               child: attributes.child,
             );
           },
@@ -28,20 +28,20 @@ extension UIXActionExtension on UIXAction {
       },
       showBottomSheet: (attributes) async {
         return showBottomSheet(
-          context: ctx,
+          context: context,
           enableDrag: attributes.enableDrag,
           elevation: attributes.elevation,
           backgroundColor: attributes.backgroundColor,
-          builder: (context) {
+          builder: (_) {
             return UIXProvider<UIXAttributesNotifier>(
-              value: UIXProvider.of<UIXAttributesNotifier>(ctx).value,
+              value: UIXProvider.of<UIXAttributesNotifier>(context).value,
               child: attributes.child,
             );
           },
         ).closed;
       },
       updateValue: (attributes) async {
-        UIXProvider.of<UIXAttributesNotifier>(ctx)
+        UIXProvider.of<UIXAttributesNotifier>(context)
             .value
             .update(attributes.key, attributes.value);
       },
