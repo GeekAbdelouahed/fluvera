@@ -24,6 +24,8 @@ UIXAction _$UIXActionFromJson(Map<String, dynamic> json) {
       return ShowDialogAction.fromJson(json);
     case 'ShowBottomSheet':
       return ShowBottomSheetAction.fromJson(json);
+    case 'UpdateValue':
+      return UpdateValueAction.fromJson(json);
 
     default:
       throw CheckedFromJsonException(
@@ -54,6 +56,9 @@ mixin _$UIXAction {
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)
         showBottomSheet,
+    required TResult Function(
+            String type, bool synchronized, String key, String? value)
+        updateValue,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,6 +80,9 @@ mixin _$UIXAction {
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
+    TResult? Function(
+            String type, bool synchronized, String key, String? value)?
+        updateValue,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -96,6 +104,8 @@ mixin _$UIXAction {
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
+    TResult Function(String type, bool synchronized, String key, String? value)?
+        updateValue,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -105,6 +115,7 @@ mixin _$UIXAction {
     required TResult Function(PopAction value) pop,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(UpdateValueAction value) updateValue,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -113,6 +124,7 @@ mixin _$UIXAction {
     TResult? Function(PopAction value)? pop,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(UpdateValueAction value)? updateValue,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -121,6 +133,7 @@ mixin _$UIXAction {
     TResult Function(PopAction value)? pop,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(UpdateValueAction value)? updateValue,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -297,6 +310,9 @@ class _$PushAction implements PushAction {
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)
         showBottomSheet,
+    required TResult Function(
+            String type, bool synchronized, String key, String? value)
+        updateValue,
   }) {
     return push(type, synchronized, routeName, queries);
   }
@@ -321,6 +337,9 @@ class _$PushAction implements PushAction {
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
+    TResult? Function(
+            String type, bool synchronized, String key, String? value)?
+        updateValue,
   }) {
     return push?.call(type, synchronized, routeName, queries);
   }
@@ -345,6 +364,8 @@ class _$PushAction implements PushAction {
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
+    TResult Function(String type, bool synchronized, String key, String? value)?
+        updateValue,
     required TResult orElse(),
   }) {
     if (push != null) {
@@ -360,6 +381,7 @@ class _$PushAction implements PushAction {
     required TResult Function(PopAction value) pop,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(UpdateValueAction value) updateValue,
   }) {
     return push(this);
   }
@@ -371,6 +393,7 @@ class _$PushAction implements PushAction {
     TResult? Function(PopAction value)? pop,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(UpdateValueAction value)? updateValue,
   }) {
     return push?.call(this);
   }
@@ -382,6 +405,7 @@ class _$PushAction implements PushAction {
     TResult Function(PopAction value)? pop,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(UpdateValueAction value)? updateValue,
     required TResult orElse(),
   }) {
     if (push != null) {
@@ -536,6 +560,9 @@ class _$PopAction implements PopAction {
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)
         showBottomSheet,
+    required TResult Function(
+            String type, bool synchronized, String key, String? value)
+        updateValue,
   }) {
     return pop(type, synchronized, queries);
   }
@@ -560,6 +587,9 @@ class _$PopAction implements PopAction {
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
+    TResult? Function(
+            String type, bool synchronized, String key, String? value)?
+        updateValue,
   }) {
     return pop?.call(type, synchronized, queries);
   }
@@ -584,6 +614,8 @@ class _$PopAction implements PopAction {
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
+    TResult Function(String type, bool synchronized, String key, String? value)?
+        updateValue,
     required TResult orElse(),
   }) {
     if (pop != null) {
@@ -599,6 +631,7 @@ class _$PopAction implements PopAction {
     required TResult Function(PopAction value) pop,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(UpdateValueAction value) updateValue,
   }) {
     return pop(this);
   }
@@ -610,6 +643,7 @@ class _$PopAction implements PopAction {
     TResult? Function(PopAction value)? pop,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(UpdateValueAction value)? updateValue,
   }) {
     return pop?.call(this);
   }
@@ -621,6 +655,7 @@ class _$PopAction implements PopAction {
     TResult Function(PopAction value)? pop,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(UpdateValueAction value)? updateValue,
     required TResult orElse(),
   }) {
     if (pop != null) {
@@ -781,6 +816,9 @@ class _$ShowDialogAction implements ShowDialogAction {
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)
         showBottomSheet,
+    required TResult Function(
+            String type, bool synchronized, String key, String? value)
+        updateValue,
   }) {
     return showDialog(type, synchronized, barrierDismissible, child);
   }
@@ -805,6 +843,9 @@ class _$ShowDialogAction implements ShowDialogAction {
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
+    TResult? Function(
+            String type, bool synchronized, String key, String? value)?
+        updateValue,
   }) {
     return showDialog?.call(type, synchronized, barrierDismissible, child);
   }
@@ -829,6 +870,8 @@ class _$ShowDialogAction implements ShowDialogAction {
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
+    TResult Function(String type, bool synchronized, String key, String? value)?
+        updateValue,
     required TResult orElse(),
   }) {
     if (showDialog != null) {
@@ -844,6 +887,7 @@ class _$ShowDialogAction implements ShowDialogAction {
     required TResult Function(PopAction value) pop,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(UpdateValueAction value) updateValue,
   }) {
     return showDialog(this);
   }
@@ -855,6 +899,7 @@ class _$ShowDialogAction implements ShowDialogAction {
     TResult? Function(PopAction value)? pop,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(UpdateValueAction value)? updateValue,
   }) {
     return showDialog?.call(this);
   }
@@ -866,6 +911,7 @@ class _$ShowDialogAction implements ShowDialogAction {
     TResult Function(PopAction value)? pop,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(UpdateValueAction value)? updateValue,
     required TResult orElse(),
   }) {
     if (showDialog != null) {
@@ -1053,6 +1099,9 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)
         showBottomSheet,
+    required TResult Function(
+            String type, bool synchronized, String key, String? value)
+        updateValue,
   }) {
     return showBottomSheet(
         type, synchronized, enableDrag, elevation, backgroundColor, child);
@@ -1078,6 +1127,9 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
+    TResult? Function(
+            String type, bool synchronized, String key, String? value)?
+        updateValue,
   }) {
     return showBottomSheet?.call(
         type, synchronized, enableDrag, elevation, backgroundColor, child);
@@ -1103,6 +1155,8 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
             @UIXColorConverter() Color? backgroundColor,
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
+    TResult Function(String type, bool synchronized, String key, String? value)?
+        updateValue,
     required TResult orElse(),
   }) {
     if (showBottomSheet != null) {
@@ -1119,6 +1173,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
     required TResult Function(PopAction value) pop,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(UpdateValueAction value) updateValue,
   }) {
     return showBottomSheet(this);
   }
@@ -1130,6 +1185,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
     TResult? Function(PopAction value)? pop,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(UpdateValueAction value)? updateValue,
   }) {
     return showBottomSheet?.call(this);
   }
@@ -1141,6 +1197,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
     TResult Function(PopAction value)? pop,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(UpdateValueAction value)? updateValue,
     required TResult orElse(),
   }) {
     if (showBottomSheet != null) {
@@ -1183,5 +1240,256 @@ abstract class ShowBottomSheetAction implements UIXAction {
   @override
   @JsonKey(ignore: true)
   _$$ShowBottomSheetActionCopyWith<_$ShowBottomSheetAction> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateValueActionCopyWith<$Res>
+    implements $UIXActionCopyWith<$Res> {
+  factory _$$UpdateValueActionCopyWith(
+          _$UpdateValueAction value, $Res Function(_$UpdateValueAction) then) =
+      __$$UpdateValueActionCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String type, bool synchronized, String key, String? value});
+}
+
+/// @nodoc
+class __$$UpdateValueActionCopyWithImpl<$Res>
+    extends _$UIXActionCopyWithImpl<$Res, _$UpdateValueAction>
+    implements _$$UpdateValueActionCopyWith<$Res> {
+  __$$UpdateValueActionCopyWithImpl(
+      _$UpdateValueAction _value, $Res Function(_$UpdateValueAction) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = null,
+    Object? synchronized = null,
+    Object? key = null,
+    Object? value = freezed,
+  }) {
+    return _then(_$UpdateValueAction(
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      synchronized: null == synchronized
+          ? _value.synchronized
+          : synchronized // ignore: cast_nullable_to_non_nullable
+              as bool,
+      key: null == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String,
+      value: freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$UpdateValueAction implements UpdateValueAction {
+  const _$UpdateValueAction(
+      {required this.type,
+      this.synchronized = false,
+      required this.key,
+      this.value});
+
+  factory _$UpdateValueAction.fromJson(Map<String, dynamic> json) =>
+      _$$UpdateValueActionFromJson(json);
+
+  @override
+  final String type;
+  @override
+  @JsonKey()
+  final bool synchronized;
+  @override
+  final String key;
+  @override
+  final String? value;
+
+  @override
+  String toString() {
+    return 'UIXAction.updateValue(type: $type, synchronized: $synchronized, key: $key, value: $value)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateValueAction &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.synchronized, synchronized) ||
+                other.synchronized == synchronized) &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, type, synchronized, key, value);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateValueActionCopyWith<_$UpdateValueAction> get copyWith =>
+      __$$UpdateValueActionCopyWithImpl<_$UpdateValueAction>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)
+        push,
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
+        pop,
+    required TResult Function(String type, bool synchronized,
+            bool barrierDismissible, @UIXWidgetConverter() Widget child)
+        showDialog,
+    required TResult Function(
+            String type,
+            bool synchronized,
+            bool? enableDrag,
+            double? elevation,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget child)
+        showBottomSheet,
+    required TResult Function(
+            String type, bool synchronized, String key, String? value)
+        updateValue,
+  }) {
+    return updateValue(type, synchronized, key, value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
+        push,
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        pop,
+    TResult? Function(String type, bool synchronized, bool barrierDismissible,
+            @UIXWidgetConverter() Widget child)?
+        showDialog,
+    TResult? Function(
+            String type,
+            bool synchronized,
+            bool? enableDrag,
+            double? elevation,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget child)?
+        showBottomSheet,
+    TResult? Function(
+            String type, bool synchronized, String key, String? value)?
+        updateValue,
+  }) {
+    return updateValue?.call(type, synchronized, key, value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
+        push,
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        pop,
+    TResult Function(String type, bool synchronized, bool barrierDismissible,
+            @UIXWidgetConverter() Widget child)?
+        showDialog,
+    TResult Function(
+            String type,
+            bool synchronized,
+            bool? enableDrag,
+            double? elevation,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget child)?
+        showBottomSheet,
+    TResult Function(String type, bool synchronized, String key, String? value)?
+        updateValue,
+    required TResult orElse(),
+  }) {
+    if (updateValue != null) {
+      return updateValue(type, synchronized, key, value);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PushAction value) push,
+    required TResult Function(PopAction value) pop,
+    required TResult Function(ShowDialogAction value) showDialog,
+    required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(UpdateValueAction value) updateValue,
+  }) {
+    return updateValue(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PushAction value)? push,
+    TResult? Function(PopAction value)? pop,
+    TResult? Function(ShowDialogAction value)? showDialog,
+    TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(UpdateValueAction value)? updateValue,
+  }) {
+    return updateValue?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PushAction value)? push,
+    TResult Function(PopAction value)? pop,
+    TResult Function(ShowDialogAction value)? showDialog,
+    TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(UpdateValueAction value)? updateValue,
+    required TResult orElse(),
+  }) {
+    if (updateValue != null) {
+      return updateValue(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$UpdateValueActionToJson(
+      this,
+    );
+  }
+}
+
+abstract class UpdateValueAction implements UIXAction {
+  const factory UpdateValueAction(
+      {required final String type,
+      final bool synchronized,
+      required final String key,
+      final String? value}) = _$UpdateValueAction;
+
+  factory UpdateValueAction.fromJson(Map<String, dynamic> json) =
+      _$UpdateValueAction.fromJson;
+
+  @override
+  String get type;
+  @override
+  bool get synchronized;
+  String get key;
+  String? get value;
+  @override
+  @JsonKey(ignore: true)
+  _$$UpdateValueActionCopyWith<_$UpdateValueAction> get copyWith =>
       throw _privateConstructorUsedError;
 }

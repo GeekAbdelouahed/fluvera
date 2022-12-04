@@ -6,7 +6,7 @@ class UIXPage extends UIX<PageAttributes> {
   @override
   Widget build() {
     return UIXProvider<UIXAttributesNotifier>(
-      value: UIXAttributesNotifier(attributes.attributes ?? {}),
+      value: UIXAttributesNotifier(Map.from(attributes.attributes ?? {})),
       child: _Page(
         key: key,
         attributes: attributes,

@@ -75,3 +75,19 @@ Map<String, dynamic> _$$ShowBottomSheetActionToJson(
           const UIXColorConverter().toJson(instance.backgroundColor),
       'child': const UIXWidgetConverter().toJson(instance.child),
     };
+
+_$UpdateValueAction _$$UpdateValueActionFromJson(Map<String, dynamic> json) =>
+    _$UpdateValueAction(
+      type: json['type'] as String,
+      synchronized: json['synchronized'] as bool? ?? false,
+      key: json['key'] as String,
+      value: json['value'] as String?,
+    );
+
+Map<String, dynamic> _$$UpdateValueActionToJson(_$UpdateValueAction instance) =>
+    <String, dynamic>{
+      'type': instance.type,
+      'synchronized': instance.synchronized,
+      'key': instance.key,
+      'value': instance.value,
+    };

@@ -1,11 +1,14 @@
 const Map<String, dynamic> json = {
   'type': 'Page',
+  'attributes': {
+    'greeting': 'Hey',
+  },
   'child': {
     'type': 'Column',
     'children': [
       {
         'type': 'Text',
-        'text': '{hello} World from UIX',
+        'text': '{greeting}',
         'style': {
           'color': '#459600',
           'fontSize': 50,
@@ -24,12 +27,14 @@ const Map<String, dynamic> json = {
           'type': 'ElevatedButton',
           'onPressed': [
             {
-              'type': 'Pop',
+              'type': 'UpdateValue',
+              'key': 'greeting',
+              'value': 'Hello UIX',
             },
           ],
           'child': {
             'type': 'Text',
-            'text': 'Update state',
+            'text': 'Greeting',
             'style': {
               'fontSize': 30,
               'fontWeight': 'w400',

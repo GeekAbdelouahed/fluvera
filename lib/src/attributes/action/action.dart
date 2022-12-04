@@ -36,6 +36,13 @@ abstract class UIXAction with _$UIXAction {
     @UIXWidgetConverter() required Widget child,
   }) = ShowBottomSheetAction;
 
+  const factory UIXAction.updateValue({
+    required String type,
+    @Default(false) bool synchronized,
+    required String key,
+    String? value,
+  }) = UpdateValueAction;
+
   factory UIXAction.fromJson(Map<String, dynamic> json) =>
       _$UIXActionFromJson(json);
 }
