@@ -1,10 +1,14 @@
 part of 'converters.dart';
 
-class UIXColorConverter implements JsonConverter<Color?, String> {
+class UIXColorConverter implements JsonConverter<Color?, String?> {
   const UIXColorConverter();
 
   @override
-  Color fromJson(String json) {
+  Color? fromJson(String? json) {
+    if (json == null) {
+      return null;
+    }
+
     String hexColor = json.replaceAll('#', '');
     if (hexColor.length == 6) {
       hexColor = 'FF$hexColor';
@@ -17,7 +21,11 @@ class UIXColorConverter implements JsonConverter<Color?, String> {
   }
 
   @override
-  String toJson(Color? data) {
-    return '#${data?.value.toRadixString(16).padLeft(6, '0') ?? '000000'}';
+  String? toJson(Color? data) {
+    if (data == null) {
+      return null;
+    }
+
+    return '#${data.value.toRadixString(16).padLeft(6, '0')}';
   }
 }

@@ -5,7 +5,6 @@ const Map<String, dynamic> json = {
       'type': 'Container',
       'height': 100,
       'width': 300,
-      'color': '#FF0000',
       'child': {
         'type': 'Text',
         'text': 'Hello World',
@@ -62,9 +61,8 @@ const Map<String, dynamic> json = {
           'type': 'Text',
           'text': 'Click me',
           'style': {
-            'color': '#FF0000',
             'fontSize': 30,
-            'fontWeight': 'w500',
+            'fontWeight': 'w400',
           },
         },
       },

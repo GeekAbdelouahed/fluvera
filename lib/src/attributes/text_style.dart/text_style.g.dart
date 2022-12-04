@@ -10,8 +10,7 @@ _$_UIXTextStyle _$$_UIXTextStyleFromJson(Map<String, dynamic> json) =>
     _$_UIXTextStyle(
       fontSize: (json['fontSize'] as num?)?.toDouble(),
       overflow: $enumDecodeNullable(_$TextOverflowEnumMap, json['overflow']),
-      color: _$JsonConverterFromJson<String, dynamic>(
-          json['color'], const UIXColorConverter().fromJson),
+      color: const UIXColorConverter().fromJson(json['color'] as String?),
       fontWeight: _$JsonConverterFromJson<String, dynamic>(
           json['fontWeight'], const UIXFontWeightConverter().fromJson),
     );

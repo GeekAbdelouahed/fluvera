@@ -46,8 +46,7 @@ _$ContainerAttributes _$$ContainerAttributesFromJson(
       type: json['type'] as String,
       height: (json['height'] as num?)?.toDouble(),
       width: (json['width'] as num?)?.toDouble(),
-      color: _$JsonConverterFromJson<String, dynamic>(
-          json['color'], const UIXColorConverter().fromJson),
+      color: const UIXColorConverter().fromJson(json['color'] as String?),
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
           json['child'], const UIXWidgetConverter().fromJson),
     );
