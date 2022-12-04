@@ -3,6 +3,7 @@ part of 'extension.dart';
 extension UIXAttributeExtension on UIXAttributes {
   Widget build() {
     return map<UIX>(
+      page: (attributes) => UIXPage(attributes),
       sizedBox: (attributes) => UIXSizedBox(attributes),
       container: (attributes) => UIXContainer(attributes),
       text: (attributes) => UIXText(attributes),

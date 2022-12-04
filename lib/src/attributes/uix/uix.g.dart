@@ -6,6 +6,23 @@ part of 'uix.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+_$PageAttributes _$$PageAttributesFromJson(Map<String, dynamic> json) =>
+    _$PageAttributes(
+      key: json['key'],
+      type: json['type'] as String,
+      attributes: json['attributes'] as Map<String, dynamic>?,
+      child: const UIXWidgetConverter()
+          .fromJson(json['child'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$PageAttributesToJson(_$PageAttributes instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'type': instance.type,
+      'attributes': instance.attributes,
+      'child': const UIXWidgetConverter().toJson(instance.child),
+    };
+
 _$SizedBoxAttributes _$$SizedBoxAttributesFromJson(Map<String, dynamic> json) =>
     _$SizedBoxAttributes(
       key: json['key'],

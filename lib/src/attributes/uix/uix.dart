@@ -9,6 +9,13 @@ part 'uix.g.dart';
 
 @freezed
 abstract class UIXAttributes with _$UIXAttributes {
+  const factory UIXAttributes.page({
+    dynamic key,
+    required String type,
+    Map<String, dynamic>? attributes,
+    @UIXWidgetConverter() required Widget child,
+  }) = PageAttributes;
+
   const factory UIXAttributes.sizedBox({
     dynamic key,
     required String type,

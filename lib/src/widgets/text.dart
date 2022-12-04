@@ -5,15 +5,24 @@ class UIXText extends UIX<TextAttributes> {
 
   @override
   Widget build() {
-    return Text(
-      attributes.text,
-      key: key,
-      style: TextStyle(
-        color: attributes.style?.color,
-        fontSize: attributes.style?.fontSize,
-        fontWeight: attributes.style?.fontWeight,
-        overflow: attributes.style?.overflow,
-      ),
+    return Builder(
+      builder: (context) {
+        return ValueListenableBuilder<Map<String, dynamic>>(
+          valueListenable: UIXProvider.of<UIXAttributesNotifier>(context).value,
+          builder: (context, data, child) {
+            return Text(
+              attributes.text.replaceKeys(data),
+              key: key,
+              style: TextStyle(
+                color: attributes.style?.color,
+                fontSize: attributes.style?.fontSize,
+                fontWeight: attributes.style?.fontWeight,
+                overflow: attributes.style?.overflow,
+              ),
+            );
+          },
+        );
+      },
     );
   }
 }

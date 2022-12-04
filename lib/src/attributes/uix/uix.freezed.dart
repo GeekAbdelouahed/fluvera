@@ -16,6 +16,8 @@ final _privateConstructorUsedError = UnsupportedError(
 
 UIXAttributes _$UIXAttributesFromJson(Map<String, dynamic> json) {
   switch (json['type']) {
+    case 'Page':
+      return PageAttributes.fromJson(json);
     case 'SizedBox':
       return SizedBoxAttributes.fromJson(json);
     case 'Container':
@@ -51,6 +53,12 @@ mixin _$UIXAttributes {
   String get type => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)
+        page,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -107,6 +115,12 @@ mixin _$UIXAttributes {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -159,6 +173,9 @@ mixin _$UIXAttributes {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -212,6 +229,7 @@ mixin _$UIXAttributes {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(PageAttributes value) page,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(TextAttributes value) text,
@@ -228,6 +246,7 @@ mixin _$UIXAttributes {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PageAttributes value)? page,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(TextAttributes value)? text,
@@ -244,6 +263,7 @@ mixin _$UIXAttributes {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(PageAttributes value)? page,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(TextAttributes value)? text,
@@ -301,6 +321,404 @@ class _$UIXAttributesCopyWithImpl<$Res, $Val extends UIXAttributes>
               as String,
     ) as $Val);
   }
+}
+
+/// @nodoc
+abstract class _$$PageAttributesCopyWith<$Res>
+    implements $UIXAttributesCopyWith<$Res> {
+  factory _$$PageAttributesCopyWith(
+          _$PageAttributes value, $Res Function(_$PageAttributes) then) =
+      __$$PageAttributesCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {dynamic key,
+      String type,
+      Map<String, dynamic>? attributes,
+      @UIXWidgetConverter() Widget child});
+}
+
+/// @nodoc
+class __$$PageAttributesCopyWithImpl<$Res>
+    extends _$UIXAttributesCopyWithImpl<$Res, _$PageAttributes>
+    implements _$$PageAttributesCopyWith<$Res> {
+  __$$PageAttributesCopyWithImpl(
+      _$PageAttributes _value, $Res Function(_$PageAttributes) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? type = null,
+    Object? attributes = freezed,
+    Object? child = null,
+  }) {
+    return _then(_$PageAttributes(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      attributes: freezed == attributes
+          ? _value._attributes
+          : attributes // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
+      child: null == child
+          ? _value.child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Widget,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$PageAttributes implements PageAttributes {
+  const _$PageAttributes(
+      {this.key,
+      required this.type,
+      final Map<String, dynamic>? attributes,
+      @UIXWidgetConverter() required this.child})
+      : _attributes = attributes;
+
+  factory _$PageAttributes.fromJson(Map<String, dynamic> json) =>
+      _$$PageAttributesFromJson(json);
+
+  @override
+  final dynamic key;
+  @override
+  final String type;
+  final Map<String, dynamic>? _attributes;
+  @override
+  Map<String, dynamic>? get attributes {
+    final value = _attributes;
+    if (value == null) return null;
+    if (_attributes is EqualUnmodifiableMapView) return _attributes;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
+  @override
+  @UIXWidgetConverter()
+  final Widget child;
+
+  @override
+  String toString() {
+    return 'UIXAttributes.page(key: $key, type: $type, attributes: $attributes, child: $child)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PageAttributes &&
+            const DeepCollectionEquality().equals(other.key, key) &&
+            (identical(other.type, type) || other.type == type) &&
+            const DeepCollectionEquality()
+                .equals(other._attributes, _attributes) &&
+            (identical(other.child, child) || other.child == child));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(key),
+      type,
+      const DeepCollectionEquality().hash(_attributes),
+      child);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PageAttributesCopyWith<_$PageAttributes> get copyWith =>
+      __$$PageAttributesCopyWithImpl<_$PageAttributes>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)
+        page,
+    required TResult Function(dynamic key, String type, double? height,
+            double? width, @UIXWidgetConverter() Widget? child)
+        sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)
+        container,
+    required TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)
+        text,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        column,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        row,
+    required TResult Function(
+            dynamic key,
+            String type,
+            List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress,
+            @UIXWidgetConverter() Widget? child)
+        elevatedButton,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)
+        padding,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        fractionallySizedBox,
+    required TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)
+        expanded,
+    required TResult Function(dynamic key, String type, int flex) spacer,
+  }) {
+    return page(key, type, attributes, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
+    TResult? Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult? Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult? Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult? Function(dynamic key, String type, int flex)? spacer,
+  }) {
+    return page?.call(key, type, attributes, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
+    TResult Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult Function(dynamic key, String type, int flex)? spacer,
+    required TResult orElse(),
+  }) {
+    if (page != null) {
+      return page(key, type, attributes, child);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PageAttributes value) page,
+    required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ContainerAttributes value) container,
+    required TResult Function(TextAttributes value) text,
+    required TResult Function(ColumnAttributes value) column,
+    required TResult Function(RowAttributes value) row,
+    required TResult Function(ElevatedButtonAttributes value) elevatedButton,
+    required TResult Function(PaddingAttributes value) padding,
+    required TResult Function(AlignAttributes value) align,
+    required TResult Function(FractionallySizedBoxAttributes value)
+        fractionallySizedBox,
+    required TResult Function(ExpandedAttributes value) expanded,
+    required TResult Function(SpacerAttributes value) spacer,
+  }) {
+    return page(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PageAttributes value)? page,
+    TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ContainerAttributes value)? container,
+    TResult? Function(TextAttributes value)? text,
+    TResult? Function(ColumnAttributes value)? column,
+    TResult? Function(RowAttributes value)? row,
+    TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult? Function(PaddingAttributes value)? padding,
+    TResult? Function(AlignAttributes value)? align,
+    TResult? Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult? Function(ExpandedAttributes value)? expanded,
+    TResult? Function(SpacerAttributes value)? spacer,
+  }) {
+    return page?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PageAttributes value)? page,
+    TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ContainerAttributes value)? container,
+    TResult Function(TextAttributes value)? text,
+    TResult Function(ColumnAttributes value)? column,
+    TResult Function(RowAttributes value)? row,
+    TResult Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult Function(PaddingAttributes value)? padding,
+    TResult Function(AlignAttributes value)? align,
+    TResult Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult Function(ExpandedAttributes value)? expanded,
+    TResult Function(SpacerAttributes value)? spacer,
+    required TResult orElse(),
+  }) {
+    if (page != null) {
+      return page(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PageAttributesToJson(
+      this,
+    );
+  }
+}
+
+abstract class PageAttributes implements UIXAttributes {
+  const factory PageAttributes(
+      {final dynamic key,
+      required final String type,
+      final Map<String, dynamic>? attributes,
+      @UIXWidgetConverter() required final Widget child}) = _$PageAttributes;
+
+  factory PageAttributes.fromJson(Map<String, dynamic> json) =
+      _$PageAttributes.fromJson;
+
+  @override
+  dynamic get key;
+  @override
+  String get type;
+  Map<String, dynamic>? get attributes;
+  @UIXWidgetConverter()
+  Widget get child;
+  @override
+  @JsonKey(ignore: true)
+  _$$PageAttributesCopyWith<_$PageAttributes> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -418,6 +836,12 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)
+        page,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -477,6 +901,12 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -532,6 +962,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -591,6 +1024,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(PageAttributes value) page,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(TextAttributes value) text,
@@ -610,6 +1044,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PageAttributes value)? page,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(TextAttributes value)? text,
@@ -629,6 +1064,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(PageAttributes value)? page,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(TextAttributes value)? text,
@@ -827,6 +1263,12 @@ class _$ContainerAttributes implements ContainerAttributes {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)
+        page,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -886,6 +1328,12 @@ class _$ContainerAttributes implements ContainerAttributes {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -941,6 +1389,9 @@ class _$ContainerAttributes implements ContainerAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -1000,6 +1451,7 @@ class _$ContainerAttributes implements ContainerAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(PageAttributes value) page,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(TextAttributes value) text,
@@ -1019,6 +1471,7 @@ class _$ContainerAttributes implements ContainerAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PageAttributes value)? page,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(TextAttributes value)? text,
@@ -1038,6 +1491,7 @@ class _$ContainerAttributes implements ContainerAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(PageAttributes value)? page,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(TextAttributes value)? text,
@@ -1207,6 +1661,12 @@ class _$TextAttributes implements TextAttributes {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)
+        page,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -1266,6 +1726,12 @@ class _$TextAttributes implements TextAttributes {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -1321,6 +1787,9 @@ class _$TextAttributes implements TextAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -1380,6 +1849,7 @@ class _$TextAttributes implements TextAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(PageAttributes value) page,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(TextAttributes value) text,
@@ -1399,6 +1869,7 @@ class _$TextAttributes implements TextAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PageAttributes value)? page,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(TextAttributes value)? text,
@@ -1418,6 +1889,7 @@ class _$TextAttributes implements TextAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(PageAttributes value)? page,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(TextAttributes value)? text,
@@ -1569,6 +2041,12 @@ class _$ColumnAttributes implements ColumnAttributes {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)
+        page,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -1628,6 +2106,12 @@ class _$ColumnAttributes implements ColumnAttributes {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -1683,6 +2167,9 @@ class _$ColumnAttributes implements ColumnAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -1742,6 +2229,7 @@ class _$ColumnAttributes implements ColumnAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(PageAttributes value) page,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(TextAttributes value) text,
@@ -1761,6 +2249,7 @@ class _$ColumnAttributes implements ColumnAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PageAttributes value)? page,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(TextAttributes value)? text,
@@ -1780,6 +2269,7 @@ class _$ColumnAttributes implements ColumnAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(PageAttributes value)? page,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(TextAttributes value)? text,
@@ -1931,6 +2421,12 @@ class _$RowAttributes implements RowAttributes {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)
+        page,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -1990,6 +2486,12 @@ class _$RowAttributes implements RowAttributes {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -2045,6 +2547,9 @@ class _$RowAttributes implements RowAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -2104,6 +2609,7 @@ class _$RowAttributes implements RowAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(PageAttributes value) page,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(TextAttributes value) text,
@@ -2123,6 +2629,7 @@ class _$RowAttributes implements RowAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PageAttributes value)? page,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(TextAttributes value)? text,
@@ -2142,6 +2649,7 @@ class _$RowAttributes implements RowAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(PageAttributes value)? page,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(TextAttributes value)? text,
@@ -2333,6 +2841,12 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)
+        page,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -2392,6 +2906,12 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -2447,6 +2967,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -2506,6 +3029,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(PageAttributes value) page,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(TextAttributes value) text,
@@ -2525,6 +3049,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PageAttributes value)? page,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(TextAttributes value)? text,
@@ -2544,6 +3069,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(PageAttributes value)? page,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(TextAttributes value)? text,
@@ -2702,6 +3228,12 @@ class _$PaddingAttributes implements PaddingAttributes {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)
+        page,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -2761,6 +3293,12 @@ class _$PaddingAttributes implements PaddingAttributes {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -2816,6 +3354,9 @@ class _$PaddingAttributes implements PaddingAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -2875,6 +3416,7 @@ class _$PaddingAttributes implements PaddingAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(PageAttributes value) page,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(TextAttributes value) text,
@@ -2894,6 +3436,7 @@ class _$PaddingAttributes implements PaddingAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PageAttributes value)? page,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(TextAttributes value)? text,
@@ -2913,6 +3456,7 @@ class _$PaddingAttributes implements PaddingAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(PageAttributes value)? page,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(TextAttributes value)? text,
@@ -3074,6 +3618,12 @@ class _$AlignAttributes implements AlignAttributes {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)
+        page,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -3133,6 +3683,12 @@ class _$AlignAttributes implements AlignAttributes {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -3188,6 +3744,9 @@ class _$AlignAttributes implements AlignAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -3247,6 +3806,7 @@ class _$AlignAttributes implements AlignAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(PageAttributes value) page,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(TextAttributes value) text,
@@ -3266,6 +3826,7 @@ class _$AlignAttributes implements AlignAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PageAttributes value)? page,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(TextAttributes value)? text,
@@ -3285,6 +3846,7 @@ class _$AlignAttributes implements AlignAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(PageAttributes value)? page,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(TextAttributes value)? text,
@@ -3479,6 +4041,12 @@ class _$FractionallySizedBoxAttributes
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)
+        page,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -3539,6 +4107,12 @@ class _$FractionallySizedBoxAttributes
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -3595,6 +4169,9 @@ class _$FractionallySizedBoxAttributes
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -3655,6 +4232,7 @@ class _$FractionallySizedBoxAttributes
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(PageAttributes value) page,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(TextAttributes value) text,
@@ -3674,6 +4252,7 @@ class _$FractionallySizedBoxAttributes
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PageAttributes value)? page,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(TextAttributes value)? text,
@@ -3693,6 +4272,7 @@ class _$FractionallySizedBoxAttributes
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(PageAttributes value)? page,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(TextAttributes value)? text,
@@ -3853,6 +4433,12 @@ class _$ExpandedAttributes implements ExpandedAttributes {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)
+        page,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -3912,6 +4498,12 @@ class _$ExpandedAttributes implements ExpandedAttributes {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -3967,6 +4559,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -4026,6 +4621,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(PageAttributes value) page,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(TextAttributes value) text,
@@ -4045,6 +4641,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PageAttributes value)? page,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(TextAttributes value)? text,
@@ -4064,6 +4661,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(PageAttributes value)? page,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(TextAttributes value)? text,
@@ -4204,6 +4802,12 @@ class _$SpacerAttributes implements SpacerAttributes {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)
+        page,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -4263,6 +4867,12 @@ class _$SpacerAttributes implements SpacerAttributes {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -4318,6 +4928,9 @@ class _$SpacerAttributes implements SpacerAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -4377,6 +4990,7 @@ class _$SpacerAttributes implements SpacerAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(PageAttributes value) page,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(TextAttributes value) text,
@@ -4396,6 +5010,7 @@ class _$SpacerAttributes implements SpacerAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PageAttributes value)? page,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(TextAttributes value)? text,
@@ -4415,6 +5030,7 @@ class _$SpacerAttributes implements SpacerAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(PageAttributes value)? page,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(TextAttributes value)? text,
