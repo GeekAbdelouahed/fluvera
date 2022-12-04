@@ -2,48 +2,52 @@ const Map<String, dynamic> json = {
   'type': 'Column',
   'children': [
     {
-      'type': 'Container',
-      'height': 100,
-      'width': 300,
-      'child': {
-        'type': 'Text',
-        'text': 'Hello World',
-        'style': {
-          'color': '#459600',
-          'fontSize': 50,
-          'fontWeight': 'w100',
-        },
+      'type': 'Text',
+      'text': 'Hello World from UIX',
+      'style': {
+        'color': '#459600',
+        'fontSize': 50,
+        'fontWeight': 'w100',
       },
     },
     {
       'type': 'Row',
       'children': [
         {
-          'type': 'Container',
-          'height': 100,
-          'width': 300,
-          'alignment': 'topEnd',
-          'color': '#0000FF',
+          'type': 'Expanded',
           'child': {
-            'type': 'Text',
-            'text': 'Java',
-            'style': {
-              'color': '#FFFF00',
-              'fontSize': 20,
-              'fontWeight': 'w900',
+            'type': 'Container',
+            'height': 100,
+            'width': 300,
+            'alignment': 'topEnd',
+            'color': '#0480aa',
+            'child': {
+              'type': 'Text',
+              'text': 'Java',
+              'style': {
+                'color': '#FFFF00',
+                'fontSize': 20,
+                'fontWeight': 'w900',
+              },
             },
           },
         },
         {
-          'type': 'Container',
-          'color': '#00FF00',
+          'type': 'Spacer',
+        },
+        {
+          'type': 'Expanded',
           'child': {
-            'type': 'Text',
-            'text': 'Dart',
-            'style': {
-              'color': '#FF0000',
-              'fontSize': 30,
-              'fontWeight': 'w500',
+            'type': 'Container',
+            'color': '#00a7aa',
+            'child': {
+              'type': 'Text',
+              'text': 'Dart',
+              'style': {
+                'color': '#ea4a11',
+                'fontSize': 30,
+                'fontWeight': 'w500',
+              },
             },
           },
         },
@@ -58,9 +62,70 @@ const Map<String, dynamic> json = {
       },
       'child': {
         'type': 'ElevatedButton',
+        'onPressed': {
+          'type': 'ShowBottomSheet',
+          'backgroundColor': '#77a0aa',
+          'child': {
+            'type': 'FractionallySizedBox',
+            'heightFactor': 0.5,
+            'widthFactor': 1,
+            'child': {
+              'type': 'Text',
+              'text': 'Dart',
+              'style': {
+                'color': '#FF0000',
+                'fontSize': 30,
+                'fontWeight': 'w500',
+              },
+            },
+          }
+        },
         'child': {
           'type': 'Text',
-          'text': 'Click me',
+          'text': 'Show BottomSheet',
+          'style': {
+            'fontSize': 30,
+            'fontWeight': 'w400',
+          },
+        },
+      },
+    },
+    {
+      'type': 'Padding',
+      'padding': {
+        'start': 50,
+        'end': 20,
+        'top': 50,
+      },
+      'child': {
+        'type': 'ElevatedButton',
+        'onPressed': {
+          'type': 'ShowDialog',
+          'child': {
+            'type': 'FractionallySizedBox',
+            'heightFactor': 0.5,
+            'widthFactor': 0.5,
+            'child': {
+              'type': 'Container',
+              'color': '#AA0000',
+              'child': {
+                'type': 'Align',
+                'child': {
+                  'type': 'Text',
+                  'text': 'Dart',
+                  'style': {
+                    'color': '#FFFFFF',
+                    'fontSize': 30,
+                    'fontWeight': 'w500',
+                  },
+                },
+              },
+            },
+          },
+        },
+        'child': {
+          'type': 'Text',
+          'text': 'Show Dialog',
           'style': {
             'fontSize': 30,
             'fontWeight': 'w400',

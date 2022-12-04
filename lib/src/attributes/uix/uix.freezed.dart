@@ -30,6 +30,14 @@ UIXAttributes _$UIXAttributesFromJson(Map<String, dynamic> json) {
       return ElevatedButtonAttributes.fromJson(json);
     case 'Padding':
       return PaddingAttributes.fromJson(json);
+    case 'Align':
+      return AlignAttributes.fromJson(json);
+    case 'FractionallySizedBox':
+      return FractionallySizedBoxAttributes.fromJson(json);
+    case 'Expanded':
+      return ExpandedAttributes.fromJson(json);
+    case 'Spacer':
+      return SpacerAttributes.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'type', 'UIXAttributes',
@@ -64,8 +72,8 @@ mixin _$UIXAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -73,6 +81,24 @@ mixin _$UIXAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        fractionallySizedBox,
+    required TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)
+        expanded,
+    required TResult Function(dynamic key, String type, int flex) spacer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -98,8 +124,8 @@ mixin _$UIXAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -107,6 +133,24 @@ mixin _$UIXAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult? Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult? Function(dynamic key, String type, int flex)? spacer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -132,8 +176,8 @@ mixin _$UIXAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -141,6 +185,24 @@ mixin _$UIXAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult Function(dynamic key, String type, int flex)? spacer,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -153,6 +215,11 @@ mixin _$UIXAttributes {
     required TResult Function(RowAttributes value) row,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
     required TResult Function(PaddingAttributes value) padding,
+    required TResult Function(AlignAttributes value) align,
+    required TResult Function(FractionallySizedBoxAttributes value)
+        fractionallySizedBox,
+    required TResult Function(ExpandedAttributes value) expanded,
+    required TResult Function(SpacerAttributes value) spacer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -164,6 +231,11 @@ mixin _$UIXAttributes {
     TResult? Function(RowAttributes value)? row,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
     TResult? Function(PaddingAttributes value)? padding,
+    TResult? Function(AlignAttributes value)? align,
+    TResult? Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult? Function(ExpandedAttributes value)? expanded,
+    TResult? Function(SpacerAttributes value)? spacer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -175,6 +247,11 @@ mixin _$UIXAttributes {
     TResult Function(RowAttributes value)? row,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
     TResult Function(PaddingAttributes value)? padding,
+    TResult Function(AlignAttributes value)? align,
+    TResult Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult Function(ExpandedAttributes value)? expanded,
+    TResult Function(SpacerAttributes value)? spacer,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -358,8 +435,8 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -367,6 +444,24 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        fractionallySizedBox,
+    required TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)
+        expanded,
+    required TResult Function(dynamic key, String type, int flex) spacer,
   }) {
     return sizedBox(key, type, height, width, child);
   }
@@ -395,8 +490,8 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -404,6 +499,24 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult? Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult? Function(dynamic key, String type, int flex)? spacer,
   }) {
     return sizedBox?.call(key, type, height, width, child);
   }
@@ -432,8 +545,8 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -441,6 +554,24 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult Function(dynamic key, String type, int flex)? spacer,
     required TResult orElse(),
   }) {
     if (sizedBox != null) {
@@ -459,6 +590,11 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     required TResult Function(RowAttributes value) row,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
     required TResult Function(PaddingAttributes value) padding,
+    required TResult Function(AlignAttributes value) align,
+    required TResult Function(FractionallySizedBoxAttributes value)
+        fractionallySizedBox,
+    required TResult Function(ExpandedAttributes value) expanded,
+    required TResult Function(SpacerAttributes value) spacer,
   }) {
     return sizedBox(this);
   }
@@ -473,6 +609,11 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult? Function(RowAttributes value)? row,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
     TResult? Function(PaddingAttributes value)? padding,
+    TResult? Function(AlignAttributes value)? align,
+    TResult? Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult? Function(ExpandedAttributes value)? expanded,
+    TResult? Function(SpacerAttributes value)? spacer,
   }) {
     return sizedBox?.call(this);
   }
@@ -487,6 +628,11 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult Function(RowAttributes value)? row,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
     TResult Function(PaddingAttributes value)? padding,
+    TResult Function(AlignAttributes value)? align,
+    TResult Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult Function(ExpandedAttributes value)? expanded,
+    TResult Function(SpacerAttributes value)? spacer,
     required TResult orElse(),
   }) {
     if (sizedBox != null) {
@@ -694,8 +840,8 @@ class _$ContainerAttributes implements ContainerAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -703,6 +849,24 @@ class _$ContainerAttributes implements ContainerAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        fractionallySizedBox,
+    required TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)
+        expanded,
+    required TResult Function(dynamic key, String type, int flex) spacer,
   }) {
     return container(key, type, height, width, alignment, color, child);
   }
@@ -731,8 +895,8 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -740,6 +904,24 @@ class _$ContainerAttributes implements ContainerAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult? Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult? Function(dynamic key, String type, int flex)? spacer,
   }) {
     return container?.call(key, type, height, width, alignment, color, child);
   }
@@ -768,8 +950,8 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -777,6 +959,24 @@ class _$ContainerAttributes implements ContainerAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult Function(dynamic key, String type, int flex)? spacer,
     required TResult orElse(),
   }) {
     if (container != null) {
@@ -795,6 +995,11 @@ class _$ContainerAttributes implements ContainerAttributes {
     required TResult Function(RowAttributes value) row,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
     required TResult Function(PaddingAttributes value) padding,
+    required TResult Function(AlignAttributes value) align,
+    required TResult Function(FractionallySizedBoxAttributes value)
+        fractionallySizedBox,
+    required TResult Function(ExpandedAttributes value) expanded,
+    required TResult Function(SpacerAttributes value) spacer,
   }) {
     return container(this);
   }
@@ -809,6 +1014,11 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult? Function(RowAttributes value)? row,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
     TResult? Function(PaddingAttributes value)? padding,
+    TResult? Function(AlignAttributes value)? align,
+    TResult? Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult? Function(ExpandedAttributes value)? expanded,
+    TResult? Function(SpacerAttributes value)? spacer,
   }) {
     return container?.call(this);
   }
@@ -823,6 +1033,11 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult Function(RowAttributes value)? row,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
     TResult Function(PaddingAttributes value)? padding,
+    TResult Function(AlignAttributes value)? align,
+    TResult Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult Function(ExpandedAttributes value)? expanded,
+    TResult Function(SpacerAttributes value)? spacer,
     required TResult orElse(),
   }) {
     if (container != null) {
@@ -1001,8 +1216,8 @@ class _$TextAttributes implements TextAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -1010,6 +1225,24 @@ class _$TextAttributes implements TextAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        fractionallySizedBox,
+    required TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)
+        expanded,
+    required TResult Function(dynamic key, String type, int flex) spacer,
   }) {
     return text(key, type, this.text, style);
   }
@@ -1038,8 +1271,8 @@ class _$TextAttributes implements TextAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -1047,6 +1280,24 @@ class _$TextAttributes implements TextAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult? Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult? Function(dynamic key, String type, int flex)? spacer,
   }) {
     return text?.call(key, type, this.text, style);
   }
@@ -1075,8 +1326,8 @@ class _$TextAttributes implements TextAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -1084,6 +1335,24 @@ class _$TextAttributes implements TextAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult Function(dynamic key, String type, int flex)? spacer,
     required TResult orElse(),
   }) {
     if (text != null) {
@@ -1102,6 +1371,11 @@ class _$TextAttributes implements TextAttributes {
     required TResult Function(RowAttributes value) row,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
     required TResult Function(PaddingAttributes value) padding,
+    required TResult Function(AlignAttributes value) align,
+    required TResult Function(FractionallySizedBoxAttributes value)
+        fractionallySizedBox,
+    required TResult Function(ExpandedAttributes value) expanded,
+    required TResult Function(SpacerAttributes value) spacer,
   }) {
     return text(this);
   }
@@ -1116,6 +1390,11 @@ class _$TextAttributes implements TextAttributes {
     TResult? Function(RowAttributes value)? row,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
     TResult? Function(PaddingAttributes value)? padding,
+    TResult? Function(AlignAttributes value)? align,
+    TResult? Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult? Function(ExpandedAttributes value)? expanded,
+    TResult? Function(SpacerAttributes value)? spacer,
   }) {
     return text?.call(this);
   }
@@ -1130,6 +1409,11 @@ class _$TextAttributes implements TextAttributes {
     TResult Function(RowAttributes value)? row,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
     TResult Function(PaddingAttributes value)? padding,
+    TResult Function(AlignAttributes value)? align,
+    TResult Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult Function(ExpandedAttributes value)? expanded,
+    TResult Function(SpacerAttributes value)? spacer,
     required TResult orElse(),
   }) {
     if (text != null) {
@@ -1290,8 +1574,8 @@ class _$ColumnAttributes implements ColumnAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -1299,6 +1583,24 @@ class _$ColumnAttributes implements ColumnAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        fractionallySizedBox,
+    required TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)
+        expanded,
+    required TResult Function(dynamic key, String type, int flex) spacer,
   }) {
     return column(key, type, children);
   }
@@ -1327,8 +1629,8 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -1336,6 +1638,24 @@ class _$ColumnAttributes implements ColumnAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult? Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult? Function(dynamic key, String type, int flex)? spacer,
   }) {
     return column?.call(key, type, children);
   }
@@ -1364,8 +1684,8 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -1373,6 +1693,24 @@ class _$ColumnAttributes implements ColumnAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult Function(dynamic key, String type, int flex)? spacer,
     required TResult orElse(),
   }) {
     if (column != null) {
@@ -1391,6 +1729,11 @@ class _$ColumnAttributes implements ColumnAttributes {
     required TResult Function(RowAttributes value) row,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
     required TResult Function(PaddingAttributes value) padding,
+    required TResult Function(AlignAttributes value) align,
+    required TResult Function(FractionallySizedBoxAttributes value)
+        fractionallySizedBox,
+    required TResult Function(ExpandedAttributes value) expanded,
+    required TResult Function(SpacerAttributes value) spacer,
   }) {
     return column(this);
   }
@@ -1405,6 +1748,11 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult? Function(RowAttributes value)? row,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
     TResult? Function(PaddingAttributes value)? padding,
+    TResult? Function(AlignAttributes value)? align,
+    TResult? Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult? Function(ExpandedAttributes value)? expanded,
+    TResult? Function(SpacerAttributes value)? spacer,
   }) {
     return column?.call(this);
   }
@@ -1419,6 +1767,11 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult Function(RowAttributes value)? row,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
     TResult Function(PaddingAttributes value)? padding,
+    TResult Function(AlignAttributes value)? align,
+    TResult Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult Function(ExpandedAttributes value)? expanded,
+    TResult Function(SpacerAttributes value)? spacer,
     required TResult orElse(),
   }) {
     if (column != null) {
@@ -1579,8 +1932,8 @@ class _$RowAttributes implements RowAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -1588,6 +1941,24 @@ class _$RowAttributes implements RowAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        fractionallySizedBox,
+    required TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)
+        expanded,
+    required TResult Function(dynamic key, String type, int flex) spacer,
   }) {
     return row(key, type, children);
   }
@@ -1616,8 +1987,8 @@ class _$RowAttributes implements RowAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -1625,6 +1996,24 @@ class _$RowAttributes implements RowAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult? Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult? Function(dynamic key, String type, int flex)? spacer,
   }) {
     return row?.call(key, type, children);
   }
@@ -1653,8 +2042,8 @@ class _$RowAttributes implements RowAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -1662,6 +2051,24 @@ class _$RowAttributes implements RowAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult Function(dynamic key, String type, int flex)? spacer,
     required TResult orElse(),
   }) {
     if (row != null) {
@@ -1680,6 +2087,11 @@ class _$RowAttributes implements RowAttributes {
     required TResult Function(RowAttributes value) row,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
     required TResult Function(PaddingAttributes value) padding,
+    required TResult Function(AlignAttributes value) align,
+    required TResult Function(FractionallySizedBoxAttributes value)
+        fractionallySizedBox,
+    required TResult Function(ExpandedAttributes value) expanded,
+    required TResult Function(SpacerAttributes value) spacer,
   }) {
     return row(this);
   }
@@ -1694,6 +2106,11 @@ class _$RowAttributes implements RowAttributes {
     TResult? Function(RowAttributes value)? row,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
     TResult? Function(PaddingAttributes value)? padding,
+    TResult? Function(AlignAttributes value)? align,
+    TResult? Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult? Function(ExpandedAttributes value)? expanded,
+    TResult? Function(SpacerAttributes value)? spacer,
   }) {
     return row?.call(this);
   }
@@ -1708,6 +2125,11 @@ class _$RowAttributes implements RowAttributes {
     TResult Function(RowAttributes value)? row,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
     TResult Function(PaddingAttributes value)? padding,
+    TResult Function(AlignAttributes value)? align,
+    TResult Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult Function(ExpandedAttributes value)? expanded,
+    TResult Function(SpacerAttributes value)? spacer,
     required TResult orElse(),
   }) {
     if (row != null) {
@@ -1754,7 +2176,15 @@ abstract class _$$ElevatedButtonAttributesCopyWith<$Res>
       __$$ElevatedButtonAttributesCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({dynamic key, String type, @UIXWidgetConverter() Widget? child});
+  $Res call(
+      {dynamic key,
+      String type,
+      UIXAction? onPressed,
+      UIXAction? onLongPress,
+      @UIXWidgetConverter() Widget? child});
+
+  $UIXActionCopyWith<$Res>? get onPressed;
+  $UIXActionCopyWith<$Res>? get onLongPress;
 }
 
 /// @nodoc
@@ -1770,6 +2200,8 @@ class __$$ElevatedButtonAttributesCopyWithImpl<$Res>
   $Res call({
     Object? key = freezed,
     Object? type = null,
+    Object? onPressed = freezed,
+    Object? onLongPress = freezed,
     Object? child = freezed,
   }) {
     return _then(_$ElevatedButtonAttributes(
@@ -1781,11 +2213,43 @@ class __$$ElevatedButtonAttributesCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
+      onPressed: freezed == onPressed
+          ? _value.onPressed
+          : onPressed // ignore: cast_nullable_to_non_nullable
+              as UIXAction?,
+      onLongPress: freezed == onLongPress
+          ? _value.onLongPress
+          : onLongPress // ignore: cast_nullable_to_non_nullable
+              as UIXAction?,
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
               as Widget?,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXActionCopyWith<$Res>? get onPressed {
+    if (_value.onPressed == null) {
+      return null;
+    }
+
+    return $UIXActionCopyWith<$Res>(_value.onPressed!, (value) {
+      return _then(_value.copyWith(onPressed: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXActionCopyWith<$Res>? get onLongPress {
+    if (_value.onLongPress == null) {
+      return null;
+    }
+
+    return $UIXActionCopyWith<$Res>(_value.onLongPress!, (value) {
+      return _then(_value.copyWith(onLongPress: value));
+    });
   }
 }
 
@@ -1793,7 +2257,11 @@ class __$$ElevatedButtonAttributesCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
   const _$ElevatedButtonAttributes(
-      {this.key, required this.type, @UIXWidgetConverter() this.child});
+      {this.key,
+      required this.type,
+      this.onPressed,
+      this.onLongPress,
+      @UIXWidgetConverter() this.child});
 
   factory _$ElevatedButtonAttributes.fromJson(Map<String, dynamic> json) =>
       _$$ElevatedButtonAttributesFromJson(json);
@@ -1803,12 +2271,16 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
   @override
   final String type;
   @override
+  final UIXAction? onPressed;
+  @override
+  final UIXAction? onLongPress;
+  @override
   @UIXWidgetConverter()
   final Widget? child;
 
   @override
   String toString() {
-    return 'UIXAttributes.elevatedButton(key: $key, type: $type, child: $child)';
+    return 'UIXAttributes.elevatedButton(key: $key, type: $type, onPressed: $onPressed, onLongPress: $onLongPress, child: $child)';
   }
 
   @override
@@ -1818,13 +2290,22 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             other is _$ElevatedButtonAttributes &&
             const DeepCollectionEquality().equals(other.key, key) &&
             (identical(other.type, type) || other.type == type) &&
+            (identical(other.onPressed, onPressed) ||
+                other.onPressed == onPressed) &&
+            (identical(other.onLongPress, onLongPress) ||
+                other.onLongPress == onLongPress) &&
             (identical(other.child, child) || other.child == child));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(key), type, child);
+      runtimeType,
+      const DeepCollectionEquality().hash(key),
+      type,
+      onPressed,
+      onLongPress,
+      child);
 
   @JsonKey(ignore: true)
   @override
@@ -1858,8 +2339,8 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -1867,8 +2348,26 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        fractionallySizedBox,
+    required TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)
+        expanded,
+    required TResult Function(dynamic key, String type, int flex) spacer,
   }) {
-    return elevatedButton(key, type, child);
+    return elevatedButton(key, type, onPressed, onLongPress, child);
   }
 
   @override
@@ -1895,8 +2394,8 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -1904,8 +2403,26 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult? Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult? Function(dynamic key, String type, int flex)? spacer,
   }) {
-    return elevatedButton?.call(key, type, child);
+    return elevatedButton?.call(key, type, onPressed, onLongPress, child);
   }
 
   @override
@@ -1932,8 +2449,8 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -1941,10 +2458,28 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult Function(dynamic key, String type, int flex)? spacer,
     required TResult orElse(),
   }) {
     if (elevatedButton != null) {
-      return elevatedButton(key, type, child);
+      return elevatedButton(key, type, onPressed, onLongPress, child);
     }
     return orElse();
   }
@@ -1959,6 +2494,11 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     required TResult Function(RowAttributes value) row,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
     required TResult Function(PaddingAttributes value) padding,
+    required TResult Function(AlignAttributes value) align,
+    required TResult Function(FractionallySizedBoxAttributes value)
+        fractionallySizedBox,
+    required TResult Function(ExpandedAttributes value) expanded,
+    required TResult Function(SpacerAttributes value) spacer,
   }) {
     return elevatedButton(this);
   }
@@ -1973,6 +2513,11 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult? Function(RowAttributes value)? row,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
     TResult? Function(PaddingAttributes value)? padding,
+    TResult? Function(AlignAttributes value)? align,
+    TResult? Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult? Function(ExpandedAttributes value)? expanded,
+    TResult? Function(SpacerAttributes value)? spacer,
   }) {
     return elevatedButton?.call(this);
   }
@@ -1987,6 +2532,11 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult Function(RowAttributes value)? row,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
     TResult Function(PaddingAttributes value)? padding,
+    TResult Function(AlignAttributes value)? align,
+    TResult Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult Function(ExpandedAttributes value)? expanded,
+    TResult Function(SpacerAttributes value)? spacer,
     required TResult orElse(),
   }) {
     if (elevatedButton != null) {
@@ -2007,6 +2557,8 @@ abstract class ElevatedButtonAttributes implements UIXAttributes {
   const factory ElevatedButtonAttributes(
       {final dynamic key,
       required final String type,
+      final UIXAction? onPressed,
+      final UIXAction? onLongPress,
       @UIXWidgetConverter() final Widget? child}) = _$ElevatedButtonAttributes;
 
   factory ElevatedButtonAttributes.fromJson(Map<String, dynamic> json) =
@@ -2016,6 +2568,8 @@ abstract class ElevatedButtonAttributes implements UIXAttributes {
   dynamic get key;
   @override
   String get type;
+  UIXAction? get onPressed;
+  UIXAction? get onLongPress;
   @UIXWidgetConverter()
   Widget? get child;
   @override
@@ -2150,8 +2704,8 @@ class _$PaddingAttributes implements PaddingAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
         elevatedButton,
     required TResult Function(
             dynamic key,
@@ -2159,6 +2713,24 @@ class _$PaddingAttributes implements PaddingAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        fractionallySizedBox,
+    required TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)
+        expanded,
+    required TResult Function(dynamic key, String type, int flex) spacer,
   }) {
     return padding(key, type, this.padding, child);
   }
@@ -2187,8 +2759,8 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult? Function(
             dynamic key,
@@ -2196,6 +2768,24 @@ class _$PaddingAttributes implements PaddingAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult? Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult? Function(dynamic key, String type, int flex)? spacer,
   }) {
     return padding?.call(key, type, this.padding, child);
   }
@@ -2224,8 +2814,8 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
         elevatedButton,
     TResult Function(
             dynamic key,
@@ -2233,6 +2823,24 @@ class _$PaddingAttributes implements PaddingAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult Function(dynamic key, String type, int flex)? spacer,
     required TResult orElse(),
   }) {
     if (padding != null) {
@@ -2251,6 +2859,11 @@ class _$PaddingAttributes implements PaddingAttributes {
     required TResult Function(RowAttributes value) row,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
     required TResult Function(PaddingAttributes value) padding,
+    required TResult Function(AlignAttributes value) align,
+    required TResult Function(FractionallySizedBoxAttributes value)
+        fractionallySizedBox,
+    required TResult Function(ExpandedAttributes value) expanded,
+    required TResult Function(SpacerAttributes value) spacer,
   }) {
     return padding(this);
   }
@@ -2265,6 +2878,11 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult? Function(RowAttributes value)? row,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
     TResult? Function(PaddingAttributes value)? padding,
+    TResult? Function(AlignAttributes value)? align,
+    TResult? Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult? Function(ExpandedAttributes value)? expanded,
+    TResult? Function(SpacerAttributes value)? spacer,
   }) {
     return padding?.call(this);
   }
@@ -2279,6 +2897,11 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult Function(RowAttributes value)? row,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
     TResult Function(PaddingAttributes value)? padding,
+    TResult Function(AlignAttributes value)? align,
+    TResult Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult Function(ExpandedAttributes value)? expanded,
+    TResult Function(SpacerAttributes value)? spacer,
     required TResult orElse(),
   }) {
     if (padding != null) {
@@ -2316,5 +2939,1487 @@ abstract class PaddingAttributes implements UIXAttributes {
   @override
   @JsonKey(ignore: true)
   _$$PaddingAttributesCopyWith<_$PaddingAttributes> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AlignAttributesCopyWith<$Res>
+    implements $UIXAttributesCopyWith<$Res> {
+  factory _$$AlignAttributesCopyWith(
+          _$AlignAttributes value, $Res Function(_$AlignAttributes) then) =
+      __$$AlignAttributesCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {dynamic key,
+      String type,
+      @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+      @UIXWidgetConverter() Widget? child});
+}
+
+/// @nodoc
+class __$$AlignAttributesCopyWithImpl<$Res>
+    extends _$UIXAttributesCopyWithImpl<$Res, _$AlignAttributes>
+    implements _$$AlignAttributesCopyWith<$Res> {
+  __$$AlignAttributesCopyWithImpl(
+      _$AlignAttributes _value, $Res Function(_$AlignAttributes) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? type = null,
+    Object? alignment = freezed,
+    Object? child = freezed,
+  }) {
+    return _then(_$AlignAttributes(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      alignment: freezed == alignment
+          ? _value.alignment
+          : alignment // ignore: cast_nullable_to_non_nullable
+              as AlignmentGeometry?,
+      child: freezed == child
+          ? _value.child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$AlignAttributes implements AlignAttributes {
+  const _$AlignAttributes(
+      {this.key,
+      required this.type,
+      @UIXAlignmentGeometryConverter()
+          this.alignment = AlignmentDirectional.center,
+      @UIXWidgetConverter()
+          this.child});
+
+  factory _$AlignAttributes.fromJson(Map<String, dynamic> json) =>
+      _$$AlignAttributesFromJson(json);
+
+  @override
+  final dynamic key;
+  @override
+  final String type;
+  @override
+  @JsonKey()
+  @UIXAlignmentGeometryConverter()
+  final AlignmentGeometry? alignment;
+  @override
+  @UIXWidgetConverter()
+  final Widget? child;
+
+  @override
+  String toString() {
+    return 'UIXAttributes.align(key: $key, type: $type, alignment: $alignment, child: $child)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AlignAttributes &&
+            const DeepCollectionEquality().equals(other.key, key) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.alignment, alignment) ||
+                other.alignment == alignment) &&
+            (identical(other.child, child) || other.child == child));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType,
+      const DeepCollectionEquality().hash(key), type, alignment, child);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AlignAttributesCopyWith<_$AlignAttributes> get copyWith =>
+      __$$AlignAttributesCopyWithImpl<_$AlignAttributes>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(dynamic key, String type, double? height,
+            double? width, @UIXWidgetConverter() Widget? child)
+        sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)
+        container,
+    required TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)
+        text,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        column,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        row,
+    required TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
+        elevatedButton,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)
+        padding,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        fractionallySizedBox,
+    required TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)
+        expanded,
+    required TResult Function(dynamic key, String type, int flex) spacer,
+  }) {
+    return align(key, type, alignment, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult? Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult? Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult? Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult? Function(dynamic key, String type, int flex)? spacer,
+  }) {
+    return align?.call(key, type, alignment, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult Function(dynamic key, String type, int flex)? spacer,
+    required TResult orElse(),
+  }) {
+    if (align != null) {
+      return align(key, type, alignment, child);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ContainerAttributes value) container,
+    required TResult Function(TextAttributes value) text,
+    required TResult Function(ColumnAttributes value) column,
+    required TResult Function(RowAttributes value) row,
+    required TResult Function(ElevatedButtonAttributes value) elevatedButton,
+    required TResult Function(PaddingAttributes value) padding,
+    required TResult Function(AlignAttributes value) align,
+    required TResult Function(FractionallySizedBoxAttributes value)
+        fractionallySizedBox,
+    required TResult Function(ExpandedAttributes value) expanded,
+    required TResult Function(SpacerAttributes value) spacer,
+  }) {
+    return align(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ContainerAttributes value)? container,
+    TResult? Function(TextAttributes value)? text,
+    TResult? Function(ColumnAttributes value)? column,
+    TResult? Function(RowAttributes value)? row,
+    TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult? Function(PaddingAttributes value)? padding,
+    TResult? Function(AlignAttributes value)? align,
+    TResult? Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult? Function(ExpandedAttributes value)? expanded,
+    TResult? Function(SpacerAttributes value)? spacer,
+  }) {
+    return align?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ContainerAttributes value)? container,
+    TResult Function(TextAttributes value)? text,
+    TResult Function(ColumnAttributes value)? column,
+    TResult Function(RowAttributes value)? row,
+    TResult Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult Function(PaddingAttributes value)? padding,
+    TResult Function(AlignAttributes value)? align,
+    TResult Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult Function(ExpandedAttributes value)? expanded,
+    TResult Function(SpacerAttributes value)? spacer,
+    required TResult orElse(),
+  }) {
+    if (align != null) {
+      return align(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$AlignAttributesToJson(
+      this,
+    );
+  }
+}
+
+abstract class AlignAttributes implements UIXAttributes {
+  const factory AlignAttributes(
+      {final dynamic key,
+      required final String type,
+      @UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
+      @UIXWidgetConverter() final Widget? child}) = _$AlignAttributes;
+
+  factory AlignAttributes.fromJson(Map<String, dynamic> json) =
+      _$AlignAttributes.fromJson;
+
+  @override
+  dynamic get key;
+  @override
+  String get type;
+  @UIXAlignmentGeometryConverter()
+  AlignmentGeometry? get alignment;
+  @UIXWidgetConverter()
+  Widget? get child;
+  @override
+  @JsonKey(ignore: true)
+  _$$AlignAttributesCopyWith<_$AlignAttributes> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FractionallySizedBoxAttributesCopyWith<$Res>
+    implements $UIXAttributesCopyWith<$Res> {
+  factory _$$FractionallySizedBoxAttributesCopyWith(
+          _$FractionallySizedBoxAttributes value,
+          $Res Function(_$FractionallySizedBoxAttributes) then) =
+      __$$FractionallySizedBoxAttributesCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {dynamic key,
+      String type,
+      double? widthFactor,
+      double? heightFactor,
+      @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+      @UIXWidgetConverter() Widget? child});
+}
+
+/// @nodoc
+class __$$FractionallySizedBoxAttributesCopyWithImpl<$Res>
+    extends _$UIXAttributesCopyWithImpl<$Res, _$FractionallySizedBoxAttributes>
+    implements _$$FractionallySizedBoxAttributesCopyWith<$Res> {
+  __$$FractionallySizedBoxAttributesCopyWithImpl(
+      _$FractionallySizedBoxAttributes _value,
+      $Res Function(_$FractionallySizedBoxAttributes) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? type = null,
+    Object? widthFactor = freezed,
+    Object? heightFactor = freezed,
+    Object? alignment = freezed,
+    Object? child = freezed,
+  }) {
+    return _then(_$FractionallySizedBoxAttributes(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      widthFactor: freezed == widthFactor
+          ? _value.widthFactor
+          : widthFactor // ignore: cast_nullable_to_non_nullable
+              as double?,
+      heightFactor: freezed == heightFactor
+          ? _value.heightFactor
+          : heightFactor // ignore: cast_nullable_to_non_nullable
+              as double?,
+      alignment: freezed == alignment
+          ? _value.alignment
+          : alignment // ignore: cast_nullable_to_non_nullable
+              as AlignmentGeometry?,
+      child: freezed == child
+          ? _value.child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$FractionallySizedBoxAttributes
+    implements FractionallySizedBoxAttributes {
+  const _$FractionallySizedBoxAttributes(
+      {this.key,
+      required this.type,
+      this.widthFactor,
+      this.heightFactor,
+      @UIXAlignmentGeometryConverter()
+          this.alignment = AlignmentDirectional.center,
+      @UIXWidgetConverter()
+          this.child});
+
+  factory _$FractionallySizedBoxAttributes.fromJson(
+          Map<String, dynamic> json) =>
+      _$$FractionallySizedBoxAttributesFromJson(json);
+
+  @override
+  final dynamic key;
+  @override
+  final String type;
+  @override
+  final double? widthFactor;
+  @override
+  final double? heightFactor;
+  @override
+  @JsonKey()
+  @UIXAlignmentGeometryConverter()
+  final AlignmentGeometry? alignment;
+  @override
+  @UIXWidgetConverter()
+  final Widget? child;
+
+  @override
+  String toString() {
+    return 'UIXAttributes.fractionallySizedBox(key: $key, type: $type, widthFactor: $widthFactor, heightFactor: $heightFactor, alignment: $alignment, child: $child)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FractionallySizedBoxAttributes &&
+            const DeepCollectionEquality().equals(other.key, key) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.widthFactor, widthFactor) ||
+                other.widthFactor == widthFactor) &&
+            (identical(other.heightFactor, heightFactor) ||
+                other.heightFactor == heightFactor) &&
+            (identical(other.alignment, alignment) ||
+                other.alignment == alignment) &&
+            (identical(other.child, child) || other.child == child));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(key),
+      type,
+      widthFactor,
+      heightFactor,
+      alignment,
+      child);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FractionallySizedBoxAttributesCopyWith<_$FractionallySizedBoxAttributes>
+      get copyWith => __$$FractionallySizedBoxAttributesCopyWithImpl<
+          _$FractionallySizedBoxAttributes>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(dynamic key, String type, double? height,
+            double? width, @UIXWidgetConverter() Widget? child)
+        sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)
+        container,
+    required TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)
+        text,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        column,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        row,
+    required TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
+        elevatedButton,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)
+        padding,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        fractionallySizedBox,
+    required TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)
+        expanded,
+    required TResult Function(dynamic key, String type, int flex) spacer,
+  }) {
+    return fractionallySizedBox(
+        key, type, widthFactor, heightFactor, alignment, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult? Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult? Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult? Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult? Function(dynamic key, String type, int flex)? spacer,
+  }) {
+    return fractionallySizedBox?.call(
+        key, type, widthFactor, heightFactor, alignment, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult Function(dynamic key, String type, int flex)? spacer,
+    required TResult orElse(),
+  }) {
+    if (fractionallySizedBox != null) {
+      return fractionallySizedBox(
+          key, type, widthFactor, heightFactor, alignment, child);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ContainerAttributes value) container,
+    required TResult Function(TextAttributes value) text,
+    required TResult Function(ColumnAttributes value) column,
+    required TResult Function(RowAttributes value) row,
+    required TResult Function(ElevatedButtonAttributes value) elevatedButton,
+    required TResult Function(PaddingAttributes value) padding,
+    required TResult Function(AlignAttributes value) align,
+    required TResult Function(FractionallySizedBoxAttributes value)
+        fractionallySizedBox,
+    required TResult Function(ExpandedAttributes value) expanded,
+    required TResult Function(SpacerAttributes value) spacer,
+  }) {
+    return fractionallySizedBox(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ContainerAttributes value)? container,
+    TResult? Function(TextAttributes value)? text,
+    TResult? Function(ColumnAttributes value)? column,
+    TResult? Function(RowAttributes value)? row,
+    TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult? Function(PaddingAttributes value)? padding,
+    TResult? Function(AlignAttributes value)? align,
+    TResult? Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult? Function(ExpandedAttributes value)? expanded,
+    TResult? Function(SpacerAttributes value)? spacer,
+  }) {
+    return fractionallySizedBox?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ContainerAttributes value)? container,
+    TResult Function(TextAttributes value)? text,
+    TResult Function(ColumnAttributes value)? column,
+    TResult Function(RowAttributes value)? row,
+    TResult Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult Function(PaddingAttributes value)? padding,
+    TResult Function(AlignAttributes value)? align,
+    TResult Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult Function(ExpandedAttributes value)? expanded,
+    TResult Function(SpacerAttributes value)? spacer,
+    required TResult orElse(),
+  }) {
+    if (fractionallySizedBox != null) {
+      return fractionallySizedBox(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FractionallySizedBoxAttributesToJson(
+      this,
+    );
+  }
+}
+
+abstract class FractionallySizedBoxAttributes implements UIXAttributes {
+  const factory FractionallySizedBoxAttributes(
+          {final dynamic key,
+          required final String type,
+          final double? widthFactor,
+          final double? heightFactor,
+          @UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
+          @UIXWidgetConverter() final Widget? child}) =
+      _$FractionallySizedBoxAttributes;
+
+  factory FractionallySizedBoxAttributes.fromJson(Map<String, dynamic> json) =
+      _$FractionallySizedBoxAttributes.fromJson;
+
+  @override
+  dynamic get key;
+  @override
+  String get type;
+  double? get widthFactor;
+  double? get heightFactor;
+  @UIXAlignmentGeometryConverter()
+  AlignmentGeometry? get alignment;
+  @UIXWidgetConverter()
+  Widget? get child;
+  @override
+  @JsonKey(ignore: true)
+  _$$FractionallySizedBoxAttributesCopyWith<_$FractionallySizedBoxAttributes>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ExpandedAttributesCopyWith<$Res>
+    implements $UIXAttributesCopyWith<$Res> {
+  factory _$$ExpandedAttributesCopyWith(_$ExpandedAttributes value,
+          $Res Function(_$ExpandedAttributes) then) =
+      __$$ExpandedAttributesCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {dynamic key, String type, int flex, @UIXWidgetConverter() Widget child});
+}
+
+/// @nodoc
+class __$$ExpandedAttributesCopyWithImpl<$Res>
+    extends _$UIXAttributesCopyWithImpl<$Res, _$ExpandedAttributes>
+    implements _$$ExpandedAttributesCopyWith<$Res> {
+  __$$ExpandedAttributesCopyWithImpl(
+      _$ExpandedAttributes _value, $Res Function(_$ExpandedAttributes) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? type = null,
+    Object? flex = null,
+    Object? child = null,
+  }) {
+    return _then(_$ExpandedAttributes(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      flex: null == flex
+          ? _value.flex
+          : flex // ignore: cast_nullable_to_non_nullable
+              as int,
+      child: null == child
+          ? _value.child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Widget,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ExpandedAttributes implements ExpandedAttributes {
+  const _$ExpandedAttributes(
+      {this.key,
+      required this.type,
+      this.flex = 1,
+      @UIXWidgetConverter() required this.child});
+
+  factory _$ExpandedAttributes.fromJson(Map<String, dynamic> json) =>
+      _$$ExpandedAttributesFromJson(json);
+
+  @override
+  final dynamic key;
+  @override
+  final String type;
+  @override
+  @JsonKey()
+  final int flex;
+  @override
+  @UIXWidgetConverter()
+  final Widget child;
+
+  @override
+  String toString() {
+    return 'UIXAttributes.expanded(key: $key, type: $type, flex: $flex, child: $child)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ExpandedAttributes &&
+            const DeepCollectionEquality().equals(other.key, key) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.flex, flex) || other.flex == flex) &&
+            (identical(other.child, child) || other.child == child));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(key), type, flex, child);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ExpandedAttributesCopyWith<_$ExpandedAttributes> get copyWith =>
+      __$$ExpandedAttributesCopyWithImpl<_$ExpandedAttributes>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(dynamic key, String type, double? height,
+            double? width, @UIXWidgetConverter() Widget? child)
+        sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)
+        container,
+    required TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)
+        text,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        column,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        row,
+    required TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
+        elevatedButton,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)
+        padding,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        fractionallySizedBox,
+    required TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)
+        expanded,
+    required TResult Function(dynamic key, String type, int flex) spacer,
+  }) {
+    return expanded(key, type, flex, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult? Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult? Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult? Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult? Function(dynamic key, String type, int flex)? spacer,
+  }) {
+    return expanded?.call(key, type, flex, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult Function(dynamic key, String type, int flex)? spacer,
+    required TResult orElse(),
+  }) {
+    if (expanded != null) {
+      return expanded(key, type, flex, child);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ContainerAttributes value) container,
+    required TResult Function(TextAttributes value) text,
+    required TResult Function(ColumnAttributes value) column,
+    required TResult Function(RowAttributes value) row,
+    required TResult Function(ElevatedButtonAttributes value) elevatedButton,
+    required TResult Function(PaddingAttributes value) padding,
+    required TResult Function(AlignAttributes value) align,
+    required TResult Function(FractionallySizedBoxAttributes value)
+        fractionallySizedBox,
+    required TResult Function(ExpandedAttributes value) expanded,
+    required TResult Function(SpacerAttributes value) spacer,
+  }) {
+    return expanded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ContainerAttributes value)? container,
+    TResult? Function(TextAttributes value)? text,
+    TResult? Function(ColumnAttributes value)? column,
+    TResult? Function(RowAttributes value)? row,
+    TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult? Function(PaddingAttributes value)? padding,
+    TResult? Function(AlignAttributes value)? align,
+    TResult? Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult? Function(ExpandedAttributes value)? expanded,
+    TResult? Function(SpacerAttributes value)? spacer,
+  }) {
+    return expanded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ContainerAttributes value)? container,
+    TResult Function(TextAttributes value)? text,
+    TResult Function(ColumnAttributes value)? column,
+    TResult Function(RowAttributes value)? row,
+    TResult Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult Function(PaddingAttributes value)? padding,
+    TResult Function(AlignAttributes value)? align,
+    TResult Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult Function(ExpandedAttributes value)? expanded,
+    TResult Function(SpacerAttributes value)? spacer,
+    required TResult orElse(),
+  }) {
+    if (expanded != null) {
+      return expanded(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ExpandedAttributesToJson(
+      this,
+    );
+  }
+}
+
+abstract class ExpandedAttributes implements UIXAttributes {
+  const factory ExpandedAttributes(
+          {final dynamic key,
+          required final String type,
+          final int flex,
+          @UIXWidgetConverter() required final Widget child}) =
+      _$ExpandedAttributes;
+
+  factory ExpandedAttributes.fromJson(Map<String, dynamic> json) =
+      _$ExpandedAttributes.fromJson;
+
+  @override
+  dynamic get key;
+  @override
+  String get type;
+  int get flex;
+  @UIXWidgetConverter()
+  Widget get child;
+  @override
+  @JsonKey(ignore: true)
+  _$$ExpandedAttributesCopyWith<_$ExpandedAttributes> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SpacerAttributesCopyWith<$Res>
+    implements $UIXAttributesCopyWith<$Res> {
+  factory _$$SpacerAttributesCopyWith(
+          _$SpacerAttributes value, $Res Function(_$SpacerAttributes) then) =
+      __$$SpacerAttributesCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({dynamic key, String type, int flex});
+}
+
+/// @nodoc
+class __$$SpacerAttributesCopyWithImpl<$Res>
+    extends _$UIXAttributesCopyWithImpl<$Res, _$SpacerAttributes>
+    implements _$$SpacerAttributesCopyWith<$Res> {
+  __$$SpacerAttributesCopyWithImpl(
+      _$SpacerAttributes _value, $Res Function(_$SpacerAttributes) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? type = null,
+    Object? flex = null,
+  }) {
+    return _then(_$SpacerAttributes(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      flex: null == flex
+          ? _value.flex
+          : flex // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$SpacerAttributes implements SpacerAttributes {
+  const _$SpacerAttributes({this.key, required this.type, this.flex = 1});
+
+  factory _$SpacerAttributes.fromJson(Map<String, dynamic> json) =>
+      _$$SpacerAttributesFromJson(json);
+
+  @override
+  final dynamic key;
+  @override
+  final String type;
+  @override
+  @JsonKey()
+  final int flex;
+
+  @override
+  String toString() {
+    return 'UIXAttributes.spacer(key: $key, type: $type, flex: $flex)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SpacerAttributes &&
+            const DeepCollectionEquality().equals(other.key, key) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.flex, flex) || other.flex == flex));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(key), type, flex);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SpacerAttributesCopyWith<_$SpacerAttributes> get copyWith =>
+      __$$SpacerAttributesCopyWithImpl<_$SpacerAttributes>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(dynamic key, String type, double? height,
+            double? width, @UIXWidgetConverter() Widget? child)
+        sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)
+        container,
+    required TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)
+        text,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        column,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        row,
+    required TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)
+        elevatedButton,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)
+        padding,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        fractionallySizedBox,
+    required TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)
+        expanded,
+    required TResult Function(dynamic key, String type, int flex) spacer,
+  }) {
+    return spacer(key, type, flex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult? Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult? Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult? Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult? Function(dynamic key, String type, int flex)? spacer,
+  }) {
+    return spacer?.call(key, type, flex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXColorConverter() Color? color,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult Function(dynamic key, String type, UIXAction? onPressed,
+            UIXAction? onLongPress, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult Function(dynamic key, String type, int flex)? spacer,
+    required TResult orElse(),
+  }) {
+    if (spacer != null) {
+      return spacer(key, type, flex);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ContainerAttributes value) container,
+    required TResult Function(TextAttributes value) text,
+    required TResult Function(ColumnAttributes value) column,
+    required TResult Function(RowAttributes value) row,
+    required TResult Function(ElevatedButtonAttributes value) elevatedButton,
+    required TResult Function(PaddingAttributes value) padding,
+    required TResult Function(AlignAttributes value) align,
+    required TResult Function(FractionallySizedBoxAttributes value)
+        fractionallySizedBox,
+    required TResult Function(ExpandedAttributes value) expanded,
+    required TResult Function(SpacerAttributes value) spacer,
+  }) {
+    return spacer(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ContainerAttributes value)? container,
+    TResult? Function(TextAttributes value)? text,
+    TResult? Function(ColumnAttributes value)? column,
+    TResult? Function(RowAttributes value)? row,
+    TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult? Function(PaddingAttributes value)? padding,
+    TResult? Function(AlignAttributes value)? align,
+    TResult? Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult? Function(ExpandedAttributes value)? expanded,
+    TResult? Function(SpacerAttributes value)? spacer,
+  }) {
+    return spacer?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ContainerAttributes value)? container,
+    TResult Function(TextAttributes value)? text,
+    TResult Function(ColumnAttributes value)? column,
+    TResult Function(RowAttributes value)? row,
+    TResult Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult Function(PaddingAttributes value)? padding,
+    TResult Function(AlignAttributes value)? align,
+    TResult Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult Function(ExpandedAttributes value)? expanded,
+    TResult Function(SpacerAttributes value)? spacer,
+    required TResult orElse(),
+  }) {
+    if (spacer != null) {
+      return spacer(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$SpacerAttributesToJson(
+      this,
+    );
+  }
+}
+
+abstract class SpacerAttributes implements UIXAttributes {
+  const factory SpacerAttributes(
+      {final dynamic key,
+      required final String type,
+      final int flex}) = _$SpacerAttributes;
+
+  factory SpacerAttributes.fromJson(Map<String, dynamic> json) =
+      _$SpacerAttributes.fromJson;
+
+  @override
+  dynamic get key;
+  @override
+  String get type;
+  int get flex;
+  @override
+  @JsonKey(ignore: true)
+  _$$SpacerAttributesCopyWith<_$SpacerAttributes> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:uix/uix.dart';
+part of 'extension.dart';
 
 extension UIXAttributeExtension on UIXAttributes {
   Widget build() {
@@ -11,6 +10,10 @@ extension UIXAttributeExtension on UIXAttributes {
       row: (attributes) => UIXRow(attributes),
       elevatedButton: (attributes) => UIXElevatedButton(attributes),
       padding: (attributes) => UIXPadding(attributes),
+      align: (attributes) => UIXAlign(attributes),
+      fractionallySizedBox: (attributes) => UIXFractionallySizedBox(attributes),
+      expanded: (attributes) => UIXExpanded(attributes),
+      spacer: (attributes) => UIXSpacer(attributes),
     ).build();
   }
 }

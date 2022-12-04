@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:uix/src/attributes/action/action.dart';
 import 'package:uix/src/attributes/text_style.dart/text_style.dart';
 import 'package:uix/uix.dart';
 
@@ -48,6 +49,8 @@ abstract class UIXAttributes with _$UIXAttributes {
   const factory UIXAttributes.elevatedButton({
     dynamic key,
     required String type,
+    UIXAction? onPressed,
+    UIXAction? onLongPress,
     @UIXWidgetConverter() Widget? child,
   }) = ElevatedButtonAttributes;
 
@@ -57,6 +60,39 @@ abstract class UIXAttributes with _$UIXAttributes {
     @UIXEdgeInsetsConverter() required EdgeInsetsGeometry padding,
     @UIXWidgetConverter() Widget? child,
   }) = PaddingAttributes;
+
+  const factory UIXAttributes.align({
+    dynamic key,
+    required String type,
+    @Default(AlignmentDirectional.center)
+    @UIXAlignmentGeometryConverter()
+        AlignmentGeometry? alignment,
+    @UIXWidgetConverter() Widget? child,
+  }) = AlignAttributes;
+
+  const factory UIXAttributes.fractionallySizedBox({
+    dynamic key,
+    required String type,
+    double? widthFactor,
+    double? heightFactor,
+    @Default(AlignmentDirectional.center)
+    @UIXAlignmentGeometryConverter()
+        AlignmentGeometry? alignment,
+    @UIXWidgetConverter() Widget? child,
+  }) = FractionallySizedBoxAttributes;
+
+  const factory UIXAttributes.expanded({
+    dynamic key,
+    required String type,
+    @Default(1) int flex,
+    @UIXWidgetConverter() required Widget child,
+  }) = ExpandedAttributes;
+
+  const factory UIXAttributes.spacer({
+    dynamic key,
+    required String type,
+    @Default(1) int flex,
+  }) = SpacerAttributes;
 
   factory UIXAttributes.fromJson(Map<String, dynamic> json) =>
       _$UIXAttributesFromJson(json);

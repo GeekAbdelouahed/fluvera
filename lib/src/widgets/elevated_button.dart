@@ -6,10 +6,15 @@ class UIXElevatedButton extends UIX<ElevatedButtonAttributes> {
 
   @override
   Widget build() {
-    return ElevatedButton(
-      key: attributes.key != null ? Key(attributes.key) : null,
-      onPressed: () {},
-      child: attributes.child,
+    return Builder(
+      builder: (context) {
+        return ElevatedButton(
+          key: attributes.key != null ? Key(attributes.key) : null,
+          onPressed: attributes.onPressed?.act(context),
+          onLongPress: attributes.onLongPress?.act(context),
+          child: attributes.child,
+        );
+      },
     );
   }
 }

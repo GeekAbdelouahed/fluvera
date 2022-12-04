@@ -120,6 +120,12 @@ _$ElevatedButtonAttributes _$$ElevatedButtonAttributesFromJson(
     _$ElevatedButtonAttributes(
       key: json['key'],
       type: json['type'] as String,
+      onPressed: json['onPressed'] == null
+          ? null
+          : UIXAction.fromJson(json['onPressed'] as Map<String, dynamic>),
+      onLongPress: json['onLongPress'] == null
+          ? null
+          : UIXAction.fromJson(json['onLongPress'] as Map<String, dynamic>),
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
           json['child'], const UIXWidgetConverter().fromJson),
     );
@@ -129,6 +135,8 @@ Map<String, dynamic> _$$ElevatedButtonAttributesToJson(
     <String, dynamic>{
       'key': instance.key,
       'type': instance.type,
+      'onPressed': instance.onPressed,
+      'onLongPress': instance.onLongPress,
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
           instance.child, const UIXWidgetConverter().toJson),
     };
@@ -150,4 +158,86 @@ Map<String, dynamic> _$$PaddingAttributesToJson(_$PaddingAttributes instance) =>
       'padding': const UIXEdgeInsetsConverter().toJson(instance.padding),
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
           instance.child, const UIXWidgetConverter().toJson),
+    };
+
+_$AlignAttributes _$$AlignAttributesFromJson(Map<String, dynamic> json) =>
+    _$AlignAttributes(
+      key: json['key'],
+      type: json['type'] as String,
+      alignment: json['alignment'] == null
+          ? AlignmentDirectional.center
+          : const UIXAlignmentGeometryConverter()
+              .fromJson(json['alignment'] as String?),
+      child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
+          json['child'], const UIXWidgetConverter().fromJson),
+    );
+
+Map<String, dynamic> _$$AlignAttributesToJson(_$AlignAttributes instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'type': instance.type,
+      'alignment':
+          const UIXAlignmentGeometryConverter().toJson(instance.alignment),
+      'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
+          instance.child, const UIXWidgetConverter().toJson),
+    };
+
+_$FractionallySizedBoxAttributes _$$FractionallySizedBoxAttributesFromJson(
+        Map<String, dynamic> json) =>
+    _$FractionallySizedBoxAttributes(
+      key: json['key'],
+      type: json['type'] as String,
+      widthFactor: (json['widthFactor'] as num?)?.toDouble(),
+      heightFactor: (json['heightFactor'] as num?)?.toDouble(),
+      alignment: json['alignment'] == null
+          ? AlignmentDirectional.center
+          : const UIXAlignmentGeometryConverter()
+              .fromJson(json['alignment'] as String?),
+      child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
+          json['child'], const UIXWidgetConverter().fromJson),
+    );
+
+Map<String, dynamic> _$$FractionallySizedBoxAttributesToJson(
+        _$FractionallySizedBoxAttributes instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'type': instance.type,
+      'widthFactor': instance.widthFactor,
+      'heightFactor': instance.heightFactor,
+      'alignment':
+          const UIXAlignmentGeometryConverter().toJson(instance.alignment),
+      'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
+          instance.child, const UIXWidgetConverter().toJson),
+    };
+
+_$ExpandedAttributes _$$ExpandedAttributesFromJson(Map<String, dynamic> json) =>
+    _$ExpandedAttributes(
+      key: json['key'],
+      type: json['type'] as String,
+      flex: json['flex'] as int? ?? 1,
+      child: const UIXWidgetConverter()
+          .fromJson(json['child'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$ExpandedAttributesToJson(
+        _$ExpandedAttributes instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'type': instance.type,
+      'flex': instance.flex,
+      'child': const UIXWidgetConverter().toJson(instance.child),
+    };
+
+_$SpacerAttributes _$$SpacerAttributesFromJson(Map<String, dynamic> json) =>
+    _$SpacerAttributes(
+      key: json['key'],
+      type: json['type'] as String,
+      flex: json['flex'] as int? ?? 1,
+    );
+
+Map<String, dynamic> _$$SpacerAttributesToJson(_$SpacerAttributes instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'type': instance.type,
+      'flex': instance.flex,
     };
