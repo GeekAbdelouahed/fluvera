@@ -1,7 +1,5 @@
 part of 'extension.dart';
 
-typedef UIXVoidCallback = Future<void> Function();
-
 extension UIXActionExtension on UIXAction {
   Future<void> act(BuildContext context) {
     return map(
