@@ -63,9 +63,12 @@ _$ContainerAttributes _$$ContainerAttributesFromJson(
       type: json['type'] as String,
       height: (json['height'] as num?)?.toDouble(),
       width: (json['width'] as num?)?.toDouble(),
+      color: const UIXColorConverter().fromJson(json['color'] as String?),
       alignment: const UIXAlignmentGeometryConverter()
           .fromJson(json['alignment'] as String?),
-      color: const UIXColorConverter().fromJson(json['color'] as String?),
+      padding:
+          _$JsonConverterFromJson<Map<String, dynamic>, EdgeInsetsGeometry>(
+              json['padding'], const UIXEdgeInsetsConverter().fromJson),
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
           json['child'], const UIXWidgetConverter().fromJson),
     );
@@ -77,9 +80,12 @@ Map<String, dynamic> _$$ContainerAttributesToJson(
       'type': instance.type,
       'height': instance.height,
       'width': instance.width,
+      'color': const UIXColorConverter().toJson(instance.color),
       'alignment':
           const UIXAlignmentGeometryConverter().toJson(instance.alignment),
-      'color': const UIXColorConverter().toJson(instance.color),
+      'padding':
+          _$JsonConverterToJson<Map<String, dynamic>, EdgeInsetsGeometry>(
+              instance.padding, const UIXEdgeInsetsConverter().toJson),
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
           instance.child, const UIXWidgetConverter().toJson),
     };

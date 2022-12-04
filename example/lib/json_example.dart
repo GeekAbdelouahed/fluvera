@@ -106,7 +106,7 @@ const Map<String, dynamic> json = {
                   'type': 'Align',
                   'child': {
                     'type': 'Text',
-                    'text': 'Hey from bottom sheet',
+                    'text': '{greeting}',
                     'style': {
                       'color': '#AA1100',
                       'fontSize': 30,
@@ -147,18 +147,47 @@ const Map<String, dynamic> json = {
                 'widthFactor': 0.5,
                 'child': {
                   'type': 'Container',
+                  'padding': {
+                    'top': 20,
+                    'bottom': 20,
+                  },
                   'color': '#AA0000',
                   'child': {
                     'type': 'Align',
                     'child': {
-                      'type': 'Text',
-                      'text': 'First dialog',
-                      'style': {
-                        'color': '#FFFFFF',
-                        'fontSize': 30,
-                        'fontWeight': 'w500',
-                      },
-                    },
+                      'type': 'Column',
+                      'children': [
+                        {
+                          'type': 'Text',
+                          'text': 'First dialog',
+                          'style': {
+                            'color': '#FFFFFF',
+                            'fontSize': 30,
+                            'fontWeight': 'w500',
+                          },
+                        },
+                        {
+                          'type': 'Spacer',
+                        },
+                        {
+                          'type': 'ElevatedButton',
+                          'child': {
+                            'type': 'Text',
+                            'text': 'Close dialog',
+                            'style': {
+                              'color': '#FFFFFF',
+                              'fontSize': 30,
+                              'fontWeight': 'w500',
+                            },
+                          },
+                          'onPressed': [
+                            {
+                              'type': 'Pop',
+                            },
+                          ]
+                        },
+                      ]
+                    }
                   },
                 },
               },

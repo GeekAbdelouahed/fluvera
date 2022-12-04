@@ -67,8 +67,9 @@ mixin _$UIXAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -129,8 +130,9 @@ mixin _$UIXAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
@@ -184,8 +186,9 @@ mixin _$UIXAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(
@@ -455,8 +458,9 @@ class _$PageAttributes implements PageAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -520,8 +524,9 @@ class _$PageAttributes implements PageAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
@@ -578,8 +583,9 @@ class _$PageAttributes implements PageAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(
@@ -850,8 +856,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -915,8 +922,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
@@ -973,8 +981,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(
@@ -1131,8 +1140,9 @@ abstract class _$$ContainerAttributesCopyWith<$Res>
       String type,
       double? height,
       double? width,
-      @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
       @UIXColorConverter() Color? color,
+      @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+      @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
       @UIXWidgetConverter() Widget? child});
 }
 
@@ -1151,8 +1161,9 @@ class __$$ContainerAttributesCopyWithImpl<$Res>
     Object? type = null,
     Object? height = freezed,
     Object? width = freezed,
-    Object? alignment = freezed,
     Object? color = freezed,
+    Object? alignment = freezed,
+    Object? padding = freezed,
     Object? child = freezed,
   }) {
     return _then(_$ContainerAttributes(
@@ -1172,14 +1183,18 @@ class __$$ContainerAttributesCopyWithImpl<$Res>
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as double?,
-      alignment: freezed == alignment
-          ? _value.alignment
-          : alignment // ignore: cast_nullable_to_non_nullable
-              as AlignmentGeometry?,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as Color?,
+      alignment: freezed == alignment
+          ? _value.alignment
+          : alignment // ignore: cast_nullable_to_non_nullable
+              as AlignmentGeometry?,
+      padding: freezed == padding
+          ? _value.padding
+          : padding // ignore: cast_nullable_to_non_nullable
+              as EdgeInsetsGeometry?,
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
@@ -1196,8 +1211,9 @@ class _$ContainerAttributes implements ContainerAttributes {
       required this.type,
       this.height,
       this.width,
-      @UIXAlignmentGeometryConverter() this.alignment,
       @UIXColorConverter() this.color,
+      @UIXAlignmentGeometryConverter() this.alignment,
+      @UIXEdgeInsetsConverter() this.padding,
       @UIXWidgetConverter() this.child});
 
   factory _$ContainerAttributes.fromJson(Map<String, dynamic> json) =>
@@ -1212,18 +1228,21 @@ class _$ContainerAttributes implements ContainerAttributes {
   @override
   final double? width;
   @override
+  @UIXColorConverter()
+  final Color? color;
+  @override
   @UIXAlignmentGeometryConverter()
   final AlignmentGeometry? alignment;
   @override
-  @UIXColorConverter()
-  final Color? color;
+  @UIXEdgeInsetsConverter()
+  final EdgeInsetsGeometry? padding;
   @override
   @UIXWidgetConverter()
   final Widget? child;
 
   @override
   String toString() {
-    return 'UIXAttributes.container(key: $key, type: $type, height: $height, width: $width, alignment: $alignment, color: $color, child: $child)';
+    return 'UIXAttributes.container(key: $key, type: $type, height: $height, width: $width, color: $color, alignment: $alignment, padding: $padding, child: $child)';
   }
 
   @override
@@ -1235,9 +1254,10 @@ class _$ContainerAttributes implements ContainerAttributes {
             (identical(other.type, type) || other.type == type) &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.width, width) || other.width == width) &&
+            const DeepCollectionEquality().equals(other.color, color) &&
             (identical(other.alignment, alignment) ||
                 other.alignment == alignment) &&
-            const DeepCollectionEquality().equals(other.color, color) &&
+            (identical(other.padding, padding) || other.padding == padding) &&
             (identical(other.child, child) || other.child == child));
   }
 
@@ -1249,8 +1269,9 @@ class _$ContainerAttributes implements ContainerAttributes {
       type,
       height,
       width,
-      alignment,
       const DeepCollectionEquality().hash(color),
+      alignment,
+      padding,
       child);
 
   @JsonKey(ignore: true)
@@ -1277,8 +1298,9 @@ class _$ContainerAttributes implements ContainerAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -1322,7 +1344,8 @@ class _$ContainerAttributes implements ContainerAttributes {
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
   }) {
-    return container(key, type, height, width, alignment, color, child);
+    return container(
+        key, type, height, width, color, alignment, this.padding, child);
   }
 
   @override
@@ -1342,8 +1365,9 @@ class _$ContainerAttributes implements ContainerAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
@@ -1383,7 +1407,8 @@ class _$ContainerAttributes implements ContainerAttributes {
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
   }) {
-    return container?.call(key, type, height, width, alignment, color, child);
+    return container?.call(
+        key, type, height, width, color, alignment, this.padding, child);
   }
 
   @override
@@ -1400,8 +1425,9 @@ class _$ContainerAttributes implements ContainerAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(
@@ -1443,7 +1469,8 @@ class _$ContainerAttributes implements ContainerAttributes {
     required TResult orElse(),
   }) {
     if (container != null) {
-      return container(key, type, height, width, alignment, color, child);
+      return container(
+          key, type, height, width, color, alignment, this.padding, child);
     }
     return orElse();
   }
@@ -1526,8 +1553,9 @@ abstract class ContainerAttributes implements UIXAttributes {
       required final String type,
       final double? height,
       final double? width,
-      @UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
       @UIXColorConverter() final Color? color,
+      @UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
+      @UIXEdgeInsetsConverter() final EdgeInsetsGeometry? padding,
       @UIXWidgetConverter() final Widget? child}) = _$ContainerAttributes;
 
   factory ContainerAttributes.fromJson(Map<String, dynamic> json) =
@@ -1539,10 +1567,12 @@ abstract class ContainerAttributes implements UIXAttributes {
   String get type;
   double? get height;
   double? get width;
-  @UIXAlignmentGeometryConverter()
-  AlignmentGeometry? get alignment;
   @UIXColorConverter()
   Color? get color;
+  @UIXAlignmentGeometryConverter()
+  AlignmentGeometry? get alignment;
+  @UIXEdgeInsetsConverter()
+  EdgeInsetsGeometry? get padding;
   @UIXWidgetConverter()
   Widget? get child;
   @override
@@ -1675,8 +1705,9 @@ class _$TextAttributes implements TextAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -1740,8 +1771,9 @@ class _$TextAttributes implements TextAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
@@ -1798,8 +1830,9 @@ class _$TextAttributes implements TextAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(
@@ -2055,8 +2088,9 @@ class _$ColumnAttributes implements ColumnAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -2120,8 +2154,9 @@ class _$ColumnAttributes implements ColumnAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
@@ -2178,8 +2213,9 @@ class _$ColumnAttributes implements ColumnAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(
@@ -2435,8 +2471,9 @@ class _$RowAttributes implements RowAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -2500,8 +2537,9 @@ class _$RowAttributes implements RowAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
@@ -2558,8 +2596,9 @@ class _$RowAttributes implements RowAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(
@@ -2855,8 +2894,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -2920,8 +2960,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
@@ -2978,8 +3019,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(
@@ -3242,8 +3284,9 @@ class _$PaddingAttributes implements PaddingAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -3307,8 +3350,9 @@ class _$PaddingAttributes implements PaddingAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
@@ -3365,8 +3409,9 @@ class _$PaddingAttributes implements PaddingAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(
@@ -3632,8 +3677,9 @@ class _$AlignAttributes implements AlignAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -3697,8 +3743,9 @@ class _$AlignAttributes implements AlignAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
@@ -3755,8 +3802,9 @@ class _$AlignAttributes implements AlignAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(
@@ -4055,8 +4103,9 @@ class _$FractionallySizedBoxAttributes
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -4121,8 +4170,9 @@ class _$FractionallySizedBoxAttributes
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
@@ -4180,8 +4230,9 @@ class _$FractionallySizedBoxAttributes
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(
@@ -4447,8 +4498,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -4512,8 +4564,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
@@ -4570,8 +4623,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(
@@ -4816,8 +4870,9 @@ class _$SpacerAttributes implements SpacerAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -4881,8 +4936,9 @@ class _$SpacerAttributes implements SpacerAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(
@@ -4939,8 +4995,9 @@ class _$SpacerAttributes implements SpacerAttributes {
             String type,
             double? height,
             double? width,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(

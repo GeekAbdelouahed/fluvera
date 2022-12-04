@@ -11,6 +11,7 @@ class UIXContainer extends UIX<ContainerAttributes> {
       height: attributes.height,
       width: attributes.width,
       alignment: attributes.alignment,
+      padding: attributes.padding,
       child: attributes.child,
     );
   }
