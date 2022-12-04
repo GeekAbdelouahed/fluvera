@@ -18,7 +18,6 @@ class UIXColorConverter implements JsonConverter<Color?, String> {
 
   @override
   String toJson(Color? data) {
-    // TODO convert color to hex string
-    return '${data ?? '#000000'}';
+    return '#${data?.value.toRadixString(16).padLeft(6, '0') ?? '000000'}';
   }
 }
