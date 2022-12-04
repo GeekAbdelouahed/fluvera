@@ -6,7 +6,7 @@ class UIXSizedBox extends UIX<SizedBoxAttributes> {
   @override
   Widget build() {
     return SizedBox(
-      key: attributes.key != null ? Key(attributes.key) : null,
+      key: key,
       height: attributes.height,
       width: attributes.width,
       child: attributes.child,

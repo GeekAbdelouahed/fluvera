@@ -6,7 +6,7 @@ class UIXSpacer extends UIX<SpacerAttributes> {
   @override
   Widget build() {
     return Spacer(
-      key: attributes.key != null ? Key(attributes.key) : null,
+      key: key,
       flex: attributes.flex,
     );
   }

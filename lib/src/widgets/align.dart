@@ -6,7 +6,7 @@ class UIXAlign extends UIX<AlignAttributes> {
   @override
   Widget build() {
     return Align(
-      key: attributes.key != null ? Key(attributes.key) : null,
+      key: key,
       alignment: attributes.alignment!,
       child: attributes.child,
     );

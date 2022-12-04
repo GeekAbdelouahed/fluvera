@@ -7,7 +7,7 @@ class UIXText extends UIX<TextAttributes> {
   Widget build() {
     return Text(
       attributes.text,
-      key: attributes.key != null ? Key(attributes.key) : null,
+      key: key,
       style: TextStyle(
         color: attributes.style?.color,
         fontSize: attributes.style?.fontSize,

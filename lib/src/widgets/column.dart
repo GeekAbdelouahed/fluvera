@@ -6,7 +6,7 @@ class UIXColumn extends UIX<ColumnAttributes> {
   @override
   Widget build() {
     return Column(
-      key: attributes.key != null ? Key(attributes.key) : null,
+      key: key,
       children: attributes.children,
     );
   }

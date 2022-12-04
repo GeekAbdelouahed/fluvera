@@ -9,7 +9,7 @@ class UIXElevatedButton extends UIX<ElevatedButtonAttributes> {
     return Builder(
       builder: (context) {
         return ElevatedButton(
-          key: attributes.key != null ? Key(attributes.key) : null,
+          key: key,
           onPressed: attributes.onPressed == null
               ? null
               : () async {

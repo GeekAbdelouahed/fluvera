@@ -7,5 +7,7 @@ abstract class UIX<T extends UIXAttributes> {
 
   Widget build();
 
+  Key? get key => _attrs.key == null ? null : Key(_attrs.key);
+
   T get attributes => _attrs;
 }

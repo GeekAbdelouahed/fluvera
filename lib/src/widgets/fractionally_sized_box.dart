@@ -7,7 +7,7 @@ class UIXFractionallySizedBox extends UIX<FractionallySizedBoxAttributes> {
   @override
   Widget build() {
     return FractionallySizedBox(
-      key: attributes.key != null ? Key(attributes.key) : null,
+      key: key,
       alignment: attributes.alignment!,
       heightFactor: attributes.heightFactor,
       widthFactor: attributes.widthFactor,

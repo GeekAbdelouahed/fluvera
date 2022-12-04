@@ -6,7 +6,7 @@ class UIXPadding extends UIX<PaddingAttributes> {
   @override
   Widget build() {
     return Padding(
-      key: attributes.key != null ? Key(attributes.key) : null,
+      key: key,
       padding: attributes.padding,
       child: attributes.child,
     );

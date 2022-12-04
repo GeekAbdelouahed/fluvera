@@ -96,6 +96,7 @@ const Map<String, dynamic> json = {
       },
     },
     {
+      'key': 'hello padding',
       'type': 'Padding',
       'padding': {
         'start': 50,

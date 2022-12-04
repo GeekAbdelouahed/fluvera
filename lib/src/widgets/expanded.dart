@@ -6,7 +6,7 @@ class UIXExpanded extends UIX<ExpandedAttributes> {
   @override
   Widget build() {
     return Expanded(
-      key: attributes.key != null ? Key(attributes.key) : null,
+      key: key,
       flex: attributes.flex,
       child: attributes.child,
     );
