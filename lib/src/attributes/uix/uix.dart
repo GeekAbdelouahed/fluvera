@@ -9,21 +9,19 @@ part 'uix.freezed.dart';
 part 'uix.g.dart';
 
 @freezed
-abstract class UIXAttributes with _$UIXAttributes {
-  const factory UIXAttributes.page({
+class UIXAttributes with _$UIXAttributes {
+  const factory UIXAttributes.align({
     dynamic key,
     required String type,
-    Map<String, dynamic>? attributes,
-    @UIXWidgetConverter() required Widget child,
-  }) = PageAttributes;
-
-  const factory UIXAttributes.sizedBox({
-    dynamic key,
-    required String type,
-    double? height,
-    double? width,
+    @Default(AlignmentDirectional.center) @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
     @UIXWidgetConverter() Widget? child,
-  }) = SizedBoxAttributes;
+  }) = AlignAttributes;
+
+  const factory UIXAttributes.column({
+    dynamic key,
+    required String type,
+    @UIXWidgetsConverter() required List<Widget> children,
+  }) = ColumnAttributes;
 
   const factory UIXAttributes.container({
     dynamic key,
@@ -36,25 +34,6 @@ abstract class UIXAttributes with _$UIXAttributes {
     @UIXWidgetConverter() Widget? child,
   }) = ContainerAttributes;
 
-  const factory UIXAttributes.text({
-    dynamic key,
-    required String type,
-    required String text,
-    UIXTextStyle? style,
-  }) = TextAttributes;
-
-  const factory UIXAttributes.column({
-    dynamic key,
-    required String type,
-    @UIXWidgetsConverter() required List<Widget> children,
-  }) = ColumnAttributes;
-
-  const factory UIXAttributes.row({
-    dynamic key,
-    required String type,
-    @UIXWidgetsConverter() required List<Widget> children,
-  }) = RowAttributes;
-
   const factory UIXAttributes.elevatedButton({
     dynamic key,
     required String type,
@@ -63,33 +42,6 @@ abstract class UIXAttributes with _$UIXAttributes {
     @UIXWidgetConverter() Widget? child,
   }) = ElevatedButtonAttributes;
 
-  const factory UIXAttributes.padding({
-    dynamic key,
-    required String type,
-    @UIXEdgeInsetsConverter() required EdgeInsetsGeometry padding,
-    @UIXWidgetConverter() Widget? child,
-  }) = PaddingAttributes;
-
-  const factory UIXAttributes.align({
-    dynamic key,
-    required String type,
-    @Default(AlignmentDirectional.center)
-    @UIXAlignmentGeometryConverter()
-        AlignmentGeometry? alignment,
-    @UIXWidgetConverter() Widget? child,
-  }) = AlignAttributes;
-
-  const factory UIXAttributes.fractionallySizedBox({
-    dynamic key,
-    required String type,
-    double? widthFactor,
-    double? heightFactor,
-    @Default(AlignmentDirectional.center)
-    @UIXAlignmentGeometryConverter()
-        AlignmentGeometry? alignment,
-    @UIXWidgetConverter() Widget? child,
-  }) = FractionallySizedBoxAttributes;
-
   const factory UIXAttributes.expanded({
     dynamic key,
     required String type,
@@ -97,11 +49,14 @@ abstract class UIXAttributes with _$UIXAttributes {
     @UIXWidgetConverter() required Widget child,
   }) = ExpandedAttributes;
 
-  const factory UIXAttributes.spacer({
+  const factory UIXAttributes.fractionallySizedBox({
     dynamic key,
     required String type,
-    @Default(1) int flex,
-  }) = SpacerAttributes;
+    double? widthFactor,
+    double? heightFactor,
+    @Default(AlignmentDirectional.center) @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+    @UIXWidgetConverter() Widget? child,
+  }) = FractionallySizedBoxAttributes;
 
   const factory UIXAttributes.image({
     dynamic key,
@@ -113,6 +68,46 @@ abstract class UIXAttributes with _$UIXAttributes {
     @Default(UIXImageSource.network) UIXImageSource source,
   }) = ImageAttributes;
 
-  factory UIXAttributes.fromJson(Map<String, dynamic> json) =>
-      _$UIXAttributesFromJson(json);
+  const factory UIXAttributes.padding({
+    dynamic key,
+    required String type,
+    @UIXEdgeInsetsConverter() required EdgeInsetsGeometry padding,
+    @UIXWidgetConverter() Widget? child,
+  }) = PaddingAttributes;
+
+  const factory UIXAttributes.page({
+    dynamic key,
+    required String type,
+    Map<String, dynamic>? attributes,
+    @UIXWidgetConverter() required Widget child,
+  }) = PageAttributes;
+
+  const factory UIXAttributes.row({
+    dynamic key,
+    required String type,
+    @UIXWidgetsConverter() required List<Widget> children,
+  }) = RowAttributes;
+
+  const factory UIXAttributes.sizedBox({
+    dynamic key,
+    required String type,
+    double? height,
+    double? width,
+    @UIXWidgetConverter() Widget? child,
+  }) = SizedBoxAttributes;
+
+  const factory UIXAttributes.spacer({
+    dynamic key,
+    required String type,
+    @Default(1) int flex,
+  }) = SpacerAttributes;
+
+  const factory UIXAttributes.text({
+    dynamic key,
+    required String type,
+    required String text,
+    UIXTextStyle? style,
+  }) = TextAttributes;
+
+  factory UIXAttributes.fromJson(Map<String, dynamic> json) => _$UIXAttributesFromJson(json);
 }

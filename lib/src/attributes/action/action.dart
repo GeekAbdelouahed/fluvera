@@ -6,7 +6,7 @@ part 'action.freezed.dart';
 part 'action.g.dart';
 
 @freezed
-abstract class UIXAction with _$UIXAction {
+class UIXAction with _$UIXAction {
   const factory UIXAction.push({
     required String type,
     @Default(false) bool synchronized,

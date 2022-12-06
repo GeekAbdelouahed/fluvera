@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:uix/src/enums/enums.dart';
 import 'package:uix/src/helpers/helpers.dart';
 import 'package:uix/uix.dart';
 
