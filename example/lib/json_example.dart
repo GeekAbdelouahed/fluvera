@@ -7,6 +7,12 @@ const Map<String, dynamic> json = {
     'type': 'Column',
     'children': [
       {
+        'type': 'Image',
+        'height': 100,
+        'path':
+            'https://docs.flutter.dev/assets/images/flutter-logo-sharing.png'
+      },
+      {
         'type': 'Text',
         'text': '{greeting}',
         'style': {

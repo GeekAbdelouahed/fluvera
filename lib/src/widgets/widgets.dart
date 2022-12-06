@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:uix/src/helpers/helpers.dart';
 import 'package:uix/uix.dart';
@@ -8,6 +10,7 @@ part 'container.dart';
 part 'elevated_button.dart';
 part 'expanded.dart';
 part 'fractionally_sized_box.dart';
+part 'image.dart';
 part 'padding.dart';
 part 'page.dart';
 part 'row.dart';

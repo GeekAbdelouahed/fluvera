@@ -102,6 +102,16 @@ abstract class UIXAttributes with _$UIXAttributes {
     @Default(1) int flex,
   }) = SpacerAttributes;
 
+  const factory UIXAttributes.image({
+    dynamic key,
+    required String type,
+    required String path,
+    double? height,
+    double? width,
+    BoxFit? fit,
+    @Default(ImageSource.network) ImageSource source,
+  }) = ImageAttributes;
+
   factory UIXAttributes.fromJson(Map<String, dynamic> json) =>
       _$UIXAttributesFromJson(json);
 }

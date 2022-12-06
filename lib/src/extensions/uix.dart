@@ -15,6 +15,7 @@ extension UIXAttributeExtension on UIXAttributes {
       fractionallySizedBox: (attributes) => UIXFractionallySizedBox(attributes),
       expanded: (attributes) => UIXExpanded(attributes),
       spacer: (attributes) => UIXSpacer(attributes),
+      image: (attributes) => UIXImage(attributes),
     ).build();
   }
 }

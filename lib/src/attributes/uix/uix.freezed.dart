@@ -40,6 +40,8 @@ UIXAttributes _$UIXAttributesFromJson(Map<String, dynamic> json) {
       return ExpandedAttributes.fromJson(json);
     case 'Spacer':
       return SpacerAttributes.fromJson(json);
+    case 'Image':
+      return ImageAttributes.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'type', 'UIXAttributes',
@@ -112,6 +114,9 @@ mixin _$UIXAttributes {
             @UIXWidgetConverter() Widget child)
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
+    required TResult Function(dynamic key, String type, String path,
+            double? height, double? width, BoxFit? fit, ImageSource source)
+        image,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -171,6 +176,9 @@ mixin _$UIXAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
+    TResult? Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -227,6 +235,9 @@ mixin _$UIXAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
+    TResult Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -245,6 +256,7 @@ mixin _$UIXAttributes {
         fractionallySizedBox,
     required TResult Function(ExpandedAttributes value) expanded,
     required TResult Function(SpacerAttributes value) spacer,
+    required TResult Function(ImageAttributes value) image,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -262,6 +274,7 @@ mixin _$UIXAttributes {
         fractionallySizedBox,
     TResult? Function(ExpandedAttributes value)? expanded,
     TResult? Function(SpacerAttributes value)? spacer,
+    TResult? Function(ImageAttributes value)? image,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -279,6 +292,7 @@ mixin _$UIXAttributes {
         fractionallySizedBox,
     TResult Function(ExpandedAttributes value)? expanded,
     TResult Function(SpacerAttributes value)? spacer,
+    TResult Function(ImageAttributes value)? image,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -503,6 +517,9 @@ class _$PageAttributes implements PageAttributes {
             @UIXWidgetConverter() Widget child)
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
+    required TResult Function(dynamic key, String type, String path,
+            double? height, double? width, BoxFit? fit, ImageSource source)
+        image,
   }) {
     return page(key, type, attributes, child);
   }
@@ -565,6 +582,9 @@ class _$PageAttributes implements PageAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
+    TResult? Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
   }) {
     return page?.call(key, type, attributes, child);
   }
@@ -624,6 +644,9 @@ class _$PageAttributes implements PageAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
+    TResult Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
     required TResult orElse(),
   }) {
     if (page != null) {
@@ -648,6 +671,7 @@ class _$PageAttributes implements PageAttributes {
         fractionallySizedBox,
     required TResult Function(ExpandedAttributes value) expanded,
     required TResult Function(SpacerAttributes value) spacer,
+    required TResult Function(ImageAttributes value) image,
   }) {
     return page(this);
   }
@@ -668,6 +692,7 @@ class _$PageAttributes implements PageAttributes {
         fractionallySizedBox,
     TResult? Function(ExpandedAttributes value)? expanded,
     TResult? Function(SpacerAttributes value)? spacer,
+    TResult? Function(ImageAttributes value)? image,
   }) {
     return page?.call(this);
   }
@@ -688,6 +713,7 @@ class _$PageAttributes implements PageAttributes {
         fractionallySizedBox,
     TResult Function(ExpandedAttributes value)? expanded,
     TResult Function(SpacerAttributes value)? spacer,
+    TResult Function(ImageAttributes value)? image,
     required TResult orElse(),
   }) {
     if (page != null) {
@@ -901,6 +927,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             @UIXWidgetConverter() Widget child)
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
+    required TResult Function(dynamic key, String type, String path,
+            double? height, double? width, BoxFit? fit, ImageSource source)
+        image,
   }) {
     return sizedBox(key, type, height, width, child);
   }
@@ -963,6 +992,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
+    TResult? Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
   }) {
     return sizedBox?.call(key, type, height, width, child);
   }
@@ -1022,6 +1054,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
+    TResult Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
     required TResult orElse(),
   }) {
     if (sizedBox != null) {
@@ -1046,6 +1081,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
         fractionallySizedBox,
     required TResult Function(ExpandedAttributes value) expanded,
     required TResult Function(SpacerAttributes value) spacer,
+    required TResult Function(ImageAttributes value) image,
   }) {
     return sizedBox(this);
   }
@@ -1066,6 +1102,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
         fractionallySizedBox,
     TResult? Function(ExpandedAttributes value)? expanded,
     TResult? Function(SpacerAttributes value)? spacer,
+    TResult? Function(ImageAttributes value)? image,
   }) {
     return sizedBox?.call(this);
   }
@@ -1086,6 +1123,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
         fractionallySizedBox,
     TResult Function(ExpandedAttributes value)? expanded,
     TResult Function(SpacerAttributes value)? spacer,
+    TResult Function(ImageAttributes value)? image,
     required TResult orElse(),
   }) {
     if (sizedBox != null) {
@@ -1343,6 +1381,9 @@ class _$ContainerAttributes implements ContainerAttributes {
             @UIXWidgetConverter() Widget child)
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
+    required TResult Function(dynamic key, String type, String path,
+            double? height, double? width, BoxFit? fit, ImageSource source)
+        image,
   }) {
     return container(
         key, type, height, width, color, alignment, this.padding, child);
@@ -1406,6 +1447,9 @@ class _$ContainerAttributes implements ContainerAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
+    TResult? Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
   }) {
     return container?.call(
         key, type, height, width, color, alignment, this.padding, child);
@@ -1466,6 +1510,9 @@ class _$ContainerAttributes implements ContainerAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
+    TResult Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
     required TResult orElse(),
   }) {
     if (container != null) {
@@ -1491,6 +1538,7 @@ class _$ContainerAttributes implements ContainerAttributes {
         fractionallySizedBox,
     required TResult Function(ExpandedAttributes value) expanded,
     required TResult Function(SpacerAttributes value) spacer,
+    required TResult Function(ImageAttributes value) image,
   }) {
     return container(this);
   }
@@ -1511,6 +1559,7 @@ class _$ContainerAttributes implements ContainerAttributes {
         fractionallySizedBox,
     TResult? Function(ExpandedAttributes value)? expanded,
     TResult? Function(SpacerAttributes value)? spacer,
+    TResult? Function(ImageAttributes value)? image,
   }) {
     return container?.call(this);
   }
@@ -1531,6 +1580,7 @@ class _$ContainerAttributes implements ContainerAttributes {
         fractionallySizedBox,
     TResult Function(ExpandedAttributes value)? expanded,
     TResult Function(SpacerAttributes value)? spacer,
+    TResult Function(ImageAttributes value)? image,
     required TResult orElse(),
   }) {
     if (container != null) {
@@ -1750,6 +1800,9 @@ class _$TextAttributes implements TextAttributes {
             @UIXWidgetConverter() Widget child)
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
+    required TResult Function(dynamic key, String type, String path,
+            double? height, double? width, BoxFit? fit, ImageSource source)
+        image,
   }) {
     return text(key, type, this.text, style);
   }
@@ -1812,6 +1865,9 @@ class _$TextAttributes implements TextAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
+    TResult? Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
   }) {
     return text?.call(key, type, this.text, style);
   }
@@ -1871,6 +1927,9 @@ class _$TextAttributes implements TextAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
+    TResult Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
     required TResult orElse(),
   }) {
     if (text != null) {
@@ -1895,6 +1954,7 @@ class _$TextAttributes implements TextAttributes {
         fractionallySizedBox,
     required TResult Function(ExpandedAttributes value) expanded,
     required TResult Function(SpacerAttributes value) spacer,
+    required TResult Function(ImageAttributes value) image,
   }) {
     return text(this);
   }
@@ -1915,6 +1975,7 @@ class _$TextAttributes implements TextAttributes {
         fractionallySizedBox,
     TResult? Function(ExpandedAttributes value)? expanded,
     TResult? Function(SpacerAttributes value)? spacer,
+    TResult? Function(ImageAttributes value)? image,
   }) {
     return text?.call(this);
   }
@@ -1935,6 +1996,7 @@ class _$TextAttributes implements TextAttributes {
         fractionallySizedBox,
     TResult Function(ExpandedAttributes value)? expanded,
     TResult Function(SpacerAttributes value)? spacer,
+    TResult Function(ImageAttributes value)? image,
     required TResult orElse(),
   }) {
     if (text != null) {
@@ -2133,6 +2195,9 @@ class _$ColumnAttributes implements ColumnAttributes {
             @UIXWidgetConverter() Widget child)
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
+    required TResult Function(dynamic key, String type, String path,
+            double? height, double? width, BoxFit? fit, ImageSource source)
+        image,
   }) {
     return column(key, type, children);
   }
@@ -2195,6 +2260,9 @@ class _$ColumnAttributes implements ColumnAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
+    TResult? Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
   }) {
     return column?.call(key, type, children);
   }
@@ -2254,6 +2322,9 @@ class _$ColumnAttributes implements ColumnAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
+    TResult Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
     required TResult orElse(),
   }) {
     if (column != null) {
@@ -2278,6 +2349,7 @@ class _$ColumnAttributes implements ColumnAttributes {
         fractionallySizedBox,
     required TResult Function(ExpandedAttributes value) expanded,
     required TResult Function(SpacerAttributes value) spacer,
+    required TResult Function(ImageAttributes value) image,
   }) {
     return column(this);
   }
@@ -2298,6 +2370,7 @@ class _$ColumnAttributes implements ColumnAttributes {
         fractionallySizedBox,
     TResult? Function(ExpandedAttributes value)? expanded,
     TResult? Function(SpacerAttributes value)? spacer,
+    TResult? Function(ImageAttributes value)? image,
   }) {
     return column?.call(this);
   }
@@ -2318,6 +2391,7 @@ class _$ColumnAttributes implements ColumnAttributes {
         fractionallySizedBox,
     TResult Function(ExpandedAttributes value)? expanded,
     TResult Function(SpacerAttributes value)? spacer,
+    TResult Function(ImageAttributes value)? image,
     required TResult orElse(),
   }) {
     if (column != null) {
@@ -2516,6 +2590,9 @@ class _$RowAttributes implements RowAttributes {
             @UIXWidgetConverter() Widget child)
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
+    required TResult Function(dynamic key, String type, String path,
+            double? height, double? width, BoxFit? fit, ImageSource source)
+        image,
   }) {
     return row(key, type, children);
   }
@@ -2578,6 +2655,9 @@ class _$RowAttributes implements RowAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
+    TResult? Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
   }) {
     return row?.call(key, type, children);
   }
@@ -2637,6 +2717,9 @@ class _$RowAttributes implements RowAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
+    TResult Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
     required TResult orElse(),
   }) {
     if (row != null) {
@@ -2661,6 +2744,7 @@ class _$RowAttributes implements RowAttributes {
         fractionallySizedBox,
     required TResult Function(ExpandedAttributes value) expanded,
     required TResult Function(SpacerAttributes value) spacer,
+    required TResult Function(ImageAttributes value) image,
   }) {
     return row(this);
   }
@@ -2681,6 +2765,7 @@ class _$RowAttributes implements RowAttributes {
         fractionallySizedBox,
     TResult? Function(ExpandedAttributes value)? expanded,
     TResult? Function(SpacerAttributes value)? spacer,
+    TResult? Function(ImageAttributes value)? image,
   }) {
     return row?.call(this);
   }
@@ -2701,6 +2786,7 @@ class _$RowAttributes implements RowAttributes {
         fractionallySizedBox,
     TResult Function(ExpandedAttributes value)? expanded,
     TResult Function(SpacerAttributes value)? spacer,
+    TResult Function(ImageAttributes value)? image,
     required TResult orElse(),
   }) {
     if (row != null) {
@@ -2939,6 +3025,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             @UIXWidgetConverter() Widget child)
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
+    required TResult Function(dynamic key, String type, String path,
+            double? height, double? width, BoxFit? fit, ImageSource source)
+        image,
   }) {
     return elevatedButton(key, type, onPressed, onLongPress, child);
   }
@@ -3001,6 +3090,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
+    TResult? Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
   }) {
     return elevatedButton?.call(key, type, onPressed, onLongPress, child);
   }
@@ -3060,6 +3152,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
+    TResult Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
     required TResult orElse(),
   }) {
     if (elevatedButton != null) {
@@ -3084,6 +3179,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
         fractionallySizedBox,
     required TResult Function(ExpandedAttributes value) expanded,
     required TResult Function(SpacerAttributes value) spacer,
+    required TResult Function(ImageAttributes value) image,
   }) {
     return elevatedButton(this);
   }
@@ -3104,6 +3200,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
         fractionallySizedBox,
     TResult? Function(ExpandedAttributes value)? expanded,
     TResult? Function(SpacerAttributes value)? spacer,
+    TResult? Function(ImageAttributes value)? image,
   }) {
     return elevatedButton?.call(this);
   }
@@ -3124,6 +3221,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
         fractionallySizedBox,
     TResult Function(ExpandedAttributes value)? expanded,
     TResult Function(SpacerAttributes value)? spacer,
+    TResult Function(ImageAttributes value)? image,
     required TResult orElse(),
   }) {
     if (elevatedButton != null) {
@@ -3329,6 +3427,9 @@ class _$PaddingAttributes implements PaddingAttributes {
             @UIXWidgetConverter() Widget child)
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
+    required TResult Function(dynamic key, String type, String path,
+            double? height, double? width, BoxFit? fit, ImageSource source)
+        image,
   }) {
     return padding(key, type, this.padding, child);
   }
@@ -3391,6 +3492,9 @@ class _$PaddingAttributes implements PaddingAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
+    TResult? Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
   }) {
     return padding?.call(key, type, this.padding, child);
   }
@@ -3450,6 +3554,9 @@ class _$PaddingAttributes implements PaddingAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
+    TResult Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
     required TResult orElse(),
   }) {
     if (padding != null) {
@@ -3474,6 +3581,7 @@ class _$PaddingAttributes implements PaddingAttributes {
         fractionallySizedBox,
     required TResult Function(ExpandedAttributes value) expanded,
     required TResult Function(SpacerAttributes value) spacer,
+    required TResult Function(ImageAttributes value) image,
   }) {
     return padding(this);
   }
@@ -3494,6 +3602,7 @@ class _$PaddingAttributes implements PaddingAttributes {
         fractionallySizedBox,
     TResult? Function(ExpandedAttributes value)? expanded,
     TResult? Function(SpacerAttributes value)? spacer,
+    TResult? Function(ImageAttributes value)? image,
   }) {
     return padding?.call(this);
   }
@@ -3514,6 +3623,7 @@ class _$PaddingAttributes implements PaddingAttributes {
         fractionallySizedBox,
     TResult Function(ExpandedAttributes value)? expanded,
     TResult Function(SpacerAttributes value)? spacer,
+    TResult Function(ImageAttributes value)? image,
     required TResult orElse(),
   }) {
     if (padding != null) {
@@ -3722,6 +3832,9 @@ class _$AlignAttributes implements AlignAttributes {
             @UIXWidgetConverter() Widget child)
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
+    required TResult Function(dynamic key, String type, String path,
+            double? height, double? width, BoxFit? fit, ImageSource source)
+        image,
   }) {
     return align(key, type, alignment, child);
   }
@@ -3784,6 +3897,9 @@ class _$AlignAttributes implements AlignAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
+    TResult? Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
   }) {
     return align?.call(key, type, alignment, child);
   }
@@ -3843,6 +3959,9 @@ class _$AlignAttributes implements AlignAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
+    TResult Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
     required TResult orElse(),
   }) {
     if (align != null) {
@@ -3867,6 +3986,7 @@ class _$AlignAttributes implements AlignAttributes {
         fractionallySizedBox,
     required TResult Function(ExpandedAttributes value) expanded,
     required TResult Function(SpacerAttributes value) spacer,
+    required TResult Function(ImageAttributes value) image,
   }) {
     return align(this);
   }
@@ -3887,6 +4007,7 @@ class _$AlignAttributes implements AlignAttributes {
         fractionallySizedBox,
     TResult? Function(ExpandedAttributes value)? expanded,
     TResult? Function(SpacerAttributes value)? spacer,
+    TResult? Function(ImageAttributes value)? image,
   }) {
     return align?.call(this);
   }
@@ -3907,6 +4028,7 @@ class _$AlignAttributes implements AlignAttributes {
         fractionallySizedBox,
     TResult Function(ExpandedAttributes value)? expanded,
     TResult Function(SpacerAttributes value)? spacer,
+    TResult Function(ImageAttributes value)? image,
     required TResult orElse(),
   }) {
     if (align != null) {
@@ -4148,6 +4270,9 @@ class _$FractionallySizedBoxAttributes
             @UIXWidgetConverter() Widget child)
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
+    required TResult Function(dynamic key, String type, String path,
+            double? height, double? width, BoxFit? fit, ImageSource source)
+        image,
   }) {
     return fractionallySizedBox(
         key, type, widthFactor, heightFactor, alignment, child);
@@ -4211,6 +4336,9 @@ class _$FractionallySizedBoxAttributes
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
+    TResult? Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
   }) {
     return fractionallySizedBox?.call(
         key, type, widthFactor, heightFactor, alignment, child);
@@ -4271,6 +4399,9 @@ class _$FractionallySizedBoxAttributes
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
+    TResult Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
     required TResult orElse(),
   }) {
     if (fractionallySizedBox != null) {
@@ -4296,6 +4427,7 @@ class _$FractionallySizedBoxAttributes
         fractionallySizedBox,
     required TResult Function(ExpandedAttributes value) expanded,
     required TResult Function(SpacerAttributes value) spacer,
+    required TResult Function(ImageAttributes value) image,
   }) {
     return fractionallySizedBox(this);
   }
@@ -4316,6 +4448,7 @@ class _$FractionallySizedBoxAttributes
         fractionallySizedBox,
     TResult? Function(ExpandedAttributes value)? expanded,
     TResult? Function(SpacerAttributes value)? spacer,
+    TResult? Function(ImageAttributes value)? image,
   }) {
     return fractionallySizedBox?.call(this);
   }
@@ -4336,6 +4469,7 @@ class _$FractionallySizedBoxAttributes
         fractionallySizedBox,
     TResult Function(ExpandedAttributes value)? expanded,
     TResult Function(SpacerAttributes value)? spacer,
+    TResult Function(ImageAttributes value)? image,
     required TResult orElse(),
   }) {
     if (fractionallySizedBox != null) {
@@ -4543,6 +4677,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             @UIXWidgetConverter() Widget child)
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
+    required TResult Function(dynamic key, String type, String path,
+            double? height, double? width, BoxFit? fit, ImageSource source)
+        image,
   }) {
     return expanded(key, type, flex, child);
   }
@@ -4605,6 +4742,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
+    TResult? Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
   }) {
     return expanded?.call(key, type, flex, child);
   }
@@ -4664,6 +4804,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
+    TResult Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
     required TResult orElse(),
   }) {
     if (expanded != null) {
@@ -4688,6 +4831,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
         fractionallySizedBox,
     required TResult Function(ExpandedAttributes value) expanded,
     required TResult Function(SpacerAttributes value) spacer,
+    required TResult Function(ImageAttributes value) image,
   }) {
     return expanded(this);
   }
@@ -4708,6 +4852,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
         fractionallySizedBox,
     TResult? Function(ExpandedAttributes value)? expanded,
     TResult? Function(SpacerAttributes value)? spacer,
+    TResult? Function(ImageAttributes value)? image,
   }) {
     return expanded?.call(this);
   }
@@ -4728,6 +4873,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
         fractionallySizedBox,
     TResult Function(ExpandedAttributes value)? expanded,
     TResult Function(SpacerAttributes value)? spacer,
+    TResult Function(ImageAttributes value)? image,
     required TResult orElse(),
   }) {
     if (expanded != null) {
@@ -4915,6 +5061,9 @@ class _$SpacerAttributes implements SpacerAttributes {
             @UIXWidgetConverter() Widget child)
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
+    required TResult Function(dynamic key, String type, String path,
+            double? height, double? width, BoxFit? fit, ImageSource source)
+        image,
   }) {
     return spacer(key, type, flex);
   }
@@ -4977,6 +5126,9 @@ class _$SpacerAttributes implements SpacerAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
+    TResult? Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
   }) {
     return spacer?.call(key, type, flex);
   }
@@ -5036,6 +5188,9 @@ class _$SpacerAttributes implements SpacerAttributes {
             @UIXWidgetConverter() Widget child)?
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
+    TResult Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
     required TResult orElse(),
   }) {
     if (spacer != null) {
@@ -5060,6 +5215,7 @@ class _$SpacerAttributes implements SpacerAttributes {
         fractionallySizedBox,
     required TResult Function(ExpandedAttributes value) expanded,
     required TResult Function(SpacerAttributes value) spacer,
+    required TResult Function(ImageAttributes value) image,
   }) {
     return spacer(this);
   }
@@ -5080,6 +5236,7 @@ class _$SpacerAttributes implements SpacerAttributes {
         fractionallySizedBox,
     TResult? Function(ExpandedAttributes value)? expanded,
     TResult? Function(SpacerAttributes value)? spacer,
+    TResult? Function(ImageAttributes value)? image,
   }) {
     return spacer?.call(this);
   }
@@ -5100,6 +5257,7 @@ class _$SpacerAttributes implements SpacerAttributes {
         fractionallySizedBox,
     TResult Function(ExpandedAttributes value)? expanded,
     TResult Function(SpacerAttributes value)? spacer,
+    TResult Function(ImageAttributes value)? image,
     required TResult orElse(),
   }) {
     if (spacer != null) {
@@ -5133,5 +5291,446 @@ abstract class SpacerAttributes implements UIXAttributes {
   @override
   @JsonKey(ignore: true)
   _$$SpacerAttributesCopyWith<_$SpacerAttributes> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ImageAttributesCopyWith<$Res>
+    implements $UIXAttributesCopyWith<$Res> {
+  factory _$$ImageAttributesCopyWith(
+          _$ImageAttributes value, $Res Function(_$ImageAttributes) then) =
+      __$$ImageAttributesCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {dynamic key,
+      String type,
+      String path,
+      double? height,
+      double? width,
+      BoxFit? fit,
+      ImageSource source});
+}
+
+/// @nodoc
+class __$$ImageAttributesCopyWithImpl<$Res>
+    extends _$UIXAttributesCopyWithImpl<$Res, _$ImageAttributes>
+    implements _$$ImageAttributesCopyWith<$Res> {
+  __$$ImageAttributesCopyWithImpl(
+      _$ImageAttributes _value, $Res Function(_$ImageAttributes) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? type = null,
+    Object? path = null,
+    Object? height = freezed,
+    Object? width = freezed,
+    Object? fit = freezed,
+    Object? source = null,
+  }) {
+    return _then(_$ImageAttributes(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      path: null == path
+          ? _value.path
+          : path // ignore: cast_nullable_to_non_nullable
+              as String,
+      height: freezed == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double?,
+      width: freezed == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fit: freezed == fit
+          ? _value.fit
+          : fit // ignore: cast_nullable_to_non_nullable
+              as BoxFit?,
+      source: null == source
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as ImageSource,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ImageAttributes implements ImageAttributes {
+  const _$ImageAttributes(
+      {this.key,
+      required this.type,
+      required this.path,
+      this.height,
+      this.width,
+      this.fit,
+      this.source = ImageSource.network});
+
+  factory _$ImageAttributes.fromJson(Map<String, dynamic> json) =>
+      _$$ImageAttributesFromJson(json);
+
+  @override
+  final dynamic key;
+  @override
+  final String type;
+  @override
+  final String path;
+  @override
+  final double? height;
+  @override
+  final double? width;
+  @override
+  final BoxFit? fit;
+  @override
+  @JsonKey()
+  final ImageSource source;
+
+  @override
+  String toString() {
+    return 'UIXAttributes.image(key: $key, type: $type, path: $path, height: $height, width: $width, fit: $fit, source: $source)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ImageAttributes &&
+            const DeepCollectionEquality().equals(other.key, key) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.path, path) || other.path == path) &&
+            (identical(other.height, height) || other.height == height) &&
+            (identical(other.width, width) || other.width == width) &&
+            (identical(other.fit, fit) || other.fit == fit) &&
+            (identical(other.source, source) || other.source == source));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(key),
+      type,
+      path,
+      height,
+      width,
+      fit,
+      source);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ImageAttributesCopyWith<_$ImageAttributes> get copyWith =>
+      __$$ImageAttributesCopyWithImpl<_$ImageAttributes>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)
+        page,
+    required TResult Function(dynamic key, String type, double? height,
+            double? width, @UIXWidgetConverter() Widget? child)
+        sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXWidgetConverter() Widget? child)
+        container,
+    required TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)
+        text,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        column,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        row,
+    required TResult Function(
+            dynamic key,
+            String type,
+            List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress,
+            @UIXWidgetConverter() Widget? child)
+        elevatedButton,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)
+        padding,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        fractionallySizedBox,
+    required TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)
+        expanded,
+    required TResult Function(dynamic key, String type, int flex) spacer,
+    required TResult Function(dynamic key, String type, String path,
+            double? height, double? width, BoxFit? fit, ImageSource source)
+        image,
+  }) {
+    return image(key, type, path, height, width, fit, source);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
+    TResult? Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult? Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult? Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult? Function(dynamic key, String type, int flex)? spacer,
+    TResult? Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
+  }) {
+    return image?.call(key, type, path, height, width, fit, source);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
+    TResult Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult Function(dynamic key, String type, int flex)? spacer,
+    TResult Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, ImageSource source)?
+        image,
+    required TResult orElse(),
+  }) {
+    if (image != null) {
+      return image(key, type, path, height, width, fit, source);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PageAttributes value) page,
+    required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ContainerAttributes value) container,
+    required TResult Function(TextAttributes value) text,
+    required TResult Function(ColumnAttributes value) column,
+    required TResult Function(RowAttributes value) row,
+    required TResult Function(ElevatedButtonAttributes value) elevatedButton,
+    required TResult Function(PaddingAttributes value) padding,
+    required TResult Function(AlignAttributes value) align,
+    required TResult Function(FractionallySizedBoxAttributes value)
+        fractionallySizedBox,
+    required TResult Function(ExpandedAttributes value) expanded,
+    required TResult Function(SpacerAttributes value) spacer,
+    required TResult Function(ImageAttributes value) image,
+  }) {
+    return image(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PageAttributes value)? page,
+    TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ContainerAttributes value)? container,
+    TResult? Function(TextAttributes value)? text,
+    TResult? Function(ColumnAttributes value)? column,
+    TResult? Function(RowAttributes value)? row,
+    TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult? Function(PaddingAttributes value)? padding,
+    TResult? Function(AlignAttributes value)? align,
+    TResult? Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult? Function(ExpandedAttributes value)? expanded,
+    TResult? Function(SpacerAttributes value)? spacer,
+    TResult? Function(ImageAttributes value)? image,
+  }) {
+    return image?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PageAttributes value)? page,
+    TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ContainerAttributes value)? container,
+    TResult Function(TextAttributes value)? text,
+    TResult Function(ColumnAttributes value)? column,
+    TResult Function(RowAttributes value)? row,
+    TResult Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult Function(PaddingAttributes value)? padding,
+    TResult Function(AlignAttributes value)? align,
+    TResult Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult Function(ExpandedAttributes value)? expanded,
+    TResult Function(SpacerAttributes value)? spacer,
+    TResult Function(ImageAttributes value)? image,
+    required TResult orElse(),
+  }) {
+    if (image != null) {
+      return image(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ImageAttributesToJson(
+      this,
+    );
+  }
+}
+
+abstract class ImageAttributes implements UIXAttributes {
+  const factory ImageAttributes(
+      {final dynamic key,
+      required final String type,
+      required final String path,
+      final double? height,
+      final double? width,
+      final BoxFit? fit,
+      final ImageSource source}) = _$ImageAttributes;
+
+  factory ImageAttributes.fromJson(Map<String, dynamic> json) =
+      _$ImageAttributes.fromJson;
+
+  @override
+  dynamic get key;
+  @override
+  String get type;
+  String get path;
+  double? get height;
+  double? get width;
+  BoxFit? get fit;
+  ImageSource get source;
+  @override
+  @JsonKey(ignore: true)
+  _$$ImageAttributesCopyWith<_$ImageAttributes> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -264,3 +264,42 @@ Map<String, dynamic> _$$SpacerAttributesToJson(_$SpacerAttributes instance) =>
       'type': instance.type,
       'flex': instance.flex,
     };
+
+_$ImageAttributes _$$ImageAttributesFromJson(Map<String, dynamic> json) =>
+    _$ImageAttributes(
+      key: json['key'],
+      type: json['type'] as String,
+      path: json['path'] as String,
+      height: (json['height'] as num?)?.toDouble(),
+      width: (json['width'] as num?)?.toDouble(),
+      fit: $enumDecodeNullable(_$BoxFitEnumMap, json['fit']),
+      source: $enumDecodeNullable(_$ImageSourceEnumMap, json['source']) ??
+          ImageSource.network,
+    );
+
+Map<String, dynamic> _$$ImageAttributesToJson(_$ImageAttributes instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'type': instance.type,
+      'path': instance.path,
+      'height': instance.height,
+      'width': instance.width,
+      'fit': _$BoxFitEnumMap[instance.fit],
+      'source': _$ImageSourceEnumMap[instance.source]!,
+    };
+
+const _$BoxFitEnumMap = {
+  BoxFit.fill: 'fill',
+  BoxFit.contain: 'contain',
+  BoxFit.cover: 'cover',
+  BoxFit.fitWidth: 'fitWidth',
+  BoxFit.fitHeight: 'fitHeight',
+  BoxFit.none: 'none',
+  BoxFit.scaleDown: 'scaleDown',
+};
+
+const _$ImageSourceEnumMap = {
+  ImageSource.network: 'network',
+  ImageSource.assets: 'assets',
+  ImageSource.file: 'file',
+};
