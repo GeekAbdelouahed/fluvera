@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:uix/src/attributes/action/action.dart';
 import 'package:uix/src/attributes/text_style.dart/text_style.dart';
-import 'package:uix/uix.dart';
+import 'package:uix/src/converters/converters.dart';
+import 'package:uix/src/enums/enums.dart';
 
 part 'uix.freezed.dart';
 part 'uix.g.dart';
@@ -109,7 +110,7 @@ abstract class UIXAttributes with _$UIXAttributes {
     double? height,
     double? width,
     BoxFit? fit,
-    @Default(ImageSource.network) ImageSource source,
+    @Default(UIXImageSource.network) UIXImageSource source,
   }) = ImageAttributes;
 
   factory UIXAttributes.fromJson(Map<String, dynamic> json) =>

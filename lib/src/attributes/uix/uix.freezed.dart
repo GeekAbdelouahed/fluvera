@@ -115,7 +115,7 @@ mixin _$UIXAttributes {
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, ImageSource source)
+            double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
   }) =>
       throw _privateConstructorUsedError;
@@ -177,7 +177,7 @@ mixin _$UIXAttributes {
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
   }) =>
       throw _privateConstructorUsedError;
@@ -236,7 +236,7 @@ mixin _$UIXAttributes {
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
     required TResult orElse(),
   }) =>
@@ -518,7 +518,7 @@ class _$PageAttributes implements PageAttributes {
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, ImageSource source)
+            double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
   }) {
     return page(key, type, attributes, child);
@@ -583,7 +583,7 @@ class _$PageAttributes implements PageAttributes {
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
   }) {
     return page?.call(key, type, attributes, child);
@@ -645,7 +645,7 @@ class _$PageAttributes implements PageAttributes {
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
     required TResult orElse(),
   }) {
@@ -928,7 +928,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, ImageSource source)
+            double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
   }) {
     return sizedBox(key, type, height, width, child);
@@ -993,7 +993,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
   }) {
     return sizedBox?.call(key, type, height, width, child);
@@ -1055,7 +1055,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
     required TResult orElse(),
   }) {
@@ -1382,7 +1382,7 @@ class _$ContainerAttributes implements ContainerAttributes {
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, ImageSource source)
+            double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
   }) {
     return container(
@@ -1448,7 +1448,7 @@ class _$ContainerAttributes implements ContainerAttributes {
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
   }) {
     return container?.call(
@@ -1511,7 +1511,7 @@ class _$ContainerAttributes implements ContainerAttributes {
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
     required TResult orElse(),
   }) {
@@ -1801,7 +1801,7 @@ class _$TextAttributes implements TextAttributes {
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, ImageSource source)
+            double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
   }) {
     return text(key, type, this.text, style);
@@ -1866,7 +1866,7 @@ class _$TextAttributes implements TextAttributes {
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
   }) {
     return text?.call(key, type, this.text, style);
@@ -1928,7 +1928,7 @@ class _$TextAttributes implements TextAttributes {
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
     required TResult orElse(),
   }) {
@@ -2196,7 +2196,7 @@ class _$ColumnAttributes implements ColumnAttributes {
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, ImageSource source)
+            double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
   }) {
     return column(key, type, children);
@@ -2261,7 +2261,7 @@ class _$ColumnAttributes implements ColumnAttributes {
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
   }) {
     return column?.call(key, type, children);
@@ -2323,7 +2323,7 @@ class _$ColumnAttributes implements ColumnAttributes {
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
     required TResult orElse(),
   }) {
@@ -2591,7 +2591,7 @@ class _$RowAttributes implements RowAttributes {
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, ImageSource source)
+            double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
   }) {
     return row(key, type, children);
@@ -2656,7 +2656,7 @@ class _$RowAttributes implements RowAttributes {
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
   }) {
     return row?.call(key, type, children);
@@ -2718,7 +2718,7 @@ class _$RowAttributes implements RowAttributes {
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
     required TResult orElse(),
   }) {
@@ -3026,7 +3026,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, ImageSource source)
+            double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
   }) {
     return elevatedButton(key, type, onPressed, onLongPress, child);
@@ -3091,7 +3091,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
   }) {
     return elevatedButton?.call(key, type, onPressed, onLongPress, child);
@@ -3153,7 +3153,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
     required TResult orElse(),
   }) {
@@ -3428,7 +3428,7 @@ class _$PaddingAttributes implements PaddingAttributes {
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, ImageSource source)
+            double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
   }) {
     return padding(key, type, this.padding, child);
@@ -3493,7 +3493,7 @@ class _$PaddingAttributes implements PaddingAttributes {
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
   }) {
     return padding?.call(key, type, this.padding, child);
@@ -3555,7 +3555,7 @@ class _$PaddingAttributes implements PaddingAttributes {
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
     required TResult orElse(),
   }) {
@@ -3833,7 +3833,7 @@ class _$AlignAttributes implements AlignAttributes {
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, ImageSource source)
+            double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
   }) {
     return align(key, type, alignment, child);
@@ -3898,7 +3898,7 @@ class _$AlignAttributes implements AlignAttributes {
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
   }) {
     return align?.call(key, type, alignment, child);
@@ -3960,7 +3960,7 @@ class _$AlignAttributes implements AlignAttributes {
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
     required TResult orElse(),
   }) {
@@ -4271,7 +4271,7 @@ class _$FractionallySizedBoxAttributes
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, ImageSource source)
+            double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
   }) {
     return fractionallySizedBox(
@@ -4337,7 +4337,7 @@ class _$FractionallySizedBoxAttributes
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
   }) {
     return fractionallySizedBox?.call(
@@ -4400,7 +4400,7 @@ class _$FractionallySizedBoxAttributes
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
     required TResult orElse(),
   }) {
@@ -4678,7 +4678,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, ImageSource source)
+            double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
   }) {
     return expanded(key, type, flex, child);
@@ -4743,7 +4743,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
   }) {
     return expanded?.call(key, type, flex, child);
@@ -4805,7 +4805,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
     required TResult orElse(),
   }) {
@@ -5062,7 +5062,7 @@ class _$SpacerAttributes implements SpacerAttributes {
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, ImageSource source)
+            double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
   }) {
     return spacer(key, type, flex);
@@ -5127,7 +5127,7 @@ class _$SpacerAttributes implements SpacerAttributes {
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
   }) {
     return spacer?.call(key, type, flex);
@@ -5189,7 +5189,7 @@ class _$SpacerAttributes implements SpacerAttributes {
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
     required TResult orElse(),
   }) {
@@ -5309,7 +5309,7 @@ abstract class _$$ImageAttributesCopyWith<$Res>
       double? height,
       double? width,
       BoxFit? fit,
-      ImageSource source});
+      UIXImageSource source});
 }
 
 /// @nodoc
@@ -5359,7 +5359,7 @@ class __$$ImageAttributesCopyWithImpl<$Res>
       source: null == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as ImageSource,
+              as UIXImageSource,
     ));
   }
 }
@@ -5374,7 +5374,7 @@ class _$ImageAttributes implements ImageAttributes {
       this.height,
       this.width,
       this.fit,
-      this.source = ImageSource.network});
+      this.source = UIXImageSource.network});
 
   factory _$ImageAttributes.fromJson(Map<String, dynamic> json) =>
       _$$ImageAttributesFromJson(json);
@@ -5393,7 +5393,7 @@ class _$ImageAttributes implements ImageAttributes {
   final BoxFit? fit;
   @override
   @JsonKey()
-  final ImageSource source;
+  final UIXImageSource source;
 
   @override
   String toString() {
@@ -5495,7 +5495,7 @@ class _$ImageAttributes implements ImageAttributes {
         expanded,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, ImageSource source)
+            double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
   }) {
     return image(key, type, path, height, width, fit, source);
@@ -5560,7 +5560,7 @@ class _$ImageAttributes implements ImageAttributes {
         expanded,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
   }) {
     return image?.call(key, type, path, height, width, fit, source);
@@ -5622,7 +5622,7 @@ class _$ImageAttributes implements ImageAttributes {
         expanded,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, ImageSource source)?
+            double? width, BoxFit? fit, UIXImageSource source)?
         image,
     required TResult orElse(),
   }) {
@@ -5715,7 +5715,7 @@ abstract class ImageAttributes implements UIXAttributes {
       final double? height,
       final double? width,
       final BoxFit? fit,
-      final ImageSource source}) = _$ImageAttributes;
+      final UIXImageSource source}) = _$ImageAttributes;
 
   factory ImageAttributes.fromJson(Map<String, dynamic> json) =
       _$ImageAttributes.fromJson;
@@ -5728,7 +5728,7 @@ abstract class ImageAttributes implements UIXAttributes {
   double? get height;
   double? get width;
   BoxFit? get fit;
-  ImageSource get source;
+  UIXImageSource get source;
   @override
   @JsonKey(ignore: true)
   _$$ImageAttributesCopyWith<_$ImageAttributes> get copyWith =>

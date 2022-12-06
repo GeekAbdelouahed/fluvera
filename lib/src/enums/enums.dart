@@ -1,4 +1,4 @@
-enum ImageSource {
+enum UIXImageSource {
   network,
   assets,
   file,

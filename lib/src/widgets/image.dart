@@ -16,9 +16,9 @@ class UIXImage extends UIX<ImageAttributes> {
 
   ImageProvider _source() {
     switch (attributes.source) {
-      case ImageSource.assets:
+      case UIXImageSource.assets:
         return AssetImage(attributes.path);
-      case ImageSource.file:
+      case UIXImageSource.file:
         return FileImage(File(attributes.path));
       default:
         return NetworkImage(attributes.path);

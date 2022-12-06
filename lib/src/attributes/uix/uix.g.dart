@@ -273,8 +273,8 @@ _$ImageAttributes _$$ImageAttributesFromJson(Map<String, dynamic> json) =>
       height: (json['height'] as num?)?.toDouble(),
       width: (json['width'] as num?)?.toDouble(),
       fit: $enumDecodeNullable(_$BoxFitEnumMap, json['fit']),
-      source: $enumDecodeNullable(_$ImageSourceEnumMap, json['source']) ??
-          ImageSource.network,
+      source: $enumDecodeNullable(_$UIXImageSourceEnumMap, json['source']) ??
+          UIXImageSource.network,
     );
 
 Map<String, dynamic> _$$ImageAttributesToJson(_$ImageAttributes instance) =>
@@ -285,7 +285,7 @@ Map<String, dynamic> _$$ImageAttributesToJson(_$ImageAttributes instance) =>
       'height': instance.height,
       'width': instance.width,
       'fit': _$BoxFitEnumMap[instance.fit],
-      'source': _$ImageSourceEnumMap[instance.source]!,
+      'source': _$UIXImageSourceEnumMap[instance.source]!,
     };
 
 const _$BoxFitEnumMap = {
@@ -298,8 +298,8 @@ const _$BoxFitEnumMap = {
   BoxFit.scaleDown: 'scaleDown',
 };
 
-const _$ImageSourceEnumMap = {
-  ImageSource.network: 'network',
-  ImageSource.assets: 'assets',
-  ImageSource.file: 'file',
+const _$UIXImageSourceEnumMap = {
+  UIXImageSource.network: 'network',
+  UIXImageSource.assets: 'assets',
+  UIXImageSource.file: 'file',
 };
