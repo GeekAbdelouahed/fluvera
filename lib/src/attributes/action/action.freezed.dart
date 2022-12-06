@@ -16,16 +16,16 @@ final _privateConstructorUsedError = UnsupportedError(
 
 UIXAction _$UIXActionFromJson(Map<String, dynamic> json) {
   switch (json['type']) {
-    case 'Push':
-      return PushAction.fromJson(json);
-    case 'Pop':
-      return PopAction.fromJson(json);
+    case 'PushRoute':
+      return PushRouteAction.fromJson(json);
+    case 'PopRoute':
+      return PopRouteAction.fromJson(json);
     case 'ShowDialog':
       return ShowDialogAction.fromJson(json);
     case 'ShowBottomSheet':
       return ShowBottomSheetAction.fromJson(json);
-    case 'UpdateValue':
-      return UpdateValueAction.fromJson(json);
+    case 'UpdateAttribute':
+      return UpdateAttributeAction.fromJson(json);
 
     default:
       throw CheckedFromJsonException(
@@ -41,10 +41,10 @@ mixin _$UIXAction {
   TResult when<TResult extends Object?>({
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
-        push,
+        pushRoute,
     required TResult Function(
             String type, bool synchronized, Map<String, dynamic>? queries)
-        pop,
+        popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
@@ -58,17 +58,17 @@ mixin _$UIXAction {
         showBottomSheet,
     required TResult Function(
             String type, bool synchronized, String key, String? value)
-        updateValue,
+        updateAttribute,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
-        push,
+        pushRoute,
     TResult? Function(
             String type, bool synchronized, Map<String, dynamic>? queries)?
-        pop,
+        popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
@@ -82,17 +82,17 @@ mixin _$UIXAction {
         showBottomSheet,
     TResult? Function(
             String type, bool synchronized, String key, String? value)?
-        updateValue,
+        updateAttribute,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
-        push,
+        pushRoute,
     TResult Function(
             String type, bool synchronized, Map<String, dynamic>? queries)?
-        pop,
+        popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
@@ -105,35 +105,35 @@ mixin _$UIXAction {
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(String type, bool synchronized, String key, String? value)?
-        updateValue,
+        updateAttribute,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(PushAction value) push,
-    required TResult Function(PopAction value) pop,
+    required TResult Function(PushRouteAction value) pushRoute,
+    required TResult Function(PopRouteAction value) popRoute,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
-    required TResult Function(UpdateValueAction value) updateValue,
+    required TResult Function(UpdateAttributeAction value) updateAttribute,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PushAction value)? push,
-    TResult? Function(PopAction value)? pop,
+    TResult? Function(PushRouteAction value)? pushRoute,
+    TResult? Function(PopRouteAction value)? popRoute,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
-    TResult? Function(UpdateValueAction value)? updateValue,
+    TResult? Function(UpdateAttributeAction value)? updateAttribute,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(PushAction value)? push,
-    TResult Function(PopAction value)? pop,
+    TResult Function(PushRouteAction value)? pushRoute,
+    TResult Function(PopRouteAction value)? popRoute,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
-    TResult Function(UpdateValueAction value)? updateValue,
+    TResult Function(UpdateAttributeAction value)? updateAttribute,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -181,10 +181,11 @@ class _$UIXActionCopyWithImpl<$Res, $Val extends UIXAction>
 }
 
 /// @nodoc
-abstract class _$$PushActionCopyWith<$Res> implements $UIXActionCopyWith<$Res> {
-  factory _$$PushActionCopyWith(
-          _$PushAction value, $Res Function(_$PushAction) then) =
-      __$$PushActionCopyWithImpl<$Res>;
+abstract class _$$PushRouteActionCopyWith<$Res>
+    implements $UIXActionCopyWith<$Res> {
+  factory _$$PushRouteActionCopyWith(
+          _$PushRouteAction value, $Res Function(_$PushRouteAction) then) =
+      __$$PushRouteActionCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -195,11 +196,11 @@ abstract class _$$PushActionCopyWith<$Res> implements $UIXActionCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$PushActionCopyWithImpl<$Res>
-    extends _$UIXActionCopyWithImpl<$Res, _$PushAction>
-    implements _$$PushActionCopyWith<$Res> {
-  __$$PushActionCopyWithImpl(
-      _$PushAction _value, $Res Function(_$PushAction) _then)
+class __$$PushRouteActionCopyWithImpl<$Res>
+    extends _$UIXActionCopyWithImpl<$Res, _$PushRouteAction>
+    implements _$$PushRouteActionCopyWith<$Res> {
+  __$$PushRouteActionCopyWithImpl(
+      _$PushRouteAction _value, $Res Function(_$PushRouteAction) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -210,7 +211,7 @@ class __$$PushActionCopyWithImpl<$Res>
     Object? routeName = null,
     Object? queries = freezed,
   }) {
-    return _then(_$PushAction(
+    return _then(_$PushRouteAction(
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -233,16 +234,16 @@ class __$$PushActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$PushAction implements PushAction {
-  const _$PushAction(
+class _$PushRouteAction implements PushRouteAction {
+  const _$PushRouteAction(
       {required this.type,
       this.synchronized = false,
       required this.routeName,
       final Map<String, dynamic>? queries})
       : _queries = queries;
 
-  factory _$PushAction.fromJson(Map<String, dynamic> json) =>
-      _$$PushActionFromJson(json);
+  factory _$PushRouteAction.fromJson(Map<String, dynamic> json) =>
+      _$$PushRouteActionFromJson(json);
 
   @override
   final String type;
@@ -263,14 +264,14 @@ class _$PushAction implements PushAction {
 
   @override
   String toString() {
-    return 'UIXAction.push(type: $type, synchronized: $synchronized, routeName: $routeName, queries: $queries)';
+    return 'UIXAction.pushRoute(type: $type, synchronized: $synchronized, routeName: $routeName, queries: $queries)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PushAction &&
+            other is _$PushRouteAction &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.synchronized, synchronized) ||
                 other.synchronized == synchronized) &&
@@ -287,18 +288,18 @@ class _$PushAction implements PushAction {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PushActionCopyWith<_$PushAction> get copyWith =>
-      __$$PushActionCopyWithImpl<_$PushAction>(this, _$identity);
+  _$$PushRouteActionCopyWith<_$PushRouteAction> get copyWith =>
+      __$$PushRouteActionCopyWithImpl<_$PushRouteAction>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
-        push,
+        pushRoute,
     required TResult Function(
             String type, bool synchronized, Map<String, dynamic>? queries)
-        pop,
+        popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
@@ -312,9 +313,9 @@ class _$PushAction implements PushAction {
         showBottomSheet,
     required TResult Function(
             String type, bool synchronized, String key, String? value)
-        updateValue,
+        updateAttribute,
   }) {
-    return push(type, synchronized, routeName, queries);
+    return pushRoute(type, synchronized, routeName, queries);
   }
 
   @override
@@ -322,10 +323,10 @@ class _$PushAction implements PushAction {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
-        push,
+        pushRoute,
     TResult? Function(
             String type, bool synchronized, Map<String, dynamic>? queries)?
-        pop,
+        popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
@@ -339,9 +340,9 @@ class _$PushAction implements PushAction {
         showBottomSheet,
     TResult? Function(
             String type, bool synchronized, String key, String? value)?
-        updateValue,
+        updateAttribute,
   }) {
-    return push?.call(type, synchronized, routeName, queries);
+    return pushRoute?.call(type, synchronized, routeName, queries);
   }
 
   @override
@@ -349,10 +350,10 @@ class _$PushAction implements PushAction {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
-        push,
+        pushRoute,
     TResult Function(
             String type, bool synchronized, Map<String, dynamic>? queries)?
-        pop,
+        popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
@@ -365,11 +366,11 @@ class _$PushAction implements PushAction {
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(String type, bool synchronized, String key, String? value)?
-        updateValue,
+        updateAttribute,
     required TResult orElse(),
   }) {
-    if (push != null) {
-      return push(type, synchronized, routeName, queries);
+    if (pushRoute != null) {
+      return pushRoute(type, synchronized, routeName, queries);
     }
     return orElse();
   }
@@ -377,60 +378,60 @@ class _$PushAction implements PushAction {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(PushAction value) push,
-    required TResult Function(PopAction value) pop,
+    required TResult Function(PushRouteAction value) pushRoute,
+    required TResult Function(PopRouteAction value) popRoute,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
-    required TResult Function(UpdateValueAction value) updateValue,
+    required TResult Function(UpdateAttributeAction value) updateAttribute,
   }) {
-    return push(this);
+    return pushRoute(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PushAction value)? push,
-    TResult? Function(PopAction value)? pop,
+    TResult? Function(PushRouteAction value)? pushRoute,
+    TResult? Function(PopRouteAction value)? popRoute,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
-    TResult? Function(UpdateValueAction value)? updateValue,
+    TResult? Function(UpdateAttributeAction value)? updateAttribute,
   }) {
-    return push?.call(this);
+    return pushRoute?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(PushAction value)? push,
-    TResult Function(PopAction value)? pop,
+    TResult Function(PushRouteAction value)? pushRoute,
+    TResult Function(PopRouteAction value)? popRoute,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
-    TResult Function(UpdateValueAction value)? updateValue,
+    TResult Function(UpdateAttributeAction value)? updateAttribute,
     required TResult orElse(),
   }) {
-    if (push != null) {
-      return push(this);
+    if (pushRoute != null) {
+      return pushRoute(this);
     }
     return orElse();
   }
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PushActionToJson(
+    return _$$PushRouteActionToJson(
       this,
     );
   }
 }
 
-abstract class PushAction implements UIXAction {
-  const factory PushAction(
+abstract class PushRouteAction implements UIXAction {
+  const factory PushRouteAction(
       {required final String type,
       final bool synchronized,
       required final String routeName,
-      final Map<String, dynamic>? queries}) = _$PushAction;
+      final Map<String, dynamic>? queries}) = _$PushRouteAction;
 
-  factory PushAction.fromJson(Map<String, dynamic> json) =
-      _$PushAction.fromJson;
+  factory PushRouteAction.fromJson(Map<String, dynamic> json) =
+      _$PushRouteAction.fromJson;
 
   @override
   String get type;
@@ -440,26 +441,27 @@ abstract class PushAction implements UIXAction {
   Map<String, dynamic>? get queries;
   @override
   @JsonKey(ignore: true)
-  _$$PushActionCopyWith<_$PushAction> get copyWith =>
+  _$$PushRouteActionCopyWith<_$PushRouteAction> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$PopActionCopyWith<$Res> implements $UIXActionCopyWith<$Res> {
-  factory _$$PopActionCopyWith(
-          _$PopAction value, $Res Function(_$PopAction) then) =
-      __$$PopActionCopyWithImpl<$Res>;
+abstract class _$$PopRouteActionCopyWith<$Res>
+    implements $UIXActionCopyWith<$Res> {
+  factory _$$PopRouteActionCopyWith(
+          _$PopRouteAction value, $Res Function(_$PopRouteAction) then) =
+      __$$PopRouteActionCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String type, bool synchronized, Map<String, dynamic>? queries});
 }
 
 /// @nodoc
-class __$$PopActionCopyWithImpl<$Res>
-    extends _$UIXActionCopyWithImpl<$Res, _$PopAction>
-    implements _$$PopActionCopyWith<$Res> {
-  __$$PopActionCopyWithImpl(
-      _$PopAction _value, $Res Function(_$PopAction) _then)
+class __$$PopRouteActionCopyWithImpl<$Res>
+    extends _$UIXActionCopyWithImpl<$Res, _$PopRouteAction>
+    implements _$$PopRouteActionCopyWith<$Res> {
+  __$$PopRouteActionCopyWithImpl(
+      _$PopRouteAction _value, $Res Function(_$PopRouteAction) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -469,7 +471,7 @@ class __$$PopActionCopyWithImpl<$Res>
     Object? synchronized = null,
     Object? queries = freezed,
   }) {
-    return _then(_$PopAction(
+    return _then(_$PopRouteAction(
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -488,15 +490,15 @@ class __$$PopActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$PopAction implements PopAction {
-  const _$PopAction(
+class _$PopRouteAction implements PopRouteAction {
+  const _$PopRouteAction(
       {required this.type,
       this.synchronized = false,
       final Map<String, dynamic>? queries})
       : _queries = queries;
 
-  factory _$PopAction.fromJson(Map<String, dynamic> json) =>
-      _$$PopActionFromJson(json);
+  factory _$PopRouteAction.fromJson(Map<String, dynamic> json) =>
+      _$$PopRouteActionFromJson(json);
 
   @override
   final String type;
@@ -515,14 +517,14 @@ class _$PopAction implements PopAction {
 
   @override
   String toString() {
-    return 'UIXAction.pop(type: $type, synchronized: $synchronized, queries: $queries)';
+    return 'UIXAction.popRoute(type: $type, synchronized: $synchronized, queries: $queries)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PopAction &&
+            other is _$PopRouteAction &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.synchronized, synchronized) ||
                 other.synchronized == synchronized) &&
@@ -537,18 +539,18 @@ class _$PopAction implements PopAction {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PopActionCopyWith<_$PopAction> get copyWith =>
-      __$$PopActionCopyWithImpl<_$PopAction>(this, _$identity);
+  _$$PopRouteActionCopyWith<_$PopRouteAction> get copyWith =>
+      __$$PopRouteActionCopyWithImpl<_$PopRouteAction>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
-        push,
+        pushRoute,
     required TResult Function(
             String type, bool synchronized, Map<String, dynamic>? queries)
-        pop,
+        popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
@@ -562,9 +564,9 @@ class _$PopAction implements PopAction {
         showBottomSheet,
     required TResult Function(
             String type, bool synchronized, String key, String? value)
-        updateValue,
+        updateAttribute,
   }) {
-    return pop(type, synchronized, queries);
+    return popRoute(type, synchronized, queries);
   }
 
   @override
@@ -572,10 +574,10 @@ class _$PopAction implements PopAction {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
-        push,
+        pushRoute,
     TResult? Function(
             String type, bool synchronized, Map<String, dynamic>? queries)?
-        pop,
+        popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
@@ -589,9 +591,9 @@ class _$PopAction implements PopAction {
         showBottomSheet,
     TResult? Function(
             String type, bool synchronized, String key, String? value)?
-        updateValue,
+        updateAttribute,
   }) {
-    return pop?.call(type, synchronized, queries);
+    return popRoute?.call(type, synchronized, queries);
   }
 
   @override
@@ -599,10 +601,10 @@ class _$PopAction implements PopAction {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
-        push,
+        pushRoute,
     TResult Function(
             String type, bool synchronized, Map<String, dynamic>? queries)?
-        pop,
+        popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
@@ -615,11 +617,11 @@ class _$PopAction implements PopAction {
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(String type, bool synchronized, String key, String? value)?
-        updateValue,
+        updateAttribute,
     required TResult orElse(),
   }) {
-    if (pop != null) {
-      return pop(type, synchronized, queries);
+    if (popRoute != null) {
+      return popRoute(type, synchronized, queries);
     }
     return orElse();
   }
@@ -627,58 +629,59 @@ class _$PopAction implements PopAction {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(PushAction value) push,
-    required TResult Function(PopAction value) pop,
+    required TResult Function(PushRouteAction value) pushRoute,
+    required TResult Function(PopRouteAction value) popRoute,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
-    required TResult Function(UpdateValueAction value) updateValue,
+    required TResult Function(UpdateAttributeAction value) updateAttribute,
   }) {
-    return pop(this);
+    return popRoute(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PushAction value)? push,
-    TResult? Function(PopAction value)? pop,
+    TResult? Function(PushRouteAction value)? pushRoute,
+    TResult? Function(PopRouteAction value)? popRoute,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
-    TResult? Function(UpdateValueAction value)? updateValue,
+    TResult? Function(UpdateAttributeAction value)? updateAttribute,
   }) {
-    return pop?.call(this);
+    return popRoute?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(PushAction value)? push,
-    TResult Function(PopAction value)? pop,
+    TResult Function(PushRouteAction value)? pushRoute,
+    TResult Function(PopRouteAction value)? popRoute,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
-    TResult Function(UpdateValueAction value)? updateValue,
+    TResult Function(UpdateAttributeAction value)? updateAttribute,
     required TResult orElse(),
   }) {
-    if (pop != null) {
-      return pop(this);
+    if (popRoute != null) {
+      return popRoute(this);
     }
     return orElse();
   }
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PopActionToJson(
+    return _$$PopRouteActionToJson(
       this,
     );
   }
 }
 
-abstract class PopAction implements UIXAction {
-  const factory PopAction(
+abstract class PopRouteAction implements UIXAction {
+  const factory PopRouteAction(
       {required final String type,
       final bool synchronized,
-      final Map<String, dynamic>? queries}) = _$PopAction;
+      final Map<String, dynamic>? queries}) = _$PopRouteAction;
 
-  factory PopAction.fromJson(Map<String, dynamic> json) = _$PopAction.fromJson;
+  factory PopRouteAction.fromJson(Map<String, dynamic> json) =
+      _$PopRouteAction.fromJson;
 
   @override
   String get type;
@@ -687,7 +690,7 @@ abstract class PopAction implements UIXAction {
   Map<String, dynamic>? get queries;
   @override
   @JsonKey(ignore: true)
-  _$$PopActionCopyWith<_$PopAction> get copyWith =>
+  _$$PopRouteActionCopyWith<_$PopRouteAction> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -801,10 +804,10 @@ class _$ShowDialogAction implements ShowDialogAction {
   TResult when<TResult extends Object?>({
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
-        push,
+        pushRoute,
     required TResult Function(
             String type, bool synchronized, Map<String, dynamic>? queries)
-        pop,
+        popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
@@ -818,7 +821,7 @@ class _$ShowDialogAction implements ShowDialogAction {
         showBottomSheet,
     required TResult Function(
             String type, bool synchronized, String key, String? value)
-        updateValue,
+        updateAttribute,
   }) {
     return showDialog(type, synchronized, barrierDismissible, child);
   }
@@ -828,10 +831,10 @@ class _$ShowDialogAction implements ShowDialogAction {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
-        push,
+        pushRoute,
     TResult? Function(
             String type, bool synchronized, Map<String, dynamic>? queries)?
-        pop,
+        popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
@@ -845,7 +848,7 @@ class _$ShowDialogAction implements ShowDialogAction {
         showBottomSheet,
     TResult? Function(
             String type, bool synchronized, String key, String? value)?
-        updateValue,
+        updateAttribute,
   }) {
     return showDialog?.call(type, synchronized, barrierDismissible, child);
   }
@@ -855,10 +858,10 @@ class _$ShowDialogAction implements ShowDialogAction {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
-        push,
+        pushRoute,
     TResult Function(
             String type, bool synchronized, Map<String, dynamic>? queries)?
-        pop,
+        popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
@@ -871,7 +874,7 @@ class _$ShowDialogAction implements ShowDialogAction {
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(String type, bool synchronized, String key, String? value)?
-        updateValue,
+        updateAttribute,
     required TResult orElse(),
   }) {
     if (showDialog != null) {
@@ -883,11 +886,11 @@ class _$ShowDialogAction implements ShowDialogAction {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(PushAction value) push,
-    required TResult Function(PopAction value) pop,
+    required TResult Function(PushRouteAction value) pushRoute,
+    required TResult Function(PopRouteAction value) popRoute,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
-    required TResult Function(UpdateValueAction value) updateValue,
+    required TResult Function(UpdateAttributeAction value) updateAttribute,
   }) {
     return showDialog(this);
   }
@@ -895,11 +898,11 @@ class _$ShowDialogAction implements ShowDialogAction {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PushAction value)? push,
-    TResult? Function(PopAction value)? pop,
+    TResult? Function(PushRouteAction value)? pushRoute,
+    TResult? Function(PopRouteAction value)? popRoute,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
-    TResult? Function(UpdateValueAction value)? updateValue,
+    TResult? Function(UpdateAttributeAction value)? updateAttribute,
   }) {
     return showDialog?.call(this);
   }
@@ -907,11 +910,11 @@ class _$ShowDialogAction implements ShowDialogAction {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(PushAction value)? push,
-    TResult Function(PopAction value)? pop,
+    TResult Function(PushRouteAction value)? pushRoute,
+    TResult Function(PopRouteAction value)? popRoute,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
-    TResult Function(UpdateValueAction value)? updateValue,
+    TResult Function(UpdateAttributeAction value)? updateAttribute,
     required TResult orElse(),
   }) {
     if (showDialog != null) {
@@ -1084,10 +1087,10 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
   TResult when<TResult extends Object?>({
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
-        push,
+        pushRoute,
     required TResult Function(
             String type, bool synchronized, Map<String, dynamic>? queries)
-        pop,
+        popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
@@ -1101,7 +1104,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
         showBottomSheet,
     required TResult Function(
             String type, bool synchronized, String key, String? value)
-        updateValue,
+        updateAttribute,
   }) {
     return showBottomSheet(
         type, synchronized, enableDrag, elevation, backgroundColor, child);
@@ -1112,10 +1115,10 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
-        push,
+        pushRoute,
     TResult? Function(
             String type, bool synchronized, Map<String, dynamic>? queries)?
-        pop,
+        popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
@@ -1129,7 +1132,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
         showBottomSheet,
     TResult? Function(
             String type, bool synchronized, String key, String? value)?
-        updateValue,
+        updateAttribute,
   }) {
     return showBottomSheet?.call(
         type, synchronized, enableDrag, elevation, backgroundColor, child);
@@ -1140,10 +1143,10 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
-        push,
+        pushRoute,
     TResult Function(
             String type, bool synchronized, Map<String, dynamic>? queries)?
-        pop,
+        popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
@@ -1156,7 +1159,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(String type, bool synchronized, String key, String? value)?
-        updateValue,
+        updateAttribute,
     required TResult orElse(),
   }) {
     if (showBottomSheet != null) {
@@ -1169,11 +1172,11 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(PushAction value) push,
-    required TResult Function(PopAction value) pop,
+    required TResult Function(PushRouteAction value) pushRoute,
+    required TResult Function(PopRouteAction value) popRoute,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
-    required TResult Function(UpdateValueAction value) updateValue,
+    required TResult Function(UpdateAttributeAction value) updateAttribute,
   }) {
     return showBottomSheet(this);
   }
@@ -1181,11 +1184,11 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PushAction value)? push,
-    TResult? Function(PopAction value)? pop,
+    TResult? Function(PushRouteAction value)? pushRoute,
+    TResult? Function(PopRouteAction value)? popRoute,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
-    TResult? Function(UpdateValueAction value)? updateValue,
+    TResult? Function(UpdateAttributeAction value)? updateAttribute,
   }) {
     return showBottomSheet?.call(this);
   }
@@ -1193,11 +1196,11 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(PushAction value)? push,
-    TResult Function(PopAction value)? pop,
+    TResult Function(PushRouteAction value)? pushRoute,
+    TResult Function(PopRouteAction value)? popRoute,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
-    TResult Function(UpdateValueAction value)? updateValue,
+    TResult Function(UpdateAttributeAction value)? updateAttribute,
     required TResult orElse(),
   }) {
     if (showBottomSheet != null) {
@@ -1244,22 +1247,22 @@ abstract class ShowBottomSheetAction implements UIXAction {
 }
 
 /// @nodoc
-abstract class _$$UpdateValueActionCopyWith<$Res>
+abstract class _$$UpdateAttributeActionCopyWith<$Res>
     implements $UIXActionCopyWith<$Res> {
-  factory _$$UpdateValueActionCopyWith(
-          _$UpdateValueAction value, $Res Function(_$UpdateValueAction) then) =
-      __$$UpdateValueActionCopyWithImpl<$Res>;
+  factory _$$UpdateAttributeActionCopyWith(_$UpdateAttributeAction value,
+          $Res Function(_$UpdateAttributeAction) then) =
+      __$$UpdateAttributeActionCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String type, bool synchronized, String key, String? value});
 }
 
 /// @nodoc
-class __$$UpdateValueActionCopyWithImpl<$Res>
-    extends _$UIXActionCopyWithImpl<$Res, _$UpdateValueAction>
-    implements _$$UpdateValueActionCopyWith<$Res> {
-  __$$UpdateValueActionCopyWithImpl(
-      _$UpdateValueAction _value, $Res Function(_$UpdateValueAction) _then)
+class __$$UpdateAttributeActionCopyWithImpl<$Res>
+    extends _$UIXActionCopyWithImpl<$Res, _$UpdateAttributeAction>
+    implements _$$UpdateAttributeActionCopyWith<$Res> {
+  __$$UpdateAttributeActionCopyWithImpl(_$UpdateAttributeAction _value,
+      $Res Function(_$UpdateAttributeAction) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1270,7 +1273,7 @@ class __$$UpdateValueActionCopyWithImpl<$Res>
     Object? key = null,
     Object? value = freezed,
   }) {
-    return _then(_$UpdateValueAction(
+    return _then(_$UpdateAttributeAction(
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -1293,15 +1296,15 @@ class __$$UpdateValueActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$UpdateValueAction implements UpdateValueAction {
-  const _$UpdateValueAction(
+class _$UpdateAttributeAction implements UpdateAttributeAction {
+  const _$UpdateAttributeAction(
       {required this.type,
       this.synchronized = false,
       required this.key,
       this.value});
 
-  factory _$UpdateValueAction.fromJson(Map<String, dynamic> json) =>
-      _$$UpdateValueActionFromJson(json);
+  factory _$UpdateAttributeAction.fromJson(Map<String, dynamic> json) =>
+      _$$UpdateAttributeActionFromJson(json);
 
   @override
   final String type;
@@ -1315,14 +1318,14 @@ class _$UpdateValueAction implements UpdateValueAction {
 
   @override
   String toString() {
-    return 'UIXAction.updateValue(type: $type, synchronized: $synchronized, key: $key, value: $value)';
+    return 'UIXAction.updateAttribute(type: $type, synchronized: $synchronized, key: $key, value: $value)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UpdateValueAction &&
+            other is _$UpdateAttributeAction &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.synchronized, synchronized) ||
                 other.synchronized == synchronized) &&
@@ -1337,18 +1340,19 @@ class _$UpdateValueAction implements UpdateValueAction {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$UpdateValueActionCopyWith<_$UpdateValueAction> get copyWith =>
-      __$$UpdateValueActionCopyWithImpl<_$UpdateValueAction>(this, _$identity);
+  _$$UpdateAttributeActionCopyWith<_$UpdateAttributeAction> get copyWith =>
+      __$$UpdateAttributeActionCopyWithImpl<_$UpdateAttributeAction>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
-        push,
+        pushRoute,
     required TResult Function(
             String type, bool synchronized, Map<String, dynamic>? queries)
-        pop,
+        popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
@@ -1362,9 +1366,9 @@ class _$UpdateValueAction implements UpdateValueAction {
         showBottomSheet,
     required TResult Function(
             String type, bool synchronized, String key, String? value)
-        updateValue,
+        updateAttribute,
   }) {
-    return updateValue(type, synchronized, key, value);
+    return updateAttribute(type, synchronized, key, value);
   }
 
   @override
@@ -1372,10 +1376,10 @@ class _$UpdateValueAction implements UpdateValueAction {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
-        push,
+        pushRoute,
     TResult? Function(
             String type, bool synchronized, Map<String, dynamic>? queries)?
-        pop,
+        popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
@@ -1389,9 +1393,9 @@ class _$UpdateValueAction implements UpdateValueAction {
         showBottomSheet,
     TResult? Function(
             String type, bool synchronized, String key, String? value)?
-        updateValue,
+        updateAttribute,
   }) {
-    return updateValue?.call(type, synchronized, key, value);
+    return updateAttribute?.call(type, synchronized, key, value);
   }
 
   @override
@@ -1399,10 +1403,10 @@ class _$UpdateValueAction implements UpdateValueAction {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
-        push,
+        pushRoute,
     TResult Function(
             String type, bool synchronized, Map<String, dynamic>? queries)?
-        pop,
+        popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             @UIXWidgetConverter() Widget child)?
         showDialog,
@@ -1415,11 +1419,11 @@ class _$UpdateValueAction implements UpdateValueAction {
             @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(String type, bool synchronized, String key, String? value)?
-        updateValue,
+        updateAttribute,
     required TResult orElse(),
   }) {
-    if (updateValue != null) {
-      return updateValue(type, synchronized, key, value);
+    if (updateAttribute != null) {
+      return updateAttribute(type, synchronized, key, value);
     }
     return orElse();
   }
@@ -1427,60 +1431,60 @@ class _$UpdateValueAction implements UpdateValueAction {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(PushAction value) push,
-    required TResult Function(PopAction value) pop,
+    required TResult Function(PushRouteAction value) pushRoute,
+    required TResult Function(PopRouteAction value) popRoute,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
-    required TResult Function(UpdateValueAction value) updateValue,
+    required TResult Function(UpdateAttributeAction value) updateAttribute,
   }) {
-    return updateValue(this);
+    return updateAttribute(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(PushAction value)? push,
-    TResult? Function(PopAction value)? pop,
+    TResult? Function(PushRouteAction value)? pushRoute,
+    TResult? Function(PopRouteAction value)? popRoute,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
-    TResult? Function(UpdateValueAction value)? updateValue,
+    TResult? Function(UpdateAttributeAction value)? updateAttribute,
   }) {
-    return updateValue?.call(this);
+    return updateAttribute?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(PushAction value)? push,
-    TResult Function(PopAction value)? pop,
+    TResult Function(PushRouteAction value)? pushRoute,
+    TResult Function(PopRouteAction value)? popRoute,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
-    TResult Function(UpdateValueAction value)? updateValue,
+    TResult Function(UpdateAttributeAction value)? updateAttribute,
     required TResult orElse(),
   }) {
-    if (updateValue != null) {
-      return updateValue(this);
+    if (updateAttribute != null) {
+      return updateAttribute(this);
     }
     return orElse();
   }
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UpdateValueActionToJson(
+    return _$$UpdateAttributeActionToJson(
       this,
     );
   }
 }
 
-abstract class UpdateValueAction implements UIXAction {
-  const factory UpdateValueAction(
+abstract class UpdateAttributeAction implements UIXAction {
+  const factory UpdateAttributeAction(
       {required final String type,
       final bool synchronized,
       required final String key,
-      final String? value}) = _$UpdateValueAction;
+      final String? value}) = _$UpdateAttributeAction;
 
-  factory UpdateValueAction.fromJson(Map<String, dynamic> json) =
-      _$UpdateValueAction.fromJson;
+  factory UpdateAttributeAction.fromJson(Map<String, dynamic> json) =
+      _$UpdateAttributeAction.fromJson;
 
   @override
   String get type;
@@ -1490,6 +1494,6 @@ abstract class UpdateValueAction implements UIXAction {
   String? get value;
   @override
   @JsonKey(ignore: true)
-  _$$UpdateValueActionCopyWith<_$UpdateValueAction> get copyWith =>
+  _$$UpdateAttributeActionCopyWith<_$UpdateAttributeAction> get copyWith =>
       throw _privateConstructorUsedError;
 }

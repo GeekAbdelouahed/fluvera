@@ -7,18 +7,18 @@ part 'action.g.dart';
 
 @freezed
 class UIXAction with _$UIXAction {
-  const factory UIXAction.push({
+  const factory UIXAction.pushRoute({
     required String type,
     @Default(false) bool synchronized,
     required String routeName,
     Map<String, dynamic>? queries,
-  }) = PushAction;
+  }) = PushRouteAction;
 
-  const factory UIXAction.pop({
+  const factory UIXAction.popRoute({
     required String type,
     @Default(false) bool synchronized,
     Map<String, dynamic>? queries,
-  }) = PopAction;
+  }) = PopRouteAction;
 
   const factory UIXAction.showDialog({
     required String type,
@@ -36,12 +36,12 @@ class UIXAction with _$UIXAction {
     @UIXWidgetConverter() required Widget child,
   }) = ShowBottomSheetAction;
 
-  const factory UIXAction.updateValue({
+  const factory UIXAction.updateAttribute({
     required String type,
     @Default(false) bool synchronized,
     required String key,
     String? value,
-  }) = UpdateValueAction;
+  }) = UpdateAttributeAction;
 
   factory UIXAction.fromJson(Map<String, dynamic> json) => _$UIXActionFromJson(json);
 }

@@ -3,13 +3,13 @@ part of 'extension.dart';
 extension UIXActionExtension on UIXAction {
   Future<void> act(BuildContext context) {
     return map(
-      push: (attributes) {
+      pushRoute: (attributes) {
         return Navigator.of(context).pushNamed(
           attributes.routeName,
           arguments: attributes.queries,
         );
       },
-      pop: (attributes) async {
+      popRoute: (attributes) async {
         return Navigator.of(context).pop(
           attributes.queries,
         );
@@ -40,7 +40,7 @@ extension UIXActionExtension on UIXAction {
           },
         ).closed;
       },
-      updateValue: (attributes) async {
+      updateAttribute: (attributes) async {
         UIXProvider.of<UIXAttributesNotifier>(context).value.update(attributes.key, attributes.value);
       },
     );

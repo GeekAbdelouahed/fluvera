@@ -6,14 +6,15 @@ part of 'action.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PushAction _$$PushActionFromJson(Map<String, dynamic> json) => _$PushAction(
+_$PushRouteAction _$$PushRouteActionFromJson(Map<String, dynamic> json) =>
+    _$PushRouteAction(
       type: json['type'] as String,
       synchronized: json['synchronized'] as bool? ?? false,
       routeName: json['routeName'] as String,
       queries: json['queries'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$PushActionToJson(_$PushAction instance) =>
+Map<String, dynamic> _$$PushRouteActionToJson(_$PushRouteAction instance) =>
     <String, dynamic>{
       'type': instance.type,
       'synchronized': instance.synchronized,
@@ -21,13 +22,14 @@ Map<String, dynamic> _$$PushActionToJson(_$PushAction instance) =>
       'queries': instance.queries,
     };
 
-_$PopAction _$$PopActionFromJson(Map<String, dynamic> json) => _$PopAction(
+_$PopRouteAction _$$PopRouteActionFromJson(Map<String, dynamic> json) =>
+    _$PopRouteAction(
       type: json['type'] as String,
       synchronized: json['synchronized'] as bool? ?? false,
       queries: json['queries'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$PopActionToJson(_$PopAction instance) =>
+Map<String, dynamic> _$$PopRouteActionToJson(_$PopRouteAction instance) =>
     <String, dynamic>{
       'type': instance.type,
       'synchronized': instance.synchronized,
@@ -76,15 +78,17 @@ Map<String, dynamic> _$$ShowBottomSheetActionToJson(
       'child': const UIXWidgetConverter().toJson(instance.child),
     };
 
-_$UpdateValueAction _$$UpdateValueActionFromJson(Map<String, dynamic> json) =>
-    _$UpdateValueAction(
+_$UpdateAttributeAction _$$UpdateAttributeActionFromJson(
+        Map<String, dynamic> json) =>
+    _$UpdateAttributeAction(
       type: json['type'] as String,
       synchronized: json['synchronized'] as bool? ?? false,
       key: json['key'] as String,
       value: json['value'] as String?,
     );
 
-Map<String, dynamic> _$$UpdateValueActionToJson(_$UpdateValueAction instance) =>
+Map<String, dynamic> _$$UpdateAttributeActionToJson(
+        _$UpdateAttributeAction instance) =>
     <String, dynamic>{
       'type': instance.type,
       'synchronized': instance.synchronized,

@@ -32,7 +32,7 @@ const Map<String, dynamic> json = {
           'type': 'ElevatedButton',
           'onPressed': [
             {
-              'type': 'UpdateValue',
+              'type': 'UpdateAttribute',
               'key': 'greeting',
               'value': 'Hello UIX',
             },
@@ -187,7 +187,7 @@ const Map<String, dynamic> json = {
                           },
                           'onPressed': [
                             {
-                              'type': 'Pop',
+                              'type': 'PopRoute',
                             },
                           ]
                         },
