@@ -43,6 +43,5 @@ class UIXAction with _$UIXAction {
     String? value,
   }) = UpdateValueAction;
 
-  factory UIXAction.fromJson(Map<String, dynamic> json) =>
-      _$UIXActionFromJson(json);
+  factory UIXAction.fromJson(Map<String, dynamic> json) => _$UIXActionFromJson(json);
 }

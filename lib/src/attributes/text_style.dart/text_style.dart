@@ -14,6 +14,5 @@ class UIXTextStyle with _$UIXTextStyle {
     @UIXFontWeightConverter() FontWeight? fontWeight,
   }) = _UIXTextStyle;
 
-  factory UIXTextStyle.fromJson(Map<String, dynamic> json) =>
-      _$UIXTextStyleFromJson(json);
+  factory UIXTextStyle.fromJson(Map<String, dynamic> json) => _$UIXTextStyleFromJson(json);
 }

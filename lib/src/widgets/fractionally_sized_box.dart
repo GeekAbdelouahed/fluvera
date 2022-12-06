@@ -1,8 +1,7 @@
 part of 'widgets.dart';
 
 class UIXFractionallySizedBox extends UIX<FractionallySizedBoxAttributes> {
-  const UIXFractionallySizedBox(FractionallySizedBoxAttributes attributes)
-      : super(attributes);
+  const UIXFractionallySizedBox(FractionallySizedBoxAttributes attributes) : super(attributes);
 
   @override
   Widget build() {

@@ -41,9 +41,7 @@ extension UIXActionExtension on UIXAction {
         ).closed;
       },
       updateValue: (attributes) async {
-        UIXProvider.of<UIXAttributesNotifier>(context)
-            .value
-            .update(attributes.key, attributes.value);
+        UIXProvider.of<UIXAttributesNotifier>(context).value.update(attributes.key, attributes.value);
       },
     );
   }

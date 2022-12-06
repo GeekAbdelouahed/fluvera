@@ -1,7 +1,6 @@
 part of 'converters.dart';
 
-class UIXWidgetsConverter
-    implements JsonConverter<List<Widget>, List<Map<String, dynamic>>> {
+class UIXWidgetsConverter implements JsonConverter<List<Widget>, List<Map<String, dynamic>>> {
   const UIXWidgetsConverter();
 
   @override

@@ -9,8 +9,7 @@ const Map<String, dynamic> json = {
       {
         'type': 'Image',
         'height': 100,
-        'path':
-            'https://docs.flutter.dev/assets/images/flutter-logo-sharing.png'
+        'path': 'https://docs.flutter.dev/assets/images/flutter-logo-sharing.png',
       },
       {
         'type': 'Text',
