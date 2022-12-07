@@ -73,37 +73,39 @@ final List items = [
   },
 ];
 
-Map<String, dynamic> homeJsonData = {
-  'type': 'Scaffold',
-  'appBar': {
-    'type': 'AppBar',
-    'centerTitle': true,
-    'title': {
-      'type': 'Text',
-      'text': 'UIX',
-    },
-  },
-  'body': {
-    'type': 'SingleChildScrollView',
-    'child': {
-      'type': 'Page',
-      'attributes': {
-        'greeting': 'Hey',
+Map<String, dynamic> homeJsonData() {
+  return {
+    'type': 'Scaffold',
+    'appBar': {
+      'type': 'AppBar',
+      'centerTitle': true,
+      'title': {
+        'type': 'Text',
+        'text': 'UIX',
       },
+    },
+    'body': {
+      'type': 'SingleChildScrollView',
       'child': {
-        'type': 'Column',
-        'children': items.map((item) {
-          return listTileJson(
-            id: item['id'],
-            imageUrl: item['imageUrl'],
-            title: item['title'],
-            subtitle: item['subtitle'],
-          );
-        }).toList(),
+        'type': 'Page',
+        'attributes': {
+          'greeting': 'Hey',
+        },
+        'child': {
+          'type': 'Column',
+          'children': items.map((item) {
+            return listTileJson(
+              id: item['id'],
+              imageUrl: item['imageUrl'],
+              title: item['title'],
+              subtitle: item['subtitle'],
+            );
+          }).toList(),
+        },
       },
     },
-  },
-};
+  };
+}
 
 Map<String, dynamic> listTileJson({
   required String id,
@@ -150,24 +152,42 @@ Map<String, dynamic> listTileJson({
               'bottom': 16,
             },
             'child': {
-              'type': 'Column',
-              'crossAxisAlignment': 'stretch',
+              'type': 'Row',
+              'mainAxisSize': 'min',
               'children': [
                 {
-                  'type': 'Text',
-                  'text': title,
-                  'style': {
-                    'fontSize': 20,
-                    'fontWeight': 'w500',
+                  'type': 'Expanded',
+                  'child': {
+                    'type': 'Column',
+                    'crossAxisAlignment': 'start',
+                    'children': [
+                      {
+                        'type': 'Text',
+                        'text': title,
+                        'style': {
+                          'fontSize': 20,
+                          'fontWeight': 'w500',
+                        },
+                      },
+                      {
+                        'type': 'Text',
+                        'text': subtitle,
+                        'style': {
+                          'color': '#555555',
+                          'fontSize': 15,
+                          'fontWeight': 'w400',
+                        },
+                      },
+                    ],
                   },
                 },
                 {
-                  'type': 'Text',
-                  'text': subtitle,
-                  'style': {
-                    'color': '#555555',
-                    'fontSize': 15,
-                    'fontWeight': 'w400',
+                  'type': 'InkWell',
+                  'onPressed': [],
+                  'child': {
+                    'type': 'Icon',
+                    'code': 0xe25c,
+                    'color': '#999999',
                   },
                 },
               ],
