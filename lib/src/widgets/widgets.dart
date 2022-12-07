@@ -6,6 +6,7 @@ import 'package:uix/src/helpers/helpers.dart';
 import 'package:uix/uix.dart';
 
 part 'align.dart';
+part 'app_bar.dart';
 part 'column.dart';
 part 'container.dart';
 part 'elevated_button.dart';
@@ -15,6 +16,7 @@ part 'image.dart';
 part 'padding.dart';
 part 'page.dart';
 part 'row.dart';
+part 'scaffold.dart';
 part 'sized_box.dart';
 part 'spacer.dart';
 part 'text.dart';

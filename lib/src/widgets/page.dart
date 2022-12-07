@@ -30,7 +30,7 @@ class _Page extends StatefulWidget {
 class _PageState extends State<_Page> {
   @override
   void dispose() {
-    UIXProvider.of(context).value.dispose();
+    UIXProvider.of(context)?.value.dispose();
     super.dispose();
   }
 

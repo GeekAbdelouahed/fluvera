@@ -1,4 +1,4 @@
-import 'package:example/json_example.dart';
+import 'package:example/data/home_json.dart';
 import 'package:flutter/material.dart';
 import 'package:uix/uix.dart';
 
@@ -7,8 +7,14 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: UIXAttributes.fromJson(json).build(),
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: Scaffold(
+        body: UIXAttributes.fromJson(json).build(),
+      ),
     );
   }
 }

@@ -6,10 +6,10 @@ class UIXEdgeInsetsConverter implements JsonConverter<EdgeInsetsGeometry, Map<St
   @override
   EdgeInsetsGeometry fromJson(Map<String, dynamic> json) {
     return EdgeInsetsDirectional.only(
-      start: json['start'] ?? 0,
-      end: json['end'] ?? 0,
-      top: json['top'] ?? 0,
-      bottom: json['bottom'] ?? 0,
+      start: (json['start'] ?? 0).toDouble(),
+      end: (json['end'] ?? 0).toDouble(),
+      top: (json['top'] ?? 0).toDouble(),
+      bottom: (json['bottom'] ?? 0).toDouble(),
     );
   }
 

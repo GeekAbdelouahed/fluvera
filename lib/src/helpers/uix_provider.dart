@@ -14,7 +14,7 @@ class UIXProvider<T> extends InheritedWidget {
     return value != oldWidget.value;
   }
 
-  static UIXProvider<T> of<T>(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<UIXProvider<T>>()!;
+  static UIXProvider<T>? of<T>(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<UIXProvider<T>>();
   }
 }

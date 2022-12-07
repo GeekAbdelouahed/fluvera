@@ -40,6 +40,30 @@ Json? _$JsonConverterToJson<Json, Value>(
 ) =>
     value == null ? null : toJson(value);
 
+_$AppBarAttributes _$$AppBarAttributesFromJson(Map<String, dynamic> json) =>
+    _$AppBarAttributes(
+      key: json['key'],
+      type: json['type'] as String,
+      centerTitle: json['centerTitle'] as bool?,
+      title: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
+          json['title'], const UIXWidgetConverter().fromJson),
+      actions:
+          _$JsonConverterFromJson<List<Map<String, dynamic>>, List<Widget>>(
+              json['actions'], const UIXWidgetsConverter().fromJson),
+    );
+
+Map<String, dynamic> _$$AppBarAttributesToJson(_$AppBarAttributes instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'type': instance.type,
+      'centerTitle': instance.centerTitle,
+      'title': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
+          instance.title, const UIXWidgetConverter().toJson),
+      'actions':
+          _$JsonConverterToJson<List<Map<String, dynamic>>, List<Widget>>(
+              instance.actions, const UIXWidgetsConverter().toJson),
+    };
+
 _$ColumnAttributes _$$ColumnAttributesFromJson(Map<String, dynamic> json) =>
     _$ColumnAttributes(
       key: json['key'],
@@ -270,6 +294,31 @@ Map<String, dynamic> _$$SizedBoxAttributesToJson(
       'width': instance.width,
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
           instance.child, const UIXWidgetConverter().toJson),
+    };
+
+_$ScaffoldAttributes _$$ScaffoldAttributesFromJson(Map<String, dynamic> json) =>
+    _$ScaffoldAttributes(
+      key: json['key'],
+      type: json['type'] as String,
+      backgroundColor: const UIXColorConverter()
+          .fromJson(json['backgroundColor'] as String?),
+      appBar: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
+          json['appBar'], const UIXWidgetConverter().fromJson),
+      body: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
+          json['body'], const UIXWidgetConverter().fromJson),
+    );
+
+Map<String, dynamic> _$$ScaffoldAttributesToJson(
+        _$ScaffoldAttributes instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'type': instance.type,
+      'backgroundColor':
+          const UIXColorConverter().toJson(instance.backgroundColor),
+      'appBar': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
+          instance.appBar, const UIXWidgetConverter().toJson),
+      'body': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
+          instance.body, const UIXWidgetConverter().toJson),
     };
 
 _$SpacerAttributes _$$SpacerAttributesFromJson(Map<String, dynamic> json) =>

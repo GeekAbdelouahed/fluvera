@@ -17,6 +17,14 @@ class UIXAttributes with _$UIXAttributes {
     @UIXWidgetConverter() Widget? child,
   }) = AlignAttributes;
 
+  const factory UIXAttributes.appBar({
+    dynamic key,
+    required String type,
+    bool? centerTitle,
+    @UIXWidgetConverter() Widget? title,
+    @UIXWidgetsConverter() List<Widget>? actions,
+  }) = AppBarAttributes;
+
   const factory UIXAttributes.column({
     dynamic key,
     required String type,
@@ -95,6 +103,14 @@ class UIXAttributes with _$UIXAttributes {
     double? width,
     @UIXWidgetConverter() Widget? child,
   }) = SizedBoxAttributes;
+
+  const factory UIXAttributes.scaffold({
+    dynamic key,
+    required String type,
+    @UIXColorConverter() Color? backgroundColor,
+    @UIXWidgetConverter() Widget? appBar,
+    @UIXWidgetConverter() Widget? body,
+  }) = ScaffoldAttributes;
 
   const factory UIXAttributes.spacer({
     dynamic key,

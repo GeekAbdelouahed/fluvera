@@ -18,6 +18,8 @@ UIXAttributes _$UIXAttributesFromJson(Map<String, dynamic> json) {
   switch (json['type']) {
     case 'Align':
       return AlignAttributes.fromJson(json);
+    case 'AppBar':
+      return AppBarAttributes.fromJson(json);
     case 'Column':
       return ColumnAttributes.fromJson(json);
     case 'Container':
@@ -38,6 +40,8 @@ UIXAttributes _$UIXAttributesFromJson(Map<String, dynamic> json) {
       return RowAttributes.fromJson(json);
     case 'SizedBox':
       return SizedBoxAttributes.fromJson(json);
+    case 'Scaffold':
+      return ScaffoldAttributes.fromJson(json);
     case 'Spacer':
       return SpacerAttributes.fromJson(json);
     case 'Text':
@@ -61,6 +65,13 @@ mixin _$UIXAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)
+        appBar,
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         column,
@@ -113,6 +124,13 @@ mixin _$UIXAttributes {
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)
+        scaffold,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
@@ -127,6 +145,13 @@ mixin _$UIXAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -175,6 +200,13 @@ mixin _$UIXAttributes {
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -189,6 +221,13 @@ mixin _$UIXAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -234,6 +273,13 @@ mixin _$UIXAttributes {
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -244,6 +290,7 @@ mixin _$UIXAttributes {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AlignAttributes value) align,
+    required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
@@ -255,6 +302,7 @@ mixin _$UIXAttributes {
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
     required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
     required TResult Function(TextAttributes value) text,
   }) =>
@@ -262,6 +310,7 @@ mixin _$UIXAttributes {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AlignAttributes value)? align,
+    TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -273,6 +322,7 @@ mixin _$UIXAttributes {
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
     TResult? Function(TextAttributes value)? text,
   }) =>
@@ -280,6 +330,7 @@ mixin _$UIXAttributes {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AlignAttributes value)? align,
+    TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -291,6 +342,7 @@ mixin _$UIXAttributes {
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
     TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
     TResult Function(TextAttributes value)? text,
     required TResult orElse(),
@@ -455,6 +507,13 @@ class _$AlignAttributes implements AlignAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)
+        appBar,
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         column,
@@ -507,6 +566,13 @@ class _$AlignAttributes implements AlignAttributes {
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)
+        scaffold,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
@@ -524,6 +590,13 @@ class _$AlignAttributes implements AlignAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -572,6 +645,13 @@ class _$AlignAttributes implements AlignAttributes {
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -589,6 +669,13 @@ class _$AlignAttributes implements AlignAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -634,6 +721,13 @@ class _$AlignAttributes implements AlignAttributes {
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -650,6 +744,7 @@ class _$AlignAttributes implements AlignAttributes {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AlignAttributes value) align,
+    required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
@@ -661,6 +756,7 @@ class _$AlignAttributes implements AlignAttributes {
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
     required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
     required TResult Function(TextAttributes value) text,
   }) {
@@ -671,6 +767,7 @@ class _$AlignAttributes implements AlignAttributes {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AlignAttributes value)? align,
+    TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -682,6 +779,7 @@ class _$AlignAttributes implements AlignAttributes {
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
     TResult? Function(TextAttributes value)? text,
   }) {
@@ -692,6 +790,7 @@ class _$AlignAttributes implements AlignAttributes {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AlignAttributes value)? align,
+    TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -703,6 +802,7 @@ class _$AlignAttributes implements AlignAttributes {
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
     TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
     TResult Function(TextAttributes value)? text,
     required TResult orElse(),
@@ -742,6 +842,481 @@ abstract class AlignAttributes implements UIXAttributes {
   @override
   @JsonKey(ignore: true)
   _$$AlignAttributesCopyWith<_$AlignAttributes> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AppBarAttributesCopyWith<$Res>
+    implements $UIXAttributesCopyWith<$Res> {
+  factory _$$AppBarAttributesCopyWith(
+          _$AppBarAttributes value, $Res Function(_$AppBarAttributes) then) =
+      __$$AppBarAttributesCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {dynamic key,
+      String type,
+      bool? centerTitle,
+      @UIXWidgetConverter() Widget? title,
+      @UIXWidgetsConverter() List<Widget>? actions});
+}
+
+/// @nodoc
+class __$$AppBarAttributesCopyWithImpl<$Res>
+    extends _$UIXAttributesCopyWithImpl<$Res, _$AppBarAttributes>
+    implements _$$AppBarAttributesCopyWith<$Res> {
+  __$$AppBarAttributesCopyWithImpl(
+      _$AppBarAttributes _value, $Res Function(_$AppBarAttributes) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? type = null,
+    Object? centerTitle = freezed,
+    Object? title = freezed,
+    Object? actions = freezed,
+  }) {
+    return _then(_$AppBarAttributes(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      centerTitle: freezed == centerTitle
+          ? _value.centerTitle
+          : centerTitle // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      title: freezed == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+      actions: freezed == actions
+          ? _value._actions
+          : actions // ignore: cast_nullable_to_non_nullable
+              as List<Widget>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$AppBarAttributes implements AppBarAttributes {
+  const _$AppBarAttributes(
+      {this.key,
+      required this.type,
+      this.centerTitle,
+      @UIXWidgetConverter() this.title,
+      @UIXWidgetsConverter() final List<Widget>? actions})
+      : _actions = actions;
+
+  factory _$AppBarAttributes.fromJson(Map<String, dynamic> json) =>
+      _$$AppBarAttributesFromJson(json);
+
+  @override
+  final dynamic key;
+  @override
+  final String type;
+  @override
+  final bool? centerTitle;
+  @override
+  @UIXWidgetConverter()
+  final Widget? title;
+  final List<Widget>? _actions;
+  @override
+  @UIXWidgetsConverter()
+  List<Widget>? get actions {
+    final value = _actions;
+    if (value == null) return null;
+    if (_actions is EqualUnmodifiableListView) return _actions;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'UIXAttributes.appBar(key: $key, type: $type, centerTitle: $centerTitle, title: $title, actions: $actions)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AppBarAttributes &&
+            const DeepCollectionEquality().equals(other.key, key) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.centerTitle, centerTitle) ||
+                other.centerTitle == centerTitle) &&
+            (identical(other.title, title) || other.title == title) &&
+            const DeepCollectionEquality().equals(other._actions, _actions));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(key),
+      type,
+      centerTitle,
+      title,
+      const DeepCollectionEquality().hash(_actions));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AppBarAttributesCopyWith<_$AppBarAttributes> get copyWith =>
+      __$$AppBarAttributesCopyWithImpl<_$AppBarAttributes>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)
+        appBar,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        column,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXWidgetConverter() Widget? child)
+        container,
+    required TResult Function(
+            dynamic key,
+            String type,
+            List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress,
+            @UIXWidgetConverter() Widget? child)
+        elevatedButton,
+    required TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)
+        expanded,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        fractionallySizedBox,
+    required TResult Function(dynamic key, String type, String path,
+            double? height, double? width, BoxFit? fit, UIXImageSource source)
+        image,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)
+        padding,
+    required TResult Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)
+        page,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        row,
+    required TResult Function(dynamic key, String type, double? height,
+            double? width, @UIXWidgetConverter() Widget? child)
+        sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)
+        scaffold,
+    required TResult Function(dynamic key, String type, int flex) spacer,
+    required TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)
+        text,
+  }) {
+    return appBar(key, type, centerTitle, title, actions);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult? Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult? Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, UIXImageSource source)?
+        image,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    TResult? Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult? Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
+    TResult? Function(dynamic key, String type, int flex)? spacer,
+    TResult? Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+  }) {
+    return appBar?.call(key, type, centerTitle, title, actions);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, UIXImageSource source)?
+        image,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
+    TResult Function(dynamic key, String type, int flex)? spacer,
+    TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    required TResult orElse(),
+  }) {
+    if (appBar != null) {
+      return appBar(key, type, centerTitle, title, actions);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AlignAttributes value) align,
+    required TResult Function(AppBarAttributes value) appBar,
+    required TResult Function(ColumnAttributes value) column,
+    required TResult Function(ContainerAttributes value) container,
+    required TResult Function(ElevatedButtonAttributes value) elevatedButton,
+    required TResult Function(ExpandedAttributes value) expanded,
+    required TResult Function(FractionallySizedBoxAttributes value)
+        fractionallySizedBox,
+    required TResult Function(ImageAttributes value) image,
+    required TResult Function(PaddingAttributes value) padding,
+    required TResult Function(PageAttributes value) page,
+    required TResult Function(RowAttributes value) row,
+    required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ScaffoldAttributes value) scaffold,
+    required TResult Function(SpacerAttributes value) spacer,
+    required TResult Function(TextAttributes value) text,
+  }) {
+    return appBar(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AlignAttributes value)? align,
+    TResult? Function(AppBarAttributes value)? appBar,
+    TResult? Function(ColumnAttributes value)? column,
+    TResult? Function(ContainerAttributes value)? container,
+    TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult? Function(ExpandedAttributes value)? expanded,
+    TResult? Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult? Function(ImageAttributes value)? image,
+    TResult? Function(PaddingAttributes value)? padding,
+    TResult? Function(PageAttributes value)? page,
+    TResult? Function(RowAttributes value)? row,
+    TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ScaffoldAttributes value)? scaffold,
+    TResult? Function(SpacerAttributes value)? spacer,
+    TResult? Function(TextAttributes value)? text,
+  }) {
+    return appBar?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AlignAttributes value)? align,
+    TResult Function(AppBarAttributes value)? appBar,
+    TResult Function(ColumnAttributes value)? column,
+    TResult Function(ContainerAttributes value)? container,
+    TResult Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult Function(ExpandedAttributes value)? expanded,
+    TResult Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult Function(ImageAttributes value)? image,
+    TResult Function(PaddingAttributes value)? padding,
+    TResult Function(PageAttributes value)? page,
+    TResult Function(RowAttributes value)? row,
+    TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ScaffoldAttributes value)? scaffold,
+    TResult Function(SpacerAttributes value)? spacer,
+    TResult Function(TextAttributes value)? text,
+    required TResult orElse(),
+  }) {
+    if (appBar != null) {
+      return appBar(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$AppBarAttributesToJson(
+      this,
+    );
+  }
+}
+
+abstract class AppBarAttributes implements UIXAttributes {
+  const factory AppBarAttributes(
+      {final dynamic key,
+      required final String type,
+      final bool? centerTitle,
+      @UIXWidgetConverter() final Widget? title,
+      @UIXWidgetsConverter() final List<Widget>? actions}) = _$AppBarAttributes;
+
+  factory AppBarAttributes.fromJson(Map<String, dynamic> json) =
+      _$AppBarAttributes.fromJson;
+
+  @override
+  dynamic get key;
+  @override
+  String get type;
+  bool? get centerTitle;
+  @UIXWidgetConverter()
+  Widget? get title;
+  @UIXWidgetsConverter()
+  List<Widget>? get actions;
+  @override
+  @JsonKey(ignore: true)
+  _$$AppBarAttributesCopyWith<_$AppBarAttributes> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -852,6 +1427,13 @@ class _$ColumnAttributes implements ColumnAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)
+        appBar,
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         column,
@@ -904,6 +1486,13 @@ class _$ColumnAttributes implements ColumnAttributes {
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)
+        scaffold,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
@@ -921,6 +1510,13 @@ class _$ColumnAttributes implements ColumnAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -969,6 +1565,13 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -986,6 +1589,13 @@ class _$ColumnAttributes implements ColumnAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -1031,6 +1641,13 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -1047,6 +1664,7 @@ class _$ColumnAttributes implements ColumnAttributes {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AlignAttributes value) align,
+    required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
@@ -1058,6 +1676,7 @@ class _$ColumnAttributes implements ColumnAttributes {
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
     required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
     required TResult Function(TextAttributes value) text,
   }) {
@@ -1068,6 +1687,7 @@ class _$ColumnAttributes implements ColumnAttributes {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AlignAttributes value)? align,
+    TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -1079,6 +1699,7 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
     TResult? Function(TextAttributes value)? text,
   }) {
@@ -1089,6 +1710,7 @@ class _$ColumnAttributes implements ColumnAttributes {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AlignAttributes value)? align,
+    TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -1100,6 +1722,7 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
     TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
     TResult Function(TextAttributes value)? text,
     required TResult orElse(),
@@ -1303,6 +1926,13 @@ class _$ContainerAttributes implements ContainerAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)
+        appBar,
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         column,
@@ -1355,6 +1985,13 @@ class _$ContainerAttributes implements ContainerAttributes {
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)
+        scaffold,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
@@ -1373,6 +2010,13 @@ class _$ContainerAttributes implements ContainerAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -1421,6 +2065,13 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -1439,6 +2090,13 @@ class _$ContainerAttributes implements ContainerAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -1484,6 +2142,13 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -1501,6 +2166,7 @@ class _$ContainerAttributes implements ContainerAttributes {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AlignAttributes value) align,
+    required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
@@ -1512,6 +2178,7 @@ class _$ContainerAttributes implements ContainerAttributes {
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
     required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
     required TResult Function(TextAttributes value) text,
   }) {
@@ -1522,6 +2189,7 @@ class _$ContainerAttributes implements ContainerAttributes {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AlignAttributes value)? align,
+    TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -1533,6 +2201,7 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
     TResult? Function(TextAttributes value)? text,
   }) {
@@ -1543,6 +2212,7 @@ class _$ContainerAttributes implements ContainerAttributes {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AlignAttributes value)? align,
+    TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -1554,6 +2224,7 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
     TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
     TResult Function(TextAttributes value)? text,
     required TResult orElse(),
@@ -1753,6 +2424,13 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)
+        appBar,
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         column,
@@ -1805,6 +2483,13 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)
+        scaffold,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
@@ -1822,6 +2507,13 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -1870,6 +2562,13 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -1887,6 +2586,13 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -1932,6 +2638,13 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -1948,6 +2661,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AlignAttributes value) align,
+    required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
@@ -1959,6 +2673,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
     required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
     required TResult Function(TextAttributes value) text,
   }) {
@@ -1969,6 +2684,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AlignAttributes value)? align,
+    TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -1980,6 +2696,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
     TResult? Function(TextAttributes value)? text,
   }) {
@@ -1990,6 +2707,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AlignAttributes value)? align,
+    TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -2001,6 +2719,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
     TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
     TResult Function(TextAttributes value)? text,
     required TResult orElse(),
@@ -2153,6 +2872,13 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)
+        appBar,
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         column,
@@ -2205,6 +2931,13 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)
+        scaffold,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
@@ -2222,6 +2955,13 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -2270,6 +3010,13 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -2287,6 +3034,13 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -2332,6 +3086,13 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -2348,6 +3109,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AlignAttributes value) align,
+    required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
@@ -2359,6 +3121,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
     required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
     required TResult Function(TextAttributes value) text,
   }) {
@@ -2369,6 +3132,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AlignAttributes value)? align,
+    TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -2380,6 +3144,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
     TResult? Function(TextAttributes value)? text,
   }) {
@@ -2390,6 +3155,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AlignAttributes value)? align,
+    TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -2401,6 +3167,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
     TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
     TResult Function(TextAttributes value)? text,
     required TResult orElse(),
@@ -2591,6 +3358,13 @@ class _$FractionallySizedBoxAttributes
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)
+        appBar,
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         column,
@@ -2643,6 +3417,13 @@ class _$FractionallySizedBoxAttributes
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)
+        scaffold,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
@@ -2661,6 +3442,13 @@ class _$FractionallySizedBoxAttributes
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -2709,6 +3497,13 @@ class _$FractionallySizedBoxAttributes
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -2727,6 +3522,13 @@ class _$FractionallySizedBoxAttributes
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -2772,6 +3574,13 @@ class _$FractionallySizedBoxAttributes
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -2789,6 +3598,7 @@ class _$FractionallySizedBoxAttributes
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AlignAttributes value) align,
+    required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
@@ -2800,6 +3610,7 @@ class _$FractionallySizedBoxAttributes
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
     required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
     required TResult Function(TextAttributes value) text,
   }) {
@@ -2810,6 +3621,7 @@ class _$FractionallySizedBoxAttributes
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AlignAttributes value)? align,
+    TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -2821,6 +3633,7 @@ class _$FractionallySizedBoxAttributes
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
     TResult? Function(TextAttributes value)? text,
   }) {
@@ -2831,6 +3644,7 @@ class _$FractionallySizedBoxAttributes
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AlignAttributes value)? align,
+    TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -2842,6 +3656,7 @@ class _$FractionallySizedBoxAttributes
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
     TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
     TResult Function(TextAttributes value)? text,
     required TResult orElse(),
@@ -3036,6 +3851,13 @@ class _$ImageAttributes implements ImageAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)
+        appBar,
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         column,
@@ -3088,6 +3910,13 @@ class _$ImageAttributes implements ImageAttributes {
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)
+        scaffold,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
@@ -3105,6 +3934,13 @@ class _$ImageAttributes implements ImageAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -3153,6 +3989,13 @@ class _$ImageAttributes implements ImageAttributes {
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -3170,6 +4013,13 @@ class _$ImageAttributes implements ImageAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -3215,6 +4065,13 @@ class _$ImageAttributes implements ImageAttributes {
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -3231,6 +4088,7 @@ class _$ImageAttributes implements ImageAttributes {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AlignAttributes value) align,
+    required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
@@ -3242,6 +4100,7 @@ class _$ImageAttributes implements ImageAttributes {
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
     required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
     required TResult Function(TextAttributes value) text,
   }) {
@@ -3252,6 +4111,7 @@ class _$ImageAttributes implements ImageAttributes {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AlignAttributes value)? align,
+    TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -3263,6 +4123,7 @@ class _$ImageAttributes implements ImageAttributes {
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
     TResult? Function(TextAttributes value)? text,
   }) {
@@ -3273,6 +4134,7 @@ class _$ImageAttributes implements ImageAttributes {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AlignAttributes value)? align,
+    TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -3284,6 +4146,7 @@ class _$ImageAttributes implements ImageAttributes {
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
     TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
     TResult Function(TextAttributes value)? text,
     required TResult orElse(),
@@ -3441,6 +4304,13 @@ class _$PaddingAttributes implements PaddingAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)
+        appBar,
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         column,
@@ -3493,6 +4363,13 @@ class _$PaddingAttributes implements PaddingAttributes {
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)
+        scaffold,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
@@ -3510,6 +4387,13 @@ class _$PaddingAttributes implements PaddingAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -3558,6 +4442,13 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -3575,6 +4466,13 @@ class _$PaddingAttributes implements PaddingAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -3620,6 +4518,13 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -3636,6 +4541,7 @@ class _$PaddingAttributes implements PaddingAttributes {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AlignAttributes value) align,
+    required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
@@ -3647,6 +4553,7 @@ class _$PaddingAttributes implements PaddingAttributes {
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
     required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
     required TResult Function(TextAttributes value) text,
   }) {
@@ -3657,6 +4564,7 @@ class _$PaddingAttributes implements PaddingAttributes {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AlignAttributes value)? align,
+    TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -3668,6 +4576,7 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
     TResult? Function(TextAttributes value)? text,
   }) {
@@ -3678,6 +4587,7 @@ class _$PaddingAttributes implements PaddingAttributes {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AlignAttributes value)? align,
+    TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -3689,6 +4599,7 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
     TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
     TResult Function(TextAttributes value)? text,
     required TResult orElse(),
@@ -3855,6 +4766,13 @@ class _$PageAttributes implements PageAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)
+        appBar,
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         column,
@@ -3907,6 +4825,13 @@ class _$PageAttributes implements PageAttributes {
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)
+        scaffold,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
@@ -3924,6 +4849,13 @@ class _$PageAttributes implements PageAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -3972,6 +4904,13 @@ class _$PageAttributes implements PageAttributes {
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -3989,6 +4928,13 @@ class _$PageAttributes implements PageAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -4034,6 +4980,13 @@ class _$PageAttributes implements PageAttributes {
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -4050,6 +5003,7 @@ class _$PageAttributes implements PageAttributes {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AlignAttributes value) align,
+    required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
@@ -4061,6 +5015,7 @@ class _$PageAttributes implements PageAttributes {
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
     required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
     required TResult Function(TextAttributes value) text,
   }) {
@@ -4071,6 +5026,7 @@ class _$PageAttributes implements PageAttributes {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AlignAttributes value)? align,
+    TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -4082,6 +5038,7 @@ class _$PageAttributes implements PageAttributes {
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
     TResult? Function(TextAttributes value)? text,
   }) {
@@ -4092,6 +5049,7 @@ class _$PageAttributes implements PageAttributes {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AlignAttributes value)? align,
+    TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -4103,6 +5061,7 @@ class _$PageAttributes implements PageAttributes {
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
     TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
     TResult Function(TextAttributes value)? text,
     required TResult orElse(),
@@ -4251,6 +5210,13 @@ class _$RowAttributes implements RowAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)
+        appBar,
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         column,
@@ -4303,6 +5269,13 @@ class _$RowAttributes implements RowAttributes {
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)
+        scaffold,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
@@ -4320,6 +5293,13 @@ class _$RowAttributes implements RowAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -4368,6 +5348,13 @@ class _$RowAttributes implements RowAttributes {
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -4385,6 +5372,13 @@ class _$RowAttributes implements RowAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -4430,6 +5424,13 @@ class _$RowAttributes implements RowAttributes {
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -4446,6 +5447,7 @@ class _$RowAttributes implements RowAttributes {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AlignAttributes value) align,
+    required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
@@ -4457,6 +5459,7 @@ class _$RowAttributes implements RowAttributes {
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
     required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
     required TResult Function(TextAttributes value) text,
   }) {
@@ -4467,6 +5470,7 @@ class _$RowAttributes implements RowAttributes {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AlignAttributes value)? align,
+    TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -4478,6 +5482,7 @@ class _$RowAttributes implements RowAttributes {
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
     TResult? Function(TextAttributes value)? text,
   }) {
@@ -4488,6 +5493,7 @@ class _$RowAttributes implements RowAttributes {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AlignAttributes value)? align,
+    TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -4499,6 +5505,7 @@ class _$RowAttributes implements RowAttributes {
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
     TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
     TResult Function(TextAttributes value)? text,
     required TResult orElse(),
@@ -4660,6 +5667,13 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)
+        appBar,
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         column,
@@ -4712,6 +5726,13 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)
+        scaffold,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
@@ -4729,6 +5750,13 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -4777,6 +5805,13 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -4794,6 +5829,13 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -4839,6 +5881,13 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -4855,6 +5904,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AlignAttributes value) align,
+    required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
@@ -4866,6 +5916,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
     required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
     required TResult Function(TextAttributes value) text,
   }) {
@@ -4876,6 +5927,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AlignAttributes value)? align,
+    TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -4887,6 +5939,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
     TResult? Function(TextAttributes value)? text,
   }) {
@@ -4897,6 +5950,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AlignAttributes value)? align,
+    TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -4908,6 +5962,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
     TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
     TResult Function(TextAttributes value)? text,
     required TResult orElse(),
@@ -4948,6 +6003,476 @@ abstract class SizedBoxAttributes implements UIXAttributes {
   @override
   @JsonKey(ignore: true)
   _$$SizedBoxAttributesCopyWith<_$SizedBoxAttributes> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ScaffoldAttributesCopyWith<$Res>
+    implements $UIXAttributesCopyWith<$Res> {
+  factory _$$ScaffoldAttributesCopyWith(_$ScaffoldAttributes value,
+          $Res Function(_$ScaffoldAttributes) then) =
+      __$$ScaffoldAttributesCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {dynamic key,
+      String type,
+      @UIXColorConverter() Color? backgroundColor,
+      @UIXWidgetConverter() Widget? appBar,
+      @UIXWidgetConverter() Widget? body});
+}
+
+/// @nodoc
+class __$$ScaffoldAttributesCopyWithImpl<$Res>
+    extends _$UIXAttributesCopyWithImpl<$Res, _$ScaffoldAttributes>
+    implements _$$ScaffoldAttributesCopyWith<$Res> {
+  __$$ScaffoldAttributesCopyWithImpl(
+      _$ScaffoldAttributes _value, $Res Function(_$ScaffoldAttributes) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? type = null,
+    Object? backgroundColor = freezed,
+    Object? appBar = freezed,
+    Object? body = freezed,
+  }) {
+    return _then(_$ScaffoldAttributes(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      backgroundColor: freezed == backgroundColor
+          ? _value.backgroundColor
+          : backgroundColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      appBar: freezed == appBar
+          ? _value.appBar
+          : appBar // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+      body: freezed == body
+          ? _value.body
+          : body // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ScaffoldAttributes implements ScaffoldAttributes {
+  const _$ScaffoldAttributes(
+      {this.key,
+      required this.type,
+      @UIXColorConverter() this.backgroundColor,
+      @UIXWidgetConverter() this.appBar,
+      @UIXWidgetConverter() this.body});
+
+  factory _$ScaffoldAttributes.fromJson(Map<String, dynamic> json) =>
+      _$$ScaffoldAttributesFromJson(json);
+
+  @override
+  final dynamic key;
+  @override
+  final String type;
+  @override
+  @UIXColorConverter()
+  final Color? backgroundColor;
+  @override
+  @UIXWidgetConverter()
+  final Widget? appBar;
+  @override
+  @UIXWidgetConverter()
+  final Widget? body;
+
+  @override
+  String toString() {
+    return 'UIXAttributes.scaffold(key: $key, type: $type, backgroundColor: $backgroundColor, appBar: $appBar, body: $body)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ScaffoldAttributes &&
+            const DeepCollectionEquality().equals(other.key, key) &&
+            (identical(other.type, type) || other.type == type) &&
+            const DeepCollectionEquality()
+                .equals(other.backgroundColor, backgroundColor) &&
+            (identical(other.appBar, appBar) || other.appBar == appBar) &&
+            (identical(other.body, body) || other.body == body));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(key),
+      type,
+      const DeepCollectionEquality().hash(backgroundColor),
+      appBar,
+      body);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ScaffoldAttributesCopyWith<_$ScaffoldAttributes> get copyWith =>
+      __$$ScaffoldAttributesCopyWithImpl<_$ScaffoldAttributes>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)
+        appBar,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        column,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXWidgetConverter() Widget? child)
+        container,
+    required TResult Function(
+            dynamic key,
+            String type,
+            List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress,
+            @UIXWidgetConverter() Widget? child)
+        elevatedButton,
+    required TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)
+        expanded,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        fractionallySizedBox,
+    required TResult Function(dynamic key, String type, String path,
+            double? height, double? width, BoxFit? fit, UIXImageSource source)
+        image,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)
+        padding,
+    required TResult Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)
+        page,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        row,
+    required TResult Function(dynamic key, String type, double? height,
+            double? width, @UIXWidgetConverter() Widget? child)
+        sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)
+        scaffold,
+    required TResult Function(dynamic key, String type, int flex) spacer,
+    required TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)
+        text,
+  }) {
+    return scaffold(key, type, backgroundColor, this.appBar, body);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult? Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult? Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, UIXImageSource source)?
+        image,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    TResult? Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult? Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
+    TResult? Function(dynamic key, String type, int flex)? spacer,
+    TResult? Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+  }) {
+    return scaffold?.call(key, type, backgroundColor, this.appBar, body);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, UIXImageSource source)?
+        image,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
+    TResult Function(dynamic key, String type, int flex)? spacer,
+    TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    required TResult orElse(),
+  }) {
+    if (scaffold != null) {
+      return scaffold(key, type, backgroundColor, this.appBar, body);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AlignAttributes value) align,
+    required TResult Function(AppBarAttributes value) appBar,
+    required TResult Function(ColumnAttributes value) column,
+    required TResult Function(ContainerAttributes value) container,
+    required TResult Function(ElevatedButtonAttributes value) elevatedButton,
+    required TResult Function(ExpandedAttributes value) expanded,
+    required TResult Function(FractionallySizedBoxAttributes value)
+        fractionallySizedBox,
+    required TResult Function(ImageAttributes value) image,
+    required TResult Function(PaddingAttributes value) padding,
+    required TResult Function(PageAttributes value) page,
+    required TResult Function(RowAttributes value) row,
+    required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ScaffoldAttributes value) scaffold,
+    required TResult Function(SpacerAttributes value) spacer,
+    required TResult Function(TextAttributes value) text,
+  }) {
+    return scaffold(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AlignAttributes value)? align,
+    TResult? Function(AppBarAttributes value)? appBar,
+    TResult? Function(ColumnAttributes value)? column,
+    TResult? Function(ContainerAttributes value)? container,
+    TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult? Function(ExpandedAttributes value)? expanded,
+    TResult? Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult? Function(ImageAttributes value)? image,
+    TResult? Function(PaddingAttributes value)? padding,
+    TResult? Function(PageAttributes value)? page,
+    TResult? Function(RowAttributes value)? row,
+    TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ScaffoldAttributes value)? scaffold,
+    TResult? Function(SpacerAttributes value)? spacer,
+    TResult? Function(TextAttributes value)? text,
+  }) {
+    return scaffold?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AlignAttributes value)? align,
+    TResult Function(AppBarAttributes value)? appBar,
+    TResult Function(ColumnAttributes value)? column,
+    TResult Function(ContainerAttributes value)? container,
+    TResult Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult Function(ExpandedAttributes value)? expanded,
+    TResult Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult Function(ImageAttributes value)? image,
+    TResult Function(PaddingAttributes value)? padding,
+    TResult Function(PageAttributes value)? page,
+    TResult Function(RowAttributes value)? row,
+    TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ScaffoldAttributes value)? scaffold,
+    TResult Function(SpacerAttributes value)? spacer,
+    TResult Function(TextAttributes value)? text,
+    required TResult orElse(),
+  }) {
+    if (scaffold != null) {
+      return scaffold(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ScaffoldAttributesToJson(
+      this,
+    );
+  }
+}
+
+abstract class ScaffoldAttributes implements UIXAttributes {
+  const factory ScaffoldAttributes(
+      {final dynamic key,
+      required final String type,
+      @UIXColorConverter() final Color? backgroundColor,
+      @UIXWidgetConverter() final Widget? appBar,
+      @UIXWidgetConverter() final Widget? body}) = _$ScaffoldAttributes;
+
+  factory ScaffoldAttributes.fromJson(Map<String, dynamic> json) =
+      _$ScaffoldAttributes.fromJson;
+
+  @override
+  dynamic get key;
+  @override
+  String get type;
+  @UIXColorConverter()
+  Color? get backgroundColor;
+  @UIXWidgetConverter()
+  Widget? get appBar;
+  @UIXWidgetConverter()
+  Widget? get body;
+  @override
+  @JsonKey(ignore: true)
+  _$$ScaffoldAttributesCopyWith<_$ScaffoldAttributes> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5045,6 +6570,13 @@ class _$SpacerAttributes implements SpacerAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)
+        appBar,
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         column,
@@ -5097,6 +6629,13 @@ class _$SpacerAttributes implements SpacerAttributes {
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)
+        scaffold,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
@@ -5114,6 +6653,13 @@ class _$SpacerAttributes implements SpacerAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -5162,6 +6708,13 @@ class _$SpacerAttributes implements SpacerAttributes {
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -5179,6 +6732,13 @@ class _$SpacerAttributes implements SpacerAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -5224,6 +6784,13 @@ class _$SpacerAttributes implements SpacerAttributes {
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -5240,6 +6807,7 @@ class _$SpacerAttributes implements SpacerAttributes {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AlignAttributes value) align,
+    required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
@@ -5251,6 +6819,7 @@ class _$SpacerAttributes implements SpacerAttributes {
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
     required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
     required TResult Function(TextAttributes value) text,
   }) {
@@ -5261,6 +6830,7 @@ class _$SpacerAttributes implements SpacerAttributes {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AlignAttributes value)? align,
+    TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -5272,6 +6842,7 @@ class _$SpacerAttributes implements SpacerAttributes {
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
     TResult? Function(TextAttributes value)? text,
   }) {
@@ -5282,6 +6853,7 @@ class _$SpacerAttributes implements SpacerAttributes {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AlignAttributes value)? align,
+    TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -5293,6 +6865,7 @@ class _$SpacerAttributes implements SpacerAttributes {
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
     TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
     TResult Function(TextAttributes value)? text,
     required TResult orElse(),
@@ -5447,6 +7020,13 @@ class _$TextAttributes implements TextAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)
+        appBar,
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         column,
@@ -5499,6 +7079,13 @@ class _$TextAttributes implements TextAttributes {
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)
+        scaffold,
     required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)
@@ -5516,6 +7103,13 @@ class _$TextAttributes implements TextAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -5564,6 +7158,13 @@ class _$TextAttributes implements TextAttributes {
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult? Function(dynamic key, String type, int flex)? spacer,
     TResult? Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -5581,6 +7182,13 @@ class _$TextAttributes implements TextAttributes {
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         align,
+    TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
@@ -5626,6 +7234,13 @@ class _$TextAttributes implements TextAttributes {
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
     TResult Function(dynamic key, String type, int flex)? spacer,
     TResult Function(
             dynamic key, String type, String text, UIXTextStyle? style)?
@@ -5642,6 +7257,7 @@ class _$TextAttributes implements TextAttributes {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AlignAttributes value) align,
+    required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
     required TResult Function(ElevatedButtonAttributes value) elevatedButton,
@@ -5653,6 +7269,7 @@ class _$TextAttributes implements TextAttributes {
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
     required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
     required TResult Function(TextAttributes value) text,
   }) {
@@ -5663,6 +7280,7 @@ class _$TextAttributes implements TextAttributes {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AlignAttributes value)? align,
+    TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
     TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -5674,6 +7292,7 @@ class _$TextAttributes implements TextAttributes {
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
     TResult? Function(TextAttributes value)? text,
   }) {
@@ -5684,6 +7303,7 @@ class _$TextAttributes implements TextAttributes {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AlignAttributes value)? align,
+    TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
     TResult Function(ElevatedButtonAttributes value)? elevatedButton,
@@ -5695,6 +7315,7 @@ class _$TextAttributes implements TextAttributes {
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
     TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
     TResult Function(TextAttributes value)? text,
     required TResult orElse(),

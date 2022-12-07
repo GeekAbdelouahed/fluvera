@@ -19,14 +19,24 @@ extension UIXActionExtension on UIXAction {
           context: context,
           barrierDismissible: attributes.barrierDismissible,
           builder: (_) {
+            final provider = UIXProvider.of<UIXAttributesNotifier>(context);
+            if (provider == null) {
+              attributes.child;
+            }
+
             return UIXProvider<UIXAttributesNotifier>(
-              value: UIXProvider.of<UIXAttributesNotifier>(context).value,
+              value: provider!.value,
               child: attributes.child,
             );
           },
         );
       },
       showBottomSheet: (attributes) async {
+        final provider = UIXProvider.of<UIXAttributesNotifier>(context);
+        if (provider == null) {
+          attributes.child;
+        }
+
         return showBottomSheet(
           context: context,
           enableDrag: attributes.enableDrag,
@@ -34,14 +44,14 @@ extension UIXActionExtension on UIXAction {
           backgroundColor: attributes.backgroundColor,
           builder: (_) {
             return UIXProvider<UIXAttributesNotifier>(
-              value: UIXProvider.of<UIXAttributesNotifier>(context).value,
+              value: provider!.value,
               child: attributes.child,
             );
           },
         ).closed;
       },
       updateAttribute: (attributes) async {
-        UIXProvider.of<UIXAttributesNotifier>(context).value.update(attributes.key, attributes.value);
+        UIXProvider.of<UIXAttributesNotifier>(context)!.value.update(attributes.key, attributes.value);
       },
     );
   }

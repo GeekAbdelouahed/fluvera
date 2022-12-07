@@ -16,6 +16,8 @@ extension UIXAttributeExtension on UIXAttributes {
       expanded: (attributes) => UIXExpanded(attributes),
       spacer: (attributes) => UIXSpacer(attributes),
       image: (attributes) => UIXImage(attributes),
+      appBar: (attributes) => UIXAppBar(attributes),
+      scaffold: (attributes) => UIXScaffold(attributes),
     ).build();
   }
 }
