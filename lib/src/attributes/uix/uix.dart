@@ -70,6 +70,15 @@ class UIXAttributes with _$UIXAttributes {
     @UIXWidgetConverter() Widget? child,
   }) = FractionallySizedBoxAttributes;
 
+  const factory UIXAttributes.icon({
+    dynamic key,
+    required String type,
+    required int code,
+    double? size,
+    @Default('MaterialIcons') String fontFamily,
+    @UIXColorConverter() Color? color,
+  }) = IconAttributes;
+
   const factory UIXAttributes.image({
     dynamic key,
     required String type,
@@ -79,6 +88,14 @@ class UIXAttributes with _$UIXAttributes {
     BoxFit? fit,
     @Default(UIXImageSource.network) UIXImageSource source,
   }) = ImageAttributes;
+
+  const factory UIXAttributes.inkWell({
+    dynamic key,
+    required String type,
+    List<UIXAction>? onPressed,
+    List<UIXAction>? onLongPress,
+    @UIXWidgetConverter() Widget? child,
+  }) = InkWellAttributes;
 
   const factory UIXAttributes.padding({
     dynamic key,

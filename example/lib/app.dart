@@ -1,3 +1,4 @@
+import 'package:example/ui/details/details.dart';
 import 'package:example/ui/home/home.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,16 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      routes: {
+        '/': (context) {
+          return const HomePage();
+        },
+        'details': (context) {
+          final String id = (ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>)['id'];
+          return DetailsPage(id: id);
+        }
+      },
+      initialRoute: '/',
     );
   }
 }

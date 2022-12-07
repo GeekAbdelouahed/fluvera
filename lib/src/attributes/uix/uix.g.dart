@@ -225,6 +225,26 @@ Map<String, dynamic> _$$FractionallySizedBoxAttributesToJson(
           instance.child, const UIXWidgetConverter().toJson),
     };
 
+_$IconAttributes _$$IconAttributesFromJson(Map<String, dynamic> json) =>
+    _$IconAttributes(
+      key: json['key'],
+      type: json['type'] as String,
+      code: json['code'] as int,
+      size: (json['size'] as num?)?.toDouble(),
+      fontFamily: json['fontFamily'] as String? ?? 'MaterialIcons',
+      color: const UIXColorConverter().fromJson(json['color'] as String?),
+    );
+
+Map<String, dynamic> _$$IconAttributesToJson(_$IconAttributes instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'type': instance.type,
+      'code': instance.code,
+      'size': instance.size,
+      'fontFamily': instance.fontFamily,
+      'color': const UIXColorConverter().toJson(instance.color),
+    };
+
 _$ImageAttributes _$$ImageAttributesFromJson(Map<String, dynamic> json) =>
     _$ImageAttributes(
       key: json['key'],
@@ -263,6 +283,30 @@ const _$UIXImageSourceEnumMap = {
   UIXImageSource.assets: 'assets',
   UIXImageSource.file: 'file',
 };
+
+_$InkWellAttributes _$$InkWellAttributesFromJson(Map<String, dynamic> json) =>
+    _$InkWellAttributes(
+      key: json['key'],
+      type: json['type'] as String,
+      onPressed: (json['onPressed'] as List<dynamic>?)
+          ?.map((e) => UIXAction.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      onLongPress: (json['onLongPress'] as List<dynamic>?)
+          ?.map((e) => UIXAction.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
+          json['child'], const UIXWidgetConverter().fromJson),
+    );
+
+Map<String, dynamic> _$$InkWellAttributesToJson(_$InkWellAttributes instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'type': instance.type,
+      'onPressed': instance.onPressed,
+      'onLongPress': instance.onLongPress,
+      'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
+          instance.child, const UIXWidgetConverter().toJson),
+    };
 
 _$PaddingAttributes _$$PaddingAttributesFromJson(Map<String, dynamic> json) =>
     _$PaddingAttributes(
