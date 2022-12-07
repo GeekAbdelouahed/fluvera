@@ -74,7 +74,12 @@ mixin _$UIXAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)
         appBar,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         column,
     required TResult Function(
@@ -83,8 +88,9 @@ mixin _$UIXAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -120,7 +126,12 @@ mixin _$UIXAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)
         page,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         row,
     required TResult Function(
@@ -157,7 +168,12 @@ mixin _$UIXAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(
@@ -166,8 +182,9 @@ mixin _$UIXAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -199,7 +216,12 @@ mixin _$UIXAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult? Function(
@@ -236,7 +258,12 @@ mixin _$UIXAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(
@@ -245,8 +272,9 @@ mixin _$UIXAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -275,7 +303,12 @@ mixin _$UIXAttributes {
     TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult Function(
@@ -531,7 +564,12 @@ class _$AlignAttributes implements AlignAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)
         appBar,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         column,
     required TResult Function(
@@ -540,8 +578,9 @@ class _$AlignAttributes implements AlignAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -577,7 +616,12 @@ class _$AlignAttributes implements AlignAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)
         page,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         row,
     required TResult Function(
@@ -617,7 +661,12 @@ class _$AlignAttributes implements AlignAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(
@@ -626,8 +675,9 @@ class _$AlignAttributes implements AlignAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -659,7 +709,12 @@ class _$AlignAttributes implements AlignAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult? Function(
@@ -699,7 +754,12 @@ class _$AlignAttributes implements AlignAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(
@@ -708,8 +768,9 @@ class _$AlignAttributes implements AlignAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -738,7 +799,12 @@ class _$AlignAttributes implements AlignAttributes {
     TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult Function(
@@ -1019,7 +1085,12 @@ class _$AppBarAttributes implements AppBarAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)
         appBar,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         column,
     required TResult Function(
@@ -1028,8 +1099,9 @@ class _$AppBarAttributes implements AppBarAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -1065,7 +1137,12 @@ class _$AppBarAttributes implements AppBarAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)
         page,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         row,
     required TResult Function(
@@ -1105,7 +1182,12 @@ class _$AppBarAttributes implements AppBarAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(
@@ -1114,8 +1196,9 @@ class _$AppBarAttributes implements AppBarAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -1147,7 +1230,12 @@ class _$AppBarAttributes implements AppBarAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult? Function(
@@ -1187,7 +1275,12 @@ class _$AppBarAttributes implements AppBarAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(
@@ -1196,8 +1289,9 @@ class _$AppBarAttributes implements AppBarAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -1226,7 +1320,12 @@ class _$AppBarAttributes implements AppBarAttributes {
     TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult Function(
@@ -1376,7 +1475,12 @@ abstract class _$$ColumnAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {dynamic key, String type, @UIXWidgetsConverter() List<Widget> children});
+      {dynamic key,
+      String type,
+      MainAxisSize mainAxisSize,
+      MainAxisAlignment mainAxisAlignment,
+      CrossAxisAlignment crossAxisAlignment,
+      @UIXWidgetsConverter() List<Widget> children});
 }
 
 /// @nodoc
@@ -1392,6 +1496,9 @@ class __$$ColumnAttributesCopyWithImpl<$Res>
   $Res call({
     Object? key = freezed,
     Object? type = null,
+    Object? mainAxisSize = null,
+    Object? mainAxisAlignment = null,
+    Object? crossAxisAlignment = null,
     Object? children = null,
   }) {
     return _then(_$ColumnAttributes(
@@ -1403,6 +1510,18 @@ class __$$ColumnAttributesCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
+      mainAxisSize: null == mainAxisSize
+          ? _value.mainAxisSize
+          : mainAxisSize // ignore: cast_nullable_to_non_nullable
+              as MainAxisSize,
+      mainAxisAlignment: null == mainAxisAlignment
+          ? _value.mainAxisAlignment
+          : mainAxisAlignment // ignore: cast_nullable_to_non_nullable
+              as MainAxisAlignment,
+      crossAxisAlignment: null == crossAxisAlignment
+          ? _value.crossAxisAlignment
+          : crossAxisAlignment // ignore: cast_nullable_to_non_nullable
+              as CrossAxisAlignment,
       children: null == children
           ? _value._children
           : children // ignore: cast_nullable_to_non_nullable
@@ -1417,6 +1536,9 @@ class _$ColumnAttributes implements ColumnAttributes {
   const _$ColumnAttributes(
       {this.key,
       required this.type,
+      this.mainAxisSize = MainAxisSize.max,
+      this.mainAxisAlignment = MainAxisAlignment.start,
+      this.crossAxisAlignment = CrossAxisAlignment.center,
       @UIXWidgetsConverter() required final List<Widget> children})
       : _children = children;
 
@@ -1427,6 +1549,15 @@ class _$ColumnAttributes implements ColumnAttributes {
   final dynamic key;
   @override
   final String type;
+  @override
+  @JsonKey()
+  final MainAxisSize mainAxisSize;
+  @override
+  @JsonKey()
+  final MainAxisAlignment mainAxisAlignment;
+  @override
+  @JsonKey()
+  final CrossAxisAlignment crossAxisAlignment;
   final List<Widget> _children;
   @override
   @UIXWidgetsConverter()
@@ -1438,7 +1569,7 @@ class _$ColumnAttributes implements ColumnAttributes {
 
   @override
   String toString() {
-    return 'UIXAttributes.column(key: $key, type: $type, children: $children)';
+    return 'UIXAttributes.column(key: $key, type: $type, mainAxisSize: $mainAxisSize, mainAxisAlignment: $mainAxisAlignment, crossAxisAlignment: $crossAxisAlignment, children: $children)';
   }
 
   @override
@@ -1448,6 +1579,12 @@ class _$ColumnAttributes implements ColumnAttributes {
             other is _$ColumnAttributes &&
             const DeepCollectionEquality().equals(other.key, key) &&
             (identical(other.type, type) || other.type == type) &&
+            (identical(other.mainAxisSize, mainAxisSize) ||
+                other.mainAxisSize == mainAxisSize) &&
+            (identical(other.mainAxisAlignment, mainAxisAlignment) ||
+                other.mainAxisAlignment == mainAxisAlignment) &&
+            (identical(other.crossAxisAlignment, crossAxisAlignment) ||
+                other.crossAxisAlignment == crossAxisAlignment) &&
             const DeepCollectionEquality().equals(other._children, _children));
   }
 
@@ -1457,6 +1594,9 @@ class _$ColumnAttributes implements ColumnAttributes {
       runtimeType,
       const DeepCollectionEquality().hash(key),
       type,
+      mainAxisSize,
+      mainAxisAlignment,
+      crossAxisAlignment,
       const DeepCollectionEquality().hash(_children));
 
   @JsonKey(ignore: true)
@@ -1481,7 +1621,12 @@ class _$ColumnAttributes implements ColumnAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)
         appBar,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         column,
     required TResult Function(
@@ -1490,8 +1635,9 @@ class _$ColumnAttributes implements ColumnAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -1527,7 +1673,12 @@ class _$ColumnAttributes implements ColumnAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)
         page,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         row,
     required TResult Function(
@@ -1548,7 +1699,8 @@ class _$ColumnAttributes implements ColumnAttributes {
             dynamic key, String type, String text, UIXTextStyle? style)
         text,
   }) {
-    return column(key, type, children);
+    return column(key, type, mainAxisSize, mainAxisAlignment,
+        crossAxisAlignment, children);
   }
 
   @override
@@ -1567,7 +1719,12 @@ class _$ColumnAttributes implements ColumnAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(
@@ -1576,8 +1733,9 @@ class _$ColumnAttributes implements ColumnAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -1609,7 +1767,12 @@ class _$ColumnAttributes implements ColumnAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult? Function(
@@ -1630,7 +1793,8 @@ class _$ColumnAttributes implements ColumnAttributes {
             dynamic key, String type, String text, UIXTextStyle? style)?
         text,
   }) {
-    return column?.call(key, type, children);
+    return column?.call(key, type, mainAxisSize, mainAxisAlignment,
+        crossAxisAlignment, children);
   }
 
   @override
@@ -1649,7 +1813,12 @@ class _$ColumnAttributes implements ColumnAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(
@@ -1658,8 +1827,9 @@ class _$ColumnAttributes implements ColumnAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -1688,7 +1858,12 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult Function(
@@ -1711,7 +1886,8 @@ class _$ColumnAttributes implements ColumnAttributes {
     required TResult orElse(),
   }) {
     if (column != null) {
-      return column(key, type, children);
+      return column(key, type, mainAxisSize, mainAxisAlignment,
+          crossAxisAlignment, children);
     }
     return orElse();
   }
@@ -1807,6 +1983,9 @@ abstract class ColumnAttributes implements UIXAttributes {
   const factory ColumnAttributes(
           {final dynamic key,
           required final String type,
+          final MainAxisSize mainAxisSize,
+          final MainAxisAlignment mainAxisAlignment,
+          final CrossAxisAlignment crossAxisAlignment,
           @UIXWidgetsConverter() required final List<Widget> children}) =
       _$ColumnAttributes;
 
@@ -1817,6 +1996,9 @@ abstract class ColumnAttributes implements UIXAttributes {
   dynamic get key;
   @override
   String get type;
+  MainAxisSize get mainAxisSize;
+  MainAxisAlignment get mainAxisAlignment;
+  CrossAxisAlignment get crossAxisAlignment;
   @UIXWidgetsConverter()
   List<Widget> get children;
   @override
@@ -1839,8 +2021,9 @@ abstract class _$$ContainerAttributesCopyWith<$Res>
       double? height,
       double? width,
       @UIXColorConverter() Color? color,
-      @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+      @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
       @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+      @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
       @UIXWidgetConverter() Widget? child});
 }
 
@@ -1860,8 +2043,9 @@ class __$$ContainerAttributesCopyWithImpl<$Res>
     Object? height = freezed,
     Object? width = freezed,
     Object? color = freezed,
-    Object? alignment = freezed,
+    Object? margin = freezed,
     Object? padding = freezed,
+    Object? alignment = freezed,
     Object? child = freezed,
   }) {
     return _then(_$ContainerAttributes(
@@ -1885,14 +2069,18 @@ class __$$ContainerAttributesCopyWithImpl<$Res>
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as Color?,
-      alignment: freezed == alignment
-          ? _value.alignment
-          : alignment // ignore: cast_nullable_to_non_nullable
-              as AlignmentGeometry?,
+      margin: freezed == margin
+          ? _value.margin
+          : margin // ignore: cast_nullable_to_non_nullable
+              as EdgeInsetsGeometry?,
       padding: freezed == padding
           ? _value.padding
           : padding // ignore: cast_nullable_to_non_nullable
               as EdgeInsetsGeometry?,
+      alignment: freezed == alignment
+          ? _value.alignment
+          : alignment // ignore: cast_nullable_to_non_nullable
+              as AlignmentGeometry?,
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
@@ -1910,8 +2098,9 @@ class _$ContainerAttributes implements ContainerAttributes {
       this.height,
       this.width,
       @UIXColorConverter() this.color,
-      @UIXAlignmentGeometryConverter() this.alignment,
+      @UIXEdgeInsetsConverter() this.margin,
       @UIXEdgeInsetsConverter() this.padding,
+      @UIXAlignmentGeometryConverter() this.alignment,
       @UIXWidgetConverter() this.child});
 
   factory _$ContainerAttributes.fromJson(Map<String, dynamic> json) =>
@@ -1929,18 +2118,21 @@ class _$ContainerAttributes implements ContainerAttributes {
   @UIXColorConverter()
   final Color? color;
   @override
-  @UIXAlignmentGeometryConverter()
-  final AlignmentGeometry? alignment;
+  @UIXEdgeInsetsConverter()
+  final EdgeInsetsGeometry? margin;
   @override
   @UIXEdgeInsetsConverter()
   final EdgeInsetsGeometry? padding;
+  @override
+  @UIXAlignmentGeometryConverter()
+  final AlignmentGeometry? alignment;
   @override
   @UIXWidgetConverter()
   final Widget? child;
 
   @override
   String toString() {
-    return 'UIXAttributes.container(key: $key, type: $type, height: $height, width: $width, color: $color, alignment: $alignment, padding: $padding, child: $child)';
+    return 'UIXAttributes.container(key: $key, type: $type, height: $height, width: $width, color: $color, margin: $margin, padding: $padding, alignment: $alignment, child: $child)';
   }
 
   @override
@@ -1953,9 +2145,10 @@ class _$ContainerAttributes implements ContainerAttributes {
             (identical(other.height, height) || other.height == height) &&
             (identical(other.width, width) || other.width == width) &&
             const DeepCollectionEquality().equals(other.color, color) &&
+            (identical(other.margin, margin) || other.margin == margin) &&
+            (identical(other.padding, padding) || other.padding == padding) &&
             (identical(other.alignment, alignment) ||
                 other.alignment == alignment) &&
-            (identical(other.padding, padding) || other.padding == padding) &&
             (identical(other.child, child) || other.child == child));
   }
 
@@ -1968,8 +2161,9 @@ class _$ContainerAttributes implements ContainerAttributes {
       height,
       width,
       const DeepCollectionEquality().hash(color),
-      alignment,
+      margin,
       padding,
+      alignment,
       child);
 
   @JsonKey(ignore: true)
@@ -1995,7 +2189,12 @@ class _$ContainerAttributes implements ContainerAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)
         appBar,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         column,
     required TResult Function(
@@ -2004,8 +2203,9 @@ class _$ContainerAttributes implements ContainerAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -2041,7 +2241,12 @@ class _$ContainerAttributes implements ContainerAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)
         page,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         row,
     required TResult Function(
@@ -2062,8 +2267,8 @@ class _$ContainerAttributes implements ContainerAttributes {
             dynamic key, String type, String text, UIXTextStyle? style)
         text,
   }) {
-    return container(
-        key, type, height, width, color, alignment, this.padding, child);
+    return container(key, type, height, width, color, margin, this.padding,
+        alignment, child);
   }
 
   @override
@@ -2082,7 +2287,12 @@ class _$ContainerAttributes implements ContainerAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(
@@ -2091,8 +2301,9 @@ class _$ContainerAttributes implements ContainerAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -2124,7 +2335,12 @@ class _$ContainerAttributes implements ContainerAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult? Function(
@@ -2145,8 +2361,8 @@ class _$ContainerAttributes implements ContainerAttributes {
             dynamic key, String type, String text, UIXTextStyle? style)?
         text,
   }) {
-    return container?.call(
-        key, type, height, width, color, alignment, this.padding, child);
+    return container?.call(key, type, height, width, color, margin,
+        this.padding, alignment, child);
   }
 
   @override
@@ -2165,7 +2381,12 @@ class _$ContainerAttributes implements ContainerAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(
@@ -2174,8 +2395,9 @@ class _$ContainerAttributes implements ContainerAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -2204,7 +2426,12 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult Function(
@@ -2227,8 +2454,8 @@ class _$ContainerAttributes implements ContainerAttributes {
     required TResult orElse(),
   }) {
     if (container != null) {
-      return container(
-          key, type, height, width, color, alignment, this.padding, child);
+      return container(key, type, height, width, color, margin, this.padding,
+          alignment, child);
     }
     return orElse();
   }
@@ -2327,8 +2554,9 @@ abstract class ContainerAttributes implements UIXAttributes {
       final double? height,
       final double? width,
       @UIXColorConverter() final Color? color,
-      @UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
+      @UIXEdgeInsetsConverter() final EdgeInsetsGeometry? margin,
       @UIXEdgeInsetsConverter() final EdgeInsetsGeometry? padding,
+      @UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
       @UIXWidgetConverter() final Widget? child}) = _$ContainerAttributes;
 
   factory ContainerAttributes.fromJson(Map<String, dynamic> json) =
@@ -2342,10 +2570,12 @@ abstract class ContainerAttributes implements UIXAttributes {
   double? get width;
   @UIXColorConverter()
   Color? get color;
-  @UIXAlignmentGeometryConverter()
-  AlignmentGeometry? get alignment;
+  @UIXEdgeInsetsConverter()
+  EdgeInsetsGeometry? get margin;
   @UIXEdgeInsetsConverter()
   EdgeInsetsGeometry? get padding;
+  @UIXAlignmentGeometryConverter()
+  AlignmentGeometry? get alignment;
   @UIXWidgetConverter()
   Widget? get child;
   @override
@@ -2508,7 +2738,12 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)
         appBar,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         column,
     required TResult Function(
@@ -2517,8 +2752,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -2554,7 +2790,12 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)
         page,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         row,
     required TResult Function(
@@ -2594,7 +2835,12 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(
@@ -2603,8 +2849,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -2636,7 +2883,12 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult? Function(
@@ -2676,7 +2928,12 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(
@@ -2685,8 +2942,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -2715,7 +2973,12 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult Function(
@@ -2971,7 +3234,12 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)
         appBar,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         column,
     required TResult Function(
@@ -2980,8 +3248,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -3017,7 +3286,12 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)
         page,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         row,
     required TResult Function(
@@ -3057,7 +3331,12 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(
@@ -3066,8 +3345,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -3099,7 +3379,12 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult? Function(
@@ -3139,7 +3424,12 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(
@@ -3148,8 +3438,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -3178,7 +3469,12 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult Function(
@@ -3472,7 +3768,12 @@ class _$FractionallySizedBoxAttributes
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)
         appBar,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         column,
     required TResult Function(
@@ -3481,8 +3782,9 @@ class _$FractionallySizedBoxAttributes
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -3518,7 +3820,12 @@ class _$FractionallySizedBoxAttributes
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)
         page,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         row,
     required TResult Function(
@@ -3559,7 +3866,12 @@ class _$FractionallySizedBoxAttributes
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(
@@ -3568,8 +3880,9 @@ class _$FractionallySizedBoxAttributes
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -3601,7 +3914,12 @@ class _$FractionallySizedBoxAttributes
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult? Function(
@@ -3642,7 +3960,12 @@ class _$FractionallySizedBoxAttributes
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(
@@ -3651,8 +3974,9 @@ class _$FractionallySizedBoxAttributes
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -3681,7 +4005,12 @@ class _$FractionallySizedBoxAttributes
     TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult Function(
@@ -3980,7 +4309,12 @@ class _$ImageAttributes implements ImageAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)
         appBar,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         column,
     required TResult Function(
@@ -3989,8 +4323,9 @@ class _$ImageAttributes implements ImageAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -4026,7 +4361,12 @@ class _$ImageAttributes implements ImageAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)
         page,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         row,
     required TResult Function(
@@ -4066,7 +4406,12 @@ class _$ImageAttributes implements ImageAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(
@@ -4075,8 +4420,9 @@ class _$ImageAttributes implements ImageAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -4108,7 +4454,12 @@ class _$ImageAttributes implements ImageAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult? Function(
@@ -4148,7 +4499,12 @@ class _$ImageAttributes implements ImageAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(
@@ -4157,8 +4513,9 @@ class _$ImageAttributes implements ImageAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -4187,7 +4544,12 @@ class _$ImageAttributes implements ImageAttributes {
     TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult Function(
@@ -4448,7 +4810,12 @@ class _$PaddingAttributes implements PaddingAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)
         appBar,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         column,
     required TResult Function(
@@ -4457,8 +4824,9 @@ class _$PaddingAttributes implements PaddingAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -4494,7 +4862,12 @@ class _$PaddingAttributes implements PaddingAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)
         page,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         row,
     required TResult Function(
@@ -4534,7 +4907,12 @@ class _$PaddingAttributes implements PaddingAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(
@@ -4543,8 +4921,9 @@ class _$PaddingAttributes implements PaddingAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -4576,7 +4955,12 @@ class _$PaddingAttributes implements PaddingAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult? Function(
@@ -4616,7 +5000,12 @@ class _$PaddingAttributes implements PaddingAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(
@@ -4625,8 +5014,9 @@ class _$PaddingAttributes implements PaddingAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -4655,7 +5045,12 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult Function(
@@ -4925,7 +5320,12 @@ class _$PageAttributes implements PageAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)
         appBar,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         column,
     required TResult Function(
@@ -4934,8 +5334,9 @@ class _$PageAttributes implements PageAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -4971,7 +5372,12 @@ class _$PageAttributes implements PageAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)
         page,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         row,
     required TResult Function(
@@ -5011,7 +5417,12 @@ class _$PageAttributes implements PageAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(
@@ -5020,8 +5431,9 @@ class _$PageAttributes implements PageAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -5053,7 +5465,12 @@ class _$PageAttributes implements PageAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult? Function(
@@ -5093,7 +5510,12 @@ class _$PageAttributes implements PageAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(
@@ -5102,8 +5524,9 @@ class _$PageAttributes implements PageAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -5132,7 +5555,12 @@ class _$PageAttributes implements PageAttributes {
     TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult Function(
@@ -5279,7 +5707,12 @@ abstract class _$$RowAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {dynamic key, String type, @UIXWidgetsConverter() List<Widget> children});
+      {dynamic key,
+      String type,
+      MainAxisSize mainAxisSize,
+      MainAxisAlignment mainAxisAlignment,
+      CrossAxisAlignment crossAxisAlignment,
+      @UIXWidgetsConverter() List<Widget> children});
 }
 
 /// @nodoc
@@ -5295,6 +5728,9 @@ class __$$RowAttributesCopyWithImpl<$Res>
   $Res call({
     Object? key = freezed,
     Object? type = null,
+    Object? mainAxisSize = null,
+    Object? mainAxisAlignment = null,
+    Object? crossAxisAlignment = null,
     Object? children = null,
   }) {
     return _then(_$RowAttributes(
@@ -5306,6 +5742,18 @@ class __$$RowAttributesCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
+      mainAxisSize: null == mainAxisSize
+          ? _value.mainAxisSize
+          : mainAxisSize // ignore: cast_nullable_to_non_nullable
+              as MainAxisSize,
+      mainAxisAlignment: null == mainAxisAlignment
+          ? _value.mainAxisAlignment
+          : mainAxisAlignment // ignore: cast_nullable_to_non_nullable
+              as MainAxisAlignment,
+      crossAxisAlignment: null == crossAxisAlignment
+          ? _value.crossAxisAlignment
+          : crossAxisAlignment // ignore: cast_nullable_to_non_nullable
+              as CrossAxisAlignment,
       children: null == children
           ? _value._children
           : children // ignore: cast_nullable_to_non_nullable
@@ -5320,6 +5768,9 @@ class _$RowAttributes implements RowAttributes {
   const _$RowAttributes(
       {this.key,
       required this.type,
+      this.mainAxisSize = MainAxisSize.max,
+      this.mainAxisAlignment = MainAxisAlignment.start,
+      this.crossAxisAlignment = CrossAxisAlignment.center,
       @UIXWidgetsConverter() required final List<Widget> children})
       : _children = children;
 
@@ -5330,6 +5781,15 @@ class _$RowAttributes implements RowAttributes {
   final dynamic key;
   @override
   final String type;
+  @override
+  @JsonKey()
+  final MainAxisSize mainAxisSize;
+  @override
+  @JsonKey()
+  final MainAxisAlignment mainAxisAlignment;
+  @override
+  @JsonKey()
+  final CrossAxisAlignment crossAxisAlignment;
   final List<Widget> _children;
   @override
   @UIXWidgetsConverter()
@@ -5341,7 +5801,7 @@ class _$RowAttributes implements RowAttributes {
 
   @override
   String toString() {
-    return 'UIXAttributes.row(key: $key, type: $type, children: $children)';
+    return 'UIXAttributes.row(key: $key, type: $type, mainAxisSize: $mainAxisSize, mainAxisAlignment: $mainAxisAlignment, crossAxisAlignment: $crossAxisAlignment, children: $children)';
   }
 
   @override
@@ -5351,6 +5811,12 @@ class _$RowAttributes implements RowAttributes {
             other is _$RowAttributes &&
             const DeepCollectionEquality().equals(other.key, key) &&
             (identical(other.type, type) || other.type == type) &&
+            (identical(other.mainAxisSize, mainAxisSize) ||
+                other.mainAxisSize == mainAxisSize) &&
+            (identical(other.mainAxisAlignment, mainAxisAlignment) ||
+                other.mainAxisAlignment == mainAxisAlignment) &&
+            (identical(other.crossAxisAlignment, crossAxisAlignment) ||
+                other.crossAxisAlignment == crossAxisAlignment) &&
             const DeepCollectionEquality().equals(other._children, _children));
   }
 
@@ -5360,6 +5826,9 @@ class _$RowAttributes implements RowAttributes {
       runtimeType,
       const DeepCollectionEquality().hash(key),
       type,
+      mainAxisSize,
+      mainAxisAlignment,
+      crossAxisAlignment,
       const DeepCollectionEquality().hash(_children));
 
   @JsonKey(ignore: true)
@@ -5384,7 +5853,12 @@ class _$RowAttributes implements RowAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)
         appBar,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         column,
     required TResult Function(
@@ -5393,8 +5867,9 @@ class _$RowAttributes implements RowAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -5430,7 +5905,12 @@ class _$RowAttributes implements RowAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)
         page,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         row,
     required TResult Function(
@@ -5451,7 +5931,8 @@ class _$RowAttributes implements RowAttributes {
             dynamic key, String type, String text, UIXTextStyle? style)
         text,
   }) {
-    return row(key, type, children);
+    return row(key, type, mainAxisSize, mainAxisAlignment, crossAxisAlignment,
+        children);
   }
 
   @override
@@ -5470,7 +5951,12 @@ class _$RowAttributes implements RowAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(
@@ -5479,8 +5965,9 @@ class _$RowAttributes implements RowAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -5512,7 +5999,12 @@ class _$RowAttributes implements RowAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult? Function(
@@ -5533,7 +6025,8 @@ class _$RowAttributes implements RowAttributes {
             dynamic key, String type, String text, UIXTextStyle? style)?
         text,
   }) {
-    return row?.call(key, type, children);
+    return row?.call(key, type, mainAxisSize, mainAxisAlignment,
+        crossAxisAlignment, children);
   }
 
   @override
@@ -5552,7 +6045,12 @@ class _$RowAttributes implements RowAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(
@@ -5561,8 +6059,9 @@ class _$RowAttributes implements RowAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -5591,7 +6090,12 @@ class _$RowAttributes implements RowAttributes {
     TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult Function(
@@ -5614,7 +6118,8 @@ class _$RowAttributes implements RowAttributes {
     required TResult orElse(),
   }) {
     if (row != null) {
-      return row(key, type, children);
+      return row(key, type, mainAxisSize, mainAxisAlignment, crossAxisAlignment,
+          children);
     }
     return orElse();
   }
@@ -5710,6 +6215,9 @@ abstract class RowAttributes implements UIXAttributes {
   const factory RowAttributes(
           {final dynamic key,
           required final String type,
+          final MainAxisSize mainAxisSize,
+          final MainAxisAlignment mainAxisAlignment,
+          final CrossAxisAlignment crossAxisAlignment,
           @UIXWidgetsConverter() required final List<Widget> children}) =
       _$RowAttributes;
 
@@ -5720,6 +6228,9 @@ abstract class RowAttributes implements UIXAttributes {
   dynamic get key;
   @override
   String get type;
+  MainAxisSize get mainAxisSize;
+  MainAxisAlignment get mainAxisAlignment;
+  CrossAxisAlignment get crossAxisAlignment;
   @UIXWidgetsConverter()
   List<Widget> get children;
   @override
@@ -5835,7 +6346,12 @@ class _$SingleChildScrollViewAttributes
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)
         appBar,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         column,
     required TResult Function(
@@ -5844,8 +6360,9 @@ class _$SingleChildScrollViewAttributes
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -5881,7 +6398,12 @@ class _$SingleChildScrollViewAttributes
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)
         page,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         row,
     required TResult Function(
@@ -5921,7 +6443,12 @@ class _$SingleChildScrollViewAttributes
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(
@@ -5930,8 +6457,9 @@ class _$SingleChildScrollViewAttributes
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -5963,7 +6491,12 @@ class _$SingleChildScrollViewAttributes
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult? Function(
@@ -6003,7 +6536,12 @@ class _$SingleChildScrollViewAttributes
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(
@@ -6012,8 +6550,9 @@ class _$SingleChildScrollViewAttributes
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -6042,7 +6581,12 @@ class _$SingleChildScrollViewAttributes
     TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult Function(
@@ -6307,7 +6851,12 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)
         appBar,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         column,
     required TResult Function(
@@ -6316,8 +6865,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -6353,7 +6903,12 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)
         page,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         row,
     required TResult Function(
@@ -6393,7 +6948,12 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(
@@ -6402,8 +6962,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -6435,7 +6996,12 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult? Function(
@@ -6475,7 +7041,12 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(
@@ -6484,8 +7055,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -6514,7 +7086,12 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult Function(
@@ -6790,7 +7367,12 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)
         appBar,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         column,
     required TResult Function(
@@ -6799,8 +7381,9 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -6836,7 +7419,12 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)
         page,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         row,
     required TResult Function(
@@ -6876,7 +7464,12 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(
@@ -6885,8 +7478,9 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -6918,7 +7512,12 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult? Function(
@@ -6958,7 +7557,12 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(
@@ -6967,8 +7571,9 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -6997,7 +7602,12 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
     TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult Function(
@@ -7240,7 +7850,12 @@ class _$SpacerAttributes implements SpacerAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)
         appBar,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         column,
     required TResult Function(
@@ -7249,8 +7864,9 @@ class _$SpacerAttributes implements SpacerAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -7286,7 +7902,12 @@ class _$SpacerAttributes implements SpacerAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)
         page,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         row,
     required TResult Function(
@@ -7326,7 +7947,12 @@ class _$SpacerAttributes implements SpacerAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(
@@ -7335,8 +7961,9 @@ class _$SpacerAttributes implements SpacerAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -7368,7 +7995,12 @@ class _$SpacerAttributes implements SpacerAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult? Function(
@@ -7408,7 +8040,12 @@ class _$SpacerAttributes implements SpacerAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(
@@ -7417,8 +8054,9 @@ class _$SpacerAttributes implements SpacerAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -7447,7 +8085,12 @@ class _$SpacerAttributes implements SpacerAttributes {
     TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult Function(
@@ -7705,7 +8348,12 @@ class _$TextAttributes implements TextAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)
         appBar,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         column,
     required TResult Function(
@@ -7714,8 +8362,9 @@ class _$TextAttributes implements TextAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)
         container,
     required TResult Function(
@@ -7751,7 +8400,12 @@ class _$TextAttributes implements TextAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)
         page,
-    required TResult Function(dynamic key, String type,
+    required TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)
         row,
     required TResult Function(
@@ -7791,7 +8445,12 @@ class _$TextAttributes implements TextAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult? Function(
@@ -7800,8 +8459,9 @@ class _$TextAttributes implements TextAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -7833,7 +8493,12 @@ class _$TextAttributes implements TextAttributes {
             Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult? Function(dynamic key, String type,
+    TResult? Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult? Function(
@@ -7873,7 +8538,12 @@ class _$TextAttributes implements TextAttributes {
             @UIXWidgetConverter() Widget? title,
             @UIXWidgetsConverter() List<Widget>? actions)?
         appBar,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         column,
     TResult Function(
@@ -7882,8 +8552,9 @@ class _$TextAttributes implements TextAttributes {
             double? height,
             double? width,
             @UIXColorConverter() Color? color,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
             @UIXWidgetConverter() Widget? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
@@ -7912,7 +8583,12 @@ class _$TextAttributes implements TextAttributes {
     TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
             @UIXWidgetConverter() Widget child)?
         page,
-    TResult Function(dynamic key, String type,
+    TResult Function(
+            dynamic key,
+            String type,
+            MainAxisSize mainAxisSize,
+            MainAxisAlignment mainAxisAlignment,
+            CrossAxisAlignment crossAxisAlignment,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
     TResult Function(

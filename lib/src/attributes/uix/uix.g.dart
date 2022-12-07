@@ -68,6 +68,15 @@ _$ColumnAttributes _$$ColumnAttributesFromJson(Map<String, dynamic> json) =>
     _$ColumnAttributes(
       key: json['key'],
       type: json['type'] as String,
+      mainAxisSize:
+          $enumDecodeNullable(_$MainAxisSizeEnumMap, json['mainAxisSize']) ??
+              MainAxisSize.max,
+      mainAxisAlignment: $enumDecodeNullable(
+              _$MainAxisAlignmentEnumMap, json['mainAxisAlignment']) ??
+          MainAxisAlignment.start,
+      crossAxisAlignment: $enumDecodeNullable(
+              _$CrossAxisAlignmentEnumMap, json['crossAxisAlignment']) ??
+          CrossAxisAlignment.center,
       children: const UIXWidgetsConverter()
           .fromJson(json['children'] as List<Map<String, dynamic>>),
     );
@@ -76,8 +85,35 @@ Map<String, dynamic> _$$ColumnAttributesToJson(_$ColumnAttributes instance) =>
     <String, dynamic>{
       'key': instance.key,
       'type': instance.type,
+      'mainAxisSize': _$MainAxisSizeEnumMap[instance.mainAxisSize]!,
+      'mainAxisAlignment':
+          _$MainAxisAlignmentEnumMap[instance.mainAxisAlignment]!,
+      'crossAxisAlignment':
+          _$CrossAxisAlignmentEnumMap[instance.crossAxisAlignment]!,
       'children': const UIXWidgetsConverter().toJson(instance.children),
     };
+
+const _$MainAxisSizeEnumMap = {
+  MainAxisSize.min: 'min',
+  MainAxisSize.max: 'max',
+};
+
+const _$MainAxisAlignmentEnumMap = {
+  MainAxisAlignment.start: 'start',
+  MainAxisAlignment.end: 'end',
+  MainAxisAlignment.center: 'center',
+  MainAxisAlignment.spaceBetween: 'spaceBetween',
+  MainAxisAlignment.spaceAround: 'spaceAround',
+  MainAxisAlignment.spaceEvenly: 'spaceEvenly',
+};
+
+const _$CrossAxisAlignmentEnumMap = {
+  CrossAxisAlignment.start: 'start',
+  CrossAxisAlignment.end: 'end',
+  CrossAxisAlignment.center: 'center',
+  CrossAxisAlignment.stretch: 'stretch',
+  CrossAxisAlignment.baseline: 'baseline',
+};
 
 _$ContainerAttributes _$$ContainerAttributesFromJson(
         Map<String, dynamic> json) =>
@@ -87,11 +123,13 @@ _$ContainerAttributes _$$ContainerAttributesFromJson(
       height: (json['height'] as num?)?.toDouble(),
       width: (json['width'] as num?)?.toDouble(),
       color: const UIXColorConverter().fromJson(json['color'] as String?),
-      alignment: const UIXAlignmentGeometryConverter()
-          .fromJson(json['alignment'] as String?),
+      margin: _$JsonConverterFromJson<Map<String, dynamic>, EdgeInsetsGeometry>(
+          json['margin'], const UIXEdgeInsetsConverter().fromJson),
       padding:
           _$JsonConverterFromJson<Map<String, dynamic>, EdgeInsetsGeometry>(
               json['padding'], const UIXEdgeInsetsConverter().fromJson),
+      alignment: const UIXAlignmentGeometryConverter()
+          .fromJson(json['alignment'] as String?),
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
           json['child'], const UIXWidgetConverter().fromJson),
     );
@@ -104,11 +142,13 @@ Map<String, dynamic> _$$ContainerAttributesToJson(
       'height': instance.height,
       'width': instance.width,
       'color': const UIXColorConverter().toJson(instance.color),
-      'alignment':
-          const UIXAlignmentGeometryConverter().toJson(instance.alignment),
+      'margin': _$JsonConverterToJson<Map<String, dynamic>, EdgeInsetsGeometry>(
+          instance.margin, const UIXEdgeInsetsConverter().toJson),
       'padding':
           _$JsonConverterToJson<Map<String, dynamic>, EdgeInsetsGeometry>(
               instance.padding, const UIXEdgeInsetsConverter().toJson),
+      'alignment':
+          const UIXAlignmentGeometryConverter().toJson(instance.alignment),
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
           instance.child, const UIXWidgetConverter().toJson),
     };
@@ -264,6 +304,15 @@ _$RowAttributes _$$RowAttributesFromJson(Map<String, dynamic> json) =>
     _$RowAttributes(
       key: json['key'],
       type: json['type'] as String,
+      mainAxisSize:
+          $enumDecodeNullable(_$MainAxisSizeEnumMap, json['mainAxisSize']) ??
+              MainAxisSize.max,
+      mainAxisAlignment: $enumDecodeNullable(
+              _$MainAxisAlignmentEnumMap, json['mainAxisAlignment']) ??
+          MainAxisAlignment.start,
+      crossAxisAlignment: $enumDecodeNullable(
+              _$CrossAxisAlignmentEnumMap, json['crossAxisAlignment']) ??
+          CrossAxisAlignment.center,
       children: const UIXWidgetsConverter()
           .fromJson(json['children'] as List<Map<String, dynamic>>),
     );
@@ -272,6 +321,11 @@ Map<String, dynamic> _$$RowAttributesToJson(_$RowAttributes instance) =>
     <String, dynamic>{
       'key': instance.key,
       'type': instance.type,
+      'mainAxisSize': _$MainAxisSizeEnumMap[instance.mainAxisSize]!,
+      'mainAxisAlignment':
+          _$MainAxisAlignmentEnumMap[instance.mainAxisAlignment]!,
+      'crossAxisAlignment':
+          _$CrossAxisAlignmentEnumMap[instance.crossAxisAlignment]!,
       'children': const UIXWidgetsConverter().toJson(instance.children),
     };
 

@@ -28,6 +28,9 @@ class UIXAttributes with _$UIXAttributes {
   const factory UIXAttributes.column({
     dynamic key,
     required String type,
+    @Default(MainAxisSize.max) MainAxisSize mainAxisSize,
+    @Default(MainAxisAlignment.start) MainAxisAlignment mainAxisAlignment,
+    @Default(CrossAxisAlignment.center) CrossAxisAlignment crossAxisAlignment,
     @UIXWidgetsConverter() required List<Widget> children,
   }) = ColumnAttributes;
 
@@ -37,8 +40,9 @@ class UIXAttributes with _$UIXAttributes {
     double? height,
     double? width,
     @UIXColorConverter() Color? color,
-    @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+    @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
     @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+    @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
     @UIXWidgetConverter() Widget? child,
   }) = ContainerAttributes;
 
@@ -93,6 +97,9 @@ class UIXAttributes with _$UIXAttributes {
   const factory UIXAttributes.row({
     dynamic key,
     required String type,
+    @Default(MainAxisSize.max) MainAxisSize mainAxisSize,
+    @Default(MainAxisAlignment.start) MainAxisAlignment mainAxisAlignment,
+    @Default(CrossAxisAlignment.center) CrossAxisAlignment crossAxisAlignment,
     @UIXWidgetsConverter() required List<Widget> children,
   }) = RowAttributes;
 

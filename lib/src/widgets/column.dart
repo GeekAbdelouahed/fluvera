@@ -7,6 +7,9 @@ class UIXColumn extends UIX<ColumnAttributes> {
   Widget build() {
     return Column(
       key: key,
+      mainAxisSize: attributes.mainAxisSize,
+      mainAxisAlignment: attributes.mainAxisAlignment,
+      crossAxisAlignment: attributes.crossAxisAlignment,
       children: attributes.children,
     );
   }

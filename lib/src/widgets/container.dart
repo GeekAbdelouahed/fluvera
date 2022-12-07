@@ -10,8 +10,9 @@ class UIXContainer extends UIX<ContainerAttributes> {
       color: attributes.color,
       height: attributes.height,
       width: attributes.width,
-      alignment: attributes.alignment,
+      margin: attributes.margin,
       padding: attributes.padding,
+      alignment: attributes.alignment,
       child: attributes.child,
     );
   }

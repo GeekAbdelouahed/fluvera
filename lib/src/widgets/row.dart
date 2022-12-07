@@ -7,6 +7,9 @@ class UIXRow extends UIX<RowAttributes> {
   Widget build() {
     return Row(
       key: key,
+      mainAxisSize: attributes.mainAxisSize,
+      mainAxisAlignment: attributes.mainAxisAlignment,
+      crossAxisAlignment: attributes.crossAxisAlignment,
       children: attributes.children,
     );
   }

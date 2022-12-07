@@ -1,6 +1,5 @@
-import 'package:example/data/home_json.dart';
+import 'package:example/ui/home/home.dart';
 import 'package:flutter/material.dart';
-import 'package:uix/uix.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({Key? key}) : super(key: key);
@@ -12,9 +11,7 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        body: UIXAttributes.fromJson(json).build(),
-      ),
+      home: const HomePage(),
     );
   }
 }

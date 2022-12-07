@@ -7,6 +7,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return UIXAttributes.fromJson(json).build();
+    return UIXAttributes.fromJson(homeJson).build();
   }
 }
