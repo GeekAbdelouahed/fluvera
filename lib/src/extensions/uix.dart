@@ -18,6 +18,7 @@ extension UIXAttributeExtension on UIXAttributes {
       image: (attributes) => UIXImage(attributes),
       appBar: (attributes) => UIXAppBar(attributes),
       scaffold: (attributes) => UIXScaffold(attributes),
+      singleChildScrollView: (attributes) => UIXSingleChildScrollView(attributes),
     ).build();
   }
 }

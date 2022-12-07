@@ -96,6 +96,12 @@ class UIXAttributes with _$UIXAttributes {
     @UIXWidgetsConverter() required List<Widget> children,
   }) = RowAttributes;
 
+  const factory UIXAttributes.singleChildScrollView({
+    dynamic key,
+    required String type,
+    @UIXWidgetConverter() Widget? child,
+  }) = SingleChildScrollViewAttributes;
+
   const factory UIXAttributes.sizedBox({
     dynamic key,
     required String type,

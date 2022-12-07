@@ -38,6 +38,8 @@ UIXAttributes _$UIXAttributesFromJson(Map<String, dynamic> json) {
       return PageAttributes.fromJson(json);
     case 'Row':
       return RowAttributes.fromJson(json);
+    case 'SingleChildScrollView':
+      return SingleChildScrollViewAttributes.fromJson(json);
     case 'SizedBox':
       return SizedBoxAttributes.fromJson(json);
     case 'Scaffold':
@@ -121,6 +123,9 @@ mixin _$UIXAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        singleChildScrollView,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -197,6 +202,9 @@ mixin _$UIXAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -270,6 +278,9 @@ mixin _$UIXAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -301,6 +312,8 @@ mixin _$UIXAttributes {
     required TResult Function(PaddingAttributes value) padding,
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(SingleChildScrollViewAttributes value)
+        singleChildScrollView,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
@@ -321,6 +334,8 @@ mixin _$UIXAttributes {
     TResult? Function(PaddingAttributes value)? padding,
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
@@ -341,6 +356,8 @@ mixin _$UIXAttributes {
     TResult Function(PaddingAttributes value)? padding,
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
+    TResult Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
@@ -563,6 +580,9 @@ class _$AlignAttributes implements AlignAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        singleChildScrollView,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -642,6 +662,9 @@ class _$AlignAttributes implements AlignAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -718,6 +741,9 @@ class _$AlignAttributes implements AlignAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -755,6 +781,8 @@ class _$AlignAttributes implements AlignAttributes {
     required TResult Function(PaddingAttributes value) padding,
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(SingleChildScrollViewAttributes value)
+        singleChildScrollView,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
@@ -778,6 +806,8 @@ class _$AlignAttributes implements AlignAttributes {
     TResult? Function(PaddingAttributes value)? padding,
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
@@ -801,6 +831,8 @@ class _$AlignAttributes implements AlignAttributes {
     TResult Function(PaddingAttributes value)? padding,
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
+    TResult Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
@@ -1036,6 +1068,9 @@ class _$AppBarAttributes implements AppBarAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        singleChildScrollView,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -1115,6 +1150,9 @@ class _$AppBarAttributes implements AppBarAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -1191,6 +1229,9 @@ class _$AppBarAttributes implements AppBarAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -1228,6 +1269,8 @@ class _$AppBarAttributes implements AppBarAttributes {
     required TResult Function(PaddingAttributes value) padding,
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(SingleChildScrollViewAttributes value)
+        singleChildScrollView,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
@@ -1251,6 +1294,8 @@ class _$AppBarAttributes implements AppBarAttributes {
     TResult? Function(PaddingAttributes value)? padding,
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
@@ -1274,6 +1319,8 @@ class _$AppBarAttributes implements AppBarAttributes {
     TResult Function(PaddingAttributes value)? padding,
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
+    TResult Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
@@ -1483,6 +1530,9 @@ class _$ColumnAttributes implements ColumnAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        singleChildScrollView,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -1562,6 +1612,9 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -1638,6 +1691,9 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -1675,6 +1731,8 @@ class _$ColumnAttributes implements ColumnAttributes {
     required TResult Function(PaddingAttributes value) padding,
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(SingleChildScrollViewAttributes value)
+        singleChildScrollView,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
@@ -1698,6 +1756,8 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult? Function(PaddingAttributes value)? padding,
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
@@ -1721,6 +1781,8 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult Function(PaddingAttributes value)? padding,
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
+    TResult Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
@@ -1982,6 +2044,9 @@ class _$ContainerAttributes implements ContainerAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        singleChildScrollView,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -2062,6 +2127,9 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -2139,6 +2207,9 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -2177,6 +2248,8 @@ class _$ContainerAttributes implements ContainerAttributes {
     required TResult Function(PaddingAttributes value) padding,
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(SingleChildScrollViewAttributes value)
+        singleChildScrollView,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
@@ -2200,6 +2273,8 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult? Function(PaddingAttributes value)? padding,
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
@@ -2223,6 +2298,8 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult Function(PaddingAttributes value)? padding,
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
+    TResult Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
@@ -2480,6 +2557,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        singleChildScrollView,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -2559,6 +2639,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -2635,6 +2718,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -2672,6 +2758,8 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     required TResult Function(PaddingAttributes value) padding,
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(SingleChildScrollViewAttributes value)
+        singleChildScrollView,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
@@ -2695,6 +2783,8 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult? Function(PaddingAttributes value)? padding,
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
@@ -2718,6 +2808,8 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult Function(PaddingAttributes value)? padding,
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
+    TResult Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
@@ -2928,6 +3020,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        singleChildScrollView,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -3007,6 +3102,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -3083,6 +3181,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -3120,6 +3221,8 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     required TResult Function(PaddingAttributes value) padding,
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(SingleChildScrollViewAttributes value)
+        singleChildScrollView,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
@@ -3143,6 +3246,8 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     TResult? Function(PaddingAttributes value)? padding,
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
@@ -3166,6 +3271,8 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     TResult Function(PaddingAttributes value)? padding,
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
+    TResult Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
@@ -3414,6 +3521,9 @@ class _$FractionallySizedBoxAttributes
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        singleChildScrollView,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -3494,6 +3604,9 @@ class _$FractionallySizedBoxAttributes
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -3571,6 +3684,9 @@ class _$FractionallySizedBoxAttributes
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -3609,6 +3725,8 @@ class _$FractionallySizedBoxAttributes
     required TResult Function(PaddingAttributes value) padding,
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(SingleChildScrollViewAttributes value)
+        singleChildScrollView,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
@@ -3632,6 +3750,8 @@ class _$FractionallySizedBoxAttributes
     TResult? Function(PaddingAttributes value)? padding,
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
@@ -3655,6 +3775,8 @@ class _$FractionallySizedBoxAttributes
     TResult Function(PaddingAttributes value)? padding,
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
+    TResult Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
@@ -3907,6 +4029,9 @@ class _$ImageAttributes implements ImageAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        singleChildScrollView,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -3986,6 +4111,9 @@ class _$ImageAttributes implements ImageAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -4062,6 +4190,9 @@ class _$ImageAttributes implements ImageAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -4099,6 +4230,8 @@ class _$ImageAttributes implements ImageAttributes {
     required TResult Function(PaddingAttributes value) padding,
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(SingleChildScrollViewAttributes value)
+        singleChildScrollView,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
@@ -4122,6 +4255,8 @@ class _$ImageAttributes implements ImageAttributes {
     TResult? Function(PaddingAttributes value)? padding,
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
@@ -4145,6 +4280,8 @@ class _$ImageAttributes implements ImageAttributes {
     TResult Function(PaddingAttributes value)? padding,
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
+    TResult Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
@@ -4360,6 +4497,9 @@ class _$PaddingAttributes implements PaddingAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        singleChildScrollView,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -4439,6 +4579,9 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -4515,6 +4658,9 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -4552,6 +4698,8 @@ class _$PaddingAttributes implements PaddingAttributes {
     required TResult Function(PaddingAttributes value) padding,
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(SingleChildScrollViewAttributes value)
+        singleChildScrollView,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
@@ -4575,6 +4723,8 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult? Function(PaddingAttributes value)? padding,
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
@@ -4598,6 +4748,8 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult Function(PaddingAttributes value)? padding,
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
+    TResult Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
@@ -4822,6 +4974,9 @@ class _$PageAttributes implements PageAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        singleChildScrollView,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -4901,6 +5056,9 @@ class _$PageAttributes implements PageAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -4977,6 +5135,9 @@ class _$PageAttributes implements PageAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -5014,6 +5175,8 @@ class _$PageAttributes implements PageAttributes {
     required TResult Function(PaddingAttributes value) padding,
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(SingleChildScrollViewAttributes value)
+        singleChildScrollView,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
@@ -5037,6 +5200,8 @@ class _$PageAttributes implements PageAttributes {
     TResult? Function(PaddingAttributes value)? padding,
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
@@ -5060,6 +5225,8 @@ class _$PageAttributes implements PageAttributes {
     TResult Function(PaddingAttributes value)? padding,
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
+    TResult Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
@@ -5266,6 +5433,9 @@ class _$RowAttributes implements RowAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        singleChildScrollView,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -5345,6 +5515,9 @@ class _$RowAttributes implements RowAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -5421,6 +5594,9 @@ class _$RowAttributes implements RowAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -5458,6 +5634,8 @@ class _$RowAttributes implements RowAttributes {
     required TResult Function(PaddingAttributes value) padding,
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(SingleChildScrollViewAttributes value)
+        singleChildScrollView,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
@@ -5481,6 +5659,8 @@ class _$RowAttributes implements RowAttributes {
     TResult? Function(PaddingAttributes value)? padding,
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
@@ -5504,6 +5684,8 @@ class _$RowAttributes implements RowAttributes {
     TResult Function(PaddingAttributes value)? padding,
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
+    TResult Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
@@ -5544,6 +5726,457 @@ abstract class RowAttributes implements UIXAttributes {
   @JsonKey(ignore: true)
   _$$RowAttributesCopyWith<_$RowAttributes> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SingleChildScrollViewAttributesCopyWith<$Res>
+    implements $UIXAttributesCopyWith<$Res> {
+  factory _$$SingleChildScrollViewAttributesCopyWith(
+          _$SingleChildScrollViewAttributes value,
+          $Res Function(_$SingleChildScrollViewAttributes) then) =
+      __$$SingleChildScrollViewAttributesCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({dynamic key, String type, @UIXWidgetConverter() Widget? child});
+}
+
+/// @nodoc
+class __$$SingleChildScrollViewAttributesCopyWithImpl<$Res>
+    extends _$UIXAttributesCopyWithImpl<$Res, _$SingleChildScrollViewAttributes>
+    implements _$$SingleChildScrollViewAttributesCopyWith<$Res> {
+  __$$SingleChildScrollViewAttributesCopyWithImpl(
+      _$SingleChildScrollViewAttributes _value,
+      $Res Function(_$SingleChildScrollViewAttributes) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? key = freezed,
+    Object? type = null,
+    Object? child = freezed,
+  }) {
+    return _then(_$SingleChildScrollViewAttributes(
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      child: freezed == child
+          ? _value.child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Widget?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$SingleChildScrollViewAttributes
+    implements SingleChildScrollViewAttributes {
+  const _$SingleChildScrollViewAttributes(
+      {this.key, required this.type, @UIXWidgetConverter() this.child});
+
+  factory _$SingleChildScrollViewAttributes.fromJson(
+          Map<String, dynamic> json) =>
+      _$$SingleChildScrollViewAttributesFromJson(json);
+
+  @override
+  final dynamic key;
+  @override
+  final String type;
+  @override
+  @UIXWidgetConverter()
+  final Widget? child;
+
+  @override
+  String toString() {
+    return 'UIXAttributes.singleChildScrollView(key: $key, type: $type, child: $child)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SingleChildScrollViewAttributes &&
+            const DeepCollectionEquality().equals(other.key, key) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.child, child) || other.child == child));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(key), type, child);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SingleChildScrollViewAttributesCopyWith<_$SingleChildScrollViewAttributes>
+      get copyWith => __$$SingleChildScrollViewAttributesCopyWithImpl<
+          _$SingleChildScrollViewAttributes>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        align,
+    required TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)
+        appBar,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        column,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXWidgetConverter() Widget? child)
+        container,
+    required TResult Function(
+            dynamic key,
+            String type,
+            List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress,
+            @UIXWidgetConverter() Widget? child)
+        elevatedButton,
+    required TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)
+        expanded,
+    required TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)
+        fractionallySizedBox,
+    required TResult Function(dynamic key, String type, String path,
+            double? height, double? width, BoxFit? fit, UIXImageSource source)
+        image,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)
+        padding,
+    required TResult Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)
+        page,
+    required TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)
+        row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        singleChildScrollView,
+    required TResult Function(dynamic key, String type, double? height,
+            double? width, @UIXWidgetConverter() Widget? child)
+        sizedBox,
+    required TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)
+        scaffold,
+    required TResult Function(dynamic key, String type, int flex) spacer,
+    required TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)
+        text,
+  }) {
+    return singleChildScrollView(key, type, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult? Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult? Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult? Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult? Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, UIXImageSource source)?
+        image,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    TResult? Function(
+            dynamic key,
+            String type,
+            Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
+    TResult? Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
+    TResult? Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult? Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
+    TResult? Function(dynamic key, String type, int flex)? spacer,
+    TResult? Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+  }) {
+    return singleChildScrollView?.call(key, type, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        align,
+    TResult Function(
+            dynamic key,
+            String type,
+            bool? centerTitle,
+            @UIXWidgetConverter() Widget? title,
+            @UIXWidgetsConverter() List<Widget>? actions)?
+        appBar,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        column,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? height,
+            double? width,
+            @UIXColorConverter() Color? color,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+            @UIXWidgetConverter() Widget? child)?
+        container,
+    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+        elevatedButton,
+    TResult Function(dynamic key, String type, int flex,
+            @UIXWidgetConverter() Widget child)?
+        expanded,
+    TResult Function(
+            dynamic key,
+            String type,
+            double? widthFactor,
+            double? heightFactor,
+            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+            @UIXWidgetConverter() Widget? child)?
+        fractionallySizedBox,
+    TResult Function(dynamic key, String type, String path, double? height,
+            double? width, BoxFit? fit, UIXImageSource source)?
+        image,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
+            @UIXWidgetConverter() Widget? child)?
+        padding,
+    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+            @UIXWidgetConverter() Widget child)?
+        page,
+    TResult Function(dynamic key, String type,
+            @UIXWidgetsConverter() List<Widget> children)?
+        row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
+    TResult Function(dynamic key, String type, double? height, double? width,
+            @UIXWidgetConverter() Widget? child)?
+        sizedBox,
+    TResult Function(
+            dynamic key,
+            String type,
+            @UIXColorConverter() Color? backgroundColor,
+            @UIXWidgetConverter() Widget? appBar,
+            @UIXWidgetConverter() Widget? body)?
+        scaffold,
+    TResult Function(dynamic key, String type, int flex)? spacer,
+    TResult Function(
+            dynamic key, String type, String text, UIXTextStyle? style)?
+        text,
+    required TResult orElse(),
+  }) {
+    if (singleChildScrollView != null) {
+      return singleChildScrollView(key, type, child);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AlignAttributes value) align,
+    required TResult Function(AppBarAttributes value) appBar,
+    required TResult Function(ColumnAttributes value) column,
+    required TResult Function(ContainerAttributes value) container,
+    required TResult Function(ElevatedButtonAttributes value) elevatedButton,
+    required TResult Function(ExpandedAttributes value) expanded,
+    required TResult Function(FractionallySizedBoxAttributes value)
+        fractionallySizedBox,
+    required TResult Function(ImageAttributes value) image,
+    required TResult Function(PaddingAttributes value) padding,
+    required TResult Function(PageAttributes value) page,
+    required TResult Function(RowAttributes value) row,
+    required TResult Function(SingleChildScrollViewAttributes value)
+        singleChildScrollView,
+    required TResult Function(SizedBoxAttributes value) sizedBox,
+    required TResult Function(ScaffoldAttributes value) scaffold,
+    required TResult Function(SpacerAttributes value) spacer,
+    required TResult Function(TextAttributes value) text,
+  }) {
+    return singleChildScrollView(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AlignAttributes value)? align,
+    TResult? Function(AppBarAttributes value)? appBar,
+    TResult? Function(ColumnAttributes value)? column,
+    TResult? Function(ContainerAttributes value)? container,
+    TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult? Function(ExpandedAttributes value)? expanded,
+    TResult? Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult? Function(ImageAttributes value)? image,
+    TResult? Function(PaddingAttributes value)? padding,
+    TResult? Function(PageAttributes value)? page,
+    TResult? Function(RowAttributes value)? row,
+    TResult? Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
+    TResult? Function(SizedBoxAttributes value)? sizedBox,
+    TResult? Function(ScaffoldAttributes value)? scaffold,
+    TResult? Function(SpacerAttributes value)? spacer,
+    TResult? Function(TextAttributes value)? text,
+  }) {
+    return singleChildScrollView?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AlignAttributes value)? align,
+    TResult Function(AppBarAttributes value)? appBar,
+    TResult Function(ColumnAttributes value)? column,
+    TResult Function(ContainerAttributes value)? container,
+    TResult Function(ElevatedButtonAttributes value)? elevatedButton,
+    TResult Function(ExpandedAttributes value)? expanded,
+    TResult Function(FractionallySizedBoxAttributes value)?
+        fractionallySizedBox,
+    TResult Function(ImageAttributes value)? image,
+    TResult Function(PaddingAttributes value)? padding,
+    TResult Function(PageAttributes value)? page,
+    TResult Function(RowAttributes value)? row,
+    TResult Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
+    TResult Function(SizedBoxAttributes value)? sizedBox,
+    TResult Function(ScaffoldAttributes value)? scaffold,
+    TResult Function(SpacerAttributes value)? spacer,
+    TResult Function(TextAttributes value)? text,
+    required TResult orElse(),
+  }) {
+    if (singleChildScrollView != null) {
+      return singleChildScrollView(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$SingleChildScrollViewAttributesToJson(
+      this,
+    );
+  }
+}
+
+abstract class SingleChildScrollViewAttributes implements UIXAttributes {
+  const factory SingleChildScrollViewAttributes(
+          {final dynamic key,
+          required final String type,
+          @UIXWidgetConverter() final Widget? child}) =
+      _$SingleChildScrollViewAttributes;
+
+  factory SingleChildScrollViewAttributes.fromJson(Map<String, dynamic> json) =
+      _$SingleChildScrollViewAttributes.fromJson;
+
+  @override
+  dynamic get key;
+  @override
+  String get type;
+  @UIXWidgetConverter()
+  Widget? get child;
+  @override
+  @JsonKey(ignore: true)
+  _$$SingleChildScrollViewAttributesCopyWith<_$SingleChildScrollViewAttributes>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5723,6 +6356,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        singleChildScrollView,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -5802,6 +6438,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -5878,6 +6517,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -5915,6 +6557,8 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     required TResult Function(PaddingAttributes value) padding,
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(SingleChildScrollViewAttributes value)
+        singleChildScrollView,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
@@ -5938,6 +6582,8 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult? Function(PaddingAttributes value)? padding,
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
@@ -5961,6 +6607,8 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult Function(PaddingAttributes value)? padding,
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
+    TResult Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
@@ -6191,6 +6839,9 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        singleChildScrollView,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -6270,6 +6921,9 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -6346,6 +7000,9 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -6383,6 +7040,8 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
     required TResult Function(PaddingAttributes value) padding,
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(SingleChildScrollViewAttributes value)
+        singleChildScrollView,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
@@ -6406,6 +7065,8 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
     TResult? Function(PaddingAttributes value)? padding,
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
@@ -6429,6 +7090,8 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
     TResult Function(PaddingAttributes value)? padding,
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
+    TResult Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
@@ -6626,6 +7289,9 @@ class _$SpacerAttributes implements SpacerAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        singleChildScrollView,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -6705,6 +7371,9 @@ class _$SpacerAttributes implements SpacerAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -6781,6 +7450,9 @@ class _$SpacerAttributes implements SpacerAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -6818,6 +7490,8 @@ class _$SpacerAttributes implements SpacerAttributes {
     required TResult Function(PaddingAttributes value) padding,
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(SingleChildScrollViewAttributes value)
+        singleChildScrollView,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
@@ -6841,6 +7515,8 @@ class _$SpacerAttributes implements SpacerAttributes {
     TResult? Function(PaddingAttributes value)? padding,
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
@@ -6864,6 +7540,8 @@ class _$SpacerAttributes implements SpacerAttributes {
     TResult Function(PaddingAttributes value)? padding,
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
+    TResult Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,
@@ -7076,6 +7754,9 @@ class _$TextAttributes implements TextAttributes {
     required TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)
         row,
+    required TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+        singleChildScrollView,
     required TResult Function(dynamic key, String type, double? height,
             double? width, @UIXWidgetConverter() Widget? child)
         sizedBox,
@@ -7155,6 +7836,9 @@ class _$TextAttributes implements TextAttributes {
     TResult? Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult? Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult? Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -7231,6 +7915,9 @@ class _$TextAttributes implements TextAttributes {
     TResult Function(dynamic key, String type,
             @UIXWidgetsConverter() List<Widget> children)?
         row,
+    TResult Function(
+            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+        singleChildScrollView,
     TResult Function(dynamic key, String type, double? height, double? width,
             @UIXWidgetConverter() Widget? child)?
         sizedBox,
@@ -7268,6 +7955,8 @@ class _$TextAttributes implements TextAttributes {
     required TResult Function(PaddingAttributes value) padding,
     required TResult Function(PageAttributes value) page,
     required TResult Function(RowAttributes value) row,
+    required TResult Function(SingleChildScrollViewAttributes value)
+        singleChildScrollView,
     required TResult Function(SizedBoxAttributes value) sizedBox,
     required TResult Function(ScaffoldAttributes value) scaffold,
     required TResult Function(SpacerAttributes value) spacer,
@@ -7291,6 +7980,8 @@ class _$TextAttributes implements TextAttributes {
     TResult? Function(PaddingAttributes value)? padding,
     TResult? Function(PageAttributes value)? page,
     TResult? Function(RowAttributes value)? row,
+    TResult? Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult? Function(SizedBoxAttributes value)? sizedBox,
     TResult? Function(ScaffoldAttributes value)? scaffold,
     TResult? Function(SpacerAttributes value)? spacer,
@@ -7314,6 +8005,8 @@ class _$TextAttributes implements TextAttributes {
     TResult Function(PaddingAttributes value)? padding,
     TResult Function(PageAttributes value)? page,
     TResult Function(RowAttributes value)? row,
+    TResult Function(SingleChildScrollViewAttributes value)?
+        singleChildScrollView,
     TResult Function(SizedBoxAttributes value)? sizedBox,
     TResult Function(ScaffoldAttributes value)? scaffold,
     TResult Function(SpacerAttributes value)? spacer,

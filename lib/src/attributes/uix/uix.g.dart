@@ -275,6 +275,24 @@ Map<String, dynamic> _$$RowAttributesToJson(_$RowAttributes instance) =>
       'children': const UIXWidgetsConverter().toJson(instance.children),
     };
 
+_$SingleChildScrollViewAttributes _$$SingleChildScrollViewAttributesFromJson(
+        Map<String, dynamic> json) =>
+    _$SingleChildScrollViewAttributes(
+      key: json['key'],
+      type: json['type'] as String,
+      child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
+          json['child'], const UIXWidgetConverter().fromJson),
+    );
+
+Map<String, dynamic> _$$SingleChildScrollViewAttributesToJson(
+        _$SingleChildScrollViewAttributes instance) =>
+    <String, dynamic>{
+      'key': instance.key,
+      'type': instance.type,
+      'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
+          instance.child, const UIXWidgetConverter().toJson),
+    };
+
 _$SizedBoxAttributes _$$SizedBoxAttributesFromJson(Map<String, dynamic> json) =>
     _$SizedBoxAttributes(
       key: json['key'],
