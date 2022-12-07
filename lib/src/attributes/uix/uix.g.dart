@@ -331,7 +331,8 @@ _$PageAttributes _$$PageAttributesFromJson(Map<String, dynamic> json) =>
     _$PageAttributes(
       key: json['key'],
       type: json['type'] as String,
-      attributes: json['attributes'] as Map<String, dynamic>?,
+      attributes: json['attributes'] as Map<String, dynamic>? ??
+          const <String, dynamic>{},
       child: const UIXWidgetConverter()
           .fromJson(json['child'] as Map<String, dynamic>),
     );

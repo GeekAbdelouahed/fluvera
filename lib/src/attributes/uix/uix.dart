@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:uix/src/attributes/action/action.dart';
@@ -107,7 +109,7 @@ class UIXAttributes with _$UIXAttributes {
   const factory UIXAttributes.page({
     dynamic key,
     required String type,
-    Map<String, dynamic>? attributes,
+    @Default(<String, dynamic>{}) Map<String, dynamic> attributes,
     @UIXWidgetConverter() required Widget child,
   }) = PageAttributes;
 

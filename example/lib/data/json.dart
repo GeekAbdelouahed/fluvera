@@ -181,22 +181,36 @@ Map<String, dynamic> listTileJson({
 
 Map<String, dynamic> detailsJsonData(Map<String, dynamic> item) {
   return {
-    'type': 'Scaffold',
-    'appBar': {
-      'type': 'AppBar',
-      'centerTitle': true,
-      'title': {
-        'type': 'Text',
-        'text': item['title'],
-      },
-    },
-    'body': {
-      'type': 'SingleChildScrollView',
-      'child': {
-        'type': 'Page',
-        'attributes': {
-          'greeting': 'Hey',
+    'type': 'Page',
+    'child': {
+      'type': 'Scaffold',
+      'appBar': {
+        'type': 'AppBar',
+        'centerTitle': true,
+        'title': {
+          'type': 'Text',
+          'text': item['title'],
         },
+        'actions': [
+          {
+            'type': 'Padding',
+            'padding': {
+              'start': 16,
+              'end': 16,
+            },
+            'child': {
+              'type': 'InkWell',
+              'onPressed': [],
+              'child': {
+                'type': 'Icon',
+                'code': 0xe25c,
+              },
+            },
+          },
+        ],
+      },
+      'body': {
+        'type': 'SingleChildScrollView',
         'child': {
           'type': 'Column',
           'crossAxisAlignment': 'stretch',

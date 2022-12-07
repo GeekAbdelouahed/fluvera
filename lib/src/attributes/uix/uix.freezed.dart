@@ -134,11 +134,8 @@ mixin _$UIXAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -230,10 +227,7 @@ mixin _$UIXAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -326,7 +320,7 @@ mixin _$UIXAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
@@ -652,11 +646,8 @@ class _$AlignAttributes implements AlignAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -751,10 +742,7 @@ class _$AlignAttributes implements AlignAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -850,7 +838,7 @@ class _$AlignAttributes implements AlignAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
@@ -1201,11 +1189,8 @@ class _$AppBarAttributes implements AppBarAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -1300,10 +1285,7 @@ class _$AppBarAttributes implements AppBarAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -1399,7 +1381,7 @@ class _$AppBarAttributes implements AppBarAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
@@ -1765,11 +1747,8 @@ class _$ColumnAttributes implements ColumnAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -1865,10 +1844,7 @@ class _$ColumnAttributes implements ColumnAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -1965,7 +1941,7 @@ class _$ColumnAttributes implements ColumnAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
@@ -2361,11 +2337,8 @@ class _$ContainerAttributes implements ContainerAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -2461,10 +2434,7 @@ class _$ContainerAttributes implements ContainerAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -2561,7 +2531,7 @@ class _$ContainerAttributes implements ContainerAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
@@ -2938,11 +2908,8 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -3037,10 +3004,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -3136,7 +3100,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
@@ -3462,11 +3426,8 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -3561,10 +3522,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -3660,7 +3618,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
@@ -4024,11 +3982,8 @@ class _$FractionallySizedBoxAttributes
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -4124,10 +4079,7 @@ class _$FractionallySizedBoxAttributes
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -4224,7 +4176,7 @@ class _$FractionallySizedBoxAttributes
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
@@ -4584,11 +4536,8 @@ class _$IconAttributes implements IconAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -4683,10 +4632,7 @@ class _$IconAttributes implements IconAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -4782,7 +4728,7 @@ class _$IconAttributes implements IconAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
@@ -5148,11 +5094,8 @@ class _$ImageAttributes implements ImageAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -5247,10 +5190,7 @@ class _$ImageAttributes implements ImageAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -5346,7 +5286,7 @@ class _$ImageAttributes implements ImageAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
@@ -5711,11 +5651,8 @@ class _$InkWellAttributes implements InkWellAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -5810,10 +5747,7 @@ class _$InkWellAttributes implements InkWellAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -5909,7 +5843,7 @@ class _$InkWellAttributes implements InkWellAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
@@ -6237,11 +6171,8 @@ class _$PaddingAttributes implements PaddingAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -6336,10 +6267,7 @@ class _$PaddingAttributes implements PaddingAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -6435,7 +6363,7 @@ class _$PaddingAttributes implements PaddingAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
@@ -6599,7 +6527,7 @@ abstract class _$$PageAttributesCopyWith<$Res>
   $Res call(
       {dynamic key,
       String type,
-      Map<String, dynamic>? attributes,
+      Map<String, dynamic> attributes,
       @UIXWidgetConverter() Widget child});
 }
 
@@ -6616,7 +6544,7 @@ class __$$PageAttributesCopyWithImpl<$Res>
   $Res call({
     Object? key = freezed,
     Object? type = null,
-    Object? attributes = freezed,
+    Object? attributes = null,
     Object? child = null,
   }) {
     return _then(_$PageAttributes(
@@ -6628,10 +6556,10 @@ class __$$PageAttributesCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes: freezed == attributes
+      attributes: null == attributes
           ? _value._attributes
           : attributes // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Map<String, dynamic>,
       child: null == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
@@ -6646,7 +6574,7 @@ class _$PageAttributes implements PageAttributes {
   const _$PageAttributes(
       {this.key,
       required this.type,
-      final Map<String, dynamic>? attributes,
+      final Map<String, dynamic> attributes = const <String, dynamic>{},
       @UIXWidgetConverter() required this.child})
       : _attributes = attributes;
 
@@ -6657,14 +6585,13 @@ class _$PageAttributes implements PageAttributes {
   final dynamic key;
   @override
   final String type;
-  final Map<String, dynamic>? _attributes;
+  final Map<String, dynamic> _attributes;
   @override
-  Map<String, dynamic>? get attributes {
-    final value = _attributes;
-    if (value == null) return null;
+  @JsonKey()
+  Map<String, dynamic> get attributes {
     if (_attributes is EqualUnmodifiableMapView) return _attributes;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
+    return EqualUnmodifiableMapView(_attributes);
   }
 
   @override
@@ -6775,11 +6702,8 @@ class _$PageAttributes implements PageAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -6874,10 +6798,7 @@ class _$PageAttributes implements PageAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -6973,7 +6894,7 @@ class _$PageAttributes implements PageAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
@@ -7106,7 +7027,7 @@ abstract class PageAttributes implements UIXAttributes {
   const factory PageAttributes(
       {final dynamic key,
       required final String type,
-      final Map<String, dynamic>? attributes,
+      final Map<String, dynamic> attributes,
       @UIXWidgetConverter() required final Widget child}) = _$PageAttributes;
 
   factory PageAttributes.fromJson(Map<String, dynamic> json) =
@@ -7116,7 +7037,7 @@ abstract class PageAttributes implements UIXAttributes {
   dynamic get key;
   @override
   String get type;
-  Map<String, dynamic>? get attributes;
+  Map<String, dynamic> get attributes;
   @UIXWidgetConverter()
   Widget get child;
   @override
@@ -7336,11 +7257,8 @@ class _$RowAttributes implements RowAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -7436,10 +7354,7 @@ class _$RowAttributes implements RowAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -7536,7 +7451,7 @@ class _$RowAttributes implements RowAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
@@ -7857,11 +7772,8 @@ class _$SingleChildScrollViewAttributes
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -7956,10 +7868,7 @@ class _$SingleChildScrollViewAttributes
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -8055,7 +7964,7 @@ class _$SingleChildScrollViewAttributes
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
@@ -8390,11 +8299,8 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -8489,10 +8395,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -8588,7 +8491,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
@@ -8934,11 +8837,8 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -9033,10 +8933,7 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -9132,7 +9029,7 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
@@ -9445,11 +9342,8 @@ class _$SpacerAttributes implements SpacerAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -9544,10 +9438,7 @@ class _$SpacerAttributes implements SpacerAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -9643,7 +9534,7 @@ class _$SpacerAttributes implements SpacerAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
@@ -9971,11 +9862,8 @@ class _$TextAttributes implements TextAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)
         padding,
-    required TResult Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
         page,
     required TResult Function(
             dynamic key,
@@ -10070,10 +9958,7 @@ class _$TextAttributes implements TextAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult? Function(
-            dynamic key,
-            String type,
-            Map<String, dynamic>? attributes,
+    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult? Function(
@@ -10169,7 +10054,7 @@ class _$TextAttributes implements TextAttributes {
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
             @UIXWidgetConverter() Widget? child)?
         padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic>? attributes,
+    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
             @UIXWidgetConverter() Widget child)?
         page,
     TResult Function(
