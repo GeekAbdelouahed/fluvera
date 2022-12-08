@@ -9,10 +9,10 @@ class UIXInkWell extends UIX<InkWellAttributes> {
       builder: (context) {
         return InkWell(
           key: key,
-          onTap: attributes.onPressed == null
+          onTap: attributes.onTap == null
               ? null
               : () async {
-                  for (final action in attributes.onPressed!) {
+                  for (final action in attributes.onTap!) {
                     if (action.synchronized) {
                       await action.act(context);
                     } else {

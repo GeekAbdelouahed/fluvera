@@ -288,7 +288,7 @@ _$InkWellAttributes _$$InkWellAttributesFromJson(Map<String, dynamic> json) =>
     _$InkWellAttributes(
       key: json['key'],
       type: json['type'] as String,
-      onPressed: (json['onPressed'] as List<dynamic>?)
+      onTap: (json['onTap'] as List<dynamic>?)
           ?.map((e) => UIXAction.fromJson(e as Map<String, dynamic>))
           .toList(),
       onLongPress: (json['onLongPress'] as List<dynamic>?)
@@ -302,7 +302,7 @@ Map<String, dynamic> _$$InkWellAttributesToJson(_$InkWellAttributes instance) =>
     <String, dynamic>{
       'key': instance.key,
       'type': instance.type,
-      'onPressed': instance.onPressed,
+      'onTap': instance.onTap,
       'onLongPress': instance.onLongPress,
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
           instance.child, const UIXWidgetConverter().toJson),

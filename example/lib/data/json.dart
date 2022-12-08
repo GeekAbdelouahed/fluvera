@@ -115,7 +115,7 @@ Map<String, dynamic> listTileJson({
 }) {
   return {
     'type': 'InkWell',
-    'onPressed': [
+    'onTap': [
       {
         'type': 'PushRoute',
         'routeName': 'details',
@@ -183,7 +183,7 @@ Map<String, dynamic> listTileJson({
                 },
                 {
                   'type': 'InkWell',
-                  'onPressed': [],
+                  'onTap': [],
                   'child': {
                     'type': 'Icon',
                     'code': 0xe25c,
@@ -220,7 +220,7 @@ Map<String, dynamic> detailsJsonData(Map<String, dynamic> item) {
             },
             'child': {
               'type': 'InkWell',
-              'onPressed': [],
+              'onTap': [],
               'child': {
                 'type': 'Icon',
                 'code': 0xe25c,

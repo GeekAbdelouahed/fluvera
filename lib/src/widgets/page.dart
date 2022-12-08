@@ -5,11 +5,13 @@ class UIXPage extends UIX<PageAttributes> {
 
   @override
   Widget build() {
+    final attributesNotifier = UIXAttributesNotifier(attributes.attributes);
     return UIXProvider<UIXAttributesNotifier>(
-      value: UIXAttributesNotifier(attributes.attributes),
+      value: attributesNotifier,
       child: _Page(
         key: key,
         attributes: attributes,
+        attributesNotifier: attributesNotifier,
       ),
     );
   }
@@ -19,9 +21,11 @@ class _Page extends StatefulWidget {
   const _Page({
     Key? key,
     required this.attributes,
+    required this.attributesNotifier,
   }) : super(key: key);
 
   final PageAttributes attributes;
+  final UIXAttributesNotifier attributesNotifier;
 
   @override
   State<_Page> createState() => _PageState();
@@ -30,7 +34,7 @@ class _Page extends StatefulWidget {
 class _PageState extends State<_Page> {
   @override
   void dispose() {
-    UIXProvider.of(context)?.value.dispose();
+    widget.attributesNotifier.dispose();
     super.dispose();
   }
 

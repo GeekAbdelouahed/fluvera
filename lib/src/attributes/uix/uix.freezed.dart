@@ -121,12 +121,8 @@ mixin _$UIXAttributes {
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -218,7 +214,7 @@ mixin _$UIXAttributes {
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -311,7 +307,7 @@ mixin _$UIXAttributes {
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
@@ -633,12 +629,8 @@ class _$AlignAttributes implements AlignAttributes {
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -733,7 +725,7 @@ class _$AlignAttributes implements AlignAttributes {
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -829,7 +821,7 @@ class _$AlignAttributes implements AlignAttributes {
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
@@ -1176,12 +1168,8 @@ class _$AppBarAttributes implements AppBarAttributes {
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -1276,7 +1264,7 @@ class _$AppBarAttributes implements AppBarAttributes {
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -1372,7 +1360,7 @@ class _$AppBarAttributes implements AppBarAttributes {
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
@@ -1734,12 +1722,8 @@ class _$ColumnAttributes implements ColumnAttributes {
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -1835,7 +1819,7 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -1932,7 +1916,7 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
@@ -2324,12 +2308,8 @@ class _$ContainerAttributes implements ContainerAttributes {
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -2425,7 +2405,7 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -2522,7 +2502,7 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
@@ -2895,12 +2875,8 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -2995,7 +2971,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -3091,7 +3067,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
@@ -3413,12 +3389,8 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -3513,7 +3485,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -3609,7 +3581,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
@@ -3969,12 +3941,8 @@ class _$FractionallySizedBoxAttributes
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -4070,7 +4038,7 @@ class _$FractionallySizedBoxAttributes
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -4167,7 +4135,7 @@ class _$FractionallySizedBoxAttributes
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
@@ -4523,12 +4491,8 @@ class _$IconAttributes implements IconAttributes {
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -4623,7 +4587,7 @@ class _$IconAttributes implements IconAttributes {
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -4719,7 +4683,7 @@ class _$IconAttributes implements IconAttributes {
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
@@ -5081,12 +5045,8 @@ class _$ImageAttributes implements ImageAttributes {
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -5181,7 +5141,7 @@ class _$ImageAttributes implements ImageAttributes {
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -5277,7 +5237,7 @@ class _$ImageAttributes implements ImageAttributes {
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
@@ -5454,7 +5414,7 @@ abstract class _$$InkWellAttributesCopyWith<$Res>
   $Res call(
       {dynamic key,
       String type,
-      List<UIXAction>? onPressed,
+      List<UIXAction>? onTap,
       List<UIXAction>? onLongPress,
       @UIXWidgetConverter() Widget? child});
 }
@@ -5472,7 +5432,7 @@ class __$$InkWellAttributesCopyWithImpl<$Res>
   $Res call({
     Object? key = freezed,
     Object? type = null,
-    Object? onPressed = freezed,
+    Object? onTap = freezed,
     Object? onLongPress = freezed,
     Object? child = freezed,
   }) {
@@ -5485,9 +5445,9 @@ class __$$InkWellAttributesCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      onPressed: freezed == onPressed
-          ? _value._onPressed
-          : onPressed // ignore: cast_nullable_to_non_nullable
+      onTap: freezed == onTap
+          ? _value._onTap
+          : onTap // ignore: cast_nullable_to_non_nullable
               as List<UIXAction>?,
       onLongPress: freezed == onLongPress
           ? _value._onLongPress
@@ -5507,10 +5467,10 @@ class _$InkWellAttributes implements InkWellAttributes {
   const _$InkWellAttributes(
       {this.key,
       required this.type,
-      final List<UIXAction>? onPressed,
+      final List<UIXAction>? onTap,
       final List<UIXAction>? onLongPress,
       @UIXWidgetConverter() this.child})
-      : _onPressed = onPressed,
+      : _onTap = onTap,
         _onLongPress = onLongPress;
 
   factory _$InkWellAttributes.fromJson(Map<String, dynamic> json) =>
@@ -5520,12 +5480,12 @@ class _$InkWellAttributes implements InkWellAttributes {
   final dynamic key;
   @override
   final String type;
-  final List<UIXAction>? _onPressed;
+  final List<UIXAction>? _onTap;
   @override
-  List<UIXAction>? get onPressed {
-    final value = _onPressed;
+  List<UIXAction>? get onTap {
+    final value = _onTap;
     if (value == null) return null;
-    if (_onPressed is EqualUnmodifiableListView) return _onPressed;
+    if (_onTap is EqualUnmodifiableListView) return _onTap;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -5546,7 +5506,7 @@ class _$InkWellAttributes implements InkWellAttributes {
 
   @override
   String toString() {
-    return 'UIXAttributes.inkWell(key: $key, type: $type, onPressed: $onPressed, onLongPress: $onLongPress, child: $child)';
+    return 'UIXAttributes.inkWell(key: $key, type: $type, onTap: $onTap, onLongPress: $onLongPress, child: $child)';
   }
 
   @override
@@ -5556,8 +5516,7 @@ class _$InkWellAttributes implements InkWellAttributes {
             other is _$InkWellAttributes &&
             const DeepCollectionEquality().equals(other.key, key) &&
             (identical(other.type, type) || other.type == type) &&
-            const DeepCollectionEquality()
-                .equals(other._onPressed, _onPressed) &&
+            const DeepCollectionEquality().equals(other._onTap, _onTap) &&
             const DeepCollectionEquality()
                 .equals(other._onLongPress, _onLongPress) &&
             (identical(other.child, child) || other.child == child));
@@ -5569,7 +5528,7 @@ class _$InkWellAttributes implements InkWellAttributes {
       runtimeType,
       const DeepCollectionEquality().hash(key),
       type,
-      const DeepCollectionEquality().hash(_onPressed),
+      const DeepCollectionEquality().hash(_onTap),
       const DeepCollectionEquality().hash(_onLongPress),
       child);
 
@@ -5638,12 +5597,8 @@ class _$InkWellAttributes implements InkWellAttributes {
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -5680,7 +5635,7 @@ class _$InkWellAttributes implements InkWellAttributes {
             dynamic key, String type, String text, UIXTextStyle? style)
         text,
   }) {
-    return inkWell(key, type, onPressed, onLongPress, child);
+    return inkWell(key, type, onTap, onLongPress, child);
   }
 
   @override
@@ -5738,7 +5693,7 @@ class _$InkWellAttributes implements InkWellAttributes {
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -5776,7 +5731,7 @@ class _$InkWellAttributes implements InkWellAttributes {
             dynamic key, String type, String text, UIXTextStyle? style)?
         text,
   }) {
-    return inkWell?.call(key, type, onPressed, onLongPress, child);
+    return inkWell?.call(key, type, onTap, onLongPress, child);
   }
 
   @override
@@ -5834,7 +5789,7 @@ class _$InkWellAttributes implements InkWellAttributes {
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
@@ -5874,7 +5829,7 @@ class _$InkWellAttributes implements InkWellAttributes {
     required TResult orElse(),
   }) {
     if (inkWell != null) {
-      return inkWell(key, type, onPressed, onLongPress, child);
+      return inkWell(key, type, onTap, onLongPress, child);
     }
     return orElse();
   }
@@ -5976,7 +5931,7 @@ abstract class InkWellAttributes implements UIXAttributes {
   const factory InkWellAttributes(
       {final dynamic key,
       required final String type,
-      final List<UIXAction>? onPressed,
+      final List<UIXAction>? onTap,
       final List<UIXAction>? onLongPress,
       @UIXWidgetConverter() final Widget? child}) = _$InkWellAttributes;
 
@@ -5987,7 +5942,7 @@ abstract class InkWellAttributes implements UIXAttributes {
   dynamic get key;
   @override
   String get type;
-  List<UIXAction>? get onPressed;
+  List<UIXAction>? get onTap;
   List<UIXAction>? get onLongPress;
   @UIXWidgetConverter()
   Widget? get child;
@@ -6158,12 +6113,8 @@ class _$PaddingAttributes implements PaddingAttributes {
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -6258,7 +6209,7 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -6354,7 +6305,7 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
@@ -6689,12 +6640,8 @@ class _$PageAttributes implements PageAttributes {
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -6789,7 +6736,7 @@ class _$PageAttributes implements PageAttributes {
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -6885,7 +6832,7 @@ class _$PageAttributes implements PageAttributes {
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
@@ -7244,12 +7191,8 @@ class _$RowAttributes implements RowAttributes {
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -7345,7 +7288,7 @@ class _$RowAttributes implements RowAttributes {
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -7442,7 +7385,7 @@ class _$RowAttributes implements RowAttributes {
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
@@ -7759,12 +7702,8 @@ class _$SingleChildScrollViewAttributes
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -7859,7 +7798,7 @@ class _$SingleChildScrollViewAttributes
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -7955,7 +7894,7 @@ class _$SingleChildScrollViewAttributes
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
@@ -8286,12 +8225,8 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -8386,7 +8321,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -8482,7 +8417,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
@@ -8824,12 +8759,8 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -8924,7 +8855,7 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -9020,7 +8951,7 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
@@ -9329,12 +9260,8 @@ class _$SpacerAttributes implements SpacerAttributes {
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -9429,7 +9356,7 @@ class _$SpacerAttributes implements SpacerAttributes {
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -9525,7 +9452,7 @@ class _$SpacerAttributes implements SpacerAttributes {
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
@@ -9849,12 +9776,8 @@ class _$TextAttributes implements TextAttributes {
     required TResult Function(dynamic key, String type, String path,
             double? height, double? width, BoxFit? fit, UIXImageSource source)
         image,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
+            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
         inkWell,
     required TResult Function(
             dynamic key,
@@ -9949,7 +9872,7 @@ class _$TextAttributes implements TextAttributes {
     TResult? Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult? Function(
@@ -10045,7 +9968,7 @@ class _$TextAttributes implements TextAttributes {
     TResult Function(dynamic key, String type, String path, double? height,
             double? width, BoxFit? fit, UIXImageSource source)?
         image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
+    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
             List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
         inkWell,
     TResult Function(
