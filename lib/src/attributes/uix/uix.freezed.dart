@@ -4741,7 +4741,7 @@ class _$IconAttributes implements IconAttributes {
       required this.type,
       required this.code,
       this.size,
-      this.fontFamily = const UIXAttributeValue(value: 'MaterialIcons'),
+      this.fontFamily = const UIXAttributeValue<String>(value: 'MaterialIcons'),
       @UIXColorConverter() this.color});
 
   factory _$IconAttributes.fromJson(Map<String, dynamic> json) =>

@@ -76,7 +76,7 @@ class UIXAttributes with _$UIXAttributes {
     required String type,
     required UIXAttributeValue<num> code,
     UIXAttributeValue<num>? size,
-    @Default(UIXAttributeValue(value: 'MaterialIcons')) UIXAttributeValue<String> fontFamily,
+    @Default(UIXAttributeValue<String>(value: 'MaterialIcons')) UIXAttributeValue<String> fontFamily,
     @UIXColorConverter() Color? color,
   }) = IconAttributes;
 

@@ -252,7 +252,7 @@ _$IconAttributes _$$IconAttributesFromJson(Map<String, dynamic> json) =>
           : UIXAttributeValue<num>.fromJson(
               json['size'] as Map<String, dynamic>),
       fontFamily: json['fontFamily'] == null
-          ? const UIXAttributeValue(value: 'MaterialIcons')
+          ? const UIXAttributeValue<String>(value: 'MaterialIcons')
           : UIXAttributeValue<String>.fromJson(
               json['fontFamily'] as Map<String, dynamic>),
       color: const UIXColorConverter().fromJson(json['color'] as String?),
