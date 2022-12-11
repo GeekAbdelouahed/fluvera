@@ -15,13 +15,13 @@ class UIXAttributeValue<T> {
       return value as T;
     }
 
-    final provider = UIXProvider.of<UIXAttributesNotifier>(context);
+    final notifier = UIXProvider.of<UIXAttributesNotifier>(context);
 
-    if (provider == null) {
+    if (notifier == null) {
       throw Exception('$key key not found!');
     }
 
-    return provider.value.attributes[key] as T;
+    return notifier.attributes[key] as T;
   }
 
   factory UIXAttributeValue.fromJson(Map<String, dynamic> json) {
