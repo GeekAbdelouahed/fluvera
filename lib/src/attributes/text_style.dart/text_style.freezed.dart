@@ -21,7 +21,8 @@ UIXTextStyle _$UIXTextStyleFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$UIXTextStyle {
   double? get fontSize => throw _privateConstructorUsedError;
-  TextOverflow? get overflow => throw _privateConstructorUsedError;
+  UIXEnumAttributeValue<TextOverflow>? get overflow =>
+      throw _privateConstructorUsedError;
   @UIXColorConverter()
   Color? get color => throw _privateConstructorUsedError;
   @UIXFontWeightConverter()
@@ -41,7 +42,7 @@ abstract class $UIXTextStyleCopyWith<$Res> {
   @useResult
   $Res call(
       {double? fontSize,
-      TextOverflow? overflow,
+      UIXEnumAttributeValue<TextOverflow>? overflow,
       @UIXColorConverter() Color? color,
       @UIXFontWeightConverter() FontWeight? fontWeight});
 }
@@ -72,7 +73,7 @@ class _$UIXTextStyleCopyWithImpl<$Res, $Val extends UIXTextStyle>
       overflow: freezed == overflow
           ? _value.overflow
           : overflow // ignore: cast_nullable_to_non_nullable
-              as TextOverflow?,
+              as UIXEnumAttributeValue<TextOverflow>?,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -95,7 +96,7 @@ abstract class _$$_UIXTextStyleCopyWith<$Res>
   @useResult
   $Res call(
       {double? fontSize,
-      TextOverflow? overflow,
+      UIXEnumAttributeValue<TextOverflow>? overflow,
       @UIXColorConverter() Color? color,
       @UIXFontWeightConverter() FontWeight? fontWeight});
 }
@@ -124,7 +125,7 @@ class __$$_UIXTextStyleCopyWithImpl<$Res>
       overflow: freezed == overflow
           ? _value.overflow
           : overflow // ignore: cast_nullable_to_non_nullable
-              as TextOverflow?,
+              as UIXEnumAttributeValue<TextOverflow>?,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -152,7 +153,7 @@ class _$_UIXTextStyle implements _UIXTextStyle {
   @override
   final double? fontSize;
   @override
-  final TextOverflow? overflow;
+  final UIXEnumAttributeValue<TextOverflow>? overflow;
   @override
   @UIXColorConverter()
   final Color? color;
@@ -205,7 +206,7 @@ class _$_UIXTextStyle implements _UIXTextStyle {
 abstract class _UIXTextStyle implements UIXTextStyle {
   const factory _UIXTextStyle(
           {final double? fontSize,
-          final TextOverflow? overflow,
+          final UIXEnumAttributeValue<TextOverflow>? overflow,
           @UIXColorConverter() final Color? color,
           @UIXFontWeightConverter() final FontWeight? fontWeight}) =
       _$_UIXTextStyle;
@@ -216,7 +217,7 @@ abstract class _UIXTextStyle implements UIXTextStyle {
   @override
   double? get fontSize;
   @override
-  TextOverflow? get overflow;
+  UIXEnumAttributeValue<TextOverflow>? get overflow;
   @override
   @UIXColorConverter()
   Color? get color;

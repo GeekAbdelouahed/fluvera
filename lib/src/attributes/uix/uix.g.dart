@@ -57,15 +57,18 @@ _$ColumnAttributes _$$ColumnAttributesFromJson(Map<String, dynamic> json) =>
     _$ColumnAttributes(
       key: json['key'],
       type: json['type'] as String,
-      mainAxisSize:
-          $enumDecodeNullable(_$MainAxisSizeEnumMap, json['mainAxisSize']) ??
-              MainAxisSize.max,
-      mainAxisAlignment: $enumDecodeNullable(
-              _$MainAxisAlignmentEnumMap, json['mainAxisAlignment']) ??
-          MainAxisAlignment.start,
-      crossAxisAlignment: $enumDecodeNullable(
-              _$CrossAxisAlignmentEnumMap, json['crossAxisAlignment']) ??
-          CrossAxisAlignment.center,
+      mainAxisSize: json['mainAxisSize'] == null
+          ? const UIXEnumAttributeValue(value: 'max')
+          : UIXEnumAttributeValue<MainAxisSize>.fromJson(
+              json['mainAxisSize'] as Map<String, dynamic>),
+      mainAxisAlignment: json['mainAxisAlignment'] == null
+          ? const UIXEnumAttributeValue(value: 'start')
+          : UIXEnumAttributeValue<MainAxisAlignment>.fromJson(
+              json['mainAxisAlignment'] as Map<String, dynamic>),
+      crossAxisAlignment: json['crossAxisAlignment'] == null
+          ? const UIXEnumAttributeValue(value: 'center')
+          : UIXEnumAttributeValue<CrossAxisAlignment>.fromJson(
+              json['crossAxisAlignment'] as Map<String, dynamic>),
       children: (json['children'] as List<dynamic>)
           .map((e) => UIXAttributes.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -75,35 +78,11 @@ Map<String, dynamic> _$$ColumnAttributesToJson(_$ColumnAttributes instance) =>
     <String, dynamic>{
       'key': instance.key,
       'type': instance.type,
-      'mainAxisSize': _$MainAxisSizeEnumMap[instance.mainAxisSize]!,
-      'mainAxisAlignment':
-          _$MainAxisAlignmentEnumMap[instance.mainAxisAlignment]!,
-      'crossAxisAlignment':
-          _$CrossAxisAlignmentEnumMap[instance.crossAxisAlignment]!,
+      'mainAxisSize': instance.mainAxisSize,
+      'mainAxisAlignment': instance.mainAxisAlignment,
+      'crossAxisAlignment': instance.crossAxisAlignment,
       'children': instance.children,
     };
-
-const _$MainAxisSizeEnumMap = {
-  MainAxisSize.min: 'min',
-  MainAxisSize.max: 'max',
-};
-
-const _$MainAxisAlignmentEnumMap = {
-  MainAxisAlignment.start: 'start',
-  MainAxisAlignment.end: 'end',
-  MainAxisAlignment.center: 'center',
-  MainAxisAlignment.spaceBetween: 'spaceBetween',
-  MainAxisAlignment.spaceAround: 'spaceAround',
-  MainAxisAlignment.spaceEvenly: 'spaceEvenly',
-};
-
-const _$CrossAxisAlignmentEnumMap = {
-  CrossAxisAlignment.start: 'start',
-  CrossAxisAlignment.end: 'end',
-  CrossAxisAlignment.center: 'center',
-  CrossAxisAlignment.stretch: 'stretch',
-  CrossAxisAlignment.baseline: 'baseline',
-};
 
 _$ContainerAttributes _$$ContainerAttributesFromJson(
         Map<String, dynamic> json) =>
@@ -282,7 +261,10 @@ _$ImageAttributes _$$ImageAttributesFromJson(Map<String, dynamic> json) =>
           ? null
           : UIXAttributeValue<num>.fromJson(
               json['width'] as Map<String, dynamic>),
-      fit: $enumDecodeNullable(_$BoxFitEnumMap, json['fit']),
+      fit: json['fit'] == null
+          ? null
+          : UIXEnumAttributeValue<BoxFit>.fromJson(
+              json['fit'] as Map<String, dynamic>),
       source: $enumDecodeNullable(_$UIXImageSourceEnumMap, json['source']) ??
           UIXImageSource.network,
     );
@@ -294,19 +276,9 @@ Map<String, dynamic> _$$ImageAttributesToJson(_$ImageAttributes instance) =>
       'path': instance.path,
       'height': instance.height,
       'width': instance.width,
-      'fit': _$BoxFitEnumMap[instance.fit],
+      'fit': instance.fit,
       'source': _$UIXImageSourceEnumMap[instance.source]!,
     };
-
-const _$BoxFitEnumMap = {
-  BoxFit.fill: 'fill',
-  BoxFit.contain: 'contain',
-  BoxFit.cover: 'cover',
-  BoxFit.fitWidth: 'fitWidth',
-  BoxFit.fitHeight: 'fitHeight',
-  BoxFit.none: 'none',
-  BoxFit.scaleDown: 'scaleDown',
-};
 
 const _$UIXImageSourceEnumMap = {
   UIXImageSource.network: 'network',
@@ -378,15 +350,18 @@ _$RowAttributes _$$RowAttributesFromJson(Map<String, dynamic> json) =>
     _$RowAttributes(
       key: json['key'],
       type: json['type'] as String,
-      mainAxisSize:
-          $enumDecodeNullable(_$MainAxisSizeEnumMap, json['mainAxisSize']) ??
-              MainAxisSize.max,
-      mainAxisAlignment: $enumDecodeNullable(
-              _$MainAxisAlignmentEnumMap, json['mainAxisAlignment']) ??
-          MainAxisAlignment.start,
-      crossAxisAlignment: $enumDecodeNullable(
-              _$CrossAxisAlignmentEnumMap, json['crossAxisAlignment']) ??
-          CrossAxisAlignment.center,
+      mainAxisSize: json['mainAxisSize'] == null
+          ? const UIXEnumAttributeValue(value: 'max')
+          : UIXEnumAttributeValue<MainAxisSize>.fromJson(
+              json['mainAxisSize'] as Map<String, dynamic>),
+      mainAxisAlignment: json['mainAxisAlignment'] == null
+          ? const UIXEnumAttributeValue(value: 'start')
+          : UIXEnumAttributeValue<MainAxisAlignment>.fromJson(
+              json['mainAxisAlignment'] as Map<String, dynamic>),
+      crossAxisAlignment: json['crossAxisAlignment'] == null
+          ? const UIXEnumAttributeValue(value: 'center')
+          : UIXEnumAttributeValue<CrossAxisAlignment>.fromJson(
+              json['crossAxisAlignment'] as Map<String, dynamic>),
       children: (json['children'] as List<dynamic>)
           .map((e) => UIXAttributes.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -396,11 +371,9 @@ Map<String, dynamic> _$$RowAttributesToJson(_$RowAttributes instance) =>
     <String, dynamic>{
       'key': instance.key,
       'type': instance.type,
-      'mainAxisSize': _$MainAxisSizeEnumMap[instance.mainAxisSize]!,
-      'mainAxisAlignment':
-          _$MainAxisAlignmentEnumMap[instance.mainAxisAlignment]!,
-      'crossAxisAlignment':
-          _$CrossAxisAlignmentEnumMap[instance.crossAxisAlignment]!,
+      'mainAxisSize': instance.mainAxisSize,
+      'mainAxisAlignment': instance.mainAxisAlignment,
+      'crossAxisAlignment': instance.crossAxisAlignment,
       'children': instance.children,
     };
 

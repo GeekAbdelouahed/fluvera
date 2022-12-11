@@ -145,14 +145,18 @@ Map<String, dynamic> listTileJson({
         },
         'child': {
           'type': 'Column',
-          'crossAxisAlignment': 'stretch',
+          'crossAxisAlignment': {
+            'value': 'stretch',
+          },
           'children': [
             {
               'type': 'Image',
               'height': {
                 'value': 150,
               },
-              'fit': 'cover',
+              'fit': {
+                'value': 'cover',
+              },
               'path': {
                 'value': imageUrl,
               },
@@ -167,13 +171,17 @@ Map<String, dynamic> listTileJson({
               },
               'child': {
                 'type': 'Row',
-                'mainAxisSize': 'min',
+                'mainAxisSize': {
+                  'value': 'min',
+                },
                 'children': [
                   {
                     'type': 'Expanded',
                     'child': {
                       'type': 'Column',
-                      'crossAxisAlignment': 'start',
+                      'crossAxisAlignment': {
+                        'value': 'start',
+                      },
                       'children': [
                         {
                           'type': 'Text',
@@ -275,14 +283,18 @@ Map<String, dynamic> detailsJsonData(Map<String, dynamic> item) {
         'type': 'SingleChildScrollView',
         'child': {
           'type': 'Column',
-          'crossAxisAlignment': 'stretch',
+          'crossAxisAlignment': {
+            'value': 'stretch',
+          },
           'children': [
             {
               'type': 'Image',
               'height': {
                 'value': 250,
               },
-              'fit': 'cover',
+              'fit': {
+                'value': 'cover',
+              },
               'path': {
                 'value': item['imageUrl'],
               },
@@ -297,7 +309,9 @@ Map<String, dynamic> detailsJsonData(Map<String, dynamic> item) {
               },
               'child': {
                 'type': 'Column',
-                'crossAxisAlignment': 'stretch',
+                'crossAxisAlignment': {
+                  'value': 'stretch',
+                },
                 'children': [
                   {
                     'type': 'Text',

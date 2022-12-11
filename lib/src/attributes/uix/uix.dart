@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:uix/src/attributes/action/action.dart';
 import 'package:uix/src/attributes/attribute_value/attribute_value.dart';
+import 'package:uix/src/attributes/enum_attribute_value/enum_attribute_value.dart';
 import 'package:uix/src/attributes/text_style.dart/text_style.dart';
 import 'package:uix/src/converters/converters.dart';
 import 'package:uix/src/enums/enums.dart';
@@ -29,9 +30,9 @@ class UIXAttributes with _$UIXAttributes {
   const factory UIXAttributes.column({
     dynamic key,
     required String type,
-    @Default(MainAxisSize.max) MainAxisSize mainAxisSize,
-    @Default(MainAxisAlignment.start) MainAxisAlignment mainAxisAlignment,
-    @Default(CrossAxisAlignment.center) CrossAxisAlignment crossAxisAlignment,
+    @Default(UIXEnumAttributeValue(value: 'max')) UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+    @Default(UIXEnumAttributeValue(value: 'start')) UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+    @Default(UIXEnumAttributeValue(value: 'center')) UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
     required List<UIXAttributes> children,
   }) = ColumnAttributes;
 
@@ -86,7 +87,7 @@ class UIXAttributes with _$UIXAttributes {
     required UIXAttributeValue<String> path,
     UIXAttributeValue<num>? height,
     UIXAttributeValue<num>? width,
-    BoxFit? fit,
+    UIXEnumAttributeValue<BoxFit>? fit,
     @Default(UIXImageSource.network) UIXImageSource source,
   }) = ImageAttributes;
 
@@ -115,9 +116,9 @@ class UIXAttributes with _$UIXAttributes {
   const factory UIXAttributes.row({
     dynamic key,
     required String type,
-    @Default(MainAxisSize.max) MainAxisSize mainAxisSize,
-    @Default(MainAxisAlignment.start) MainAxisAlignment mainAxisAlignment,
-    @Default(CrossAxisAlignment.center) CrossAxisAlignment crossAxisAlignment,
+    @Default(UIXEnumAttributeValue(value: 'max')) UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+    @Default(UIXEnumAttributeValue(value: 'start')) UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+    @Default(UIXEnumAttributeValue(value: 'center')) UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
     required List<UIXAttributes> children,
   }) = RowAttributes;
 

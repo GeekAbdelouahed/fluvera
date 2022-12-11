@@ -5,16 +5,20 @@ class UIXColumn extends UIX<ColumnAttributes> {
 
   @override
   Widget build() {
-    return Column(
-      key: key,
-      mainAxisSize: attributes.mainAxisSize,
-      mainAxisAlignment: attributes.mainAxisAlignment,
-      crossAxisAlignment: attributes.crossAxisAlignment,
-      children: [
-        for (final item in attributes.children) ...{
-          item.build(),
-        },
-      ],
+    return Builder(
+      builder: (context) {
+        return Column(
+          key: key,
+          mainAxisSize: attributes.mainAxisSize.toValue(context, MainAxisSize.values),
+          mainAxisAlignment: attributes.mainAxisAlignment.toValue(context, MainAxisAlignment.values),
+          crossAxisAlignment: attributes.crossAxisAlignment.toValue(context, CrossAxisAlignment.values),
+          children: [
+            for (final item in attributes.children) ...{
+              item.build(),
+            },
+          ],
+        );
+      },
     );
   }
 }

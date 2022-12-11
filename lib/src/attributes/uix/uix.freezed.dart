@@ -81,9 +81,9 @@ mixin _$UIXAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -129,7 +129,7 @@ mixin _$UIXAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -147,9 +147,9 @@ mixin _$UIXAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -194,9 +194,9 @@ mixin _$UIXAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -238,7 +238,7 @@ mixin _$UIXAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -256,9 +256,9 @@ mixin _$UIXAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -298,9 +298,9 @@ mixin _$UIXAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -342,7 +342,7 @@ mixin _$UIXAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -360,9 +360,9 @@ mixin _$UIXAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?
@@ -639,9 +639,9 @@ class _$AlignAttributes implements AlignAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -687,7 +687,7 @@ class _$AlignAttributes implements AlignAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -705,9 +705,9 @@ class _$AlignAttributes implements AlignAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -755,9 +755,9 @@ class _$AlignAttributes implements AlignAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -799,7 +799,7 @@ class _$AlignAttributes implements AlignAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -817,9 +817,9 @@ class _$AlignAttributes implements AlignAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -862,9 +862,9 @@ class _$AlignAttributes implements AlignAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -906,7 +906,7 @@ class _$AlignAttributes implements AlignAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -924,9 +924,9 @@ class _$AlignAttributes implements AlignAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?
@@ -1227,9 +1227,9 @@ class _$AppBarAttributes implements AppBarAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -1275,7 +1275,7 @@ class _$AppBarAttributes implements AppBarAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -1293,9 +1293,9 @@ class _$AppBarAttributes implements AppBarAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -1343,9 +1343,9 @@ class _$AppBarAttributes implements AppBarAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -1387,7 +1387,7 @@ class _$AppBarAttributes implements AppBarAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -1405,9 +1405,9 @@ class _$AppBarAttributes implements AppBarAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -1450,9 +1450,9 @@ class _$AppBarAttributes implements AppBarAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -1494,7 +1494,7 @@ class _$AppBarAttributes implements AppBarAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -1512,9 +1512,9 @@ class _$AppBarAttributes implements AppBarAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?
@@ -1670,9 +1670,9 @@ abstract class _$$ColumnAttributesCopyWith<$Res>
   $Res call(
       {dynamic key,
       String type,
-      MainAxisSize mainAxisSize,
-      MainAxisAlignment mainAxisAlignment,
-      CrossAxisAlignment crossAxisAlignment,
+      UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+      UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+      UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
       List<UIXAttributes> children});
 }
 
@@ -1706,15 +1706,15 @@ class __$$ColumnAttributesCopyWithImpl<$Res>
       mainAxisSize: null == mainAxisSize
           ? _value.mainAxisSize
           : mainAxisSize // ignore: cast_nullable_to_non_nullable
-              as MainAxisSize,
+              as UIXEnumAttributeValue<MainAxisSize>,
       mainAxisAlignment: null == mainAxisAlignment
           ? _value.mainAxisAlignment
           : mainAxisAlignment // ignore: cast_nullable_to_non_nullable
-              as MainAxisAlignment,
+              as UIXEnumAttributeValue<MainAxisAlignment>,
       crossAxisAlignment: null == crossAxisAlignment
           ? _value.crossAxisAlignment
           : crossAxisAlignment // ignore: cast_nullable_to_non_nullable
-              as CrossAxisAlignment,
+              as UIXEnumAttributeValue<CrossAxisAlignment>,
       children: null == children
           ? _value._children
           : children // ignore: cast_nullable_to_non_nullable
@@ -1729,9 +1729,9 @@ class _$ColumnAttributes implements ColumnAttributes {
   const _$ColumnAttributes(
       {this.key,
       required this.type,
-      this.mainAxisSize = MainAxisSize.max,
-      this.mainAxisAlignment = MainAxisAlignment.start,
-      this.crossAxisAlignment = CrossAxisAlignment.center,
+      this.mainAxisSize = const UIXEnumAttributeValue(value: 'max'),
+      this.mainAxisAlignment = const UIXEnumAttributeValue(value: 'start'),
+      this.crossAxisAlignment = const UIXEnumAttributeValue(value: 'center'),
       required final List<UIXAttributes> children})
       : _children = children;
 
@@ -1744,13 +1744,13 @@ class _$ColumnAttributes implements ColumnAttributes {
   final String type;
   @override
   @JsonKey()
-  final MainAxisSize mainAxisSize;
+  final UIXEnumAttributeValue<MainAxisSize> mainAxisSize;
   @override
   @JsonKey()
-  final MainAxisAlignment mainAxisAlignment;
+  final UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment;
   @override
   @JsonKey()
-  final CrossAxisAlignment crossAxisAlignment;
+  final UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment;
   final List<UIXAttributes> _children;
   @override
   List<UIXAttributes> get children {
@@ -1816,9 +1816,9 @@ class _$ColumnAttributes implements ColumnAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -1864,7 +1864,7 @@ class _$ColumnAttributes implements ColumnAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -1882,9 +1882,9 @@ class _$ColumnAttributes implements ColumnAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -1933,9 +1933,9 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -1977,7 +1977,7 @@ class _$ColumnAttributes implements ColumnAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -1995,9 +1995,9 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -2041,9 +2041,9 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -2085,7 +2085,7 @@ class _$ColumnAttributes implements ColumnAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -2103,9 +2103,9 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?
@@ -2231,9 +2231,9 @@ abstract class ColumnAttributes implements UIXAttributes {
   const factory ColumnAttributes(
       {final dynamic key,
       required final String type,
-      final MainAxisSize mainAxisSize,
-      final MainAxisAlignment mainAxisAlignment,
-      final CrossAxisAlignment crossAxisAlignment,
+      final UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+      final UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+      final UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
       required final List<UIXAttributes> children}) = _$ColumnAttributes;
 
   factory ColumnAttributes.fromJson(Map<String, dynamic> json) =
@@ -2243,9 +2243,9 @@ abstract class ColumnAttributes implements UIXAttributes {
   dynamic get key;
   @override
   String get type;
-  MainAxisSize get mainAxisSize;
-  MainAxisAlignment get mainAxisAlignment;
-  CrossAxisAlignment get crossAxisAlignment;
+  UIXEnumAttributeValue<MainAxisSize> get mainAxisSize;
+  UIXEnumAttributeValue<MainAxisAlignment> get mainAxisAlignment;
+  UIXEnumAttributeValue<CrossAxisAlignment> get crossAxisAlignment;
   List<UIXAttributes> get children;
   @override
   @JsonKey(ignore: true)
@@ -2451,9 +2451,9 @@ class _$ContainerAttributes implements ContainerAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -2499,7 +2499,7 @@ class _$ContainerAttributes implements ContainerAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -2517,9 +2517,9 @@ class _$ContainerAttributes implements ContainerAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -2568,9 +2568,9 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -2612,7 +2612,7 @@ class _$ContainerAttributes implements ContainerAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -2630,9 +2630,9 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -2676,9 +2676,9 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -2720,7 +2720,7 @@ class _$ContainerAttributes implements ContainerAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -2738,9 +2738,9 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?
@@ -3068,9 +3068,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -3116,7 +3116,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -3134,9 +3134,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -3184,9 +3184,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -3228,7 +3228,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -3246,9 +3246,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -3291,9 +3291,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -3335,7 +3335,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -3353,9 +3353,9 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?
@@ -3631,9 +3631,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -3679,7 +3679,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -3697,9 +3697,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -3747,9 +3747,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -3791,7 +3791,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -3809,9 +3809,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -3854,9 +3854,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -3898,7 +3898,7 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -3916,9 +3916,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?
@@ -4231,9 +4231,9 @@ class _$FractionallySizedBoxAttributes
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -4279,7 +4279,7 @@ class _$FractionallySizedBoxAttributes
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -4297,9 +4297,9 @@ class _$FractionallySizedBoxAttributes
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -4348,9 +4348,9 @@ class _$FractionallySizedBoxAttributes
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -4392,7 +4392,7 @@ class _$FractionallySizedBoxAttributes
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -4410,9 +4410,9 @@ class _$FractionallySizedBoxAttributes
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -4456,9 +4456,9 @@ class _$FractionallySizedBoxAttributes
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -4500,7 +4500,7 @@ class _$FractionallySizedBoxAttributes
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -4518,9 +4518,9 @@ class _$FractionallySizedBoxAttributes
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?
@@ -4817,9 +4817,9 @@ class _$IconAttributes implements IconAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -4865,7 +4865,7 @@ class _$IconAttributes implements IconAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -4883,9 +4883,9 @@ class _$IconAttributes implements IconAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -4933,9 +4933,9 @@ class _$IconAttributes implements IconAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -4977,7 +4977,7 @@ class _$IconAttributes implements IconAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -4995,9 +4995,9 @@ class _$IconAttributes implements IconAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -5040,9 +5040,9 @@ class _$IconAttributes implements IconAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -5084,7 +5084,7 @@ class _$IconAttributes implements IconAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -5102,9 +5102,9 @@ class _$IconAttributes implements IconAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?
@@ -5266,7 +5266,7 @@ abstract class _$$ImageAttributesCopyWith<$Res>
       UIXAttributeValue<String> path,
       UIXAttributeValue<num>? height,
       UIXAttributeValue<num>? width,
-      BoxFit? fit,
+      UIXEnumAttributeValue<BoxFit>? fit,
       UIXImageSource source});
 }
 
@@ -5313,7 +5313,7 @@ class __$$ImageAttributesCopyWithImpl<$Res>
       fit: freezed == fit
           ? _value.fit
           : fit // ignore: cast_nullable_to_non_nullable
-              as BoxFit?,
+              as UIXEnumAttributeValue<BoxFit>?,
       source: null == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
@@ -5348,7 +5348,7 @@ class _$ImageAttributes implements ImageAttributes {
   @override
   final UIXAttributeValue<num>? width;
   @override
-  final BoxFit? fit;
+  final UIXEnumAttributeValue<BoxFit>? fit;
   @override
   @JsonKey()
   final UIXImageSource source;
@@ -5409,9 +5409,9 @@ class _$ImageAttributes implements ImageAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -5457,7 +5457,7 @@ class _$ImageAttributes implements ImageAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -5475,9 +5475,9 @@ class _$ImageAttributes implements ImageAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -5525,9 +5525,9 @@ class _$ImageAttributes implements ImageAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -5569,7 +5569,7 @@ class _$ImageAttributes implements ImageAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -5587,9 +5587,9 @@ class _$ImageAttributes implements ImageAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -5632,9 +5632,9 @@ class _$ImageAttributes implements ImageAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -5676,7 +5676,7 @@ class _$ImageAttributes implements ImageAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -5694,9 +5694,9 @@ class _$ImageAttributes implements ImageAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?
@@ -5824,7 +5824,7 @@ abstract class ImageAttributes implements UIXAttributes {
       required final UIXAttributeValue<String> path,
       final UIXAttributeValue<num>? height,
       final UIXAttributeValue<num>? width,
-      final BoxFit? fit,
+      final UIXEnumAttributeValue<BoxFit>? fit,
       final UIXImageSource source}) = _$ImageAttributes;
 
   factory ImageAttributes.fromJson(Map<String, dynamic> json) =
@@ -5837,7 +5837,7 @@ abstract class ImageAttributes implements UIXAttributes {
   UIXAttributeValue<String> get path;
   UIXAttributeValue<num>? get height;
   UIXAttributeValue<num>? get width;
-  BoxFit? get fit;
+  UIXEnumAttributeValue<BoxFit>? get fit;
   UIXImageSource get source;
   @override
   @JsonKey(ignore: true)
@@ -6012,9 +6012,9 @@ class _$InkWellAttributes implements InkWellAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -6060,7 +6060,7 @@ class _$InkWellAttributes implements InkWellAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -6078,9 +6078,9 @@ class _$InkWellAttributes implements InkWellAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -6128,9 +6128,9 @@ class _$InkWellAttributes implements InkWellAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -6172,7 +6172,7 @@ class _$InkWellAttributes implements InkWellAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -6190,9 +6190,9 @@ class _$InkWellAttributes implements InkWellAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -6235,9 +6235,9 @@ class _$InkWellAttributes implements InkWellAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -6279,7 +6279,7 @@ class _$InkWellAttributes implements InkWellAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -6297,9 +6297,9 @@ class _$InkWellAttributes implements InkWellAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?
@@ -6578,9 +6578,9 @@ class _$PaddingAttributes implements PaddingAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -6626,7 +6626,7 @@ class _$PaddingAttributes implements PaddingAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -6644,9 +6644,9 @@ class _$PaddingAttributes implements PaddingAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -6694,9 +6694,9 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -6738,7 +6738,7 @@ class _$PaddingAttributes implements PaddingAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -6756,9 +6756,9 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -6801,9 +6801,9 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -6845,7 +6845,7 @@ class _$PaddingAttributes implements PaddingAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -6863,9 +6863,9 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?
@@ -7151,9 +7151,9 @@ class _$PageAttributes implements PageAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -7199,7 +7199,7 @@ class _$PageAttributes implements PageAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -7217,9 +7217,9 @@ class _$PageAttributes implements PageAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -7267,9 +7267,9 @@ class _$PageAttributes implements PageAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -7311,7 +7311,7 @@ class _$PageAttributes implements PageAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -7329,9 +7329,9 @@ class _$PageAttributes implements PageAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -7374,9 +7374,9 @@ class _$PageAttributes implements PageAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -7418,7 +7418,7 @@ class _$PageAttributes implements PageAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -7436,9 +7436,9 @@ class _$PageAttributes implements PageAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?
@@ -7592,9 +7592,9 @@ abstract class _$$RowAttributesCopyWith<$Res>
   $Res call(
       {dynamic key,
       String type,
-      MainAxisSize mainAxisSize,
-      MainAxisAlignment mainAxisAlignment,
-      CrossAxisAlignment crossAxisAlignment,
+      UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+      UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+      UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
       List<UIXAttributes> children});
 }
 
@@ -7628,15 +7628,15 @@ class __$$RowAttributesCopyWithImpl<$Res>
       mainAxisSize: null == mainAxisSize
           ? _value.mainAxisSize
           : mainAxisSize // ignore: cast_nullable_to_non_nullable
-              as MainAxisSize,
+              as UIXEnumAttributeValue<MainAxisSize>,
       mainAxisAlignment: null == mainAxisAlignment
           ? _value.mainAxisAlignment
           : mainAxisAlignment // ignore: cast_nullable_to_non_nullable
-              as MainAxisAlignment,
+              as UIXEnumAttributeValue<MainAxisAlignment>,
       crossAxisAlignment: null == crossAxisAlignment
           ? _value.crossAxisAlignment
           : crossAxisAlignment // ignore: cast_nullable_to_non_nullable
-              as CrossAxisAlignment,
+              as UIXEnumAttributeValue<CrossAxisAlignment>,
       children: null == children
           ? _value._children
           : children // ignore: cast_nullable_to_non_nullable
@@ -7651,9 +7651,9 @@ class _$RowAttributes implements RowAttributes {
   const _$RowAttributes(
       {this.key,
       required this.type,
-      this.mainAxisSize = MainAxisSize.max,
-      this.mainAxisAlignment = MainAxisAlignment.start,
-      this.crossAxisAlignment = CrossAxisAlignment.center,
+      this.mainAxisSize = const UIXEnumAttributeValue(value: 'max'),
+      this.mainAxisAlignment = const UIXEnumAttributeValue(value: 'start'),
+      this.crossAxisAlignment = const UIXEnumAttributeValue(value: 'center'),
       required final List<UIXAttributes> children})
       : _children = children;
 
@@ -7666,13 +7666,13 @@ class _$RowAttributes implements RowAttributes {
   final String type;
   @override
   @JsonKey()
-  final MainAxisSize mainAxisSize;
+  final UIXEnumAttributeValue<MainAxisSize> mainAxisSize;
   @override
   @JsonKey()
-  final MainAxisAlignment mainAxisAlignment;
+  final UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment;
   @override
   @JsonKey()
-  final CrossAxisAlignment crossAxisAlignment;
+  final UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment;
   final List<UIXAttributes> _children;
   @override
   List<UIXAttributes> get children {
@@ -7738,9 +7738,9 @@ class _$RowAttributes implements RowAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -7786,7 +7786,7 @@ class _$RowAttributes implements RowAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -7804,9 +7804,9 @@ class _$RowAttributes implements RowAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -7855,9 +7855,9 @@ class _$RowAttributes implements RowAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -7899,7 +7899,7 @@ class _$RowAttributes implements RowAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -7917,9 +7917,9 @@ class _$RowAttributes implements RowAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -7963,9 +7963,9 @@ class _$RowAttributes implements RowAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -8007,7 +8007,7 @@ class _$RowAttributes implements RowAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -8025,9 +8025,9 @@ class _$RowAttributes implements RowAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?
@@ -8153,9 +8153,9 @@ abstract class RowAttributes implements UIXAttributes {
   const factory RowAttributes(
       {final dynamic key,
       required final String type,
-      final MainAxisSize mainAxisSize,
-      final MainAxisAlignment mainAxisAlignment,
-      final CrossAxisAlignment crossAxisAlignment,
+      final UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+      final UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+      final UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
       required final List<UIXAttributes> children}) = _$RowAttributes;
 
   factory RowAttributes.fromJson(Map<String, dynamic> json) =
@@ -8165,9 +8165,9 @@ abstract class RowAttributes implements UIXAttributes {
   dynamic get key;
   @override
   String get type;
-  MainAxisSize get mainAxisSize;
-  MainAxisAlignment get mainAxisAlignment;
-  CrossAxisAlignment get crossAxisAlignment;
+  UIXEnumAttributeValue<MainAxisSize> get mainAxisSize;
+  UIXEnumAttributeValue<MainAxisAlignment> get mainAxisAlignment;
+  UIXEnumAttributeValue<CrossAxisAlignment> get crossAxisAlignment;
   List<UIXAttributes> get children;
   @override
   @JsonKey(ignore: true)
@@ -8298,9 +8298,9 @@ class _$SingleChildScrollViewAttributes
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -8346,7 +8346,7 @@ class _$SingleChildScrollViewAttributes
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -8364,9 +8364,9 @@ class _$SingleChildScrollViewAttributes
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -8414,9 +8414,9 @@ class _$SingleChildScrollViewAttributes
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -8458,7 +8458,7 @@ class _$SingleChildScrollViewAttributes
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -8476,9 +8476,9 @@ class _$SingleChildScrollViewAttributes
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -8521,9 +8521,9 @@ class _$SingleChildScrollViewAttributes
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -8565,7 +8565,7 @@ class _$SingleChildScrollViewAttributes
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -8583,9 +8583,9 @@ class _$SingleChildScrollViewAttributes
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?
@@ -8866,9 +8866,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -8914,7 +8914,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -8932,9 +8932,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -8982,9 +8982,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -9026,7 +9026,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -9044,9 +9044,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -9089,9 +9089,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -9133,7 +9133,7 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -9151,9 +9151,9 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?
@@ -9462,9 +9462,9 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -9510,7 +9510,7 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -9528,9 +9528,9 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -9578,9 +9578,9 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -9622,7 +9622,7 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -9640,9 +9640,9 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -9685,9 +9685,9 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -9729,7 +9729,7 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -9747,9 +9747,9 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?
@@ -10002,9 +10002,9 @@ class _$SpacerAttributes implements SpacerAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -10050,7 +10050,7 @@ class _$SpacerAttributes implements SpacerAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -10068,9 +10068,9 @@ class _$SpacerAttributes implements SpacerAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -10118,9 +10118,9 @@ class _$SpacerAttributes implements SpacerAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -10162,7 +10162,7 @@ class _$SpacerAttributes implements SpacerAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -10180,9 +10180,9 @@ class _$SpacerAttributes implements SpacerAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -10225,9 +10225,9 @@ class _$SpacerAttributes implements SpacerAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -10269,7 +10269,7 @@ class _$SpacerAttributes implements SpacerAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -10287,9 +10287,9 @@ class _$SpacerAttributes implements SpacerAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?
@@ -10560,9 +10560,9 @@ class _$TextAttributes implements TextAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         column,
     required TResult Function(
@@ -10608,7 +10608,7 @@ class _$TextAttributes implements TextAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -10626,9 +10626,9 @@ class _$TextAttributes implements TextAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)
         row,
     required TResult Function(dynamic key, String type, UIXAttributes? child)
@@ -10676,9 +10676,9 @@ class _$TextAttributes implements TextAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult? Function(
@@ -10720,7 +10720,7 @@ class _$TextAttributes implements TextAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -10738,9 +10738,9 @@ class _$TextAttributes implements TextAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult? Function(dynamic key, String type, UIXAttributes? child)?
@@ -10783,9 +10783,9 @@ class _$TextAttributes implements TextAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         column,
     TResult Function(
@@ -10827,7 +10827,7 @@ class _$TextAttributes implements TextAttributes {
             UIXAttributeValue<String> path,
             UIXAttributeValue<num>? height,
             UIXAttributeValue<num>? width,
-            BoxFit? fit,
+            UIXEnumAttributeValue<BoxFit>? fit,
             UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
@@ -10845,9 +10845,9 @@ class _$TextAttributes implements TextAttributes {
     TResult Function(
             dynamic key,
             String type,
-            MainAxisSize mainAxisSize,
-            MainAxisAlignment mainAxisAlignment,
-            CrossAxisAlignment crossAxisAlignment,
+            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
             List<UIXAttributes> children)?
         row,
     TResult Function(dynamic key, String type, UIXAttributes? child)?

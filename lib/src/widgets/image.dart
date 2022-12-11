@@ -11,7 +11,7 @@ class UIXImage extends UIX<ImageAttributes> {
           key: key,
           height: attributes.height?.toValue(context).toDouble(),
           width: attributes.width?.toValue(context).toDouble(),
-          fit: attributes.fit,
+          fit: attributes.fit?.toValue(context, BoxFit.values),
           image: _source(context),
         );
       },
