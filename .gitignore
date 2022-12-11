@@ -1,9 +1,6 @@
 #Flutter versions manager
 .fvm/
 
-.idea/
-.vscode/
-
 # Miscellaneous
 *.class
 *.log
