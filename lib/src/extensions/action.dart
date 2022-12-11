@@ -25,7 +25,7 @@ extension UIXActionExtension on UIXAction {
             }
 
             return UIXProvider<UIXAttributesNotifier>(
-              value: notifier!,
+              notifier: notifier!,
               child: attributes.child.build(),
             );
           },
@@ -44,7 +44,7 @@ extension UIXActionExtension on UIXAction {
           backgroundColor: attributes.backgroundColor,
           builder: (_) {
             return UIXProvider<UIXAttributesNotifier>(
-              value: notifier!,
+              notifier: notifier!,
               child: attributes.child.build(),
             );
           },
