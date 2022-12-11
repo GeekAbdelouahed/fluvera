@@ -5,12 +5,16 @@ class UIXFractionallySizedBox extends UIX<FractionallySizedBoxAttributes> {
 
   @override
   Widget build() {
-    return FractionallySizedBox(
-      key: key,
-      alignment: attributes.alignment!,
-      heightFactor: attributes.heightFactor,
-      widthFactor: attributes.widthFactor,
-      child: attributes.child,
+    return Builder(
+      builder: (context) {
+        return FractionallySizedBox(
+          key: key,
+          alignment: attributes.alignment!,
+          heightFactor: attributes.heightFactor?.toValue(context).toDouble(),
+          widthFactor: attributes.widthFactor?.toValue(context).toDouble(),
+          child: attributes.child?.build(),
+        );
+      },
     );
   }
 }

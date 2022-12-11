@@ -5,9 +5,13 @@ class UIXSpacer extends UIX<SpacerAttributes> {
 
   @override
   Widget build() {
-    return Spacer(
-      key: key,
-      flex: attributes.flex,
+    return Builder(
+      builder: (context) {
+        return Spacer(
+          key: key,
+          flex: attributes.flex.toValue(context).toInt(),
+        );
+      },
     );
   }
 }

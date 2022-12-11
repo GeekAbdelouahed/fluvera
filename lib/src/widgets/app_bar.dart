@@ -5,11 +5,21 @@ class UIXAppBar extends UIX<AppBarAttributes> {
 
   @override
   Widget build() {
-    return AppBar(
-      key: key,
-      centerTitle: attributes.centerTitle,
-      title: attributes.title,
-      actions: attributes.actions,
+    return Builder(
+      builder: (context) {
+        return AppBar(
+          key: key,
+          centerTitle: attributes.centerTitle?.toValue(context),
+          title: attributes.title?.build(),
+          actions: attributes.actions?.isNotEmpty ?? false
+              ? [
+                  for (final item in attributes.actions!) ...{
+                    item.build(),
+                  }
+                ]
+              : null,
+        );
+      },
     );
   }
 }

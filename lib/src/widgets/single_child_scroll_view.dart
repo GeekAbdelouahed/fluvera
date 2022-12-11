@@ -7,7 +7,7 @@ class UIXSingleChildScrollView extends UIX<SingleChildScrollViewAttributes> {
   Widget build() {
     return SingleChildScrollView(
       key: key,
-      child: attributes.child,
+      child: attributes.child?.build(),
     );
   }
 }

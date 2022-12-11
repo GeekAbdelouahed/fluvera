@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uix/uix.dart';
 
 part 'alignment.dart';
 part 'color.dart';
 part 'edge_insets.dart';
+part 'enum.dart';
 part 'font_weight.dart';
-part 'widget.dart';
-part 'widgets.dart';

@@ -46,7 +46,7 @@ mixin _$UIXAction {
             String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, @UIXWidgetConverter() Widget child)
+            bool barrierDismissible, UIXAttributes child)
         showDialog,
     required TResult Function(
             String type,
@@ -54,10 +54,10 @@ mixin _$UIXAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            UIXAttributes child)
         showBottomSheet,
     required TResult Function(
-            String type, bool synchronized, String key, String? value)
+            String type, bool synchronized, String key, dynamic value)
         updateAttribute,
   }) =>
       throw _privateConstructorUsedError;
@@ -70,7 +70,7 @@ mixin _$UIXAction {
             String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showDialog,
     TResult? Function(
             String type,
@@ -78,10 +78,10 @@ mixin _$UIXAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showBottomSheet,
     TResult? Function(
-            String type, bool synchronized, String key, String? value)?
+            String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
   }) =>
       throw _privateConstructorUsedError;
@@ -94,7 +94,7 @@ mixin _$UIXAction {
             String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showDialog,
     TResult Function(
             String type,
@@ -102,9 +102,9 @@ mixin _$UIXAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showBottomSheet,
-    TResult Function(String type, bool synchronized, String key, String? value)?
+    TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
     required TResult orElse(),
   }) =>
@@ -301,7 +301,7 @@ class _$PushRouteAction implements PushRouteAction {
             String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, @UIXWidgetConverter() Widget child)
+            bool barrierDismissible, UIXAttributes child)
         showDialog,
     required TResult Function(
             String type,
@@ -309,10 +309,10 @@ class _$PushRouteAction implements PushRouteAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            UIXAttributes child)
         showBottomSheet,
     required TResult Function(
-            String type, bool synchronized, String key, String? value)
+            String type, bool synchronized, String key, dynamic value)
         updateAttribute,
   }) {
     return pushRoute(type, synchronized, routeName, queries);
@@ -328,7 +328,7 @@ class _$PushRouteAction implements PushRouteAction {
             String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showDialog,
     TResult? Function(
             String type,
@@ -336,10 +336,10 @@ class _$PushRouteAction implements PushRouteAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showBottomSheet,
     TResult? Function(
-            String type, bool synchronized, String key, String? value)?
+            String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
   }) {
     return pushRoute?.call(type, synchronized, routeName, queries);
@@ -355,7 +355,7 @@ class _$PushRouteAction implements PushRouteAction {
             String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showDialog,
     TResult Function(
             String type,
@@ -363,9 +363,9 @@ class _$PushRouteAction implements PushRouteAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showBottomSheet,
-    TResult Function(String type, bool synchronized, String key, String? value)?
+    TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
     required TResult orElse(),
   }) {
@@ -552,7 +552,7 @@ class _$PopRouteAction implements PopRouteAction {
             String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, @UIXWidgetConverter() Widget child)
+            bool barrierDismissible, UIXAttributes child)
         showDialog,
     required TResult Function(
             String type,
@@ -560,10 +560,10 @@ class _$PopRouteAction implements PopRouteAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            UIXAttributes child)
         showBottomSheet,
     required TResult Function(
-            String type, bool synchronized, String key, String? value)
+            String type, bool synchronized, String key, dynamic value)
         updateAttribute,
   }) {
     return popRoute(type, synchronized, queries);
@@ -579,7 +579,7 @@ class _$PopRouteAction implements PopRouteAction {
             String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showDialog,
     TResult? Function(
             String type,
@@ -587,10 +587,10 @@ class _$PopRouteAction implements PopRouteAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showBottomSheet,
     TResult? Function(
-            String type, bool synchronized, String key, String? value)?
+            String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
   }) {
     return popRoute?.call(type, synchronized, queries);
@@ -606,7 +606,7 @@ class _$PopRouteAction implements PopRouteAction {
             String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showDialog,
     TResult Function(
             String type,
@@ -614,9 +614,9 @@ class _$PopRouteAction implements PopRouteAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showBottomSheet,
-    TResult Function(String type, bool synchronized, String key, String? value)?
+    TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
     required TResult orElse(),
   }) {
@@ -706,7 +706,9 @@ abstract class _$$ShowDialogActionCopyWith<$Res>
       {String type,
       bool synchronized,
       bool barrierDismissible,
-      @UIXWidgetConverter() Widget child});
+      UIXAttributes child});
+
+  $UIXAttributesCopyWith<$Res> get child;
 }
 
 /// @nodoc
@@ -741,8 +743,16 @@ class __$$ShowDialogActionCopyWithImpl<$Res>
       child: null == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Widget,
+              as UIXAttributes,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributesCopyWith<$Res> get child {
+    return $UIXAttributesCopyWith<$Res>(_value.child, (value) {
+      return _then(_value.copyWith(child: value));
+    });
   }
 }
 
@@ -753,7 +763,7 @@ class _$ShowDialogAction implements ShowDialogAction {
       {required this.type,
       this.synchronized = false,
       this.barrierDismissible = true,
-      @UIXWidgetConverter() required this.child});
+      required this.child});
 
   factory _$ShowDialogAction.fromJson(Map<String, dynamic> json) =>
       _$$ShowDialogActionFromJson(json);
@@ -767,8 +777,7 @@ class _$ShowDialogAction implements ShowDialogAction {
   @JsonKey()
   final bool barrierDismissible;
   @override
-  @UIXWidgetConverter()
-  final Widget child;
+  final UIXAttributes child;
 
   @override
   String toString() {
@@ -809,7 +818,7 @@ class _$ShowDialogAction implements ShowDialogAction {
             String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, @UIXWidgetConverter() Widget child)
+            bool barrierDismissible, UIXAttributes child)
         showDialog,
     required TResult Function(
             String type,
@@ -817,10 +826,10 @@ class _$ShowDialogAction implements ShowDialogAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            UIXAttributes child)
         showBottomSheet,
     required TResult Function(
-            String type, bool synchronized, String key, String? value)
+            String type, bool synchronized, String key, dynamic value)
         updateAttribute,
   }) {
     return showDialog(type, synchronized, barrierDismissible, child);
@@ -836,7 +845,7 @@ class _$ShowDialogAction implements ShowDialogAction {
             String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showDialog,
     TResult? Function(
             String type,
@@ -844,10 +853,10 @@ class _$ShowDialogAction implements ShowDialogAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showBottomSheet,
     TResult? Function(
-            String type, bool synchronized, String key, String? value)?
+            String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
   }) {
     return showDialog?.call(type, synchronized, barrierDismissible, child);
@@ -863,7 +872,7 @@ class _$ShowDialogAction implements ShowDialogAction {
             String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showDialog,
     TResult Function(
             String type,
@@ -871,9 +880,9 @@ class _$ShowDialogAction implements ShowDialogAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showBottomSheet,
-    TResult Function(String type, bool synchronized, String key, String? value)?
+    TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
     required TResult orElse(),
   }) {
@@ -936,7 +945,7 @@ abstract class ShowDialogAction implements UIXAction {
       {required final String type,
       final bool synchronized,
       final bool barrierDismissible,
-      @UIXWidgetConverter() required final Widget child}) = _$ShowDialogAction;
+      required final UIXAttributes child}) = _$ShowDialogAction;
 
   factory ShowDialogAction.fromJson(Map<String, dynamic> json) =
       _$ShowDialogAction.fromJson;
@@ -946,8 +955,7 @@ abstract class ShowDialogAction implements UIXAction {
   @override
   bool get synchronized;
   bool get barrierDismissible;
-  @UIXWidgetConverter()
-  Widget get child;
+  UIXAttributes get child;
   @override
   @JsonKey(ignore: true)
   _$$ShowDialogActionCopyWith<_$ShowDialogAction> get copyWith =>
@@ -968,7 +976,9 @@ abstract class _$$ShowBottomSheetActionCopyWith<$Res>
       bool? enableDrag,
       double? elevation,
       @UIXColorConverter() Color? backgroundColor,
-      @UIXWidgetConverter() Widget child});
+      UIXAttributes child});
+
+  $UIXAttributesCopyWith<$Res> get child;
 }
 
 /// @nodoc
@@ -1013,8 +1023,16 @@ class __$$ShowBottomSheetActionCopyWithImpl<$Res>
       child: null == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Widget,
+              as UIXAttributes,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributesCopyWith<$Res> get child {
+    return $UIXAttributesCopyWith<$Res>(_value.child, (value) {
+      return _then(_value.copyWith(child: value));
+    });
   }
 }
 
@@ -1027,7 +1045,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
       this.enableDrag,
       this.elevation,
       @UIXColorConverter() this.backgroundColor,
-      @UIXWidgetConverter() required this.child});
+      required this.child});
 
   factory _$ShowBottomSheetAction.fromJson(Map<String, dynamic> json) =>
       _$$ShowBottomSheetActionFromJson(json);
@@ -1045,8 +1063,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
   @UIXColorConverter()
   final Color? backgroundColor;
   @override
-  @UIXWidgetConverter()
-  final Widget child;
+  final UIXAttributes child;
 
   @override
   String toString() {
@@ -1092,7 +1109,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
             String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, @UIXWidgetConverter() Widget child)
+            bool barrierDismissible, UIXAttributes child)
         showDialog,
     required TResult Function(
             String type,
@@ -1100,10 +1117,10 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            UIXAttributes child)
         showBottomSheet,
     required TResult Function(
-            String type, bool synchronized, String key, String? value)
+            String type, bool synchronized, String key, dynamic value)
         updateAttribute,
   }) {
     return showBottomSheet(
@@ -1120,7 +1137,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
             String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showDialog,
     TResult? Function(
             String type,
@@ -1128,10 +1145,10 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showBottomSheet,
     TResult? Function(
-            String type, bool synchronized, String key, String? value)?
+            String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
   }) {
     return showBottomSheet?.call(
@@ -1148,7 +1165,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
             String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showDialog,
     TResult Function(
             String type,
@@ -1156,9 +1173,9 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showBottomSheet,
-    TResult Function(String type, bool synchronized, String key, String? value)?
+    TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
     required TResult orElse(),
   }) {
@@ -1219,13 +1236,12 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
 
 abstract class ShowBottomSheetAction implements UIXAction {
   const factory ShowBottomSheetAction(
-          {required final String type,
-          final bool synchronized,
-          final bool? enableDrag,
-          final double? elevation,
-          @UIXColorConverter() final Color? backgroundColor,
-          @UIXWidgetConverter() required final Widget child}) =
-      _$ShowBottomSheetAction;
+      {required final String type,
+      final bool synchronized,
+      final bool? enableDrag,
+      final double? elevation,
+      @UIXColorConverter() final Color? backgroundColor,
+      required final UIXAttributes child}) = _$ShowBottomSheetAction;
 
   factory ShowBottomSheetAction.fromJson(Map<String, dynamic> json) =
       _$ShowBottomSheetAction.fromJson;
@@ -1238,8 +1254,7 @@ abstract class ShowBottomSheetAction implements UIXAction {
   double? get elevation;
   @UIXColorConverter()
   Color? get backgroundColor;
-  @UIXWidgetConverter()
-  Widget get child;
+  UIXAttributes get child;
   @override
   @JsonKey(ignore: true)
   _$$ShowBottomSheetActionCopyWith<_$ShowBottomSheetAction> get copyWith =>
@@ -1254,7 +1269,7 @@ abstract class _$$UpdateAttributeActionCopyWith<$Res>
       __$$UpdateAttributeActionCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String type, bool synchronized, String key, String? value});
+  $Res call({String type, bool synchronized, String key, dynamic value});
 }
 
 /// @nodoc
@@ -1289,7 +1304,7 @@ class __$$UpdateAttributeActionCopyWithImpl<$Res>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as dynamic,
     ));
   }
 }
@@ -1314,7 +1329,7 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
   @override
   final String key;
   @override
-  final String? value;
+  final dynamic value;
 
   @override
   String toString() {
@@ -1330,12 +1345,13 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
             (identical(other.synchronized, synchronized) ||
                 other.synchronized == synchronized) &&
             (identical(other.key, key) || other.key == key) &&
-            (identical(other.value, value) || other.value == value));
+            const DeepCollectionEquality().equals(other.value, value));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, type, synchronized, key, value);
+  int get hashCode => Object.hash(runtimeType, type, synchronized, key,
+      const DeepCollectionEquality().hash(value));
 
   @JsonKey(ignore: true)
   @override
@@ -1354,7 +1370,7 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
             String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, @UIXWidgetConverter() Widget child)
+            bool barrierDismissible, UIXAttributes child)
         showDialog,
     required TResult Function(
             String type,
@@ -1362,10 +1378,10 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            UIXAttributes child)
         showBottomSheet,
     required TResult Function(
-            String type, bool synchronized, String key, String? value)
+            String type, bool synchronized, String key, dynamic value)
         updateAttribute,
   }) {
     return updateAttribute(type, synchronized, key, value);
@@ -1381,7 +1397,7 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
             String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showDialog,
     TResult? Function(
             String type,
@@ -1389,10 +1405,10 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showBottomSheet,
     TResult? Function(
-            String type, bool synchronized, String key, String? value)?
+            String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
   }) {
     return updateAttribute?.call(type, synchronized, key, value);
@@ -1408,7 +1424,7 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
             String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showDialog,
     TResult Function(
             String type,
@@ -1416,9 +1432,9 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         showBottomSheet,
-    TResult Function(String type, bool synchronized, String key, String? value)?
+    TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
     required TResult orElse(),
   }) {
@@ -1481,7 +1497,7 @@ abstract class UpdateAttributeAction implements UIXAction {
       {required final String type,
       final bool synchronized,
       required final String key,
-      final String? value}) = _$UpdateAttributeAction;
+      final dynamic value}) = _$UpdateAttributeAction;
 
   factory UpdateAttributeAction.fromJson(Map<String, dynamic> json) =
       _$UpdateAttributeAction.fromJson;
@@ -1491,7 +1507,7 @@ abstract class UpdateAttributeAction implements UIXAction {
   @override
   bool get synchronized;
   String get key;
-  String? get value;
+  dynamic get value;
   @override
   @JsonKey(ignore: true)
   _$$UpdateAttributeActionCopyWith<_$UpdateAttributeAction> get copyWith =>

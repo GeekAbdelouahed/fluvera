@@ -25,7 +25,7 @@ class _Page extends StatefulWidget {
 }
 
 class _PageState extends State<_Page> {
-  late final _attributesNotifier = UIXAttributesNotifier(widget.attributes.attributes);
+  late final _attributesNotifier = UIXAttributesNotifier(Map.from(widget.attributes.attributes));
 
   @override
   void dispose() {
@@ -37,7 +37,12 @@ class _PageState extends State<_Page> {
   Widget build(BuildContext context) {
     return UIXProvider<UIXAttributesNotifier>(
       value: _attributesNotifier,
-      child: widget.attributes.child,
+      child: ValueListenableBuilder(
+        valueListenable: _attributesNotifier,
+        builder: (context, data, child) {
+          return widget.attributes.child.build();
+        },
+      ),
     );
   }
 }

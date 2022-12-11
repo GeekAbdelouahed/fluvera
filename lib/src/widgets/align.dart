@@ -8,7 +8,7 @@ class UIXAlign extends UIX<AlignAttributes> {
     return Align(
       key: key,
       alignment: attributes.alignment!,
-      child: attributes.child,
+      child: attributes.child?.build(),
     );
   }
 }

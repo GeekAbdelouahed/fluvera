@@ -5,15 +5,19 @@ class UIXContainer extends UIX<ContainerAttributes> {
 
   @override
   Widget build() {
-    return Container(
-      key: key,
-      color: attributes.color,
-      height: attributes.height,
-      width: attributes.width,
-      margin: attributes.margin,
-      padding: attributes.padding,
-      alignment: attributes.alignment,
-      child: attributes.child,
+    return Builder(
+      builder: (context) {
+        return Container(
+          key: key,
+          color: attributes.color,
+          height: attributes.height?.toValue(context).toDouble(),
+          width: attributes.width?.toValue(context).toDouble(),
+          margin: attributes.margin,
+          padding: attributes.padding,
+          alignment: attributes.alignment,
+          child: attributes.child?.build(),
+        );
+      },
     );
   }
 }

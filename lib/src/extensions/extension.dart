@@ -6,5 +6,4 @@ import 'package:uix/src/helpers/helpers.dart';
 import 'package:uix/uix.dart';
 
 part 'action.dart';
-part 'string.dart';
 part 'uix.dart';

@@ -11,7 +11,7 @@ class UIXText extends UIX<TextAttributes> {
 
         if (provider == null) {
           return Text(
-            attributes.text,
+            attributes.text.toValue(context),
             key: key,
             style: TextStyle(
               color: attributes.style?.color,
@@ -26,7 +26,7 @@ class UIXText extends UIX<TextAttributes> {
           valueListenable: provider.value,
           builder: (context, data, child) {
             return Text(
-              attributes.text.replaceKeys(data),
+              attributes.text.toValue(context),
               key: key,
               style: TextStyle(
                 color: attributes.style?.color,

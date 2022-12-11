@@ -10,7 +10,11 @@ class UIXRow extends UIX<RowAttributes> {
       mainAxisSize: attributes.mainAxisSize,
       mainAxisAlignment: attributes.mainAxisAlignment,
       crossAxisAlignment: attributes.crossAxisAlignment,
-      children: attributes.children,
+      children: [
+        for (final item in attributes.children) ...{
+          item.build(),
+        },
+      ],
     );
   }
 }

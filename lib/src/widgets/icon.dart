@@ -5,14 +5,18 @@ class UIXIcon extends UIX<IconAttributes> {
 
   @override
   Widget build() {
-    return Icon(
-      IconData(
-        attributes.code,
-        fontFamily: attributes.fontFamily,
-      ),
-      key: key,
-      color: attributes.color,
-      size: attributes.size,
+    return Builder(
+      builder: (context) {
+        return Icon(
+          IconData(
+            attributes.code.toValue(context).toInt(),
+            fontFamily: attributes.fontFamily.toValue(context),
+          ),
+          key: key,
+          color: attributes.color,
+          size: attributes.size?.toValue(context).toDouble(),
+        );
+      },
     );
   }
 }

@@ -8,7 +8,7 @@ class UIXPadding extends UIX<PaddingAttributes> {
     return Padding(
       key: key,
       padding: attributes.padding,
-      child: attributes.child,
+      child: attributes.child?.build(),
     );
   }
 }

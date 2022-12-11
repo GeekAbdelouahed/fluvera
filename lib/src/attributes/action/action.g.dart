@@ -41,8 +41,7 @@ _$ShowDialogAction _$$ShowDialogActionFromJson(Map<String, dynamic> json) =>
       type: json['type'] as String,
       synchronized: json['synchronized'] as bool? ?? false,
       barrierDismissible: json['barrierDismissible'] as bool? ?? true,
-      child: const UIXWidgetConverter()
-          .fromJson(json['child'] as Map<String, dynamic>),
+      child: UIXAttributes.fromJson(json['child'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$ShowDialogActionToJson(_$ShowDialogAction instance) =>
@@ -50,7 +49,7 @@ Map<String, dynamic> _$$ShowDialogActionToJson(_$ShowDialogAction instance) =>
       'type': instance.type,
       'synchronized': instance.synchronized,
       'barrierDismissible': instance.barrierDismissible,
-      'child': const UIXWidgetConverter().toJson(instance.child),
+      'child': instance.child,
     };
 
 _$ShowBottomSheetAction _$$ShowBottomSheetActionFromJson(
@@ -62,8 +61,7 @@ _$ShowBottomSheetAction _$$ShowBottomSheetActionFromJson(
       elevation: (json['elevation'] as num?)?.toDouble(),
       backgroundColor: const UIXColorConverter()
           .fromJson(json['backgroundColor'] as String?),
-      child: const UIXWidgetConverter()
-          .fromJson(json['child'] as Map<String, dynamic>),
+      child: UIXAttributes.fromJson(json['child'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$ShowBottomSheetActionToJson(
@@ -75,7 +73,7 @@ Map<String, dynamic> _$$ShowBottomSheetActionToJson(
       'elevation': instance.elevation,
       'backgroundColor':
           const UIXColorConverter().toJson(instance.backgroundColor),
-      'child': const UIXWidgetConverter().toJson(instance.child),
+      'child': instance.child,
     };
 
 _$UpdateAttributeAction _$$UpdateAttributeActionFromJson(
@@ -84,7 +82,7 @@ _$UpdateAttributeAction _$$UpdateAttributeActionFromJson(
       type: json['type'] as String,
       synchronized: json['synchronized'] as bool? ?? false,
       key: json['key'] as String,
-      value: json['value'] as String?,
+      value: json['value'],
     );
 
 Map<String, dynamic> _$$UpdateAttributeActionToJson(

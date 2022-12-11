@@ -5,10 +5,14 @@ class UIXExpanded extends UIX<ExpandedAttributes> {
 
   @override
   Widget build() {
-    return Expanded(
-      key: key,
-      flex: attributes.flex,
-      child: attributes.child,
+    return Builder(
+      builder: (context) {
+        return Expanded(
+          key: key,
+          flex: attributes.flex.toValue(context).toInt(),
+          child: attributes.child.build(),
+        );
+      },
     );
   }
 }

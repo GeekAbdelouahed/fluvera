@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:uix/src/attributes/action/action.dart';
+import 'package:uix/src/attributes/attribute_value/attribute_value.dart';
 import 'package:uix/src/attributes/text_style.dart/text_style.dart';
 import 'package:uix/src/converters/converters.dart';
 import 'package:uix/src/enums/enums.dart';
@@ -14,15 +15,15 @@ class UIXAttributes with _$UIXAttributes {
     dynamic key,
     required String type,
     @Default(AlignmentDirectional.center) @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-    @UIXWidgetConverter() Widget? child,
+    UIXAttributes? child,
   }) = AlignAttributes;
 
   const factory UIXAttributes.appBar({
     dynamic key,
     required String type,
-    bool? centerTitle,
-    @UIXWidgetConverter() Widget? title,
-    @UIXWidgetsConverter() List<Widget>? actions,
+    UIXAttributeValue<bool>? centerTitle,
+    UIXAttributes? title,
+    List<UIXAttributes>? actions,
   }) = AppBarAttributes;
 
   const factory UIXAttributes.column({
@@ -31,19 +32,19 @@ class UIXAttributes with _$UIXAttributes {
     @Default(MainAxisSize.max) MainAxisSize mainAxisSize,
     @Default(MainAxisAlignment.start) MainAxisAlignment mainAxisAlignment,
     @Default(CrossAxisAlignment.center) CrossAxisAlignment crossAxisAlignment,
-    @UIXWidgetsConverter() required List<Widget> children,
+    required List<UIXAttributes> children,
   }) = ColumnAttributes;
 
   const factory UIXAttributes.container({
     dynamic key,
     required String type,
-    double? height,
-    double? width,
+    UIXAttributeValue<num>? height,
+    UIXAttributeValue<num>? width,
     @UIXColorConverter() Color? color,
     @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
     @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
     @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-    @UIXWidgetConverter() Widget? child,
+    UIXAttributes? child,
   }) = ContainerAttributes;
 
   const factory UIXAttributes.elevatedButton({
@@ -51,40 +52,40 @@ class UIXAttributes with _$UIXAttributes {
     required String type,
     List<UIXAction>? onPressed,
     List<UIXAction>? onLongPress,
-    @UIXWidgetConverter() Widget? child,
+    UIXAttributes? child,
   }) = ElevatedButtonAttributes;
 
   const factory UIXAttributes.expanded({
     dynamic key,
     required String type,
-    @Default(1) int flex,
-    @UIXWidgetConverter() required Widget child,
+    @Default(UIXAttributeValue<num>(value: 1)) UIXAttributeValue<num> flex,
+    required UIXAttributes child,
   }) = ExpandedAttributes;
 
   const factory UIXAttributes.fractionallySizedBox({
     dynamic key,
     required String type,
-    double? widthFactor,
-    double? heightFactor,
+    UIXAttributeValue<num>? widthFactor,
+    UIXAttributeValue<num>? heightFactor,
     @Default(AlignmentDirectional.center) @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-    @UIXWidgetConverter() Widget? child,
+    UIXAttributes? child,
   }) = FractionallySizedBoxAttributes;
 
   const factory UIXAttributes.icon({
     dynamic key,
     required String type,
-    required int code,
-    double? size,
-    @Default('MaterialIcons') String fontFamily,
+    required UIXAttributeValue<num> code,
+    UIXAttributeValue<num>? size,
+    @Default(UIXAttributeValue(value: 'MaterialIcons')) UIXAttributeValue<String> fontFamily,
     @UIXColorConverter() Color? color,
   }) = IconAttributes;
 
   const factory UIXAttributes.image({
     dynamic key,
     required String type,
-    required String path,
-    double? height,
-    double? width,
+    required UIXAttributeValue<String> path,
+    UIXAttributeValue<num>? height,
+    UIXAttributeValue<num>? width,
     BoxFit? fit,
     @Default(UIXImageSource.network) UIXImageSource source,
   }) = ImageAttributes;
@@ -94,21 +95,21 @@ class UIXAttributes with _$UIXAttributes {
     required String type,
     List<UIXAction>? onTap,
     List<UIXAction>? onLongPress,
-    @UIXWidgetConverter() Widget? child,
+    UIXAttributes? child,
   }) = InkWellAttributes;
 
   const factory UIXAttributes.padding({
     dynamic key,
     required String type,
     @UIXEdgeInsetsConverter() required EdgeInsetsGeometry padding,
-    @UIXWidgetConverter() Widget? child,
+    UIXAttributes? child,
   }) = PaddingAttributes;
 
   const factory UIXAttributes.page({
     dynamic key,
     required String type,
     @Default(<String, dynamic>{}) Map<String, dynamic> attributes,
-    @UIXWidgetConverter() required Widget child,
+    required UIXAttributes child,
   }) = PageAttributes;
 
   const factory UIXAttributes.row({
@@ -117,41 +118,41 @@ class UIXAttributes with _$UIXAttributes {
     @Default(MainAxisSize.max) MainAxisSize mainAxisSize,
     @Default(MainAxisAlignment.start) MainAxisAlignment mainAxisAlignment,
     @Default(CrossAxisAlignment.center) CrossAxisAlignment crossAxisAlignment,
-    @UIXWidgetsConverter() required List<Widget> children,
+    required List<UIXAttributes> children,
   }) = RowAttributes;
 
   const factory UIXAttributes.singleChildScrollView({
     dynamic key,
     required String type,
-    @UIXWidgetConverter() Widget? child,
+    UIXAttributes? child,
   }) = SingleChildScrollViewAttributes;
 
   const factory UIXAttributes.sizedBox({
     dynamic key,
     required String type,
-    double? height,
-    double? width,
-    @UIXWidgetConverter() Widget? child,
+    UIXAttributeValue<num>? height,
+    UIXAttributeValue<num>? width,
+    UIXAttributes? child,
   }) = SizedBoxAttributes;
 
   const factory UIXAttributes.scaffold({
     dynamic key,
     required String type,
     @UIXColorConverter() Color? backgroundColor,
-    @UIXWidgetConverter() Widget? appBar,
-    @UIXWidgetConverter() Widget? body,
+    UIXAttributes? appBar,
+    UIXAttributes? body,
   }) = ScaffoldAttributes;
 
   const factory UIXAttributes.spacer({
     dynamic key,
     required String type,
-    @Default(1) int flex,
+    @Default(UIXAttributeValue<num>(value: 1)) UIXAttributeValue<num> flex,
   }) = SpacerAttributes;
 
   const factory UIXAttributes.text({
     dynamic key,
     required String type,
-    required String text,
+    required UIXAttributeValue<String> text,
     UIXTextStyle? style,
   }) = TextAttributes;
 

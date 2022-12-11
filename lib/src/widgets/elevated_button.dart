@@ -14,9 +14,9 @@ class UIXElevatedButton extends UIX<ElevatedButtonAttributes> {
               : () async {
                   for (final action in attributes.onPressed!) {
                     if (action.synchronized) {
-                      await action.act(context);
+                      await action.call(context);
                     } else {
-                      action.act(context);
+                      action.call(context);
                     }
                   }
                 },
@@ -25,13 +25,13 @@ class UIXElevatedButton extends UIX<ElevatedButtonAttributes> {
               : () async {
                   for (final action in attributes.onLongPress!) {
                     if (action.synchronized) {
-                      await action.act(context);
+                      await action.call(context);
                     } else {
-                      action.act(context);
+                      action.call(context);
                     }
                   }
                 },
-          child: attributes.child,
+          child: attributes.child?.build(),
         );
       },
     );

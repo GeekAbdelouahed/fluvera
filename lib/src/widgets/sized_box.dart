@@ -5,11 +5,15 @@ class UIXSizedBox extends UIX<SizedBoxAttributes> {
 
   @override
   Widget build() {
-    return SizedBox(
-      key: key,
-      height: attributes.height,
-      width: attributes.width,
-      child: attributes.child,
+    return Builder(
+      builder: (context) {
+        return SizedBox(
+          key: key,
+          height: attributes.height?.toValue(context).toDouble(),
+          width: attributes.width?.toValue(context).toDouble(),
+          child: attributes.child?.build(),
+        );
+      },
     );
   }
 }

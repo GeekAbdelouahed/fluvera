@@ -69,14 +69,14 @@ mixin _$UIXAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -84,54 +84,65 @@ mixin _$UIXAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -139,24 +150,29 @@ mixin _$UIXAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) =>
       throw _privateConstructorUsedError;
@@ -166,14 +182,14 @@ mixin _$UIXAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -181,50 +197,61 @@ mixin _$UIXAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -232,24 +259,24 @@ mixin _$UIXAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) =>
       throw _privateConstructorUsedError;
@@ -259,14 +286,14 @@ mixin _$UIXAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -274,50 +301,61 @@ mixin _$UIXAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -325,24 +363,24 @@ mixin _$UIXAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) =>
@@ -476,7 +514,9 @@ abstract class _$$AlignAttributesCopyWith<$Res>
       {dynamic key,
       String type,
       @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-      @UIXWidgetConverter() Widget? child});
+      UIXAttributes? child});
+
+  $UIXAttributesCopyWith<$Res>? get child;
 }
 
 /// @nodoc
@@ -511,8 +551,20 @@ class __$$AlignAttributesCopyWithImpl<$Res>
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Widget?,
+              as UIXAttributes?,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributesCopyWith<$Res>? get child {
+    if (_value.child == null) {
+      return null;
+    }
+
+    return $UIXAttributesCopyWith<$Res>(_value.child!, (value) {
+      return _then(_value.copyWith(child: value));
+    });
   }
 }
 
@@ -524,8 +576,7 @@ class _$AlignAttributes implements AlignAttributes {
       required this.type,
       @UIXAlignmentGeometryConverter()
           this.alignment = AlignmentDirectional.center,
-      @UIXWidgetConverter()
-          this.child});
+      this.child});
 
   factory _$AlignAttributes.fromJson(Map<String, dynamic> json) =>
       _$$AlignAttributesFromJson(json);
@@ -539,8 +590,7 @@ class _$AlignAttributes implements AlignAttributes {
   @UIXAlignmentGeometryConverter()
   final AlignmentGeometry? alignment;
   @override
-  @UIXWidgetConverter()
-  final Widget? child;
+  final UIXAttributes? child;
 
   @override
   String toString() {
@@ -577,14 +627,14 @@ class _$AlignAttributes implements AlignAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -592,54 +642,65 @@ class _$AlignAttributes implements AlignAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -647,24 +708,29 @@ class _$AlignAttributes implements AlignAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) {
     return align(key, type, alignment, child);
@@ -677,14 +743,14 @@ class _$AlignAttributes implements AlignAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -692,50 +758,61 @@ class _$AlignAttributes implements AlignAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -743,24 +820,24 @@ class _$AlignAttributes implements AlignAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) {
     return align?.call(key, type, alignment, child);
@@ -773,14 +850,14 @@ class _$AlignAttributes implements AlignAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -788,50 +865,61 @@ class _$AlignAttributes implements AlignAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -839,24 +927,24 @@ class _$AlignAttributes implements AlignAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) {
@@ -964,7 +1052,7 @@ abstract class AlignAttributes implements UIXAttributes {
       {final dynamic key,
       required final String type,
       @UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
-      @UIXWidgetConverter() final Widget? child}) = _$AlignAttributes;
+      final UIXAttributes? child}) = _$AlignAttributes;
 
   factory AlignAttributes.fromJson(Map<String, dynamic> json) =
       _$AlignAttributes.fromJson;
@@ -975,8 +1063,7 @@ abstract class AlignAttributes implements UIXAttributes {
   String get type;
   @UIXAlignmentGeometryConverter()
   AlignmentGeometry? get alignment;
-  @UIXWidgetConverter()
-  Widget? get child;
+  UIXAttributes? get child;
   @override
   @JsonKey(ignore: true)
   _$$AlignAttributesCopyWith<_$AlignAttributes> get copyWith =>
@@ -994,9 +1081,11 @@ abstract class _$$AppBarAttributesCopyWith<$Res>
   $Res call(
       {dynamic key,
       String type,
-      bool? centerTitle,
-      @UIXWidgetConverter() Widget? title,
-      @UIXWidgetsConverter() List<Widget>? actions});
+      UIXAttributeValue<bool>? centerTitle,
+      UIXAttributes? title,
+      List<UIXAttributes>? actions});
+
+  $UIXAttributesCopyWith<$Res>? get title;
 }
 
 /// @nodoc
@@ -1028,16 +1117,28 @@ class __$$AppBarAttributesCopyWithImpl<$Res>
       centerTitle: freezed == centerTitle
           ? _value.centerTitle
           : centerTitle // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as UIXAttributeValue<bool>?,
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as Widget?,
+              as UIXAttributes?,
       actions: freezed == actions
           ? _value._actions
           : actions // ignore: cast_nullable_to_non_nullable
-              as List<Widget>?,
+              as List<UIXAttributes>?,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributesCopyWith<$Res>? get title {
+    if (_value.title == null) {
+      return null;
+    }
+
+    return $UIXAttributesCopyWith<$Res>(_value.title!, (value) {
+      return _then(_value.copyWith(title: value));
+    });
   }
 }
 
@@ -1048,8 +1149,8 @@ class _$AppBarAttributes implements AppBarAttributes {
       {this.key,
       required this.type,
       this.centerTitle,
-      @UIXWidgetConverter() this.title,
-      @UIXWidgetsConverter() final List<Widget>? actions})
+      this.title,
+      final List<UIXAttributes>? actions})
       : _actions = actions;
 
   factory _$AppBarAttributes.fromJson(Map<String, dynamic> json) =>
@@ -1060,14 +1161,12 @@ class _$AppBarAttributes implements AppBarAttributes {
   @override
   final String type;
   @override
-  final bool? centerTitle;
+  final UIXAttributeValue<bool>? centerTitle;
   @override
-  @UIXWidgetConverter()
-  final Widget? title;
-  final List<Widget>? _actions;
+  final UIXAttributes? title;
+  final List<UIXAttributes>? _actions;
   @override
-  @UIXWidgetsConverter()
-  List<Widget>? get actions {
+  List<UIXAttributes>? get actions {
     final value = _actions;
     if (value == null) return null;
     if (_actions is EqualUnmodifiableListView) return _actions;
@@ -1116,14 +1215,14 @@ class _$AppBarAttributes implements AppBarAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -1131,54 +1230,65 @@ class _$AppBarAttributes implements AppBarAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -1186,24 +1296,29 @@ class _$AppBarAttributes implements AppBarAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) {
     return appBar(key, type, centerTitle, title, actions);
@@ -1216,14 +1331,14 @@ class _$AppBarAttributes implements AppBarAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -1231,50 +1346,61 @@ class _$AppBarAttributes implements AppBarAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -1282,24 +1408,24 @@ class _$AppBarAttributes implements AppBarAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) {
     return appBar?.call(key, type, centerTitle, title, actions);
@@ -1312,14 +1438,14 @@ class _$AppBarAttributes implements AppBarAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -1327,50 +1453,61 @@ class _$AppBarAttributes implements AppBarAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -1378,24 +1515,24 @@ class _$AppBarAttributes implements AppBarAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) {
@@ -1502,9 +1639,9 @@ abstract class AppBarAttributes implements UIXAttributes {
   const factory AppBarAttributes(
       {final dynamic key,
       required final String type,
-      final bool? centerTitle,
-      @UIXWidgetConverter() final Widget? title,
-      @UIXWidgetsConverter() final List<Widget>? actions}) = _$AppBarAttributes;
+      final UIXAttributeValue<bool>? centerTitle,
+      final UIXAttributes? title,
+      final List<UIXAttributes>? actions}) = _$AppBarAttributes;
 
   factory AppBarAttributes.fromJson(Map<String, dynamic> json) =
       _$AppBarAttributes.fromJson;
@@ -1513,11 +1650,9 @@ abstract class AppBarAttributes implements UIXAttributes {
   dynamic get key;
   @override
   String get type;
-  bool? get centerTitle;
-  @UIXWidgetConverter()
-  Widget? get title;
-  @UIXWidgetsConverter()
-  List<Widget>? get actions;
+  UIXAttributeValue<bool>? get centerTitle;
+  UIXAttributes? get title;
+  List<UIXAttributes>? get actions;
   @override
   @JsonKey(ignore: true)
   _$$AppBarAttributesCopyWith<_$AppBarAttributes> get copyWith =>
@@ -1538,7 +1673,7 @@ abstract class _$$ColumnAttributesCopyWith<$Res>
       MainAxisSize mainAxisSize,
       MainAxisAlignment mainAxisAlignment,
       CrossAxisAlignment crossAxisAlignment,
-      @UIXWidgetsConverter() List<Widget> children});
+      List<UIXAttributes> children});
 }
 
 /// @nodoc
@@ -1583,7 +1718,7 @@ class __$$ColumnAttributesCopyWithImpl<$Res>
       children: null == children
           ? _value._children
           : children // ignore: cast_nullable_to_non_nullable
-              as List<Widget>,
+              as List<UIXAttributes>,
     ));
   }
 }
@@ -1597,7 +1732,7 @@ class _$ColumnAttributes implements ColumnAttributes {
       this.mainAxisSize = MainAxisSize.max,
       this.mainAxisAlignment = MainAxisAlignment.start,
       this.crossAxisAlignment = CrossAxisAlignment.center,
-      @UIXWidgetsConverter() required final List<Widget> children})
+      required final List<UIXAttributes> children})
       : _children = children;
 
   factory _$ColumnAttributes.fromJson(Map<String, dynamic> json) =>
@@ -1616,10 +1751,9 @@ class _$ColumnAttributes implements ColumnAttributes {
   @override
   @JsonKey()
   final CrossAxisAlignment crossAxisAlignment;
-  final List<Widget> _children;
+  final List<UIXAttributes> _children;
   @override
-  @UIXWidgetsConverter()
-  List<Widget> get children {
+  List<UIXAttributes> get children {
     if (_children is EqualUnmodifiableListView) return _children;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_children);
@@ -1670,14 +1804,14 @@ class _$ColumnAttributes implements ColumnAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -1685,54 +1819,65 @@ class _$ColumnAttributes implements ColumnAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -1740,24 +1885,29 @@ class _$ColumnAttributes implements ColumnAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) {
     return column(key, type, mainAxisSize, mainAxisAlignment,
@@ -1771,14 +1921,14 @@ class _$ColumnAttributes implements ColumnAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -1786,50 +1936,61 @@ class _$ColumnAttributes implements ColumnAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -1837,24 +1998,24 @@ class _$ColumnAttributes implements ColumnAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) {
     return column?.call(key, type, mainAxisSize, mainAxisAlignment,
@@ -1868,14 +2029,14 @@ class _$ColumnAttributes implements ColumnAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -1883,50 +2044,61 @@ class _$ColumnAttributes implements ColumnAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -1934,24 +2106,24 @@ class _$ColumnAttributes implements ColumnAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) {
@@ -2057,13 +2229,12 @@ class _$ColumnAttributes implements ColumnAttributes {
 
 abstract class ColumnAttributes implements UIXAttributes {
   const factory ColumnAttributes(
-          {final dynamic key,
-          required final String type,
-          final MainAxisSize mainAxisSize,
-          final MainAxisAlignment mainAxisAlignment,
-          final CrossAxisAlignment crossAxisAlignment,
-          @UIXWidgetsConverter() required final List<Widget> children}) =
-      _$ColumnAttributes;
+      {final dynamic key,
+      required final String type,
+      final MainAxisSize mainAxisSize,
+      final MainAxisAlignment mainAxisAlignment,
+      final CrossAxisAlignment crossAxisAlignment,
+      required final List<UIXAttributes> children}) = _$ColumnAttributes;
 
   factory ColumnAttributes.fromJson(Map<String, dynamic> json) =
       _$ColumnAttributes.fromJson;
@@ -2075,8 +2246,7 @@ abstract class ColumnAttributes implements UIXAttributes {
   MainAxisSize get mainAxisSize;
   MainAxisAlignment get mainAxisAlignment;
   CrossAxisAlignment get crossAxisAlignment;
-  @UIXWidgetsConverter()
-  List<Widget> get children;
+  List<UIXAttributes> get children;
   @override
   @JsonKey(ignore: true)
   _$$ColumnAttributesCopyWith<_$ColumnAttributes> get copyWith =>
@@ -2094,13 +2264,15 @@ abstract class _$$ContainerAttributesCopyWith<$Res>
   $Res call(
       {dynamic key,
       String type,
-      double? height,
-      double? width,
+      UIXAttributeValue<num>? height,
+      UIXAttributeValue<num>? width,
       @UIXColorConverter() Color? color,
       @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
       @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
       @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-      @UIXWidgetConverter() Widget? child});
+      UIXAttributes? child});
+
+  $UIXAttributesCopyWith<$Res>? get child;
 }
 
 /// @nodoc
@@ -2136,11 +2308,11 @@ class __$$ContainerAttributesCopyWithImpl<$Res>
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as UIXAttributeValue<num>?,
       width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as UIXAttributeValue<num>?,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -2160,8 +2332,20 @@ class __$$ContainerAttributesCopyWithImpl<$Res>
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Widget?,
+              as UIXAttributes?,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributesCopyWith<$Res>? get child {
+    if (_value.child == null) {
+      return null;
+    }
+
+    return $UIXAttributesCopyWith<$Res>(_value.child!, (value) {
+      return _then(_value.copyWith(child: value));
+    });
   }
 }
 
@@ -2177,7 +2361,7 @@ class _$ContainerAttributes implements ContainerAttributes {
       @UIXEdgeInsetsConverter() this.margin,
       @UIXEdgeInsetsConverter() this.padding,
       @UIXAlignmentGeometryConverter() this.alignment,
-      @UIXWidgetConverter() this.child});
+      this.child});
 
   factory _$ContainerAttributes.fromJson(Map<String, dynamic> json) =>
       _$$ContainerAttributesFromJson(json);
@@ -2187,9 +2371,9 @@ class _$ContainerAttributes implements ContainerAttributes {
   @override
   final String type;
   @override
-  final double? height;
+  final UIXAttributeValue<num>? height;
   @override
-  final double? width;
+  final UIXAttributeValue<num>? width;
   @override
   @UIXColorConverter()
   final Color? color;
@@ -2203,8 +2387,7 @@ class _$ContainerAttributes implements ContainerAttributes {
   @UIXAlignmentGeometryConverter()
   final AlignmentGeometry? alignment;
   @override
-  @UIXWidgetConverter()
-  final Widget? child;
+  final UIXAttributes? child;
 
   @override
   String toString() {
@@ -2256,14 +2439,14 @@ class _$ContainerAttributes implements ContainerAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -2271,54 +2454,65 @@ class _$ContainerAttributes implements ContainerAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -2326,24 +2520,29 @@ class _$ContainerAttributes implements ContainerAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) {
     return container(key, type, height, width, color, margin, this.padding,
@@ -2357,14 +2556,14 @@ class _$ContainerAttributes implements ContainerAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -2372,50 +2571,61 @@ class _$ContainerAttributes implements ContainerAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -2423,24 +2633,24 @@ class _$ContainerAttributes implements ContainerAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) {
     return container?.call(key, type, height, width, color, margin,
@@ -2454,14 +2664,14 @@ class _$ContainerAttributes implements ContainerAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -2469,50 +2679,61 @@ class _$ContainerAttributes implements ContainerAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -2520,24 +2741,24 @@ class _$ContainerAttributes implements ContainerAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) {
@@ -2645,13 +2866,13 @@ abstract class ContainerAttributes implements UIXAttributes {
   const factory ContainerAttributes(
       {final dynamic key,
       required final String type,
-      final double? height,
-      final double? width,
+      final UIXAttributeValue<num>? height,
+      final UIXAttributeValue<num>? width,
       @UIXColorConverter() final Color? color,
       @UIXEdgeInsetsConverter() final EdgeInsetsGeometry? margin,
       @UIXEdgeInsetsConverter() final EdgeInsetsGeometry? padding,
       @UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
-      @UIXWidgetConverter() final Widget? child}) = _$ContainerAttributes;
+      final UIXAttributes? child}) = _$ContainerAttributes;
 
   factory ContainerAttributes.fromJson(Map<String, dynamic> json) =
       _$ContainerAttributes.fromJson;
@@ -2660,8 +2881,8 @@ abstract class ContainerAttributes implements UIXAttributes {
   dynamic get key;
   @override
   String get type;
-  double? get height;
-  double? get width;
+  UIXAttributeValue<num>? get height;
+  UIXAttributeValue<num>? get width;
   @UIXColorConverter()
   Color? get color;
   @UIXEdgeInsetsConverter()
@@ -2670,8 +2891,7 @@ abstract class ContainerAttributes implements UIXAttributes {
   EdgeInsetsGeometry? get padding;
   @UIXAlignmentGeometryConverter()
   AlignmentGeometry? get alignment;
-  @UIXWidgetConverter()
-  Widget? get child;
+  UIXAttributes? get child;
   @override
   @JsonKey(ignore: true)
   _$$ContainerAttributesCopyWith<_$ContainerAttributes> get copyWith =>
@@ -2691,7 +2911,9 @@ abstract class _$$ElevatedButtonAttributesCopyWith<$Res>
       String type,
       List<UIXAction>? onPressed,
       List<UIXAction>? onLongPress,
-      @UIXWidgetConverter() Widget? child});
+      UIXAttributes? child});
+
+  $UIXAttributesCopyWith<$Res>? get child;
 }
 
 /// @nodoc
@@ -2731,8 +2953,20 @@ class __$$ElevatedButtonAttributesCopyWithImpl<$Res>
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Widget?,
+              as UIXAttributes?,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributesCopyWith<$Res>? get child {
+    if (_value.child == null) {
+      return null;
+    }
+
+    return $UIXAttributesCopyWith<$Res>(_value.child!, (value) {
+      return _then(_value.copyWith(child: value));
+    });
   }
 }
 
@@ -2744,7 +2978,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
       required this.type,
       final List<UIXAction>? onPressed,
       final List<UIXAction>? onLongPress,
-      @UIXWidgetConverter() this.child})
+      this.child})
       : _onPressed = onPressed,
         _onLongPress = onLongPress;
 
@@ -2776,8 +3010,7 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
   }
 
   @override
-  @UIXWidgetConverter()
-  final Widget? child;
+  final UIXAttributes? child;
 
   @override
   String toString() {
@@ -2823,14 +3056,14 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -2838,54 +3071,65 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -2893,24 +3137,29 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) {
     return elevatedButton(key, type, onPressed, onLongPress, child);
@@ -2923,14 +3172,14 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -2938,50 +3187,61 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -2989,24 +3249,24 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) {
     return elevatedButton?.call(key, type, onPressed, onLongPress, child);
@@ -3019,14 +3279,14 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -3034,50 +3294,61 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -3085,24 +3356,24 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) {
@@ -3211,7 +3482,7 @@ abstract class ElevatedButtonAttributes implements UIXAttributes {
       required final String type,
       final List<UIXAction>? onPressed,
       final List<UIXAction>? onLongPress,
-      @UIXWidgetConverter() final Widget? child}) = _$ElevatedButtonAttributes;
+      final UIXAttributes? child}) = _$ElevatedButtonAttributes;
 
   factory ElevatedButtonAttributes.fromJson(Map<String, dynamic> json) =
       _$ElevatedButtonAttributes.fromJson;
@@ -3222,8 +3493,7 @@ abstract class ElevatedButtonAttributes implements UIXAttributes {
   String get type;
   List<UIXAction>? get onPressed;
   List<UIXAction>? get onLongPress;
-  @UIXWidgetConverter()
-  Widget? get child;
+  UIXAttributes? get child;
   @override
   @JsonKey(ignore: true)
   _$$ElevatedButtonAttributesCopyWith<_$ElevatedButtonAttributes>
@@ -3239,7 +3509,12 @@ abstract class _$$ExpandedAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {dynamic key, String type, int flex, @UIXWidgetConverter() Widget child});
+      {dynamic key,
+      String type,
+      UIXAttributeValue<num> flex,
+      UIXAttributes child});
+
+  $UIXAttributesCopyWith<$Res> get child;
 }
 
 /// @nodoc
@@ -3270,12 +3545,20 @@ class __$$ExpandedAttributesCopyWithImpl<$Res>
       flex: null == flex
           ? _value.flex
           : flex // ignore: cast_nullable_to_non_nullable
-              as int,
+              as UIXAttributeValue<num>,
       child: null == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Widget,
+              as UIXAttributes,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributesCopyWith<$Res> get child {
+    return $UIXAttributesCopyWith<$Res>(_value.child, (value) {
+      return _then(_value.copyWith(child: value));
+    });
   }
 }
 
@@ -3285,8 +3568,8 @@ class _$ExpandedAttributes implements ExpandedAttributes {
   const _$ExpandedAttributes(
       {this.key,
       required this.type,
-      this.flex = 1,
-      @UIXWidgetConverter() required this.child});
+      this.flex = const UIXAttributeValue<num>(value: 1),
+      required this.child});
 
   factory _$ExpandedAttributes.fromJson(Map<String, dynamic> json) =>
       _$$ExpandedAttributesFromJson(json);
@@ -3297,10 +3580,9 @@ class _$ExpandedAttributes implements ExpandedAttributes {
   final String type;
   @override
   @JsonKey()
-  final int flex;
+  final UIXAttributeValue<num> flex;
   @override
-  @UIXWidgetConverter()
-  final Widget child;
+  final UIXAttributes child;
 
   @override
   String toString() {
@@ -3337,14 +3619,14 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -3352,54 +3634,65 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -3407,24 +3700,29 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) {
     return expanded(key, type, flex, child);
@@ -3437,14 +3735,14 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -3452,50 +3750,61 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -3503,24 +3812,24 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) {
     return expanded?.call(key, type, flex, child);
@@ -3533,14 +3842,14 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -3548,50 +3857,61 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -3599,24 +3919,24 @@ class _$ExpandedAttributes implements ExpandedAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) {
@@ -3721,11 +4041,10 @@ class _$ExpandedAttributes implements ExpandedAttributes {
 
 abstract class ExpandedAttributes implements UIXAttributes {
   const factory ExpandedAttributes(
-          {final dynamic key,
-          required final String type,
-          final int flex,
-          @UIXWidgetConverter() required final Widget child}) =
-      _$ExpandedAttributes;
+      {final dynamic key,
+      required final String type,
+      final UIXAttributeValue<num> flex,
+      required final UIXAttributes child}) = _$ExpandedAttributes;
 
   factory ExpandedAttributes.fromJson(Map<String, dynamic> json) =
       _$ExpandedAttributes.fromJson;
@@ -3734,9 +4053,8 @@ abstract class ExpandedAttributes implements UIXAttributes {
   dynamic get key;
   @override
   String get type;
-  int get flex;
-  @UIXWidgetConverter()
-  Widget get child;
+  UIXAttributeValue<num> get flex;
+  UIXAttributes get child;
   @override
   @JsonKey(ignore: true)
   _$$ExpandedAttributesCopyWith<_$ExpandedAttributes> get copyWith =>
@@ -3755,10 +4073,12 @@ abstract class _$$FractionallySizedBoxAttributesCopyWith<$Res>
   $Res call(
       {dynamic key,
       String type,
-      double? widthFactor,
-      double? heightFactor,
+      UIXAttributeValue<num>? widthFactor,
+      UIXAttributeValue<num>? heightFactor,
       @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-      @UIXWidgetConverter() Widget? child});
+      UIXAttributes? child});
+
+  $UIXAttributesCopyWith<$Res>? get child;
 }
 
 /// @nodoc
@@ -3792,11 +4112,11 @@ class __$$FractionallySizedBoxAttributesCopyWithImpl<$Res>
       widthFactor: freezed == widthFactor
           ? _value.widthFactor
           : widthFactor // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as UIXAttributeValue<num>?,
       heightFactor: freezed == heightFactor
           ? _value.heightFactor
           : heightFactor // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as UIXAttributeValue<num>?,
       alignment: freezed == alignment
           ? _value.alignment
           : alignment // ignore: cast_nullable_to_non_nullable
@@ -3804,8 +4124,20 @@ class __$$FractionallySizedBoxAttributesCopyWithImpl<$Res>
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Widget?,
+              as UIXAttributes?,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributesCopyWith<$Res>? get child {
+    if (_value.child == null) {
+      return null;
+    }
+
+    return $UIXAttributesCopyWith<$Res>(_value.child!, (value) {
+      return _then(_value.copyWith(child: value));
+    });
   }
 }
 
@@ -3820,8 +4152,7 @@ class _$FractionallySizedBoxAttributes
       this.heightFactor,
       @UIXAlignmentGeometryConverter()
           this.alignment = AlignmentDirectional.center,
-      @UIXWidgetConverter()
-          this.child});
+      this.child});
 
   factory _$FractionallySizedBoxAttributes.fromJson(
           Map<String, dynamic> json) =>
@@ -3832,16 +4163,15 @@ class _$FractionallySizedBoxAttributes
   @override
   final String type;
   @override
-  final double? widthFactor;
+  final UIXAttributeValue<num>? widthFactor;
   @override
-  final double? heightFactor;
+  final UIXAttributeValue<num>? heightFactor;
   @override
   @JsonKey()
   @UIXAlignmentGeometryConverter()
   final AlignmentGeometry? alignment;
   @override
-  @UIXWidgetConverter()
-  final Widget? child;
+  final UIXAttributes? child;
 
   @override
   String toString() {
@@ -3889,14 +4219,14 @@ class _$FractionallySizedBoxAttributes
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -3904,54 +4234,65 @@ class _$FractionallySizedBoxAttributes
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -3959,24 +4300,29 @@ class _$FractionallySizedBoxAttributes
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) {
     return fractionallySizedBox(
@@ -3990,14 +4336,14 @@ class _$FractionallySizedBoxAttributes
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -4005,50 +4351,61 @@ class _$FractionallySizedBoxAttributes
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -4056,24 +4413,24 @@ class _$FractionallySizedBoxAttributes
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) {
     return fractionallySizedBox?.call(
@@ -4087,14 +4444,14 @@ class _$FractionallySizedBoxAttributes
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -4102,50 +4459,61 @@ class _$FractionallySizedBoxAttributes
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -4153,24 +4521,24 @@ class _$FractionallySizedBoxAttributes
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) {
@@ -4276,13 +4644,12 @@ class _$FractionallySizedBoxAttributes
 
 abstract class FractionallySizedBoxAttributes implements UIXAttributes {
   const factory FractionallySizedBoxAttributes(
-          {final dynamic key,
-          required final String type,
-          final double? widthFactor,
-          final double? heightFactor,
-          @UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
-          @UIXWidgetConverter() final Widget? child}) =
-      _$FractionallySizedBoxAttributes;
+      {final dynamic key,
+      required final String type,
+      final UIXAttributeValue<num>? widthFactor,
+      final UIXAttributeValue<num>? heightFactor,
+      @UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
+      final UIXAttributes? child}) = _$FractionallySizedBoxAttributes;
 
   factory FractionallySizedBoxAttributes.fromJson(Map<String, dynamic> json) =
       _$FractionallySizedBoxAttributes.fromJson;
@@ -4291,12 +4658,11 @@ abstract class FractionallySizedBoxAttributes implements UIXAttributes {
   dynamic get key;
   @override
   String get type;
-  double? get widthFactor;
-  double? get heightFactor;
+  UIXAttributeValue<num>? get widthFactor;
+  UIXAttributeValue<num>? get heightFactor;
   @UIXAlignmentGeometryConverter()
   AlignmentGeometry? get alignment;
-  @UIXWidgetConverter()
-  Widget? get child;
+  UIXAttributes? get child;
   @override
   @JsonKey(ignore: true)
   _$$FractionallySizedBoxAttributesCopyWith<_$FractionallySizedBoxAttributes>
@@ -4314,9 +4680,9 @@ abstract class _$$IconAttributesCopyWith<$Res>
   $Res call(
       {dynamic key,
       String type,
-      int code,
-      double? size,
-      String fontFamily,
+      UIXAttributeValue<num> code,
+      UIXAttributeValue<num>? size,
+      UIXAttributeValue<String> fontFamily,
       @UIXColorConverter() Color? color});
 }
 
@@ -4350,15 +4716,15 @@ class __$$IconAttributesCopyWithImpl<$Res>
       code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as int,
+              as UIXAttributeValue<num>,
       size: freezed == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as UIXAttributeValue<num>?,
       fontFamily: null == fontFamily
           ? _value.fontFamily
           : fontFamily // ignore: cast_nullable_to_non_nullable
-              as String,
+              as UIXAttributeValue<String>,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -4375,7 +4741,7 @@ class _$IconAttributes implements IconAttributes {
       required this.type,
       required this.code,
       this.size,
-      this.fontFamily = 'MaterialIcons',
+      this.fontFamily = const UIXAttributeValue(value: 'MaterialIcons'),
       @UIXColorConverter() this.color});
 
   factory _$IconAttributes.fromJson(Map<String, dynamic> json) =>
@@ -4386,12 +4752,12 @@ class _$IconAttributes implements IconAttributes {
   @override
   final String type;
   @override
-  final int code;
+  final UIXAttributeValue<num> code;
   @override
-  final double? size;
+  final UIXAttributeValue<num>? size;
   @override
   @JsonKey()
-  final String fontFamily;
+  final UIXAttributeValue<String> fontFamily;
   @override
   @UIXColorConverter()
   final Color? color;
@@ -4439,14 +4805,14 @@ class _$IconAttributes implements IconAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -4454,54 +4820,65 @@ class _$IconAttributes implements IconAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -4509,24 +4886,29 @@ class _$IconAttributes implements IconAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) {
     return icon(key, type, code, size, fontFamily, color);
@@ -4539,14 +4921,14 @@ class _$IconAttributes implements IconAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -4554,50 +4936,61 @@ class _$IconAttributes implements IconAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -4605,24 +4998,24 @@ class _$IconAttributes implements IconAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) {
     return icon?.call(key, type, code, size, fontFamily, color);
@@ -4635,14 +5028,14 @@ class _$IconAttributes implements IconAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -4650,50 +5043,61 @@ class _$IconAttributes implements IconAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -4701,24 +5105,24 @@ class _$IconAttributes implements IconAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) {
@@ -4825,9 +5229,9 @@ abstract class IconAttributes implements UIXAttributes {
   const factory IconAttributes(
       {final dynamic key,
       required final String type,
-      required final int code,
-      final double? size,
-      final String fontFamily,
+      required final UIXAttributeValue<num> code,
+      final UIXAttributeValue<num>? size,
+      final UIXAttributeValue<String> fontFamily,
       @UIXColorConverter() final Color? color}) = _$IconAttributes;
 
   factory IconAttributes.fromJson(Map<String, dynamic> json) =
@@ -4837,9 +5241,9 @@ abstract class IconAttributes implements UIXAttributes {
   dynamic get key;
   @override
   String get type;
-  int get code;
-  double? get size;
-  String get fontFamily;
+  UIXAttributeValue<num> get code;
+  UIXAttributeValue<num>? get size;
+  UIXAttributeValue<String> get fontFamily;
   @UIXColorConverter()
   Color? get color;
   @override
@@ -4859,9 +5263,9 @@ abstract class _$$ImageAttributesCopyWith<$Res>
   $Res call(
       {dynamic key,
       String type,
-      String path,
-      double? height,
-      double? width,
+      UIXAttributeValue<String> path,
+      UIXAttributeValue<num>? height,
+      UIXAttributeValue<num>? width,
       BoxFit? fit,
       UIXImageSource source});
 }
@@ -4897,15 +5301,15 @@ class __$$ImageAttributesCopyWithImpl<$Res>
       path: null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
-              as String,
+              as UIXAttributeValue<String>,
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as UIXAttributeValue<num>?,
       width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as UIXAttributeValue<num>?,
       fit: freezed == fit
           ? _value.fit
           : fit // ignore: cast_nullable_to_non_nullable
@@ -4938,11 +5342,11 @@ class _$ImageAttributes implements ImageAttributes {
   @override
   final String type;
   @override
-  final String path;
+  final UIXAttributeValue<String> path;
   @override
-  final double? height;
+  final UIXAttributeValue<num>? height;
   @override
-  final double? width;
+  final UIXAttributeValue<num>? width;
   @override
   final BoxFit? fit;
   @override
@@ -4993,14 +5397,14 @@ class _$ImageAttributes implements ImageAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -5008,54 +5412,65 @@ class _$ImageAttributes implements ImageAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -5063,24 +5478,29 @@ class _$ImageAttributes implements ImageAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) {
     return image(key, type, path, height, width, fit, source);
@@ -5093,14 +5513,14 @@ class _$ImageAttributes implements ImageAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -5108,50 +5528,61 @@ class _$ImageAttributes implements ImageAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -5159,24 +5590,24 @@ class _$ImageAttributes implements ImageAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) {
     return image?.call(key, type, path, height, width, fit, source);
@@ -5189,14 +5620,14 @@ class _$ImageAttributes implements ImageAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -5204,50 +5635,61 @@ class _$ImageAttributes implements ImageAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -5255,24 +5697,24 @@ class _$ImageAttributes implements ImageAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) {
@@ -5379,9 +5821,9 @@ abstract class ImageAttributes implements UIXAttributes {
   const factory ImageAttributes(
       {final dynamic key,
       required final String type,
-      required final String path,
-      final double? height,
-      final double? width,
+      required final UIXAttributeValue<String> path,
+      final UIXAttributeValue<num>? height,
+      final UIXAttributeValue<num>? width,
       final BoxFit? fit,
       final UIXImageSource source}) = _$ImageAttributes;
 
@@ -5392,9 +5834,9 @@ abstract class ImageAttributes implements UIXAttributes {
   dynamic get key;
   @override
   String get type;
-  String get path;
-  double? get height;
-  double? get width;
+  UIXAttributeValue<String> get path;
+  UIXAttributeValue<num>? get height;
+  UIXAttributeValue<num>? get width;
   BoxFit? get fit;
   UIXImageSource get source;
   @override
@@ -5416,7 +5858,9 @@ abstract class _$$InkWellAttributesCopyWith<$Res>
       String type,
       List<UIXAction>? onTap,
       List<UIXAction>? onLongPress,
-      @UIXWidgetConverter() Widget? child});
+      UIXAttributes? child});
+
+  $UIXAttributesCopyWith<$Res>? get child;
 }
 
 /// @nodoc
@@ -5456,8 +5900,20 @@ class __$$InkWellAttributesCopyWithImpl<$Res>
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Widget?,
+              as UIXAttributes?,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributesCopyWith<$Res>? get child {
+    if (_value.child == null) {
+      return null;
+    }
+
+    return $UIXAttributesCopyWith<$Res>(_value.child!, (value) {
+      return _then(_value.copyWith(child: value));
+    });
   }
 }
 
@@ -5469,7 +5925,7 @@ class _$InkWellAttributes implements InkWellAttributes {
       required this.type,
       final List<UIXAction>? onTap,
       final List<UIXAction>? onLongPress,
-      @UIXWidgetConverter() this.child})
+      this.child})
       : _onTap = onTap,
         _onLongPress = onLongPress;
 
@@ -5501,8 +5957,7 @@ class _$InkWellAttributes implements InkWellAttributes {
   }
 
   @override
-  @UIXWidgetConverter()
-  final Widget? child;
+  final UIXAttributes? child;
 
   @override
   String toString() {
@@ -5545,14 +6000,14 @@ class _$InkWellAttributes implements InkWellAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -5560,54 +6015,65 @@ class _$InkWellAttributes implements InkWellAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -5615,24 +6081,29 @@ class _$InkWellAttributes implements InkWellAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) {
     return inkWell(key, type, onTap, onLongPress, child);
@@ -5645,14 +6116,14 @@ class _$InkWellAttributes implements InkWellAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -5660,50 +6131,61 @@ class _$InkWellAttributes implements InkWellAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -5711,24 +6193,24 @@ class _$InkWellAttributes implements InkWellAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) {
     return inkWell?.call(key, type, onTap, onLongPress, child);
@@ -5741,14 +6223,14 @@ class _$InkWellAttributes implements InkWellAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -5756,50 +6238,61 @@ class _$InkWellAttributes implements InkWellAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -5807,24 +6300,24 @@ class _$InkWellAttributes implements InkWellAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) {
@@ -5933,7 +6426,7 @@ abstract class InkWellAttributes implements UIXAttributes {
       required final String type,
       final List<UIXAction>? onTap,
       final List<UIXAction>? onLongPress,
-      @UIXWidgetConverter() final Widget? child}) = _$InkWellAttributes;
+      final UIXAttributes? child}) = _$InkWellAttributes;
 
   factory InkWellAttributes.fromJson(Map<String, dynamic> json) =
       _$InkWellAttributes.fromJson;
@@ -5944,8 +6437,7 @@ abstract class InkWellAttributes implements UIXAttributes {
   String get type;
   List<UIXAction>? get onTap;
   List<UIXAction>? get onLongPress;
-  @UIXWidgetConverter()
-  Widget? get child;
+  UIXAttributes? get child;
   @override
   @JsonKey(ignore: true)
   _$$InkWellAttributesCopyWith<_$InkWellAttributes> get copyWith =>
@@ -5964,7 +6456,9 @@ abstract class _$$PaddingAttributesCopyWith<$Res>
       {dynamic key,
       String type,
       @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-      @UIXWidgetConverter() Widget? child});
+      UIXAttributes? child});
+
+  $UIXAttributesCopyWith<$Res>? get child;
 }
 
 /// @nodoc
@@ -5999,8 +6493,20 @@ class __$$PaddingAttributesCopyWithImpl<$Res>
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Widget?,
+              as UIXAttributes?,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributesCopyWith<$Res>? get child {
+    if (_value.child == null) {
+      return null;
+    }
+
+    return $UIXAttributesCopyWith<$Res>(_value.child!, (value) {
+      return _then(_value.copyWith(child: value));
+    });
   }
 }
 
@@ -6011,7 +6517,7 @@ class _$PaddingAttributes implements PaddingAttributes {
       {this.key,
       required this.type,
       @UIXEdgeInsetsConverter() required this.padding,
-      @UIXWidgetConverter() this.child});
+      this.child});
 
   factory _$PaddingAttributes.fromJson(Map<String, dynamic> json) =>
       _$$PaddingAttributesFromJson(json);
@@ -6024,8 +6530,7 @@ class _$PaddingAttributes implements PaddingAttributes {
   @UIXEdgeInsetsConverter()
   final EdgeInsetsGeometry padding;
   @override
-  @UIXWidgetConverter()
-  final Widget? child;
+  final UIXAttributes? child;
 
   @override
   String toString() {
@@ -6061,14 +6566,14 @@ class _$PaddingAttributes implements PaddingAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -6076,54 +6581,65 @@ class _$PaddingAttributes implements PaddingAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -6131,24 +6647,29 @@ class _$PaddingAttributes implements PaddingAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) {
     return padding(key, type, this.padding, child);
@@ -6161,14 +6682,14 @@ class _$PaddingAttributes implements PaddingAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -6176,50 +6697,61 @@ class _$PaddingAttributes implements PaddingAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -6227,24 +6759,24 @@ class _$PaddingAttributes implements PaddingAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) {
     return padding?.call(key, type, this.padding, child);
@@ -6257,14 +6789,14 @@ class _$PaddingAttributes implements PaddingAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -6272,50 +6804,61 @@ class _$PaddingAttributes implements PaddingAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -6323,24 +6866,24 @@ class _$PaddingAttributes implements PaddingAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) {
@@ -6448,7 +6991,7 @@ abstract class PaddingAttributes implements UIXAttributes {
       {final dynamic key,
       required final String type,
       @UIXEdgeInsetsConverter() required final EdgeInsetsGeometry padding,
-      @UIXWidgetConverter() final Widget? child}) = _$PaddingAttributes;
+      final UIXAttributes? child}) = _$PaddingAttributes;
 
   factory PaddingAttributes.fromJson(Map<String, dynamic> json) =
       _$PaddingAttributes.fromJson;
@@ -6459,8 +7002,7 @@ abstract class PaddingAttributes implements UIXAttributes {
   String get type;
   @UIXEdgeInsetsConverter()
   EdgeInsetsGeometry get padding;
-  @UIXWidgetConverter()
-  Widget? get child;
+  UIXAttributes? get child;
   @override
   @JsonKey(ignore: true)
   _$$PaddingAttributesCopyWith<_$PaddingAttributes> get copyWith =>
@@ -6479,7 +7021,9 @@ abstract class _$$PageAttributesCopyWith<$Res>
       {dynamic key,
       String type,
       Map<String, dynamic> attributes,
-      @UIXWidgetConverter() Widget child});
+      UIXAttributes child});
+
+  $UIXAttributesCopyWith<$Res> get child;
 }
 
 /// @nodoc
@@ -6514,8 +7058,16 @@ class __$$PageAttributesCopyWithImpl<$Res>
       child: null == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Widget,
+              as UIXAttributes,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributesCopyWith<$Res> get child {
+    return $UIXAttributesCopyWith<$Res>(_value.child, (value) {
+      return _then(_value.copyWith(child: value));
+    });
   }
 }
 
@@ -6526,7 +7078,7 @@ class _$PageAttributes implements PageAttributes {
       {this.key,
       required this.type,
       final Map<String, dynamic> attributes = const <String, dynamic>{},
-      @UIXWidgetConverter() required this.child})
+      required this.child})
       : _attributes = attributes;
 
   factory _$PageAttributes.fromJson(Map<String, dynamic> json) =>
@@ -6546,8 +7098,7 @@ class _$PageAttributes implements PageAttributes {
   }
 
   @override
-  @UIXWidgetConverter()
-  final Widget child;
+  final UIXAttributes child;
 
   @override
   String toString() {
@@ -6588,14 +7139,14 @@ class _$PageAttributes implements PageAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -6603,54 +7154,65 @@ class _$PageAttributes implements PageAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -6658,24 +7220,29 @@ class _$PageAttributes implements PageAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) {
     return page(key, type, attributes, child);
@@ -6688,14 +7255,14 @@ class _$PageAttributes implements PageAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -6703,50 +7270,61 @@ class _$PageAttributes implements PageAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -6754,24 +7332,24 @@ class _$PageAttributes implements PageAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) {
     return page?.call(key, type, attributes, child);
@@ -6784,14 +7362,14 @@ class _$PageAttributes implements PageAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -6799,50 +7377,61 @@ class _$PageAttributes implements PageAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -6850,24 +7439,24 @@ class _$PageAttributes implements PageAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) {
@@ -6975,7 +7564,7 @@ abstract class PageAttributes implements UIXAttributes {
       {final dynamic key,
       required final String type,
       final Map<String, dynamic> attributes,
-      @UIXWidgetConverter() required final Widget child}) = _$PageAttributes;
+      required final UIXAttributes child}) = _$PageAttributes;
 
   factory PageAttributes.fromJson(Map<String, dynamic> json) =
       _$PageAttributes.fromJson;
@@ -6985,8 +7574,7 @@ abstract class PageAttributes implements UIXAttributes {
   @override
   String get type;
   Map<String, dynamic> get attributes;
-  @UIXWidgetConverter()
-  Widget get child;
+  UIXAttributes get child;
   @override
   @JsonKey(ignore: true)
   _$$PageAttributesCopyWith<_$PageAttributes> get copyWith =>
@@ -7007,7 +7595,7 @@ abstract class _$$RowAttributesCopyWith<$Res>
       MainAxisSize mainAxisSize,
       MainAxisAlignment mainAxisAlignment,
       CrossAxisAlignment crossAxisAlignment,
-      @UIXWidgetsConverter() List<Widget> children});
+      List<UIXAttributes> children});
 }
 
 /// @nodoc
@@ -7052,7 +7640,7 @@ class __$$RowAttributesCopyWithImpl<$Res>
       children: null == children
           ? _value._children
           : children // ignore: cast_nullable_to_non_nullable
-              as List<Widget>,
+              as List<UIXAttributes>,
     ));
   }
 }
@@ -7066,7 +7654,7 @@ class _$RowAttributes implements RowAttributes {
       this.mainAxisSize = MainAxisSize.max,
       this.mainAxisAlignment = MainAxisAlignment.start,
       this.crossAxisAlignment = CrossAxisAlignment.center,
-      @UIXWidgetsConverter() required final List<Widget> children})
+      required final List<UIXAttributes> children})
       : _children = children;
 
   factory _$RowAttributes.fromJson(Map<String, dynamic> json) =>
@@ -7085,10 +7673,9 @@ class _$RowAttributes implements RowAttributes {
   @override
   @JsonKey()
   final CrossAxisAlignment crossAxisAlignment;
-  final List<Widget> _children;
+  final List<UIXAttributes> _children;
   @override
-  @UIXWidgetsConverter()
-  List<Widget> get children {
+  List<UIXAttributes> get children {
     if (_children is EqualUnmodifiableListView) return _children;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_children);
@@ -7139,14 +7726,14 @@ class _$RowAttributes implements RowAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -7154,54 +7741,65 @@ class _$RowAttributes implements RowAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -7209,24 +7807,29 @@ class _$RowAttributes implements RowAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) {
     return row(key, type, mainAxisSize, mainAxisAlignment, crossAxisAlignment,
@@ -7240,14 +7843,14 @@ class _$RowAttributes implements RowAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -7255,50 +7858,61 @@ class _$RowAttributes implements RowAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -7306,24 +7920,24 @@ class _$RowAttributes implements RowAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) {
     return row?.call(key, type, mainAxisSize, mainAxisAlignment,
@@ -7337,14 +7951,14 @@ class _$RowAttributes implements RowAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -7352,50 +7966,61 @@ class _$RowAttributes implements RowAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -7403,24 +8028,24 @@ class _$RowAttributes implements RowAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) {
@@ -7526,13 +8151,12 @@ class _$RowAttributes implements RowAttributes {
 
 abstract class RowAttributes implements UIXAttributes {
   const factory RowAttributes(
-          {final dynamic key,
-          required final String type,
-          final MainAxisSize mainAxisSize,
-          final MainAxisAlignment mainAxisAlignment,
-          final CrossAxisAlignment crossAxisAlignment,
-          @UIXWidgetsConverter() required final List<Widget> children}) =
-      _$RowAttributes;
+      {final dynamic key,
+      required final String type,
+      final MainAxisSize mainAxisSize,
+      final MainAxisAlignment mainAxisAlignment,
+      final CrossAxisAlignment crossAxisAlignment,
+      required final List<UIXAttributes> children}) = _$RowAttributes;
 
   factory RowAttributes.fromJson(Map<String, dynamic> json) =
       _$RowAttributes.fromJson;
@@ -7544,8 +8168,7 @@ abstract class RowAttributes implements UIXAttributes {
   MainAxisSize get mainAxisSize;
   MainAxisAlignment get mainAxisAlignment;
   CrossAxisAlignment get crossAxisAlignment;
-  @UIXWidgetsConverter()
-  List<Widget> get children;
+  List<UIXAttributes> get children;
   @override
   @JsonKey(ignore: true)
   _$$RowAttributesCopyWith<_$RowAttributes> get copyWith =>
@@ -7561,7 +8184,9 @@ abstract class _$$SingleChildScrollViewAttributesCopyWith<$Res>
       __$$SingleChildScrollViewAttributesCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({dynamic key, String type, @UIXWidgetConverter() Widget? child});
+  $Res call({dynamic key, String type, UIXAttributes? child});
+
+  $UIXAttributesCopyWith<$Res>? get child;
 }
 
 /// @nodoc
@@ -7592,8 +8217,20 @@ class __$$SingleChildScrollViewAttributesCopyWithImpl<$Res>
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Widget?,
+              as UIXAttributes?,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributesCopyWith<$Res>? get child {
+    if (_value.child == null) {
+      return null;
+    }
+
+    return $UIXAttributesCopyWith<$Res>(_value.child!, (value) {
+      return _then(_value.copyWith(child: value));
+    });
   }
 }
 
@@ -7602,7 +8239,7 @@ class __$$SingleChildScrollViewAttributesCopyWithImpl<$Res>
 class _$SingleChildScrollViewAttributes
     implements SingleChildScrollViewAttributes {
   const _$SingleChildScrollViewAttributes(
-      {this.key, required this.type, @UIXWidgetConverter() this.child});
+      {this.key, required this.type, this.child});
 
   factory _$SingleChildScrollViewAttributes.fromJson(
           Map<String, dynamic> json) =>
@@ -7613,8 +8250,7 @@ class _$SingleChildScrollViewAttributes
   @override
   final String type;
   @override
-  @UIXWidgetConverter()
-  final Widget? child;
+  final UIXAttributes? child;
 
   @override
   String toString() {
@@ -7650,14 +8286,14 @@ class _$SingleChildScrollViewAttributes
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -7665,54 +8301,65 @@ class _$SingleChildScrollViewAttributes
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -7720,24 +8367,29 @@ class _$SingleChildScrollViewAttributes
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) {
     return singleChildScrollView(key, type, child);
@@ -7750,14 +8402,14 @@ class _$SingleChildScrollViewAttributes
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -7765,50 +8417,61 @@ class _$SingleChildScrollViewAttributes
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -7816,24 +8479,24 @@ class _$SingleChildScrollViewAttributes
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) {
     return singleChildScrollView?.call(key, type, child);
@@ -7846,14 +8509,14 @@ class _$SingleChildScrollViewAttributes
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -7861,50 +8524,61 @@ class _$SingleChildScrollViewAttributes
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -7912,24 +8586,24 @@ class _$SingleChildScrollViewAttributes
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) {
@@ -8034,10 +8708,9 @@ class _$SingleChildScrollViewAttributes
 
 abstract class SingleChildScrollViewAttributes implements UIXAttributes {
   const factory SingleChildScrollViewAttributes(
-          {final dynamic key,
-          required final String type,
-          @UIXWidgetConverter() final Widget? child}) =
-      _$SingleChildScrollViewAttributes;
+      {final dynamic key,
+      required final String type,
+      final UIXAttributes? child}) = _$SingleChildScrollViewAttributes;
 
   factory SingleChildScrollViewAttributes.fromJson(Map<String, dynamic> json) =
       _$SingleChildScrollViewAttributes.fromJson;
@@ -8046,8 +8719,7 @@ abstract class SingleChildScrollViewAttributes implements UIXAttributes {
   dynamic get key;
   @override
   String get type;
-  @UIXWidgetConverter()
-  Widget? get child;
+  UIXAttributes? get child;
   @override
   @JsonKey(ignore: true)
   _$$SingleChildScrollViewAttributesCopyWith<_$SingleChildScrollViewAttributes>
@@ -8065,9 +8737,11 @@ abstract class _$$SizedBoxAttributesCopyWith<$Res>
   $Res call(
       {dynamic key,
       String type,
-      double? height,
-      double? width,
-      @UIXWidgetConverter() Widget? child});
+      UIXAttributeValue<num>? height,
+      UIXAttributeValue<num>? width,
+      UIXAttributes? child});
+
+  $UIXAttributesCopyWith<$Res>? get child;
 }
 
 /// @nodoc
@@ -8099,16 +8773,28 @@ class __$$SizedBoxAttributesCopyWithImpl<$Res>
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as UIXAttributeValue<num>?,
       width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as UIXAttributeValue<num>?,
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Widget?,
+              as UIXAttributes?,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributesCopyWith<$Res>? get child {
+    if (_value.child == null) {
+      return null;
+    }
+
+    return $UIXAttributesCopyWith<$Res>(_value.child!, (value) {
+      return _then(_value.copyWith(child: value));
+    });
   }
 }
 
@@ -8116,11 +8802,7 @@ class __$$SizedBoxAttributesCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SizedBoxAttributes implements SizedBoxAttributes {
   const _$SizedBoxAttributes(
-      {this.key,
-      required this.type,
-      this.height,
-      this.width,
-      @UIXWidgetConverter() this.child});
+      {this.key, required this.type, this.height, this.width, this.child});
 
   factory _$SizedBoxAttributes.fromJson(Map<String, dynamic> json) =>
       _$$SizedBoxAttributesFromJson(json);
@@ -8130,12 +8812,11 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   @override
   final String type;
   @override
-  final double? height;
+  final UIXAttributeValue<num>? height;
   @override
-  final double? width;
+  final UIXAttributeValue<num>? width;
   @override
-  @UIXWidgetConverter()
-  final Widget? child;
+  final UIXAttributes? child;
 
   @override
   String toString() {
@@ -8173,14 +8854,14 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -8188,54 +8869,65 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -8243,24 +8935,29 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) {
     return sizedBox(key, type, height, width, child);
@@ -8273,14 +8970,14 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -8288,50 +8985,61 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -8339,24 +9047,24 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) {
     return sizedBox?.call(key, type, height, width, child);
@@ -8369,14 +9077,14 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -8384,50 +9092,61 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -8435,24 +9154,24 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) {
@@ -8559,9 +9278,9 @@ abstract class SizedBoxAttributes implements UIXAttributes {
   const factory SizedBoxAttributes(
       {final dynamic key,
       required final String type,
-      final double? height,
-      final double? width,
-      @UIXWidgetConverter() final Widget? child}) = _$SizedBoxAttributes;
+      final UIXAttributeValue<num>? height,
+      final UIXAttributeValue<num>? width,
+      final UIXAttributes? child}) = _$SizedBoxAttributes;
 
   factory SizedBoxAttributes.fromJson(Map<String, dynamic> json) =
       _$SizedBoxAttributes.fromJson;
@@ -8570,10 +9289,9 @@ abstract class SizedBoxAttributes implements UIXAttributes {
   dynamic get key;
   @override
   String get type;
-  double? get height;
-  double? get width;
-  @UIXWidgetConverter()
-  Widget? get child;
+  UIXAttributeValue<num>? get height;
+  UIXAttributeValue<num>? get width;
+  UIXAttributes? get child;
   @override
   @JsonKey(ignore: true)
   _$$SizedBoxAttributesCopyWith<_$SizedBoxAttributes> get copyWith =>
@@ -8592,8 +9310,11 @@ abstract class _$$ScaffoldAttributesCopyWith<$Res>
       {dynamic key,
       String type,
       @UIXColorConverter() Color? backgroundColor,
-      @UIXWidgetConverter() Widget? appBar,
-      @UIXWidgetConverter() Widget? body});
+      UIXAttributes? appBar,
+      UIXAttributes? body});
+
+  $UIXAttributesCopyWith<$Res>? get appBar;
+  $UIXAttributesCopyWith<$Res>? get body;
 }
 
 /// @nodoc
@@ -8629,12 +9350,36 @@ class __$$ScaffoldAttributesCopyWithImpl<$Res>
       appBar: freezed == appBar
           ? _value.appBar
           : appBar // ignore: cast_nullable_to_non_nullable
-              as Widget?,
+              as UIXAttributes?,
       body: freezed == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
-              as Widget?,
+              as UIXAttributes?,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributesCopyWith<$Res>? get appBar {
+    if (_value.appBar == null) {
+      return null;
+    }
+
+    return $UIXAttributesCopyWith<$Res>(_value.appBar!, (value) {
+      return _then(_value.copyWith(appBar: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributesCopyWith<$Res>? get body {
+    if (_value.body == null) {
+      return null;
+    }
+
+    return $UIXAttributesCopyWith<$Res>(_value.body!, (value) {
+      return _then(_value.copyWith(body: value));
+    });
   }
 }
 
@@ -8645,8 +9390,8 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
       {this.key,
       required this.type,
       @UIXColorConverter() this.backgroundColor,
-      @UIXWidgetConverter() this.appBar,
-      @UIXWidgetConverter() this.body});
+      this.appBar,
+      this.body});
 
   factory _$ScaffoldAttributes.fromJson(Map<String, dynamic> json) =>
       _$$ScaffoldAttributesFromJson(json);
@@ -8659,11 +9404,9 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
   @UIXColorConverter()
   final Color? backgroundColor;
   @override
-  @UIXWidgetConverter()
-  final Widget? appBar;
+  final UIXAttributes? appBar;
   @override
-  @UIXWidgetConverter()
-  final Widget? body;
+  final UIXAttributes? body;
 
   @override
   String toString() {
@@ -8707,14 +9450,14 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -8722,54 +9465,65 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -8777,24 +9531,29 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) {
     return scaffold(key, type, backgroundColor, this.appBar, body);
@@ -8807,14 +9566,14 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -8822,50 +9581,61 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -8873,24 +9643,24 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) {
     return scaffold?.call(key, type, backgroundColor, this.appBar, body);
@@ -8903,14 +9673,14 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -8918,50 +9688,61 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -8969,24 +9750,24 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) {
@@ -9094,8 +9875,8 @@ abstract class ScaffoldAttributes implements UIXAttributes {
       {final dynamic key,
       required final String type,
       @UIXColorConverter() final Color? backgroundColor,
-      @UIXWidgetConverter() final Widget? appBar,
-      @UIXWidgetConverter() final Widget? body}) = _$ScaffoldAttributes;
+      final UIXAttributes? appBar,
+      final UIXAttributes? body}) = _$ScaffoldAttributes;
 
   factory ScaffoldAttributes.fromJson(Map<String, dynamic> json) =
       _$ScaffoldAttributes.fromJson;
@@ -9106,10 +9887,8 @@ abstract class ScaffoldAttributes implements UIXAttributes {
   String get type;
   @UIXColorConverter()
   Color? get backgroundColor;
-  @UIXWidgetConverter()
-  Widget? get appBar;
-  @UIXWidgetConverter()
-  Widget? get body;
+  UIXAttributes? get appBar;
+  UIXAttributes? get body;
   @override
   @JsonKey(ignore: true)
   _$$ScaffoldAttributesCopyWith<_$ScaffoldAttributes> get copyWith =>
@@ -9124,7 +9903,7 @@ abstract class _$$SpacerAttributesCopyWith<$Res>
       __$$SpacerAttributesCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({dynamic key, String type, int flex});
+  $Res call({dynamic key, String type, UIXAttributeValue<num> flex});
 }
 
 /// @nodoc
@@ -9154,7 +9933,7 @@ class __$$SpacerAttributesCopyWithImpl<$Res>
       flex: null == flex
           ? _value.flex
           : flex // ignore: cast_nullable_to_non_nullable
-              as int,
+              as UIXAttributeValue<num>,
     ));
   }
 }
@@ -9162,7 +9941,10 @@ class __$$SpacerAttributesCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$SpacerAttributes implements SpacerAttributes {
-  const _$SpacerAttributes({this.key, required this.type, this.flex = 1});
+  const _$SpacerAttributes(
+      {this.key,
+      required this.type,
+      this.flex = const UIXAttributeValue<num>(value: 1)});
 
   factory _$SpacerAttributes.fromJson(Map<String, dynamic> json) =>
       _$$SpacerAttributesFromJson(json);
@@ -9173,7 +9955,7 @@ class _$SpacerAttributes implements SpacerAttributes {
   final String type;
   @override
   @JsonKey()
-  final int flex;
+  final UIXAttributeValue<num> flex;
 
   @override
   String toString() {
@@ -9208,14 +9990,14 @@ class _$SpacerAttributes implements SpacerAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -9223,54 +10005,65 @@ class _$SpacerAttributes implements SpacerAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -9278,24 +10071,29 @@ class _$SpacerAttributes implements SpacerAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) {
     return spacer(key, type, flex);
@@ -9308,14 +10106,14 @@ class _$SpacerAttributes implements SpacerAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -9323,50 +10121,61 @@ class _$SpacerAttributes implements SpacerAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -9374,24 +10183,24 @@ class _$SpacerAttributes implements SpacerAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) {
     return spacer?.call(key, type, flex);
@@ -9404,14 +10213,14 @@ class _$SpacerAttributes implements SpacerAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -9419,50 +10228,61 @@ class _$SpacerAttributes implements SpacerAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -9470,24 +10290,24 @@ class _$SpacerAttributes implements SpacerAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) {
@@ -9594,7 +10414,7 @@ abstract class SpacerAttributes implements UIXAttributes {
   const factory SpacerAttributes(
       {final dynamic key,
       required final String type,
-      final int flex}) = _$SpacerAttributes;
+      final UIXAttributeValue<num> flex}) = _$SpacerAttributes;
 
   factory SpacerAttributes.fromJson(Map<String, dynamic> json) =
       _$SpacerAttributes.fromJson;
@@ -9603,7 +10423,7 @@ abstract class SpacerAttributes implements UIXAttributes {
   dynamic get key;
   @override
   String get type;
-  int get flex;
+  UIXAttributeValue<num> get flex;
   @override
   @JsonKey(ignore: true)
   _$$SpacerAttributesCopyWith<_$SpacerAttributes> get copyWith =>
@@ -9618,7 +10438,11 @@ abstract class _$$TextAttributesCopyWith<$Res>
       __$$TextAttributesCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({dynamic key, String type, String text, UIXTextStyle? style});
+  $Res call(
+      {dynamic key,
+      String type,
+      UIXAttributeValue<String> text,
+      UIXTextStyle? style});
 
   $UIXTextStyleCopyWith<$Res>? get style;
 }
@@ -9651,7 +10475,7 @@ class __$$TextAttributesCopyWithImpl<$Res>
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String,
+              as UIXAttributeValue<String>,
       style: freezed == style
           ? _value.style
           : style // ignore: cast_nullable_to_non_nullable
@@ -9686,7 +10510,7 @@ class _$TextAttributes implements TextAttributes {
   @override
   final String type;
   @override
-  final String text;
+  final UIXAttributeValue<String> text;
   @override
   final UIXTextStyle? style;
 
@@ -9724,14 +10548,14 @@ class _$TextAttributes implements TextAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         align,
     required TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)
         appBar,
     required TResult Function(
             dynamic key,
@@ -9739,54 +10563,65 @@ class _$TextAttributes implements TextAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         column,
     required TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         container,
     required TResult Function(
             dynamic key,
             String type,
             List<UIXAction>? onPressed,
             List<UIXAction>? onLongPress,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         elevatedButton,
-    required TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<num> flex, UIXAttributes child)
         expanded,
     required TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         fractionallySizedBox,
-    required TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)
         icon,
-    required TResult Function(dynamic key, String type, String path,
-            double? height, double? width, BoxFit? fit, UIXImageSource source)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)
         image,
     required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)
+            List<UIXAction>? onLongPress, UIXAttributes? child)
         inkWell,
     required TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)
+            UIXAttributes? child)
         padding,
     required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child)
+            Map<String, dynamic> attributes, UIXAttributes child)
         page,
     required TResult Function(
             dynamic key,
@@ -9794,24 +10629,29 @@ class _$TextAttributes implements TextAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)
+            List<UIXAttributes> children)
         row,
-    required TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)
+    required TResult Function(dynamic key, String type, UIXAttributes? child)
         singleChildScrollView,
-    required TResult Function(dynamic key, String type, double? height,
-            double? width, @UIXWidgetConverter() Widget? child)
+    required TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            UIXAttributes? child)
         sizedBox,
     required TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)
+            UIXAttributes? appBar,
+            UIXAttributes? body)
         scaffold,
-    required TResult Function(dynamic key, String type, int flex) spacer,
     required TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)
+            dynamic key, String type, UIXAttributeValue<num> flex)
+        spacer,
+    required TResult Function(dynamic key, String type,
+            UIXAttributeValue<String> text, UIXTextStyle? style)
         text,
   }) {
     return text(key, type, this.text, style);
@@ -9824,14 +10664,14 @@ class _$TextAttributes implements TextAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult? Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult? Function(
             dynamic key,
@@ -9839,50 +10679,61 @@ class _$TextAttributes implements TextAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult? Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult? Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult? Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult? Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult? Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult? Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult? Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult? Function(
             dynamic key,
@@ -9890,24 +10741,24 @@ class _$TextAttributes implements TextAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult? Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult? Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult? Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult? Function(dynamic key, String type, int flex)? spacer,
-    TResult? Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
   }) {
     return text?.call(key, type, this.text, style);
@@ -9920,14 +10771,14 @@ class _$TextAttributes implements TextAttributes {
             dynamic key,
             String type,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         align,
     TResult Function(
             dynamic key,
             String type,
-            bool? centerTitle,
-            @UIXWidgetConverter() Widget? title,
-            @UIXWidgetsConverter() List<Widget>? actions)?
+            UIXAttributeValue<bool>? centerTitle,
+            UIXAttributes? title,
+            List<UIXAttributes>? actions)?
         appBar,
     TResult Function(
             dynamic key,
@@ -9935,50 +10786,61 @@ class _$TextAttributes implements TextAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         column,
     TResult Function(
             dynamic key,
             String type,
-            double? height,
-            double? width,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
             @UIXColorConverter() Color? color,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         container,
     TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         elevatedButton,
-    TResult Function(dynamic key, String type, int flex,
-            @UIXWidgetConverter() Widget child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
+            UIXAttributes child)?
         expanded,
     TResult Function(
             dynamic key,
             String type,
-            double? widthFactor,
-            double? heightFactor,
+            UIXAttributeValue<num>? widthFactor,
+            UIXAttributeValue<num>? heightFactor,
             @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         fractionallySizedBox,
-    TResult Function(dynamic key, String type, int code, double? size,
-            String fontFamily, @UIXColorConverter() Color? color)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<num> code,
+            UIXAttributeValue<num>? size,
+            UIXAttributeValue<String> fontFamily,
+            @UIXColorConverter() Color? color)?
         icon,
-    TResult Function(dynamic key, String type, String path, double? height,
-            double? width, BoxFit? fit, UIXImageSource source)?
+    TResult Function(
+            dynamic key,
+            String type,
+            UIXAttributeValue<String> path,
+            UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width,
+            BoxFit? fit,
+            UIXImageSource source)?
         image,
     TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, @UIXWidgetConverter() Widget? child)?
+            List<UIXAction>? onLongPress, UIXAttributes? child)?
         inkWell,
     TResult Function(
             dynamic key,
             String type,
             @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            @UIXWidgetConverter() Widget? child)?
+            UIXAttributes? child)?
         padding,
     TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            @UIXWidgetConverter() Widget child)?
+            UIXAttributes child)?
         page,
     TResult Function(
             dynamic key,
@@ -9986,24 +10848,24 @@ class _$TextAttributes implements TextAttributes {
             MainAxisSize mainAxisSize,
             MainAxisAlignment mainAxisAlignment,
             CrossAxisAlignment crossAxisAlignment,
-            @UIXWidgetsConverter() List<Widget> children)?
+            List<UIXAttributes> children)?
         row,
-    TResult Function(
-            dynamic key, String type, @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributes? child)?
         singleChildScrollView,
-    TResult Function(dynamic key, String type, double? height, double? width,
-            @UIXWidgetConverter() Widget? child)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
+            UIXAttributeValue<num>? width, UIXAttributes? child)?
         sizedBox,
     TResult Function(
             dynamic key,
             String type,
             @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget? appBar,
-            @UIXWidgetConverter() Widget? body)?
+            UIXAttributes? appBar,
+            UIXAttributes? body)?
         scaffold,
-    TResult Function(dynamic key, String type, int flex)? spacer,
-    TResult Function(
-            dynamic key, String type, String text, UIXTextStyle? style)?
+    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
+        spacer,
+    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
+            UIXTextStyle? style)?
         text,
     required TResult orElse(),
   }) {
@@ -10110,7 +10972,7 @@ abstract class TextAttributes implements UIXAttributes {
   const factory TextAttributes(
       {final dynamic key,
       required final String type,
-      required final String text,
+      required final UIXAttributeValue<String> text,
       final UIXTextStyle? style}) = _$TextAttributes;
 
   factory TextAttributes.fromJson(Map<String, dynamic> json) =
@@ -10120,7 +10982,7 @@ abstract class TextAttributes implements UIXAttributes {
   dynamic get key;
   @override
   String get type;
-  String get text;
+  UIXAttributeValue<String> get text;
   UIXTextStyle? get style;
   @override
   @JsonKey(ignore: true)

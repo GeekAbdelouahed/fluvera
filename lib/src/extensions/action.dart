@@ -1,7 +1,7 @@
 part of 'extension.dart';
 
 extension UIXActionExtension on UIXAction {
-  Future<void> act(BuildContext context) {
+  Future<void> call(BuildContext context) {
     return map(
       pushRoute: (attributes) {
         return Navigator.of(context).pushNamed(
@@ -26,7 +26,7 @@ extension UIXActionExtension on UIXAction {
 
             return UIXProvider<UIXAttributesNotifier>(
               value: provider!.value,
-              child: attributes.child,
+              child: attributes.child.build(),
             );
           },
         );
@@ -45,13 +45,13 @@ extension UIXActionExtension on UIXAction {
           builder: (_) {
             return UIXProvider<UIXAttributesNotifier>(
               value: provider!.value,
-              child: attributes.child,
+              child: attributes.child.build(),
             );
           },
         ).closed;
       },
       updateAttribute: (attributes) async {
-        UIXProvider.of<UIXAttributesNotifier>(context)!.value.update(attributes.key, attributes.value);
+        UIXProvider.of<UIXAttributesNotifier>(context)?.value.update(attributes.key, attributes.value);
       },
     );
   }

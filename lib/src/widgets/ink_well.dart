@@ -14,9 +14,9 @@ class UIXInkWell extends UIX<InkWellAttributes> {
               : () async {
                   for (final action in attributes.onTap!) {
                     if (action.synchronized) {
-                      await action.act(context);
+                      await action.call(context);
                     } else {
-                      action.act(context);
+                      action.call(context);
                     }
                   }
                 },
@@ -25,13 +25,13 @@ class UIXInkWell extends UIX<InkWellAttributes> {
               : () async {
                   for (final action in attributes.onLongPress!) {
                     if (action.synchronized) {
-                      await action.act(context);
+                      await action.call(context);
                     } else {
-                      action.act(context);
+                      action.call(context);
                     }
                   }
                 },
-          child: attributes.child,
+          child: attributes.child?.build(),
         );
       },
     );

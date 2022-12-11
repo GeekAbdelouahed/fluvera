@@ -12,9 +12,9 @@ class UIXScaffold extends UIX<ScaffoldAttributes> {
           ? null
           : PreferredSize(
               preferredSize: const Size.fromHeight(kToolbarHeight),
-              child: attributes.appBar!,
+              child: attributes.appBar!.build(),
             ),
-      body: attributes.body,
+      body: attributes.body?.build(),
     );
   }
 }

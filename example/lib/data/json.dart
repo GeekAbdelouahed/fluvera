@@ -78,10 +78,14 @@ Map<String, dynamic> homeJsonData() {
     'type': 'Scaffold',
     'appBar': {
       'type': 'AppBar',
-      'centerTitle': true,
+      'centerTitle': {
+        'value': true,
+      },
       'title': {
         'type': 'Text',
-        'text': 'UIX',
+        'text': {
+          'value': 'UIX',
+        },
       },
     },
     'body': {
@@ -90,6 +94,7 @@ Map<String, dynamic> homeJsonData() {
         'type': 'Page',
         'attributes': {
           'greeting': 'Hey',
+          'containerHeight': 250,
         },
         'child': {
           'type': 'Column',
@@ -114,86 +119,108 @@ Map<String, dynamic> listTileJson({
   required String subtitle,
 }) {
   return {
-    'type': 'InkWell',
-    'onTap': [
-      {
-        'type': 'PushRoute',
-        'routeName': 'details',
-        'queries': {
-          'id': id,
-        },
-      }
-    ],
+    'type': 'Page',
+    'attributes': {
+      'favorite': 0xe25c,
+    },
     'child': {
-      'type': 'Container',
-      'color': '#EEEEEE',
-      'margin': {
-        'start': 20,
-        'end': 20,
-        'top': 20,
-        'bottom': 20,
-      },
-      'child': {
-        'type': 'Column',
-        'crossAxisAlignment': 'stretch',
-        'children': [
-          {
-            'type': 'Image',
-            'height': 150,
-            'fit': 'cover',
-            'path': imageUrl,
+      'type': 'InkWell',
+      'onTap': [
+        {
+          'type': 'PushRoute',
+          'routeName': 'details',
+          'queries': {
+            'id': id,
           },
-          {
-            'type': 'Padding',
-            'padding': {
-              'start': 16,
-              'end': 16,
-              'top': 16,
-              'bottom': 16,
+        }
+      ],
+      'child': {
+        'type': 'Container',
+        'color': '#EEEEEE',
+        'margin': {
+          'start': 20,
+          'end': 20,
+          'top': 20,
+          'bottom': 20,
+        },
+        'child': {
+          'type': 'Column',
+          'crossAxisAlignment': 'stretch',
+          'children': [
+            {
+              'type': 'Image',
+              'height': {
+                'value': 150,
+              },
+              'fit': 'cover',
+              'path': {
+                'value': imageUrl,
+              },
             },
-            'child': {
-              'type': 'Row',
-              'mainAxisSize': 'min',
-              'children': [
-                {
-                  'type': 'Expanded',
-                  'child': {
-                    'type': 'Column',
-                    'crossAxisAlignment': 'start',
-                    'children': [
-                      {
-                        'type': 'Text',
-                        'text': title,
-                        'style': {
-                          'fontSize': 20,
-                          'fontWeight': 'w500',
+            {
+              'type': 'Padding',
+              'padding': {
+                'start': 16,
+                'end': 16,
+                'top': 16,
+                'bottom': 16,
+              },
+              'child': {
+                'type': 'Row',
+                'mainAxisSize': 'min',
+                'children': [
+                  {
+                    'type': 'Expanded',
+                    'child': {
+                      'type': 'Column',
+                      'crossAxisAlignment': 'start',
+                      'children': [
+                        {
+                          'type': 'Text',
+                          'text': {
+                            'value': title,
+                          },
+                          'style': {
+                            'fontSize': 20,
+                            'fontWeight': 'w500',
+                          },
                         },
-                      },
-                      {
-                        'type': 'Text',
-                        'text': subtitle,
-                        'style': {
-                          'color': '#555555',
-                          'fontSize': 15,
-                          'fontWeight': 'w400',
+                        {
+                          'type': 'Text',
+                          'text': {
+                            'value': subtitle,
+                          },
+                          'style': {
+                            'color': '#555555',
+                            'fontSize': 15,
+                            'fontWeight': 'w400',
+                          },
                         },
+                      ],
+                    },
+                  },
+                  {
+                    'type': 'InkWell',
+                    'onTap': [
+                      {
+                        'type': 'UpdateAttribute',
+                        'key': 'favorite',
+                        'value': 0xe25b,
                       },
                     ],
+                    'child': {
+                      'type': 'Icon',
+                      'code': {
+                        'key': 'favorite',
+                      },
+                      'color': '#999999',
+                    },
                   },
-                },
-                {
-                  'type': 'InkWell',
-                  'onTap': [],
-                  'child': {
-                    'type': 'Icon',
-                    'code': 0xe25c,
-                    'color': '#999999',
-                  },
-                },
-              ],
+                ],
+              },
             },
-          },
-        ],
+          ],
+        },
       },
     },
   };
@@ -202,28 +229,43 @@ Map<String, dynamic> listTileJson({
 Map<String, dynamic> detailsJsonData(Map<String, dynamic> item) {
   return {
     'type': 'Page',
+    'attributes': {
+      'favorite': 0xe25c,
+    },
     'child': {
       'type': 'Scaffold',
       'appBar': {
         'type': 'AppBar',
-        'centerTitle': true,
+        'centerTitle': {
+          'value': true,
+        },
         'title': {
           'type': 'Text',
-          'text': item['title'],
+          'text': {
+            'value': item['title'],
+          },
         },
         'actions': [
           {
-            'type': 'Padding',
-            'padding': {
-              'start': 16,
-              'end': 16,
-            },
+            'type': 'InkWell',
+            'onTap': [
+              {
+                'type': 'UpdateAttribute',
+                'key': 'favorite',
+                'value': 0xe25b,
+              },
+            ],
             'child': {
-              'type': 'InkWell',
-              'onTap': [],
+              'type': 'Padding',
+              'padding': {
+                'start': 16,
+                'end': 16,
+              },
               'child': {
                 'type': 'Icon',
-                'code': 0xe25c,
+                'code': {
+                  'key': 'favorite',
+                },
               },
             },
           },
@@ -237,9 +279,13 @@ Map<String, dynamic> detailsJsonData(Map<String, dynamic> item) {
           'children': [
             {
               'type': 'Image',
-              'height': 250,
+              'height': {
+                'value': 250,
+              },
               'fit': 'cover',
-              'path': item['imageUrl'],
+              'path': {
+                'value': item['imageUrl'],
+              },
             },
             {
               'type': 'Padding',
@@ -255,7 +301,9 @@ Map<String, dynamic> detailsJsonData(Map<String, dynamic> item) {
                 'children': [
                   {
                     'type': 'Text',
-                    'text': item['title'],
+                    'text': {
+                      'value': item['title'],
+                    },
                     'style': {
                       'fontSize': 25,
                       'fontWeight': 'w700',
@@ -263,11 +311,15 @@ Map<String, dynamic> detailsJsonData(Map<String, dynamic> item) {
                   },
                   {
                     'type': 'SizedBox',
-                    'height': 4,
+                    'height': {
+                      'value': 4,
+                    },
                   },
                   {
                     'type': 'Text',
-                    'text': item['subtitle'],
+                    'text': {
+                      'value': item['subtitle'],
+                    },
                     'style': {
                       'color': '#666666',
                       'fontSize': 17,
@@ -276,11 +328,15 @@ Map<String, dynamic> detailsJsonData(Map<String, dynamic> item) {
                   },
                   {
                     'type': 'SizedBox',
-                    'height': 16,
+                    'height': {
+                      'value': 16,
+                    },
                   },
                   {
                     'type': 'Text',
-                    'text': item['description'],
+                    'text': {
+                      'value': item['description'],
+                    },
                     'style': {
                       'color': '#333333',
                       'fontSize': 15,

@@ -5,23 +5,27 @@ class UIXImage extends UIX<ImageAttributes> {
 
   @override
   Widget build() {
-    return Image(
-      key: key,
-      height: attributes.height,
-      width: attributes.width,
-      fit: attributes.fit,
-      image: _source(),
+    return Builder(
+      builder: (context) {
+        return Image(
+          key: key,
+          height: attributes.height?.toValue(context).toDouble(),
+          width: attributes.width?.toValue(context).toDouble(),
+          fit: attributes.fit,
+          image: _source(context),
+        );
+      },
     );
   }
 
-  ImageProvider _source() {
+  ImageProvider _source(BuildContext context) {
     switch (attributes.source) {
       case UIXImageSource.assets:
-        return AssetImage(attributes.path);
+        return AssetImage(attributes.path.toValue(context));
       case UIXImageSource.file:
-        return FileImage(File(attributes.path));
+        return FileImage(File(attributes.path.toValue(context)));
       default:
-        return NetworkImage(attributes.path);
+        return NetworkImage(attributes.path.toValue(context));
     }
   }
 }
