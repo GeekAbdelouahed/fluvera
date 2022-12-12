@@ -21,7 +21,7 @@ class UIXEnumAttributeValue<T extends Enum> {
       throw Exception('$key key not found!');
     }
 
-    final String dynamicValue = notifier.attributes[key];
+    final String dynamicValue = notifier.value[key];
     return values.firstWhere((element) => element.name == dynamicValue);
   }
 

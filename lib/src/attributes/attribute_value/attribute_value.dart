@@ -21,7 +21,7 @@ class UIXAttributeValue<T> {
       throw Exception('$key key not found!');
     }
 
-    return notifier.attributes[key] as T;
+    return notifier.value[key] as T;
   }
 
   factory UIXAttributeValue.fromJson(Map<String, dynamic> json) {

@@ -1,15 +1,13 @@
 part of 'helpers.dart';
 
 class UIXAttributesNotifier extends ValueNotifier<Map<String, dynamic>> {
-  UIXAttributesNotifier(this.attributes) : super(attributes);
+  UIXAttributesNotifier(Map<String, dynamic> value) : super(value);
 
-  final Map<String, dynamic> attributes;
-
-  void update(String key, dynamic value) {
-    attributes.update(
+  void update(String key, dynamic attributeValue) {
+    value.update(
       key,
-      (_) => value,
-      ifAbsent: () => value,
+      (_) => attributeValue,
+      ifAbsent: () => attributeValue,
     );
     notifyListeners();
   }

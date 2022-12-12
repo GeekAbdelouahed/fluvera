@@ -97,15 +97,23 @@ Map<String, dynamic> homeJsonData() {
           'containerHeight': 250,
         },
         'child': {
-          'type': 'Column',
-          'children': items.map((item) {
-            return listTileJson(
-              id: item['id'],
-              imageUrl: item['imageUrl'],
-              title: item['title'],
-              subtitle: item['subtitle'],
-            );
-          }).toList(),
+          'type': 'Padding',
+          'padding': {
+            'top': 20,
+            'start': 20,
+            'end': 20,
+          },
+          'child': {
+            'type': 'Column',
+            'children': items.map((item) {
+              return listTileJson(
+                id: item['id'],
+                imageUrl: item['imageUrl'],
+                title: item['title'],
+                subtitle: item['subtitle'],
+              );
+            }).toList(),
+          },
         },
       },
     },
@@ -138,9 +146,6 @@ Map<String, dynamic> listTileJson({
         'type': 'Container',
         'color': '#EEEEEE',
         'margin': {
-          'start': 20,
-          'end': 20,
-          'top': 20,
           'bottom': 20,
         },
         'child': {
