@@ -1,13 +1,20 @@
 part of 'helpers.dart';
 
-class UIXProvider<T extends ChangeNotifier> extends InheritedNotifier<T> {
+class UIXProvider<T> extends InheritedWidget {
   const UIXProvider({
     Key? key,
     required Widget child,
-    required T notifier,
-  }) : super(key: key, child: child, notifier: notifier);
+    required this.value,
+  }) : super(key: key, child: child);
 
-  static T? of<T extends ChangeNotifier>(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<UIXProvider<T>>()?.notifier;
+  final T value;
+
+  @override
+  bool updateShouldNotify(UIXProvider oldWidget) {
+    return value != oldWidget.value;
+  }
+
+  static UIXProvider<T>? of<T>(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<UIXProvider<T>>();
   }
 }

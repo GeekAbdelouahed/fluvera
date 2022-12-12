@@ -36,7 +36,7 @@ class _PageState extends State<_Page> {
   @override
   Widget build(BuildContext context) {
     return UIXProvider<UIXAttributesNotifier>(
-      notifier: _attributesNotifier,
+      value: _attributesNotifier,
       child: ValueListenableBuilder(
         valueListenable: _attributesNotifier,
         builder: (context, data, child) {
