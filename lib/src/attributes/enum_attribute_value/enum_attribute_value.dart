@@ -15,13 +15,13 @@ class UIXEnumAttributeValue<T extends Enum> {
       return values.firstWhere((element) => element.name == value);
     }
 
-    final provider = UIXProvider.of<UIXAttributesNotifier>(context);
+    final UIXAttributesNotifier? notifier = UIXProvider.of<UIXAttributesNotifier>(context)?.value;
 
-    if (provider == null) {
+    if (notifier == null) {
       throw Exception('$key key not found!');
     }
 
-    final String dynamicValue = provider.value.value[key];
+    final String dynamicValue = notifier.value[key];
     return values.firstWhere((element) => element.name == dynamicValue);
   }
 
