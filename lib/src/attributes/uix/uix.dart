@@ -12,13 +12,6 @@ part 'uix.g.dart';
 
 @freezed
 class UIXAttributes with _$UIXAttributes {
-  const factory UIXAttributes.align({
-    dynamic key,
-    required String type,
-    @Default(AlignmentDirectional.center) @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-    UIXAttributes? child,
-  }) = AlignAttributes;
-
   const factory UIXAttributes.appBar({
     dynamic key,
     required String type,

@@ -6,28 +6,6 @@ part of 'uix.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AlignAttributes _$$AlignAttributesFromJson(Map<String, dynamic> json) =>
-    _$AlignAttributes(
-      key: json['key'],
-      type: json['type'] as String,
-      alignment: json['alignment'] == null
-          ? AlignmentDirectional.center
-          : const UIXAlignmentGeometryConverter()
-              .fromJson(json['alignment'] as String?),
-      child: json['child'] == null
-          ? null
-          : UIXAttributes.fromJson(json['child'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$AlignAttributesToJson(_$AlignAttributes instance) =>
-    <String, dynamic>{
-      'key': instance.key,
-      'type': instance.type,
-      'alignment':
-          const UIXAlignmentGeometryConverter().toJson(instance.alignment),
-      'child': instance.child,
-    };
-
 _$AppBarAttributes _$$AppBarAttributesFromJson(Map<String, dynamic> json) =>
     _$AppBarAttributes(
       key: json['key'],

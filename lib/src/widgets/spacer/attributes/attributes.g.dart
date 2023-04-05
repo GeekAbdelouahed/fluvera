@@ -1,0 +1,20 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'attributes.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_SpacerAttributes _$$_SpacerAttributesFromJson(Map<String, dynamic> json) =>
+    _$_SpacerAttributes(
+      flex: json['flex'] == null
+          ? const UIXAttributeValue<num>(value: 1)
+          : UIXAttributeValue<num>.fromJson(
+              json['flex'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_SpacerAttributesToJson(_$_SpacerAttributes instance) =>
+    <String, dynamic>{
+      'flex': instance.flex,
+    };

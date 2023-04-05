@@ -16,8 +16,6 @@ final _privateConstructorUsedError = UnsupportedError(
 
 UIXAttributes _$UIXAttributesFromJson(Map<String, dynamic> json) {
   switch (json['type']) {
-    case 'Align':
-      return AlignAttributes.fromJson(json);
     case 'AppBar':
       return AppBarAttributes.fromJson(json);
     case 'Column':
@@ -65,12 +63,6 @@ mixin _$UIXAttributes {
   String get type => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
     required TResult Function(
             dynamic key,
             String type,
@@ -181,12 +173,6 @@ mixin _$UIXAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)?
@@ -282,12 +268,6 @@ mixin _$UIXAttributes {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
     TResult Function(
             dynamic key,
             String type,
@@ -387,7 +367,6 @@ mixin _$UIXAttributes {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
     required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
@@ -411,7 +390,6 @@ mixin _$UIXAttributes {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
     TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
@@ -435,7 +413,6 @@ mixin _$UIXAttributes {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
     TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
@@ -500,574 +477,6 @@ class _$UIXAttributesCopyWithImpl<$Res, $Val extends UIXAttributes>
               as String,
     ) as $Val);
   }
-}
-
-/// @nodoc
-abstract class _$$AlignAttributesCopyWith<$Res>
-    implements $UIXAttributesCopyWith<$Res> {
-  factory _$$AlignAttributesCopyWith(
-          _$AlignAttributes value, $Res Function(_$AlignAttributes) then) =
-      __$$AlignAttributesCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {dynamic key,
-      String type,
-      @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-      UIXAttributes? child});
-
-  $UIXAttributesCopyWith<$Res>? get child;
-}
-
-/// @nodoc
-class __$$AlignAttributesCopyWithImpl<$Res>
-    extends _$UIXAttributesCopyWithImpl<$Res, _$AlignAttributes>
-    implements _$$AlignAttributesCopyWith<$Res> {
-  __$$AlignAttributesCopyWithImpl(
-      _$AlignAttributes _value, $Res Function(_$AlignAttributes) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? key = freezed,
-    Object? type = null,
-    Object? alignment = freezed,
-    Object? child = freezed,
-  }) {
-    return _then(_$AlignAttributes(
-      key: freezed == key
-          ? _value.key
-          : key // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      alignment: freezed == alignment
-          ? _value.alignment
-          : alignment // ignore: cast_nullable_to_non_nullable
-              as AlignmentGeometry?,
-      child: freezed == child
-          ? _value.child
-          : child // ignore: cast_nullable_to_non_nullable
-              as UIXAttributes?,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $UIXAttributesCopyWith<$Res>? get child {
-    if (_value.child == null) {
-      return null;
-    }
-
-    return $UIXAttributesCopyWith<$Res>(_value.child!, (value) {
-      return _then(_value.copyWith(child: value));
-    });
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$AlignAttributes implements AlignAttributes {
-  const _$AlignAttributes(
-      {this.key,
-      required this.type,
-      @UIXAlignmentGeometryConverter()
-          this.alignment = AlignmentDirectional.center,
-      this.child});
-
-  factory _$AlignAttributes.fromJson(Map<String, dynamic> json) =>
-      _$$AlignAttributesFromJson(json);
-
-  @override
-  final dynamic key;
-  @override
-  final String type;
-  @override
-  @JsonKey()
-  @UIXAlignmentGeometryConverter()
-  final AlignmentGeometry? alignment;
-  @override
-  final UIXAttributes? child;
-
-  @override
-  String toString() {
-    return 'UIXAttributes.align(key: $key, type: $type, alignment: $alignment, child: $child)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AlignAttributes &&
-            const DeepCollectionEquality().equals(other.key, key) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.alignment, alignment) ||
-                other.alignment == alignment) &&
-            (identical(other.child, child) || other.child == child));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(key), type, alignment, child);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AlignAttributesCopyWith<_$AlignAttributes> get copyWith =>
-      __$$AlignAttributesCopyWithImpl<_$AlignAttributes>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
-    required TResult Function(
-            dynamic key,
-            String type,
-            UIXAttributeValue<bool>? centerTitle,
-            UIXAttributes? title,
-            List<UIXAttributes>? actions)
-        appBar,
-    required TResult Function(
-            dynamic key,
-            String type,
-            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
-            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
-            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
-            List<UIXAttributes> children)
-        column,
-    required TResult Function(
-            dynamic key,
-            String type,
-            UIXAttributeValue<num>? height,
-            UIXAttributeValue<num>? width,
-            @UIXColorConverter() Color? color,
-            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
-            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        container,
-    required TResult Function(
-            dynamic key,
-            String type,
-            List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress,
-            UIXAttributes? child)
-        elevatedButton,
-    required TResult Function(dynamic key, String type,
-            UIXAttributeValue<num> flex, UIXAttributes child)
-        expanded,
-    required TResult Function(
-            dynamic key,
-            String type,
-            UIXAttributeValue<num>? widthFactor,
-            UIXAttributeValue<num>? heightFactor,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        fractionallySizedBox,
-    required TResult Function(
-            dynamic key,
-            String type,
-            UIXAttributeValue<num> code,
-            UIXAttributeValue<num>? size,
-            UIXAttributeValue<String> fontFamily,
-            @UIXColorConverter() Color? color)
-        icon,
-    required TResult Function(
-            dynamic key,
-            String type,
-            UIXAttributeValue<String> path,
-            UIXAttributeValue<num>? height,
-            UIXAttributeValue<num>? width,
-            UIXEnumAttributeValue<BoxFit>? fit,
-            UIXImageSource source)
-        image,
-    required TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, UIXAttributes? child)
-        inkWell,
-    required TResult Function(
-            dynamic key,
-            String type,
-            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            UIXAttributes? child)
-        padding,
-    required TResult Function(dynamic key, String type,
-            Map<String, dynamic> attributes, UIXAttributes child)
-        page,
-    required TResult Function(
-            dynamic key,
-            String type,
-            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
-            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
-            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
-            List<UIXAttributes> children)
-        row,
-    required TResult Function(dynamic key, String type, UIXAttributes? child)
-        singleChildScrollView,
-    required TResult Function(
-            dynamic key,
-            String type,
-            UIXAttributeValue<num>? height,
-            UIXAttributeValue<num>? width,
-            UIXAttributes? child)
-        sizedBox,
-    required TResult Function(
-            dynamic key,
-            String type,
-            @UIXColorConverter() Color? backgroundColor,
-            UIXAttributes? appBar,
-            UIXAttributes? body)
-        scaffold,
-    required TResult Function(
-            dynamic key, String type, UIXAttributeValue<num> flex)
-        spacer,
-    required TResult Function(dynamic key, String type,
-            UIXAttributeValue<String> text, UIXTextStyle? style)
-        text,
-  }) {
-    return align(key, type, alignment, child);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
-            UIXAttributeValue<bool>? centerTitle,
-            UIXAttributes? title,
-            List<UIXAttributes>? actions)?
-        appBar,
-    TResult? Function(
-            dynamic key,
-            String type,
-            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
-            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
-            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
-            List<UIXAttributes> children)?
-        column,
-    TResult? Function(
-            dynamic key,
-            String type,
-            UIXAttributeValue<num>? height,
-            UIXAttributeValue<num>? width,
-            @UIXColorConverter() Color? color,
-            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
-            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        container,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, UIXAttributes? child)?
-        elevatedButton,
-    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex,
-            UIXAttributes child)?
-        expanded,
-    TResult? Function(
-            dynamic key,
-            String type,
-            UIXAttributeValue<num>? widthFactor,
-            UIXAttributeValue<num>? heightFactor,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        fractionallySizedBox,
-    TResult? Function(
-            dynamic key,
-            String type,
-            UIXAttributeValue<num> code,
-            UIXAttributeValue<num>? size,
-            UIXAttributeValue<String> fontFamily,
-            @UIXColorConverter() Color? color)?
-        icon,
-    TResult? Function(
-            dynamic key,
-            String type,
-            UIXAttributeValue<String> path,
-            UIXAttributeValue<num>? height,
-            UIXAttributeValue<num>? width,
-            UIXEnumAttributeValue<BoxFit>? fit,
-            UIXImageSource source)?
-        image,
-    TResult? Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, UIXAttributes? child)?
-        inkWell,
-    TResult? Function(
-            dynamic key,
-            String type,
-            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            UIXAttributes? child)?
-        padding,
-    TResult? Function(dynamic key, String type, Map<String, dynamic> attributes,
-            UIXAttributes child)?
-        page,
-    TResult? Function(
-            dynamic key,
-            String type,
-            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
-            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
-            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
-            List<UIXAttributes> children)?
-        row,
-    TResult? Function(dynamic key, String type, UIXAttributes? child)?
-        singleChildScrollView,
-    TResult? Function(dynamic key, String type, UIXAttributeValue<num>? height,
-            UIXAttributeValue<num>? width, UIXAttributes? child)?
-        sizedBox,
-    TResult? Function(
-            dynamic key,
-            String type,
-            @UIXColorConverter() Color? backgroundColor,
-            UIXAttributes? appBar,
-            UIXAttributes? body)?
-        scaffold,
-    TResult? Function(dynamic key, String type, UIXAttributeValue<num> flex)?
-        spacer,
-    TResult? Function(dynamic key, String type, UIXAttributeValue<String> text,
-            UIXTextStyle? style)?
-        text,
-  }) {
-    return align?.call(key, type, alignment, child);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult Function(
-            dynamic key,
-            String type,
-            UIXAttributeValue<bool>? centerTitle,
-            UIXAttributes? title,
-            List<UIXAttributes>? actions)?
-        appBar,
-    TResult Function(
-            dynamic key,
-            String type,
-            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
-            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
-            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
-            List<UIXAttributes> children)?
-        column,
-    TResult Function(
-            dynamic key,
-            String type,
-            UIXAttributeValue<num>? height,
-            UIXAttributeValue<num>? width,
-            @UIXColorConverter() Color? color,
-            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
-            @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        container,
-    TResult Function(dynamic key, String type, List<UIXAction>? onPressed,
-            List<UIXAction>? onLongPress, UIXAttributes? child)?
-        elevatedButton,
-    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex,
-            UIXAttributes child)?
-        expanded,
-    TResult Function(
-            dynamic key,
-            String type,
-            UIXAttributeValue<num>? widthFactor,
-            UIXAttributeValue<num>? heightFactor,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        fractionallySizedBox,
-    TResult Function(
-            dynamic key,
-            String type,
-            UIXAttributeValue<num> code,
-            UIXAttributeValue<num>? size,
-            UIXAttributeValue<String> fontFamily,
-            @UIXColorConverter() Color? color)?
-        icon,
-    TResult Function(
-            dynamic key,
-            String type,
-            UIXAttributeValue<String> path,
-            UIXAttributeValue<num>? height,
-            UIXAttributeValue<num>? width,
-            UIXEnumAttributeValue<BoxFit>? fit,
-            UIXImageSource source)?
-        image,
-    TResult Function(dynamic key, String type, List<UIXAction>? onTap,
-            List<UIXAction>? onLongPress, UIXAttributes? child)?
-        inkWell,
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-            UIXAttributes? child)?
-        padding,
-    TResult Function(dynamic key, String type, Map<String, dynamic> attributes,
-            UIXAttributes child)?
-        page,
-    TResult Function(
-            dynamic key,
-            String type,
-            UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
-            UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
-            UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
-            List<UIXAttributes> children)?
-        row,
-    TResult Function(dynamic key, String type, UIXAttributes? child)?
-        singleChildScrollView,
-    TResult Function(dynamic key, String type, UIXAttributeValue<num>? height,
-            UIXAttributeValue<num>? width, UIXAttributes? child)?
-        sizedBox,
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXColorConverter() Color? backgroundColor,
-            UIXAttributes? appBar,
-            UIXAttributes? body)?
-        scaffold,
-    TResult Function(dynamic key, String type, UIXAttributeValue<num> flex)?
-        spacer,
-    TResult Function(dynamic key, String type, UIXAttributeValue<String> text,
-            UIXTextStyle? style)?
-        text,
-    required TResult orElse(),
-  }) {
-    if (align != null) {
-      return align(key, type, alignment, child);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
-    required TResult Function(AppBarAttributes value) appBar,
-    required TResult Function(ColumnAttributes value) column,
-    required TResult Function(ContainerAttributes value) container,
-    required TResult Function(ElevatedButtonAttributes value) elevatedButton,
-    required TResult Function(ExpandedAttributes value) expanded,
-    required TResult Function(FractionallySizedBoxAttributes value)
-        fractionallySizedBox,
-    required TResult Function(IconAttributes value) icon,
-    required TResult Function(ImageAttributes value) image,
-    required TResult Function(InkWellAttributes value) inkWell,
-    required TResult Function(PaddingAttributes value) padding,
-    required TResult Function(PageAttributes value) page,
-    required TResult Function(RowAttributes value) row,
-    required TResult Function(SingleChildScrollViewAttributes value)
-        singleChildScrollView,
-    required TResult Function(SizedBoxAttributes value) sizedBox,
-    required TResult Function(ScaffoldAttributes value) scaffold,
-    required TResult Function(SpacerAttributes value) spacer,
-    required TResult Function(TextAttributes value) text,
-  }) {
-    return align(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
-    TResult? Function(AppBarAttributes value)? appBar,
-    TResult? Function(ColumnAttributes value)? column,
-    TResult? Function(ContainerAttributes value)? container,
-    TResult? Function(ElevatedButtonAttributes value)? elevatedButton,
-    TResult? Function(ExpandedAttributes value)? expanded,
-    TResult? Function(FractionallySizedBoxAttributes value)?
-        fractionallySizedBox,
-    TResult? Function(IconAttributes value)? icon,
-    TResult? Function(ImageAttributes value)? image,
-    TResult? Function(InkWellAttributes value)? inkWell,
-    TResult? Function(PaddingAttributes value)? padding,
-    TResult? Function(PageAttributes value)? page,
-    TResult? Function(RowAttributes value)? row,
-    TResult? Function(SingleChildScrollViewAttributes value)?
-        singleChildScrollView,
-    TResult? Function(SizedBoxAttributes value)? sizedBox,
-    TResult? Function(ScaffoldAttributes value)? scaffold,
-    TResult? Function(SpacerAttributes value)? spacer,
-    TResult? Function(TextAttributes value)? text,
-  }) {
-    return align?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
-    TResult Function(AppBarAttributes value)? appBar,
-    TResult Function(ColumnAttributes value)? column,
-    TResult Function(ContainerAttributes value)? container,
-    TResult Function(ElevatedButtonAttributes value)? elevatedButton,
-    TResult Function(ExpandedAttributes value)? expanded,
-    TResult Function(FractionallySizedBoxAttributes value)?
-        fractionallySizedBox,
-    TResult Function(IconAttributes value)? icon,
-    TResult Function(ImageAttributes value)? image,
-    TResult Function(InkWellAttributes value)? inkWell,
-    TResult Function(PaddingAttributes value)? padding,
-    TResult Function(PageAttributes value)? page,
-    TResult Function(RowAttributes value)? row,
-    TResult Function(SingleChildScrollViewAttributes value)?
-        singleChildScrollView,
-    TResult Function(SizedBoxAttributes value)? sizedBox,
-    TResult Function(ScaffoldAttributes value)? scaffold,
-    TResult Function(SpacerAttributes value)? spacer,
-    TResult Function(TextAttributes value)? text,
-    required TResult orElse(),
-  }) {
-    if (align != null) {
-      return align(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$AlignAttributesToJson(
-      this,
-    );
-  }
-}
-
-abstract class AlignAttributes implements UIXAttributes {
-  const factory AlignAttributes(
-      {final dynamic key,
-      required final String type,
-      @UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
-      final UIXAttributes? child}) = _$AlignAttributes;
-
-  factory AlignAttributes.fromJson(Map<String, dynamic> json) =
-      _$AlignAttributes.fromJson;
-
-  @override
-  dynamic get key;
-  @override
-  String get type;
-  @UIXAlignmentGeometryConverter()
-  AlignmentGeometry? get alignment;
-  UIXAttributes? get child;
-  @override
-  @JsonKey(ignore: true)
-  _$$AlignAttributesCopyWith<_$AlignAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1214,12 +623,6 @@ class _$AppBarAttributes implements AppBarAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
-    required TResult Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)
@@ -1330,12 +733,6 @@ class _$AppBarAttributes implements AppBarAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)?
@@ -1434,12 +831,6 @@ class _$AppBarAttributes implements AppBarAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
     TResult Function(
             dynamic key,
             String type,
@@ -1545,7 +936,6 @@ class _$AppBarAttributes implements AppBarAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
     required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
@@ -1572,7 +962,6 @@ class _$AppBarAttributes implements AppBarAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
     TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
@@ -1599,7 +988,6 @@ class _$AppBarAttributes implements AppBarAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
     TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
@@ -1803,12 +1191,6 @@ class _$ColumnAttributes implements ColumnAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
-    required TResult Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)
@@ -1920,12 +1302,6 @@ class _$ColumnAttributes implements ColumnAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)?
@@ -2025,12 +1401,6 @@ class _$ColumnAttributes implements ColumnAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
     TResult Function(
             dynamic key,
             String type,
@@ -2137,7 +1507,6 @@ class _$ColumnAttributes implements ColumnAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
     required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
@@ -2164,7 +1533,6 @@ class _$ColumnAttributes implements ColumnAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
     TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
@@ -2191,7 +1559,6 @@ class _$ColumnAttributes implements ColumnAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
     TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
@@ -2438,12 +1805,6 @@ class _$ContainerAttributes implements ContainerAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
-    required TResult Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)
@@ -2555,12 +1916,6 @@ class _$ContainerAttributes implements ContainerAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)?
@@ -2660,12 +2015,6 @@ class _$ContainerAttributes implements ContainerAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
     TResult Function(
             dynamic key,
             String type,
@@ -2772,7 +2121,6 @@ class _$ContainerAttributes implements ContainerAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
     required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
@@ -2799,7 +2147,6 @@ class _$ContainerAttributes implements ContainerAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
     TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
@@ -2826,7 +2173,6 @@ class _$ContainerAttributes implements ContainerAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
     TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
@@ -3055,12 +2401,6 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
-    required TResult Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)
@@ -3171,12 +2511,6 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)?
@@ -3275,12 +2609,6 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
     TResult Function(
             dynamic key,
             String type,
@@ -3386,7 +2714,6 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
     required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
@@ -3413,7 +2740,6 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
     TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
@@ -3440,7 +2766,6 @@ class _$ElevatedButtonAttributes implements ElevatedButtonAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
     TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
@@ -3618,12 +2943,6 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
-    required TResult Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)
@@ -3734,12 +3053,6 @@ class _$ExpandedAttributes implements ExpandedAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)?
@@ -3838,12 +3151,6 @@ class _$ExpandedAttributes implements ExpandedAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
     TResult Function(
             dynamic key,
             String type,
@@ -3949,7 +3256,6 @@ class _$ExpandedAttributes implements ExpandedAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
     required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
@@ -3976,7 +3282,6 @@ class _$ExpandedAttributes implements ExpandedAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
     TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
@@ -4003,7 +3308,6 @@ class _$ExpandedAttributes implements ExpandedAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
     TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
@@ -4218,12 +3522,6 @@ class _$FractionallySizedBoxAttributes
     required TResult Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
-    required TResult Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)
@@ -4335,12 +3633,6 @@ class _$FractionallySizedBoxAttributes
     TResult? Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)?
@@ -4440,12 +3732,6 @@ class _$FractionallySizedBoxAttributes
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
     TResult Function(
             dynamic key,
             String type,
@@ -4552,7 +3838,6 @@ class _$FractionallySizedBoxAttributes
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
     required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
@@ -4579,7 +3864,6 @@ class _$FractionallySizedBoxAttributes
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
     TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
@@ -4606,7 +3890,6 @@ class _$FractionallySizedBoxAttributes
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
     TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
@@ -4804,12 +4087,6 @@ class _$IconAttributes implements IconAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
-    required TResult Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)
@@ -4920,12 +4197,6 @@ class _$IconAttributes implements IconAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)?
@@ -5024,12 +4295,6 @@ class _$IconAttributes implements IconAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
     TResult Function(
             dynamic key,
             String type,
@@ -5135,7 +4400,6 @@ class _$IconAttributes implements IconAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
     required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
@@ -5162,7 +4426,6 @@ class _$IconAttributes implements IconAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
     TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
@@ -5189,7 +4452,6 @@ class _$IconAttributes implements IconAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
     TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
@@ -5396,12 +4658,6 @@ class _$ImageAttributes implements ImageAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
-    required TResult Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)
@@ -5512,12 +4768,6 @@ class _$ImageAttributes implements ImageAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)?
@@ -5616,12 +4866,6 @@ class _$ImageAttributes implements ImageAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
     TResult Function(
             dynamic key,
             String type,
@@ -5727,7 +4971,6 @@ class _$ImageAttributes implements ImageAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
     required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
@@ -5754,7 +4997,6 @@ class _$ImageAttributes implements ImageAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
     TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
@@ -5781,7 +5023,6 @@ class _$ImageAttributes implements ImageAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
     TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
@@ -5999,12 +5240,6 @@ class _$InkWellAttributes implements InkWellAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
-    required TResult Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)
@@ -6115,12 +5350,6 @@ class _$InkWellAttributes implements InkWellAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)?
@@ -6219,12 +5448,6 @@ class _$InkWellAttributes implements InkWellAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
     TResult Function(
             dynamic key,
             String type,
@@ -6330,7 +5553,6 @@ class _$InkWellAttributes implements InkWellAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
     required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
@@ -6357,7 +5579,6 @@ class _$InkWellAttributes implements InkWellAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
     TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
@@ -6384,7 +5605,6 @@ class _$InkWellAttributes implements InkWellAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
     TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
@@ -6565,12 +5785,6 @@ class _$PaddingAttributes implements PaddingAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
-    required TResult Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)
@@ -6681,12 +5895,6 @@ class _$PaddingAttributes implements PaddingAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)?
@@ -6785,12 +5993,6 @@ class _$PaddingAttributes implements PaddingAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
     TResult Function(
             dynamic key,
             String type,
@@ -6896,7 +6098,6 @@ class _$PaddingAttributes implements PaddingAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
     required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
@@ -6923,7 +6124,6 @@ class _$PaddingAttributes implements PaddingAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
     TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
@@ -6950,7 +6150,6 @@ class _$PaddingAttributes implements PaddingAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
     TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
@@ -7138,12 +6337,6 @@ class _$PageAttributes implements PageAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
-    required TResult Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)
@@ -7254,12 +6447,6 @@ class _$PageAttributes implements PageAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)?
@@ -7358,12 +6545,6 @@ class _$PageAttributes implements PageAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
     TResult Function(
             dynamic key,
             String type,
@@ -7469,7 +6650,6 @@ class _$PageAttributes implements PageAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
     required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
@@ -7496,7 +6676,6 @@ class _$PageAttributes implements PageAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
     TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
@@ -7523,7 +6702,6 @@ class _$PageAttributes implements PageAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
     TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
@@ -7725,12 +6903,6 @@ class _$RowAttributes implements RowAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
-    required TResult Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)
@@ -7842,12 +7014,6 @@ class _$RowAttributes implements RowAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)?
@@ -7947,12 +7113,6 @@ class _$RowAttributes implements RowAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
     TResult Function(
             dynamic key,
             String type,
@@ -8059,7 +7219,6 @@ class _$RowAttributes implements RowAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
     required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
@@ -8086,7 +7245,6 @@ class _$RowAttributes implements RowAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
     TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
@@ -8113,7 +7271,6 @@ class _$RowAttributes implements RowAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
     TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
@@ -8285,12 +7442,6 @@ class _$SingleChildScrollViewAttributes
     required TResult Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
-    required TResult Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)
@@ -8401,12 +7552,6 @@ class _$SingleChildScrollViewAttributes
     TResult? Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)?
@@ -8505,12 +7650,6 @@ class _$SingleChildScrollViewAttributes
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
     TResult Function(
             dynamic key,
             String type,
@@ -8616,7 +7755,6 @@ class _$SingleChildScrollViewAttributes
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
     required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
@@ -8643,7 +7781,6 @@ class _$SingleChildScrollViewAttributes
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
     TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
@@ -8670,7 +7807,6 @@ class _$SingleChildScrollViewAttributes
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
     TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
@@ -8853,12 +7989,6 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
-    required TResult Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)
@@ -8969,12 +8099,6 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)?
@@ -9073,12 +8197,6 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
     TResult Function(
             dynamic key,
             String type,
@@ -9184,7 +8302,6 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
     required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
@@ -9211,7 +8328,6 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
     TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
@@ -9238,7 +8354,6 @@ class _$SizedBoxAttributes implements SizedBoxAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
     TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
@@ -9449,12 +8564,6 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
-    required TResult Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)
@@ -9565,12 +8674,6 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)?
@@ -9669,12 +8772,6 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
     TResult Function(
             dynamic key,
             String type,
@@ -9780,7 +8877,6 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
     required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
@@ -9807,7 +8903,6 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
     TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
@@ -9834,7 +8929,6 @@ class _$ScaffoldAttributes implements ScaffoldAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
     TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
@@ -9989,12 +9083,6 @@ class _$SpacerAttributes implements SpacerAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
-    required TResult Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)
@@ -10105,12 +9193,6 @@ class _$SpacerAttributes implements SpacerAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)?
@@ -10209,12 +9291,6 @@ class _$SpacerAttributes implements SpacerAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
     TResult Function(
             dynamic key,
             String type,
@@ -10320,7 +9396,6 @@ class _$SpacerAttributes implements SpacerAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
     required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
@@ -10347,7 +9422,6 @@ class _$SpacerAttributes implements SpacerAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
     TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
@@ -10374,7 +9448,6 @@ class _$SpacerAttributes implements SpacerAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
     TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
@@ -10547,12 +9620,6 @@ class _$TextAttributes implements TextAttributes {
     required TResult Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)
-        align,
-    required TResult Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)
@@ -10663,12 +9730,6 @@ class _$TextAttributes implements TextAttributes {
     TResult? Function(
             dynamic key,
             String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
-    TResult? Function(
-            dynamic key,
-            String type,
             UIXAttributeValue<bool>? centerTitle,
             UIXAttributes? title,
             List<UIXAttributes>? actions)?
@@ -10767,12 +9828,6 @@ class _$TextAttributes implements TextAttributes {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            dynamic key,
-            String type,
-            @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-            UIXAttributes? child)?
-        align,
     TResult Function(
             dynamic key,
             String type,
@@ -10878,7 +9933,6 @@ class _$TextAttributes implements TextAttributes {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(AlignAttributes value) align,
     required TResult Function(AppBarAttributes value) appBar,
     required TResult Function(ColumnAttributes value) column,
     required TResult Function(ContainerAttributes value) container,
@@ -10905,7 +9959,6 @@ class _$TextAttributes implements TextAttributes {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(AlignAttributes value)? align,
     TResult? Function(AppBarAttributes value)? appBar,
     TResult? Function(ColumnAttributes value)? column,
     TResult? Function(ContainerAttributes value)? container,
@@ -10932,7 +9985,6 @@ class _$TextAttributes implements TextAttributes {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(AlignAttributes value)? align,
     TResult Function(AppBarAttributes value)? appBar,
     TResult Function(ColumnAttributes value)? column,
     TResult Function(ContainerAttributes value)? container,
