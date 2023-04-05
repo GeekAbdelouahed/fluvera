@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uix/src/attributes/action/action.dart';
 import 'package:uix/src/converters/converters.dart';
 
 part 'attributes.freezed.dart';

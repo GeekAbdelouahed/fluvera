@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uix/src/attributes/uix/uix.dart';
 import 'package:uix/src/converters/converters.dart';
 
 part 'action.freezed.dart';
@@ -25,7 +24,7 @@ class UIXAction with _$UIXAction {
     required String type,
     @Default(false) bool synchronized,
     @Default(true) bool barrierDismissible,
-    required UIXAttributes child,
+    required Map<String, dynamic> child,
   }) = ShowDialogAction;
 
   const factory UIXAction.showBottomSheet({
@@ -34,7 +33,7 @@ class UIXAction with _$UIXAction {
     bool? enableDrag,
     double? elevation,
     @UIXColorConverter() Color? backgroundColor,
-    required UIXAttributes child,
+    required Map<String, dynamic> child,
   }) = ShowBottomSheetAction;
 
   const factory UIXAction.updateAttribute({

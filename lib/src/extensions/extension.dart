@@ -2,14 +2,49 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:uix/src/attributes/action/action.dart';
-import 'package:uix/src/widgets/uix_factory.dart';
 import 'package:uix/uix.dart';
-
-part 'action.dart';
-part 'uix.dart';
 
 extension MapExtensions on Map<String, dynamic> {
   Widget? toWidget() {
     return UIXFactory.fromJson(this);
+  }
+}
+
+extension UIXActionExtension on UIXAction {
+  Future<void>? call(BuildContext context) {
+    return map(
+      pushRoute: (attributes) {
+        return UIXProvider.of<UIXNavigator>(context)?.value.pushRoute(
+              context,
+              attributes.routeName,
+              queries: attributes.queries,
+            );
+      },
+      popRoute: (attributes) async {
+        return UIXProvider.of<UIXNavigator>(context)?.value.popRoute(
+              context,
+              queries: attributes.queries,
+            );
+      },
+      showDialog: (attributes) {
+        return UIXProvider.of<UIXNavigator>(context)?.value.dialog(
+              context,
+              barrierDismissible: attributes.barrierDismissible,
+              child: attributes.child.toWidget()!,
+            );
+      },
+      showBottomSheet: (attributes) async {
+        return UIXProvider.of<UIXNavigator>(context)?.value.bottomSheet(
+              context,
+              enableDrag: attributes.enableDrag,
+              elevation: attributes.elevation,
+              backgroundColor: attributes.backgroundColor,
+              child: attributes.child.toWidget()!,
+            );
+      },
+      updateAttribute: (attributes) async {
+        UIXProvider.of<UIXAttributesNotifier>(context)?.value.update(attributes.key, attributes.value);
+      },
+    );
   }
 }

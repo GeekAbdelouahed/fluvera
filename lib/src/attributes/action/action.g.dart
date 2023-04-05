@@ -41,7 +41,7 @@ _$ShowDialogAction _$$ShowDialogActionFromJson(Map<String, dynamic> json) =>
       type: json['type'] as String,
       synchronized: json['synchronized'] as bool? ?? false,
       barrierDismissible: json['barrierDismissible'] as bool? ?? true,
-      child: UIXAttributes.fromJson(json['child'] as Map<String, dynamic>),
+      child: json['child'] as Map<String, dynamic>,
     );
 
 Map<String, dynamic> _$$ShowDialogActionToJson(_$ShowDialogAction instance) =>
@@ -61,7 +61,7 @@ _$ShowBottomSheetAction _$$ShowBottomSheetActionFromJson(
       elevation: (json['elevation'] as num?)?.toDouble(),
       backgroundColor: const UIXColorConverter()
           .fromJson(json['backgroundColor'] as String?),
-      child: UIXAttributes.fromJson(json['child'] as Map<String, dynamic>),
+      child: json['child'] as Map<String, dynamic>,
     );
 
 Map<String, dynamic> _$$ShowBottomSheetActionToJson(

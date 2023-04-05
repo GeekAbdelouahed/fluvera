@@ -12,10 +12,11 @@ class DetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return UIXAttributes.fromJson(
-      detailsJsonData(
-        items.firstWhere((item) => item['id'] == id),
-      ),
-    ).build();
+    return UIXFactory.fromJson(
+          detailsJsonData(
+            items.firstWhere((item) => item['id'] == id),
+          ),
+        ) ??
+        const SizedBox();
   }
 }
