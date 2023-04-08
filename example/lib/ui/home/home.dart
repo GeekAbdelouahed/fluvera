@@ -7,6 +7,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return UIXFactory.fromJson(homeJsonData()) ?? const SizedBox();
+    return UIXFactory.fromJson(homeJsonData())!;
   }
 }
