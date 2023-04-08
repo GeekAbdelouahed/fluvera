@@ -1,4 +1,4 @@
-part of 'helpers.dart';
+import 'package:flutter/material.dart';
 
 class UIXAttributesNotifier extends ValueNotifier<Map<String, dynamic>> {
   UIXAttributesNotifier(Map<String, dynamic> value) : super(value);

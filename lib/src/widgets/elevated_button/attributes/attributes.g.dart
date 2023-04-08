@@ -10,10 +10,10 @@ _$_ElevatedButtonAttributes _$$_ElevatedButtonAttributesFromJson(
         Map<String, dynamic> json) =>
     _$_ElevatedButtonAttributes(
       onPressed: (json['onPressed'] as List<dynamic>?)
-          ?.map((e) => UIXAction.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => UIXActions.fromJson(e as Map<String, dynamic>))
           .toList(),
       onLongPress: (json['onLongPress'] as List<dynamic>?)
-          ?.map((e) => UIXAction.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => UIXActions.fromJson(e as Map<String, dynamic>))
           .toList(),
       child: json['child'] as Map<String, dynamic>?,
     );

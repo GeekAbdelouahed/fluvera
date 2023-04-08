@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:uix/src/helpers/helpers.dart';
+import 'package:uix/src/helpers/attributes_notifier.dart';
+import 'package:uix/src/helpers/uix_provider.dart';
 
 class UIXEnumAttributeValue<T extends Enum> {
   const UIXEnumAttributeValue({

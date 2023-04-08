@@ -9,10 +9,10 @@ part of 'attributes.dart';
 _$_InkWellAttributes _$$_InkWellAttributesFromJson(Map<String, dynamic> json) =>
     _$_InkWellAttributes(
       onTap: (json['onTap'] as List<dynamic>?)
-          ?.map((e) => UIXAction.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => UIXActions.fromJson(e as Map<String, dynamic>))
           .toList(),
       onLongPress: (json['onLongPress'] as List<dynamic>?)
-          ?.map((e) => UIXAction.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => UIXActions.fromJson(e as Map<String, dynamic>))
           .toList(),
       child: json['child'] as Map<String, dynamic>?,
     );

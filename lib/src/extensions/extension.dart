@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:uix/src/attributes/action/action.dart';
+import 'package:uix/src/attributes/actions/actions.dart';
 import 'package:uix/uix.dart';
 
 extension MapExtensions on Map<String, dynamic> {
@@ -10,7 +10,7 @@ extension MapExtensions on Map<String, dynamic> {
   }
 }
 
-extension UIXActionExtension on UIXAction {
+extension UIXActionExtension on UIXActions {
   Future<void>? call(BuildContext context) {
     return map(
       pushRoute: (attributes) {
@@ -20,7 +20,7 @@ extension UIXActionExtension on UIXAction {
               queries: attributes.queries,
             );
       },
-      popRoute: (attributes) async {
+      popRoute: (attributes) {
         return UIXProvider.of<UIXNavigator>(context)?.value.popRoute(
               context,
               queries: attributes.queries,
@@ -33,7 +33,7 @@ extension UIXActionExtension on UIXAction {
               child: attributes.child.toWidget()!,
             );
       },
-      showBottomSheet: (attributes) async {
+      showBottomSheet: (attributes) {
         return UIXProvider.of<UIXNavigator>(context)?.value.bottomSheet(
               context,
               enableDrag: attributes.enableDrag,

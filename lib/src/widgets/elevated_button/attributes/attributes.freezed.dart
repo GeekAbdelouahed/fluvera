@@ -21,8 +21,8 @@ ElevatedButtonAttributes _$ElevatedButtonAttributesFromJson(
 
 /// @nodoc
 mixin _$ElevatedButtonAttributes {
-  List<UIXAction>? get onPressed => throw _privateConstructorUsedError;
-  List<UIXAction>? get onLongPress => throw _privateConstructorUsedError;
+  List<UIXActions>? get onPressed => throw _privateConstructorUsedError;
+  List<UIXActions>? get onLongPress => throw _privateConstructorUsedError;
   Map<String, dynamic>? get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -38,8 +38,8 @@ abstract class $ElevatedButtonAttributesCopyWith<$Res> {
       _$ElevatedButtonAttributesCopyWithImpl<$Res, ElevatedButtonAttributes>;
   @useResult
   $Res call(
-      {List<UIXAction>? onPressed,
-      List<UIXAction>? onLongPress,
+      {List<UIXActions>? onPressed,
+      List<UIXActions>? onLongPress,
       Map<String, dynamic>? child});
 }
 
@@ -65,11 +65,11 @@ class _$ElevatedButtonAttributesCopyWithImpl<$Res,
       onPressed: freezed == onPressed
           ? _value.onPressed
           : onPressed // ignore: cast_nullable_to_non_nullable
-              as List<UIXAction>?,
+              as List<UIXActions>?,
       onLongPress: freezed == onLongPress
           ? _value.onLongPress
           : onLongPress // ignore: cast_nullable_to_non_nullable
-              as List<UIXAction>?,
+              as List<UIXActions>?,
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
@@ -88,8 +88,8 @@ abstract class _$$_ElevatedButtonAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<UIXAction>? onPressed,
-      List<UIXAction>? onLongPress,
+      {List<UIXActions>? onPressed,
+      List<UIXActions>? onLongPress,
       Map<String, dynamic>? child});
 }
 
@@ -113,11 +113,11 @@ class __$$_ElevatedButtonAttributesCopyWithImpl<$Res>
       onPressed: freezed == onPressed
           ? _value._onPressed
           : onPressed // ignore: cast_nullable_to_non_nullable
-              as List<UIXAction>?,
+              as List<UIXActions>?,
       onLongPress: freezed == onLongPress
           ? _value._onLongPress
           : onLongPress // ignore: cast_nullable_to_non_nullable
-              as List<UIXAction>?,
+              as List<UIXActions>?,
       child: freezed == child
           ? _value._child
           : child // ignore: cast_nullable_to_non_nullable
@@ -130,8 +130,8 @@ class __$$_ElevatedButtonAttributesCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElevatedButtonAttributes implements _ElevatedButtonAttributes {
   const _$_ElevatedButtonAttributes(
-      {final List<UIXAction>? onPressed,
-      final List<UIXAction>? onLongPress,
+      {final List<UIXActions>? onPressed,
+      final List<UIXActions>? onLongPress,
       final Map<String, dynamic>? child})
       : _onPressed = onPressed,
         _onLongPress = onLongPress,
@@ -140,9 +140,9 @@ class _$_ElevatedButtonAttributes implements _ElevatedButtonAttributes {
   factory _$_ElevatedButtonAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_ElevatedButtonAttributesFromJson(json);
 
-  final List<UIXAction>? _onPressed;
+  final List<UIXActions>? _onPressed;
   @override
-  List<UIXAction>? get onPressed {
+  List<UIXActions>? get onPressed {
     final value = _onPressed;
     if (value == null) return null;
     if (_onPressed is EqualUnmodifiableListView) return _onPressed;
@@ -150,9 +150,9 @@ class _$_ElevatedButtonAttributes implements _ElevatedButtonAttributes {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<UIXAction>? _onLongPress;
+  final List<UIXActions>? _onLongPress;
   @override
-  List<UIXAction>? get onLongPress {
+  List<UIXActions>? get onLongPress {
     final value = _onLongPress;
     if (value == null) return null;
     if (_onLongPress is EqualUnmodifiableListView) return _onLongPress;
@@ -212,17 +212,17 @@ class _$_ElevatedButtonAttributes implements _ElevatedButtonAttributes {
 
 abstract class _ElevatedButtonAttributes implements ElevatedButtonAttributes {
   const factory _ElevatedButtonAttributes(
-      {final List<UIXAction>? onPressed,
-      final List<UIXAction>? onLongPress,
+      {final List<UIXActions>? onPressed,
+      final List<UIXActions>? onLongPress,
       final Map<String, dynamic>? child}) = _$_ElevatedButtonAttributes;
 
   factory _ElevatedButtonAttributes.fromJson(Map<String, dynamic> json) =
       _$_ElevatedButtonAttributes.fromJson;
 
   @override
-  List<UIXAction>? get onPressed;
+  List<UIXActions>? get onPressed;
   @override
-  List<UIXAction>? get onLongPress;
+  List<UIXActions>? get onLongPress;
   @override
   Map<String, dynamic>? get child;
   @override
