@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:uix/src/helpers/helpers.dart';
+import 'package:uix/src/helpers/attributes_notifier.dart';
+import 'package:uix/src/helpers/uix_provider.dart';
 
 class UIXEnumAttributeValue<T extends Enum> {
   const UIXEnumAttributeValue({
@@ -15,13 +16,13 @@ class UIXEnumAttributeValue<T extends Enum> {
       return values.firstWhere((element) => element.name == value);
     }
 
-    final provider = UIXProvider.of<UIXAttributesNotifier>(context);
+    final UIXAttributesNotifier? notifier = UIXProvider.of<UIXAttributesNotifier>(context)?.value;
 
-    if (provider == null) {
+    if (notifier == null) {
       throw Exception('$key key not found!');
     }
 
-    final String dynamicValue = provider.value.value[key];
+    final String dynamicValue = notifier.value[key];
     return values.firstWhere((element) => element.name == dynamicValue);
   }
 

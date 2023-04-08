@@ -1,4 +1,4 @@
-part of 'helpers.dart';
+import 'package:flutter/material.dart';
 
 class UIXProvider<T> extends InheritedWidget {
   const UIXProvider({

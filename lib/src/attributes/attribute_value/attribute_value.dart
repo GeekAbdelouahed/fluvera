@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:uix/src/helpers/helpers.dart';
+import 'package:uix/src/helpers/attributes_notifier.dart';
+import 'package:uix/src/helpers/uix_provider.dart';
 
 class UIXAttributeValue<T> {
   const UIXAttributeValue({
@@ -15,13 +16,13 @@ class UIXAttributeValue<T> {
       return value as T;
     }
 
-    final provider = UIXProvider.of<UIXAttributesNotifier>(context);
+    final UIXAttributesNotifier? notifier = UIXProvider.of<UIXAttributesNotifier>(context)?.value;
 
-    if (provider == null) {
+    if (notifier == null) {
       throw Exception('$key key not found!');
     }
 
-    return provider.value.value[key] as T;
+    return notifier.value[key] as T;
   }
 
   factory UIXAttributeValue.fromJson(Map<String, dynamic> json) {

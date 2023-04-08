@@ -1,13 +1,19 @@
-part of 'widgets.dart';
+import 'package:flutter/material.dart';
 
-abstract class UIX<T extends UIXAttributes> {
-  const UIX(this._attrs);
+abstract class UIX<T> extends StatelessWidget {
+  const UIX(this.json) : super(key: null);
 
-  final T _attrs;
+  final Map<String, dynamic> json;
 
-  Widget build();
+  @override
+  Key? get key {
+    if (json.containsKey('key')) {
+      return ValueKey(json['key']);
+    }
+    return null;
+  }
 
-  Key? get key => _attrs.key == null ? null : Key(_attrs.key);
+  String get type => json['type'];
 
-  T get attributes => _attrs;
+  T get attributes;
 }
