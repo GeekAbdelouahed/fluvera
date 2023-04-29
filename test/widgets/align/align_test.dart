@@ -26,7 +26,7 @@ void main() {
     'Align test',
     () {
       testWidgets(
-        'Create align widget from json',
+        'Expected to find align with sizedBox',
         (tester) async {
           await tester.pumpWidget(
             MaterialApp(

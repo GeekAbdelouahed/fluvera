@@ -22,7 +22,7 @@ void main() {
     'AppBar test',
     () {
       testWidgets(
-        'Create appBar widget from json',
+        'Expected to find appBar with text',
         (tester) async {
           await tester.pumpWidget(
             MaterialApp(
