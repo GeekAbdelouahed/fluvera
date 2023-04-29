@@ -8,11 +8,15 @@ part 'attributes.g.dart';
 @freezed
 class RowAttributes with _$RowAttributes {
   const factory RowAttributes({
-    @Default(UIXEnumAttributeValue(value: 'max')) UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
-    @Default(UIXEnumAttributeValue(value: 'start')) UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
-    @Default(UIXEnumAttributeValue(value: 'center')) UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
+    @Default(UIXEnumAttributeValue(value: 'max'))
+        UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+    @Default(UIXEnumAttributeValue(value: 'start'))
+        UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+    @Default(UIXEnumAttributeValue(value: 'center'))
+        UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
     required List<Map<String, dynamic>> children,
   }) = _RowAttributes;
 
-  factory RowAttributes.fromJson(Map<String, dynamic> json) => _$RowAttributesFromJson(json);
+  factory RowAttributes.fromJson(Map<String, dynamic> json) =>
+      _$RowAttributesFromJson(json);
 }

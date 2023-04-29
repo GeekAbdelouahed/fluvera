@@ -7,7 +7,8 @@ class UIXSingleChildScrollView extends UIX<SingleChildScrollViewAttributes> {
   const UIXSingleChildScrollView(Map<String, dynamic> json) : super(json);
 
   @override
-  SingleChildScrollViewAttributes get attributes => SingleChildScrollViewAttributes.fromJson(json);
+  SingleChildScrollViewAttributes get attributes =>
+      SingleChildScrollViewAttributes.fromJson(json);
 
   @override
   Widget build(BuildContext context) {

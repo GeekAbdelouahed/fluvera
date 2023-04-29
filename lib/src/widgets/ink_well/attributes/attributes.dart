@@ -12,5 +12,6 @@ class InkWellAttributes with _$InkWellAttributes {
     Map<String, dynamic>? child,
   }) = _InkWellAttributes;
 
-  factory InkWellAttributes.fromJson(Map<String, dynamic> json) => _$InkWellAttributesFromJson(json);
+  factory InkWellAttributes.fromJson(Map<String, dynamic> json) =>
+      _$InkWellAttributesFromJson(json);
 }

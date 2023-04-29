@@ -11,9 +11,12 @@ class FractionallySizedBoxAttributes with _$FractionallySizedBoxAttributes {
   const factory FractionallySizedBoxAttributes({
     UIXAttributeValue<num>? widthFactor,
     UIXAttributeValue<num>? heightFactor,
-    @Default(AlignmentDirectional.center) @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
+    @Default(AlignmentDirectional.center)
+    @UIXAlignmentGeometryConverter()
+        AlignmentGeometry? alignment,
     Map<String, dynamic>? child,
   }) = _FractionallySizedBoxAttributes;
 
-  factory FractionallySizedBoxAttributes.fromJson(Map<String, dynamic> json) => _$FractionallySizedBoxAttributesFromJson(json);
+  factory FractionallySizedBoxAttributes.fromJson(Map<String, dynamic> json) =>
+      _$FractionallySizedBoxAttributesFromJson(json);
 }

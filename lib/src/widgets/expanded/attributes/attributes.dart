@@ -11,5 +11,6 @@ class ExpandedAttributes with _$ExpandedAttributes {
     required Map<String, dynamic> child,
   }) = _ExpandedAttributes;
 
-  factory ExpandedAttributes.fromJson(Map<String, dynamic> json) => _$ExpandedAttributesFromJson(json);
+  factory ExpandedAttributes.fromJson(Map<String, dynamic> json) =>
+      _$ExpandedAttributesFromJson(json);
 }

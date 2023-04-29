@@ -12,5 +12,6 @@ class TextAttributes with _$TextAttributes {
     UIXTextStyle? style,
   }) = _TextAttributes;
 
-  factory TextAttributes.fromJson(Map<String, dynamic> json) => _$TextAttributesFromJson(json);
+  factory TextAttributes.fromJson(Map<String, dynamic> json) =>
+      _$TextAttributesFromJson(json);
 }

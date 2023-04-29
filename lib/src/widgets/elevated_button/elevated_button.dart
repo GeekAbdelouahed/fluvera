@@ -7,7 +7,8 @@ class UIXElevatedButton extends UIX<ElevatedButtonAttributes> {
   const UIXElevatedButton(Map<String, dynamic> json) : super(json);
 
   @override
-  ElevatedButtonAttributes get attributes => ElevatedButtonAttributes.fromJson(json);
+  ElevatedButtonAttributes get attributes =>
+      ElevatedButtonAttributes.fromJson(json);
 
   @override
   Widget build(BuildContext context) {

@@ -9,5 +9,6 @@ class SingleChildScrollViewAttributes with _$SingleChildScrollViewAttributes {
     Map<String, dynamic>? child,
   }) = _SingleChildScrollViewAttributes;
 
-  factory SingleChildScrollViewAttributes.fromJson(Map<String, dynamic> json) => _$SingleChildScrollViewAttributesFromJson(json);
+  factory SingleChildScrollViewAttributes.fromJson(Map<String, dynamic> json) =>
+      _$SingleChildScrollViewAttributesFromJson(json);
 }

@@ -13,9 +13,12 @@ class UIXRow extends UIX<RowAttributes> {
   Widget build(BuildContext context) {
     return Row(
       key: key,
-      mainAxisSize: attributes.mainAxisSize.toValue(context, MainAxisSize.values),
-      mainAxisAlignment: attributes.mainAxisAlignment.toValue(context, MainAxisAlignment.values),
-      crossAxisAlignment: attributes.crossAxisAlignment.toValue(context, CrossAxisAlignment.values),
+      mainAxisSize:
+          attributes.mainAxisSize.toValue(context, MainAxisSize.values),
+      mainAxisAlignment: attributes.mainAxisAlignment
+          .toValue(context, MainAxisAlignment.values),
+      crossAxisAlignment: attributes.crossAxisAlignment
+          .toValue(context, CrossAxisAlignment.values),
       children: [
         for (final item in attributes.children) ...{
           item.toWidget()!,

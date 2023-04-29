@@ -12,5 +12,6 @@ class ElevatedButtonAttributes with _$ElevatedButtonAttributes {
     Map<String, dynamic>? child,
   }) = _ElevatedButtonAttributes;
 
-  factory ElevatedButtonAttributes.fromJson(Map<String, dynamic> json) => _$ElevatedButtonAttributesFromJson(json);
+  factory ElevatedButtonAttributes.fromJson(Map<String, dynamic> json) =>
+      _$ElevatedButtonAttributesFromJson(json);
 }

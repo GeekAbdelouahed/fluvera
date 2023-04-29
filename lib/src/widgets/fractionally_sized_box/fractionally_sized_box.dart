@@ -7,7 +7,8 @@ class UIXFractionallySizedBox extends UIX<FractionallySizedBoxAttributes> {
   const UIXFractionallySizedBox(Map<String, dynamic> json) : super(json);
 
   @override
-  FractionallySizedBoxAttributes get attributes => FractionallySizedBoxAttributes.fromJson(json);
+  FractionallySizedBoxAttributes get attributes =>
+      FractionallySizedBoxAttributes.fromJson(json);
 
   @override
   Widget build(BuildContext context) {

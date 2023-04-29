@@ -12,5 +12,6 @@ class PaddingAttributes with _$PaddingAttributes {
     Map<String, dynamic>? child,
   }) = _PaddingAttributes;
 
-  factory PaddingAttributes.fromJson(Map<String, dynamic> json) => _$PaddingAttributesFromJson(json);
+  factory PaddingAttributes.fromJson(Map<String, dynamic> json) =>
+      _$PaddingAttributesFromJson(json);
 }

@@ -12,5 +12,6 @@ class AppBarAttributes with _$AppBarAttributes {
     List<Map<String, dynamic>>? actions,
   }) = _AppBarAttributes;
 
-  factory AppBarAttributes.fromJson(Map<String, dynamic> json) => _$AppBarAttributesFromJson(json);
+  factory AppBarAttributes.fromJson(Map<String, dynamic> json) =>
+      _$AppBarAttributesFromJson(json);
 }

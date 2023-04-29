@@ -12,5 +12,6 @@ class SizedBoxAttributes with _$SizedBoxAttributes {
     Map<String, dynamic>? child,
   }) = _SizedBoxAttributes;
 
-  factory SizedBoxAttributes.fromJson(Map<String, dynamic> json) => _$SizedBoxAttributesFromJson(json);
+  factory SizedBoxAttributes.fromJson(Map<String, dynamic> json) =>
+      _$SizedBoxAttributesFromJson(json);
 }

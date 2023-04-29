@@ -10,5 +10,6 @@ class PageAttributes with _$PageAttributes {
     required Map<String, dynamic> child,
   }) = _PageAttributes;
 
-  factory PageAttributes.fromJson(Map<String, dynamic> json) => _$PageAttributesFromJson(json);
+  factory PageAttributes.fromJson(Map<String, dynamic> json) =>
+      _$PageAttributesFromJson(json);
 }

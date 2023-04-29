@@ -13,5 +13,6 @@ class ScaffoldAttributes with _$ScaffoldAttributes {
     Map<String, dynamic>? body,
   }) = _ScaffoldAttributes;
 
-  factory ScaffoldAttributes.fromJson(Map<String, dynamic> json) => _$ScaffoldAttributesFromJson(json);
+  factory ScaffoldAttributes.fromJson(Map<String, dynamic> json) =>
+      _$ScaffoldAttributesFromJson(json);
 }

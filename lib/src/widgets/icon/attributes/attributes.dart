@@ -11,9 +11,11 @@ class IconAttributes with _$IconAttributes {
   const factory IconAttributes({
     required UIXAttributeValue<num> code,
     UIXAttributeValue<num>? size,
-    @Default(UIXAttributeValue<String>(value: 'MaterialIcons')) UIXAttributeValue<String> fontFamily,
+    @Default(UIXAttributeValue<String>(value: 'MaterialIcons'))
+        UIXAttributeValue<String> fontFamily,
     @UIXColorConverter() Color? color,
   }) = _IconAttributes;
 
-  factory IconAttributes.fromJson(Map<String, dynamic> json) => _$IconAttributesFromJson(json);
+  factory IconAttributes.fromJson(Map<String, dynamic> json) =>
+      _$IconAttributesFromJson(json);
 }

@@ -17,5 +17,6 @@ class ImageAttributes with _$ImageAttributes {
     @Default(UIXImageSource.network) UIXImageSource source,
   }) = _ImageAttributes;
 
-  factory ImageAttributes.fromJson(Map<String, dynamic> json) => _$ImageAttributesFromJson(json);
+  factory ImageAttributes.fromJson(Map<String, dynamic> json) =>
+      _$ImageAttributesFromJson(json);
 }

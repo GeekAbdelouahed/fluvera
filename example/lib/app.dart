@@ -21,7 +21,8 @@ class AppWidget extends StatelessWidget {
             return const HomePage();
           },
           'details': (context) {
-            final String id = (ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>)['id'];
+            final String id = (ModalRoute.of(context)!.settings.arguments
+                as Map<String, dynamic>)['id'];
             return DetailsPage(id: id);
           }
         },

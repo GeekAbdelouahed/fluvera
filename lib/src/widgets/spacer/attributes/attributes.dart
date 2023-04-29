@@ -10,5 +10,6 @@ class SpacerAttributes with _$SpacerAttributes {
     @Default(UIXAttributeValue<num>(value: 1)) UIXAttributeValue<num> flex,
   }) = _SpacerAttributes;
 
-  factory SpacerAttributes.fromJson(Map<String, dynamic> json) => _$SpacerAttributesFromJson(json);
+  factory SpacerAttributes.fromJson(Map<String, dynamic> json) =>
+      _$SpacerAttributesFromJson(json);
 }

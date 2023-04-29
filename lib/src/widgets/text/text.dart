@@ -17,7 +17,8 @@ class UIXText extends UIX<TextAttributes> {
         color: attributes.style?.color,
         fontSize: attributes.style?.fontSize,
         fontWeight: attributes.style?.fontWeight,
-        overflow: attributes.style?.overflow?.toValue(context, TextOverflow.values),
+        overflow:
+            attributes.style?.overflow?.toValue(context, TextOverflow.values),
       ),
     );
   }

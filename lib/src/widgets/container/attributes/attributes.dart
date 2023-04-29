@@ -18,5 +18,6 @@ class ContainerAttributes with _$ContainerAttributes {
     Map<String, dynamic>? child,
   }) = _ContainerAttributes;
 
-  factory ContainerAttributes.fromJson(Map<String, dynamic> json) => _$ContainerAttributesFromJson(json);
+  factory ContainerAttributes.fromJson(Map<String, dynamic> json) =>
+      _$ContainerAttributesFromJson(json);
 }
