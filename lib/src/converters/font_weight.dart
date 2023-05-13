@@ -5,50 +5,31 @@ class UIXFontWeightConverter implements JsonConverter<FontWeight?, String> {
 
   @override
   FontWeight fromJson(String json) {
-    switch (json) {
-      case 'w100':
-        return FontWeight.w100;
-      case 'w200':
-        return FontWeight.w200;
-      case 'w300':
-        return FontWeight.w300;
-      case 'w500':
-        return FontWeight.w500;
-      case 'w600':
-        return FontWeight.w600;
-      case 'w700':
-      case 'bold':
-        return FontWeight.w700;
-      case 'w800':
-        return FontWeight.w800;
-      case 'w900':
-        return FontWeight.w900;
-      default:
-        return FontWeight.normal;
-    }
+    return switch (json) {
+      'w100' => FontWeight.w100,
+      'w200' => FontWeight.w200,
+      'w300' => FontWeight.w300,
+      'w500' => FontWeight.w500,
+      'w600' => FontWeight.w600,
+      'w700' || 'bold' => FontWeight.w700,
+      'w800' => FontWeight.w800,
+      'w900' => FontWeight.w900,
+      _ => FontWeight.normal,
+    };
   }
 
   @override
   String toJson(FontWeight? data) {
-    switch (data) {
-      case FontWeight.w100:
-        return 'w100';
-      case FontWeight.w200:
-        return 'w200';
-      case FontWeight.w300:
-        return 'w300';
-      case FontWeight.w500:
-        return 'w500';
-      case FontWeight.w600:
-        return 'w600';
-      case FontWeight.w700:
-        return 'w700';
-      case FontWeight.w800:
-        return 'w800';
-      case FontWeight.w900:
-        return 'w900';
-      default:
-        return 'w400';
-    }
+    return switch (data) {
+      FontWeight.w100 => 'w100',
+      FontWeight.w200 => 'w200',
+      FontWeight.w300 => 'w300',
+      FontWeight.w500 => 'w500',
+      FontWeight.w600 => 'w600',
+      FontWeight.w700 => 'w700',
+      FontWeight.w800 => 'w800',
+      FontWeight.w900 => 'w900',
+      _ => 'w400',
+    };
   }
 }

@@ -16,7 +16,8 @@ class UIXEnumAttributeValue<T extends Enum> {
       return values.firstWhere((element) => element.name == value);
     }
 
-    final UIXAttributesNotifier? notifier = UIXProvider.of<UIXAttributesNotifier>(context)?.value;
+    final UIXAttributesNotifier? notifier =
+        UIXProvider.of<UIXAttributesNotifier>(context)?.value;
 
     if (notifier == null) {
       throw Exception('$key key not found!');
