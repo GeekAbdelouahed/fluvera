@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uix/src/extensions/extension.dart';
+import 'package:uix/src/extensions/extensions.dart';
 import 'package:uix/src/widgets/expanded/attributes/attributes.dart';
 import 'package:uix/src/widgets/uix.dart';
 

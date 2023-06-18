@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+part 'attributes_notifier.dart';
+
 class UIXProvider<T> extends InheritedWidget {
   const UIXProvider({
     Key? key,

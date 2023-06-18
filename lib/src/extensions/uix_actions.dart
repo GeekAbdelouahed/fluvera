@@ -1,14 +1,4 @@
-import 'dart:async';
-
-import 'package:flutter/material.dart';
-import 'package:uix/src/attributes/actions/actions.dart';
-import 'package:uix/uix.dart';
-
-extension MapExtensions on Map<String, dynamic> {
-  Widget? toWidget() {
-    return UIXFactory.fromJson(this);
-  }
-}
+part of 'extensions.dart';
 
 extension UIXActionExtension on UIXActions {
   Future<void>? call(BuildContext context) {

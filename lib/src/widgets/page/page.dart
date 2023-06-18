@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:uix/src/core/provider/attributes_notifier.dart';
 import 'package:uix/src/core/provider/uix_provider.dart';
-import 'package:uix/src/extensions/extension.dart';
+import 'package:uix/src/extensions/extensions.dart';
 import 'package:uix/src/widgets/page/attributes/attributes.dart';
 import 'package:uix/src/widgets/uix.dart';
 

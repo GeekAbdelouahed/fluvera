@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uix/src/core/provider/attributes_notifier.dart';
 import 'package:uix/src/core/provider/uix_provider.dart';
 
 part 'enum_attribute_value.freezed.dart';
