@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uix/src/converters/converters.dart';
+import 'package:uix/src/common/converters/converters.dart';
 
 part 'actions.freezed.dart';
 part 'actions.g.dart';
@@ -43,5 +43,6 @@ class UIXActions with _$UIXActions {
     dynamic value,
   }) = UpdateAttributeAction;
 
-  factory UIXActions.fromJson(Map<String, dynamic> json) => _$UIXActionsFromJson(json);
+  factory UIXActions.fromJson(Map<String, dynamic> json) =>
+      _$UIXActionsFromJson(json);
 }

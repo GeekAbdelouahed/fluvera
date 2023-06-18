@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:uix/src/extensions/extensions.dart';
 import 'package:uix/src/widgets/scaffold/attributes/attributes.dart';
 import 'package:uix/src/widgets/uix.dart';
+import 'package:uix/uix.dart';
 
 class UIXScaffold extends UIX<ScaffoldAttributes> {
   const UIXScaffold(Map<String, dynamic> json) : super(json);
