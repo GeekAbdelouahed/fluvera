@@ -51,10 +51,6 @@
         "type": "SingleChildScrollView",
         "child": {
             "type": "Page",
-            "attributes": {
-                "greeting": "Hey",
-                "containerHeight": 250
-            },
             "child": {
                 "type": "Padding",
                 "padding": {
