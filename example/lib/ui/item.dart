@@ -22,7 +22,8 @@ class ItemPage extends StatelessWidget {
           );
         }
 
-        return UIXFactory.fromJson(json.decode(snapshot.data!))!;
+        return (json.decode(snapshot.data!) as Map<String, dynamic>)
+            .toWidget()!;
       },
     );
   }

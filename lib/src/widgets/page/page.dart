@@ -13,7 +13,7 @@ class UIXPage extends UIX<PageAttributes> {
   Widget build(BuildContext context) {
     return _Page(
       key: key,
-      attributes: attributes,
+      json: json,
     );
   }
 }
@@ -21,10 +21,10 @@ class UIXPage extends UIX<PageAttributes> {
 class _Page extends StatefulWidget {
   const _Page({
     Key? key,
-    required this.attributes,
+    required this.json,
   }) : super(key: key);
 
-  final PageAttributes attributes;
+  final Map<String, dynamic> json;
 
   @override
   State<_Page> createState() => _PageState();
@@ -32,10 +32,10 @@ class _Page extends StatefulWidget {
 
 class _PageState extends State<_Page> {
   late final UIXAttributesNotifier _attributesNotifier = UIXAttributesNotifier(
-    Map.from(
-      widget.attributes.attributes,
-    ),
+    Map.from(_attributes.attributes),
   );
+
+  PageAttributes get _attributes => PageAttributes.fromJson(widget.json);
 
   @override
   void dispose() {
@@ -50,7 +50,7 @@ class _PageState extends State<_Page> {
       child: ValueListenableBuilder(
         valueListenable: _attributesNotifier,
         builder: (context, data, child) {
-          return widget.attributes.child;
+          return _attributes.child;
         },
       ),
     );

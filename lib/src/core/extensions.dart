@@ -18,31 +18,27 @@ import 'package:uix/src/widgets/sized_box/sized_box.dart';
 import 'package:uix/src/widgets/spacer/spacer.dart';
 import 'package:uix/src/widgets/text/text.dart';
 
-class UIXFactory {
-  static Widget? fromJson(Map<String, dynamic>? json) {
-    if (json == null) {
-      return null;
-    }
-
-    return switch (json['type']) {
-      'Align' => UIXAlign(json),
-      'AppBar' => UIXAppBar(json),
-      'Column' => UIXColumn(json),
-      'Container' => UIXContainer(json),
-      'ElevatedButton' => UIXElevatedButton(json),
-      'Expanded' => UIXExpanded(json),
-      'FractionallySizedBox' => UIXFractionallySizedBox(json),
-      'Icon' => UIXIcon(json),
-      'Image' => UIXImage(json),
-      'InkWell' => UIXInkWell(json),
-      'Padding' => UIXPadding(json),
-      'Page' => UIXPage(json),
-      'Row' => UIXRow(json),
-      'Scaffold' => UIXScaffold(json),
-      'SingleChildScrollView' => UIXSingleChildScrollView(json),
-      'SizedBox' => UIXSizedBox(json),
-      'Space' => UIXSpacer(json),
-      'Text' => UIXText(json),
+extension MapExtensions on Map<String, dynamic> {
+  Widget? toWidget() {
+    return switch (this['type']) {
+      'Align' => UIXAlign(this),
+      'AppBar' => UIXAppBar(this),
+      'Column' => UIXColumn(this),
+      'Container' => UIXContainer(this),
+      'ElevatedButton' => UIXElevatedButton(this),
+      'Expanded' => UIXExpanded(this),
+      'FractionallySizedBox' => UIXFractionallySizedBox(this),
+      'Icon' => UIXIcon(this),
+      'Image' => UIXImage(this),
+      'InkWell' => UIXInkWell(this),
+      'Padding' => UIXPadding(this),
+      'Page' => UIXPage(this),
+      'Row' => UIXRow(this),
+      'Scaffold' => UIXScaffold(this),
+      'SingleChildScrollView' => UIXSingleChildScrollView(this),
+      'SizedBox' => UIXSizedBox(this),
+      'Space' => UIXSpacer(this),
+      'Text' => UIXText(this),
       _ => null,
     };
   }

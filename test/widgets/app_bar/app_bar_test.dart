@@ -15,7 +15,7 @@ void main() {
           },
         }
       };
-      widget = UIXFactory.fromJson(json)!;
+      widget = json.toWidget()!;
     },
   );
   group(
