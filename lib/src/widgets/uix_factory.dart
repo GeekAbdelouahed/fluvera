@@ -18,51 +18,32 @@ import 'package:uix/src/widgets/sized_box/sized_box.dart';
 import 'package:uix/src/widgets/spacer/spacer.dart';
 import 'package:uix/src/widgets/text/text.dart';
 
-// TODO for refactoring
 class UIXFactory {
   static Widget? fromJson(Map<String, dynamic>? json) {
     if (json == null) {
       return null;
     }
 
-    switch (json['type']) {
-      case 'Align':
-        return UIXAlign(json);
-      case 'AppBar':
-        return UIXAppBar(json);
-      case 'Column':
-        return UIXColumn(json);
-      case 'Container':
-        return UIXContainer(json);
-      case 'ElevatedButton':
-        return UIXElevatedButton(json);
-      case 'Expanded':
-        return UIXExpanded(json);
-      case 'FractionallySizedBox':
-        return UIXFractionallySizedBox(json);
-      case 'Icon':
-        return UIXIcon(json);
-      case 'Image':
-        return UIXImage(json);
-      case 'InkWell':
-        return UIXInkWell(json);
-      case 'Padding':
-        return UIXPadding(json);
-      case 'Page':
-        return UIXPage(json);
-      case 'Row':
-        return UIXRow(json);
-      case 'Scaffold':
-        return UIXScaffold(json);
-      case 'SingleChildScrollView':
-        return UIXSingleChildScrollView(json);
-      case 'SizedBox':
-        return UIXSizedBox(json);
-      case 'Space':
-        return UIXSpacer(json);
-      case 'Text':
-        return UIXText(json);
-    }
-    return null;
+    return switch (json['type']) {
+      'Align' => UIXAlign(json),
+      'AppBar' => UIXAppBar(json),
+      'Column' => UIXColumn(json),
+      'Container' => UIXContainer(json),
+      'ElevatedButton' => UIXElevatedButton(json),
+      'Expanded' => UIXExpanded(json),
+      'FractionallySizedBox' => UIXFractionallySizedBox(json),
+      'Icon' => UIXIcon(json),
+      'Image' => UIXImage(json),
+      'InkWell' => UIXInkWell(json),
+      'Padding' => UIXPadding(json),
+      'Page' => UIXPage(json),
+      'Row' => UIXRow(json),
+      'Scaffold' => UIXScaffold(json),
+      'SingleChildScrollView' => UIXSingleChildScrollView(json),
+      'SizedBox' => UIXSizedBox(json),
+      'Space' => UIXSpacer(json),
+      'Text' => UIXText(json),
+      _ => null,
+    };
   }
 }
