@@ -35,7 +35,7 @@ class UIXInkWell extends UIX<InkWellAttributes> {
                 }
               }
             },
-      child: attributes.child?.toWidget(),
+      child: attributes.child,
     );
   }
 }

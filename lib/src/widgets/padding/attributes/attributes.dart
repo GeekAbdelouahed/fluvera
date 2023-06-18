@@ -9,7 +9,7 @@ part 'attributes.g.dart';
 class PaddingAttributes with _$PaddingAttributes {
   const factory PaddingAttributes({
     @UIXEdgeInsetsConverter() required EdgeInsetsGeometry padding,
-    Map<String, dynamic>? child,
+    @UIXWidgetConverter() Widget? child,
   }) = _PaddingAttributes;
 
   factory PaddingAttributes.fromJson(Map<String, dynamic> json) =>

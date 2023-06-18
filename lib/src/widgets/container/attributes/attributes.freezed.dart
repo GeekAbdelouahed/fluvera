@@ -30,7 +30,8 @@ mixin _$ContainerAttributes {
   EdgeInsetsGeometry? get padding => throw _privateConstructorUsedError;
   @UIXAlignmentGeometryConverter()
   AlignmentGeometry? get alignment => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get child => throw _privateConstructorUsedError;
+  @UIXWidgetConverter()
+  Widget? get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -51,7 +52,7 @@ abstract class $ContainerAttributesCopyWith<$Res> {
       @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
       @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
       @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-      Map<String, dynamic>? child});
+      @UIXWidgetConverter() Widget? child});
 
   $UIXAttributeValueCopyWith<num, $Res>? get height;
   $UIXAttributeValueCopyWith<num, $Res>? get width;
@@ -106,7 +107,7 @@ class _$ContainerAttributesCopyWithImpl<$Res, $Val extends ContainerAttributes>
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
     ) as $Val);
   }
 
@@ -150,7 +151,7 @@ abstract class _$$_ContainerAttributesCopyWith<$Res>
       @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
       @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
       @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-      Map<String, dynamic>? child});
+      @UIXWidgetConverter() Widget? child});
 
   @override
   $UIXAttributeValueCopyWith<num, $Res>? get height;
@@ -203,9 +204,9 @@ class __$$_ContainerAttributesCopyWithImpl<$Res>
           : alignment // ignore: cast_nullable_to_non_nullable
               as AlignmentGeometry?,
       child: freezed == child
-          ? _value._child
+          ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
     ));
   }
 }
@@ -220,8 +221,7 @@ class _$_ContainerAttributes implements _ContainerAttributes {
       @UIXEdgeInsetsConverter() this.margin,
       @UIXEdgeInsetsConverter() this.padding,
       @UIXAlignmentGeometryConverter() this.alignment,
-      final Map<String, dynamic>? child})
-      : _child = child;
+      @UIXWidgetConverter() this.child});
 
   factory _$_ContainerAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_ContainerAttributesFromJson(json);
@@ -242,15 +242,9 @@ class _$_ContainerAttributes implements _ContainerAttributes {
   @override
   @UIXAlignmentGeometryConverter()
   final AlignmentGeometry? alignment;
-  final Map<String, dynamic>? _child;
   @override
-  Map<String, dynamic>? get child {
-    final value = _child;
-    if (value == null) return null;
-    if (_child is EqualUnmodifiableMapView) return _child;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
+  @UIXWidgetConverter()
+  final Widget? child;
 
   @override
   String toString() {
@@ -269,13 +263,13 @@ class _$_ContainerAttributes implements _ContainerAttributes {
             (identical(other.padding, padding) || other.padding == padding) &&
             (identical(other.alignment, alignment) ||
                 other.alignment == alignment) &&
-            const DeepCollectionEquality().equals(other._child, _child));
+            (identical(other.child, child) || other.child == child));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, height, width, color, margin,
-      padding, alignment, const DeepCollectionEquality().hash(_child));
+  int get hashCode => Object.hash(
+      runtimeType, height, width, color, margin, padding, alignment, child);
 
   @JsonKey(ignore: true)
   @override
@@ -300,7 +294,7 @@ abstract class _ContainerAttributes implements ContainerAttributes {
       @UIXEdgeInsetsConverter() final EdgeInsetsGeometry? margin,
       @UIXEdgeInsetsConverter() final EdgeInsetsGeometry? padding,
       @UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
-      final Map<String, dynamic>? child}) = _$_ContainerAttributes;
+      @UIXWidgetConverter() final Widget? child}) = _$_ContainerAttributes;
 
   factory _ContainerAttributes.fromJson(Map<String, dynamic> json) =
       _$_ContainerAttributes.fromJson;
@@ -322,7 +316,8 @@ abstract class _ContainerAttributes implements ContainerAttributes {
   @UIXAlignmentGeometryConverter()
   AlignmentGeometry? get alignment;
   @override
-  Map<String, dynamic>? get child;
+  @UIXWidgetConverter()
+  Widget? get child;
   @override
   @JsonKey(ignore: true)
   _$$_ContainerAttributesCopyWith<_$_ContainerAttributes> get copyWith =>

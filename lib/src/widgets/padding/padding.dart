@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uix/src/widgets/padding/attributes/attributes.dart';
 import 'package:uix/src/widgets/uix.dart';
-import 'package:uix/uix.dart';
 
 class UIXPadding extends UIX<PaddingAttributes> {
   const UIXPadding(Map<String, dynamic> json) : super(json);
@@ -14,7 +13,7 @@ class UIXPadding extends UIX<PaddingAttributes> {
     return Padding(
       key: key,
       padding: attributes.padding,
-      child: attributes.child?.toWidget(),
+      child: attributes.child,
     );
   }
 }

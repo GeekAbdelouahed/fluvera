@@ -26,7 +26,8 @@ mixin _$FractionallySizedBoxAttributes {
       throw _privateConstructorUsedError;
   @UIXAlignmentGeometryConverter()
   AlignmentGeometry? get alignment => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get child => throw _privateConstructorUsedError;
+  @UIXWidgetConverter()
+  Widget? get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -46,7 +47,7 @@ abstract class $FractionallySizedBoxAttributesCopyWith<$Res> {
       {UIXAttributeValue<num>? widthFactor,
       UIXAttributeValue<num>? heightFactor,
       @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-      Map<String, dynamic>? child});
+      @UIXWidgetConverter() Widget? child});
 
   $UIXAttributeValueCopyWith<num, $Res>? get widthFactor;
   $UIXAttributeValueCopyWith<num, $Res>? get heightFactor;
@@ -87,7 +88,7 @@ class _$FractionallySizedBoxAttributesCopyWithImpl<$Res,
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
     ) as $Val);
   }
 
@@ -129,7 +130,7 @@ abstract class _$$_FractionallySizedBoxAttributesCopyWith<$Res>
       {UIXAttributeValue<num>? widthFactor,
       UIXAttributeValue<num>? heightFactor,
       @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-      Map<String, dynamic>? child});
+      @UIXWidgetConverter() Widget? child});
 
   @override
   $UIXAttributeValueCopyWith<num, $Res>? get widthFactor;
@@ -169,9 +170,9 @@ class __$$_FractionallySizedBoxAttributesCopyWithImpl<$Res>
           : alignment // ignore: cast_nullable_to_non_nullable
               as AlignmentGeometry?,
       child: freezed == child
-          ? _value._child
+          ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
     ));
   }
 }
@@ -185,8 +186,8 @@ class _$_FractionallySizedBoxAttributes
       this.heightFactor,
       @UIXAlignmentGeometryConverter()
           this.alignment = AlignmentDirectional.center,
-      final Map<String, dynamic>? child})
-      : _child = child;
+      @UIXWidgetConverter()
+          this.child});
 
   factory _$_FractionallySizedBoxAttributes.fromJson(
           Map<String, dynamic> json) =>
@@ -200,15 +201,9 @@ class _$_FractionallySizedBoxAttributes
   @JsonKey()
   @UIXAlignmentGeometryConverter()
   final AlignmentGeometry? alignment;
-  final Map<String, dynamic>? _child;
   @override
-  Map<String, dynamic>? get child {
-    final value = _child;
-    if (value == null) return null;
-    if (_child is EqualUnmodifiableMapView) return _child;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
+  @UIXWidgetConverter()
+  final Widget? child;
 
   @override
   String toString() {
@@ -226,13 +221,13 @@ class _$_FractionallySizedBoxAttributes
                 other.heightFactor == heightFactor) &&
             (identical(other.alignment, alignment) ||
                 other.alignment == alignment) &&
-            const DeepCollectionEquality().equals(other._child, _child));
+            (identical(other.child, child) || other.child == child));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, widthFactor, heightFactor,
-      alignment, const DeepCollectionEquality().hash(_child));
+  int get hashCode =>
+      Object.hash(runtimeType, widthFactor, heightFactor, alignment, child);
 
   @JsonKey(ignore: true)
   @override
@@ -252,10 +247,11 @@ class _$_FractionallySizedBoxAttributes
 abstract class _FractionallySizedBoxAttributes
     implements FractionallySizedBoxAttributes {
   const factory _FractionallySizedBoxAttributes(
-      {final UIXAttributeValue<num>? widthFactor,
-      final UIXAttributeValue<num>? heightFactor,
-      @UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
-      final Map<String, dynamic>? child}) = _$_FractionallySizedBoxAttributes;
+          {final UIXAttributeValue<num>? widthFactor,
+          final UIXAttributeValue<num>? heightFactor,
+          @UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
+          @UIXWidgetConverter() final Widget? child}) =
+      _$_FractionallySizedBoxAttributes;
 
   factory _FractionallySizedBoxAttributes.fromJson(Map<String, dynamic> json) =
       _$_FractionallySizedBoxAttributes.fromJson;
@@ -268,7 +264,8 @@ abstract class _FractionallySizedBoxAttributes
   @UIXAlignmentGeometryConverter()
   AlignmentGeometry? get alignment;
   @override
-  Map<String, dynamic>? get child;
+  @UIXWidgetConverter()
+  Widget? get child;
   @override
   @JsonKey(ignore: true)
   _$$_FractionallySizedBoxAttributesCopyWith<_$_FractionallySizedBoxAttributes>

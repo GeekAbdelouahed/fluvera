@@ -36,7 +36,7 @@ class UIXElevatedButton extends UIX<ElevatedButtonAttributes> {
                 }
               }
             },
-      child: attributes.child?.toWidget(),
+      child: attributes.child,
     );
   }
 }

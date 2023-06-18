@@ -9,8 +9,8 @@ part 'attributes.g.dart';
 class ScaffoldAttributes with _$ScaffoldAttributes {
   const factory ScaffoldAttributes({
     @UIXColorConverter() Color? backgroundColor,
-    Map<String, dynamic>? appBar,
-    Map<String, dynamic>? body,
+    @UIXWidgetConverter() Widget? appBar,
+    @UIXWidgetConverter() Widget? body,
   }) = _ScaffoldAttributes;
 
   factory ScaffoldAttributes.fromJson(Map<String, dynamic> json) =>

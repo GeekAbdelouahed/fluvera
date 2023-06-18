@@ -24,7 +24,8 @@ _$_RowAttributes _$$_RowAttributesFromJson(Map<String, dynamic> json) =>
               json['crossAxisAlignment'] as Map<String, dynamic>,
               (value) => $enumDecode(_$CrossAxisAlignmentEnumMap, value)),
       children: (json['children'] as List<dynamic>)
-          .map((e) => e as Map<String, dynamic>)
+          .map((e) =>
+              const UIXWidgetConverter().fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -39,7 +40,8 @@ Map<String, dynamic> _$$_RowAttributesToJson(_$_RowAttributes instance) =>
       'crossAxisAlignment': instance.crossAxisAlignment.toJson(
         (value) => _$CrossAxisAlignmentEnumMap[value]!,
       ),
-      'children': instance.children,
+      'children':
+          instance.children.map(const UIXWidgetConverter().toJson).toList(),
     };
 
 const _$MainAxisSizeEnumMap = {

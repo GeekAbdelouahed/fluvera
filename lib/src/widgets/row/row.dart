@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uix/src/widgets/row/attributes/attributes.dart';
 import 'package:uix/src/widgets/uix.dart';
-import 'package:uix/uix.dart';
 
 class UIXRow extends UIX<RowAttributes> {
   const UIXRow(Map<String, dynamic> json) : super(json);
@@ -21,7 +20,7 @@ class UIXRow extends UIX<RowAttributes> {
           .toValue(context, CrossAxisAlignment.values),
       children: [
         for (final item in attributes.children) ...{
-          item.toWidget()!,
+          item,
         },
       ],
     );

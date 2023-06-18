@@ -22,8 +22,10 @@ AppBarAttributes _$AppBarAttributesFromJson(Map<String, dynamic> json) {
 mixin _$AppBarAttributes {
   UIXAttributeValue<bool>? get centerTitle =>
       throw _privateConstructorUsedError;
-  Map<String, dynamic>? get title => throw _privateConstructorUsedError;
-  List<Map<String, dynamic>>? get actions => throw _privateConstructorUsedError;
+  @UIXWidgetConverter()
+  Widget? get title => throw _privateConstructorUsedError;
+  @UIXWidgetConverter()
+  List<Widget>? get actions => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,8 +41,8 @@ abstract class $AppBarAttributesCopyWith<$Res> {
   @useResult
   $Res call(
       {UIXAttributeValue<bool>? centerTitle,
-      Map<String, dynamic>? title,
-      List<Map<String, dynamic>>? actions});
+      @UIXWidgetConverter() Widget? title,
+      @UIXWidgetConverter() List<Widget>? actions});
 
   $UIXAttributeValueCopyWith<bool, $Res>? get centerTitle;
 }
@@ -70,11 +72,11 @@ class _$AppBarAttributesCopyWithImpl<$Res, $Val extends AppBarAttributes>
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
       actions: freezed == actions
           ? _value.actions
           : actions // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>?,
+              as List<Widget>?,
     ) as $Val);
   }
 
@@ -101,8 +103,8 @@ abstract class _$$_AppBarAttributesCopyWith<$Res>
   @useResult
   $Res call(
       {UIXAttributeValue<bool>? centerTitle,
-      Map<String, dynamic>? title,
-      List<Map<String, dynamic>>? actions});
+      @UIXWidgetConverter() Widget? title,
+      @UIXWidgetConverter() List<Widget>? actions});
 
   @override
   $UIXAttributeValueCopyWith<bool, $Res>? get centerTitle;
@@ -129,13 +131,13 @@ class __$$_AppBarAttributesCopyWithImpl<$Res>
           : centerTitle // ignore: cast_nullable_to_non_nullable
               as UIXAttributeValue<bool>?,
       title: freezed == title
-          ? _value._title
+          ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
       actions: freezed == actions
           ? _value._actions
           : actions // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>?,
+              as List<Widget>?,
     ));
   }
 }
@@ -145,29 +147,22 @@ class __$$_AppBarAttributesCopyWithImpl<$Res>
 class _$_AppBarAttributes implements _AppBarAttributes {
   const _$_AppBarAttributes(
       {this.centerTitle,
-      final Map<String, dynamic>? title,
-      final List<Map<String, dynamic>>? actions})
-      : _title = title,
-        _actions = actions;
+      @UIXWidgetConverter() this.title,
+      @UIXWidgetConverter() final List<Widget>? actions})
+      : _actions = actions;
 
   factory _$_AppBarAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_AppBarAttributesFromJson(json);
 
   @override
   final UIXAttributeValue<bool>? centerTitle;
-  final Map<String, dynamic>? _title;
   @override
-  Map<String, dynamic>? get title {
-    final value = _title;
-    if (value == null) return null;
-    if (_title is EqualUnmodifiableMapView) return _title;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
-
-  final List<Map<String, dynamic>>? _actions;
+  @UIXWidgetConverter()
+  final Widget? title;
+  final List<Widget>? _actions;
   @override
-  List<Map<String, dynamic>>? get actions {
+  @UIXWidgetConverter()
+  List<Widget>? get actions {
     final value = _actions;
     if (value == null) return null;
     if (_actions is EqualUnmodifiableListView) return _actions;
@@ -187,16 +182,13 @@ class _$_AppBarAttributes implements _AppBarAttributes {
             other is _$_AppBarAttributes &&
             (identical(other.centerTitle, centerTitle) ||
                 other.centerTitle == centerTitle) &&
-            const DeepCollectionEquality().equals(other._title, _title) &&
+            (identical(other.title, title) || other.title == title) &&
             const DeepCollectionEquality().equals(other._actions, _actions));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      centerTitle,
-      const DeepCollectionEquality().hash(_title),
+  int get hashCode => Object.hash(runtimeType, centerTitle, title,
       const DeepCollectionEquality().hash(_actions));
 
   @JsonKey(ignore: true)
@@ -216,8 +208,8 @@ class _$_AppBarAttributes implements _AppBarAttributes {
 abstract class _AppBarAttributes implements AppBarAttributes {
   const factory _AppBarAttributes(
       {final UIXAttributeValue<bool>? centerTitle,
-      final Map<String, dynamic>? title,
-      final List<Map<String, dynamic>>? actions}) = _$_AppBarAttributes;
+      @UIXWidgetConverter() final Widget? title,
+      @UIXWidgetConverter() final List<Widget>? actions}) = _$_AppBarAttributes;
 
   factory _AppBarAttributes.fromJson(Map<String, dynamic> json) =
       _$_AppBarAttributes.fromJson;
@@ -225,9 +217,11 @@ abstract class _AppBarAttributes implements AppBarAttributes {
   @override
   UIXAttributeValue<bool>? get centerTitle;
   @override
-  Map<String, dynamic>? get title;
+  @UIXWidgetConverter()
+  Widget? get title;
   @override
-  List<Map<String, dynamic>>? get actions;
+  @UIXWidgetConverter()
+  List<Widget>? get actions;
   @override
   @JsonKey(ignore: true)
   _$$_AppBarAttributesCopyWith<_$_AppBarAttributes> get copyWith =>

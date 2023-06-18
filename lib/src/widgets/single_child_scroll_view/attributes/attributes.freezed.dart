@@ -21,7 +21,8 @@ SingleChildScrollViewAttributes _$SingleChildScrollViewAttributesFromJson(
 
 /// @nodoc
 mixin _$SingleChildScrollViewAttributes {
-  Map<String, dynamic>? get child => throw _privateConstructorUsedError;
+  @UIXWidgetConverter()
+  Widget? get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,7 +38,7 @@ abstract class $SingleChildScrollViewAttributesCopyWith<$Res> {
       _$SingleChildScrollViewAttributesCopyWithImpl<$Res,
           SingleChildScrollViewAttributes>;
   @useResult
-  $Res call({Map<String, dynamic>? child});
+  $Res call({@UIXWidgetConverter() Widget? child});
 }
 
 /// @nodoc
@@ -60,7 +61,7 @@ class _$SingleChildScrollViewAttributesCopyWithImpl<$Res,
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
     ) as $Val);
   }
 }
@@ -74,7 +75,7 @@ abstract class _$$_SingleChildScrollViewAttributesCopyWith<$Res>
       __$$_SingleChildScrollViewAttributesCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Map<String, dynamic>? child});
+  $Res call({@UIXWidgetConverter() Widget? child});
 }
 
 /// @nodoc
@@ -94,9 +95,9 @@ class __$$_SingleChildScrollViewAttributesCopyWithImpl<$Res>
   }) {
     return _then(_$_SingleChildScrollViewAttributes(
       child: freezed == child
-          ? _value._child
+          ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
     ));
   }
 }
@@ -105,22 +106,15 @@ class __$$_SingleChildScrollViewAttributesCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SingleChildScrollViewAttributes
     implements _SingleChildScrollViewAttributes {
-  const _$_SingleChildScrollViewAttributes({final Map<String, dynamic>? child})
-      : _child = child;
+  const _$_SingleChildScrollViewAttributes({@UIXWidgetConverter() this.child});
 
   factory _$_SingleChildScrollViewAttributes.fromJson(
           Map<String, dynamic> json) =>
       _$$_SingleChildScrollViewAttributesFromJson(json);
 
-  final Map<String, dynamic>? _child;
   @override
-  Map<String, dynamic>? get child {
-    final value = _child;
-    if (value == null) return null;
-    if (_child is EqualUnmodifiableMapView) return _child;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
+  @UIXWidgetConverter()
+  final Widget? child;
 
   @override
   String toString() {
@@ -132,13 +126,12 @@ class _$_SingleChildScrollViewAttributes
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SingleChildScrollViewAttributes &&
-            const DeepCollectionEquality().equals(other._child, _child));
+            (identical(other.child, child) || other.child == child));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_child));
+  int get hashCode => Object.hash(runtimeType, child);
 
   @JsonKey(ignore: true)
   @override
@@ -159,13 +152,15 @@ class _$_SingleChildScrollViewAttributes
 abstract class _SingleChildScrollViewAttributes
     implements SingleChildScrollViewAttributes {
   const factory _SingleChildScrollViewAttributes(
-      {final Map<String, dynamic>? child}) = _$_SingleChildScrollViewAttributes;
+          {@UIXWidgetConverter() final Widget? child}) =
+      _$_SingleChildScrollViewAttributes;
 
   factory _SingleChildScrollViewAttributes.fromJson(Map<String, dynamic> json) =
       _$_SingleChildScrollViewAttributes.fromJson;
 
   @override
-  Map<String, dynamic>? get child;
+  @UIXWidgetConverter()
+  Widget? get child;
   @override
   @JsonKey(ignore: true)
   _$$_SingleChildScrollViewAttributesCopyWith<

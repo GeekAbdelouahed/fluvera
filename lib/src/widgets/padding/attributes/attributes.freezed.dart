@@ -22,7 +22,8 @@ PaddingAttributes _$PaddingAttributesFromJson(Map<String, dynamic> json) {
 mixin _$PaddingAttributes {
   @UIXEdgeInsetsConverter()
   EdgeInsetsGeometry get padding => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get child => throw _privateConstructorUsedError;
+  @UIXWidgetConverter()
+  Widget? get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,7 +39,7 @@ abstract class $PaddingAttributesCopyWith<$Res> {
   @useResult
   $Res call(
       {@UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-      Map<String, dynamic>? child});
+      @UIXWidgetConverter() Widget? child});
 }
 
 /// @nodoc
@@ -65,7 +66,7 @@ class _$PaddingAttributesCopyWithImpl<$Res, $Val extends PaddingAttributes>
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
     ) as $Val);
   }
 }
@@ -80,7 +81,7 @@ abstract class _$$_PaddingAttributesCopyWith<$Res>
   @useResult
   $Res call(
       {@UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-      Map<String, dynamic>? child});
+      @UIXWidgetConverter() Widget? child});
 }
 
 /// @nodoc
@@ -103,9 +104,9 @@ class __$$_PaddingAttributesCopyWithImpl<$Res>
           : padding // ignore: cast_nullable_to_non_nullable
               as EdgeInsetsGeometry,
       child: freezed == child
-          ? _value._child
+          ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
     ));
   }
 }
@@ -115,8 +116,7 @@ class __$$_PaddingAttributesCopyWithImpl<$Res>
 class _$_PaddingAttributes implements _PaddingAttributes {
   const _$_PaddingAttributes(
       {@UIXEdgeInsetsConverter() required this.padding,
-      final Map<String, dynamic>? child})
-      : _child = child;
+      @UIXWidgetConverter() this.child});
 
   factory _$_PaddingAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_PaddingAttributesFromJson(json);
@@ -124,15 +124,9 @@ class _$_PaddingAttributes implements _PaddingAttributes {
   @override
   @UIXEdgeInsetsConverter()
   final EdgeInsetsGeometry padding;
-  final Map<String, dynamic>? _child;
   @override
-  Map<String, dynamic>? get child {
-    final value = _child;
-    if (value == null) return null;
-    if (_child is EqualUnmodifiableMapView) return _child;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
+  @UIXWidgetConverter()
+  final Widget? child;
 
   @override
   String toString() {
@@ -145,13 +139,12 @@ class _$_PaddingAttributes implements _PaddingAttributes {
         (other.runtimeType == runtimeType &&
             other is _$_PaddingAttributes &&
             (identical(other.padding, padding) || other.padding == padding) &&
-            const DeepCollectionEquality().equals(other._child, _child));
+            (identical(other.child, child) || other.child == child));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, padding, const DeepCollectionEquality().hash(_child));
+  int get hashCode => Object.hash(runtimeType, padding, child);
 
   @JsonKey(ignore: true)
   @override
@@ -171,7 +164,7 @@ class _$_PaddingAttributes implements _PaddingAttributes {
 abstract class _PaddingAttributes implements PaddingAttributes {
   const factory _PaddingAttributes(
       {@UIXEdgeInsetsConverter() required final EdgeInsetsGeometry padding,
-      final Map<String, dynamic>? child}) = _$_PaddingAttributes;
+      @UIXWidgetConverter() final Widget? child}) = _$_PaddingAttributes;
 
   factory _PaddingAttributes.fromJson(Map<String, dynamic> json) =
       _$_PaddingAttributes.fromJson;
@@ -180,7 +173,8 @@ abstract class _PaddingAttributes implements PaddingAttributes {
   @UIXEdgeInsetsConverter()
   EdgeInsetsGeometry get padding;
   @override
-  Map<String, dynamic>? get child;
+  @UIXWidgetConverter()
+  Widget? get child;
   @override
   @JsonKey(ignore: true)
   _$$_PaddingAttributesCopyWith<_$_PaddingAttributes> get copyWith =>

@@ -24,7 +24,7 @@ class UIXActions with _$UIXActions {
     required String type,
     @Default(false) bool synchronized,
     @Default(true) bool barrierDismissible,
-    required Map<String, dynamic> child,
+    @UIXWidgetConverter() required Widget child,
   }) = ShowDialogAction;
 
   const factory UIXActions.showBottomSheet({
@@ -33,14 +33,14 @@ class UIXActions with _$UIXActions {
     bool? enableDrag,
     double? elevation,
     @UIXColorConverter() Color? backgroundColor,
-    required Map<String, dynamic> child,
+    @UIXWidgetConverter() required Widget child,
   }) = ShowBottomSheetAction;
 
   const factory UIXActions.showSnackbar({
     required String type,
     @Default(false) bool synchronized,
     @UIXColorConverter() Color? backgroundColor,
-    required Map<String, dynamic> child,
+    @UIXWidgetConverter() required Widget child,
   }) = ShowSnackbarAction;
 
   const factory UIXActions.updateAttribute({

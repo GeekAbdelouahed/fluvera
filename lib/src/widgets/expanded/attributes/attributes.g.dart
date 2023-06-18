@@ -13,7 +13,8 @@ _$_ExpandedAttributes _$$_ExpandedAttributesFromJson(
           ? const UIXAttributeValue<num>(value: 1)
           : UIXAttributeValue<num>.fromJson(
               json['flex'] as Map<String, dynamic>, (value) => value as num),
-      child: json['child'] as Map<String, dynamic>,
+      child: const UIXWidgetConverter()
+          .fromJson(json['child'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_ExpandedAttributesToJson(
@@ -22,5 +23,5 @@ Map<String, dynamic> _$$_ExpandedAttributesToJson(
       'flex': instance.flex.toJson(
         (value) => value,
       ),
-      'child': instance.child,
+      'child': const UIXWidgetConverter().toJson(instance.child),
     };

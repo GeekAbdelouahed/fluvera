@@ -15,7 +15,7 @@ class ContainerAttributes with _$ContainerAttributes {
     @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
     @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
     @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-    Map<String, dynamic>? child,
+    @UIXWidgetConverter() Widget? child,
   }) = _ContainerAttributes;
 
   factory ContainerAttributes.fromJson(Map<String, dynamic> json) =>

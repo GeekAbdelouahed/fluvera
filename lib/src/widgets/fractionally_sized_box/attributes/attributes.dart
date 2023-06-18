@@ -14,7 +14,7 @@ class FractionallySizedBoxAttributes with _$FractionallySizedBoxAttributes {
     @Default(AlignmentDirectional.center)
     @UIXAlignmentGeometryConverter()
     AlignmentGeometry? alignment,
-    Map<String, dynamic>? child,
+    @UIXWidgetConverter() Widget? child,
   }) = _FractionallySizedBoxAttributes;
 
   factory FractionallySizedBoxAttributes.fromJson(Map<String, dynamic> json) =>

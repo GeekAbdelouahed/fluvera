@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uix/src/widgets/scaffold/attributes/attributes.dart';
 import 'package:uix/src/widgets/uix.dart';
-import 'package:uix/uix.dart';
 
 class UIXScaffold extends UIX<ScaffoldAttributes> {
   const UIXScaffold(Map<String, dynamic> json) : super(json);
@@ -18,9 +17,9 @@ class UIXScaffold extends UIX<ScaffoldAttributes> {
           ? null
           : PreferredSize(
               preferredSize: const Size.fromHeight(kToolbarHeight),
-              child: attributes.appBar!.toWidget()!,
+              child: attributes.appBar!,
             ),
-      body: attributes.body?.toWidget(),
+      body: attributes.body,
     );
   }
 }

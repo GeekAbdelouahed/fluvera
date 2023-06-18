@@ -22,8 +22,10 @@ ScaffoldAttributes _$ScaffoldAttributesFromJson(Map<String, dynamic> json) {
 mixin _$ScaffoldAttributes {
   @UIXColorConverter()
   Color? get backgroundColor => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get appBar => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get body => throw _privateConstructorUsedError;
+  @UIXWidgetConverter()
+  Widget? get appBar => throw _privateConstructorUsedError;
+  @UIXWidgetConverter()
+  Widget? get body => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,8 +41,8 @@ abstract class $ScaffoldAttributesCopyWith<$Res> {
   @useResult
   $Res call(
       {@UIXColorConverter() Color? backgroundColor,
-      Map<String, dynamic>? appBar,
-      Map<String, dynamic>? body});
+      @UIXWidgetConverter() Widget? appBar,
+      @UIXWidgetConverter() Widget? body});
 }
 
 /// @nodoc
@@ -68,11 +70,11 @@ class _$ScaffoldAttributesCopyWithImpl<$Res, $Val extends ScaffoldAttributes>
       appBar: freezed == appBar
           ? _value.appBar
           : appBar // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
       body: freezed == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
     ) as $Val);
   }
 }
@@ -87,8 +89,8 @@ abstract class _$$_ScaffoldAttributesCopyWith<$Res>
   @useResult
   $Res call(
       {@UIXColorConverter() Color? backgroundColor,
-      Map<String, dynamic>? appBar,
-      Map<String, dynamic>? body});
+      @UIXWidgetConverter() Widget? appBar,
+      @UIXWidgetConverter() Widget? body});
 }
 
 /// @nodoc
@@ -112,13 +114,13 @@ class __$$_ScaffoldAttributesCopyWithImpl<$Res>
           : backgroundColor // ignore: cast_nullable_to_non_nullable
               as Color?,
       appBar: freezed == appBar
-          ? _value._appBar
+          ? _value.appBar
           : appBar // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
       body: freezed == body
-          ? _value._body
+          ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
     ));
   }
 }
@@ -128,10 +130,8 @@ class __$$_ScaffoldAttributesCopyWithImpl<$Res>
 class _$_ScaffoldAttributes implements _ScaffoldAttributes {
   const _$_ScaffoldAttributes(
       {@UIXColorConverter() this.backgroundColor,
-      final Map<String, dynamic>? appBar,
-      final Map<String, dynamic>? body})
-      : _appBar = appBar,
-        _body = body;
+      @UIXWidgetConverter() this.appBar,
+      @UIXWidgetConverter() this.body});
 
   factory _$_ScaffoldAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_ScaffoldAttributesFromJson(json);
@@ -139,25 +139,12 @@ class _$_ScaffoldAttributes implements _ScaffoldAttributes {
   @override
   @UIXColorConverter()
   final Color? backgroundColor;
-  final Map<String, dynamic>? _appBar;
   @override
-  Map<String, dynamic>? get appBar {
-    final value = _appBar;
-    if (value == null) return null;
-    if (_appBar is EqualUnmodifiableMapView) return _appBar;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
-
-  final Map<String, dynamic>? _body;
+  @UIXWidgetConverter()
+  final Widget? appBar;
   @override
-  Map<String, dynamic>? get body {
-    final value = _body;
-    if (value == null) return null;
-    if (_body is EqualUnmodifiableMapView) return _body;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
+  @UIXWidgetConverter()
+  final Widget? body;
 
   @override
   String toString() {
@@ -171,17 +158,13 @@ class _$_ScaffoldAttributes implements _ScaffoldAttributes {
             other is _$_ScaffoldAttributes &&
             (identical(other.backgroundColor, backgroundColor) ||
                 other.backgroundColor == backgroundColor) &&
-            const DeepCollectionEquality().equals(other._appBar, _appBar) &&
-            const DeepCollectionEquality().equals(other._body, _body));
+            (identical(other.appBar, appBar) || other.appBar == appBar) &&
+            (identical(other.body, body) || other.body == body));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      backgroundColor,
-      const DeepCollectionEquality().hash(_appBar),
-      const DeepCollectionEquality().hash(_body));
+  int get hashCode => Object.hash(runtimeType, backgroundColor, appBar, body);
 
   @JsonKey(ignore: true)
   @override
@@ -201,8 +184,8 @@ class _$_ScaffoldAttributes implements _ScaffoldAttributes {
 abstract class _ScaffoldAttributes implements ScaffoldAttributes {
   const factory _ScaffoldAttributes(
       {@UIXColorConverter() final Color? backgroundColor,
-      final Map<String, dynamic>? appBar,
-      final Map<String, dynamic>? body}) = _$_ScaffoldAttributes;
+      @UIXWidgetConverter() final Widget? appBar,
+      @UIXWidgetConverter() final Widget? body}) = _$_ScaffoldAttributes;
 
   factory _ScaffoldAttributes.fromJson(Map<String, dynamic> json) =
       _$_ScaffoldAttributes.fromJson;
@@ -211,9 +194,11 @@ abstract class _ScaffoldAttributes implements ScaffoldAttributes {
   @UIXColorConverter()
   Color? get backgroundColor;
   @override
-  Map<String, dynamic>? get appBar;
+  @UIXWidgetConverter()
+  Widget? get appBar;
   @override
-  Map<String, dynamic>? get body;
+  @UIXWidgetConverter()
+  Widget? get body;
   @override
   @JsonKey(ignore: true)
   _$$_ScaffoldAttributesCopyWith<_$_ScaffoldAttributes> get copyWith =>

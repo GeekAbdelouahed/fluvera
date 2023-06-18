@@ -22,7 +22,8 @@ InkWellAttributes _$InkWellAttributesFromJson(Map<String, dynamic> json) {
 mixin _$InkWellAttributes {
   List<UIXActions>? get onTap => throw _privateConstructorUsedError;
   List<UIXActions>? get onLongPress => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get child => throw _privateConstructorUsedError;
+  @UIXWidgetConverter()
+  Widget? get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,7 +40,7 @@ abstract class $InkWellAttributesCopyWith<$Res> {
   $Res call(
       {List<UIXActions>? onTap,
       List<UIXActions>? onLongPress,
-      Map<String, dynamic>? child});
+      @UIXWidgetConverter() Widget? child});
 }
 
 /// @nodoc
@@ -71,7 +72,7 @@ class _$InkWellAttributesCopyWithImpl<$Res, $Val extends InkWellAttributes>
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
     ) as $Val);
   }
 }
@@ -87,7 +88,7 @@ abstract class _$$_InkWellAttributesCopyWith<$Res>
   $Res call(
       {List<UIXActions>? onTap,
       List<UIXActions>? onLongPress,
-      Map<String, dynamic>? child});
+      @UIXWidgetConverter() Widget? child});
 }
 
 /// @nodoc
@@ -115,9 +116,9 @@ class __$$_InkWellAttributesCopyWithImpl<$Res>
           : onLongPress // ignore: cast_nullable_to_non_nullable
               as List<UIXActions>?,
       child: freezed == child
-          ? _value._child
+          ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
     ));
   }
 }
@@ -128,10 +129,9 @@ class _$_InkWellAttributes implements _InkWellAttributes {
   const _$_InkWellAttributes(
       {final List<UIXActions>? onTap,
       final List<UIXActions>? onLongPress,
-      final Map<String, dynamic>? child})
+      @UIXWidgetConverter() this.child})
       : _onTap = onTap,
-        _onLongPress = onLongPress,
-        _child = child;
+        _onLongPress = onLongPress;
 
   factory _$_InkWellAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_InkWellAttributesFromJson(json);
@@ -156,15 +156,9 @@ class _$_InkWellAttributes implements _InkWellAttributes {
     return EqualUnmodifiableListView(value);
   }
 
-  final Map<String, dynamic>? _child;
   @override
-  Map<String, dynamic>? get child {
-    final value = _child;
-    if (value == null) return null;
-    if (_child is EqualUnmodifiableMapView) return _child;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
+  @UIXWidgetConverter()
+  final Widget? child;
 
   @override
   String toString() {
@@ -179,7 +173,7 @@ class _$_InkWellAttributes implements _InkWellAttributes {
             const DeepCollectionEquality().equals(other._onTap, _onTap) &&
             const DeepCollectionEquality()
                 .equals(other._onLongPress, _onLongPress) &&
-            const DeepCollectionEquality().equals(other._child, _child));
+            (identical(other.child, child) || other.child == child));
   }
 
   @JsonKey(ignore: true)
@@ -188,7 +182,7 @@ class _$_InkWellAttributes implements _InkWellAttributes {
       runtimeType,
       const DeepCollectionEquality().hash(_onTap),
       const DeepCollectionEquality().hash(_onLongPress),
-      const DeepCollectionEquality().hash(_child));
+      child);
 
   @JsonKey(ignore: true)
   @override
@@ -209,7 +203,7 @@ abstract class _InkWellAttributes implements InkWellAttributes {
   const factory _InkWellAttributes(
       {final List<UIXActions>? onTap,
       final List<UIXActions>? onLongPress,
-      final Map<String, dynamic>? child}) = _$_InkWellAttributes;
+      @UIXWidgetConverter() final Widget? child}) = _$_InkWellAttributes;
 
   factory _InkWellAttributes.fromJson(Map<String, dynamic> json) =
       _$_InkWellAttributes.fromJson;
@@ -219,7 +213,8 @@ abstract class _InkWellAttributes implements InkWellAttributes {
   @override
   List<UIXActions>? get onLongPress;
   @override
-  Map<String, dynamic>? get child;
+  @UIXWidgetConverter()
+  Widget? get child;
   @override
   @JsonKey(ignore: true)
   _$$_InkWellAttributesCopyWith<_$_InkWellAttributes> get copyWith =>

@@ -21,7 +21,8 @@ PageAttributes _$PageAttributesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PageAttributes {
   Map<String, dynamic> get attributes => throw _privateConstructorUsedError;
-  Map<String, dynamic> get child => throw _privateConstructorUsedError;
+  @UIXWidgetConverter()
+  Widget get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +36,8 @@ abstract class $PageAttributesCopyWith<$Res> {
           PageAttributes value, $Res Function(PageAttributes) then) =
       _$PageAttributesCopyWithImpl<$Res, PageAttributes>;
   @useResult
-  $Res call({Map<String, dynamic> attributes, Map<String, dynamic> child});
+  $Res call(
+      {Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child});
 }
 
 /// @nodoc
@@ -62,7 +64,7 @@ class _$PageAttributesCopyWithImpl<$Res, $Val extends PageAttributes>
       child: null == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
+              as Widget,
     ) as $Val);
   }
 }
@@ -75,7 +77,8 @@ abstract class _$$_PageAttributesCopyWith<$Res>
       __$$_PageAttributesCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Map<String, dynamic> attributes, Map<String, dynamic> child});
+  $Res call(
+      {Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child});
 }
 
 /// @nodoc
@@ -98,9 +101,9 @@ class __$$_PageAttributesCopyWithImpl<$Res>
           : attributes // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       child: null == child
-          ? _value._child
+          ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
+              as Widget,
     ));
   }
 }
@@ -110,9 +113,8 @@ class __$$_PageAttributesCopyWithImpl<$Res>
 class _$_PageAttributes implements _PageAttributes {
   const _$_PageAttributes(
       {final Map<String, dynamic> attributes = const <String, dynamic>{},
-      required final Map<String, dynamic> child})
-      : _attributes = attributes,
-        _child = child;
+      @UIXWidgetConverter() required this.child})
+      : _attributes = attributes;
 
   factory _$_PageAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_PageAttributesFromJson(json);
@@ -126,13 +128,9 @@ class _$_PageAttributes implements _PageAttributes {
     return EqualUnmodifiableMapView(_attributes);
   }
 
-  final Map<String, dynamic> _child;
   @override
-  Map<String, dynamic> get child {
-    if (_child is EqualUnmodifiableMapView) return _child;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_child);
-  }
+  @UIXWidgetConverter()
+  final Widget child;
 
   @override
   String toString() {
@@ -146,15 +144,13 @@ class _$_PageAttributes implements _PageAttributes {
             other is _$_PageAttributes &&
             const DeepCollectionEquality()
                 .equals(other._attributes, _attributes) &&
-            const DeepCollectionEquality().equals(other._child, _child));
+            (identical(other.child, child) || other.child == child));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_attributes),
-      const DeepCollectionEquality().hash(_child));
+      runtimeType, const DeepCollectionEquality().hash(_attributes), child);
 
   @JsonKey(ignore: true)
   @override
@@ -173,7 +169,7 @@ class _$_PageAttributes implements _PageAttributes {
 abstract class _PageAttributes implements PageAttributes {
   const factory _PageAttributes(
       {final Map<String, dynamic> attributes,
-      required final Map<String, dynamic> child}) = _$_PageAttributes;
+      @UIXWidgetConverter() required final Widget child}) = _$_PageAttributes;
 
   factory _PageAttributes.fromJson(Map<String, dynamic> json) =
       _$_PageAttributes.fromJson;
@@ -181,7 +177,8 @@ abstract class _PageAttributes implements PageAttributes {
   @override
   Map<String, dynamic> get attributes;
   @override
-  Map<String, dynamic> get child;
+  @UIXWidgetConverter()
+  Widget get child;
   @override
   @JsonKey(ignore: true)
   _$$_PageAttributesCopyWith<_$_PageAttributes> get copyWith =>

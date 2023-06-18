@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uix/src/widgets/app_bar/attributes/attributes.dart';
 import 'package:uix/src/widgets/uix.dart';
-import 'package:uix/uix.dart';
 
 class UIXAppBar extends UIX<AppBarAttributes> {
   const UIXAppBar(Map<String, dynamic> json) : super(json);
@@ -14,11 +13,11 @@ class UIXAppBar extends UIX<AppBarAttributes> {
     return AppBar(
       key: key,
       centerTitle: attributes.centerTitle?.toValue(context),
-      title: attributes.title?.toWidget(),
+      title: attributes.title,
       actions: attributes.actions?.isNotEmpty ?? false
           ? [
               for (final item in attributes.actions!) ...{
-                item.toWidget() ?? const SizedBox(),
+                item,
               }
             ]
           : null,

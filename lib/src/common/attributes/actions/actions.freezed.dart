@@ -55,7 +55,7 @@ mixin _$UIXActions {
     required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, Map<String, dynamic> child)
+            bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
@@ -63,13 +63,13 @@ mixin _$UIXActions {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
@@ -89,7 +89,7 @@ mixin _$UIXActions {
     TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
@@ -97,13 +97,13 @@ mixin _$UIXActions {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
@@ -123,7 +123,7 @@ mixin _$UIXActions {
     TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
@@ -131,18 +131,18 @@ mixin _$UIXActions {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
@@ -357,7 +357,7 @@ class _$PushRouteAction implements PushRouteAction {
     required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, Map<String, dynamic> child)
+            bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
@@ -365,13 +365,13 @@ class _$PushRouteAction implements PushRouteAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
@@ -394,7 +394,7 @@ class _$PushRouteAction implements PushRouteAction {
     TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
@@ -402,13 +402,13 @@ class _$PushRouteAction implements PushRouteAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
@@ -431,7 +431,7 @@ class _$PushRouteAction implements PushRouteAction {
     TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
@@ -439,18 +439,18 @@ class _$PushRouteAction implements PushRouteAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
@@ -654,7 +654,7 @@ class _$PopRouteAction implements PopRouteAction {
     required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, Map<String, dynamic> child)
+            bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
@@ -662,13 +662,13 @@ class _$PopRouteAction implements PopRouteAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
@@ -691,7 +691,7 @@ class _$PopRouteAction implements PopRouteAction {
     TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
@@ -699,13 +699,13 @@ class _$PopRouteAction implements PopRouteAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
@@ -728,7 +728,7 @@ class _$PopRouteAction implements PopRouteAction {
     TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
@@ -736,18 +736,18 @@ class _$PopRouteAction implements PopRouteAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
@@ -855,7 +855,7 @@ abstract class _$$ShowDialogActionCopyWith<$Res>
       {String type,
       bool synchronized,
       bool barrierDismissible,
-      Map<String, dynamic> child});
+      @UIXWidgetConverter() Widget child});
 }
 
 /// @nodoc
@@ -888,9 +888,9 @@ class __$$ShowDialogActionCopyWithImpl<$Res>
           : barrierDismissible // ignore: cast_nullable_to_non_nullable
               as bool,
       child: null == child
-          ? _value._child
+          ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
+              as Widget,
     ));
   }
 }
@@ -902,8 +902,7 @@ class _$ShowDialogAction implements ShowDialogAction {
       {required this.type,
       this.synchronized = false,
       this.barrierDismissible = true,
-      required final Map<String, dynamic> child})
-      : _child = child;
+      @UIXWidgetConverter() required this.child});
 
   factory _$ShowDialogAction.fromJson(Map<String, dynamic> json) =>
       _$$ShowDialogActionFromJson(json);
@@ -916,13 +915,9 @@ class _$ShowDialogAction implements ShowDialogAction {
   @override
   @JsonKey()
   final bool barrierDismissible;
-  final Map<String, dynamic> _child;
   @override
-  Map<String, dynamic> get child {
-    if (_child is EqualUnmodifiableMapView) return _child;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_child);
-  }
+  @UIXWidgetConverter()
+  final Widget child;
 
   @override
   String toString() {
@@ -939,13 +934,13 @@ class _$ShowDialogAction implements ShowDialogAction {
                 other.synchronized == synchronized) &&
             (identical(other.barrierDismissible, barrierDismissible) ||
                 other.barrierDismissible == barrierDismissible) &&
-            const DeepCollectionEquality().equals(other._child, _child));
+            (identical(other.child, child) || other.child == child));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, type, synchronized,
-      barrierDismissible, const DeepCollectionEquality().hash(_child));
+  int get hashCode =>
+      Object.hash(runtimeType, type, synchronized, barrierDismissible, child);
 
   @JsonKey(ignore: true)
   @override
@@ -962,7 +957,7 @@ class _$ShowDialogAction implements ShowDialogAction {
     required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, Map<String, dynamic> child)
+            bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
@@ -970,13 +965,13 @@ class _$ShowDialogAction implements ShowDialogAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
@@ -999,7 +994,7 @@ class _$ShowDialogAction implements ShowDialogAction {
     TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
@@ -1007,13 +1002,13 @@ class _$ShowDialogAction implements ShowDialogAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
@@ -1036,7 +1031,7 @@ class _$ShowDialogAction implements ShowDialogAction {
     TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
@@ -1044,18 +1039,18 @@ class _$ShowDialogAction implements ShowDialogAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
@@ -1136,7 +1131,7 @@ abstract class ShowDialogAction implements UIXActions {
       {required final String type,
       final bool synchronized,
       final bool barrierDismissible,
-      required final Map<String, dynamic> child}) = _$ShowDialogAction;
+      @UIXWidgetConverter() required final Widget child}) = _$ShowDialogAction;
 
   factory ShowDialogAction.fromJson(Map<String, dynamic> json) =
       _$ShowDialogAction.fromJson;
@@ -1146,7 +1141,8 @@ abstract class ShowDialogAction implements UIXActions {
   @override
   bool get synchronized;
   bool get barrierDismissible;
-  Map<String, dynamic> get child;
+  @UIXWidgetConverter()
+  Widget get child;
   @override
   @JsonKey(ignore: true)
   _$$ShowDialogActionCopyWith<_$ShowDialogAction> get copyWith =>
@@ -1167,7 +1163,7 @@ abstract class _$$ShowBottomSheetActionCopyWith<$Res>
       bool? enableDrag,
       double? elevation,
       @UIXColorConverter() Color? backgroundColor,
-      Map<String, dynamic> child});
+      @UIXWidgetConverter() Widget child});
 }
 
 /// @nodoc
@@ -1210,9 +1206,9 @@ class __$$ShowBottomSheetActionCopyWithImpl<$Res>
           : backgroundColor // ignore: cast_nullable_to_non_nullable
               as Color?,
       child: null == child
-          ? _value._child
+          ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
+              as Widget,
     ));
   }
 }
@@ -1226,8 +1222,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
       this.enableDrag,
       this.elevation,
       @UIXColorConverter() this.backgroundColor,
-      required final Map<String, dynamic> child})
-      : _child = child;
+      @UIXWidgetConverter() required this.child});
 
   factory _$ShowBottomSheetAction.fromJson(Map<String, dynamic> json) =>
       _$$ShowBottomSheetActionFromJson(json);
@@ -1244,13 +1239,9 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
   @override
   @UIXColorConverter()
   final Color? backgroundColor;
-  final Map<String, dynamic> _child;
   @override
-  Map<String, dynamic> get child {
-    if (_child is EqualUnmodifiableMapView) return _child;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_child);
-  }
+  @UIXWidgetConverter()
+  final Widget child;
 
   @override
   String toString() {
@@ -1271,13 +1262,13 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
                 other.elevation == elevation) &&
             (identical(other.backgroundColor, backgroundColor) ||
                 other.backgroundColor == backgroundColor) &&
-            const DeepCollectionEquality().equals(other._child, _child));
+            (identical(other.child, child) || other.child == child));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, type, synchronized, enableDrag,
-      elevation, backgroundColor, const DeepCollectionEquality().hash(_child));
+      elevation, backgroundColor, child);
 
   @JsonKey(ignore: true)
   @override
@@ -1295,7 +1286,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
     required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, Map<String, dynamic> child)
+            bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
@@ -1303,13 +1294,13 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
@@ -1333,7 +1324,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
     TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
@@ -1341,13 +1332,13 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
@@ -1371,7 +1362,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
     TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
@@ -1379,18 +1370,18 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
@@ -1469,12 +1460,13 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
 
 abstract class ShowBottomSheetAction implements UIXActions {
   const factory ShowBottomSheetAction(
-      {required final String type,
-      final bool synchronized,
-      final bool? enableDrag,
-      final double? elevation,
-      @UIXColorConverter() final Color? backgroundColor,
-      required final Map<String, dynamic> child}) = _$ShowBottomSheetAction;
+          {required final String type,
+          final bool synchronized,
+          final bool? enableDrag,
+          final double? elevation,
+          @UIXColorConverter() final Color? backgroundColor,
+          @UIXWidgetConverter() required final Widget child}) =
+      _$ShowBottomSheetAction;
 
   factory ShowBottomSheetAction.fromJson(Map<String, dynamic> json) =
       _$ShowBottomSheetAction.fromJson;
@@ -1487,7 +1479,8 @@ abstract class ShowBottomSheetAction implements UIXActions {
   double? get elevation;
   @UIXColorConverter()
   Color? get backgroundColor;
-  Map<String, dynamic> get child;
+  @UIXWidgetConverter()
+  Widget get child;
   @override
   @JsonKey(ignore: true)
   _$$ShowBottomSheetActionCopyWith<_$ShowBottomSheetAction> get copyWith =>
@@ -1506,7 +1499,7 @@ abstract class _$$ShowSnackbarActionCopyWith<$Res>
       {String type,
       bool synchronized,
       @UIXColorConverter() Color? backgroundColor,
-      Map<String, dynamic> child});
+      @UIXWidgetConverter() Widget child});
 }
 
 /// @nodoc
@@ -1539,9 +1532,9 @@ class __$$ShowSnackbarActionCopyWithImpl<$Res>
           : backgroundColor // ignore: cast_nullable_to_non_nullable
               as Color?,
       child: null == child
-          ? _value._child
+          ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
+              as Widget,
     ));
   }
 }
@@ -1553,8 +1546,7 @@ class _$ShowSnackbarAction implements ShowSnackbarAction {
       {required this.type,
       this.synchronized = false,
       @UIXColorConverter() this.backgroundColor,
-      required final Map<String, dynamic> child})
-      : _child = child;
+      @UIXWidgetConverter() required this.child});
 
   factory _$ShowSnackbarAction.fromJson(Map<String, dynamic> json) =>
       _$$ShowSnackbarActionFromJson(json);
@@ -1567,13 +1559,9 @@ class _$ShowSnackbarAction implements ShowSnackbarAction {
   @override
   @UIXColorConverter()
   final Color? backgroundColor;
-  final Map<String, dynamic> _child;
   @override
-  Map<String, dynamic> get child {
-    if (_child is EqualUnmodifiableMapView) return _child;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_child);
-  }
+  @UIXWidgetConverter()
+  final Widget child;
 
   @override
   String toString() {
@@ -1590,13 +1578,13 @@ class _$ShowSnackbarAction implements ShowSnackbarAction {
                 other.synchronized == synchronized) &&
             (identical(other.backgroundColor, backgroundColor) ||
                 other.backgroundColor == backgroundColor) &&
-            const DeepCollectionEquality().equals(other._child, _child));
+            (identical(other.child, child) || other.child == child));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, type, synchronized,
-      backgroundColor, const DeepCollectionEquality().hash(_child));
+  int get hashCode =>
+      Object.hash(runtimeType, type, synchronized, backgroundColor, child);
 
   @JsonKey(ignore: true)
   @override
@@ -1614,7 +1602,7 @@ class _$ShowSnackbarAction implements ShowSnackbarAction {
     required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, Map<String, dynamic> child)
+            bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
@@ -1622,13 +1610,13 @@ class _$ShowSnackbarAction implements ShowSnackbarAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
@@ -1651,7 +1639,7 @@ class _$ShowSnackbarAction implements ShowSnackbarAction {
     TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
@@ -1659,13 +1647,13 @@ class _$ShowSnackbarAction implements ShowSnackbarAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
@@ -1688,7 +1676,7 @@ class _$ShowSnackbarAction implements ShowSnackbarAction {
     TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
@@ -1696,18 +1684,18 @@ class _$ShowSnackbarAction implements ShowSnackbarAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
@@ -1785,10 +1773,11 @@ class _$ShowSnackbarAction implements ShowSnackbarAction {
 
 abstract class ShowSnackbarAction implements UIXActions {
   const factory ShowSnackbarAction(
-      {required final String type,
-      final bool synchronized,
-      @UIXColorConverter() final Color? backgroundColor,
-      required final Map<String, dynamic> child}) = _$ShowSnackbarAction;
+          {required final String type,
+          final bool synchronized,
+          @UIXColorConverter() final Color? backgroundColor,
+          @UIXWidgetConverter() required final Widget child}) =
+      _$ShowSnackbarAction;
 
   factory ShowSnackbarAction.fromJson(Map<String, dynamic> json) =
       _$ShowSnackbarAction.fromJson;
@@ -1799,7 +1788,8 @@ abstract class ShowSnackbarAction implements UIXActions {
   bool get synchronized;
   @UIXColorConverter()
   Color? get backgroundColor;
-  Map<String, dynamic> get child;
+  @UIXWidgetConverter()
+  Widget get child;
   @override
   @JsonKey(ignore: true)
   _$$ShowSnackbarActionCopyWith<_$ShowSnackbarAction> get copyWith =>
@@ -1914,7 +1904,7 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
     required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, Map<String, dynamic> child)
+            bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
@@ -1922,13 +1912,13 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
@@ -1951,7 +1941,7 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
     TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
@@ -1959,13 +1949,13 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
@@ -1988,7 +1978,7 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
     TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
@@ -1996,18 +1986,18 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
@@ -2224,7 +2214,7 @@ class _$GetHttpAction implements GetHttpAction {
     required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, Map<String, dynamic> child)
+            bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
@@ -2232,13 +2222,13 @@ class _$GetHttpAction implements GetHttpAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
@@ -2261,7 +2251,7 @@ class _$GetHttpAction implements GetHttpAction {
     TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
@@ -2269,13 +2259,13 @@ class _$GetHttpAction implements GetHttpAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
@@ -2298,7 +2288,7 @@ class _$GetHttpAction implements GetHttpAction {
     TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
@@ -2306,18 +2296,18 @@ class _$GetHttpAction implements GetHttpAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
@@ -2550,7 +2540,7 @@ class _$PostHttpAction implements PostHttpAction {
     required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, Map<String, dynamic> child)
+            bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
@@ -2558,13 +2548,13 @@ class _$PostHttpAction implements PostHttpAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
@@ -2587,7 +2577,7 @@ class _$PostHttpAction implements PostHttpAction {
     TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
@@ -2595,13 +2585,13 @@ class _$PostHttpAction implements PostHttpAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
@@ -2624,7 +2614,7 @@ class _$PostHttpAction implements PostHttpAction {
     TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
@@ -2632,18 +2622,18 @@ class _$PostHttpAction implements PostHttpAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
@@ -2878,7 +2868,7 @@ class _$PutHttpAction implements PutHttpAction {
     required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, Map<String, dynamic> child)
+            bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
@@ -2886,13 +2876,13 @@ class _$PutHttpAction implements PutHttpAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
@@ -2915,7 +2905,7 @@ class _$PutHttpAction implements PutHttpAction {
     TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
@@ -2923,13 +2913,13 @@ class _$PutHttpAction implements PutHttpAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
@@ -2952,7 +2942,7 @@ class _$PutHttpAction implements PutHttpAction {
     TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
@@ -2960,18 +2950,18 @@ class _$PutHttpAction implements PutHttpAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
@@ -3206,7 +3196,7 @@ class _$DeleteHttpAction implements DeleteHttpAction {
     required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, Map<String, dynamic> child)
+            bool barrierDismissible, @UIXWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
@@ -3214,13 +3204,13 @@ class _$DeleteHttpAction implements DeleteHttpAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)
+            @UIXWidgetConverter() Widget child)
         showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
@@ -3243,7 +3233,7 @@ class _$DeleteHttpAction implements DeleteHttpAction {
     TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
@@ -3251,13 +3241,13 @@ class _$DeleteHttpAction implements DeleteHttpAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
@@ -3280,7 +3270,7 @@ class _$DeleteHttpAction implements DeleteHttpAction {
     TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
@@ -3288,18 +3278,18 @@ class _$DeleteHttpAction implements DeleteHttpAction {
             bool? enableDrag,
             double? elevation,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
             @UIXColorConverter() Color? backgroundColor,
-            Map<String, dynamic> child)?
+            @UIXWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,

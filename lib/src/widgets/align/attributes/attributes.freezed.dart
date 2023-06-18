@@ -22,7 +22,8 @@ AlignAttributes _$AlignAttributesFromJson(Map<String, dynamic> json) {
 mixin _$AlignAttributes {
   @UIXAlignmentGeometryConverter()
   AlignmentGeometry? get alignment => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get child => throw _privateConstructorUsedError;
+  @UIXWidgetConverter()
+  Widget? get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,7 +39,7 @@ abstract class $AlignAttributesCopyWith<$Res> {
   @useResult
   $Res call(
       {@UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-      Map<String, dynamic>? child});
+      @UIXWidgetConverter() Widget? child});
 }
 
 /// @nodoc
@@ -65,7 +66,7 @@ class _$AlignAttributesCopyWithImpl<$Res, $Val extends AlignAttributes>
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
     ) as $Val);
   }
 }
@@ -80,7 +81,7 @@ abstract class _$$_AlignAttributesCopyWith<$Res>
   @useResult
   $Res call(
       {@UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-      Map<String, dynamic>? child});
+      @UIXWidgetConverter() Widget? child});
 }
 
 /// @nodoc
@@ -103,9 +104,9 @@ class __$$_AlignAttributesCopyWithImpl<$Res>
           : alignment // ignore: cast_nullable_to_non_nullable
               as AlignmentGeometry?,
       child: freezed == child
-          ? _value._child
+          ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
     ));
   }
 }
@@ -116,8 +117,8 @@ class _$_AlignAttributes implements _AlignAttributes {
   const _$_AlignAttributes(
       {@UIXAlignmentGeometryConverter()
           this.alignment = AlignmentDirectional.center,
-      final Map<String, dynamic>? child})
-      : _child = child;
+      @UIXWidgetConverter()
+          this.child});
 
   factory _$_AlignAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_AlignAttributesFromJson(json);
@@ -126,15 +127,9 @@ class _$_AlignAttributes implements _AlignAttributes {
   @JsonKey()
   @UIXAlignmentGeometryConverter()
   final AlignmentGeometry? alignment;
-  final Map<String, dynamic>? _child;
   @override
-  Map<String, dynamic>? get child {
-    final value = _child;
-    if (value == null) return null;
-    if (_child is EqualUnmodifiableMapView) return _child;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
+  @UIXWidgetConverter()
+  final Widget? child;
 
   @override
   String toString() {
@@ -148,13 +143,12 @@ class _$_AlignAttributes implements _AlignAttributes {
             other is _$_AlignAttributes &&
             (identical(other.alignment, alignment) ||
                 other.alignment == alignment) &&
-            const DeepCollectionEquality().equals(other._child, _child));
+            (identical(other.child, child) || other.child == child));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, alignment, const DeepCollectionEquality().hash(_child));
+  int get hashCode => Object.hash(runtimeType, alignment, child);
 
   @JsonKey(ignore: true)
   @override
@@ -173,7 +167,7 @@ class _$_AlignAttributes implements _AlignAttributes {
 abstract class _AlignAttributes implements AlignAttributes {
   const factory _AlignAttributes(
       {@UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
-      final Map<String, dynamic>? child}) = _$_AlignAttributes;
+      @UIXWidgetConverter() final Widget? child}) = _$_AlignAttributes;
 
   factory _AlignAttributes.fromJson(Map<String, dynamic> json) =
       _$_AlignAttributes.fromJson;
@@ -182,7 +176,8 @@ abstract class _AlignAttributes implements AlignAttributes {
   @UIXAlignmentGeometryConverter()
   AlignmentGeometry? get alignment;
   @override
-  Map<String, dynamic>? get child;
+  @UIXWidgetConverter()
+  Widget? get child;
   @override
   @JsonKey(ignore: true)
   _$$_AlignAttributesCopyWith<_$_AlignAttributes> get copyWith =>

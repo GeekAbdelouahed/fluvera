@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uix/src/widgets/align/attributes/attributes.dart';
 import 'package:uix/src/widgets/uix.dart';
-import 'package:uix/uix.dart';
 
 class UIXAlign extends UIX<AlignAttributes> {
   const UIXAlign(Map<String, dynamic> json) : super(json);
@@ -14,7 +13,7 @@ class UIXAlign extends UIX<AlignAttributes> {
     return Align(
       key: key,
       alignment: attributes.alignment!,
-      child: attributes.child?.toWidget(),
+      child: attributes.child,
     );
   }
 }

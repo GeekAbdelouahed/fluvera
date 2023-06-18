@@ -21,7 +21,8 @@ ExpandedAttributes _$ExpandedAttributesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ExpandedAttributes {
   UIXAttributeValue<num> get flex => throw _privateConstructorUsedError;
-  Map<String, dynamic> get child => throw _privateConstructorUsedError;
+  @UIXWidgetConverter()
+  Widget get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +36,7 @@ abstract class $ExpandedAttributesCopyWith<$Res> {
           ExpandedAttributes value, $Res Function(ExpandedAttributes) then) =
       _$ExpandedAttributesCopyWithImpl<$Res, ExpandedAttributes>;
   @useResult
-  $Res call({UIXAttributeValue<num> flex, Map<String, dynamic> child});
+  $Res call({UIXAttributeValue<num> flex, @UIXWidgetConverter() Widget child});
 
   $UIXAttributeValueCopyWith<num, $Res> get flex;
 }
@@ -64,7 +65,7 @@ class _$ExpandedAttributesCopyWithImpl<$Res, $Val extends ExpandedAttributes>
       child: null == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
+              as Widget,
     ) as $Val);
   }
 
@@ -85,7 +86,7 @@ abstract class _$$_ExpandedAttributesCopyWith<$Res>
       __$$_ExpandedAttributesCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({UIXAttributeValue<num> flex, Map<String, dynamic> child});
+  $Res call({UIXAttributeValue<num> flex, @UIXWidgetConverter() Widget child});
 
   @override
   $UIXAttributeValueCopyWith<num, $Res> get flex;
@@ -111,9 +112,9 @@ class __$$_ExpandedAttributesCopyWithImpl<$Res>
           : flex // ignore: cast_nullable_to_non_nullable
               as UIXAttributeValue<num>,
       child: null == child
-          ? _value._child
+          ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
+              as Widget,
     ));
   }
 }
@@ -123,8 +124,7 @@ class __$$_ExpandedAttributesCopyWithImpl<$Res>
 class _$_ExpandedAttributes implements _ExpandedAttributes {
   const _$_ExpandedAttributes(
       {this.flex = const UIXAttributeValue<num>(value: 1),
-      required final Map<String, dynamic> child})
-      : _child = child;
+      @UIXWidgetConverter() required this.child});
 
   factory _$_ExpandedAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_ExpandedAttributesFromJson(json);
@@ -132,13 +132,9 @@ class _$_ExpandedAttributes implements _ExpandedAttributes {
   @override
   @JsonKey()
   final UIXAttributeValue<num> flex;
-  final Map<String, dynamic> _child;
   @override
-  Map<String, dynamic> get child {
-    if (_child is EqualUnmodifiableMapView) return _child;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_child);
-  }
+  @UIXWidgetConverter()
+  final Widget child;
 
   @override
   String toString() {
@@ -151,13 +147,12 @@ class _$_ExpandedAttributes implements _ExpandedAttributes {
         (other.runtimeType == runtimeType &&
             other is _$_ExpandedAttributes &&
             (identical(other.flex, flex) || other.flex == flex) &&
-            const DeepCollectionEquality().equals(other._child, _child));
+            (identical(other.child, child) || other.child == child));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, flex, const DeepCollectionEquality().hash(_child));
+  int get hashCode => Object.hash(runtimeType, flex, child);
 
   @JsonKey(ignore: true)
   @override
@@ -176,8 +171,9 @@ class _$_ExpandedAttributes implements _ExpandedAttributes {
 
 abstract class _ExpandedAttributes implements ExpandedAttributes {
   const factory _ExpandedAttributes(
-      {final UIXAttributeValue<num> flex,
-      required final Map<String, dynamic> child}) = _$_ExpandedAttributes;
+          {final UIXAttributeValue<num> flex,
+          @UIXWidgetConverter() required final Widget child}) =
+      _$_ExpandedAttributes;
 
   factory _ExpandedAttributes.fromJson(Map<String, dynamic> json) =
       _$_ExpandedAttributes.fromJson;
@@ -185,7 +181,8 @@ abstract class _ExpandedAttributes implements ExpandedAttributes {
   @override
   UIXAttributeValue<num> get flex;
   @override
-  Map<String, dynamic> get child;
+  @UIXWidgetConverter()
+  Widget get child;
   @override
   @JsonKey(ignore: true)
   _$$_ExpandedAttributesCopyWith<_$_ExpandedAttributes> get copyWith =>

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:uix/uix.dart';
 import 'package:uix/src/widgets/single_child_scroll_view/attributes/attributes.dart';
 import 'package:uix/src/widgets/uix.dart';
 
@@ -14,7 +13,7 @@ class UIXSingleChildScrollView extends UIX<SingleChildScrollViewAttributes> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       key: key,
-      child: attributes.child?.toWidget(),
+      child: attributes.child,
     );
   }
 }

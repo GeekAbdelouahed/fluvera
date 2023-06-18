@@ -17,7 +17,8 @@ _$_SizedBoxAttributes _$$_SizedBoxAttributesFromJson(
           ? null
           : UIXAttributeValue<num>.fromJson(
               json['width'] as Map<String, dynamic>, (value) => value as num),
-      child: json['child'] as Map<String, dynamic>?,
+      child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
+          json['child'], const UIXWidgetConverter().fromJson),
     );
 
 Map<String, dynamic> _$$_SizedBoxAttributesToJson(
@@ -29,5 +30,18 @@ Map<String, dynamic> _$$_SizedBoxAttributesToJson(
       'width': instance.width?.toJson(
         (value) => value,
       ),
-      'child': instance.child,
+      'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
+          instance.child, const UIXWidgetConverter().toJson),
     };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);

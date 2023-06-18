@@ -26,7 +26,8 @@ mixin _$RowAttributes {
       throw _privateConstructorUsedError;
   UIXEnumAttributeValue<CrossAxisAlignment> get crossAxisAlignment =>
       throw _privateConstructorUsedError;
-  List<Map<String, dynamic>> get children => throw _privateConstructorUsedError;
+  @UIXWidgetConverter()
+  List<Widget> get children => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -44,7 +45,7 @@ abstract class $RowAttributesCopyWith<$Res> {
       {UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
       UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
       UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
-      List<Map<String, dynamic>> children});
+      @UIXWidgetConverter() List<Widget> children});
 
   $UIXEnumAttributeValueCopyWith<MainAxisSize, $Res> get mainAxisSize;
   $UIXEnumAttributeValueCopyWith<MainAxisAlignment, $Res> get mainAxisAlignment;
@@ -86,7 +87,7 @@ class _$RowAttributesCopyWithImpl<$Res, $Val extends RowAttributes>
       children: null == children
           ? _value.children
           : children // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>,
+              as List<Widget>,
     ) as $Val);
   }
 
@@ -132,7 +133,7 @@ abstract class _$$_RowAttributesCopyWith<$Res>
       {UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
       UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
       UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
-      List<Map<String, dynamic>> children});
+      @UIXWidgetConverter() List<Widget> children});
 
   @override
   $UIXEnumAttributeValueCopyWith<MainAxisSize, $Res> get mainAxisSize;
@@ -175,7 +176,7 @@ class __$$_RowAttributesCopyWithImpl<$Res>
       children: null == children
           ? _value._children
           : children // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>,
+              as List<Widget>,
     ));
   }
 }
@@ -187,7 +188,7 @@ class _$_RowAttributes implements _RowAttributes {
       {this.mainAxisSize = const UIXEnumAttributeValue(value: 'max'),
       this.mainAxisAlignment = const UIXEnumAttributeValue(value: 'start'),
       this.crossAxisAlignment = const UIXEnumAttributeValue(value: 'center'),
-      required final List<Map<String, dynamic>> children})
+      @UIXWidgetConverter() required final List<Widget> children})
       : _children = children;
 
   factory _$_RowAttributes.fromJson(Map<String, dynamic> json) =>
@@ -202,9 +203,10 @@ class _$_RowAttributes implements _RowAttributes {
   @override
   @JsonKey()
   final UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment;
-  final List<Map<String, dynamic>> _children;
+  final List<Widget> _children;
   @override
-  List<Map<String, dynamic>> get children {
+  @UIXWidgetConverter()
+  List<Widget> get children {
     if (_children is EqualUnmodifiableListView) return _children;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_children);
@@ -250,10 +252,11 @@ class _$_RowAttributes implements _RowAttributes {
 
 abstract class _RowAttributes implements RowAttributes {
   const factory _RowAttributes(
-      {final UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
-      final UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
-      final UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
-      required final List<Map<String, dynamic>> children}) = _$_RowAttributes;
+          {final UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+          final UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+          final UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
+          @UIXWidgetConverter() required final List<Widget> children}) =
+      _$_RowAttributes;
 
   factory _RowAttributes.fromJson(Map<String, dynamic> json) =
       _$_RowAttributes.fromJson;
@@ -265,7 +268,8 @@ abstract class _RowAttributes implements RowAttributes {
   @override
   UIXEnumAttributeValue<CrossAxisAlignment> get crossAxisAlignment;
   @override
-  List<Map<String, dynamic>> get children;
+  @UIXWidgetConverter()
+  List<Widget> get children;
   @override
   @JsonKey(ignore: true)
   _$$_RowAttributesCopyWith<_$_RowAttributes> get copyWith =>

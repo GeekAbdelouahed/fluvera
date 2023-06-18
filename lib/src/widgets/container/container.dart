@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:uix/uix.dart';
 import 'package:uix/src/widgets/container/attributes/attributes.dart';
 import 'package:uix/src/widgets/uix.dart';
 
@@ -17,7 +16,7 @@ class UIXContainer extends UIX<ContainerAttributes> {
       margin: attributes.margin,
       padding: attributes.padding,
       alignment: attributes.alignment,
-      child: attributes.child?.toWidget(),
+      child: attributes.child,
     );
   }
 }

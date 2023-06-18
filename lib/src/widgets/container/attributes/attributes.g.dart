@@ -25,7 +25,8 @@ _$_ContainerAttributes _$$_ContainerAttributesFromJson(
               json['padding'], const UIXEdgeInsetsConverter().fromJson),
       alignment: const UIXAlignmentGeometryConverter()
           .fromJson(json['alignment'] as String?),
-      child: json['child'] as Map<String, dynamic>?,
+      child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
+          json['child'], const UIXWidgetConverter().fromJson),
     );
 
 Map<String, dynamic> _$$_ContainerAttributesToJson(
@@ -45,7 +46,8 @@ Map<String, dynamic> _$$_ContainerAttributesToJson(
               instance.padding, const UIXEdgeInsetsConverter().toJson),
       'alignment':
           const UIXAlignmentGeometryConverter().toJson(instance.alignment),
-      'child': instance.child,
+      'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
+          instance.child, const UIXWidgetConverter().toJson),
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

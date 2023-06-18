@@ -17,11 +17,17 @@
                 "onTap": [
                     {
                         "type": "GetHttp",
-                        "url": "https: //jsonplaceholder.typicode.com/photos"
+                        "url": "https://jsonplaceholder.typicode.com/photos",
+                        "synchronized": true
                     },
                     {
-                        "type": "GetHttp",
-                        "url": "https: //jsonplaceholder.typicode.com/photos"
+                        "type": "ShowSnackbar",
+                        "child": {
+                            "type": "Text",
+                            "text": {
+                                "value": "Data synchronized"
+                            }
+                        }
                     }
                 ],
                 "child": {

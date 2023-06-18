@@ -25,7 +25,7 @@ extension UIXActionExtension on UIXActions {
         return UIXProvider.of<UIXNavigator>(context)?.value.dialog(
               context,
               barrierDismissible: action.barrierDismissible,
-              child: action.child.toWidget()!,
+              child: action.child,
             );
       },
       showBottomSheet: (action) {
@@ -34,14 +34,14 @@ extension UIXActionExtension on UIXActions {
               enableDrag: action.enableDrag,
               elevation: action.elevation,
               backgroundColor: action.backgroundColor,
-              child: action.child.toWidget()!,
+              child: action.child,
             );
       },
       showSnackbar: (action) {
         return UIXProvider.of<UIXNavigator>(context)?.value.snackbar(
               context,
               backgroundColor: action.backgroundColor,
-              child: action.child.toWidget()!,
+              child: action.child,
             );
       },
       getHttp: (GetHttpAction action) async {

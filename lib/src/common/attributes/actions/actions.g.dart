@@ -41,7 +41,8 @@ _$ShowDialogAction _$$ShowDialogActionFromJson(Map<String, dynamic> json) =>
       type: json['type'] as String,
       synchronized: json['synchronized'] as bool? ?? false,
       barrierDismissible: json['barrierDismissible'] as bool? ?? true,
-      child: json['child'] as Map<String, dynamic>,
+      child: const UIXWidgetConverter()
+          .fromJson(json['child'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$ShowDialogActionToJson(_$ShowDialogAction instance) =>
@@ -49,7 +50,7 @@ Map<String, dynamic> _$$ShowDialogActionToJson(_$ShowDialogAction instance) =>
       'type': instance.type,
       'synchronized': instance.synchronized,
       'barrierDismissible': instance.barrierDismissible,
-      'child': instance.child,
+      'child': const UIXWidgetConverter().toJson(instance.child),
     };
 
 _$ShowBottomSheetAction _$$ShowBottomSheetActionFromJson(
@@ -61,7 +62,8 @@ _$ShowBottomSheetAction _$$ShowBottomSheetActionFromJson(
       elevation: (json['elevation'] as num?)?.toDouble(),
       backgroundColor: const UIXColorConverter()
           .fromJson(json['backgroundColor'] as String?),
-      child: json['child'] as Map<String, dynamic>,
+      child: const UIXWidgetConverter()
+          .fromJson(json['child'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$ShowBottomSheetActionToJson(
@@ -73,7 +75,7 @@ Map<String, dynamic> _$$ShowBottomSheetActionToJson(
       'elevation': instance.elevation,
       'backgroundColor':
           const UIXColorConverter().toJson(instance.backgroundColor),
-      'child': instance.child,
+      'child': const UIXWidgetConverter().toJson(instance.child),
     };
 
 _$ShowSnackbarAction _$$ShowSnackbarActionFromJson(Map<String, dynamic> json) =>
@@ -82,7 +84,8 @@ _$ShowSnackbarAction _$$ShowSnackbarActionFromJson(Map<String, dynamic> json) =>
       synchronized: json['synchronized'] as bool? ?? false,
       backgroundColor: const UIXColorConverter()
           .fromJson(json['backgroundColor'] as String?),
-      child: json['child'] as Map<String, dynamic>,
+      child: const UIXWidgetConverter()
+          .fromJson(json['child'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$ShowSnackbarActionToJson(
@@ -92,7 +95,7 @@ Map<String, dynamic> _$$ShowSnackbarActionToJson(
       'synchronized': instance.synchronized,
       'backgroundColor':
           const UIXColorConverter().toJson(instance.backgroundColor),
-      'child': instance.child,
+      'child': const UIXWidgetConverter().toJson(instance.child),
     };
 
 _$UpdateAttributeAction _$$UpdateAttributeActionFromJson(

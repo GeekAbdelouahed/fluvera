@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:uix/uix.dart';
 import 'package:uix/src/widgets/sized_box/attributes/attributes.dart';
 import 'package:uix/src/widgets/uix.dart';
 
@@ -15,7 +14,7 @@ class UIXSizedBox extends UIX<SizedBoxAttributes> {
       key: key,
       height: attributes.height?.toValue(context).toDouble(),
       width: attributes.width?.toValue(context).toDouble(),
-      child: attributes.child?.toWidget(),
+      child: attributes.child,
     );
   }
 }

@@ -22,7 +22,8 @@ SizedBoxAttributes _$SizedBoxAttributesFromJson(Map<String, dynamic> json) {
 mixin _$SizedBoxAttributes {
   UIXAttributeValue<num>? get height => throw _privateConstructorUsedError;
   UIXAttributeValue<num>? get width => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get child => throw _privateConstructorUsedError;
+  @UIXWidgetConverter()
+  Widget? get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,7 +40,7 @@ abstract class $SizedBoxAttributesCopyWith<$Res> {
   $Res call(
       {UIXAttributeValue<num>? height,
       UIXAttributeValue<num>? width,
-      Map<String, dynamic>? child});
+      @UIXWidgetConverter() Widget? child});
 
   $UIXAttributeValueCopyWith<num, $Res>? get height;
   $UIXAttributeValueCopyWith<num, $Res>? get width;
@@ -74,7 +75,7 @@ class _$SizedBoxAttributesCopyWithImpl<$Res, $Val extends SizedBoxAttributes>
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
     ) as $Val);
   }
 
@@ -114,7 +115,7 @@ abstract class _$$_SizedBoxAttributesCopyWith<$Res>
   $Res call(
       {UIXAttributeValue<num>? height,
       UIXAttributeValue<num>? width,
-      Map<String, dynamic>? child});
+      @UIXWidgetConverter() Widget? child});
 
   @override
   $UIXAttributeValueCopyWith<num, $Res>? get height;
@@ -147,9 +148,9 @@ class __$$_SizedBoxAttributesCopyWithImpl<$Res>
           : width // ignore: cast_nullable_to_non_nullable
               as UIXAttributeValue<num>?,
       child: freezed == child
-          ? _value._child
+          ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Widget?,
     ));
   }
 }
@@ -158,8 +159,7 @@ class __$$_SizedBoxAttributesCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SizedBoxAttributes implements _SizedBoxAttributes {
   const _$_SizedBoxAttributes(
-      {this.height, this.width, final Map<String, dynamic>? child})
-      : _child = child;
+      {this.height, this.width, @UIXWidgetConverter() this.child});
 
   factory _$_SizedBoxAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_SizedBoxAttributesFromJson(json);
@@ -168,15 +168,9 @@ class _$_SizedBoxAttributes implements _SizedBoxAttributes {
   final UIXAttributeValue<num>? height;
   @override
   final UIXAttributeValue<num>? width;
-  final Map<String, dynamic>? _child;
   @override
-  Map<String, dynamic>? get child {
-    final value = _child;
-    if (value == null) return null;
-    if (_child is EqualUnmodifiableMapView) return _child;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
+  @UIXWidgetConverter()
+  final Widget? child;
 
   @override
   String toString() {
@@ -190,13 +184,12 @@ class _$_SizedBoxAttributes implements _SizedBoxAttributes {
             other is _$_SizedBoxAttributes &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.width, width) || other.width == width) &&
-            const DeepCollectionEquality().equals(other._child, _child));
+            (identical(other.child, child) || other.child == child));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, height, width, const DeepCollectionEquality().hash(_child));
+  int get hashCode => Object.hash(runtimeType, height, width, child);
 
   @JsonKey(ignore: true)
   @override
@@ -217,7 +210,7 @@ abstract class _SizedBoxAttributes implements SizedBoxAttributes {
   const factory _SizedBoxAttributes(
       {final UIXAttributeValue<num>? height,
       final UIXAttributeValue<num>? width,
-      final Map<String, dynamic>? child}) = _$_SizedBoxAttributes;
+      @UIXWidgetConverter() final Widget? child}) = _$_SizedBoxAttributes;
 
   factory _SizedBoxAttributes.fromJson(Map<String, dynamic> json) =
       _$_SizedBoxAttributes.fromJson;
@@ -227,7 +220,8 @@ abstract class _SizedBoxAttributes implements SizedBoxAttributes {
   @override
   UIXAttributeValue<num>? get width;
   @override
-  Map<String, dynamic>? get child;
+  @UIXWidgetConverter()
+  Widget? get child;
   @override
   @JsonKey(ignore: true)
   _$$_SizedBoxAttributesCopyWith<_$_SizedBoxAttributes> get copyWith =>

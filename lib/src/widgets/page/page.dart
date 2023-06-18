@@ -47,7 +47,7 @@ class _PageState extends State<_Page> {
       child: ValueListenableBuilder(
         valueListenable: _attributesNotifier,
         builder: (context, data, child) {
-          return widget.attributes.child.toWidget()!;
+          return widget.attributes.child;
         },
       ),
     );

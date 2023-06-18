@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uix/src/widgets/expanded/attributes/attributes.dart';
 import 'package:uix/src/widgets/uix.dart';
-import 'package:uix/uix.dart';
 
 class UIXExpanded extends UIX<ExpandedAttributes> {
   const UIXExpanded(Map<String, dynamic> json) : super(json);
@@ -14,7 +13,7 @@ class UIXExpanded extends UIX<ExpandedAttributes> {
     return Expanded(
       key: key,
       flex: attributes.flex.toValue(context).toInt(),
-      child: attributes.child.toWidget()!,
+      child: attributes.child,
     );
   }
 }
