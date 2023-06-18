@@ -1,13 +1,12 @@
 part of 'converters.dart';
 
 class UIXAlignmentGeometryConverter
-    implements JsonConverter<AlignmentGeometry?, String?> {
+    implements JsonConverter<AlignmentGeometry, String> {
   const UIXAlignmentGeometryConverter();
 
   @override
-  AlignmentGeometry? fromJson(String? json) {
+  AlignmentGeometry fromJson(String json) {
     return switch (json) {
-      'topStart' => AlignmentDirectional.topStart,
       'topCenter' => AlignmentDirectional.topCenter,
       'topEnd' => AlignmentDirectional.topEnd,
       'bottomStart' => AlignmentDirectional.bottomStart,
@@ -16,14 +15,13 @@ class UIXAlignmentGeometryConverter
       'centerStart' => AlignmentDirectional.centerStart,
       'center' => AlignmentDirectional.center,
       'centerEnd' => AlignmentDirectional.centerEnd,
-      _ => null,
+      _ => AlignmentDirectional.topStart,
     };
   }
 
   @override
-  String? toJson(AlignmentGeometry? data) {
+  String toJson(AlignmentGeometry data) {
     return switch (data) {
-      AlignmentDirectional.topStart => 'topStart',
       AlignmentDirectional.topCenter => 'topCenter',
       AlignmentDirectional.topEnd => 'topEnd',
       AlignmentDirectional.bottomStart => 'bottomStart',
@@ -32,7 +30,7 @@ class UIXAlignmentGeometryConverter
       AlignmentDirectional.centerStart => 'centerStart',
       AlignmentDirectional.center => 'center',
       AlignmentDirectional.centerEnd => 'centerEnd',
-      _ => null,
+      _ => 'topStart',
     };
   }
 }

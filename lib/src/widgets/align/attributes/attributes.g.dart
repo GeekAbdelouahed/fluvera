@@ -8,18 +8,18 @@ part of 'attributes.dart';
 
 _$_AlignAttributes _$$_AlignAttributesFromJson(Map<String, dynamic> json) =>
     _$_AlignAttributes(
-      alignment: json['alignment'] == null
-          ? AlignmentDirectional.center
-          : const UIXAlignmentGeometryConverter()
-              .fromJson(json['alignment'] as String?),
+      alignment: _$JsonConverterFromJson<String, AlignmentGeometry>(
+              json['alignment'],
+              const UIXAlignmentGeometryConverter().fromJson) ??
+          AlignmentDirectional.center,
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
           json['child'], const UIXWidgetConverter().fromJson),
     );
 
 Map<String, dynamic> _$$_AlignAttributesToJson(_$_AlignAttributes instance) =>
     <String, dynamic>{
-      'alignment':
-          const UIXAlignmentGeometryConverter().toJson(instance.alignment),
+      'alignment': _$JsonConverterToJson<String, AlignmentGeometry>(
+          instance.alignment, const UIXAlignmentGeometryConverter().toJson),
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
           instance.child, const UIXWidgetConverter().toJson),
     };

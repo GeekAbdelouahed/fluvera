@@ -14,8 +14,9 @@ _$_UIXTextStyle _$$_UIXTextStyleFromJson(Map<String, dynamic> json) =>
           : UIXEnumAttributeValue<TextOverflow>.fromJson(
               json['overflow'] as Map<String, dynamic>,
               (value) => $enumDecode(_$TextOverflowEnumMap, value)),
-      color: const UIXColorConverter().fromJson(json['color'] as String?),
-      fontWeight: _$JsonConverterFromJson<String, FontWeight?>(
+      color: _$JsonConverterFromJson<String, Color>(
+          json['color'], const UIXColorConverter().fromJson),
+      fontWeight: _$JsonConverterFromJson<String, FontWeight>(
           json['fontWeight'], const UIXFontWeightConverter().fromJson),
     );
 
@@ -25,8 +26,10 @@ Map<String, dynamic> _$$_UIXTextStyleToJson(_$_UIXTextStyle instance) =>
       'overflow': instance.overflow?.toJson(
         (value) => _$TextOverflowEnumMap[value]!,
       ),
-      'color': const UIXColorConverter().toJson(instance.color),
-      'fontWeight': const UIXFontWeightConverter().toJson(instance.fontWeight),
+      'color': _$JsonConverterToJson<String, Color>(
+          instance.color, const UIXColorConverter().toJson),
+      'fontWeight': _$JsonConverterToJson<String, FontWeight>(
+          instance.fontWeight, const UIXFontWeightConverter().toJson),
     };
 
 const _$TextOverflowEnumMap = {
@@ -41,3 +44,9 @@ Value? _$JsonConverterFromJson<Json, Value>(
   Value? Function(Json json) fromJson,
 ) =>
     json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);

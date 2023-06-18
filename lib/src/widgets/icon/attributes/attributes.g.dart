@@ -19,7 +19,8 @@ _$_IconAttributes _$$_IconAttributesFromJson(Map<String, dynamic> json) =>
           : UIXAttributeValue<String>.fromJson(
               json['fontFamily'] as Map<String, dynamic>,
               (value) => value as String),
-      color: const UIXColorConverter().fromJson(json['color'] as String?),
+      color: _$JsonConverterFromJson<String, Color>(
+          json['color'], const UIXColorConverter().fromJson),
     );
 
 Map<String, dynamic> _$$_IconAttributesToJson(_$_IconAttributes instance) =>
@@ -33,5 +34,18 @@ Map<String, dynamic> _$$_IconAttributesToJson(_$_IconAttributes instance) =>
       'fontFamily': instance.fontFamily.toJson(
         (value) => value,
       ),
-      'color': const UIXColorConverter().toJson(instance.color),
+      'color': _$JsonConverterToJson<String, Color>(
+          instance.color, const UIXColorConverter().toJson),
     };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);

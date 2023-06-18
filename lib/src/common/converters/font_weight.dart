@@ -1,6 +1,6 @@
 part of 'converters.dart';
 
-class UIXFontWeightConverter implements JsonConverter<FontWeight?, String> {
+class UIXFontWeightConverter implements JsonConverter<FontWeight, String> {
   const UIXFontWeightConverter();
 
   @override
@@ -19,7 +19,7 @@ class UIXFontWeightConverter implements JsonConverter<FontWeight?, String> {
   }
 
   @override
-  String toJson(FontWeight? data) {
+  String toJson(FontWeight data) {
     return switch (data) {
       FontWeight.w100 => 'w100',
       FontWeight.w200 => 'w200',

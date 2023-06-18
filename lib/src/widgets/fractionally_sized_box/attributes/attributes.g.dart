@@ -19,10 +19,10 @@ _$_FractionallySizedBoxAttributes _$$_FractionallySizedBoxAttributesFromJson(
           : UIXAttributeValue<num>.fromJson(
               json['heightFactor'] as Map<String, dynamic>,
               (value) => value as num),
-      alignment: json['alignment'] == null
-          ? AlignmentDirectional.center
-          : const UIXAlignmentGeometryConverter()
-              .fromJson(json['alignment'] as String?),
+      alignment: _$JsonConverterFromJson<String, AlignmentGeometry>(
+              json['alignment'],
+              const UIXAlignmentGeometryConverter().fromJson) ??
+          AlignmentDirectional.center,
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
           json['child'], const UIXWidgetConverter().fromJson),
     );
@@ -36,8 +36,8 @@ Map<String, dynamic> _$$_FractionallySizedBoxAttributesToJson(
       'heightFactor': instance.heightFactor?.toJson(
         (value) => value,
       ),
-      'alignment':
-          const UIXAlignmentGeometryConverter().toJson(instance.alignment),
+      'alignment': _$JsonConverterToJson<String, AlignmentGeometry>(
+          instance.alignment, const UIXAlignmentGeometryConverter().toJson),
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
           instance.child, const UIXWidgetConverter().toJson),
     };

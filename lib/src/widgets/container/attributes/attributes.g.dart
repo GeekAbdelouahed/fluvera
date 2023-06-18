@@ -17,14 +17,15 @@ _$_ContainerAttributes _$$_ContainerAttributesFromJson(
           ? null
           : UIXAttributeValue<num>.fromJson(
               json['width'] as Map<String, dynamic>, (value) => value as num),
-      color: const UIXColorConverter().fromJson(json['color'] as String?),
+      color: _$JsonConverterFromJson<String, Color>(
+          json['color'], const UIXColorConverter().fromJson),
       margin: _$JsonConverterFromJson<Map<String, dynamic>, EdgeInsetsGeometry>(
           json['margin'], const UIXEdgeInsetsConverter().fromJson),
       padding:
           _$JsonConverterFromJson<Map<String, dynamic>, EdgeInsetsGeometry>(
               json['padding'], const UIXEdgeInsetsConverter().fromJson),
-      alignment: const UIXAlignmentGeometryConverter()
-          .fromJson(json['alignment'] as String?),
+      alignment: _$JsonConverterFromJson<String, AlignmentGeometry>(
+          json['alignment'], const UIXAlignmentGeometryConverter().fromJson),
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
           json['child'], const UIXWidgetConverter().fromJson),
     );
@@ -38,14 +39,15 @@ Map<String, dynamic> _$$_ContainerAttributesToJson(
       'width': instance.width?.toJson(
         (value) => value,
       ),
-      'color': const UIXColorConverter().toJson(instance.color),
+      'color': _$JsonConverterToJson<String, Color>(
+          instance.color, const UIXColorConverter().toJson),
       'margin': _$JsonConverterToJson<Map<String, dynamic>, EdgeInsetsGeometry>(
           instance.margin, const UIXEdgeInsetsConverter().toJson),
       'padding':
           _$JsonConverterToJson<Map<String, dynamic>, EdgeInsetsGeometry>(
               instance.padding, const UIXEdgeInsetsConverter().toJson),
-      'alignment':
-          const UIXAlignmentGeometryConverter().toJson(instance.alignment),
+      'alignment': _$JsonConverterToJson<String, AlignmentGeometry>(
+          instance.alignment, const UIXAlignmentGeometryConverter().toJson),
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
           instance.child, const UIXWidgetConverter().toJson),
     };
