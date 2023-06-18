@@ -21,3 +21,14 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/home.json
+    - assets/item1.json
+    - assets/item2.json
+    - assets/item3.json
+    - assets/item4.json
+    - assets/item5.json
+    - assets/item6.json
+    - assets/item7.json
+    - assets/item8.json

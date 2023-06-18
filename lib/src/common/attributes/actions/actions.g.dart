@@ -76,6 +76,25 @@ Map<String, dynamic> _$$ShowBottomSheetActionToJson(
       'child': instance.child,
     };
 
+_$ShowSnackbarAction _$$ShowSnackbarActionFromJson(Map<String, dynamic> json) =>
+    _$ShowSnackbarAction(
+      type: json['type'] as String,
+      synchronized: json['synchronized'] as bool? ?? false,
+      backgroundColor: const UIXColorConverter()
+          .fromJson(json['backgroundColor'] as String?),
+      child: json['child'] as Map<String, dynamic>,
+    );
+
+Map<String, dynamic> _$$ShowSnackbarActionToJson(
+        _$ShowSnackbarAction instance) =>
+    <String, dynamic>{
+      'type': instance.type,
+      'synchronized': instance.synchronized,
+      'backgroundColor':
+          const UIXColorConverter().toJson(instance.backgroundColor),
+      'child': instance.child,
+    };
+
 _$UpdateAttributeAction _$$UpdateAttributeActionFromJson(
         Map<String, dynamic> json) =>
     _$UpdateAttributeAction(

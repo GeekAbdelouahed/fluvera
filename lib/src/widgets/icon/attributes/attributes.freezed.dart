@@ -20,7 +20,7 @@ IconAttributes _$IconAttributesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$IconAttributes {
-  UIXAttributeValue<num> get code => throw _privateConstructorUsedError;
+  UIXAttributeValue<String> get code => throw _privateConstructorUsedError;
   UIXAttributeValue<num>? get size => throw _privateConstructorUsedError;
   UIXAttributeValue<String> get fontFamily =>
       throw _privateConstructorUsedError;
@@ -40,12 +40,12 @@ abstract class $IconAttributesCopyWith<$Res> {
       _$IconAttributesCopyWithImpl<$Res, IconAttributes>;
   @useResult
   $Res call(
-      {UIXAttributeValue<num> code,
+      {UIXAttributeValue<String> code,
       UIXAttributeValue<num>? size,
       UIXAttributeValue<String> fontFamily,
       @UIXColorConverter() Color? color});
 
-  $UIXAttributeValueCopyWith<num, $Res> get code;
+  $UIXAttributeValueCopyWith<String, $Res> get code;
   $UIXAttributeValueCopyWith<num, $Res>? get size;
   $UIXAttributeValueCopyWith<String, $Res> get fontFamily;
 }
@@ -72,7 +72,7 @@ class _$IconAttributesCopyWithImpl<$Res, $Val extends IconAttributes>
       code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>,
+              as UIXAttributeValue<String>,
       size: freezed == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
@@ -90,8 +90,8 @@ class _$IconAttributesCopyWithImpl<$Res, $Val extends IconAttributes>
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXAttributeValueCopyWith<num, $Res> get code {
-    return $UIXAttributeValueCopyWith<num, $Res>(_value.code, (value) {
+  $UIXAttributeValueCopyWith<String, $Res> get code {
+    return $UIXAttributeValueCopyWith<String, $Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value) as $Val);
     });
   }
@@ -126,13 +126,13 @@ abstract class _$$_IconAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {UIXAttributeValue<num> code,
+      {UIXAttributeValue<String> code,
       UIXAttributeValue<num>? size,
       UIXAttributeValue<String> fontFamily,
       @UIXColorConverter() Color? color});
 
   @override
-  $UIXAttributeValueCopyWith<num, $Res> get code;
+  $UIXAttributeValueCopyWith<String, $Res> get code;
   @override
   $UIXAttributeValueCopyWith<num, $Res>? get size;
   @override
@@ -159,7 +159,7 @@ class __$$_IconAttributesCopyWithImpl<$Res>
       code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>,
+              as UIXAttributeValue<String>,
       size: freezed == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
@@ -189,7 +189,7 @@ class _$_IconAttributes implements _IconAttributes {
       _$$_IconAttributesFromJson(json);
 
   @override
-  final UIXAttributeValue<num> code;
+  final UIXAttributeValue<String> code;
   @override
   final UIXAttributeValue<num>? size;
   @override
@@ -236,7 +236,7 @@ class _$_IconAttributes implements _IconAttributes {
 
 abstract class _IconAttributes implements IconAttributes {
   const factory _IconAttributes(
-      {required final UIXAttributeValue<num> code,
+      {required final UIXAttributeValue<String> code,
       final UIXAttributeValue<num>? size,
       final UIXAttributeValue<String> fontFamily,
       @UIXColorConverter() final Color? color}) = _$_IconAttributes;
@@ -245,7 +245,7 @@ abstract class _IconAttributes implements IconAttributes {
       _$_IconAttributes.fromJson;
 
   @override
-  UIXAttributeValue<num> get code;
+  UIXAttributeValue<String> get code;
   @override
   UIXAttributeValue<num>? get size;
   @override

@@ -72,4 +72,19 @@ class AppRouter implements UIXNavigator {
       },
     ).closed;
   }
+
+  @override
+  Future snackbar(
+    BuildContext context, {
+    Color? backgroundColor,
+    required Widget child,
+  }) async {
+    return ScaffoldMessenger.of(context)
+        .showSnackBar(
+          SnackBar(
+            content: child,
+          ),
+        )
+        .close;
+  }
 }

@@ -8,8 +8,8 @@ part of 'attributes.dart';
 
 _$_IconAttributes _$$_IconAttributesFromJson(Map<String, dynamic> json) =>
     _$_IconAttributes(
-      code: UIXAttributeValue<num>.fromJson(
-          json['code'] as Map<String, dynamic>, (value) => value as num),
+      code: UIXAttributeValue<String>.fromJson(
+          json['code'] as Map<String, dynamic>, (value) => value as String),
       size: json['size'] == null
           ? null
           : UIXAttributeValue<num>.fromJson(

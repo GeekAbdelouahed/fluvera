@@ -25,4 +25,10 @@ abstract interface class UIXNavigator {
     Color? backgroundColor,
     required Widget child,
   });
+
+  Future<dynamic> snackbar(
+    BuildContext context, {
+    Color? backgroundColor,
+    required Widget child,
+  });
 }

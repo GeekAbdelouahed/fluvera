@@ -12,7 +12,7 @@ class UIXIcon extends UIX<IconAttributes> {
   Widget build(BuildContext context) {
     return Icon(
       IconData(
-        attributes.code.toValue(context).toInt(),
+        int.parse(attributes.code.toValue(context)),
         fontFamily: attributes.fontFamily.toValue(context),
       ),
       key: key,

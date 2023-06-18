@@ -37,6 +37,13 @@ extension UIXActionExtension on UIXActions {
               child: action.child.toWidget()!,
             );
       },
+      showSnackbar: (action) {
+        return UIXProvider.of<UIXNavigator>(context)?.value.snackbar(
+              context,
+              backgroundColor: action.backgroundColor,
+              child: action.child.toWidget()!,
+            );
+      },
       getHttp: (GetHttpAction action) async {
         return UIXProvider.of<UIXHttp>(context)?.value.get(
               action.url,

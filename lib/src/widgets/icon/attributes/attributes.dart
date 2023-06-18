@@ -9,7 +9,7 @@ part 'attributes.g.dart';
 @freezed
 class IconAttributes with _$IconAttributes {
   const factory IconAttributes({
-    required UIXAttributeValue<num> code,
+    required UIXAttributeValue<String> code,
     UIXAttributeValue<num>? size,
     @Default(UIXAttributeValue<String>(value: 'MaterialIcons'))
     UIXAttributeValue<String> fontFamily,

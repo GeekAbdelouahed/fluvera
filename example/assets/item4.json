@@ -1,0 +1,130 @@
+{
+    "type": "Page",
+    "attributes": {
+        "favorite": "0xe25c"
+    },
+    "child": {
+        "type": "Scaffold",
+        "appBar": {
+            "type": "AppBar",
+            "centerTitle": {
+                "value": true
+            },
+            "title": {
+                "type": "Text",
+                "text": {
+                    "value": "Flutter"
+                }
+            },
+            "actions": [
+                {
+                    "type": "InkWell",
+                    "onTap": [
+                        {
+                            "type": "UpdateAttribute",
+                            "key": "favorite",
+                            "value": "0xe25b"
+                        }
+                    ],
+                    "child": {
+                        "type": "Padding",
+                        "padding": {
+                            "start": 16,
+                            "end": 16
+                        },
+                        "child": {
+                            "type": "Icon",
+                            "code": {
+                                "key": "favorite"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "body": {
+            "type": "SingleChildScrollView",
+            "child": {
+                "type": "Column",
+                "crossAxisAlignment": {
+                    "value": "stretch"
+                },
+                "children": [
+                    {
+                        "type": "Image",
+                        "height": {
+                            "value": 250
+                        },
+                        "fit": {
+                            "value": "cover"
+                        },
+                        "path": {
+                            "value": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                        }
+                    },
+                    {
+                        "type": "Padding",
+                        "padding": {
+                            "start": 20,
+                            "end": 20,
+                            "top": 20,
+                            "bottom": 20
+                        },
+                        "child": {
+                            "type": "Column",
+                            "crossAxisAlignment": {
+                                "value": "stretch"
+                            },
+                            "children": [
+                                {
+                                    "type": "Text",
+                                    "text": {
+                                        "value": "Laravel"
+                                    },
+                                    "style": {
+                                        "fontSize": 25,
+                                        "fontWeight": "w700"
+                                    }
+                                },
+                                {
+                                    "type": "SizedBox",
+                                    "height": {
+                                        "value": 4
+                                    }
+                                },
+                                {
+                                    "type": "Text",
+                                    "text": {
+                                        "value": "Php"
+                                    },
+                                    "style": {
+                                        "color": "#666666",
+                                        "fontSize": 17,
+                                        "fontWeight": "w400"
+                                    }
+                                },
+                                {
+                                    "type": "SizedBox",
+                                    "height": {
+                                        "value": 16
+                                    }
+                                },
+                                {
+                                    "type": "Text",
+                                    "text": {
+                                        "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet facilisis magna etiam tempor orci eu lobortis elementum. Eget felis eget nunc lobortis mattis aliquam. Varius duis at consectetur lorem donec massa. Vulputate enim nulla aliquet porttitor. Lorem sed risus ultricies tristique nulla. Platea dictumst quisque sagittis purus sit amet volutpat consequat. In nulla posuere sollicitudin aliquam ultrices sagittis. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Odio tempor orci dapibus ultrices in iaculis nunc sed. Risus viverra adipiscing at in tellus integer feugiat scelerisque varius. Purus in mollis nunc sed id semper risus. Tempor commodo ullamcorper a lacus vestibulum sed arcu non. Neque sodales ut etiam sit amet nisl. In massa tempor nec feugiat nisl pretium."
+                                    },
+                                    "style": {
+                                        "color": "#333333",
+                                        "fontSize": 15,
+                                        "fontWeight": "w400"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

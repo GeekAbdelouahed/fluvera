@@ -1,7 +1,7 @@
-import 'package:example/http.dart';
-import 'package:example/router.dart';
-import 'package:example/ui/details/details.dart';
-import 'package:example/ui/home/home.dart';
+import 'package:example/core/http.dart';
+import 'package:example/core/router.dart';
+import 'package:example/ui/home.dart';
+import 'package:example/ui/item.dart';
 import 'package:flutter/material.dart';
 import 'package:uix/uix.dart';
 
@@ -26,7 +26,7 @@ class AppWidget extends StatelessWidget {
             'details': (context) {
               final String id = (ModalRoute.of(context)!.settings.arguments
                   as Map<String, dynamic>)['id'];
-              return DetailsPage(id: id);
+              return ItemPage(id: id);
             }
           },
           initialRoute: '/',

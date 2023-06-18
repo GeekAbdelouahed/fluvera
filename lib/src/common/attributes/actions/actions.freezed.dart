@@ -24,6 +24,8 @@ UIXActions _$UIXActionsFromJson(Map<String, dynamic> json) {
       return ShowDialogAction.fromJson(json);
     case 'ShowBottomSheet':
       return ShowBottomSheetAction.fromJson(json);
+    case 'ShowSnackbar':
+      return ShowSnackbarAction.fromJson(json);
     case 'UpdateAttribute':
       return UpdateAttributeAction.fromJson(json);
     case 'GetHttp':
@@ -50,8 +52,7 @@ mixin _$UIXActions {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, Map<String, dynamic> child)
@@ -64,13 +65,18 @@ mixin _$UIXActions {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)
         showBottomSheet,
+    required TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)
+        showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) =>
@@ -80,8 +86,7 @@ mixin _$UIXActions {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -94,13 +99,18 @@ mixin _$UIXActions {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult? Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) =>
@@ -110,8 +120,7 @@ mixin _$UIXActions {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -124,13 +133,18 @@ mixin _$UIXActions {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
-        getHttp,
     TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+            Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
@@ -142,6 +156,7 @@ mixin _$UIXActions {
     required TResult Function(PopRouteAction value) popRoute,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(ShowSnackbarAction value) showSnackbar,
     required TResult Function(UpdateAttributeAction value) updateAttribute,
     required TResult Function(GetHttpAction value) getHttp,
     required TResult Function(PostHttpAction value) postHttp,
@@ -155,6 +170,7 @@ mixin _$UIXActions {
     TResult? Function(PopRouteAction value)? popRoute,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(ShowSnackbarAction value)? showSnackbar,
     TResult? Function(UpdateAttributeAction value)? updateAttribute,
     TResult? Function(GetHttpAction value)? getHttp,
     TResult? Function(PostHttpAction value)? postHttp,
@@ -168,6 +184,7 @@ mixin _$UIXActions {
     TResult Function(PopRouteAction value)? popRoute,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(ShowSnackbarAction value)? showSnackbar,
     TResult Function(UpdateAttributeAction value)? updateAttribute,
     TResult Function(GetHttpAction value)? getHttp,
     TResult Function(PostHttpAction value)? postHttp,
@@ -337,8 +354,7 @@ class _$PushRouteAction implements PushRouteAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, Map<String, dynamic> child)
@@ -351,13 +367,18 @@ class _$PushRouteAction implements PushRouteAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)
         showBottomSheet,
+    required TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)
+        showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
@@ -370,8 +391,7 @@ class _$PushRouteAction implements PushRouteAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -384,13 +404,18 @@ class _$PushRouteAction implements PushRouteAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult? Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
@@ -403,8 +428,7 @@ class _$PushRouteAction implements PushRouteAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -417,13 +441,18 @@ class _$PushRouteAction implements PushRouteAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
-        getHttp,
     TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+            Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
@@ -441,6 +470,7 @@ class _$PushRouteAction implements PushRouteAction {
     required TResult Function(PopRouteAction value) popRoute,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(ShowSnackbarAction value) showSnackbar,
     required TResult Function(UpdateAttributeAction value) updateAttribute,
     required TResult Function(GetHttpAction value) getHttp,
     required TResult Function(PostHttpAction value) postHttp,
@@ -457,6 +487,7 @@ class _$PushRouteAction implements PushRouteAction {
     TResult? Function(PopRouteAction value)? popRoute,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(ShowSnackbarAction value)? showSnackbar,
     TResult? Function(UpdateAttributeAction value)? updateAttribute,
     TResult? Function(GetHttpAction value)? getHttp,
     TResult? Function(PostHttpAction value)? postHttp,
@@ -473,6 +504,7 @@ class _$PushRouteAction implements PushRouteAction {
     TResult Function(PopRouteAction value)? popRoute,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(ShowSnackbarAction value)? showSnackbar,
     TResult Function(UpdateAttributeAction value)? updateAttribute,
     TResult Function(GetHttpAction value)? getHttp,
     TResult Function(PostHttpAction value)? postHttp,
@@ -619,8 +651,7 @@ class _$PopRouteAction implements PopRouteAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, Map<String, dynamic> child)
@@ -633,13 +664,18 @@ class _$PopRouteAction implements PopRouteAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)
         showBottomSheet,
+    required TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)
+        showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
@@ -652,8 +688,7 @@ class _$PopRouteAction implements PopRouteAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -666,13 +701,18 @@ class _$PopRouteAction implements PopRouteAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult? Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
@@ -685,8 +725,7 @@ class _$PopRouteAction implements PopRouteAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -699,13 +738,18 @@ class _$PopRouteAction implements PopRouteAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
-        getHttp,
     TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+            Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
@@ -723,6 +767,7 @@ class _$PopRouteAction implements PopRouteAction {
     required TResult Function(PopRouteAction value) popRoute,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(ShowSnackbarAction value) showSnackbar,
     required TResult Function(UpdateAttributeAction value) updateAttribute,
     required TResult Function(GetHttpAction value) getHttp,
     required TResult Function(PostHttpAction value) postHttp,
@@ -739,6 +784,7 @@ class _$PopRouteAction implements PopRouteAction {
     TResult? Function(PopRouteAction value)? popRoute,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(ShowSnackbarAction value)? showSnackbar,
     TResult? Function(UpdateAttributeAction value)? updateAttribute,
     TResult? Function(GetHttpAction value)? getHttp,
     TResult? Function(PostHttpAction value)? postHttp,
@@ -755,6 +801,7 @@ class _$PopRouteAction implements PopRouteAction {
     TResult Function(PopRouteAction value)? popRoute,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(ShowSnackbarAction value)? showSnackbar,
     TResult Function(UpdateAttributeAction value)? updateAttribute,
     TResult Function(GetHttpAction value)? getHttp,
     TResult Function(PostHttpAction value)? postHttp,
@@ -912,8 +959,7 @@ class _$ShowDialogAction implements ShowDialogAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, Map<String, dynamic> child)
@@ -926,13 +972,18 @@ class _$ShowDialogAction implements ShowDialogAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)
         showBottomSheet,
+    required TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)
+        showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
@@ -945,8 +996,7 @@ class _$ShowDialogAction implements ShowDialogAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -959,13 +1009,18 @@ class _$ShowDialogAction implements ShowDialogAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult? Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
@@ -978,8 +1033,7 @@ class _$ShowDialogAction implements ShowDialogAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -992,13 +1046,18 @@ class _$ShowDialogAction implements ShowDialogAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
-        getHttp,
     TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+            Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
@@ -1016,6 +1075,7 @@ class _$ShowDialogAction implements ShowDialogAction {
     required TResult Function(PopRouteAction value) popRoute,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(ShowSnackbarAction value) showSnackbar,
     required TResult Function(UpdateAttributeAction value) updateAttribute,
     required TResult Function(GetHttpAction value) getHttp,
     required TResult Function(PostHttpAction value) postHttp,
@@ -1032,6 +1092,7 @@ class _$ShowDialogAction implements ShowDialogAction {
     TResult? Function(PopRouteAction value)? popRoute,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(ShowSnackbarAction value)? showSnackbar,
     TResult? Function(UpdateAttributeAction value)? updateAttribute,
     TResult? Function(GetHttpAction value)? getHttp,
     TResult? Function(PostHttpAction value)? postHttp,
@@ -1048,6 +1109,7 @@ class _$ShowDialogAction implements ShowDialogAction {
     TResult Function(PopRouteAction value)? popRoute,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(ShowSnackbarAction value)? showSnackbar,
     TResult Function(UpdateAttributeAction value)? updateAttribute,
     TResult Function(GetHttpAction value)? getHttp,
     TResult Function(PostHttpAction value)? postHttp,
@@ -1230,8 +1292,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, Map<String, dynamic> child)
@@ -1244,13 +1305,18 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)
         showBottomSheet,
+    required TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)
+        showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
@@ -1264,8 +1330,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -1278,13 +1343,18 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult? Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
@@ -1298,8 +1368,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -1312,13 +1381,18 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
-        getHttp,
     TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+            Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
@@ -1337,6 +1411,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
     required TResult Function(PopRouteAction value) popRoute,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(ShowSnackbarAction value) showSnackbar,
     required TResult Function(UpdateAttributeAction value) updateAttribute,
     required TResult Function(GetHttpAction value) getHttp,
     required TResult Function(PostHttpAction value) postHttp,
@@ -1353,6 +1428,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
     TResult? Function(PopRouteAction value)? popRoute,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(ShowSnackbarAction value)? showSnackbar,
     TResult? Function(UpdateAttributeAction value)? updateAttribute,
     TResult? Function(GetHttpAction value)? getHttp,
     TResult? Function(PostHttpAction value)? postHttp,
@@ -1369,6 +1445,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
     TResult Function(PopRouteAction value)? popRoute,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(ShowSnackbarAction value)? showSnackbar,
     TResult Function(UpdateAttributeAction value)? updateAttribute,
     TResult Function(GetHttpAction value)? getHttp,
     TResult Function(PostHttpAction value)? postHttp,
@@ -1414,6 +1491,318 @@ abstract class ShowBottomSheetAction implements UIXActions {
   @override
   @JsonKey(ignore: true)
   _$$ShowBottomSheetActionCopyWith<_$ShowBottomSheetAction> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ShowSnackbarActionCopyWith<$Res>
+    implements $UIXActionsCopyWith<$Res> {
+  factory _$$ShowSnackbarActionCopyWith(_$ShowSnackbarAction value,
+          $Res Function(_$ShowSnackbarAction) then) =
+      __$$ShowSnackbarActionCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String type,
+      bool synchronized,
+      @UIXColorConverter() Color? backgroundColor,
+      Map<String, dynamic> child});
+}
+
+/// @nodoc
+class __$$ShowSnackbarActionCopyWithImpl<$Res>
+    extends _$UIXActionsCopyWithImpl<$Res, _$ShowSnackbarAction>
+    implements _$$ShowSnackbarActionCopyWith<$Res> {
+  __$$ShowSnackbarActionCopyWithImpl(
+      _$ShowSnackbarAction _value, $Res Function(_$ShowSnackbarAction) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = null,
+    Object? synchronized = null,
+    Object? backgroundColor = freezed,
+    Object? child = null,
+  }) {
+    return _then(_$ShowSnackbarAction(
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      synchronized: null == synchronized
+          ? _value.synchronized
+          : synchronized // ignore: cast_nullable_to_non_nullable
+              as bool,
+      backgroundColor: freezed == backgroundColor
+          ? _value.backgroundColor
+          : backgroundColor // ignore: cast_nullable_to_non_nullable
+              as Color?,
+      child: null == child
+          ? _value._child
+          : child // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ShowSnackbarAction implements ShowSnackbarAction {
+  const _$ShowSnackbarAction(
+      {required this.type,
+      this.synchronized = false,
+      @UIXColorConverter() this.backgroundColor,
+      required final Map<String, dynamic> child})
+      : _child = child;
+
+  factory _$ShowSnackbarAction.fromJson(Map<String, dynamic> json) =>
+      _$$ShowSnackbarActionFromJson(json);
+
+  @override
+  final String type;
+  @override
+  @JsonKey()
+  final bool synchronized;
+  @override
+  @UIXColorConverter()
+  final Color? backgroundColor;
+  final Map<String, dynamic> _child;
+  @override
+  Map<String, dynamic> get child {
+    if (_child is EqualUnmodifiableMapView) return _child;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_child);
+  }
+
+  @override
+  String toString() {
+    return 'UIXActions.showSnackbar(type: $type, synchronized: $synchronized, backgroundColor: $backgroundColor, child: $child)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ShowSnackbarAction &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.synchronized, synchronized) ||
+                other.synchronized == synchronized) &&
+            (identical(other.backgroundColor, backgroundColor) ||
+                other.backgroundColor == backgroundColor) &&
+            const DeepCollectionEquality().equals(other._child, _child));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, type, synchronized,
+      backgroundColor, const DeepCollectionEquality().hash(_child));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ShowSnackbarActionCopyWith<_$ShowSnackbarAction> get copyWith =>
+      __$$ShowSnackbarActionCopyWithImpl<_$ShowSnackbarAction>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)
+        pushRoute,
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
+        popRoute,
+    required TResult Function(String type, bool synchronized,
+            bool barrierDismissible, Map<String, dynamic> child)
+        showDialog,
+    required TResult Function(
+            String type,
+            bool synchronized,
+            bool? enableDrag,
+            double? elevation,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)
+        showBottomSheet,
+    required TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)
+        showSnackbar,
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
+        updateAttribute,
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
+        getHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
+  }) {
+    return showSnackbar(type, synchronized, backgroundColor, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
+        pushRoute,
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+        popRoute,
+    TResult? Function(String type, bool synchronized, bool barrierDismissible,
+            Map<String, dynamic> child)?
+        showDialog,
+    TResult? Function(
+            String type,
+            bool synchronized,
+            bool? enableDrag,
+            double? elevation,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showBottomSheet,
+    TResult? Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+  }) {
+    return showSnackbar?.call(type, synchronized, backgroundColor, child);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
+        pushRoute,
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+        popRoute,
+    TResult Function(String type, bool synchronized, bool barrierDismissible,
+            Map<String, dynamic> child)?
+        showDialog,
+    TResult Function(
+            String type,
+            bool synchronized,
+            bool? enableDrag,
+            double? elevation,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showBottomSheet,
+    TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
+    TResult Function(String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    required TResult orElse(),
+  }) {
+    if (showSnackbar != null) {
+      return showSnackbar(type, synchronized, backgroundColor, child);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PushRouteAction value) pushRoute,
+    required TResult Function(PopRouteAction value) popRoute,
+    required TResult Function(ShowDialogAction value) showDialog,
+    required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(ShowSnackbarAction value) showSnackbar,
+    required TResult Function(UpdateAttributeAction value) updateAttribute,
+    required TResult Function(GetHttpAction value) getHttp,
+    required TResult Function(PostHttpAction value) postHttp,
+    required TResult Function(PutHttpAction value) putHttp,
+    required TResult Function(DeleteHttpAction value) deleteHttp,
+  }) {
+    return showSnackbar(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PushRouteAction value)? pushRoute,
+    TResult? Function(PopRouteAction value)? popRoute,
+    TResult? Function(ShowDialogAction value)? showDialog,
+    TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(ShowSnackbarAction value)? showSnackbar,
+    TResult? Function(UpdateAttributeAction value)? updateAttribute,
+    TResult? Function(GetHttpAction value)? getHttp,
+    TResult? Function(PostHttpAction value)? postHttp,
+    TResult? Function(PutHttpAction value)? putHttp,
+    TResult? Function(DeleteHttpAction value)? deleteHttp,
+  }) {
+    return showSnackbar?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PushRouteAction value)? pushRoute,
+    TResult Function(PopRouteAction value)? popRoute,
+    TResult Function(ShowDialogAction value)? showDialog,
+    TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(ShowSnackbarAction value)? showSnackbar,
+    TResult Function(UpdateAttributeAction value)? updateAttribute,
+    TResult Function(GetHttpAction value)? getHttp,
+    TResult Function(PostHttpAction value)? postHttp,
+    TResult Function(PutHttpAction value)? putHttp,
+    TResult Function(DeleteHttpAction value)? deleteHttp,
+    required TResult orElse(),
+  }) {
+    if (showSnackbar != null) {
+      return showSnackbar(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ShowSnackbarActionToJson(
+      this,
+    );
+  }
+}
+
+abstract class ShowSnackbarAction implements UIXActions {
+  const factory ShowSnackbarAction(
+      {required final String type,
+      final bool synchronized,
+      @UIXColorConverter() final Color? backgroundColor,
+      required final Map<String, dynamic> child}) = _$ShowSnackbarAction;
+
+  factory ShowSnackbarAction.fromJson(Map<String, dynamic> json) =
+      _$ShowSnackbarAction.fromJson;
+
+  @override
+  String get type;
+  @override
+  bool get synchronized;
+  @UIXColorConverter()
+  Color? get backgroundColor;
+  Map<String, dynamic> get child;
+  @override
+  @JsonKey(ignore: true)
+  _$$ShowSnackbarActionCopyWith<_$ShowSnackbarAction> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1522,8 +1911,7 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, Map<String, dynamic> child)
@@ -1536,13 +1924,18 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)
         showBottomSheet,
+    required TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)
+        showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
@@ -1555,8 +1948,7 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -1569,13 +1961,18 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult? Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
@@ -1588,8 +1985,7 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -1602,13 +1998,18 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
-        getHttp,
     TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+            Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
@@ -1626,6 +2027,7 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
     required TResult Function(PopRouteAction value) popRoute,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(ShowSnackbarAction value) showSnackbar,
     required TResult Function(UpdateAttributeAction value) updateAttribute,
     required TResult Function(GetHttpAction value) getHttp,
     required TResult Function(PostHttpAction value) postHttp,
@@ -1642,6 +2044,7 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
     TResult? Function(PopRouteAction value)? popRoute,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(ShowSnackbarAction value)? showSnackbar,
     TResult? Function(UpdateAttributeAction value)? updateAttribute,
     TResult? Function(GetHttpAction value)? getHttp,
     TResult? Function(PostHttpAction value)? postHttp,
@@ -1658,6 +2061,7 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
     TResult Function(PopRouteAction value)? popRoute,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(ShowSnackbarAction value)? showSnackbar,
     TResult Function(UpdateAttributeAction value)? updateAttribute,
     TResult Function(GetHttpAction value)? getHttp,
     TResult Function(PostHttpAction value)? postHttp,
@@ -1817,8 +2221,7 @@ class _$GetHttpAction implements GetHttpAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, Map<String, dynamic> child)
@@ -1831,13 +2234,18 @@ class _$GetHttpAction implements GetHttpAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)
         showBottomSheet,
+    required TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)
+        showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
@@ -1850,8 +2258,7 @@ class _$GetHttpAction implements GetHttpAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -1864,13 +2271,18 @@ class _$GetHttpAction implements GetHttpAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult? Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
@@ -1883,8 +2295,7 @@ class _$GetHttpAction implements GetHttpAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -1897,13 +2308,18 @@ class _$GetHttpAction implements GetHttpAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
-        getHttp,
     TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+            Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
@@ -1921,6 +2337,7 @@ class _$GetHttpAction implements GetHttpAction {
     required TResult Function(PopRouteAction value) popRoute,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(ShowSnackbarAction value) showSnackbar,
     required TResult Function(UpdateAttributeAction value) updateAttribute,
     required TResult Function(GetHttpAction value) getHttp,
     required TResult Function(PostHttpAction value) postHttp,
@@ -1937,6 +2354,7 @@ class _$GetHttpAction implements GetHttpAction {
     TResult? Function(PopRouteAction value)? popRoute,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(ShowSnackbarAction value)? showSnackbar,
     TResult? Function(UpdateAttributeAction value)? updateAttribute,
     TResult? Function(GetHttpAction value)? getHttp,
     TResult? Function(PostHttpAction value)? postHttp,
@@ -1953,6 +2371,7 @@ class _$GetHttpAction implements GetHttpAction {
     TResult Function(PopRouteAction value)? popRoute,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(ShowSnackbarAction value)? showSnackbar,
     TResult Function(UpdateAttributeAction value)? updateAttribute,
     TResult Function(GetHttpAction value)? getHttp,
     TResult Function(PostHttpAction value)? postHttp,
@@ -2128,8 +2547,7 @@ class _$PostHttpAction implements PostHttpAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, Map<String, dynamic> child)
@@ -2142,13 +2560,18 @@ class _$PostHttpAction implements PostHttpAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)
         showBottomSheet,
+    required TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)
+        showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
@@ -2161,8 +2584,7 @@ class _$PostHttpAction implements PostHttpAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -2175,13 +2597,18 @@ class _$PostHttpAction implements PostHttpAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult? Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
@@ -2194,8 +2621,7 @@ class _$PostHttpAction implements PostHttpAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -2208,13 +2634,18 @@ class _$PostHttpAction implements PostHttpAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
-        getHttp,
     TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+            Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
@@ -2232,6 +2663,7 @@ class _$PostHttpAction implements PostHttpAction {
     required TResult Function(PopRouteAction value) popRoute,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(ShowSnackbarAction value) showSnackbar,
     required TResult Function(UpdateAttributeAction value) updateAttribute,
     required TResult Function(GetHttpAction value) getHttp,
     required TResult Function(PostHttpAction value) postHttp,
@@ -2248,6 +2680,7 @@ class _$PostHttpAction implements PostHttpAction {
     TResult? Function(PopRouteAction value)? popRoute,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(ShowSnackbarAction value)? showSnackbar,
     TResult? Function(UpdateAttributeAction value)? updateAttribute,
     TResult? Function(GetHttpAction value)? getHttp,
     TResult? Function(PostHttpAction value)? postHttp,
@@ -2264,6 +2697,7 @@ class _$PostHttpAction implements PostHttpAction {
     TResult Function(PopRouteAction value)? popRoute,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(ShowSnackbarAction value)? showSnackbar,
     TResult Function(UpdateAttributeAction value)? updateAttribute,
     TResult Function(GetHttpAction value)? getHttp,
     TResult Function(PostHttpAction value)? postHttp,
@@ -2441,8 +2875,7 @@ class _$PutHttpAction implements PutHttpAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, Map<String, dynamic> child)
@@ -2455,13 +2888,18 @@ class _$PutHttpAction implements PutHttpAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)
         showBottomSheet,
+    required TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)
+        showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
@@ -2474,8 +2912,7 @@ class _$PutHttpAction implements PutHttpAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -2488,13 +2925,18 @@ class _$PutHttpAction implements PutHttpAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult? Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
@@ -2507,8 +2949,7 @@ class _$PutHttpAction implements PutHttpAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -2521,13 +2962,18 @@ class _$PutHttpAction implements PutHttpAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
-        getHttp,
     TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+            Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
@@ -2545,6 +2991,7 @@ class _$PutHttpAction implements PutHttpAction {
     required TResult Function(PopRouteAction value) popRoute,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(ShowSnackbarAction value) showSnackbar,
     required TResult Function(UpdateAttributeAction value) updateAttribute,
     required TResult Function(GetHttpAction value) getHttp,
     required TResult Function(PostHttpAction value) postHttp,
@@ -2561,6 +3008,7 @@ class _$PutHttpAction implements PutHttpAction {
     TResult? Function(PopRouteAction value)? popRoute,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(ShowSnackbarAction value)? showSnackbar,
     TResult? Function(UpdateAttributeAction value)? updateAttribute,
     TResult? Function(GetHttpAction value)? getHttp,
     TResult? Function(PostHttpAction value)? postHttp,
@@ -2577,6 +3025,7 @@ class _$PutHttpAction implements PutHttpAction {
     TResult Function(PopRouteAction value)? popRoute,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(ShowSnackbarAction value)? showSnackbar,
     TResult Function(UpdateAttributeAction value)? updateAttribute,
     TResult Function(GetHttpAction value)? getHttp,
     TResult Function(PostHttpAction value)? postHttp,
@@ -2754,8 +3203,7 @@ class _$DeleteHttpAction implements DeleteHttpAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, Map<String, dynamic> child)
@@ -2768,13 +3216,18 @@ class _$DeleteHttpAction implements DeleteHttpAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)
         showBottomSheet,
+    required TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)
+        showSnackbar,
     required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
     required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
@@ -2787,8 +3240,7 @@ class _$DeleteHttpAction implements DeleteHttpAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -2801,13 +3253,18 @@ class _$DeleteHttpAction implements DeleteHttpAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult? Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
@@ -2820,8 +3277,7 @@ class _$DeleteHttpAction implements DeleteHttpAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             Map<String, dynamic> child)?
@@ -2834,13 +3290,18 @@ class _$DeleteHttpAction implements DeleteHttpAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
+    TResult Function(
+            String type,
+            bool synchronized,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
-        getHttp,
     TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
+            Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
     TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
@@ -2858,6 +3319,7 @@ class _$DeleteHttpAction implements DeleteHttpAction {
     required TResult Function(PopRouteAction value) popRoute,
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(ShowSnackbarAction value) showSnackbar,
     required TResult Function(UpdateAttributeAction value) updateAttribute,
     required TResult Function(GetHttpAction value) getHttp,
     required TResult Function(PostHttpAction value) postHttp,
@@ -2874,6 +3336,7 @@ class _$DeleteHttpAction implements DeleteHttpAction {
     TResult? Function(PopRouteAction value)? popRoute,
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(ShowSnackbarAction value)? showSnackbar,
     TResult? Function(UpdateAttributeAction value)? updateAttribute,
     TResult? Function(GetHttpAction value)? getHttp,
     TResult? Function(PostHttpAction value)? postHttp,
@@ -2890,6 +3353,7 @@ class _$DeleteHttpAction implements DeleteHttpAction {
     TResult Function(PopRouteAction value)? popRoute,
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(ShowSnackbarAction value)? showSnackbar,
     TResult Function(UpdateAttributeAction value)? updateAttribute,
     TResult Function(GetHttpAction value)? getHttp,
     TResult Function(PostHttpAction value)? postHttp,

@@ -36,6 +36,13 @@ class UIXActions with _$UIXActions {
     required Map<String, dynamic> child,
   }) = ShowBottomSheetAction;
 
+  const factory UIXActions.showSnackbar({
+    required String type,
+    @Default(false) bool synchronized,
+    @UIXColorConverter() Color? backgroundColor,
+    required Map<String, dynamic> child,
+  }) = ShowSnackbarAction;
+
   const factory UIXActions.updateAttribute({
     required String type,
     @Default(false) bool synchronized,
