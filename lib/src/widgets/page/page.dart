@@ -31,8 +31,11 @@ class _Page extends StatefulWidget {
 }
 
 class _PageState extends State<_Page> {
-  late final _attributesNotifier =
-      UIXAttributesNotifier(Map.from(widget.attributes.attributes));
+  late final UIXAttributesNotifier _attributesNotifier = UIXAttributesNotifier(
+    Map.from(
+      widget.attributes.attributes,
+    ),
+  );
 
   @override
   void dispose() {

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uix/src/widgets/ink_well/attributes/attributes.dart';
 import 'package:uix/src/widgets/uix.dart';
-import 'package:uix/uix.dart';
 
 class UIXInkWell extends UIX<InkWellAttributes> {
   const UIXInkWell(Map<String, dynamic> json) : super(json);

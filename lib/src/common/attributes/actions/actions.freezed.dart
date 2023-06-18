@@ -291,13 +291,14 @@ class __$$PushRouteActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$PushRouteAction implements PushRouteAction {
+class _$PushRouteAction extends PushRouteAction {
   const _$PushRouteAction(
       {required this.type,
       this.synchronized = false,
       required this.routeName,
       final Map<String, dynamic>? queries})
-      : _queries = queries;
+      : _queries = queries,
+        super._();
 
   factory _$PushRouteAction.fromJson(Map<String, dynamic> json) =>
       _$$PushRouteActionFromJson(json);
@@ -526,12 +527,13 @@ class _$PushRouteAction implements PushRouteAction {
   }
 }
 
-abstract class PushRouteAction implements UIXActions {
+abstract class PushRouteAction extends UIXActions {
   const factory PushRouteAction(
       {required final String type,
       final bool synchronized,
       required final String routeName,
       final Map<String, dynamic>? queries}) = _$PushRouteAction;
+  const PushRouteAction._() : super._();
 
   factory PushRouteAction.fromJson(Map<String, dynamic> json) =
       _$PushRouteAction.fromJson;
@@ -593,12 +595,13 @@ class __$$PopRouteActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$PopRouteAction implements PopRouteAction {
+class _$PopRouteAction extends PopRouteAction {
   const _$PopRouteAction(
       {required this.type,
       this.synchronized = false,
       final Map<String, dynamic>? queries})
-      : _queries = queries;
+      : _queries = queries,
+        super._();
 
   factory _$PopRouteAction.fromJson(Map<String, dynamic> json) =>
       _$$PopRouteActionFromJson(json);
@@ -823,11 +826,12 @@ class _$PopRouteAction implements PopRouteAction {
   }
 }
 
-abstract class PopRouteAction implements UIXActions {
+abstract class PopRouteAction extends UIXActions {
   const factory PopRouteAction(
       {required final String type,
       final bool synchronized,
       final Map<String, dynamic>? queries}) = _$PopRouteAction;
+  const PopRouteAction._() : super._();
 
   factory PopRouteAction.fromJson(Map<String, dynamic> json) =
       _$PopRouteAction.fromJson;
@@ -897,12 +901,13 @@ class __$$ShowDialogActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ShowDialogAction implements ShowDialogAction {
+class _$ShowDialogAction extends ShowDialogAction {
   const _$ShowDialogAction(
       {required this.type,
       this.synchronized = false,
       this.barrierDismissible = true,
-      @UIXWidgetConverter() required this.child});
+      @UIXWidgetConverter() required this.child})
+      : super._();
 
   factory _$ShowDialogAction.fromJson(Map<String, dynamic> json) =>
       _$$ShowDialogActionFromJson(json);
@@ -1126,12 +1131,13 @@ class _$ShowDialogAction implements ShowDialogAction {
   }
 }
 
-abstract class ShowDialogAction implements UIXActions {
+abstract class ShowDialogAction extends UIXActions {
   const factory ShowDialogAction(
       {required final String type,
       final bool synchronized,
       final bool barrierDismissible,
       @UIXWidgetConverter() required final Widget child}) = _$ShowDialogAction;
+  const ShowDialogAction._() : super._();
 
   factory ShowDialogAction.fromJson(Map<String, dynamic> json) =
       _$ShowDialogAction.fromJson;
@@ -1215,14 +1221,15 @@ class __$$ShowBottomSheetActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ShowBottomSheetAction implements ShowBottomSheetAction {
+class _$ShowBottomSheetAction extends ShowBottomSheetAction {
   const _$ShowBottomSheetAction(
       {required this.type,
       this.synchronized = false,
       this.enableDrag,
       this.elevation,
       @UIXColorConverter() this.backgroundColor,
-      @UIXWidgetConverter() required this.child});
+      @UIXWidgetConverter() required this.child})
+      : super._();
 
   factory _$ShowBottomSheetAction.fromJson(Map<String, dynamic> json) =>
       _$$ShowBottomSheetActionFromJson(json);
@@ -1458,7 +1465,7 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
   }
 }
 
-abstract class ShowBottomSheetAction implements UIXActions {
+abstract class ShowBottomSheetAction extends UIXActions {
   const factory ShowBottomSheetAction(
           {required final String type,
           final bool synchronized,
@@ -1467,6 +1474,7 @@ abstract class ShowBottomSheetAction implements UIXActions {
           @UIXColorConverter() final Color? backgroundColor,
           @UIXWidgetConverter() required final Widget child}) =
       _$ShowBottomSheetAction;
+  const ShowBottomSheetAction._() : super._();
 
   factory ShowBottomSheetAction.fromJson(Map<String, dynamic> json) =
       _$ShowBottomSheetAction.fromJson;
@@ -1541,12 +1549,13 @@ class __$$ShowSnackbarActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ShowSnackbarAction implements ShowSnackbarAction {
+class _$ShowSnackbarAction extends ShowSnackbarAction {
   const _$ShowSnackbarAction(
       {required this.type,
       this.synchronized = false,
       @UIXColorConverter() this.backgroundColor,
-      @UIXWidgetConverter() required this.child});
+      @UIXWidgetConverter() required this.child})
+      : super._();
 
   factory _$ShowSnackbarAction.fromJson(Map<String, dynamic> json) =>
       _$$ShowSnackbarActionFromJson(json);
@@ -1771,13 +1780,14 @@ class _$ShowSnackbarAction implements ShowSnackbarAction {
   }
 }
 
-abstract class ShowSnackbarAction implements UIXActions {
+abstract class ShowSnackbarAction extends UIXActions {
   const factory ShowSnackbarAction(
           {required final String type,
           final bool synchronized,
           @UIXColorConverter() final Color? backgroundColor,
           @UIXWidgetConverter() required final Widget child}) =
       _$ShowSnackbarAction;
+  const ShowSnackbarAction._() : super._();
 
   factory ShowSnackbarAction.fromJson(Map<String, dynamic> json) =
       _$ShowSnackbarAction.fromJson;
@@ -1846,12 +1856,13 @@ class __$$UpdateAttributeActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$UpdateAttributeAction implements UpdateAttributeAction {
+class _$UpdateAttributeAction extends UpdateAttributeAction {
   const _$UpdateAttributeAction(
       {required this.type,
       this.synchronized = false,
       required this.key,
-      this.value});
+      this.value})
+      : super._();
 
   factory _$UpdateAttributeAction.fromJson(Map<String, dynamic> json) =>
       _$$UpdateAttributeActionFromJson(json);
@@ -2073,12 +2084,13 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
   }
 }
 
-abstract class UpdateAttributeAction implements UIXActions {
+abstract class UpdateAttributeAction extends UIXActions {
   const factory UpdateAttributeAction(
       {required final String type,
       final bool synchronized,
       required final String key,
       final dynamic value}) = _$UpdateAttributeAction;
+  const UpdateAttributeAction._() : super._();
 
   factory UpdateAttributeAction.fromJson(Map<String, dynamic> json) =
       _$UpdateAttributeAction.fromJson;
@@ -2149,13 +2161,14 @@ class __$$GetHttpActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$GetHttpAction implements GetHttpAction {
+class _$GetHttpAction extends GetHttpAction {
   const _$GetHttpAction(
       {required this.type,
       this.synchronized = false,
       required this.url,
       final Map<String, String>? headers})
-      : _headers = headers;
+      : _headers = headers,
+        super._();
 
   factory _$GetHttpAction.fromJson(Map<String, dynamic> json) =>
       _$$GetHttpActionFromJson(json);
@@ -2383,12 +2396,13 @@ class _$GetHttpAction implements GetHttpAction {
   }
 }
 
-abstract class GetHttpAction implements UIXActions {
+abstract class GetHttpAction extends UIXActions {
   const factory GetHttpAction(
       {required final String type,
       final bool synchronized,
       required final String url,
       final Map<String, String>? headers}) = _$GetHttpAction;
+  const GetHttpAction._() : super._();
 
   factory GetHttpAction.fromJson(Map<String, dynamic> json) =
       _$GetHttpAction.fromJson;
@@ -2465,14 +2479,15 @@ class __$$PostHttpActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$PostHttpAction implements PostHttpAction {
+class _$PostHttpAction extends PostHttpAction {
   const _$PostHttpAction(
       {required this.type,
       this.synchronized = false,
       required this.url,
       final Map<String, String>? headers,
       this.body})
-      : _headers = headers;
+      : _headers = headers,
+        super._();
 
   factory _$PostHttpAction.fromJson(Map<String, dynamic> json) =>
       _$$PostHttpActionFromJson(json);
@@ -2709,13 +2724,14 @@ class _$PostHttpAction implements PostHttpAction {
   }
 }
 
-abstract class PostHttpAction implements UIXActions {
+abstract class PostHttpAction extends UIXActions {
   const factory PostHttpAction(
       {required final String type,
       final bool synchronized,
       required final String url,
       final Map<String, String>? headers,
       final dynamic body}) = _$PostHttpAction;
+  const PostHttpAction._() : super._();
 
   factory PostHttpAction.fromJson(Map<String, dynamic> json) =
       _$PostHttpAction.fromJson;
@@ -2793,14 +2809,15 @@ class __$$PutHttpActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$PutHttpAction implements PutHttpAction {
+class _$PutHttpAction extends PutHttpAction {
   const _$PutHttpAction(
       {required this.type,
       this.synchronized = false,
       required this.url,
       final Map<String, String>? headers,
       this.body})
-      : _headers = headers;
+      : _headers = headers,
+        super._();
 
   factory _$PutHttpAction.fromJson(Map<String, dynamic> json) =>
       _$$PutHttpActionFromJson(json);
@@ -3037,13 +3054,14 @@ class _$PutHttpAction implements PutHttpAction {
   }
 }
 
-abstract class PutHttpAction implements UIXActions {
+abstract class PutHttpAction extends UIXActions {
   const factory PutHttpAction(
       {required final String type,
       final bool synchronized,
       required final String url,
       final Map<String, String>? headers,
       final dynamic body}) = _$PutHttpAction;
+  const PutHttpAction._() : super._();
 
   factory PutHttpAction.fromJson(Map<String, dynamic> json) =
       _$PutHttpAction.fromJson;
@@ -3121,14 +3139,15 @@ class __$$DeleteHttpActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$DeleteHttpAction implements DeleteHttpAction {
+class _$DeleteHttpAction extends DeleteHttpAction {
   const _$DeleteHttpAction(
       {required this.type,
       this.synchronized = false,
       required this.url,
       final Map<String, String>? headers,
       this.body})
-      : _headers = headers;
+      : _headers = headers,
+        super._();
 
   factory _$DeleteHttpAction.fromJson(Map<String, dynamic> json) =>
       _$$DeleteHttpActionFromJson(json);
@@ -3365,13 +3384,14 @@ class _$DeleteHttpAction implements DeleteHttpAction {
   }
 }
 
-abstract class DeleteHttpAction implements UIXActions {
+abstract class DeleteHttpAction extends UIXActions {
   const factory DeleteHttpAction(
       {required final String type,
       final bool synchronized,
       required final String url,
       final Map<String, String>? headers,
       final dynamic body}) = _$DeleteHttpAction;
+  const DeleteHttpAction._() : super._();
 
   factory DeleteHttpAction.fromJson(Map<String, dynamic> json) =
       _$DeleteHttpAction.fromJson;
