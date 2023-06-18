@@ -26,6 +26,14 @@ UIXActions _$UIXActionsFromJson(Map<String, dynamic> json) {
       return ShowBottomSheetAction.fromJson(json);
     case 'UpdateAttribute':
       return UpdateAttributeAction.fromJson(json);
+    case 'GetHttp':
+      return GetHttpAction.fromJson(json);
+    case 'PostHttp':
+      return PostHttpAction.fromJson(json);
+    case 'PutHttp':
+      return PutHttpAction.fromJson(json);
+    case 'DeleteHttp':
+      return DeleteHttpAction.fromJson(json);
 
     default:
       throw CheckedFromJsonException(
@@ -56,9 +64,15 @@ mixin _$UIXActions {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)
         showBottomSheet,
-    required TResult Function(
-            String type, bool synchronized, String key, dynamic value)
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+        getHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -80,9 +94,15 @@ mixin _$UIXActions {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
-    TResult? Function(
-            String type, bool synchronized, String key, dynamic value)?
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -106,6 +126,13 @@ mixin _$UIXActions {
         showBottomSheet,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -116,6 +143,10 @@ mixin _$UIXActions {
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
     required TResult Function(UpdateAttributeAction value) updateAttribute,
+    required TResult Function(GetHttpAction value) getHttp,
+    required TResult Function(PostHttpAction value) postHttp,
+    required TResult Function(PutHttpAction value) putHttp,
+    required TResult Function(DeleteHttpAction value) deleteHttp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -125,6 +156,10 @@ mixin _$UIXActions {
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
     TResult? Function(UpdateAttributeAction value)? updateAttribute,
+    TResult? Function(GetHttpAction value)? getHttp,
+    TResult? Function(PostHttpAction value)? postHttp,
+    TResult? Function(PutHttpAction value)? putHttp,
+    TResult? Function(DeleteHttpAction value)? deleteHttp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -134,6 +169,10 @@ mixin _$UIXActions {
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
     TResult Function(UpdateAttributeAction value)? updateAttribute,
+    TResult Function(GetHttpAction value)? getHttp,
+    TResult Function(PostHttpAction value)? postHttp,
+    TResult Function(PutHttpAction value)? putHttp,
+    TResult Function(DeleteHttpAction value)? deleteHttp,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -312,9 +351,15 @@ class _$PushRouteAction implements PushRouteAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)
         showBottomSheet,
-    required TResult Function(
-            String type, bool synchronized, String key, dynamic value)
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+        getHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
     return pushRoute(type, synchronized, routeName, queries);
   }
@@ -339,9 +384,15 @@ class _$PushRouteAction implements PushRouteAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
-    TResult? Function(
-            String type, bool synchronized, String key, dynamic value)?
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
     return pushRoute?.call(type, synchronized, routeName, queries);
   }
@@ -368,6 +419,13 @@ class _$PushRouteAction implements PushRouteAction {
         showBottomSheet,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
   }) {
     if (pushRoute != null) {
@@ -384,6 +442,10 @@ class _$PushRouteAction implements PushRouteAction {
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
     required TResult Function(UpdateAttributeAction value) updateAttribute,
+    required TResult Function(GetHttpAction value) getHttp,
+    required TResult Function(PostHttpAction value) postHttp,
+    required TResult Function(PutHttpAction value) putHttp,
+    required TResult Function(DeleteHttpAction value) deleteHttp,
   }) {
     return pushRoute(this);
   }
@@ -396,6 +458,10 @@ class _$PushRouteAction implements PushRouteAction {
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
     TResult? Function(UpdateAttributeAction value)? updateAttribute,
+    TResult? Function(GetHttpAction value)? getHttp,
+    TResult? Function(PostHttpAction value)? postHttp,
+    TResult? Function(PutHttpAction value)? putHttp,
+    TResult? Function(DeleteHttpAction value)? deleteHttp,
   }) {
     return pushRoute?.call(this);
   }
@@ -408,6 +474,10 @@ class _$PushRouteAction implements PushRouteAction {
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
     TResult Function(UpdateAttributeAction value)? updateAttribute,
+    TResult Function(GetHttpAction value)? getHttp,
+    TResult Function(PostHttpAction value)? postHttp,
+    TResult Function(PutHttpAction value)? putHttp,
+    TResult Function(DeleteHttpAction value)? deleteHttp,
     required TResult orElse(),
   }) {
     if (pushRoute != null) {
@@ -563,9 +633,15 @@ class _$PopRouteAction implements PopRouteAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)
         showBottomSheet,
-    required TResult Function(
-            String type, bool synchronized, String key, dynamic value)
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+        getHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
     return popRoute(type, synchronized, queries);
   }
@@ -590,9 +666,15 @@ class _$PopRouteAction implements PopRouteAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
-    TResult? Function(
-            String type, bool synchronized, String key, dynamic value)?
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
     return popRoute?.call(type, synchronized, queries);
   }
@@ -619,6 +701,13 @@ class _$PopRouteAction implements PopRouteAction {
         showBottomSheet,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
   }) {
     if (popRoute != null) {
@@ -635,6 +724,10 @@ class _$PopRouteAction implements PopRouteAction {
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
     required TResult Function(UpdateAttributeAction value) updateAttribute,
+    required TResult Function(GetHttpAction value) getHttp,
+    required TResult Function(PostHttpAction value) postHttp,
+    required TResult Function(PutHttpAction value) putHttp,
+    required TResult Function(DeleteHttpAction value) deleteHttp,
   }) {
     return popRoute(this);
   }
@@ -647,6 +740,10 @@ class _$PopRouteAction implements PopRouteAction {
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
     TResult? Function(UpdateAttributeAction value)? updateAttribute,
+    TResult? Function(GetHttpAction value)? getHttp,
+    TResult? Function(PostHttpAction value)? postHttp,
+    TResult? Function(PutHttpAction value)? putHttp,
+    TResult? Function(DeleteHttpAction value)? deleteHttp,
   }) {
     return popRoute?.call(this);
   }
@@ -659,6 +756,10 @@ class _$PopRouteAction implements PopRouteAction {
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
     TResult Function(UpdateAttributeAction value)? updateAttribute,
+    TResult Function(GetHttpAction value)? getHttp,
+    TResult Function(PostHttpAction value)? postHttp,
+    TResult Function(PutHttpAction value)? putHttp,
+    TResult Function(DeleteHttpAction value)? deleteHttp,
     required TResult orElse(),
   }) {
     if (popRoute != null) {
@@ -825,9 +926,15 @@ class _$ShowDialogAction implements ShowDialogAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)
         showBottomSheet,
-    required TResult Function(
-            String type, bool synchronized, String key, dynamic value)
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+        getHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
     return showDialog(type, synchronized, barrierDismissible, child);
   }
@@ -852,9 +959,15 @@ class _$ShowDialogAction implements ShowDialogAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
-    TResult? Function(
-            String type, bool synchronized, String key, dynamic value)?
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
     return showDialog?.call(type, synchronized, barrierDismissible, child);
   }
@@ -881,6 +994,13 @@ class _$ShowDialogAction implements ShowDialogAction {
         showBottomSheet,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
   }) {
     if (showDialog != null) {
@@ -897,6 +1017,10 @@ class _$ShowDialogAction implements ShowDialogAction {
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
     required TResult Function(UpdateAttributeAction value) updateAttribute,
+    required TResult Function(GetHttpAction value) getHttp,
+    required TResult Function(PostHttpAction value) postHttp,
+    required TResult Function(PutHttpAction value) putHttp,
+    required TResult Function(DeleteHttpAction value) deleteHttp,
   }) {
     return showDialog(this);
   }
@@ -909,6 +1033,10 @@ class _$ShowDialogAction implements ShowDialogAction {
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
     TResult? Function(UpdateAttributeAction value)? updateAttribute,
+    TResult? Function(GetHttpAction value)? getHttp,
+    TResult? Function(PostHttpAction value)? postHttp,
+    TResult? Function(PutHttpAction value)? putHttp,
+    TResult? Function(DeleteHttpAction value)? deleteHttp,
   }) {
     return showDialog?.call(this);
   }
@@ -921,6 +1049,10 @@ class _$ShowDialogAction implements ShowDialogAction {
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
     TResult Function(UpdateAttributeAction value)? updateAttribute,
+    TResult Function(GetHttpAction value)? getHttp,
+    TResult Function(PostHttpAction value)? postHttp,
+    TResult Function(PutHttpAction value)? putHttp,
+    TResult Function(DeleteHttpAction value)? deleteHttp,
     required TResult orElse(),
   }) {
     if (showDialog != null) {
@@ -1112,9 +1244,15 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)
         showBottomSheet,
-    required TResult Function(
-            String type, bool synchronized, String key, dynamic value)
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+        getHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
     return showBottomSheet(
         type, synchronized, enableDrag, elevation, backgroundColor, child);
@@ -1140,9 +1278,15 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
-    TResult? Function(
-            String type, bool synchronized, String key, dynamic value)?
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
     return showBottomSheet?.call(
         type, synchronized, enableDrag, elevation, backgroundColor, child);
@@ -1170,6 +1314,13 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
         showBottomSheet,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
   }) {
     if (showBottomSheet != null) {
@@ -1187,6 +1338,10 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
     required TResult Function(UpdateAttributeAction value) updateAttribute,
+    required TResult Function(GetHttpAction value) getHttp,
+    required TResult Function(PostHttpAction value) postHttp,
+    required TResult Function(PutHttpAction value) putHttp,
+    required TResult Function(DeleteHttpAction value) deleteHttp,
   }) {
     return showBottomSheet(this);
   }
@@ -1199,6 +1354,10 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
     TResult? Function(UpdateAttributeAction value)? updateAttribute,
+    TResult? Function(GetHttpAction value)? getHttp,
+    TResult? Function(PostHttpAction value)? postHttp,
+    TResult? Function(PutHttpAction value)? putHttp,
+    TResult? Function(DeleteHttpAction value)? deleteHttp,
   }) {
     return showBottomSheet?.call(this);
   }
@@ -1211,6 +1370,10 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
     TResult Function(UpdateAttributeAction value)? updateAttribute,
+    TResult Function(GetHttpAction value)? getHttp,
+    TResult Function(PostHttpAction value)? postHttp,
+    TResult Function(PutHttpAction value)? putHttp,
+    TResult Function(DeleteHttpAction value)? deleteHttp,
     required TResult orElse(),
   }) {
     if (showBottomSheet != null) {
@@ -1373,9 +1536,15 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)
         showBottomSheet,
-    required TResult Function(
-            String type, bool synchronized, String key, dynamic value)
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+        getHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
     return updateAttribute(type, synchronized, key, value);
   }
@@ -1400,9 +1569,15 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
             @UIXColorConverter() Color? backgroundColor,
             Map<String, dynamic> child)?
         showBottomSheet,
-    TResult? Function(
-            String type, bool synchronized, String key, dynamic value)?
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
     return updateAttribute?.call(type, synchronized, key, value);
   }
@@ -1429,6 +1604,13 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
         showBottomSheet,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
   }) {
     if (updateAttribute != null) {
@@ -1445,6 +1627,10 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
     required TResult Function(ShowDialogAction value) showDialog,
     required TResult Function(ShowBottomSheetAction value) showBottomSheet,
     required TResult Function(UpdateAttributeAction value) updateAttribute,
+    required TResult Function(GetHttpAction value) getHttp,
+    required TResult Function(PostHttpAction value) postHttp,
+    required TResult Function(PutHttpAction value) putHttp,
+    required TResult Function(DeleteHttpAction value) deleteHttp,
   }) {
     return updateAttribute(this);
   }
@@ -1457,6 +1643,10 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
     TResult? Function(ShowDialogAction value)? showDialog,
     TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
     TResult? Function(UpdateAttributeAction value)? updateAttribute,
+    TResult? Function(GetHttpAction value)? getHttp,
+    TResult? Function(PostHttpAction value)? postHttp,
+    TResult? Function(PutHttpAction value)? putHttp,
+    TResult? Function(DeleteHttpAction value)? deleteHttp,
   }) {
     return updateAttribute?.call(this);
   }
@@ -1469,6 +1659,10 @@ class _$UpdateAttributeAction implements UpdateAttributeAction {
     TResult Function(ShowDialogAction value)? showDialog,
     TResult Function(ShowBottomSheetAction value)? showBottomSheet,
     TResult Function(UpdateAttributeAction value)? updateAttribute,
+    TResult Function(GetHttpAction value)? getHttp,
+    TResult Function(PostHttpAction value)? postHttp,
+    TResult Function(PutHttpAction value)? putHttp,
+    TResult Function(DeleteHttpAction value)? deleteHttp,
     required TResult orElse(),
   }) {
     if (updateAttribute != null) {
@@ -1504,5 +1698,1239 @@ abstract class UpdateAttributeAction implements UIXActions {
   @override
   @JsonKey(ignore: true)
   _$$UpdateAttributeActionCopyWith<_$UpdateAttributeAction> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetHttpActionCopyWith<$Res>
+    implements $UIXActionsCopyWith<$Res> {
+  factory _$$GetHttpActionCopyWith(
+          _$GetHttpAction value, $Res Function(_$GetHttpAction) then) =
+      __$$GetHttpActionCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String type,
+      bool synchronized,
+      String url,
+      Map<String, String>? headers});
+}
+
+/// @nodoc
+class __$$GetHttpActionCopyWithImpl<$Res>
+    extends _$UIXActionsCopyWithImpl<$Res, _$GetHttpAction>
+    implements _$$GetHttpActionCopyWith<$Res> {
+  __$$GetHttpActionCopyWithImpl(
+      _$GetHttpAction _value, $Res Function(_$GetHttpAction) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = null,
+    Object? synchronized = null,
+    Object? url = null,
+    Object? headers = freezed,
+  }) {
+    return _then(_$GetHttpAction(
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      synchronized: null == synchronized
+          ? _value.synchronized
+          : synchronized // ignore: cast_nullable_to_non_nullable
+              as bool,
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      headers: freezed == headers
+          ? _value._headers
+          : headers // ignore: cast_nullable_to_non_nullable
+              as Map<String, String>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$GetHttpAction implements GetHttpAction {
+  const _$GetHttpAction(
+      {required this.type,
+      this.synchronized = false,
+      required this.url,
+      final Map<String, String>? headers})
+      : _headers = headers;
+
+  factory _$GetHttpAction.fromJson(Map<String, dynamic> json) =>
+      _$$GetHttpActionFromJson(json);
+
+  @override
+  final String type;
+  @override
+  @JsonKey()
+  final bool synchronized;
+  @override
+  final String url;
+  final Map<String, String>? _headers;
+  @override
+  Map<String, String>? get headers {
+    final value = _headers;
+    if (value == null) return null;
+    if (_headers is EqualUnmodifiableMapView) return _headers;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
+  @override
+  String toString() {
+    return 'UIXActions.getHttp(type: $type, synchronized: $synchronized, url: $url, headers: $headers)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetHttpAction &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.synchronized, synchronized) ||
+                other.synchronized == synchronized) &&
+            (identical(other.url, url) || other.url == url) &&
+            const DeepCollectionEquality().equals(other._headers, _headers));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, type, synchronized, url,
+      const DeepCollectionEquality().hash(_headers));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetHttpActionCopyWith<_$GetHttpAction> get copyWith =>
+      __$$GetHttpActionCopyWithImpl<_$GetHttpAction>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)
+        pushRoute,
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
+        popRoute,
+    required TResult Function(String type, bool synchronized,
+            bool barrierDismissible, Map<String, dynamic> child)
+        showDialog,
+    required TResult Function(
+            String type,
+            bool synchronized,
+            bool? enableDrag,
+            double? elevation,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)
+        showBottomSheet,
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
+        updateAttribute,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+        getHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
+  }) {
+    return getHttp(type, synchronized, url, headers);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
+        pushRoute,
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        popRoute,
+    TResult? Function(String type, bool synchronized, bool barrierDismissible,
+            Map<String, dynamic> child)?
+        showDialog,
+    TResult? Function(
+            String type,
+            bool synchronized,
+            bool? enableDrag,
+            double? elevation,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showBottomSheet,
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+  }) {
+    return getHttp?.call(type, synchronized, url, headers);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
+        pushRoute,
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        popRoute,
+    TResult Function(String type, bool synchronized, bool barrierDismissible,
+            Map<String, dynamic> child)?
+        showDialog,
+    TResult Function(
+            String type,
+            bool synchronized,
+            bool? enableDrag,
+            double? elevation,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showBottomSheet,
+    TResult Function(String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    required TResult orElse(),
+  }) {
+    if (getHttp != null) {
+      return getHttp(type, synchronized, url, headers);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PushRouteAction value) pushRoute,
+    required TResult Function(PopRouteAction value) popRoute,
+    required TResult Function(ShowDialogAction value) showDialog,
+    required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(UpdateAttributeAction value) updateAttribute,
+    required TResult Function(GetHttpAction value) getHttp,
+    required TResult Function(PostHttpAction value) postHttp,
+    required TResult Function(PutHttpAction value) putHttp,
+    required TResult Function(DeleteHttpAction value) deleteHttp,
+  }) {
+    return getHttp(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PushRouteAction value)? pushRoute,
+    TResult? Function(PopRouteAction value)? popRoute,
+    TResult? Function(ShowDialogAction value)? showDialog,
+    TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(UpdateAttributeAction value)? updateAttribute,
+    TResult? Function(GetHttpAction value)? getHttp,
+    TResult? Function(PostHttpAction value)? postHttp,
+    TResult? Function(PutHttpAction value)? putHttp,
+    TResult? Function(DeleteHttpAction value)? deleteHttp,
+  }) {
+    return getHttp?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PushRouteAction value)? pushRoute,
+    TResult Function(PopRouteAction value)? popRoute,
+    TResult Function(ShowDialogAction value)? showDialog,
+    TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(UpdateAttributeAction value)? updateAttribute,
+    TResult Function(GetHttpAction value)? getHttp,
+    TResult Function(PostHttpAction value)? postHttp,
+    TResult Function(PutHttpAction value)? putHttp,
+    TResult Function(DeleteHttpAction value)? deleteHttp,
+    required TResult orElse(),
+  }) {
+    if (getHttp != null) {
+      return getHttp(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GetHttpActionToJson(
+      this,
+    );
+  }
+}
+
+abstract class GetHttpAction implements UIXActions {
+  const factory GetHttpAction(
+      {required final String type,
+      final bool synchronized,
+      required final String url,
+      final Map<String, String>? headers}) = _$GetHttpAction;
+
+  factory GetHttpAction.fromJson(Map<String, dynamic> json) =
+      _$GetHttpAction.fromJson;
+
+  @override
+  String get type;
+  @override
+  bool get synchronized;
+  String get url;
+  Map<String, String>? get headers;
+  @override
+  @JsonKey(ignore: true)
+  _$$GetHttpActionCopyWith<_$GetHttpAction> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PostHttpActionCopyWith<$Res>
+    implements $UIXActionsCopyWith<$Res> {
+  factory _$$PostHttpActionCopyWith(
+          _$PostHttpAction value, $Res Function(_$PostHttpAction) then) =
+      __$$PostHttpActionCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String type,
+      bool synchronized,
+      String url,
+      Map<String, String>? headers,
+      dynamic body});
+}
+
+/// @nodoc
+class __$$PostHttpActionCopyWithImpl<$Res>
+    extends _$UIXActionsCopyWithImpl<$Res, _$PostHttpAction>
+    implements _$$PostHttpActionCopyWith<$Res> {
+  __$$PostHttpActionCopyWithImpl(
+      _$PostHttpAction _value, $Res Function(_$PostHttpAction) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = null,
+    Object? synchronized = null,
+    Object? url = null,
+    Object? headers = freezed,
+    Object? body = freezed,
+  }) {
+    return _then(_$PostHttpAction(
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      synchronized: null == synchronized
+          ? _value.synchronized
+          : synchronized // ignore: cast_nullable_to_non_nullable
+              as bool,
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      headers: freezed == headers
+          ? _value._headers
+          : headers // ignore: cast_nullable_to_non_nullable
+              as Map<String, String>?,
+      body: freezed == body
+          ? _value.body
+          : body // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$PostHttpAction implements PostHttpAction {
+  const _$PostHttpAction(
+      {required this.type,
+      this.synchronized = false,
+      required this.url,
+      final Map<String, String>? headers,
+      this.body})
+      : _headers = headers;
+
+  factory _$PostHttpAction.fromJson(Map<String, dynamic> json) =>
+      _$$PostHttpActionFromJson(json);
+
+  @override
+  final String type;
+  @override
+  @JsonKey()
+  final bool synchronized;
+  @override
+  final String url;
+  final Map<String, String>? _headers;
+  @override
+  Map<String, String>? get headers {
+    final value = _headers;
+    if (value == null) return null;
+    if (_headers is EqualUnmodifiableMapView) return _headers;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
+  @override
+  final dynamic body;
+
+  @override
+  String toString() {
+    return 'UIXActions.postHttp(type: $type, synchronized: $synchronized, url: $url, headers: $headers, body: $body)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PostHttpAction &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.synchronized, synchronized) ||
+                other.synchronized == synchronized) &&
+            (identical(other.url, url) || other.url == url) &&
+            const DeepCollectionEquality().equals(other._headers, _headers) &&
+            const DeepCollectionEquality().equals(other.body, body));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      type,
+      synchronized,
+      url,
+      const DeepCollectionEquality().hash(_headers),
+      const DeepCollectionEquality().hash(body));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PostHttpActionCopyWith<_$PostHttpAction> get copyWith =>
+      __$$PostHttpActionCopyWithImpl<_$PostHttpAction>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)
+        pushRoute,
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
+        popRoute,
+    required TResult Function(String type, bool synchronized,
+            bool barrierDismissible, Map<String, dynamic> child)
+        showDialog,
+    required TResult Function(
+            String type,
+            bool synchronized,
+            bool? enableDrag,
+            double? elevation,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)
+        showBottomSheet,
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
+        updateAttribute,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+        getHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
+  }) {
+    return postHttp(type, synchronized, url, headers, body);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
+        pushRoute,
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        popRoute,
+    TResult? Function(String type, bool synchronized, bool barrierDismissible,
+            Map<String, dynamic> child)?
+        showDialog,
+    TResult? Function(
+            String type,
+            bool synchronized,
+            bool? enableDrag,
+            double? elevation,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showBottomSheet,
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+  }) {
+    return postHttp?.call(type, synchronized, url, headers, body);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
+        pushRoute,
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        popRoute,
+    TResult Function(String type, bool synchronized, bool barrierDismissible,
+            Map<String, dynamic> child)?
+        showDialog,
+    TResult Function(
+            String type,
+            bool synchronized,
+            bool? enableDrag,
+            double? elevation,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showBottomSheet,
+    TResult Function(String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    required TResult orElse(),
+  }) {
+    if (postHttp != null) {
+      return postHttp(type, synchronized, url, headers, body);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PushRouteAction value) pushRoute,
+    required TResult Function(PopRouteAction value) popRoute,
+    required TResult Function(ShowDialogAction value) showDialog,
+    required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(UpdateAttributeAction value) updateAttribute,
+    required TResult Function(GetHttpAction value) getHttp,
+    required TResult Function(PostHttpAction value) postHttp,
+    required TResult Function(PutHttpAction value) putHttp,
+    required TResult Function(DeleteHttpAction value) deleteHttp,
+  }) {
+    return postHttp(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PushRouteAction value)? pushRoute,
+    TResult? Function(PopRouteAction value)? popRoute,
+    TResult? Function(ShowDialogAction value)? showDialog,
+    TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(UpdateAttributeAction value)? updateAttribute,
+    TResult? Function(GetHttpAction value)? getHttp,
+    TResult? Function(PostHttpAction value)? postHttp,
+    TResult? Function(PutHttpAction value)? putHttp,
+    TResult? Function(DeleteHttpAction value)? deleteHttp,
+  }) {
+    return postHttp?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PushRouteAction value)? pushRoute,
+    TResult Function(PopRouteAction value)? popRoute,
+    TResult Function(ShowDialogAction value)? showDialog,
+    TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(UpdateAttributeAction value)? updateAttribute,
+    TResult Function(GetHttpAction value)? getHttp,
+    TResult Function(PostHttpAction value)? postHttp,
+    TResult Function(PutHttpAction value)? putHttp,
+    TResult Function(DeleteHttpAction value)? deleteHttp,
+    required TResult orElse(),
+  }) {
+    if (postHttp != null) {
+      return postHttp(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PostHttpActionToJson(
+      this,
+    );
+  }
+}
+
+abstract class PostHttpAction implements UIXActions {
+  const factory PostHttpAction(
+      {required final String type,
+      final bool synchronized,
+      required final String url,
+      final Map<String, String>? headers,
+      final dynamic body}) = _$PostHttpAction;
+
+  factory PostHttpAction.fromJson(Map<String, dynamic> json) =
+      _$PostHttpAction.fromJson;
+
+  @override
+  String get type;
+  @override
+  bool get synchronized;
+  String get url;
+  Map<String, String>? get headers;
+  dynamic get body;
+  @override
+  @JsonKey(ignore: true)
+  _$$PostHttpActionCopyWith<_$PostHttpAction> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PutHttpActionCopyWith<$Res>
+    implements $UIXActionsCopyWith<$Res> {
+  factory _$$PutHttpActionCopyWith(
+          _$PutHttpAction value, $Res Function(_$PutHttpAction) then) =
+      __$$PutHttpActionCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String type,
+      bool synchronized,
+      String url,
+      Map<String, String>? headers,
+      dynamic body});
+}
+
+/// @nodoc
+class __$$PutHttpActionCopyWithImpl<$Res>
+    extends _$UIXActionsCopyWithImpl<$Res, _$PutHttpAction>
+    implements _$$PutHttpActionCopyWith<$Res> {
+  __$$PutHttpActionCopyWithImpl(
+      _$PutHttpAction _value, $Res Function(_$PutHttpAction) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = null,
+    Object? synchronized = null,
+    Object? url = null,
+    Object? headers = freezed,
+    Object? body = freezed,
+  }) {
+    return _then(_$PutHttpAction(
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      synchronized: null == synchronized
+          ? _value.synchronized
+          : synchronized // ignore: cast_nullable_to_non_nullable
+              as bool,
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      headers: freezed == headers
+          ? _value._headers
+          : headers // ignore: cast_nullable_to_non_nullable
+              as Map<String, String>?,
+      body: freezed == body
+          ? _value.body
+          : body // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$PutHttpAction implements PutHttpAction {
+  const _$PutHttpAction(
+      {required this.type,
+      this.synchronized = false,
+      required this.url,
+      final Map<String, String>? headers,
+      this.body})
+      : _headers = headers;
+
+  factory _$PutHttpAction.fromJson(Map<String, dynamic> json) =>
+      _$$PutHttpActionFromJson(json);
+
+  @override
+  final String type;
+  @override
+  @JsonKey()
+  final bool synchronized;
+  @override
+  final String url;
+  final Map<String, String>? _headers;
+  @override
+  Map<String, String>? get headers {
+    final value = _headers;
+    if (value == null) return null;
+    if (_headers is EqualUnmodifiableMapView) return _headers;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
+  @override
+  final dynamic body;
+
+  @override
+  String toString() {
+    return 'UIXActions.putHttp(type: $type, synchronized: $synchronized, url: $url, headers: $headers, body: $body)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PutHttpAction &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.synchronized, synchronized) ||
+                other.synchronized == synchronized) &&
+            (identical(other.url, url) || other.url == url) &&
+            const DeepCollectionEquality().equals(other._headers, _headers) &&
+            const DeepCollectionEquality().equals(other.body, body));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      type,
+      synchronized,
+      url,
+      const DeepCollectionEquality().hash(_headers),
+      const DeepCollectionEquality().hash(body));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PutHttpActionCopyWith<_$PutHttpAction> get copyWith =>
+      __$$PutHttpActionCopyWithImpl<_$PutHttpAction>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)
+        pushRoute,
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
+        popRoute,
+    required TResult Function(String type, bool synchronized,
+            bool barrierDismissible, Map<String, dynamic> child)
+        showDialog,
+    required TResult Function(
+            String type,
+            bool synchronized,
+            bool? enableDrag,
+            double? elevation,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)
+        showBottomSheet,
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
+        updateAttribute,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+        getHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
+  }) {
+    return putHttp(type, synchronized, url, headers, body);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
+        pushRoute,
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        popRoute,
+    TResult? Function(String type, bool synchronized, bool barrierDismissible,
+            Map<String, dynamic> child)?
+        showDialog,
+    TResult? Function(
+            String type,
+            bool synchronized,
+            bool? enableDrag,
+            double? elevation,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showBottomSheet,
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+  }) {
+    return putHttp?.call(type, synchronized, url, headers, body);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
+        pushRoute,
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        popRoute,
+    TResult Function(String type, bool synchronized, bool barrierDismissible,
+            Map<String, dynamic> child)?
+        showDialog,
+    TResult Function(
+            String type,
+            bool synchronized,
+            bool? enableDrag,
+            double? elevation,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showBottomSheet,
+    TResult Function(String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    required TResult orElse(),
+  }) {
+    if (putHttp != null) {
+      return putHttp(type, synchronized, url, headers, body);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PushRouteAction value) pushRoute,
+    required TResult Function(PopRouteAction value) popRoute,
+    required TResult Function(ShowDialogAction value) showDialog,
+    required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(UpdateAttributeAction value) updateAttribute,
+    required TResult Function(GetHttpAction value) getHttp,
+    required TResult Function(PostHttpAction value) postHttp,
+    required TResult Function(PutHttpAction value) putHttp,
+    required TResult Function(DeleteHttpAction value) deleteHttp,
+  }) {
+    return putHttp(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PushRouteAction value)? pushRoute,
+    TResult? Function(PopRouteAction value)? popRoute,
+    TResult? Function(ShowDialogAction value)? showDialog,
+    TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(UpdateAttributeAction value)? updateAttribute,
+    TResult? Function(GetHttpAction value)? getHttp,
+    TResult? Function(PostHttpAction value)? postHttp,
+    TResult? Function(PutHttpAction value)? putHttp,
+    TResult? Function(DeleteHttpAction value)? deleteHttp,
+  }) {
+    return putHttp?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PushRouteAction value)? pushRoute,
+    TResult Function(PopRouteAction value)? popRoute,
+    TResult Function(ShowDialogAction value)? showDialog,
+    TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(UpdateAttributeAction value)? updateAttribute,
+    TResult Function(GetHttpAction value)? getHttp,
+    TResult Function(PostHttpAction value)? postHttp,
+    TResult Function(PutHttpAction value)? putHttp,
+    TResult Function(DeleteHttpAction value)? deleteHttp,
+    required TResult orElse(),
+  }) {
+    if (putHttp != null) {
+      return putHttp(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PutHttpActionToJson(
+      this,
+    );
+  }
+}
+
+abstract class PutHttpAction implements UIXActions {
+  const factory PutHttpAction(
+      {required final String type,
+      final bool synchronized,
+      required final String url,
+      final Map<String, String>? headers,
+      final dynamic body}) = _$PutHttpAction;
+
+  factory PutHttpAction.fromJson(Map<String, dynamic> json) =
+      _$PutHttpAction.fromJson;
+
+  @override
+  String get type;
+  @override
+  bool get synchronized;
+  String get url;
+  Map<String, String>? get headers;
+  dynamic get body;
+  @override
+  @JsonKey(ignore: true)
+  _$$PutHttpActionCopyWith<_$PutHttpAction> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DeleteHttpActionCopyWith<$Res>
+    implements $UIXActionsCopyWith<$Res> {
+  factory _$$DeleteHttpActionCopyWith(
+          _$DeleteHttpAction value, $Res Function(_$DeleteHttpAction) then) =
+      __$$DeleteHttpActionCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String type,
+      bool synchronized,
+      String url,
+      Map<String, String>? headers,
+      dynamic body});
+}
+
+/// @nodoc
+class __$$DeleteHttpActionCopyWithImpl<$Res>
+    extends _$UIXActionsCopyWithImpl<$Res, _$DeleteHttpAction>
+    implements _$$DeleteHttpActionCopyWith<$Res> {
+  __$$DeleteHttpActionCopyWithImpl(
+      _$DeleteHttpAction _value, $Res Function(_$DeleteHttpAction) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = null,
+    Object? synchronized = null,
+    Object? url = null,
+    Object? headers = freezed,
+    Object? body = freezed,
+  }) {
+    return _then(_$DeleteHttpAction(
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      synchronized: null == synchronized
+          ? _value.synchronized
+          : synchronized // ignore: cast_nullable_to_non_nullable
+              as bool,
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      headers: freezed == headers
+          ? _value._headers
+          : headers // ignore: cast_nullable_to_non_nullable
+              as Map<String, String>?,
+      body: freezed == body
+          ? _value.body
+          : body // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$DeleteHttpAction implements DeleteHttpAction {
+  const _$DeleteHttpAction(
+      {required this.type,
+      this.synchronized = false,
+      required this.url,
+      final Map<String, String>? headers,
+      this.body})
+      : _headers = headers;
+
+  factory _$DeleteHttpAction.fromJson(Map<String, dynamic> json) =>
+      _$$DeleteHttpActionFromJson(json);
+
+  @override
+  final String type;
+  @override
+  @JsonKey()
+  final bool synchronized;
+  @override
+  final String url;
+  final Map<String, String>? _headers;
+  @override
+  Map<String, String>? get headers {
+    final value = _headers;
+    if (value == null) return null;
+    if (_headers is EqualUnmodifiableMapView) return _headers;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
+  @override
+  final dynamic body;
+
+  @override
+  String toString() {
+    return 'UIXActions.deleteHttp(type: $type, synchronized: $synchronized, url: $url, headers: $headers, body: $body)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DeleteHttpAction &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.synchronized, synchronized) ||
+                other.synchronized == synchronized) &&
+            (identical(other.url, url) || other.url == url) &&
+            const DeepCollectionEquality().equals(other._headers, _headers) &&
+            const DeepCollectionEquality().equals(other.body, body));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      type,
+      synchronized,
+      url,
+      const DeepCollectionEquality().hash(_headers),
+      const DeepCollectionEquality().hash(body));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeleteHttpActionCopyWith<_$DeleteHttpAction> get copyWith =>
+      __$$DeleteHttpActionCopyWithImpl<_$DeleteHttpAction>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)
+        pushRoute,
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
+        popRoute,
+    required TResult Function(String type, bool synchronized,
+            bool barrierDismissible, Map<String, dynamic> child)
+        showDialog,
+    required TResult Function(
+            String type,
+            bool synchronized,
+            bool? enableDrag,
+            double? elevation,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)
+        showBottomSheet,
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
+        updateAttribute,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)
+        getHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
+  }) {
+    return deleteHttp(type, synchronized, url, headers, body);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
+        pushRoute,
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        popRoute,
+    TResult? Function(String type, bool synchronized, bool barrierDismissible,
+            Map<String, dynamic> child)?
+        showDialog,
+    TResult? Function(
+            String type,
+            bool synchronized,
+            bool? enableDrag,
+            double? elevation,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showBottomSheet,
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+  }) {
+    return deleteHttp?.call(type, synchronized, url, headers, body);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String type, bool synchronized, String routeName,
+            Map<String, dynamic>? queries)?
+        pushRoute,
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
+        popRoute,
+    TResult Function(String type, bool synchronized, bool barrierDismissible,
+            Map<String, dynamic> child)?
+        showDialog,
+    TResult Function(
+            String type,
+            bool synchronized,
+            bool? enableDrag,
+            double? elevation,
+            @UIXColorConverter() Color? backgroundColor,
+            Map<String, dynamic> child)?
+        showBottomSheet,
+    TResult Function(String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers)?
+        getHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    required TResult orElse(),
+  }) {
+    if (deleteHttp != null) {
+      return deleteHttp(type, synchronized, url, headers, body);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PushRouteAction value) pushRoute,
+    required TResult Function(PopRouteAction value) popRoute,
+    required TResult Function(ShowDialogAction value) showDialog,
+    required TResult Function(ShowBottomSheetAction value) showBottomSheet,
+    required TResult Function(UpdateAttributeAction value) updateAttribute,
+    required TResult Function(GetHttpAction value) getHttp,
+    required TResult Function(PostHttpAction value) postHttp,
+    required TResult Function(PutHttpAction value) putHttp,
+    required TResult Function(DeleteHttpAction value) deleteHttp,
+  }) {
+    return deleteHttp(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PushRouteAction value)? pushRoute,
+    TResult? Function(PopRouteAction value)? popRoute,
+    TResult? Function(ShowDialogAction value)? showDialog,
+    TResult? Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult? Function(UpdateAttributeAction value)? updateAttribute,
+    TResult? Function(GetHttpAction value)? getHttp,
+    TResult? Function(PostHttpAction value)? postHttp,
+    TResult? Function(PutHttpAction value)? putHttp,
+    TResult? Function(DeleteHttpAction value)? deleteHttp,
+  }) {
+    return deleteHttp?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PushRouteAction value)? pushRoute,
+    TResult Function(PopRouteAction value)? popRoute,
+    TResult Function(ShowDialogAction value)? showDialog,
+    TResult Function(ShowBottomSheetAction value)? showBottomSheet,
+    TResult Function(UpdateAttributeAction value)? updateAttribute,
+    TResult Function(GetHttpAction value)? getHttp,
+    TResult Function(PostHttpAction value)? postHttp,
+    TResult Function(PutHttpAction value)? putHttp,
+    TResult Function(DeleteHttpAction value)? deleteHttp,
+    required TResult orElse(),
+  }) {
+    if (deleteHttp != null) {
+      return deleteHttp(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$DeleteHttpActionToJson(
+      this,
+    );
+  }
+}
+
+abstract class DeleteHttpAction implements UIXActions {
+  const factory DeleteHttpAction(
+      {required final String type,
+      final bool synchronized,
+      required final String url,
+      final Map<String, String>? headers,
+      final dynamic body}) = _$DeleteHttpAction;
+
+  factory DeleteHttpAction.fromJson(Map<String, dynamic> json) =
+      _$DeleteHttpAction.fromJson;
+
+  @override
+  String get type;
+  @override
+  bool get synchronized;
+  String get url;
+  Map<String, String>? get headers;
+  dynamic get body;
+  @override
+  @JsonKey(ignore: true)
+  _$$DeleteHttpActionCopyWith<_$DeleteHttpAction> get copyWith =>
       throw _privateConstructorUsedError;
 }

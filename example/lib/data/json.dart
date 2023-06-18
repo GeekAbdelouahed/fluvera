@@ -87,6 +87,31 @@ Map<String, dynamic> homeJsonData() {
           'value': 'UIX',
         },
       },
+      'actions': [
+        {
+          'type': 'InkWell',
+          'onTap': [
+            {
+              'type': 'GetHttp',
+              'url': 'https://jsonplaceholder.typicode.com/photos',
+            },
+          ],
+          'child': {
+            'type': 'Padding',
+            'padding': {
+              'start': 20,
+              'end': 20,
+            },
+            'child': {
+              'type': 'Icon',
+              'code': {
+                'value': 0xe62f,
+              },
+              'color': '#FFFFFF',
+            },
+          },
+        },
+      ],
     },
     'body': {
       'type': 'SingleChildScrollView',

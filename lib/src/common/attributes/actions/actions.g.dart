@@ -93,3 +93,81 @@ Map<String, dynamic> _$$UpdateAttributeActionToJson(
       'key': instance.key,
       'value': instance.value,
     };
+
+_$GetHttpAction _$$GetHttpActionFromJson(Map<String, dynamic> json) =>
+    _$GetHttpAction(
+      type: json['type'] as String,
+      synchronized: json['synchronized'] as bool? ?? false,
+      url: json['url'] as String,
+      headers: (json['headers'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as String),
+      ),
+    );
+
+Map<String, dynamic> _$$GetHttpActionToJson(_$GetHttpAction instance) =>
+    <String, dynamic>{
+      'type': instance.type,
+      'synchronized': instance.synchronized,
+      'url': instance.url,
+      'headers': instance.headers,
+    };
+
+_$PostHttpAction _$$PostHttpActionFromJson(Map<String, dynamic> json) =>
+    _$PostHttpAction(
+      type: json['type'] as String,
+      synchronized: json['synchronized'] as bool? ?? false,
+      url: json['url'] as String,
+      headers: (json['headers'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as String),
+      ),
+      body: json['body'],
+    );
+
+Map<String, dynamic> _$$PostHttpActionToJson(_$PostHttpAction instance) =>
+    <String, dynamic>{
+      'type': instance.type,
+      'synchronized': instance.synchronized,
+      'url': instance.url,
+      'headers': instance.headers,
+      'body': instance.body,
+    };
+
+_$PutHttpAction _$$PutHttpActionFromJson(Map<String, dynamic> json) =>
+    _$PutHttpAction(
+      type: json['type'] as String,
+      synchronized: json['synchronized'] as bool? ?? false,
+      url: json['url'] as String,
+      headers: (json['headers'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as String),
+      ),
+      body: json['body'],
+    );
+
+Map<String, dynamic> _$$PutHttpActionToJson(_$PutHttpAction instance) =>
+    <String, dynamic>{
+      'type': instance.type,
+      'synchronized': instance.synchronized,
+      'url': instance.url,
+      'headers': instance.headers,
+      'body': instance.body,
+    };
+
+_$DeleteHttpAction _$$DeleteHttpActionFromJson(Map<String, dynamic> json) =>
+    _$DeleteHttpAction(
+      type: json['type'] as String,
+      synchronized: json['synchronized'] as bool? ?? false,
+      url: json['url'] as String,
+      headers: (json['headers'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as String),
+      ),
+      body: json['body'],
+    );
+
+Map<String, dynamic> _$$DeleteHttpActionToJson(_$DeleteHttpAction instance) =>
+    <String, dynamic>{
+      'type': instance.type,
+      'synchronized': instance.synchronized,
+      'url': instance.url,
+      'headers': instance.headers,
+      'body': instance.body,
+    };

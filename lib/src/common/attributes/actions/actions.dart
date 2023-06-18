@@ -43,6 +43,37 @@ class UIXActions with _$UIXActions {
     dynamic value,
   }) = UpdateAttributeAction;
 
+  const factory UIXActions.getHttp({
+    required String type,
+    @Default(false) bool synchronized,
+    required String url,
+    Map<String, String>? headers,
+  }) = GetHttpAction;
+
+  const factory UIXActions.postHttp({
+    required String type,
+    @Default(false) bool synchronized,
+    required String url,
+    Map<String, String>? headers,
+    dynamic body,
+  }) = PostHttpAction;
+
+  const factory UIXActions.putHttp({
+    required String type,
+    @Default(false) bool synchronized,
+    required String url,
+    Map<String, String>? headers,
+    dynamic body,
+  }) = PutHttpAction;
+
+  const factory UIXActions.deleteHttp({
+    required String type,
+    @Default(false) bool synchronized,
+    required String url,
+    Map<String, String>? headers,
+    dynamic body,
+  }) = DeleteHttpAction;
+
   factory UIXActions.fromJson(Map<String, dynamic> json) =>
       _$UIXActionsFromJson(json);
 }
