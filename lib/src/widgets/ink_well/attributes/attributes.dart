@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uix/src/core/attributes/actions/actions.dart';
+import 'package:uix/src/attributes/actions/actions.dart';
 
 part 'attributes.freezed.dart';
 part 'attributes.g.dart';
