@@ -11,10 +11,12 @@ _$_SpacerAttributes _$$_SpacerAttributesFromJson(Map<String, dynamic> json) =>
       flex: json['flex'] == null
           ? const UIXAttributeValue<num>(value: 1)
           : UIXAttributeValue<num>.fromJson(
-              json['flex'] as Map<String, dynamic>),
+              json['flex'] as Map<String, dynamic>, (value) => value as num),
     );
 
 Map<String, dynamic> _$$_SpacerAttributesToJson(_$_SpacerAttributes instance) =>
     <String, dynamic>{
-      'flex': instance.flex,
+      'flex': instance.flex.toJson(
+        (value) => value,
+      ),
     };

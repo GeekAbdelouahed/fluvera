@@ -35,6 +35,8 @@ abstract class $SpacerAttributesCopyWith<$Res> {
       _$SpacerAttributesCopyWithImpl<$Res, SpacerAttributes>;
   @useResult
   $Res call({UIXAttributeValue<num> flex});
+
+  $UIXAttributeValueCopyWith<num, $Res> get flex;
 }
 
 /// @nodoc
@@ -59,6 +61,14 @@ class _$SpacerAttributesCopyWithImpl<$Res, $Val extends SpacerAttributes>
               as UIXAttributeValue<num>,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributeValueCopyWith<num, $Res> get flex {
+    return $UIXAttributeValueCopyWith<num, $Res>(_value.flex, (value) {
+      return _then(_value.copyWith(flex: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -70,6 +80,9 @@ abstract class _$$_SpacerAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call({UIXAttributeValue<num> flex});
+
+  @override
+  $UIXAttributeValueCopyWith<num, $Res> get flex;
 }
 
 /// @nodoc

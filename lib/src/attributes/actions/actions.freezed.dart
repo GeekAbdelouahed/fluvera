@@ -1075,21 +1075,15 @@ class _$ShowBottomSheetAction implements ShowBottomSheetAction {
                 other.enableDrag == enableDrag) &&
             (identical(other.elevation, elevation) ||
                 other.elevation == elevation) &&
-            const DeepCollectionEquality()
-                .equals(other.backgroundColor, backgroundColor) &&
+            (identical(other.backgroundColor, backgroundColor) ||
+                other.backgroundColor == backgroundColor) &&
             const DeepCollectionEquality().equals(other._child, _child));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      type,
-      synchronized,
-      enableDrag,
-      elevation,
-      const DeepCollectionEquality().hash(backgroundColor),
-      const DeepCollectionEquality().hash(_child));
+  int get hashCode => Object.hash(runtimeType, type, synchronized, enableDrag,
+      elevation, backgroundColor, const DeepCollectionEquality().hash(_child));
 
   @JsonKey(ignore: true)
   @override

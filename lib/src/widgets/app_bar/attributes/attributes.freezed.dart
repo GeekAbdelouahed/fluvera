@@ -41,6 +41,8 @@ abstract class $AppBarAttributesCopyWith<$Res> {
       {UIXAttributeValue<bool>? centerTitle,
       Map<String, dynamic>? title,
       List<Map<String, dynamic>>? actions});
+
+  $UIXAttributeValueCopyWith<bool, $Res>? get centerTitle;
 }
 
 /// @nodoc
@@ -75,6 +77,18 @@ class _$AppBarAttributesCopyWithImpl<$Res, $Val extends AppBarAttributes>
               as List<Map<String, dynamic>>?,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributeValueCopyWith<bool, $Res>? get centerTitle {
+    if (_value.centerTitle == null) {
+      return null;
+    }
+
+    return $UIXAttributeValueCopyWith<bool, $Res>(_value.centerTitle!, (value) {
+      return _then(_value.copyWith(centerTitle: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -89,6 +103,9 @@ abstract class _$$_AppBarAttributesCopyWith<$Res>
       {UIXAttributeValue<bool>? centerTitle,
       Map<String, dynamic>? title,
       List<Map<String, dynamic>>? actions});
+
+  @override
+  $UIXAttributeValueCopyWith<bool, $Res>? get centerTitle;
 }
 
 /// @nodoc

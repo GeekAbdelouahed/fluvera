@@ -12,19 +12,29 @@ _$_UIXTextStyle _$$_UIXTextStyleFromJson(Map<String, dynamic> json) =>
       overflow: json['overflow'] == null
           ? null
           : UIXEnumAttributeValue<TextOverflow>.fromJson(
-              json['overflow'] as Map<String, dynamic>),
+              json['overflow'] as Map<String, dynamic>,
+              (value) => $enumDecode(_$TextOverflowEnumMap, value)),
       color: const UIXColorConverter().fromJson(json['color'] as String?),
-      fontWeight: _$JsonConverterFromJson<String, dynamic>(
+      fontWeight: _$JsonConverterFromJson<String, FontWeight?>(
           json['fontWeight'], const UIXFontWeightConverter().fromJson),
     );
 
 Map<String, dynamic> _$$_UIXTextStyleToJson(_$_UIXTextStyle instance) =>
     <String, dynamic>{
       'fontSize': instance.fontSize,
-      'overflow': instance.overflow,
+      'overflow': instance.overflow?.toJson(
+        (value) => _$TextOverflowEnumMap[value]!,
+      ),
       'color': const UIXColorConverter().toJson(instance.color),
       'fontWeight': const UIXFontWeightConverter().toJson(instance.fontWeight),
     };
+
+const _$TextOverflowEnumMap = {
+  TextOverflow.clip: 'clip',
+  TextOverflow.fade: 'fade',
+  TextOverflow.ellipsis: 'ellipsis',
+  TextOverflow.visible: 'visible',
+};
 
 Value? _$JsonConverterFromJson<Json, Value>(
   Object? json,

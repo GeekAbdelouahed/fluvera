@@ -8,12 +8,12 @@ part 'attributes.g.dart';
 @freezed
 class ColumnAttributes with _$ColumnAttributes {
   const factory ColumnAttributes({
-    @Default(UIXEnumAttributeValue(value: 'max'))
-        UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
-    @Default(UIXEnumAttributeValue(value: 'start'))
-        UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
-    @Default(UIXEnumAttributeValue(value: 'center'))
-        UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
+    @Default(UIXEnumAttributeValue<MainAxisSize>(value: 'max'))
+    UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
+    @Default(UIXEnumAttributeValue<MainAxisAlignment>(value: 'start'))
+    UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+    @Default(UIXEnumAttributeValue<CrossAxisAlignment>(value: 'center'))
+    UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
     required List<Map<String, dynamic>> children,
   }) = _ColumnAttributes;
 

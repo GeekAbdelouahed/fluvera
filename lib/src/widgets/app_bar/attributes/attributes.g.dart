@@ -11,7 +11,8 @@ _$_AppBarAttributes _$$_AppBarAttributesFromJson(Map<String, dynamic> json) =>
       centerTitle: json['centerTitle'] == null
           ? null
           : UIXAttributeValue<bool>.fromJson(
-              json['centerTitle'] as Map<String, dynamic>),
+              json['centerTitle'] as Map<String, dynamic>,
+              (value) => value as bool),
       title: json['title'] as Map<String, dynamic>?,
       actions: (json['actions'] as List<dynamic>?)
           ?.map((e) => e as Map<String, dynamic>)
@@ -20,7 +21,9 @@ _$_AppBarAttributes _$$_AppBarAttributesFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_AppBarAttributesToJson(_$_AppBarAttributes instance) =>
     <String, dynamic>{
-      'centerTitle': instance.centerTitle,
+      'centerTitle': instance.centerTitle?.toJson(
+        (value) => value,
+      ),
       'title': instance.title,
       'actions': instance.actions,
     };

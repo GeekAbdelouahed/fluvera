@@ -52,6 +52,9 @@ abstract class $ContainerAttributesCopyWith<$Res> {
       @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
       @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
       Map<String, dynamic>? child});
+
+  $UIXAttributeValueCopyWith<num, $Res>? get height;
+  $UIXAttributeValueCopyWith<num, $Res>? get width;
 }
 
 /// @nodoc
@@ -106,6 +109,30 @@ class _$ContainerAttributesCopyWithImpl<$Res, $Val extends ContainerAttributes>
               as Map<String, dynamic>?,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributeValueCopyWith<num, $Res>? get height {
+    if (_value.height == null) {
+      return null;
+    }
+
+    return $UIXAttributeValueCopyWith<num, $Res>(_value.height!, (value) {
+      return _then(_value.copyWith(height: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributeValueCopyWith<num, $Res>? get width {
+    if (_value.width == null) {
+      return null;
+    }
+
+    return $UIXAttributeValueCopyWith<num, $Res>(_value.width!, (value) {
+      return _then(_value.copyWith(width: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -124,6 +151,11 @@ abstract class _$$_ContainerAttributesCopyWith<$Res>
       @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
       @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
       Map<String, dynamic>? child});
+
+  @override
+  $UIXAttributeValueCopyWith<num, $Res>? get height;
+  @override
+  $UIXAttributeValueCopyWith<num, $Res>? get width;
 }
 
 /// @nodoc
@@ -232,7 +264,7 @@ class _$_ContainerAttributes implements _ContainerAttributes {
             other is _$_ContainerAttributes &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.width, width) || other.width == width) &&
-            const DeepCollectionEquality().equals(other.color, color) &&
+            (identical(other.color, color) || other.color == color) &&
             (identical(other.margin, margin) || other.margin == margin) &&
             (identical(other.padding, padding) || other.padding == padding) &&
             (identical(other.alignment, alignment) ||
@@ -242,15 +274,8 @@ class _$_ContainerAttributes implements _ContainerAttributes {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      height,
-      width,
-      const DeepCollectionEquality().hash(color),
-      margin,
-      padding,
-      alignment,
-      const DeepCollectionEquality().hash(_child));
+  int get hashCode => Object.hash(runtimeType, height, width, color, margin,
+      padding, alignment, const DeepCollectionEquality().hash(_child));
 
   @JsonKey(ignore: true)
   @override

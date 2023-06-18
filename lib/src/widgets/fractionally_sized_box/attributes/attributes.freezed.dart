@@ -47,6 +47,9 @@ abstract class $FractionallySizedBoxAttributesCopyWith<$Res> {
       UIXAttributeValue<num>? heightFactor,
       @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
       Map<String, dynamic>? child});
+
+  $UIXAttributeValueCopyWith<num, $Res>? get widthFactor;
+  $UIXAttributeValueCopyWith<num, $Res>? get heightFactor;
 }
 
 /// @nodoc
@@ -87,6 +90,30 @@ class _$FractionallySizedBoxAttributesCopyWithImpl<$Res,
               as Map<String, dynamic>?,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributeValueCopyWith<num, $Res>? get widthFactor {
+    if (_value.widthFactor == null) {
+      return null;
+    }
+
+    return $UIXAttributeValueCopyWith<num, $Res>(_value.widthFactor!, (value) {
+      return _then(_value.copyWith(widthFactor: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributeValueCopyWith<num, $Res>? get heightFactor {
+    if (_value.heightFactor == null) {
+      return null;
+    }
+
+    return $UIXAttributeValueCopyWith<num, $Res>(_value.heightFactor!, (value) {
+      return _then(_value.copyWith(heightFactor: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -103,6 +130,11 @@ abstract class _$$_FractionallySizedBoxAttributesCopyWith<$Res>
       UIXAttributeValue<num>? heightFactor,
       @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
       Map<String, dynamic>? child});
+
+  @override
+  $UIXAttributeValueCopyWith<num, $Res>? get widthFactor;
+  @override
+  $UIXAttributeValueCopyWith<num, $Res>? get heightFactor;
 }
 
 /// @nodoc

@@ -37,6 +37,7 @@ abstract class $TextAttributesCopyWith<$Res> {
   @useResult
   $Res call({UIXAttributeValue<String> text, UIXTextStyle? style});
 
+  $UIXAttributeValueCopyWith<String, $Res> get text;
   $UIXTextStyleCopyWith<$Res>? get style;
 }
 
@@ -70,6 +71,14 @@ class _$TextAttributesCopyWithImpl<$Res, $Val extends TextAttributes>
 
   @override
   @pragma('vm:prefer-inline')
+  $UIXAttributeValueCopyWith<String, $Res> get text {
+    return $UIXAttributeValueCopyWith<String, $Res>(_value.text, (value) {
+      return _then(_value.copyWith(text: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $UIXTextStyleCopyWith<$Res>? get style {
     if (_value.style == null) {
       return null;
@@ -91,6 +100,8 @@ abstract class _$$_TextAttributesCopyWith<$Res>
   @useResult
   $Res call({UIXAttributeValue<String> text, UIXTextStyle? style});
 
+  @override
+  $UIXAttributeValueCopyWith<String, $Res> get text;
   @override
   $UIXTextStyleCopyWith<$Res>? get style;
 }

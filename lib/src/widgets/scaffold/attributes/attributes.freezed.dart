@@ -169,8 +169,8 @@ class _$_ScaffoldAttributes implements _ScaffoldAttributes {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ScaffoldAttributes &&
-            const DeepCollectionEquality()
-                .equals(other.backgroundColor, backgroundColor) &&
+            (identical(other.backgroundColor, backgroundColor) ||
+                other.backgroundColor == backgroundColor) &&
             const DeepCollectionEquality().equals(other._appBar, _appBar) &&
             const DeepCollectionEquality().equals(other._body, _body));
   }
@@ -179,7 +179,7 @@ class _$_ScaffoldAttributes implements _ScaffoldAttributes {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(backgroundColor),
+      backgroundColor,
       const DeepCollectionEquality().hash(_appBar),
       const DeepCollectionEquality().hash(_body));
 

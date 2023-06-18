@@ -45,6 +45,11 @@ abstract class $ColumnAttributesCopyWith<$Res> {
       UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
       UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
       List<Map<String, dynamic>> children});
+
+  $UIXEnumAttributeValueCopyWith<MainAxisSize, $Res> get mainAxisSize;
+  $UIXEnumAttributeValueCopyWith<MainAxisAlignment, $Res> get mainAxisAlignment;
+  $UIXEnumAttributeValueCopyWith<CrossAxisAlignment, $Res>
+      get crossAxisAlignment;
 }
 
 /// @nodoc
@@ -84,6 +89,35 @@ class _$ColumnAttributesCopyWithImpl<$Res, $Val extends ColumnAttributes>
               as List<Map<String, dynamic>>,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXEnumAttributeValueCopyWith<MainAxisSize, $Res> get mainAxisSize {
+    return $UIXEnumAttributeValueCopyWith<MainAxisSize, $Res>(
+        _value.mainAxisSize, (value) {
+      return _then(_value.copyWith(mainAxisSize: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXEnumAttributeValueCopyWith<MainAxisAlignment, $Res>
+      get mainAxisAlignment {
+    return $UIXEnumAttributeValueCopyWith<MainAxisAlignment, $Res>(
+        _value.mainAxisAlignment, (value) {
+      return _then(_value.copyWith(mainAxisAlignment: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXEnumAttributeValueCopyWith<CrossAxisAlignment, $Res>
+      get crossAxisAlignment {
+    return $UIXEnumAttributeValueCopyWith<CrossAxisAlignment, $Res>(
+        _value.crossAxisAlignment, (value) {
+      return _then(_value.copyWith(crossAxisAlignment: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -99,6 +133,14 @@ abstract class _$$_ColumnAttributesCopyWith<$Res>
       UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
       UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
       List<Map<String, dynamic>> children});
+
+  @override
+  $UIXEnumAttributeValueCopyWith<MainAxisSize, $Res> get mainAxisSize;
+  @override
+  $UIXEnumAttributeValueCopyWith<MainAxisAlignment, $Res> get mainAxisAlignment;
+  @override
+  $UIXEnumAttributeValueCopyWith<CrossAxisAlignment, $Res>
+      get crossAxisAlignment;
 }
 
 /// @nodoc
@@ -142,9 +184,12 @@ class __$$_ColumnAttributesCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ColumnAttributes implements _ColumnAttributes {
   const _$_ColumnAttributes(
-      {this.mainAxisSize = const UIXEnumAttributeValue(value: 'max'),
-      this.mainAxisAlignment = const UIXEnumAttributeValue(value: 'start'),
-      this.crossAxisAlignment = const UIXEnumAttributeValue(value: 'center'),
+      {this.mainAxisSize =
+          const UIXEnumAttributeValue<MainAxisSize>(value: 'max'),
+      this.mainAxisAlignment =
+          const UIXEnumAttributeValue<MainAxisAlignment>(value: 'start'),
+      this.crossAxisAlignment =
+          const UIXEnumAttributeValue<CrossAxisAlignment>(value: 'center'),
       required final List<Map<String, dynamic>> children})
       : _children = children;
 

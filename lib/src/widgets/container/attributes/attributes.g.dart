@@ -12,11 +12,11 @@ _$_ContainerAttributes _$$_ContainerAttributesFromJson(
       height: json['height'] == null
           ? null
           : UIXAttributeValue<num>.fromJson(
-              json['height'] as Map<String, dynamic>),
+              json['height'] as Map<String, dynamic>, (value) => value as num),
       width: json['width'] == null
           ? null
           : UIXAttributeValue<num>.fromJson(
-              json['width'] as Map<String, dynamic>),
+              json['width'] as Map<String, dynamic>, (value) => value as num),
       color: const UIXColorConverter().fromJson(json['color'] as String?),
       margin: _$JsonConverterFromJson<Map<String, dynamic>, EdgeInsetsGeometry>(
           json['margin'], const UIXEdgeInsetsConverter().fromJson),
@@ -31,8 +31,12 @@ _$_ContainerAttributes _$$_ContainerAttributesFromJson(
 Map<String, dynamic> _$$_ContainerAttributesToJson(
         _$_ContainerAttributes instance) =>
     <String, dynamic>{
-      'height': instance.height,
-      'width': instance.width,
+      'height': instance.height?.toJson(
+        (value) => value,
+      ),
+      'width': instance.width?.toJson(
+        (value) => value,
+      ),
       'color': const UIXColorConverter().toJson(instance.color),
       'margin': _$JsonConverterToJson<Map<String, dynamic>, EdgeInsetsGeometry>(
           instance.margin, const UIXEdgeInsetsConverter().toJson),

@@ -1,15 +1,28 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:uix/src/helpers/attributes_notifier.dart';
 import 'package:uix/src/helpers/uix_provider.dart';
 
-class UIXEnumAttributeValue<T extends Enum> {
-  const UIXEnumAttributeValue({
-    this.key,
-    this.value,
-  });
+part 'enum_attribute_value.freezed.dart';
+part 'enum_attribute_value.g.dart';
 
-  final String? key;
-  final String? value;
+@Freezed(genericArgumentFactories: true)
+class UIXEnumAttributeValue<T extends Enum> with _$UIXEnumAttributeValue<T> {
+  const UIXEnumAttributeValue._();
+
+  const factory UIXEnumAttributeValue({
+    String? key,
+    String? value,
+  }) = _UIXEnumAttributeValue;
+
+  factory UIXEnumAttributeValue.fromJson(
+          Map<String, dynamic> json, T Function(Object?) fromJsonT) =>
+      _$UIXEnumAttributeValueFromJson(json, fromJsonT);
+
+  // Temporary fix for genericArgumentFactories
+  @override
+  Map<String, dynamic> toJson(Object? Function(T) toJsonT) =>
+      throw _privateConstructorUsedError;
 
   T toValue(BuildContext context, List<T> values) {
     if (value != null) {
@@ -25,19 +38,5 @@ class UIXEnumAttributeValue<T extends Enum> {
 
     final String dynamicValue = notifier.value[key];
     return values.firstWhere((element) => element.name == dynamicValue);
-  }
-
-  factory UIXEnumAttributeValue.fromJson(Map<String, dynamic> json) {
-    return UIXEnumAttributeValue<T>(
-      key: json['key'] as String?,
-      value: json['value'] as String?,
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'key': key,
-      'value': value,
-    };
   }
 }

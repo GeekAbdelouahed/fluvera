@@ -36,6 +36,8 @@ abstract class $ExpandedAttributesCopyWith<$Res> {
       _$ExpandedAttributesCopyWithImpl<$Res, ExpandedAttributes>;
   @useResult
   $Res call({UIXAttributeValue<num> flex, Map<String, dynamic> child});
+
+  $UIXAttributeValueCopyWith<num, $Res> get flex;
 }
 
 /// @nodoc
@@ -65,6 +67,14 @@ class _$ExpandedAttributesCopyWithImpl<$Res, $Val extends ExpandedAttributes>
               as Map<String, dynamic>,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributeValueCopyWith<num, $Res> get flex {
+    return $UIXAttributeValueCopyWith<num, $Res>(_value.flex, (value) {
+      return _then(_value.copyWith(flex: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -76,6 +86,9 @@ abstract class _$$_ExpandedAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call({UIXAttributeValue<num> flex, Map<String, dynamic> child});
+
+  @override
+  $UIXAttributeValueCopyWith<num, $Res> get flex;
 }
 
 /// @nodoc

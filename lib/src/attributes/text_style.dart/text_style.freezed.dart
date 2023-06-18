@@ -45,6 +45,8 @@ abstract class $UIXTextStyleCopyWith<$Res> {
       UIXEnumAttributeValue<TextOverflow>? overflow,
       @UIXColorConverter() Color? color,
       @UIXFontWeightConverter() FontWeight? fontWeight});
+
+  $UIXEnumAttributeValueCopyWith<TextOverflow, $Res>? get overflow;
 }
 
 /// @nodoc
@@ -84,6 +86,19 @@ class _$UIXTextStyleCopyWithImpl<$Res, $Val extends UIXTextStyle>
               as FontWeight?,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXEnumAttributeValueCopyWith<TextOverflow, $Res>? get overflow {
+    if (_value.overflow == null) {
+      return null;
+    }
+
+    return $UIXEnumAttributeValueCopyWith<TextOverflow, $Res>(_value.overflow!,
+        (value) {
+      return _then(_value.copyWith(overflow: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -99,6 +114,9 @@ abstract class _$$_UIXTextStyleCopyWith<$Res>
       UIXEnumAttributeValue<TextOverflow>? overflow,
       @UIXColorConverter() Color? color,
       @UIXFontWeightConverter() FontWeight? fontWeight});
+
+  @override
+  $UIXEnumAttributeValueCopyWith<TextOverflow, $Res>? get overflow;
 }
 
 /// @nodoc
@@ -175,19 +193,15 @@ class _$_UIXTextStyle implements _UIXTextStyle {
                 other.fontSize == fontSize) &&
             (identical(other.overflow, overflow) ||
                 other.overflow == overflow) &&
-            const DeepCollectionEquality().equals(other.color, color) &&
-            const DeepCollectionEquality()
-                .equals(other.fontWeight, fontWeight));
+            (identical(other.color, color) || other.color == color) &&
+            (identical(other.fontWeight, fontWeight) ||
+                other.fontWeight == fontWeight));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      fontSize,
-      overflow,
-      const DeepCollectionEquality().hash(color),
-      const DeepCollectionEquality().hash(fontWeight));
+  int get hashCode =>
+      Object.hash(runtimeType, fontSize, overflow, color, fontWeight);
 
   @JsonKey(ignore: true)
   @override

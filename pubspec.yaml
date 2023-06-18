@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  freezed: ^2.3.0
+  freezed: ^2.3.5
   freezed_annotation: ^2.2.0
 
 dev_dependencies:

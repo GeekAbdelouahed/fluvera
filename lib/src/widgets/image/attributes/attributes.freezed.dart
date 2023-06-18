@@ -44,6 +44,11 @@ abstract class $ImageAttributesCopyWith<$Res> {
       UIXAttributeValue<num>? width,
       UIXEnumAttributeValue<BoxFit>? fit,
       UIXImageSource source});
+
+  $UIXAttributeValueCopyWith<String, $Res> get path;
+  $UIXAttributeValueCopyWith<num, $Res>? get height;
+  $UIXAttributeValueCopyWith<num, $Res>? get width;
+  $UIXEnumAttributeValueCopyWith<BoxFit, $Res>? get fit;
 }
 
 /// @nodoc
@@ -88,6 +93,50 @@ class _$ImageAttributesCopyWithImpl<$Res, $Val extends ImageAttributes>
               as UIXImageSource,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributeValueCopyWith<String, $Res> get path {
+    return $UIXAttributeValueCopyWith<String, $Res>(_value.path, (value) {
+      return _then(_value.copyWith(path: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributeValueCopyWith<num, $Res>? get height {
+    if (_value.height == null) {
+      return null;
+    }
+
+    return $UIXAttributeValueCopyWith<num, $Res>(_value.height!, (value) {
+      return _then(_value.copyWith(height: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributeValueCopyWith<num, $Res>? get width {
+    if (_value.width == null) {
+      return null;
+    }
+
+    return $UIXAttributeValueCopyWith<num, $Res>(_value.width!, (value) {
+      return _then(_value.copyWith(width: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXEnumAttributeValueCopyWith<BoxFit, $Res>? get fit {
+    if (_value.fit == null) {
+      return null;
+    }
+
+    return $UIXEnumAttributeValueCopyWith<BoxFit, $Res>(_value.fit!, (value) {
+      return _then(_value.copyWith(fit: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -104,6 +153,15 @@ abstract class _$$_ImageAttributesCopyWith<$Res>
       UIXAttributeValue<num>? width,
       UIXEnumAttributeValue<BoxFit>? fit,
       UIXImageSource source});
+
+  @override
+  $UIXAttributeValueCopyWith<String, $Res> get path;
+  @override
+  $UIXAttributeValueCopyWith<num, $Res>? get height;
+  @override
+  $UIXAttributeValueCopyWith<num, $Res>? get width;
+  @override
+  $UIXEnumAttributeValueCopyWith<BoxFit, $Res>? get fit;
 }
 
 /// @nodoc

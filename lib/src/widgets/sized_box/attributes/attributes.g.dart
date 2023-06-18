@@ -12,18 +12,22 @@ _$_SizedBoxAttributes _$$_SizedBoxAttributesFromJson(
       height: json['height'] == null
           ? null
           : UIXAttributeValue<num>.fromJson(
-              json['height'] as Map<String, dynamic>),
+              json['height'] as Map<String, dynamic>, (value) => value as num),
       width: json['width'] == null
           ? null
           : UIXAttributeValue<num>.fromJson(
-              json['width'] as Map<String, dynamic>),
+              json['width'] as Map<String, dynamic>, (value) => value as num),
       child: json['child'] as Map<String, dynamic>?,
     );
 
 Map<String, dynamic> _$$_SizedBoxAttributesToJson(
         _$_SizedBoxAttributes instance) =>
     <String, dynamic>{
-      'height': instance.height,
-      'width': instance.width,
+      'height': instance.height?.toJson(
+        (value) => value,
+      ),
+      'width': instance.width?.toJson(
+        (value) => value,
+      ),
       'child': instance.child,
     };

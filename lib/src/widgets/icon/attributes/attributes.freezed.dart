@@ -44,6 +44,10 @@ abstract class $IconAttributesCopyWith<$Res> {
       UIXAttributeValue<num>? size,
       UIXAttributeValue<String> fontFamily,
       @UIXColorConverter() Color? color});
+
+  $UIXAttributeValueCopyWith<num, $Res> get code;
+  $UIXAttributeValueCopyWith<num, $Res>? get size;
+  $UIXAttributeValueCopyWith<String, $Res> get fontFamily;
 }
 
 /// @nodoc
@@ -83,6 +87,34 @@ class _$IconAttributesCopyWithImpl<$Res, $Val extends IconAttributes>
               as Color?,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributeValueCopyWith<num, $Res> get code {
+    return $UIXAttributeValueCopyWith<num, $Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributeValueCopyWith<num, $Res>? get size {
+    if (_value.size == null) {
+      return null;
+    }
+
+    return $UIXAttributeValueCopyWith<num, $Res>(_value.size!, (value) {
+      return _then(_value.copyWith(size: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributeValueCopyWith<String, $Res> get fontFamily {
+    return $UIXAttributeValueCopyWith<String, $Res>(_value.fontFamily, (value) {
+      return _then(_value.copyWith(fontFamily: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -98,6 +130,13 @@ abstract class _$$_IconAttributesCopyWith<$Res>
       UIXAttributeValue<num>? size,
       UIXAttributeValue<String> fontFamily,
       @UIXColorConverter() Color? color});
+
+  @override
+  $UIXAttributeValueCopyWith<num, $Res> get code;
+  @override
+  $UIXAttributeValueCopyWith<num, $Res>? get size;
+  @override
+  $UIXAttributeValueCopyWith<String, $Res> get fontFamily;
 }
 
 /// @nodoc
@@ -174,13 +213,12 @@ class _$_IconAttributes implements _IconAttributes {
             (identical(other.size, size) || other.size == size) &&
             (identical(other.fontFamily, fontFamily) ||
                 other.fontFamily == fontFamily) &&
-            const DeepCollectionEquality().equals(other.color, color));
+            (identical(other.color, color) || other.color == color));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, code, size, fontFamily,
-      const DeepCollectionEquality().hash(color));
+  int get hashCode => Object.hash(runtimeType, code, size, fontFamily, color);
 
   @JsonKey(ignore: true)
   @override

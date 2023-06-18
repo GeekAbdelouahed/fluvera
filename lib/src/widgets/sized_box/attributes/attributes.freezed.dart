@@ -40,6 +40,9 @@ abstract class $SizedBoxAttributesCopyWith<$Res> {
       {UIXAttributeValue<num>? height,
       UIXAttributeValue<num>? width,
       Map<String, dynamic>? child});
+
+  $UIXAttributeValueCopyWith<num, $Res>? get height;
+  $UIXAttributeValueCopyWith<num, $Res>? get width;
 }
 
 /// @nodoc
@@ -74,6 +77,30 @@ class _$SizedBoxAttributesCopyWithImpl<$Res, $Val extends SizedBoxAttributes>
               as Map<String, dynamic>?,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributeValueCopyWith<num, $Res>? get height {
+    if (_value.height == null) {
+      return null;
+    }
+
+    return $UIXAttributeValueCopyWith<num, $Res>(_value.height!, (value) {
+      return _then(_value.copyWith(height: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UIXAttributeValueCopyWith<num, $Res>? get width {
+    if (_value.width == null) {
+      return null;
+    }
+
+    return $UIXAttributeValueCopyWith<num, $Res>(_value.width!, (value) {
+      return _then(_value.copyWith(width: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -88,6 +115,11 @@ abstract class _$$_SizedBoxAttributesCopyWith<$Res>
       {UIXAttributeValue<num>? height,
       UIXAttributeValue<num>? width,
       Map<String, dynamic>? child});
+
+  @override
+  $UIXAttributeValueCopyWith<num, $Res>? get height;
+  @override
+  $UIXAttributeValueCopyWith<num, $Res>? get width;
 }
 
 /// @nodoc
