@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:uix/src/attributes/actions/actions.dart';
+import 'package:uix/src/core/attributes/actions/actions.dart';
 import 'package:uix/uix.dart';
 
 extension MapExtensions on Map<String, dynamic> {
@@ -43,7 +43,9 @@ extension UIXActionExtension on UIXActions {
             );
       },
       updateAttribute: (attributes) async {
-        UIXProvider.of<UIXAttributesNotifier>(context)?.value.update(attributes.key, attributes.value);
+        UIXProvider.of<UIXAttributesNotifier>(context)
+            ?.value
+            .update(attributes.key, attributes.value);
       },
     );
   }

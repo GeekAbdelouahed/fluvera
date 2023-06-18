@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uix/src/attributes/attribute_value/attribute_value.dart';
 import 'package:uix/src/converters/converters.dart';
+import 'package:uix/src/core/attributes/attribute_value/attribute_value.dart';
 
 part 'attributes.freezed.dart';
 part 'attributes.g.dart';
@@ -13,7 +13,7 @@ class FractionallySizedBoxAttributes with _$FractionallySizedBoxAttributes {
     UIXAttributeValue<num>? heightFactor,
     @Default(AlignmentDirectional.center)
     @UIXAlignmentGeometryConverter()
-        AlignmentGeometry? alignment,
+    AlignmentGeometry? alignment,
     Map<String, dynamic>? child,
   }) = _FractionallySizedBoxAttributes;
 

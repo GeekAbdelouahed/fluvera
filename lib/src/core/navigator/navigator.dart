@@ -1,6 +1,6 @@
-part of 'core.dart';
+import 'package:flutter/material.dart';
 
-abstract class UIXNavigator {
+abstract interface class UIXNavigator {
   Future<dynamic> pushRoute(
     BuildContext context,
     String routeName, {
