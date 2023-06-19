@@ -19,7 +19,7 @@ void main() {
           },
         },
       };
-      widget = json.toWidget()!;
+      widget = UIXFactory.build(json)!;
     },
   );
   group(

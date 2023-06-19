@@ -21,9 +21,7 @@ class ItemPage extends StatelessWidget {
             child: CircularProgressIndicator(),
           );
         }
-
-        return (json.decode(snapshot.data!) as Map<String, dynamic>)
-            .toWidget()!;
+        return UIXFactory.build(json.decode(snapshot.data!))!;
       },
     );
   }

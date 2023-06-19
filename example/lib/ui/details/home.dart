@@ -17,8 +17,7 @@ class HomePage extends StatelessWidget {
           );
         }
 
-        return (json.decode(snapshot.data!) as Map<String, dynamic>)
-            .toWidget()!;
+        return UIXFactory.build(json.decode(snapshot.data!))!;
       },
     );
   }
