@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluvera/fluvera.dart';
 import 'package:fluvera/src/common/converters/converters.dart';
-import 'package:fluvera/src/core/provider/provider.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'actions.freezed.dart';
