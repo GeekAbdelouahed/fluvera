@@ -20,8 +20,8 @@ ExpandedAttributes _$ExpandedAttributesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ExpandedAttributes {
-  UIXAttributeValue<num> get flex => throw _privateConstructorUsedError;
-  @UIXWidgetConverter()
+  FluveraAttributeValue<num> get flex => throw _privateConstructorUsedError;
+  @FluveraWidgetConverter()
   Widget get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -36,9 +36,11 @@ abstract class $ExpandedAttributesCopyWith<$Res> {
           ExpandedAttributes value, $Res Function(ExpandedAttributes) then) =
       _$ExpandedAttributesCopyWithImpl<$Res, ExpandedAttributes>;
   @useResult
-  $Res call({UIXAttributeValue<num> flex, @UIXWidgetConverter() Widget child});
+  $Res call(
+      {FluveraAttributeValue<num> flex,
+      @FluveraWidgetConverter() Widget child});
 
-  $UIXAttributeValueCopyWith<num, $Res> get flex;
+  $FluveraAttributeValueCopyWith<num, $Res> get flex;
 }
 
 /// @nodoc
@@ -61,7 +63,7 @@ class _$ExpandedAttributesCopyWithImpl<$Res, $Val extends ExpandedAttributes>
       flex: null == flex
           ? _value.flex
           : flex // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>,
+              as FluveraAttributeValue<num>,
       child: null == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
@@ -71,8 +73,8 @@ class _$ExpandedAttributesCopyWithImpl<$Res, $Val extends ExpandedAttributes>
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXAttributeValueCopyWith<num, $Res> get flex {
-    return $UIXAttributeValueCopyWith<num, $Res>(_value.flex, (value) {
+  $FluveraAttributeValueCopyWith<num, $Res> get flex {
+    return $FluveraAttributeValueCopyWith<num, $Res>(_value.flex, (value) {
       return _then(_value.copyWith(flex: value) as $Val);
     });
   }
@@ -86,10 +88,12 @@ abstract class _$$_ExpandedAttributesCopyWith<$Res>
       __$$_ExpandedAttributesCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({UIXAttributeValue<num> flex, @UIXWidgetConverter() Widget child});
+  $Res call(
+      {FluveraAttributeValue<num> flex,
+      @FluveraWidgetConverter() Widget child});
 
   @override
-  $UIXAttributeValueCopyWith<num, $Res> get flex;
+  $FluveraAttributeValueCopyWith<num, $Res> get flex;
 }
 
 /// @nodoc
@@ -110,7 +114,7 @@ class __$$_ExpandedAttributesCopyWithImpl<$Res>
       flex: null == flex
           ? _value.flex
           : flex // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>,
+              as FluveraAttributeValue<num>,
       child: null == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
@@ -123,17 +127,17 @@ class __$$_ExpandedAttributesCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExpandedAttributes implements _ExpandedAttributes {
   const _$_ExpandedAttributes(
-      {this.flex = const UIXAttributeValue<num>(value: 1),
-      @UIXWidgetConverter() required this.child});
+      {this.flex = const FluveraAttributeValue<num>(value: 1),
+      @FluveraWidgetConverter() required this.child});
 
   factory _$_ExpandedAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_ExpandedAttributesFromJson(json);
 
   @override
   @JsonKey()
-  final UIXAttributeValue<num> flex;
+  final FluveraAttributeValue<num> flex;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   final Widget child;
 
   @override
@@ -171,17 +175,17 @@ class _$_ExpandedAttributes implements _ExpandedAttributes {
 
 abstract class _ExpandedAttributes implements ExpandedAttributes {
   const factory _ExpandedAttributes(
-          {final UIXAttributeValue<num> flex,
-          @UIXWidgetConverter() required final Widget child}) =
+          {final FluveraAttributeValue<num> flex,
+          @FluveraWidgetConverter() required final Widget child}) =
       _$_ExpandedAttributes;
 
   factory _ExpandedAttributes.fromJson(Map<String, dynamic> json) =
       _$_ExpandedAttributes.fromJson;
 
   @override
-  UIXAttributeValue<num> get flex;
+  FluveraAttributeValue<num> get flex;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget get child;
   @override
   @JsonKey(ignore: true)

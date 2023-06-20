@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:uix/src/widgets/app_bar/attributes/attributes.dart';
-import 'package:uix/src/widgets/uix.dart';
+import 'package:fluvera/src/widgets/app_bar/attributes/attributes.dart';
+import 'package:fluvera/src/widgets/fluvera.dart';
 
-class UIXAppBar extends UIX<AppBarAttributes> {
-  const UIXAppBar(Map<String, dynamic> json) : super(json);
+class FluveraAppBar extends Fluvera<AppBarAttributes> {
+  const FluveraAppBar(Map<String, dynamic> json) : super(json);
 
   @override
   AppBarAttributes get attributes => AppBarAttributes.fromJson(json);

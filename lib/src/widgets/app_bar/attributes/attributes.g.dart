@@ -10,14 +10,14 @@ _$_AppBarAttributes _$$_AppBarAttributesFromJson(Map<String, dynamic> json) =>
     _$_AppBarAttributes(
       centerTitle: json['centerTitle'] == null
           ? null
-          : UIXAttributeValue<bool>.fromJson(
+          : FluveraAttributeValue<bool>.fromJson(
               json['centerTitle'] as Map<String, dynamic>,
               (value) => value as bool),
       title: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
-          json['title'], const UIXWidgetConverter().fromJson),
+          json['title'], const FluveraWidgetConverter().fromJson),
       actions: (json['actions'] as List<dynamic>?)
-          ?.map((e) =>
-              const UIXWidgetConverter().fromJson(e as Map<String, dynamic>))
+          ?.map((e) => const FluveraWidgetConverter()
+              .fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -27,9 +27,9 @@ Map<String, dynamic> _$$_AppBarAttributesToJson(_$_AppBarAttributes instance) =>
         (value) => value,
       ),
       'title': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
-          instance.title, const UIXWidgetConverter().toJson),
+          instance.title, const FluveraWidgetConverter().toJson),
       'actions':
-          instance.actions?.map(const UIXWidgetConverter().toJson).toList(),
+          instance.actions?.map(const FluveraWidgetConverter().toJson).toList(),
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

@@ -20,11 +20,11 @@ ScaffoldAttributes _$ScaffoldAttributesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ScaffoldAttributes {
-  @UIXColorConverter()
+  @FluveraColorConverter()
   Color? get backgroundColor => throw _privateConstructorUsedError;
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get appBar => throw _privateConstructorUsedError;
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get body => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -40,9 +40,9 @@ abstract class $ScaffoldAttributesCopyWith<$Res> {
       _$ScaffoldAttributesCopyWithImpl<$Res, ScaffoldAttributes>;
   @useResult
   $Res call(
-      {@UIXColorConverter() Color? backgroundColor,
-      @UIXWidgetConverter() Widget? appBar,
-      @UIXWidgetConverter() Widget? body});
+      {@FluveraColorConverter() Color? backgroundColor,
+      @FluveraWidgetConverter() Widget? appBar,
+      @FluveraWidgetConverter() Widget? body});
 }
 
 /// @nodoc
@@ -88,9 +88,9 @@ abstract class _$$_ScaffoldAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@UIXColorConverter() Color? backgroundColor,
-      @UIXWidgetConverter() Widget? appBar,
-      @UIXWidgetConverter() Widget? body});
+      {@FluveraColorConverter() Color? backgroundColor,
+      @FluveraWidgetConverter() Widget? appBar,
+      @FluveraWidgetConverter() Widget? body});
 }
 
 /// @nodoc
@@ -129,21 +129,21 @@ class __$$_ScaffoldAttributesCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ScaffoldAttributes implements _ScaffoldAttributes {
   const _$_ScaffoldAttributes(
-      {@UIXColorConverter() this.backgroundColor,
-      @UIXWidgetConverter() this.appBar,
-      @UIXWidgetConverter() this.body});
+      {@FluveraColorConverter() this.backgroundColor,
+      @FluveraWidgetConverter() this.appBar,
+      @FluveraWidgetConverter() this.body});
 
   factory _$_ScaffoldAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_ScaffoldAttributesFromJson(json);
 
   @override
-  @UIXColorConverter()
+  @FluveraColorConverter()
   final Color? backgroundColor;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   final Widget? appBar;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   final Widget? body;
 
   @override
@@ -183,21 +183,21 @@ class _$_ScaffoldAttributes implements _ScaffoldAttributes {
 
 abstract class _ScaffoldAttributes implements ScaffoldAttributes {
   const factory _ScaffoldAttributes(
-      {@UIXColorConverter() final Color? backgroundColor,
-      @UIXWidgetConverter() final Widget? appBar,
-      @UIXWidgetConverter() final Widget? body}) = _$_ScaffoldAttributes;
+      {@FluveraColorConverter() final Color? backgroundColor,
+      @FluveraWidgetConverter() final Widget? appBar,
+      @FluveraWidgetConverter() final Widget? body}) = _$_ScaffoldAttributes;
 
   factory _ScaffoldAttributes.fromJson(Map<String, dynamic> json) =
       _$_ScaffoldAttributes.fromJson;
 
   @override
-  @UIXColorConverter()
+  @FluveraColorConverter()
   Color? get backgroundColor;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get appBar;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get body;
   @override
   @JsonKey(ignore: true)

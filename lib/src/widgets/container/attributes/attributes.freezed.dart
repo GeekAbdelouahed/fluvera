@@ -20,17 +20,17 @@ ContainerAttributes _$ContainerAttributesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ContainerAttributes {
-  UIXAttributeValue<num>? get height => throw _privateConstructorUsedError;
-  UIXAttributeValue<num>? get width => throw _privateConstructorUsedError;
-  @UIXColorConverter()
+  FluveraAttributeValue<num>? get height => throw _privateConstructorUsedError;
+  FluveraAttributeValue<num>? get width => throw _privateConstructorUsedError;
+  @FluveraColorConverter()
   Color? get color => throw _privateConstructorUsedError;
-  @UIXEdgeInsetsConverter()
+  @FluveraEdgeInsetsConverter()
   EdgeInsetsGeometry? get margin => throw _privateConstructorUsedError;
-  @UIXEdgeInsetsConverter()
+  @FluveraEdgeInsetsConverter()
   EdgeInsetsGeometry? get padding => throw _privateConstructorUsedError;
-  @UIXAlignmentGeometryConverter()
+  @FluveraAlignmentGeometryConverter()
   AlignmentGeometry? get alignment => throw _privateConstructorUsedError;
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -46,16 +46,16 @@ abstract class $ContainerAttributesCopyWith<$Res> {
       _$ContainerAttributesCopyWithImpl<$Res, ContainerAttributes>;
   @useResult
   $Res call(
-      {UIXAttributeValue<num>? height,
-      UIXAttributeValue<num>? width,
-      @UIXColorConverter() Color? color,
-      @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
-      @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
-      @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-      @UIXWidgetConverter() Widget? child});
+      {FluveraAttributeValue<num>? height,
+      FluveraAttributeValue<num>? width,
+      @FluveraColorConverter() Color? color,
+      @FluveraEdgeInsetsConverter() EdgeInsetsGeometry? margin,
+      @FluveraEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+      @FluveraAlignmentGeometryConverter() AlignmentGeometry? alignment,
+      @FluveraWidgetConverter() Widget? child});
 
-  $UIXAttributeValueCopyWith<num, $Res>? get height;
-  $UIXAttributeValueCopyWith<num, $Res>? get width;
+  $FluveraAttributeValueCopyWith<num, $Res>? get height;
+  $FluveraAttributeValueCopyWith<num, $Res>? get width;
 }
 
 /// @nodoc
@@ -83,11 +83,11 @@ class _$ContainerAttributesCopyWithImpl<$Res, $Val extends ContainerAttributes>
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>?,
+              as FluveraAttributeValue<num>?,
       width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>?,
+              as FluveraAttributeValue<num>?,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -113,24 +113,24 @@ class _$ContainerAttributesCopyWithImpl<$Res, $Val extends ContainerAttributes>
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXAttributeValueCopyWith<num, $Res>? get height {
+  $FluveraAttributeValueCopyWith<num, $Res>? get height {
     if (_value.height == null) {
       return null;
     }
 
-    return $UIXAttributeValueCopyWith<num, $Res>(_value.height!, (value) {
+    return $FluveraAttributeValueCopyWith<num, $Res>(_value.height!, (value) {
       return _then(_value.copyWith(height: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXAttributeValueCopyWith<num, $Res>? get width {
+  $FluveraAttributeValueCopyWith<num, $Res>? get width {
     if (_value.width == null) {
       return null;
     }
 
-    return $UIXAttributeValueCopyWith<num, $Res>(_value.width!, (value) {
+    return $FluveraAttributeValueCopyWith<num, $Res>(_value.width!, (value) {
       return _then(_value.copyWith(width: value) as $Val);
     });
   }
@@ -145,18 +145,18 @@ abstract class _$$_ContainerAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {UIXAttributeValue<num>? height,
-      UIXAttributeValue<num>? width,
-      @UIXColorConverter() Color? color,
-      @UIXEdgeInsetsConverter() EdgeInsetsGeometry? margin,
-      @UIXEdgeInsetsConverter() EdgeInsetsGeometry? padding,
-      @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-      @UIXWidgetConverter() Widget? child});
+      {FluveraAttributeValue<num>? height,
+      FluveraAttributeValue<num>? width,
+      @FluveraColorConverter() Color? color,
+      @FluveraEdgeInsetsConverter() EdgeInsetsGeometry? margin,
+      @FluveraEdgeInsetsConverter() EdgeInsetsGeometry? padding,
+      @FluveraAlignmentGeometryConverter() AlignmentGeometry? alignment,
+      @FluveraWidgetConverter() Widget? child});
 
   @override
-  $UIXAttributeValueCopyWith<num, $Res>? get height;
+  $FluveraAttributeValueCopyWith<num, $Res>? get height;
   @override
-  $UIXAttributeValueCopyWith<num, $Res>? get width;
+  $FluveraAttributeValueCopyWith<num, $Res>? get width;
 }
 
 /// @nodoc
@@ -182,11 +182,11 @@ class __$$_ContainerAttributesCopyWithImpl<$Res>
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>?,
+              as FluveraAttributeValue<num>?,
       width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>?,
+              as FluveraAttributeValue<num>?,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -217,33 +217,33 @@ class _$_ContainerAttributes implements _ContainerAttributes {
   const _$_ContainerAttributes(
       {this.height,
       this.width,
-      @UIXColorConverter() this.color,
-      @UIXEdgeInsetsConverter() this.margin,
-      @UIXEdgeInsetsConverter() this.padding,
-      @UIXAlignmentGeometryConverter() this.alignment,
-      @UIXWidgetConverter() this.child});
+      @FluveraColorConverter() this.color,
+      @FluveraEdgeInsetsConverter() this.margin,
+      @FluveraEdgeInsetsConverter() this.padding,
+      @FluveraAlignmentGeometryConverter() this.alignment,
+      @FluveraWidgetConverter() this.child});
 
   factory _$_ContainerAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_ContainerAttributesFromJson(json);
 
   @override
-  final UIXAttributeValue<num>? height;
+  final FluveraAttributeValue<num>? height;
   @override
-  final UIXAttributeValue<num>? width;
+  final FluveraAttributeValue<num>? width;
   @override
-  @UIXColorConverter()
+  @FluveraColorConverter()
   final Color? color;
   @override
-  @UIXEdgeInsetsConverter()
+  @FluveraEdgeInsetsConverter()
   final EdgeInsetsGeometry? margin;
   @override
-  @UIXEdgeInsetsConverter()
+  @FluveraEdgeInsetsConverter()
   final EdgeInsetsGeometry? padding;
   @override
-  @UIXAlignmentGeometryConverter()
+  @FluveraAlignmentGeometryConverter()
   final AlignmentGeometry? alignment;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   final Widget? child;
 
   @override
@@ -288,35 +288,35 @@ class _$_ContainerAttributes implements _ContainerAttributes {
 
 abstract class _ContainerAttributes implements ContainerAttributes {
   const factory _ContainerAttributes(
-      {final UIXAttributeValue<num>? height,
-      final UIXAttributeValue<num>? width,
-      @UIXColorConverter() final Color? color,
-      @UIXEdgeInsetsConverter() final EdgeInsetsGeometry? margin,
-      @UIXEdgeInsetsConverter() final EdgeInsetsGeometry? padding,
-      @UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
-      @UIXWidgetConverter() final Widget? child}) = _$_ContainerAttributes;
+      {final FluveraAttributeValue<num>? height,
+      final FluveraAttributeValue<num>? width,
+      @FluveraColorConverter() final Color? color,
+      @FluveraEdgeInsetsConverter() final EdgeInsetsGeometry? margin,
+      @FluveraEdgeInsetsConverter() final EdgeInsetsGeometry? padding,
+      @FluveraAlignmentGeometryConverter() final AlignmentGeometry? alignment,
+      @FluveraWidgetConverter() final Widget? child}) = _$_ContainerAttributes;
 
   factory _ContainerAttributes.fromJson(Map<String, dynamic> json) =
       _$_ContainerAttributes.fromJson;
 
   @override
-  UIXAttributeValue<num>? get height;
+  FluveraAttributeValue<num>? get height;
   @override
-  UIXAttributeValue<num>? get width;
+  FluveraAttributeValue<num>? get width;
   @override
-  @UIXColorConverter()
+  @FluveraColorConverter()
   Color? get color;
   @override
-  @UIXEdgeInsetsConverter()
+  @FluveraEdgeInsetsConverter()
   EdgeInsetsGeometry? get margin;
   @override
-  @UIXEdgeInsetsConverter()
+  @FluveraEdgeInsetsConverter()
   EdgeInsetsGeometry? get padding;
   @override
-  @UIXAlignmentGeometryConverter()
+  @FluveraAlignmentGeometryConverter()
   AlignmentGeometry? get alignment;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get child;
   @override
   @JsonKey(ignore: true)

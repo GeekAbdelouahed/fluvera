@@ -21,12 +21,13 @@ FractionallySizedBoxAttributes _$FractionallySizedBoxAttributesFromJson(
 
 /// @nodoc
 mixin _$FractionallySizedBoxAttributes {
-  UIXAttributeValue<num>? get widthFactor => throw _privateConstructorUsedError;
-  UIXAttributeValue<num>? get heightFactor =>
+  FluveraAttributeValue<num>? get widthFactor =>
       throw _privateConstructorUsedError;
-  @UIXAlignmentGeometryConverter()
+  FluveraAttributeValue<num>? get heightFactor =>
+      throw _privateConstructorUsedError;
+  @FluveraAlignmentGeometryConverter()
   AlignmentGeometry? get alignment => throw _privateConstructorUsedError;
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -44,13 +45,13 @@ abstract class $FractionallySizedBoxAttributesCopyWith<$Res> {
           FractionallySizedBoxAttributes>;
   @useResult
   $Res call(
-      {UIXAttributeValue<num>? widthFactor,
-      UIXAttributeValue<num>? heightFactor,
-      @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-      @UIXWidgetConverter() Widget? child});
+      {FluveraAttributeValue<num>? widthFactor,
+      FluveraAttributeValue<num>? heightFactor,
+      @FluveraAlignmentGeometryConverter() AlignmentGeometry? alignment,
+      @FluveraWidgetConverter() Widget? child});
 
-  $UIXAttributeValueCopyWith<num, $Res>? get widthFactor;
-  $UIXAttributeValueCopyWith<num, $Res>? get heightFactor;
+  $FluveraAttributeValueCopyWith<num, $Res>? get widthFactor;
+  $FluveraAttributeValueCopyWith<num, $Res>? get heightFactor;
 }
 
 /// @nodoc
@@ -76,11 +77,11 @@ class _$FractionallySizedBoxAttributesCopyWithImpl<$Res,
       widthFactor: freezed == widthFactor
           ? _value.widthFactor
           : widthFactor // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>?,
+              as FluveraAttributeValue<num>?,
       heightFactor: freezed == heightFactor
           ? _value.heightFactor
           : heightFactor // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>?,
+              as FluveraAttributeValue<num>?,
       alignment: freezed == alignment
           ? _value.alignment
           : alignment // ignore: cast_nullable_to_non_nullable
@@ -94,24 +95,26 @@ class _$FractionallySizedBoxAttributesCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXAttributeValueCopyWith<num, $Res>? get widthFactor {
+  $FluveraAttributeValueCopyWith<num, $Res>? get widthFactor {
     if (_value.widthFactor == null) {
       return null;
     }
 
-    return $UIXAttributeValueCopyWith<num, $Res>(_value.widthFactor!, (value) {
+    return $FluveraAttributeValueCopyWith<num, $Res>(_value.widthFactor!,
+        (value) {
       return _then(_value.copyWith(widthFactor: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXAttributeValueCopyWith<num, $Res>? get heightFactor {
+  $FluveraAttributeValueCopyWith<num, $Res>? get heightFactor {
     if (_value.heightFactor == null) {
       return null;
     }
 
-    return $UIXAttributeValueCopyWith<num, $Res>(_value.heightFactor!, (value) {
+    return $FluveraAttributeValueCopyWith<num, $Res>(_value.heightFactor!,
+        (value) {
       return _then(_value.copyWith(heightFactor: value) as $Val);
     });
   }
@@ -127,15 +130,15 @@ abstract class _$$_FractionallySizedBoxAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {UIXAttributeValue<num>? widthFactor,
-      UIXAttributeValue<num>? heightFactor,
-      @UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-      @UIXWidgetConverter() Widget? child});
+      {FluveraAttributeValue<num>? widthFactor,
+      FluveraAttributeValue<num>? heightFactor,
+      @FluveraAlignmentGeometryConverter() AlignmentGeometry? alignment,
+      @FluveraWidgetConverter() Widget? child});
 
   @override
-  $UIXAttributeValueCopyWith<num, $Res>? get widthFactor;
+  $FluveraAttributeValueCopyWith<num, $Res>? get widthFactor;
   @override
-  $UIXAttributeValueCopyWith<num, $Res>? get heightFactor;
+  $FluveraAttributeValueCopyWith<num, $Res>? get heightFactor;
 }
 
 /// @nodoc
@@ -160,11 +163,11 @@ class __$$_FractionallySizedBoxAttributesCopyWithImpl<$Res>
       widthFactor: freezed == widthFactor
           ? _value.widthFactor
           : widthFactor // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>?,
+              as FluveraAttributeValue<num>?,
       heightFactor: freezed == heightFactor
           ? _value.heightFactor
           : heightFactor // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>?,
+              as FluveraAttributeValue<num>?,
       alignment: freezed == alignment
           ? _value.alignment
           : alignment // ignore: cast_nullable_to_non_nullable
@@ -184,25 +187,24 @@ class _$_FractionallySizedBoxAttributes
   const _$_FractionallySizedBoxAttributes(
       {this.widthFactor,
       this.heightFactor,
-      @UIXAlignmentGeometryConverter()
-          this.alignment = AlignmentDirectional.center,
-      @UIXWidgetConverter()
-          this.child});
+      @FluveraAlignmentGeometryConverter()
+      this.alignment = AlignmentDirectional.center,
+      @FluveraWidgetConverter() this.child});
 
   factory _$_FractionallySizedBoxAttributes.fromJson(
           Map<String, dynamic> json) =>
       _$$_FractionallySizedBoxAttributesFromJson(json);
 
   @override
-  final UIXAttributeValue<num>? widthFactor;
+  final FluveraAttributeValue<num>? widthFactor;
   @override
-  final UIXAttributeValue<num>? heightFactor;
+  final FluveraAttributeValue<num>? heightFactor;
   @override
   @JsonKey()
-  @UIXAlignmentGeometryConverter()
+  @FluveraAlignmentGeometryConverter()
   final AlignmentGeometry? alignment;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   final Widget? child;
 
   @override
@@ -247,24 +249,24 @@ class _$_FractionallySizedBoxAttributes
 abstract class _FractionallySizedBoxAttributes
     implements FractionallySizedBoxAttributes {
   const factory _FractionallySizedBoxAttributes(
-          {final UIXAttributeValue<num>? widthFactor,
-          final UIXAttributeValue<num>? heightFactor,
-          @UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
-          @UIXWidgetConverter() final Widget? child}) =
-      _$_FractionallySizedBoxAttributes;
+      {final FluveraAttributeValue<num>? widthFactor,
+      final FluveraAttributeValue<num>? heightFactor,
+      @FluveraAlignmentGeometryConverter() final AlignmentGeometry? alignment,
+      @FluveraWidgetConverter()
+      final Widget? child}) = _$_FractionallySizedBoxAttributes;
 
   factory _FractionallySizedBoxAttributes.fromJson(Map<String, dynamic> json) =
       _$_FractionallySizedBoxAttributes.fromJson;
 
   @override
-  UIXAttributeValue<num>? get widthFactor;
+  FluveraAttributeValue<num>? get widthFactor;
   @override
-  UIXAttributeValue<num>? get heightFactor;
+  FluveraAttributeValue<num>? get heightFactor;
   @override
-  @UIXAlignmentGeometryConverter()
+  @FluveraAlignmentGeometryConverter()
   AlignmentGeometry? get alignment;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get child;
   @override
   @JsonKey(ignore: true)

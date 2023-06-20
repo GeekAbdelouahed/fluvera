@@ -1,12 +1,12 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:uix/src/common/enums/enums.dart';
-import 'package:uix/src/widgets/image/attributes/attributes.dart';
-import 'package:uix/src/widgets/uix.dart';
+import 'package:fluvera/src/common/enums/enums.dart';
+import 'package:fluvera/src/widgets/fluvera.dart';
+import 'package:fluvera/src/widgets/image/attributes/attributes.dart';
 
-class UIXImage extends UIX<ImageAttributes> {
-  const UIXImage(Map<String, dynamic> json) : super(json);
+class FluveraImage extends Fluvera<ImageAttributes> {
+  const FluveraImage(Map<String, dynamic> json) : super(json);
 
   @override
   ImageAttributes get attributes => ImageAttributes.fromJson(json);
@@ -24,9 +24,9 @@ class UIXImage extends UIX<ImageAttributes> {
 
   ImageProvider _source(BuildContext context) {
     switch (attributes.source) {
-      case UIXImageSource.assets:
+      case FluveraImageSource.assets:
         return AssetImage(attributes.path.toValue(context));
-      case UIXImageSource.file:
+      case FluveraImageSource.file:
         return FileImage(File(attributes.path.toValue(context)));
       default:
         return NetworkImage(attributes.path.toValue(context));

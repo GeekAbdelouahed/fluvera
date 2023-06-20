@@ -20,11 +20,11 @@ AppBarAttributes _$AppBarAttributesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AppBarAttributes {
-  UIXAttributeValue<bool>? get centerTitle =>
+  FluveraAttributeValue<bool>? get centerTitle =>
       throw _privateConstructorUsedError;
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get title => throw _privateConstructorUsedError;
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   List<Widget>? get actions => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -40,11 +40,11 @@ abstract class $AppBarAttributesCopyWith<$Res> {
       _$AppBarAttributesCopyWithImpl<$Res, AppBarAttributes>;
   @useResult
   $Res call(
-      {UIXAttributeValue<bool>? centerTitle,
-      @UIXWidgetConverter() Widget? title,
-      @UIXWidgetConverter() List<Widget>? actions});
+      {FluveraAttributeValue<bool>? centerTitle,
+      @FluveraWidgetConverter() Widget? title,
+      @FluveraWidgetConverter() List<Widget>? actions});
 
-  $UIXAttributeValueCopyWith<bool, $Res>? get centerTitle;
+  $FluveraAttributeValueCopyWith<bool, $Res>? get centerTitle;
 }
 
 /// @nodoc
@@ -68,7 +68,7 @@ class _$AppBarAttributesCopyWithImpl<$Res, $Val extends AppBarAttributes>
       centerTitle: freezed == centerTitle
           ? _value.centerTitle
           : centerTitle // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<bool>?,
+              as FluveraAttributeValue<bool>?,
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -82,12 +82,13 @@ class _$AppBarAttributesCopyWithImpl<$Res, $Val extends AppBarAttributes>
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXAttributeValueCopyWith<bool, $Res>? get centerTitle {
+  $FluveraAttributeValueCopyWith<bool, $Res>? get centerTitle {
     if (_value.centerTitle == null) {
       return null;
     }
 
-    return $UIXAttributeValueCopyWith<bool, $Res>(_value.centerTitle!, (value) {
+    return $FluveraAttributeValueCopyWith<bool, $Res>(_value.centerTitle!,
+        (value) {
       return _then(_value.copyWith(centerTitle: value) as $Val);
     });
   }
@@ -102,12 +103,12 @@ abstract class _$$_AppBarAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {UIXAttributeValue<bool>? centerTitle,
-      @UIXWidgetConverter() Widget? title,
-      @UIXWidgetConverter() List<Widget>? actions});
+      {FluveraAttributeValue<bool>? centerTitle,
+      @FluveraWidgetConverter() Widget? title,
+      @FluveraWidgetConverter() List<Widget>? actions});
 
   @override
-  $UIXAttributeValueCopyWith<bool, $Res>? get centerTitle;
+  $FluveraAttributeValueCopyWith<bool, $Res>? get centerTitle;
 }
 
 /// @nodoc
@@ -129,7 +130,7 @@ class __$$_AppBarAttributesCopyWithImpl<$Res>
       centerTitle: freezed == centerTitle
           ? _value.centerTitle
           : centerTitle // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<bool>?,
+              as FluveraAttributeValue<bool>?,
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -147,21 +148,21 @@ class __$$_AppBarAttributesCopyWithImpl<$Res>
 class _$_AppBarAttributes implements _AppBarAttributes {
   const _$_AppBarAttributes(
       {this.centerTitle,
-      @UIXWidgetConverter() this.title,
-      @UIXWidgetConverter() final List<Widget>? actions})
+      @FluveraWidgetConverter() this.title,
+      @FluveraWidgetConverter() final List<Widget>? actions})
       : _actions = actions;
 
   factory _$_AppBarAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_AppBarAttributesFromJson(json);
 
   @override
-  final UIXAttributeValue<bool>? centerTitle;
+  final FluveraAttributeValue<bool>? centerTitle;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   final Widget? title;
   final List<Widget>? _actions;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   List<Widget>? get actions {
     final value = _actions;
     if (value == null) return null;
@@ -207,20 +208,21 @@ class _$_AppBarAttributes implements _AppBarAttributes {
 
 abstract class _AppBarAttributes implements AppBarAttributes {
   const factory _AppBarAttributes(
-      {final UIXAttributeValue<bool>? centerTitle,
-      @UIXWidgetConverter() final Widget? title,
-      @UIXWidgetConverter() final List<Widget>? actions}) = _$_AppBarAttributes;
+          {final FluveraAttributeValue<bool>? centerTitle,
+          @FluveraWidgetConverter() final Widget? title,
+          @FluveraWidgetConverter() final List<Widget>? actions}) =
+      _$_AppBarAttributes;
 
   factory _AppBarAttributes.fromJson(Map<String, dynamic> json) =
       _$_AppBarAttributes.fromJson;
 
   @override
-  UIXAttributeValue<bool>? get centerTitle;
+  FluveraAttributeValue<bool>? get centerTitle;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get title;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   List<Widget>? get actions;
   @override
   @JsonKey(ignore: true)

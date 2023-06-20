@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:uix/src/widgets/sized_box/attributes/attributes.dart';
-import 'package:uix/src/widgets/uix.dart';
+import 'package:fluvera/src/widgets/fluvera.dart';
+import 'package:fluvera/src/widgets/sized_box/attributes/attributes.dart';
 
-class UIXSizedBox extends UIX<SizedBoxAttributes> {
-  const UIXSizedBox(Map<String, dynamic> json) : super(json);
+class FluveraSizedBox extends Fluvera<SizedBoxAttributes> {
+  const FluveraSizedBox(Map<String, dynamic> json) : super(json);
 
   @override
   SizedBoxAttributes get attributes => SizedBoxAttributes.fromJson(json);

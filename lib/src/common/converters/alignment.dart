@@ -1,8 +1,8 @@
 part of 'converters.dart';
 
-class UIXAlignmentGeometryConverter
+class FluveraAlignmentGeometryConverter
     implements JsonConverter<AlignmentGeometry, String> {
-  const UIXAlignmentGeometryConverter();
+  const FluveraAlignmentGeometryConverter();
 
   @override
   AlignmentGeometry fromJson(String json) {

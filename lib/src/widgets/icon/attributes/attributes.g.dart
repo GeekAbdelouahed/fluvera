@@ -8,19 +8,19 @@ part of 'attributes.dart';
 
 _$_IconAttributes _$$_IconAttributesFromJson(Map<String, dynamic> json) =>
     _$_IconAttributes(
-      code: UIXAttributeValue<String>.fromJson(
+      code: FluveraAttributeValue<String>.fromJson(
           json['code'] as Map<String, dynamic>, (value) => value as String),
       size: json['size'] == null
           ? null
-          : UIXAttributeValue<num>.fromJson(
+          : FluveraAttributeValue<num>.fromJson(
               json['size'] as Map<String, dynamic>, (value) => value as num),
       fontFamily: json['fontFamily'] == null
-          ? const UIXAttributeValue<String>(value: 'MaterialIcons')
-          : UIXAttributeValue<String>.fromJson(
+          ? const FluveraAttributeValue<String>(value: 'MaterialIcons')
+          : FluveraAttributeValue<String>.fromJson(
               json['fontFamily'] as Map<String, dynamic>,
               (value) => value as String),
       color: _$JsonConverterFromJson<String, Color>(
-          json['color'], const UIXColorConverter().fromJson),
+          json['color'], const FluveraColorConverter().fromJson),
     );
 
 Map<String, dynamic> _$$_IconAttributesToJson(_$_IconAttributes instance) =>
@@ -35,7 +35,7 @@ Map<String, dynamic> _$$_IconAttributesToJson(_$_IconAttributes instance) =>
         (value) => value,
       ),
       'color': _$JsonConverterToJson<String, Color>(
-          instance.color, const UIXColorConverter().toJson),
+          instance.color, const FluveraColorConverter().toJson),
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

@@ -20,9 +20,9 @@ InkWellAttributes _$InkWellAttributesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$InkWellAttributes {
-  List<UIXActions>? get onTap => throw _privateConstructorUsedError;
-  List<UIXActions>? get onLongPress => throw _privateConstructorUsedError;
-  @UIXWidgetConverter()
+  List<FluveraActions>? get onTap => throw _privateConstructorUsedError;
+  List<FluveraActions>? get onLongPress => throw _privateConstructorUsedError;
+  @FluveraWidgetConverter()
   Widget? get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -38,9 +38,9 @@ abstract class $InkWellAttributesCopyWith<$Res> {
       _$InkWellAttributesCopyWithImpl<$Res, InkWellAttributes>;
   @useResult
   $Res call(
-      {List<UIXActions>? onTap,
-      List<UIXActions>? onLongPress,
-      @UIXWidgetConverter() Widget? child});
+      {List<FluveraActions>? onTap,
+      List<FluveraActions>? onLongPress,
+      @FluveraWidgetConverter() Widget? child});
 }
 
 /// @nodoc
@@ -64,11 +64,11 @@ class _$InkWellAttributesCopyWithImpl<$Res, $Val extends InkWellAttributes>
       onTap: freezed == onTap
           ? _value.onTap
           : onTap // ignore: cast_nullable_to_non_nullable
-              as List<UIXActions>?,
+              as List<FluveraActions>?,
       onLongPress: freezed == onLongPress
           ? _value.onLongPress
           : onLongPress // ignore: cast_nullable_to_non_nullable
-              as List<UIXActions>?,
+              as List<FluveraActions>?,
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
@@ -86,9 +86,9 @@ abstract class _$$_InkWellAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<UIXActions>? onTap,
-      List<UIXActions>? onLongPress,
-      @UIXWidgetConverter() Widget? child});
+      {List<FluveraActions>? onTap,
+      List<FluveraActions>? onLongPress,
+      @FluveraWidgetConverter() Widget? child});
 }
 
 /// @nodoc
@@ -110,11 +110,11 @@ class __$$_InkWellAttributesCopyWithImpl<$Res>
       onTap: freezed == onTap
           ? _value._onTap
           : onTap // ignore: cast_nullable_to_non_nullable
-              as List<UIXActions>?,
+              as List<FluveraActions>?,
       onLongPress: freezed == onLongPress
           ? _value._onLongPress
           : onLongPress // ignore: cast_nullable_to_non_nullable
-              as List<UIXActions>?,
+              as List<FluveraActions>?,
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
@@ -127,18 +127,18 @@ class __$$_InkWellAttributesCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_InkWellAttributes implements _InkWellAttributes {
   const _$_InkWellAttributes(
-      {final List<UIXActions>? onTap,
-      final List<UIXActions>? onLongPress,
-      @UIXWidgetConverter() this.child})
+      {final List<FluveraActions>? onTap,
+      final List<FluveraActions>? onLongPress,
+      @FluveraWidgetConverter() this.child})
       : _onTap = onTap,
         _onLongPress = onLongPress;
 
   factory _$_InkWellAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_InkWellAttributesFromJson(json);
 
-  final List<UIXActions>? _onTap;
+  final List<FluveraActions>? _onTap;
   @override
-  List<UIXActions>? get onTap {
+  List<FluveraActions>? get onTap {
     final value = _onTap;
     if (value == null) return null;
     if (_onTap is EqualUnmodifiableListView) return _onTap;
@@ -146,9 +146,9 @@ class _$_InkWellAttributes implements _InkWellAttributes {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<UIXActions>? _onLongPress;
+  final List<FluveraActions>? _onLongPress;
   @override
-  List<UIXActions>? get onLongPress {
+  List<FluveraActions>? get onLongPress {
     final value = _onLongPress;
     if (value == null) return null;
     if (_onLongPress is EqualUnmodifiableListView) return _onLongPress;
@@ -157,7 +157,7 @@ class _$_InkWellAttributes implements _InkWellAttributes {
   }
 
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   final Widget? child;
 
   @override
@@ -201,19 +201,19 @@ class _$_InkWellAttributes implements _InkWellAttributes {
 
 abstract class _InkWellAttributes implements InkWellAttributes {
   const factory _InkWellAttributes(
-      {final List<UIXActions>? onTap,
-      final List<UIXActions>? onLongPress,
-      @UIXWidgetConverter() final Widget? child}) = _$_InkWellAttributes;
+      {final List<FluveraActions>? onTap,
+      final List<FluveraActions>? onLongPress,
+      @FluveraWidgetConverter() final Widget? child}) = _$_InkWellAttributes;
 
   factory _InkWellAttributes.fromJson(Map<String, dynamic> json) =
       _$_InkWellAttributes.fromJson;
 
   @override
-  List<UIXActions>? get onTap;
+  List<FluveraActions>? get onTap;
   @override
-  List<UIXActions>? get onLongPress;
+  List<FluveraActions>? get onLongPress;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get child;
   @override
   @JsonKey(ignore: true)

@@ -20,11 +20,12 @@ ImageAttributes _$ImageAttributesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ImageAttributes {
-  UIXAttributeValue<String> get path => throw _privateConstructorUsedError;
-  UIXAttributeValue<num>? get height => throw _privateConstructorUsedError;
-  UIXAttributeValue<num>? get width => throw _privateConstructorUsedError;
-  UIXEnumAttributeValue<BoxFit>? get fit => throw _privateConstructorUsedError;
-  UIXImageSource get source => throw _privateConstructorUsedError;
+  FluveraAttributeValue<String> get path => throw _privateConstructorUsedError;
+  FluveraAttributeValue<num>? get height => throw _privateConstructorUsedError;
+  FluveraAttributeValue<num>? get width => throw _privateConstructorUsedError;
+  FluveraEnumAttributeValue<BoxFit>? get fit =>
+      throw _privateConstructorUsedError;
+  FluveraImageSource get source => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,16 +40,16 @@ abstract class $ImageAttributesCopyWith<$Res> {
       _$ImageAttributesCopyWithImpl<$Res, ImageAttributes>;
   @useResult
   $Res call(
-      {UIXAttributeValue<String> path,
-      UIXAttributeValue<num>? height,
-      UIXAttributeValue<num>? width,
-      UIXEnumAttributeValue<BoxFit>? fit,
-      UIXImageSource source});
+      {FluveraAttributeValue<String> path,
+      FluveraAttributeValue<num>? height,
+      FluveraAttributeValue<num>? width,
+      FluveraEnumAttributeValue<BoxFit>? fit,
+      FluveraImageSource source});
 
-  $UIXAttributeValueCopyWith<String, $Res> get path;
-  $UIXAttributeValueCopyWith<num, $Res>? get height;
-  $UIXAttributeValueCopyWith<num, $Res>? get width;
-  $UIXEnumAttributeValueCopyWith<BoxFit, $Res>? get fit;
+  $FluveraAttributeValueCopyWith<String, $Res> get path;
+  $FluveraAttributeValueCopyWith<num, $Res>? get height;
+  $FluveraAttributeValueCopyWith<num, $Res>? get width;
+  $FluveraEnumAttributeValueCopyWith<BoxFit, $Res>? get fit;
 }
 
 /// @nodoc
@@ -74,66 +75,67 @@ class _$ImageAttributesCopyWithImpl<$Res, $Val extends ImageAttributes>
       path: null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<String>,
+              as FluveraAttributeValue<String>,
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>?,
+              as FluveraAttributeValue<num>?,
       width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>?,
+              as FluveraAttributeValue<num>?,
       fit: freezed == fit
           ? _value.fit
           : fit // ignore: cast_nullable_to_non_nullable
-              as UIXEnumAttributeValue<BoxFit>?,
+              as FluveraEnumAttributeValue<BoxFit>?,
       source: null == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as UIXImageSource,
+              as FluveraImageSource,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXAttributeValueCopyWith<String, $Res> get path {
-    return $UIXAttributeValueCopyWith<String, $Res>(_value.path, (value) {
+  $FluveraAttributeValueCopyWith<String, $Res> get path {
+    return $FluveraAttributeValueCopyWith<String, $Res>(_value.path, (value) {
       return _then(_value.copyWith(path: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXAttributeValueCopyWith<num, $Res>? get height {
+  $FluveraAttributeValueCopyWith<num, $Res>? get height {
     if (_value.height == null) {
       return null;
     }
 
-    return $UIXAttributeValueCopyWith<num, $Res>(_value.height!, (value) {
+    return $FluveraAttributeValueCopyWith<num, $Res>(_value.height!, (value) {
       return _then(_value.copyWith(height: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXAttributeValueCopyWith<num, $Res>? get width {
+  $FluveraAttributeValueCopyWith<num, $Res>? get width {
     if (_value.width == null) {
       return null;
     }
 
-    return $UIXAttributeValueCopyWith<num, $Res>(_value.width!, (value) {
+    return $FluveraAttributeValueCopyWith<num, $Res>(_value.width!, (value) {
       return _then(_value.copyWith(width: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXEnumAttributeValueCopyWith<BoxFit, $Res>? get fit {
+  $FluveraEnumAttributeValueCopyWith<BoxFit, $Res>? get fit {
     if (_value.fit == null) {
       return null;
     }
 
-    return $UIXEnumAttributeValueCopyWith<BoxFit, $Res>(_value.fit!, (value) {
+    return $FluveraEnumAttributeValueCopyWith<BoxFit, $Res>(_value.fit!,
+        (value) {
       return _then(_value.copyWith(fit: value) as $Val);
     });
   }
@@ -148,20 +150,20 @@ abstract class _$$_ImageAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {UIXAttributeValue<String> path,
-      UIXAttributeValue<num>? height,
-      UIXAttributeValue<num>? width,
-      UIXEnumAttributeValue<BoxFit>? fit,
-      UIXImageSource source});
+      {FluveraAttributeValue<String> path,
+      FluveraAttributeValue<num>? height,
+      FluveraAttributeValue<num>? width,
+      FluveraEnumAttributeValue<BoxFit>? fit,
+      FluveraImageSource source});
 
   @override
-  $UIXAttributeValueCopyWith<String, $Res> get path;
+  $FluveraAttributeValueCopyWith<String, $Res> get path;
   @override
-  $UIXAttributeValueCopyWith<num, $Res>? get height;
+  $FluveraAttributeValueCopyWith<num, $Res>? get height;
   @override
-  $UIXAttributeValueCopyWith<num, $Res>? get width;
+  $FluveraAttributeValueCopyWith<num, $Res>? get width;
   @override
-  $UIXEnumAttributeValueCopyWith<BoxFit, $Res>? get fit;
+  $FluveraEnumAttributeValueCopyWith<BoxFit, $Res>? get fit;
 }
 
 /// @nodoc
@@ -185,23 +187,23 @@ class __$$_ImageAttributesCopyWithImpl<$Res>
       path: null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<String>,
+              as FluveraAttributeValue<String>,
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>?,
+              as FluveraAttributeValue<num>?,
       width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>?,
+              as FluveraAttributeValue<num>?,
       fit: freezed == fit
           ? _value.fit
           : fit // ignore: cast_nullable_to_non_nullable
-              as UIXEnumAttributeValue<BoxFit>?,
+              as FluveraEnumAttributeValue<BoxFit>?,
       source: null == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as UIXImageSource,
+              as FluveraImageSource,
     ));
   }
 }
@@ -214,22 +216,22 @@ class _$_ImageAttributes implements _ImageAttributes {
       this.height,
       this.width,
       this.fit,
-      this.source = UIXImageSource.network});
+      this.source = FluveraImageSource.network});
 
   factory _$_ImageAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_ImageAttributesFromJson(json);
 
   @override
-  final UIXAttributeValue<String> path;
+  final FluveraAttributeValue<String> path;
   @override
-  final UIXAttributeValue<num>? height;
+  final FluveraAttributeValue<num>? height;
   @override
-  final UIXAttributeValue<num>? width;
+  final FluveraAttributeValue<num>? width;
   @override
-  final UIXEnumAttributeValue<BoxFit>? fit;
+  final FluveraEnumAttributeValue<BoxFit>? fit;
   @override
   @JsonKey()
-  final UIXImageSource source;
+  final FluveraImageSource source;
 
   @override
   String toString() {
@@ -269,25 +271,25 @@ class _$_ImageAttributes implements _ImageAttributes {
 
 abstract class _ImageAttributes implements ImageAttributes {
   const factory _ImageAttributes(
-      {required final UIXAttributeValue<String> path,
-      final UIXAttributeValue<num>? height,
-      final UIXAttributeValue<num>? width,
-      final UIXEnumAttributeValue<BoxFit>? fit,
-      final UIXImageSource source}) = _$_ImageAttributes;
+      {required final FluveraAttributeValue<String> path,
+      final FluveraAttributeValue<num>? height,
+      final FluveraAttributeValue<num>? width,
+      final FluveraEnumAttributeValue<BoxFit>? fit,
+      final FluveraImageSource source}) = _$_ImageAttributes;
 
   factory _ImageAttributes.fromJson(Map<String, dynamic> json) =
       _$_ImageAttributes.fromJson;
 
   @override
-  UIXAttributeValue<String> get path;
+  FluveraAttributeValue<String> get path;
   @override
-  UIXAttributeValue<num>? get height;
+  FluveraAttributeValue<num>? get height;
   @override
-  UIXAttributeValue<num>? get width;
+  FluveraAttributeValue<num>? get width;
   @override
-  UIXEnumAttributeValue<BoxFit>? get fit;
+  FluveraEnumAttributeValue<BoxFit>? get fit;
   @override
-  UIXImageSource get source;
+  FluveraImageSource get source;
   @override
   @JsonKey(ignore: true)
   _$$_ImageAttributesCopyWith<_$_ImageAttributes> get copyWith =>

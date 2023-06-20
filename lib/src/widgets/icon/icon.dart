@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:uix/src/widgets/icon/attributes/attributes.dart';
-import 'package:uix/src/widgets/uix.dart';
+import 'package:fluvera/src/widgets/fluvera.dart';
+import 'package:fluvera/src/widgets/icon/attributes/attributes.dart';
 
-class UIXIcon extends UIX<IconAttributes> {
-  const UIXIcon(Map<String, dynamic> json) : super(json);
+class FluveraIcon extends Fluvera<IconAttributes> {
+  const FluveraIcon(Map<String, dynamic> json) : super(json);
 
   @override
   IconAttributes get attributes => IconAttributes.fromJson(json);

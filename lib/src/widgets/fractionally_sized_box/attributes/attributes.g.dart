@@ -11,20 +11,20 @@ _$_FractionallySizedBoxAttributes _$$_FractionallySizedBoxAttributesFromJson(
     _$_FractionallySizedBoxAttributes(
       widthFactor: json['widthFactor'] == null
           ? null
-          : UIXAttributeValue<num>.fromJson(
+          : FluveraAttributeValue<num>.fromJson(
               json['widthFactor'] as Map<String, dynamic>,
               (value) => value as num),
       heightFactor: json['heightFactor'] == null
           ? null
-          : UIXAttributeValue<num>.fromJson(
+          : FluveraAttributeValue<num>.fromJson(
               json['heightFactor'] as Map<String, dynamic>,
               (value) => value as num),
       alignment: _$JsonConverterFromJson<String, AlignmentGeometry>(
               json['alignment'],
-              const UIXAlignmentGeometryConverter().fromJson) ??
+              const FluveraAlignmentGeometryConverter().fromJson) ??
           AlignmentDirectional.center,
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
-          json['child'], const UIXWidgetConverter().fromJson),
+          json['child'], const FluveraWidgetConverter().fromJson),
     );
 
 Map<String, dynamic> _$$_FractionallySizedBoxAttributesToJson(
@@ -37,9 +37,9 @@ Map<String, dynamic> _$$_FractionallySizedBoxAttributesToJson(
         (value) => value,
       ),
       'alignment': _$JsonConverterToJson<String, AlignmentGeometry>(
-          instance.alignment, const UIXAlignmentGeometryConverter().toJson),
+          instance.alignment, const FluveraAlignmentGeometryConverter().toJson),
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
-          instance.child, const UIXWidgetConverter().toJson),
+          instance.child, const FluveraWidgetConverter().toJson),
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

@@ -20,9 +20,9 @@ PaddingAttributes _$PaddingAttributesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PaddingAttributes {
-  @UIXEdgeInsetsConverter()
+  @FluveraEdgeInsetsConverter()
   EdgeInsetsGeometry get padding => throw _privateConstructorUsedError;
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -38,8 +38,8 @@ abstract class $PaddingAttributesCopyWith<$Res> {
       _$PaddingAttributesCopyWithImpl<$Res, PaddingAttributes>;
   @useResult
   $Res call(
-      {@UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-      @UIXWidgetConverter() Widget? child});
+      {@FluveraEdgeInsetsConverter() EdgeInsetsGeometry padding,
+      @FluveraWidgetConverter() Widget? child});
 }
 
 /// @nodoc
@@ -80,8 +80,8 @@ abstract class _$$_PaddingAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@UIXEdgeInsetsConverter() EdgeInsetsGeometry padding,
-      @UIXWidgetConverter() Widget? child});
+      {@FluveraEdgeInsetsConverter() EdgeInsetsGeometry padding,
+      @FluveraWidgetConverter() Widget? child});
 }
 
 /// @nodoc
@@ -115,17 +115,17 @@ class __$$_PaddingAttributesCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PaddingAttributes implements _PaddingAttributes {
   const _$_PaddingAttributes(
-      {@UIXEdgeInsetsConverter() required this.padding,
-      @UIXWidgetConverter() this.child});
+      {@FluveraEdgeInsetsConverter() required this.padding,
+      @FluveraWidgetConverter() this.child});
 
   factory _$_PaddingAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_PaddingAttributesFromJson(json);
 
   @override
-  @UIXEdgeInsetsConverter()
+  @FluveraEdgeInsetsConverter()
   final EdgeInsetsGeometry padding;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   final Widget? child;
 
   @override
@@ -163,17 +163,17 @@ class _$_PaddingAttributes implements _PaddingAttributes {
 
 abstract class _PaddingAttributes implements PaddingAttributes {
   const factory _PaddingAttributes(
-      {@UIXEdgeInsetsConverter() required final EdgeInsetsGeometry padding,
-      @UIXWidgetConverter() final Widget? child}) = _$_PaddingAttributes;
+      {@FluveraEdgeInsetsConverter() required final EdgeInsetsGeometry padding,
+      @FluveraWidgetConverter() final Widget? child}) = _$_PaddingAttributes;
 
   factory _PaddingAttributes.fromJson(Map<String, dynamic> json) =
       _$_PaddingAttributes.fromJson;
 
   @override
-  @UIXEdgeInsetsConverter()
+  @FluveraEdgeInsetsConverter()
   EdgeInsetsGeometry get padding;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get child;
   @override
   @JsonKey(ignore: true)

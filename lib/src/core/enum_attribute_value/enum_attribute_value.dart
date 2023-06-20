@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:fluvera/src/core/provider/provider.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uix/src/core/provider/uix_provider.dart';
 
 part 'enum_attribute_value.freezed.dart';
 part 'enum_attribute_value.g.dart';
 
 @Freezed(genericArgumentFactories: true)
-class UIXEnumAttributeValue<T extends Enum> with _$UIXEnumAttributeValue<T> {
-  const UIXEnumAttributeValue._();
+class FluveraEnumAttributeValue<T extends Enum>
+    with _$FluveraEnumAttributeValue<T> {
+  const FluveraEnumAttributeValue._();
 
-  const factory UIXEnumAttributeValue({
+  const factory FluveraEnumAttributeValue({
     String? key,
     String? value,
-  }) = _UIXEnumAttributeValue;
+  }) = _FluveraEnumAttributeValue;
 
-  factory UIXEnumAttributeValue.fromJson(
+  factory FluveraEnumAttributeValue.fromJson(
           Map<String, dynamic> json, T Function(Object?) fromJsonT) =>
-      _$UIXEnumAttributeValueFromJson(json, fromJsonT);
+      _$FluveraEnumAttributeValueFromJson(json, fromJsonT);
 
   // Temporary fix for genericArgumentFactories
   @override
@@ -28,8 +29,8 @@ class UIXEnumAttributeValue<T extends Enum> with _$UIXEnumAttributeValue<T> {
       return values.firstWhere((element) => element.name == value);
     }
 
-    final UIXAttributesNotifier? notifier =
-        UIXProvider.of<UIXAttributesNotifier>(context)?.value;
+    final FluveraNotifier? notifier =
+        FluveraProvider.of<FluveraNotifier>(context)?.value;
 
     if (notifier == null) {
       throw Exception('$key key not found!');

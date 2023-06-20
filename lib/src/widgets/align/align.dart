@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:uix/src/widgets/align/attributes/attributes.dart';
-import 'package:uix/src/widgets/uix.dart';
+import 'package:fluvera/src/widgets/align/attributes/attributes.dart';
+import 'package:fluvera/src/widgets/fluvera.dart';
 
-class UIXAlign extends UIX<AlignAttributes> {
-  const UIXAlign(Map<String, dynamic> json) : super(json);
+class FluveraAlign extends Fluvera<AlignAttributes> {
+  const FluveraAlign(Map<String, dynamic> json) : super(json);
 
   @override
   AlignAttributes get attributes => AlignAttributes.fromJson(json);

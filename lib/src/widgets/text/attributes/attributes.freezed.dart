@@ -20,8 +20,8 @@ TextAttributes _$TextAttributesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TextAttributes {
-  UIXAttributeValue<String> get text => throw _privateConstructorUsedError;
-  UIXTextStyle? get style => throw _privateConstructorUsedError;
+  FluveraAttributeValue<String> get text => throw _privateConstructorUsedError;
+  FluveraTextStyle? get style => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,10 +35,10 @@ abstract class $TextAttributesCopyWith<$Res> {
           TextAttributes value, $Res Function(TextAttributes) then) =
       _$TextAttributesCopyWithImpl<$Res, TextAttributes>;
   @useResult
-  $Res call({UIXAttributeValue<String> text, UIXTextStyle? style});
+  $Res call({FluveraAttributeValue<String> text, FluveraTextStyle? style});
 
-  $UIXAttributeValueCopyWith<String, $Res> get text;
-  $UIXTextStyleCopyWith<$Res>? get style;
+  $FluveraAttributeValueCopyWith<String, $Res> get text;
+  $FluveraTextStyleCopyWith<$Res>? get style;
 }
 
 /// @nodoc
@@ -61,30 +61,30 @@ class _$TextAttributesCopyWithImpl<$Res, $Val extends TextAttributes>
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<String>,
+              as FluveraAttributeValue<String>,
       style: freezed == style
           ? _value.style
           : style // ignore: cast_nullable_to_non_nullable
-              as UIXTextStyle?,
+              as FluveraTextStyle?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXAttributeValueCopyWith<String, $Res> get text {
-    return $UIXAttributeValueCopyWith<String, $Res>(_value.text, (value) {
+  $FluveraAttributeValueCopyWith<String, $Res> get text {
+    return $FluveraAttributeValueCopyWith<String, $Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXTextStyleCopyWith<$Res>? get style {
+  $FluveraTextStyleCopyWith<$Res>? get style {
     if (_value.style == null) {
       return null;
     }
 
-    return $UIXTextStyleCopyWith<$Res>(_value.style!, (value) {
+    return $FluveraTextStyleCopyWith<$Res>(_value.style!, (value) {
       return _then(_value.copyWith(style: value) as $Val);
     });
   }
@@ -98,12 +98,12 @@ abstract class _$$_TextAttributesCopyWith<$Res>
       __$$_TextAttributesCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({UIXAttributeValue<String> text, UIXTextStyle? style});
+  $Res call({FluveraAttributeValue<String> text, FluveraTextStyle? style});
 
   @override
-  $UIXAttributeValueCopyWith<String, $Res> get text;
+  $FluveraAttributeValueCopyWith<String, $Res> get text;
   @override
-  $UIXTextStyleCopyWith<$Res>? get style;
+  $FluveraTextStyleCopyWith<$Res>? get style;
 }
 
 /// @nodoc
@@ -124,11 +124,11 @@ class __$$_TextAttributesCopyWithImpl<$Res>
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<String>,
+              as FluveraAttributeValue<String>,
       style: freezed == style
           ? _value.style
           : style // ignore: cast_nullable_to_non_nullable
-              as UIXTextStyle?,
+              as FluveraTextStyle?,
     ));
   }
 }
@@ -142,9 +142,9 @@ class _$_TextAttributes implements _TextAttributes {
       _$$_TextAttributesFromJson(json);
 
   @override
-  final UIXAttributeValue<String> text;
+  final FluveraAttributeValue<String> text;
   @override
-  final UIXTextStyle? style;
+  final FluveraTextStyle? style;
 
   @override
   String toString() {
@@ -180,16 +180,16 @@ class _$_TextAttributes implements _TextAttributes {
 
 abstract class _TextAttributes implements TextAttributes {
   const factory _TextAttributes(
-      {required final UIXAttributeValue<String> text,
-      final UIXTextStyle? style}) = _$_TextAttributes;
+      {required final FluveraAttributeValue<String> text,
+      final FluveraTextStyle? style}) = _$_TextAttributes;
 
   factory _TextAttributes.fromJson(Map<String, dynamic> json) =
       _$_TextAttributes.fromJson;
 
   @override
-  UIXAttributeValue<String> get text;
+  FluveraAttributeValue<String> get text;
   @override
-  UIXTextStyle? get style;
+  FluveraTextStyle? get style;
   @override
   @JsonKey(ignore: true)
   _$$_TextAttributesCopyWith<_$_TextAttributes> get copyWith =>

@@ -10,13 +10,13 @@ _$_ElevatedButtonAttributes _$$_ElevatedButtonAttributesFromJson(
         Map<String, dynamic> json) =>
     _$_ElevatedButtonAttributes(
       onPressed: (json['onPressed'] as List<dynamic>?)
-          ?.map((e) => UIXActions.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => FluveraActions.fromJson(e as Map<String, dynamic>))
           .toList(),
       onLongPress: (json['onLongPress'] as List<dynamic>?)
-          ?.map((e) => UIXActions.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => FluveraActions.fromJson(e as Map<String, dynamic>))
           .toList(),
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
-          json['child'], const UIXWidgetConverter().fromJson),
+          json['child'], const FluveraWidgetConverter().fromJson),
     );
 
 Map<String, dynamic> _$$_ElevatedButtonAttributesToJson(
@@ -25,7 +25,7 @@ Map<String, dynamic> _$$_ElevatedButtonAttributesToJson(
       'onPressed': instance.onPressed,
       'onLongPress': instance.onLongPress,
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
-          instance.child, const UIXWidgetConverter().toJson),
+          instance.child, const FluveraWidgetConverter().toJson),
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

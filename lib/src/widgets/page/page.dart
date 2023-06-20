@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:uix/src/widgets/page/attributes/attributes.dart';
-import 'package:uix/src/widgets/uix.dart';
-import 'package:uix/uix.dart';
+import 'package:fluvera/src/core/provider/provider.dart';
+import 'package:fluvera/src/widgets/fluvera.dart';
+import 'package:fluvera/src/widgets/page/attributes/attributes.dart';
 
-class UIXPage extends UIX<PageAttributes> {
-  const UIXPage(Map<String, dynamic> json) : super(json);
+class FluveraPage extends Fluvera<PageAttributes> {
+  const FluveraPage(Map<String, dynamic> json) : super(json);
 
   @override
   PageAttributes get attributes => PageAttributes.fromJson(json);
@@ -31,7 +31,7 @@ class _Page extends StatefulWidget {
 }
 
 class _PageState extends State<_Page> {
-  late final UIXAttributesNotifier _attributesNotifier = UIXAttributesNotifier(
+  late final FluveraNotifier _notifier = FluveraNotifier(
     Map.from(_attributes.attributes),
   );
 
@@ -39,16 +39,16 @@ class _PageState extends State<_Page> {
 
   @override
   void dispose() {
-    _attributesNotifier.dispose();
+    _notifier.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return UIXProvider<UIXAttributesNotifier>(
-      value: _attributesNotifier,
+    return FluveraProvider<FluveraNotifier>(
+      value: _notifier,
       child: ValueListenableBuilder(
-        valueListenable: _attributesNotifier,
+        valueListenable: _notifier,
         builder: (context, data, child) {
           return _attributes.child;
         },

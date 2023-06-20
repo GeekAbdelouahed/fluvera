@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:uix/src/widgets/container/attributes/attributes.dart';
-import 'package:uix/src/widgets/uix.dart';
+import 'package:fluvera/src/widgets/container/attributes/attributes.dart';
+import 'package:fluvera/src/widgets/fluvera.dart';
 
-class UIXContainer extends UIX<ContainerAttributes> {
-  const UIXContainer(Map<String, dynamic> json) : super(json);
+class FluveraContainer extends Fluvera<ContainerAttributes> {
+  const FluveraContainer(Map<String, dynamic> json) : super(json);
   @override
   ContainerAttributes get attributes => ContainerAttributes.fromJson(json);
   @override

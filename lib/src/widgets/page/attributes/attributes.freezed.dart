@@ -21,7 +21,7 @@ PageAttributes _$PageAttributesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PageAttributes {
   Map<String, dynamic> get attributes => throw _privateConstructorUsedError;
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -37,7 +37,8 @@ abstract class $PageAttributesCopyWith<$Res> {
       _$PageAttributesCopyWithImpl<$Res, PageAttributes>;
   @useResult
   $Res call(
-      {Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child});
+      {Map<String, dynamic> attributes,
+      @FluveraWidgetConverter() Widget child});
 }
 
 /// @nodoc
@@ -78,7 +79,8 @@ abstract class _$$_PageAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Map<String, dynamic> attributes, @UIXWidgetConverter() Widget child});
+      {Map<String, dynamic> attributes,
+      @FluveraWidgetConverter() Widget child});
 }
 
 /// @nodoc
@@ -113,7 +115,7 @@ class __$$_PageAttributesCopyWithImpl<$Res>
 class _$_PageAttributes implements _PageAttributes {
   const _$_PageAttributes(
       {final Map<String, dynamic> attributes = const <String, dynamic>{},
-      @UIXWidgetConverter() required this.child})
+      @FluveraWidgetConverter() required this.child})
       : _attributes = attributes;
 
   factory _$_PageAttributes.fromJson(Map<String, dynamic> json) =>
@@ -129,7 +131,7 @@ class _$_PageAttributes implements _PageAttributes {
   }
 
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   final Widget child;
 
   @override
@@ -168,8 +170,9 @@ class _$_PageAttributes implements _PageAttributes {
 
 abstract class _PageAttributes implements PageAttributes {
   const factory _PageAttributes(
-      {final Map<String, dynamic> attributes,
-      @UIXWidgetConverter() required final Widget child}) = _$_PageAttributes;
+          {final Map<String, dynamic> attributes,
+          @FluveraWidgetConverter() required final Widget child}) =
+      _$_PageAttributes;
 
   factory _PageAttributes.fromJson(Map<String, dynamic> json) =
       _$_PageAttributes.fromJson;
@@ -177,7 +180,7 @@ abstract class _PageAttributes implements PageAttributes {
   @override
   Map<String, dynamic> get attributes;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget get child;
   @override
   @JsonKey(ignore: true)

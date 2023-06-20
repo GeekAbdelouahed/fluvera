@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:uix/src/widgets/scaffold/attributes/attributes.dart';
-import 'package:uix/src/widgets/uix.dart';
+import 'package:fluvera/src/widgets/fluvera.dart';
+import 'package:fluvera/src/widgets/scaffold/attributes/attributes.dart';
 
-class UIXScaffold extends UIX<ScaffoldAttributes> {
-  const UIXScaffold(Map<String, dynamic> json) : super(json);
+class FluveraScaffold extends Fluvera<ScaffoldAttributes> {
+  const FluveraScaffold(Map<String, dynamic> json) : super(json);
 
   @override
   ScaffoldAttributes get attributes => ScaffoldAttributes.fromJson(json);

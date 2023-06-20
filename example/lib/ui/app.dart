@@ -3,16 +3,16 @@ import 'package:example/core/router.dart';
 import 'package:example/ui/home.dart';
 import 'package:example/ui/item.dart';
 import 'package:flutter/material.dart';
-import 'package:uix/uix.dart';
+import 'package:fluvera/fluvera.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return UIXProvider<UIXNavigator>(
+    return FluveraProvider<FluveraNavigator>(
       value: AppRouter(),
-      child: UIXProvider<UIXHttp>(
+      child: FluveraProvider<FluveraHttp>(
         value: AppHttp(),
         child: MaterialApp(
           title: 'Flutter Demo',

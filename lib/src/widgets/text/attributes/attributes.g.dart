@@ -8,11 +8,11 @@ part of 'attributes.dart';
 
 _$_TextAttributes _$$_TextAttributesFromJson(Map<String, dynamic> json) =>
     _$_TextAttributes(
-      text: UIXAttributeValue<String>.fromJson(
+      text: FluveraAttributeValue<String>.fromJson(
           json['text'] as Map<String, dynamic>, (value) => value as String),
       style: json['style'] == null
           ? null
-          : UIXTextStyle.fromJson(json['style'] as Map<String, dynamic>),
+          : FluveraTextStyle.fromJson(json['style'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_TextAttributesToJson(_$_TextAttributes instance) =>

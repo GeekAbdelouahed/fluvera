@@ -14,7 +14,7 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-UIXActions _$UIXActionsFromJson(Map<String, dynamic> json) {
+FluveraActions _$FluveraActionsFromJson(Map<String, dynamic> json) {
   switch (json['type']) {
     case 'PushRoute':
       return PushRouteAction.fromJson(json);
@@ -38,13 +38,13 @@ UIXActions _$UIXActionsFromJson(Map<String, dynamic> json) {
       return DeleteHttpAction.fromJson(json);
 
     default:
-      throw CheckedFromJsonException(
-          json, 'type', 'UIXActions', 'Invalid union type "${json['type']}"!');
+      throw CheckedFromJsonException(json, 'type', 'FluveraActions',
+          'Invalid union type "${json['type']}"!');
   }
 }
 
 /// @nodoc
-mixin _$UIXActions {
+mixin _$FluveraActions {
   String get type => throw _privateConstructorUsedError;
   bool get synchronized => throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -52,33 +52,41 @@ mixin _$UIXActions {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, @UIXWidgetConverter() Widget child)
+            bool barrierDismissible, @FluveraWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(String type, bool synchronized, String key, dynamic value)
-        updateAttribute,
     required TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)
+            String type, bool synchronized, String key, dynamic value)
+        updateAttribute,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        putHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        deleteHttp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -86,33 +94,41 @@ mixin _$UIXActions {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(String type, bool synchronized, String key, dynamic value)?
-        updateAttribute,
     TResult? Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+            String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -120,33 +136,40 @@ mixin _$UIXActions {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -195,23 +218,23 @@ mixin _$UIXActions {
       throw _privateConstructorUsedError;
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UIXActionsCopyWith<UIXActions> get copyWith =>
+  $FluveraActionsCopyWith<FluveraActions> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UIXActionsCopyWith<$Res> {
-  factory $UIXActionsCopyWith(
-          UIXActions value, $Res Function(UIXActions) then) =
-      _$UIXActionsCopyWithImpl<$Res, UIXActions>;
+abstract class $FluveraActionsCopyWith<$Res> {
+  factory $FluveraActionsCopyWith(
+          FluveraActions value, $Res Function(FluveraActions) then) =
+      _$FluveraActionsCopyWithImpl<$Res, FluveraActions>;
   @useResult
   $Res call({String type, bool synchronized});
 }
 
 /// @nodoc
-class _$UIXActionsCopyWithImpl<$Res, $Val extends UIXActions>
-    implements $UIXActionsCopyWith<$Res> {
-  _$UIXActionsCopyWithImpl(this._value, this._then);
+class _$FluveraActionsCopyWithImpl<$Res, $Val extends FluveraActions>
+    implements $FluveraActionsCopyWith<$Res> {
+  _$FluveraActionsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -239,7 +262,7 @@ class _$UIXActionsCopyWithImpl<$Res, $Val extends UIXActions>
 
 /// @nodoc
 abstract class _$$PushRouteActionCopyWith<$Res>
-    implements $UIXActionsCopyWith<$Res> {
+    implements $FluveraActionsCopyWith<$Res> {
   factory _$$PushRouteActionCopyWith(
           _$PushRouteAction value, $Res Function(_$PushRouteAction) then) =
       __$$PushRouteActionCopyWithImpl<$Res>;
@@ -254,7 +277,7 @@ abstract class _$$PushRouteActionCopyWith<$Res>
 
 /// @nodoc
 class __$$PushRouteActionCopyWithImpl<$Res>
-    extends _$UIXActionsCopyWithImpl<$Res, _$PushRouteAction>
+    extends _$FluveraActionsCopyWithImpl<$Res, _$PushRouteAction>
     implements _$$PushRouteActionCopyWith<$Res> {
   __$$PushRouteActionCopyWithImpl(
       _$PushRouteAction _value, $Res Function(_$PushRouteAction) _then)
@@ -322,7 +345,7 @@ class _$PushRouteAction extends PushRouteAction {
 
   @override
   String toString() {
-    return 'UIXActions.pushRoute(type: $type, synchronized: $synchronized, routeName: $routeName, queries: $queries)';
+    return 'FluveraActions.pushRoute(type: $type, synchronized: $synchronized, routeName: $routeName, queries: $queries)';
   }
 
   @override
@@ -355,33 +378,41 @@ class _$PushRouteAction extends PushRouteAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, @UIXWidgetConverter() Widget child)
+            bool barrierDismissible, @FluveraWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(String type, bool synchronized, String key, dynamic value)
-        updateAttribute,
     required TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)
+            String type, bool synchronized, String key, dynamic value)
+        updateAttribute,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        putHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        deleteHttp,
   }) {
     return pushRoute(type, synchronized, routeName, queries);
   }
@@ -392,33 +423,41 @@ class _$PushRouteAction extends PushRouteAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(String type, bool synchronized, String key, dynamic value)?
-        updateAttribute,
     TResult? Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+            String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
   }) {
     return pushRoute?.call(type, synchronized, routeName, queries);
   }
@@ -429,33 +468,40 @@ class _$PushRouteAction extends PushRouteAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
     required TResult orElse(),
   }) {
     if (pushRoute != null) {
@@ -527,7 +573,7 @@ class _$PushRouteAction extends PushRouteAction {
   }
 }
 
-abstract class PushRouteAction extends UIXActions {
+abstract class PushRouteAction extends FluveraActions {
   const factory PushRouteAction(
       {required final String type,
       final bool synchronized,
@@ -552,7 +598,7 @@ abstract class PushRouteAction extends UIXActions {
 
 /// @nodoc
 abstract class _$$PopRouteActionCopyWith<$Res>
-    implements $UIXActionsCopyWith<$Res> {
+    implements $FluveraActionsCopyWith<$Res> {
   factory _$$PopRouteActionCopyWith(
           _$PopRouteAction value, $Res Function(_$PopRouteAction) then) =
       __$$PopRouteActionCopyWithImpl<$Res>;
@@ -563,7 +609,7 @@ abstract class _$$PopRouteActionCopyWith<$Res>
 
 /// @nodoc
 class __$$PopRouteActionCopyWithImpl<$Res>
-    extends _$UIXActionsCopyWithImpl<$Res, _$PopRouteAction>
+    extends _$FluveraActionsCopyWithImpl<$Res, _$PopRouteAction>
     implements _$$PopRouteActionCopyWith<$Res> {
   __$$PopRouteActionCopyWithImpl(
       _$PopRouteAction _value, $Res Function(_$PopRouteAction) _then)
@@ -623,7 +669,7 @@ class _$PopRouteAction extends PopRouteAction {
 
   @override
   String toString() {
-    return 'UIXActions.popRoute(type: $type, synchronized: $synchronized, queries: $queries)';
+    return 'FluveraActions.popRoute(type: $type, synchronized: $synchronized, queries: $queries)';
   }
 
   @override
@@ -654,33 +700,41 @@ class _$PopRouteAction extends PopRouteAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, @UIXWidgetConverter() Widget child)
+            bool barrierDismissible, @FluveraWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(String type, bool synchronized, String key, dynamic value)
-        updateAttribute,
     required TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)
+            String type, bool synchronized, String key, dynamic value)
+        updateAttribute,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        putHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        deleteHttp,
   }) {
     return popRoute(type, synchronized, queries);
   }
@@ -691,33 +745,41 @@ class _$PopRouteAction extends PopRouteAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(String type, bool synchronized, String key, dynamic value)?
-        updateAttribute,
     TResult? Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+            String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
   }) {
     return popRoute?.call(type, synchronized, queries);
   }
@@ -728,33 +790,40 @@ class _$PopRouteAction extends PopRouteAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
     required TResult orElse(),
   }) {
     if (popRoute != null) {
@@ -826,7 +895,7 @@ class _$PopRouteAction extends PopRouteAction {
   }
 }
 
-abstract class PopRouteAction extends UIXActions {
+abstract class PopRouteAction extends FluveraActions {
   const factory PopRouteAction(
       {required final String type,
       final bool synchronized,
@@ -849,7 +918,7 @@ abstract class PopRouteAction extends UIXActions {
 
 /// @nodoc
 abstract class _$$ShowDialogActionCopyWith<$Res>
-    implements $UIXActionsCopyWith<$Res> {
+    implements $FluveraActionsCopyWith<$Res> {
   factory _$$ShowDialogActionCopyWith(
           _$ShowDialogAction value, $Res Function(_$ShowDialogAction) then) =
       __$$ShowDialogActionCopyWithImpl<$Res>;
@@ -859,12 +928,12 @@ abstract class _$$ShowDialogActionCopyWith<$Res>
       {String type,
       bool synchronized,
       bool barrierDismissible,
-      @UIXWidgetConverter() Widget child});
+      @FluveraWidgetConverter() Widget child});
 }
 
 /// @nodoc
 class __$$ShowDialogActionCopyWithImpl<$Res>
-    extends _$UIXActionsCopyWithImpl<$Res, _$ShowDialogAction>
+    extends _$FluveraActionsCopyWithImpl<$Res, _$ShowDialogAction>
     implements _$$ShowDialogActionCopyWith<$Res> {
   __$$ShowDialogActionCopyWithImpl(
       _$ShowDialogAction _value, $Res Function(_$ShowDialogAction) _then)
@@ -906,7 +975,7 @@ class _$ShowDialogAction extends ShowDialogAction {
       {required this.type,
       this.synchronized = false,
       this.barrierDismissible = true,
-      @UIXWidgetConverter() required this.child})
+      @FluveraWidgetConverter() required this.child})
       : super._();
 
   factory _$ShowDialogAction.fromJson(Map<String, dynamic> json) =>
@@ -921,12 +990,12 @@ class _$ShowDialogAction extends ShowDialogAction {
   @JsonKey()
   final bool barrierDismissible;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   final Widget child;
 
   @override
   String toString() {
-    return 'UIXActions.showDialog(type: $type, synchronized: $synchronized, barrierDismissible: $barrierDismissible, child: $child)';
+    return 'FluveraActions.showDialog(type: $type, synchronized: $synchronized, barrierDismissible: $barrierDismissible, child: $child)';
   }
 
   @override
@@ -959,33 +1028,41 @@ class _$ShowDialogAction extends ShowDialogAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, @UIXWidgetConverter() Widget child)
+            bool barrierDismissible, @FluveraWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(String type, bool synchronized, String key, dynamic value)
-        updateAttribute,
     required TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)
+            String type, bool synchronized, String key, dynamic value)
+        updateAttribute,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        putHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        deleteHttp,
   }) {
     return showDialog(type, synchronized, barrierDismissible, child);
   }
@@ -996,33 +1073,41 @@ class _$ShowDialogAction extends ShowDialogAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(String type, bool synchronized, String key, dynamic value)?
-        updateAttribute,
     TResult? Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+            String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
   }) {
     return showDialog?.call(type, synchronized, barrierDismissible, child);
   }
@@ -1033,33 +1118,40 @@ class _$ShowDialogAction extends ShowDialogAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
     required TResult orElse(),
   }) {
     if (showDialog != null) {
@@ -1131,12 +1223,13 @@ class _$ShowDialogAction extends ShowDialogAction {
   }
 }
 
-abstract class ShowDialogAction extends UIXActions {
+abstract class ShowDialogAction extends FluveraActions {
   const factory ShowDialogAction(
-      {required final String type,
-      final bool synchronized,
-      final bool barrierDismissible,
-      @UIXWidgetConverter() required final Widget child}) = _$ShowDialogAction;
+          {required final String type,
+          final bool synchronized,
+          final bool barrierDismissible,
+          @FluveraWidgetConverter() required final Widget child}) =
+      _$ShowDialogAction;
   const ShowDialogAction._() : super._();
 
   factory ShowDialogAction.fromJson(Map<String, dynamic> json) =
@@ -1147,7 +1240,7 @@ abstract class ShowDialogAction extends UIXActions {
   @override
   bool get synchronized;
   bool get barrierDismissible;
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget get child;
   @override
   @JsonKey(ignore: true)
@@ -1157,7 +1250,7 @@ abstract class ShowDialogAction extends UIXActions {
 
 /// @nodoc
 abstract class _$$ShowBottomSheetActionCopyWith<$Res>
-    implements $UIXActionsCopyWith<$Res> {
+    implements $FluveraActionsCopyWith<$Res> {
   factory _$$ShowBottomSheetActionCopyWith(_$ShowBottomSheetAction value,
           $Res Function(_$ShowBottomSheetAction) then) =
       __$$ShowBottomSheetActionCopyWithImpl<$Res>;
@@ -1168,13 +1261,13 @@ abstract class _$$ShowBottomSheetActionCopyWith<$Res>
       bool synchronized,
       bool? enableDrag,
       double? elevation,
-      @UIXColorConverter() Color? backgroundColor,
-      @UIXWidgetConverter() Widget child});
+      @FluveraColorConverter() Color? backgroundColor,
+      @FluveraWidgetConverter() Widget child});
 }
 
 /// @nodoc
 class __$$ShowBottomSheetActionCopyWithImpl<$Res>
-    extends _$UIXActionsCopyWithImpl<$Res, _$ShowBottomSheetAction>
+    extends _$FluveraActionsCopyWithImpl<$Res, _$ShowBottomSheetAction>
     implements _$$ShowBottomSheetActionCopyWith<$Res> {
   __$$ShowBottomSheetActionCopyWithImpl(_$ShowBottomSheetAction _value,
       $Res Function(_$ShowBottomSheetAction) _then)
@@ -1227,8 +1320,8 @@ class _$ShowBottomSheetAction extends ShowBottomSheetAction {
       this.synchronized = false,
       this.enableDrag,
       this.elevation,
-      @UIXColorConverter() this.backgroundColor,
-      @UIXWidgetConverter() required this.child})
+      @FluveraColorConverter() this.backgroundColor,
+      @FluveraWidgetConverter() required this.child})
       : super._();
 
   factory _$ShowBottomSheetAction.fromJson(Map<String, dynamic> json) =>
@@ -1244,15 +1337,15 @@ class _$ShowBottomSheetAction extends ShowBottomSheetAction {
   @override
   final double? elevation;
   @override
-  @UIXColorConverter()
+  @FluveraColorConverter()
   final Color? backgroundColor;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   final Widget child;
 
   @override
   String toString() {
-    return 'UIXActions.showBottomSheet(type: $type, synchronized: $synchronized, enableDrag: $enableDrag, elevation: $elevation, backgroundColor: $backgroundColor, child: $child)';
+    return 'FluveraActions.showBottomSheet(type: $type, synchronized: $synchronized, enableDrag: $enableDrag, elevation: $elevation, backgroundColor: $backgroundColor, child: $child)';
   }
 
   @override
@@ -1290,33 +1383,41 @@ class _$ShowBottomSheetAction extends ShowBottomSheetAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, @UIXWidgetConverter() Widget child)
+            bool barrierDismissible, @FluveraWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(String type, bool synchronized, String key, dynamic value)
-        updateAttribute,
     required TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)
+            String type, bool synchronized, String key, dynamic value)
+        updateAttribute,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        putHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        deleteHttp,
   }) {
     return showBottomSheet(
         type, synchronized, enableDrag, elevation, backgroundColor, child);
@@ -1328,33 +1429,41 @@ class _$ShowBottomSheetAction extends ShowBottomSheetAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(String type, bool synchronized, String key, dynamic value)?
-        updateAttribute,
     TResult? Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+            String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
   }) {
     return showBottomSheet?.call(
         type, synchronized, enableDrag, elevation, backgroundColor, child);
@@ -1366,33 +1475,40 @@ class _$ShowBottomSheetAction extends ShowBottomSheetAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
     required TResult orElse(),
   }) {
     if (showBottomSheet != null) {
@@ -1465,14 +1581,14 @@ class _$ShowBottomSheetAction extends ShowBottomSheetAction {
   }
 }
 
-abstract class ShowBottomSheetAction extends UIXActions {
+abstract class ShowBottomSheetAction extends FluveraActions {
   const factory ShowBottomSheetAction(
           {required final String type,
           final bool synchronized,
           final bool? enableDrag,
           final double? elevation,
-          @UIXColorConverter() final Color? backgroundColor,
-          @UIXWidgetConverter() required final Widget child}) =
+          @FluveraColorConverter() final Color? backgroundColor,
+          @FluveraWidgetConverter() required final Widget child}) =
       _$ShowBottomSheetAction;
   const ShowBottomSheetAction._() : super._();
 
@@ -1485,9 +1601,9 @@ abstract class ShowBottomSheetAction extends UIXActions {
   bool get synchronized;
   bool? get enableDrag;
   double? get elevation;
-  @UIXColorConverter()
+  @FluveraColorConverter()
   Color? get backgroundColor;
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget get child;
   @override
   @JsonKey(ignore: true)
@@ -1497,7 +1613,7 @@ abstract class ShowBottomSheetAction extends UIXActions {
 
 /// @nodoc
 abstract class _$$ShowSnackbarActionCopyWith<$Res>
-    implements $UIXActionsCopyWith<$Res> {
+    implements $FluveraActionsCopyWith<$Res> {
   factory _$$ShowSnackbarActionCopyWith(_$ShowSnackbarAction value,
           $Res Function(_$ShowSnackbarAction) then) =
       __$$ShowSnackbarActionCopyWithImpl<$Res>;
@@ -1506,13 +1622,13 @@ abstract class _$$ShowSnackbarActionCopyWith<$Res>
   $Res call(
       {String type,
       bool synchronized,
-      @UIXColorConverter() Color? backgroundColor,
-      @UIXWidgetConverter() Widget child});
+      @FluveraColorConverter() Color? backgroundColor,
+      @FluveraWidgetConverter() Widget child});
 }
 
 /// @nodoc
 class __$$ShowSnackbarActionCopyWithImpl<$Res>
-    extends _$UIXActionsCopyWithImpl<$Res, _$ShowSnackbarAction>
+    extends _$FluveraActionsCopyWithImpl<$Res, _$ShowSnackbarAction>
     implements _$$ShowSnackbarActionCopyWith<$Res> {
   __$$ShowSnackbarActionCopyWithImpl(
       _$ShowSnackbarAction _value, $Res Function(_$ShowSnackbarAction) _then)
@@ -1553,8 +1669,8 @@ class _$ShowSnackbarAction extends ShowSnackbarAction {
   const _$ShowSnackbarAction(
       {required this.type,
       this.synchronized = false,
-      @UIXColorConverter() this.backgroundColor,
-      @UIXWidgetConverter() required this.child})
+      @FluveraColorConverter() this.backgroundColor,
+      @FluveraWidgetConverter() required this.child})
       : super._();
 
   factory _$ShowSnackbarAction.fromJson(Map<String, dynamic> json) =>
@@ -1566,15 +1682,15 @@ class _$ShowSnackbarAction extends ShowSnackbarAction {
   @JsonKey()
   final bool synchronized;
   @override
-  @UIXColorConverter()
+  @FluveraColorConverter()
   final Color? backgroundColor;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   final Widget child;
 
   @override
   String toString() {
-    return 'UIXActions.showSnackbar(type: $type, synchronized: $synchronized, backgroundColor: $backgroundColor, child: $child)';
+    return 'FluveraActions.showSnackbar(type: $type, synchronized: $synchronized, backgroundColor: $backgroundColor, child: $child)';
   }
 
   @override
@@ -1608,33 +1724,41 @@ class _$ShowSnackbarAction extends ShowSnackbarAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, @UIXWidgetConverter() Widget child)
+            bool barrierDismissible, @FluveraWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(String type, bool synchronized, String key, dynamic value)
-        updateAttribute,
     required TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)
+            String type, bool synchronized, String key, dynamic value)
+        updateAttribute,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        putHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        deleteHttp,
   }) {
     return showSnackbar(type, synchronized, backgroundColor, child);
   }
@@ -1645,33 +1769,41 @@ class _$ShowSnackbarAction extends ShowSnackbarAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(String type, bool synchronized, String key, dynamic value)?
-        updateAttribute,
     TResult? Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+            String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
   }) {
     return showSnackbar?.call(type, synchronized, backgroundColor, child);
   }
@@ -1682,33 +1814,40 @@ class _$ShowSnackbarAction extends ShowSnackbarAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
     required TResult orElse(),
   }) {
     if (showSnackbar != null) {
@@ -1780,12 +1919,12 @@ class _$ShowSnackbarAction extends ShowSnackbarAction {
   }
 }
 
-abstract class ShowSnackbarAction extends UIXActions {
+abstract class ShowSnackbarAction extends FluveraActions {
   const factory ShowSnackbarAction(
           {required final String type,
           final bool synchronized,
-          @UIXColorConverter() final Color? backgroundColor,
-          @UIXWidgetConverter() required final Widget child}) =
+          @FluveraColorConverter() final Color? backgroundColor,
+          @FluveraWidgetConverter() required final Widget child}) =
       _$ShowSnackbarAction;
   const ShowSnackbarAction._() : super._();
 
@@ -1796,9 +1935,9 @@ abstract class ShowSnackbarAction extends UIXActions {
   String get type;
   @override
   bool get synchronized;
-  @UIXColorConverter()
+  @FluveraColorConverter()
   Color? get backgroundColor;
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget get child;
   @override
   @JsonKey(ignore: true)
@@ -1808,7 +1947,7 @@ abstract class ShowSnackbarAction extends UIXActions {
 
 /// @nodoc
 abstract class _$$UpdateAttributeActionCopyWith<$Res>
-    implements $UIXActionsCopyWith<$Res> {
+    implements $FluveraActionsCopyWith<$Res> {
   factory _$$UpdateAttributeActionCopyWith(_$UpdateAttributeAction value,
           $Res Function(_$UpdateAttributeAction) then) =
       __$$UpdateAttributeActionCopyWithImpl<$Res>;
@@ -1819,7 +1958,7 @@ abstract class _$$UpdateAttributeActionCopyWith<$Res>
 
 /// @nodoc
 class __$$UpdateAttributeActionCopyWithImpl<$Res>
-    extends _$UIXActionsCopyWithImpl<$Res, _$UpdateAttributeAction>
+    extends _$FluveraActionsCopyWithImpl<$Res, _$UpdateAttributeAction>
     implements _$$UpdateAttributeActionCopyWith<$Res> {
   __$$UpdateAttributeActionCopyWithImpl(_$UpdateAttributeAction _value,
       $Res Function(_$UpdateAttributeAction) _then)
@@ -1879,7 +2018,7 @@ class _$UpdateAttributeAction extends UpdateAttributeAction {
 
   @override
   String toString() {
-    return 'UIXActions.updateAttribute(type: $type, synchronized: $synchronized, key: $key, value: $value)';
+    return 'FluveraActions.updateAttribute(type: $type, synchronized: $synchronized, key: $key, value: $value)';
   }
 
   @override
@@ -1912,33 +2051,41 @@ class _$UpdateAttributeAction extends UpdateAttributeAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, @UIXWidgetConverter() Widget child)
+            bool barrierDismissible, @FluveraWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(String type, bool synchronized, String key, dynamic value)
-        updateAttribute,
     required TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)
+            String type, bool synchronized, String key, dynamic value)
+        updateAttribute,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        putHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        deleteHttp,
   }) {
     return updateAttribute(type, synchronized, key, value);
   }
@@ -1949,33 +2096,41 @@ class _$UpdateAttributeAction extends UpdateAttributeAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(String type, bool synchronized, String key, dynamic value)?
-        updateAttribute,
     TResult? Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+            String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
   }) {
     return updateAttribute?.call(type, synchronized, key, value);
   }
@@ -1986,33 +2141,40 @@ class _$UpdateAttributeAction extends UpdateAttributeAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
     required TResult orElse(),
   }) {
     if (updateAttribute != null) {
@@ -2084,7 +2246,7 @@ class _$UpdateAttributeAction extends UpdateAttributeAction {
   }
 }
 
-abstract class UpdateAttributeAction extends UIXActions {
+abstract class UpdateAttributeAction extends FluveraActions {
   const factory UpdateAttributeAction(
       {required final String type,
       final bool synchronized,
@@ -2109,7 +2271,7 @@ abstract class UpdateAttributeAction extends UIXActions {
 
 /// @nodoc
 abstract class _$$GetHttpActionCopyWith<$Res>
-    implements $UIXActionsCopyWith<$Res> {
+    implements $FluveraActionsCopyWith<$Res> {
   factory _$$GetHttpActionCopyWith(
           _$GetHttpAction value, $Res Function(_$GetHttpAction) then) =
       __$$GetHttpActionCopyWithImpl<$Res>;
@@ -2124,7 +2286,7 @@ abstract class _$$GetHttpActionCopyWith<$Res>
 
 /// @nodoc
 class __$$GetHttpActionCopyWithImpl<$Res>
-    extends _$UIXActionsCopyWithImpl<$Res, _$GetHttpAction>
+    extends _$FluveraActionsCopyWithImpl<$Res, _$GetHttpAction>
     implements _$$GetHttpActionCopyWith<$Res> {
   __$$GetHttpActionCopyWithImpl(
       _$GetHttpAction _value, $Res Function(_$GetHttpAction) _then)
@@ -2192,7 +2354,7 @@ class _$GetHttpAction extends GetHttpAction {
 
   @override
   String toString() {
-    return 'UIXActions.getHttp(type: $type, synchronized: $synchronized, url: $url, headers: $headers)';
+    return 'FluveraActions.getHttp(type: $type, synchronized: $synchronized, url: $url, headers: $headers)';
   }
 
   @override
@@ -2224,33 +2386,41 @@ class _$GetHttpAction extends GetHttpAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, @UIXWidgetConverter() Widget child)
+            bool barrierDismissible, @FluveraWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(String type, bool synchronized, String key, dynamic value)
-        updateAttribute,
     required TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)
+            String type, bool synchronized, String key, dynamic value)
+        updateAttribute,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        putHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        deleteHttp,
   }) {
     return getHttp(type, synchronized, url, headers);
   }
@@ -2261,33 +2431,41 @@ class _$GetHttpAction extends GetHttpAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(String type, bool synchronized, String key, dynamic value)?
-        updateAttribute,
     TResult? Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+            String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
   }) {
     return getHttp?.call(type, synchronized, url, headers);
   }
@@ -2298,33 +2476,40 @@ class _$GetHttpAction extends GetHttpAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
     required TResult orElse(),
   }) {
     if (getHttp != null) {
@@ -2396,7 +2581,7 @@ class _$GetHttpAction extends GetHttpAction {
   }
 }
 
-abstract class GetHttpAction extends UIXActions {
+abstract class GetHttpAction extends FluveraActions {
   const factory GetHttpAction(
       {required final String type,
       final bool synchronized,
@@ -2421,7 +2606,7 @@ abstract class GetHttpAction extends UIXActions {
 
 /// @nodoc
 abstract class _$$PostHttpActionCopyWith<$Res>
-    implements $UIXActionsCopyWith<$Res> {
+    implements $FluveraActionsCopyWith<$Res> {
   factory _$$PostHttpActionCopyWith(
           _$PostHttpAction value, $Res Function(_$PostHttpAction) then) =
       __$$PostHttpActionCopyWithImpl<$Res>;
@@ -2437,7 +2622,7 @@ abstract class _$$PostHttpActionCopyWith<$Res>
 
 /// @nodoc
 class __$$PostHttpActionCopyWithImpl<$Res>
-    extends _$UIXActionsCopyWithImpl<$Res, _$PostHttpAction>
+    extends _$FluveraActionsCopyWithImpl<$Res, _$PostHttpAction>
     implements _$$PostHttpActionCopyWith<$Res> {
   __$$PostHttpActionCopyWithImpl(
       _$PostHttpAction _value, $Res Function(_$PostHttpAction) _then)
@@ -2514,7 +2699,7 @@ class _$PostHttpAction extends PostHttpAction {
 
   @override
   String toString() {
-    return 'UIXActions.postHttp(type: $type, synchronized: $synchronized, url: $url, headers: $headers, body: $body)';
+    return 'FluveraActions.postHttp(type: $type, synchronized: $synchronized, url: $url, headers: $headers, body: $body)';
   }
 
   @override
@@ -2552,33 +2737,41 @@ class _$PostHttpAction extends PostHttpAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, @UIXWidgetConverter() Widget child)
+            bool barrierDismissible, @FluveraWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(String type, bool synchronized, String key, dynamic value)
-        updateAttribute,
     required TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)
+            String type, bool synchronized, String key, dynamic value)
+        updateAttribute,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        putHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        deleteHttp,
   }) {
     return postHttp(type, synchronized, url, headers, body);
   }
@@ -2589,33 +2782,41 @@ class _$PostHttpAction extends PostHttpAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(String type, bool synchronized, String key, dynamic value)?
-        updateAttribute,
     TResult? Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+            String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
   }) {
     return postHttp?.call(type, synchronized, url, headers, body);
   }
@@ -2626,33 +2827,40 @@ class _$PostHttpAction extends PostHttpAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
     required TResult orElse(),
   }) {
     if (postHttp != null) {
@@ -2724,7 +2932,7 @@ class _$PostHttpAction extends PostHttpAction {
   }
 }
 
-abstract class PostHttpAction extends UIXActions {
+abstract class PostHttpAction extends FluveraActions {
   const factory PostHttpAction(
       {required final String type,
       final bool synchronized,
@@ -2751,7 +2959,7 @@ abstract class PostHttpAction extends UIXActions {
 
 /// @nodoc
 abstract class _$$PutHttpActionCopyWith<$Res>
-    implements $UIXActionsCopyWith<$Res> {
+    implements $FluveraActionsCopyWith<$Res> {
   factory _$$PutHttpActionCopyWith(
           _$PutHttpAction value, $Res Function(_$PutHttpAction) then) =
       __$$PutHttpActionCopyWithImpl<$Res>;
@@ -2767,7 +2975,7 @@ abstract class _$$PutHttpActionCopyWith<$Res>
 
 /// @nodoc
 class __$$PutHttpActionCopyWithImpl<$Res>
-    extends _$UIXActionsCopyWithImpl<$Res, _$PutHttpAction>
+    extends _$FluveraActionsCopyWithImpl<$Res, _$PutHttpAction>
     implements _$$PutHttpActionCopyWith<$Res> {
   __$$PutHttpActionCopyWithImpl(
       _$PutHttpAction _value, $Res Function(_$PutHttpAction) _then)
@@ -2844,7 +3052,7 @@ class _$PutHttpAction extends PutHttpAction {
 
   @override
   String toString() {
-    return 'UIXActions.putHttp(type: $type, synchronized: $synchronized, url: $url, headers: $headers, body: $body)';
+    return 'FluveraActions.putHttp(type: $type, synchronized: $synchronized, url: $url, headers: $headers, body: $body)';
   }
 
   @override
@@ -2882,33 +3090,41 @@ class _$PutHttpAction extends PutHttpAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, @UIXWidgetConverter() Widget child)
+            bool barrierDismissible, @FluveraWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(String type, bool synchronized, String key, dynamic value)
-        updateAttribute,
     required TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)
+            String type, bool synchronized, String key, dynamic value)
+        updateAttribute,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        putHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        deleteHttp,
   }) {
     return putHttp(type, synchronized, url, headers, body);
   }
@@ -2919,33 +3135,41 @@ class _$PutHttpAction extends PutHttpAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(String type, bool synchronized, String key, dynamic value)?
-        updateAttribute,
     TResult? Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+            String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
   }) {
     return putHttp?.call(type, synchronized, url, headers, body);
   }
@@ -2956,33 +3180,40 @@ class _$PutHttpAction extends PutHttpAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
     required TResult orElse(),
   }) {
     if (putHttp != null) {
@@ -3054,7 +3285,7 @@ class _$PutHttpAction extends PutHttpAction {
   }
 }
 
-abstract class PutHttpAction extends UIXActions {
+abstract class PutHttpAction extends FluveraActions {
   const factory PutHttpAction(
       {required final String type,
       final bool synchronized,
@@ -3081,7 +3312,7 @@ abstract class PutHttpAction extends UIXActions {
 
 /// @nodoc
 abstract class _$$DeleteHttpActionCopyWith<$Res>
-    implements $UIXActionsCopyWith<$Res> {
+    implements $FluveraActionsCopyWith<$Res> {
   factory _$$DeleteHttpActionCopyWith(
           _$DeleteHttpAction value, $Res Function(_$DeleteHttpAction) then) =
       __$$DeleteHttpActionCopyWithImpl<$Res>;
@@ -3097,7 +3328,7 @@ abstract class _$$DeleteHttpActionCopyWith<$Res>
 
 /// @nodoc
 class __$$DeleteHttpActionCopyWithImpl<$Res>
-    extends _$UIXActionsCopyWithImpl<$Res, _$DeleteHttpAction>
+    extends _$FluveraActionsCopyWithImpl<$Res, _$DeleteHttpAction>
     implements _$$DeleteHttpActionCopyWith<$Res> {
   __$$DeleteHttpActionCopyWithImpl(
       _$DeleteHttpAction _value, $Res Function(_$DeleteHttpAction) _then)
@@ -3174,7 +3405,7 @@ class _$DeleteHttpAction extends DeleteHttpAction {
 
   @override
   String toString() {
-    return 'UIXActions.deleteHttp(type: $type, synchronized: $synchronized, url: $url, headers: $headers, body: $body)';
+    return 'FluveraActions.deleteHttp(type: $type, synchronized: $synchronized, url: $url, headers: $headers, body: $body)';
   }
 
   @override
@@ -3212,33 +3443,41 @@ class _$DeleteHttpAction extends DeleteHttpAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
-            bool barrierDismissible, @UIXWidgetConverter() Widget child)
+            bool barrierDismissible, @FluveraWidgetConverter() Widget child)
         showDialog,
     required TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showBottomSheet,
     required TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(String type, bool synchronized, String key, dynamic value)
-        updateAttribute,
     required TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)
+            String type, bool synchronized, String key, dynamic value)
+        updateAttribute,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
-    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        postHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        putHttp,
+    required TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)
+        deleteHttp,
   }) {
     return deleteHttp(type, synchronized, url, headers, body);
   }
@@ -3249,33 +3488,41 @@ class _$DeleteHttpAction extends DeleteHttpAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult? Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult? Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(String type, bool synchronized, String key, dynamic value)?
-        updateAttribute,
     TResult? Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+            String type, bool synchronized, String key, dynamic value)?
+        updateAttribute,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult? Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
   }) {
     return deleteHttp?.call(type, synchronized, url, headers, body);
   }
@@ -3286,33 +3533,40 @@ class _$DeleteHttpAction extends DeleteHttpAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(
+            String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraWidgetConverter() Widget child)?
         showDialog,
     TResult Function(
             String type,
             bool synchronized,
             bool? enableDrag,
             double? elevation,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showBottomSheet,
     TResult Function(
             String type,
             bool synchronized,
-            @UIXColorConverter() Color? backgroundColor,
-            @UIXWidgetConverter() Widget child)?
+            @FluveraColorConverter() Color? backgroundColor,
+            @FluveraWidgetConverter() Widget child)?
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(
-            String type, bool synchronized, String url, Map<String, String>? headers)?
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
-    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        postHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        putHttp,
+    TResult Function(String type, bool synchronized, String url,
+            Map<String, String>? headers, dynamic body)?
+        deleteHttp,
     required TResult orElse(),
   }) {
     if (deleteHttp != null) {
@@ -3384,7 +3638,7 @@ class _$DeleteHttpAction extends DeleteHttpAction {
   }
 }
 
-abstract class DeleteHttpAction extends UIXActions {
+abstract class DeleteHttpAction extends FluveraActions {
   const factory DeleteHttpAction(
       {required final String type,
       final bool synchronized,

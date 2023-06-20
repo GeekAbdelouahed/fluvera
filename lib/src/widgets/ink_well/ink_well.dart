@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:uix/src/widgets/ink_well/attributes/attributes.dart';
-import 'package:uix/src/widgets/uix.dart';
+import 'package:fluvera/src/widgets/fluvera.dart';
+import 'package:fluvera/src/widgets/ink_well/attributes/attributes.dart';
 
-class UIXInkWell extends UIX<InkWellAttributes> {
-  const UIXInkWell(Map<String, dynamic> json) : super(json);
+class FluveraInkWell extends Fluvera<InkWellAttributes> {
+  const FluveraInkWell(Map<String, dynamic> json) : super(json);
 
   @override
   InkWellAttributes get attributes => InkWellAttributes.fromJson(json);

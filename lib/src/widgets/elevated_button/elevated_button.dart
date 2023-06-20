@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:uix/src/widgets/elevated_button/attributes/attributes.dart';
-import 'package:uix/src/widgets/uix.dart';
+import 'package:fluvera/src/widgets/elevated_button/attributes/attributes.dart';
+import 'package:fluvera/src/widgets/fluvera.dart';
 
-class UIXElevatedButton extends UIX<ElevatedButtonAttributes> {
-  const UIXElevatedButton(Map<String, dynamic> json) : super(json);
+class FluveraElevatedButton extends Fluvera<ElevatedButtonAttributes> {
+  const FluveraElevatedButton(Map<String, dynamic> json) : super(json);
 
   @override
   ElevatedButtonAttributes get attributes =>

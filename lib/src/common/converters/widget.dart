@@ -1,16 +1,16 @@
 part of 'converters.dart';
 
-class UIXWidgetConverter
+class FluveraWidgetConverter
     implements JsonConverter<Widget, Map<String, dynamic>> {
-  const UIXWidgetConverter();
+  const FluveraWidgetConverter();
 
   @override
   Widget fromJson(Map<String, dynamic> json) {
-    return UIXFactory.build(json)!;
+    return FluveraFactory.build(json)!;
   }
 
   @override
   Map<String, dynamic> toJson(Widget data) {
-    return (data as UIX).json;
+    return (data as Fluvera).json;
   }
 }

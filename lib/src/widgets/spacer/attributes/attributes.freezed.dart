@@ -20,7 +20,7 @@ SpacerAttributes _$SpacerAttributesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SpacerAttributes {
-  UIXAttributeValue<num> get flex => throw _privateConstructorUsedError;
+  FluveraAttributeValue<num> get flex => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,9 +34,9 @@ abstract class $SpacerAttributesCopyWith<$Res> {
           SpacerAttributes value, $Res Function(SpacerAttributes) then) =
       _$SpacerAttributesCopyWithImpl<$Res, SpacerAttributes>;
   @useResult
-  $Res call({UIXAttributeValue<num> flex});
+  $Res call({FluveraAttributeValue<num> flex});
 
-  $UIXAttributeValueCopyWith<num, $Res> get flex;
+  $FluveraAttributeValueCopyWith<num, $Res> get flex;
 }
 
 /// @nodoc
@@ -58,14 +58,14 @@ class _$SpacerAttributesCopyWithImpl<$Res, $Val extends SpacerAttributes>
       flex: null == flex
           ? _value.flex
           : flex // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>,
+              as FluveraAttributeValue<num>,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXAttributeValueCopyWith<num, $Res> get flex {
-    return $UIXAttributeValueCopyWith<num, $Res>(_value.flex, (value) {
+  $FluveraAttributeValueCopyWith<num, $Res> get flex {
+    return $FluveraAttributeValueCopyWith<num, $Res>(_value.flex, (value) {
       return _then(_value.copyWith(flex: value) as $Val);
     });
   }
@@ -79,10 +79,10 @@ abstract class _$$_SpacerAttributesCopyWith<$Res>
       __$$_SpacerAttributesCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({UIXAttributeValue<num> flex});
+  $Res call({FluveraAttributeValue<num> flex});
 
   @override
-  $UIXAttributeValueCopyWith<num, $Res> get flex;
+  $FluveraAttributeValueCopyWith<num, $Res> get flex;
 }
 
 /// @nodoc
@@ -102,7 +102,7 @@ class __$$_SpacerAttributesCopyWithImpl<$Res>
       flex: null == flex
           ? _value.flex
           : flex // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>,
+              as FluveraAttributeValue<num>,
     ));
   }
 }
@@ -111,14 +111,14 @@ class __$$_SpacerAttributesCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SpacerAttributes implements _SpacerAttributes {
   const _$_SpacerAttributes(
-      {this.flex = const UIXAttributeValue<num>(value: 1)});
+      {this.flex = const FluveraAttributeValue<num>(value: 1)});
 
   factory _$_SpacerAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_SpacerAttributesFromJson(json);
 
   @override
   @JsonKey()
-  final UIXAttributeValue<num> flex;
+  final FluveraAttributeValue<num> flex;
 
   @override
   String toString() {
@@ -152,14 +152,14 @@ class _$_SpacerAttributes implements _SpacerAttributes {
 }
 
 abstract class _SpacerAttributes implements SpacerAttributes {
-  const factory _SpacerAttributes({final UIXAttributeValue<num> flex}) =
+  const factory _SpacerAttributes({final FluveraAttributeValue<num> flex}) =
       _$_SpacerAttributes;
 
   factory _SpacerAttributes.fromJson(Map<String, dynamic> json) =
       _$_SpacerAttributes.fromJson;
 
   @override
-  UIXAttributeValue<num> get flex;
+  FluveraAttributeValue<num> get flex;
   @override
   @JsonKey(ignore: true)
   _$$_SpacerAttributesCopyWith<_$_SpacerAttributes> get copyWith =>

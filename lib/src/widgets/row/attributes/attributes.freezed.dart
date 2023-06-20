@@ -20,13 +20,13 @@ RowAttributes _$RowAttributesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$RowAttributes {
-  UIXEnumAttributeValue<MainAxisSize> get mainAxisSize =>
+  FluveraEnumAttributeValue<MainAxisSize> get mainAxisSize =>
       throw _privateConstructorUsedError;
-  UIXEnumAttributeValue<MainAxisAlignment> get mainAxisAlignment =>
+  FluveraEnumAttributeValue<MainAxisAlignment> get mainAxisAlignment =>
       throw _privateConstructorUsedError;
-  UIXEnumAttributeValue<CrossAxisAlignment> get crossAxisAlignment =>
+  FluveraEnumAttributeValue<CrossAxisAlignment> get crossAxisAlignment =>
       throw _privateConstructorUsedError;
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   List<Widget> get children => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -42,14 +42,15 @@ abstract class $RowAttributesCopyWith<$Res> {
       _$RowAttributesCopyWithImpl<$Res, RowAttributes>;
   @useResult
   $Res call(
-      {UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
-      UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
-      UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
-      @UIXWidgetConverter() List<Widget> children});
+      {FluveraEnumAttributeValue<MainAxisSize> mainAxisSize,
+      FluveraEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+      FluveraEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
+      @FluveraWidgetConverter() List<Widget> children});
 
-  $UIXEnumAttributeValueCopyWith<MainAxisSize, $Res> get mainAxisSize;
-  $UIXEnumAttributeValueCopyWith<MainAxisAlignment, $Res> get mainAxisAlignment;
-  $UIXEnumAttributeValueCopyWith<CrossAxisAlignment, $Res>
+  $FluveraEnumAttributeValueCopyWith<MainAxisSize, $Res> get mainAxisSize;
+  $FluveraEnumAttributeValueCopyWith<MainAxisAlignment, $Res>
+      get mainAxisAlignment;
+  $FluveraEnumAttributeValueCopyWith<CrossAxisAlignment, $Res>
       get crossAxisAlignment;
 }
 
@@ -75,15 +76,15 @@ class _$RowAttributesCopyWithImpl<$Res, $Val extends RowAttributes>
       mainAxisSize: null == mainAxisSize
           ? _value.mainAxisSize
           : mainAxisSize // ignore: cast_nullable_to_non_nullable
-              as UIXEnumAttributeValue<MainAxisSize>,
+              as FluveraEnumAttributeValue<MainAxisSize>,
       mainAxisAlignment: null == mainAxisAlignment
           ? _value.mainAxisAlignment
           : mainAxisAlignment // ignore: cast_nullable_to_non_nullable
-              as UIXEnumAttributeValue<MainAxisAlignment>,
+              as FluveraEnumAttributeValue<MainAxisAlignment>,
       crossAxisAlignment: null == crossAxisAlignment
           ? _value.crossAxisAlignment
           : crossAxisAlignment // ignore: cast_nullable_to_non_nullable
-              as UIXEnumAttributeValue<CrossAxisAlignment>,
+              as FluveraEnumAttributeValue<CrossAxisAlignment>,
       children: null == children
           ? _value.children
           : children // ignore: cast_nullable_to_non_nullable
@@ -93,8 +94,8 @@ class _$RowAttributesCopyWithImpl<$Res, $Val extends RowAttributes>
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXEnumAttributeValueCopyWith<MainAxisSize, $Res> get mainAxisSize {
-    return $UIXEnumAttributeValueCopyWith<MainAxisSize, $Res>(
+  $FluveraEnumAttributeValueCopyWith<MainAxisSize, $Res> get mainAxisSize {
+    return $FluveraEnumAttributeValueCopyWith<MainAxisSize, $Res>(
         _value.mainAxisSize, (value) {
       return _then(_value.copyWith(mainAxisSize: value) as $Val);
     });
@@ -102,9 +103,9 @@ class _$RowAttributesCopyWithImpl<$Res, $Val extends RowAttributes>
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXEnumAttributeValueCopyWith<MainAxisAlignment, $Res>
+  $FluveraEnumAttributeValueCopyWith<MainAxisAlignment, $Res>
       get mainAxisAlignment {
-    return $UIXEnumAttributeValueCopyWith<MainAxisAlignment, $Res>(
+    return $FluveraEnumAttributeValueCopyWith<MainAxisAlignment, $Res>(
         _value.mainAxisAlignment, (value) {
       return _then(_value.copyWith(mainAxisAlignment: value) as $Val);
     });
@@ -112,9 +113,9 @@ class _$RowAttributesCopyWithImpl<$Res, $Val extends RowAttributes>
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXEnumAttributeValueCopyWith<CrossAxisAlignment, $Res>
+  $FluveraEnumAttributeValueCopyWith<CrossAxisAlignment, $Res>
       get crossAxisAlignment {
-    return $UIXEnumAttributeValueCopyWith<CrossAxisAlignment, $Res>(
+    return $FluveraEnumAttributeValueCopyWith<CrossAxisAlignment, $Res>(
         _value.crossAxisAlignment, (value) {
       return _then(_value.copyWith(crossAxisAlignment: value) as $Val);
     });
@@ -130,17 +131,18 @@ abstract class _$$_RowAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
-      UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
-      UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
-      @UIXWidgetConverter() List<Widget> children});
+      {FluveraEnumAttributeValue<MainAxisSize> mainAxisSize,
+      FluveraEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+      FluveraEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
+      @FluveraWidgetConverter() List<Widget> children});
 
   @override
-  $UIXEnumAttributeValueCopyWith<MainAxisSize, $Res> get mainAxisSize;
+  $FluveraEnumAttributeValueCopyWith<MainAxisSize, $Res> get mainAxisSize;
   @override
-  $UIXEnumAttributeValueCopyWith<MainAxisAlignment, $Res> get mainAxisAlignment;
+  $FluveraEnumAttributeValueCopyWith<MainAxisAlignment, $Res>
+      get mainAxisAlignment;
   @override
-  $UIXEnumAttributeValueCopyWith<CrossAxisAlignment, $Res>
+  $FluveraEnumAttributeValueCopyWith<CrossAxisAlignment, $Res>
       get crossAxisAlignment;
 }
 
@@ -164,15 +166,15 @@ class __$$_RowAttributesCopyWithImpl<$Res>
       mainAxisSize: null == mainAxisSize
           ? _value.mainAxisSize
           : mainAxisSize // ignore: cast_nullable_to_non_nullable
-              as UIXEnumAttributeValue<MainAxisSize>,
+              as FluveraEnumAttributeValue<MainAxisSize>,
       mainAxisAlignment: null == mainAxisAlignment
           ? _value.mainAxisAlignment
           : mainAxisAlignment // ignore: cast_nullable_to_non_nullable
-              as UIXEnumAttributeValue<MainAxisAlignment>,
+              as FluveraEnumAttributeValue<MainAxisAlignment>,
       crossAxisAlignment: null == crossAxisAlignment
           ? _value.crossAxisAlignment
           : crossAxisAlignment // ignore: cast_nullable_to_non_nullable
-              as UIXEnumAttributeValue<CrossAxisAlignment>,
+              as FluveraEnumAttributeValue<CrossAxisAlignment>,
       children: null == children
           ? _value._children
           : children // ignore: cast_nullable_to_non_nullable
@@ -185,10 +187,11 @@ class __$$_RowAttributesCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_RowAttributes implements _RowAttributes {
   const _$_RowAttributes(
-      {this.mainAxisSize = const UIXEnumAttributeValue(value: 'max'),
-      this.mainAxisAlignment = const UIXEnumAttributeValue(value: 'start'),
-      this.crossAxisAlignment = const UIXEnumAttributeValue(value: 'center'),
-      @UIXWidgetConverter() required final List<Widget> children})
+      {this.mainAxisSize = const FluveraEnumAttributeValue(value: 'max'),
+      this.mainAxisAlignment = const FluveraEnumAttributeValue(value: 'start'),
+      this.crossAxisAlignment =
+          const FluveraEnumAttributeValue(value: 'center'),
+      @FluveraWidgetConverter() required final List<Widget> children})
       : _children = children;
 
   factory _$_RowAttributes.fromJson(Map<String, dynamic> json) =>
@@ -196,16 +199,16 @@ class _$_RowAttributes implements _RowAttributes {
 
   @override
   @JsonKey()
-  final UIXEnumAttributeValue<MainAxisSize> mainAxisSize;
+  final FluveraEnumAttributeValue<MainAxisSize> mainAxisSize;
   @override
   @JsonKey()
-  final UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment;
+  final FluveraEnumAttributeValue<MainAxisAlignment> mainAxisAlignment;
   @override
   @JsonKey()
-  final UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment;
+  final FluveraEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment;
   final List<Widget> _children;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   List<Widget> get children {
     if (_children is EqualUnmodifiableListView) return _children;
     // ignore: implicit_dynamic_type
@@ -252,23 +255,23 @@ class _$_RowAttributes implements _RowAttributes {
 
 abstract class _RowAttributes implements RowAttributes {
   const factory _RowAttributes(
-          {final UIXEnumAttributeValue<MainAxisSize> mainAxisSize,
-          final UIXEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
-          final UIXEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
-          @UIXWidgetConverter() required final List<Widget> children}) =
-      _$_RowAttributes;
+      {final FluveraEnumAttributeValue<MainAxisSize> mainAxisSize,
+      final FluveraEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
+      final FluveraEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
+      @FluveraWidgetConverter()
+      required final List<Widget> children}) = _$_RowAttributes;
 
   factory _RowAttributes.fromJson(Map<String, dynamic> json) =
       _$_RowAttributes.fromJson;
 
   @override
-  UIXEnumAttributeValue<MainAxisSize> get mainAxisSize;
+  FluveraEnumAttributeValue<MainAxisSize> get mainAxisSize;
   @override
-  UIXEnumAttributeValue<MainAxisAlignment> get mainAxisAlignment;
+  FluveraEnumAttributeValue<MainAxisAlignment> get mainAxisAlignment;
   @override
-  UIXEnumAttributeValue<CrossAxisAlignment> get crossAxisAlignment;
+  FluveraEnumAttributeValue<CrossAxisAlignment> get crossAxisAlignment;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   List<Widget> get children;
   @override
   @JsonKey(ignore: true)

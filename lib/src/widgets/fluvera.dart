@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-abstract class UIX<T> extends StatelessWidget {
-  const UIX(this.json) : super(key: null);
+abstract class Fluvera<T> extends StatelessWidget {
+  const Fluvera(this.json) : super(key: null);
 
   final Map<String, dynamic> json;
 

@@ -20,9 +20,9 @@ SizedBoxAttributes _$SizedBoxAttributesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SizedBoxAttributes {
-  UIXAttributeValue<num>? get height => throw _privateConstructorUsedError;
-  UIXAttributeValue<num>? get width => throw _privateConstructorUsedError;
-  @UIXWidgetConverter()
+  FluveraAttributeValue<num>? get height => throw _privateConstructorUsedError;
+  FluveraAttributeValue<num>? get width => throw _privateConstructorUsedError;
+  @FluveraWidgetConverter()
   Widget? get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -38,12 +38,12 @@ abstract class $SizedBoxAttributesCopyWith<$Res> {
       _$SizedBoxAttributesCopyWithImpl<$Res, SizedBoxAttributes>;
   @useResult
   $Res call(
-      {UIXAttributeValue<num>? height,
-      UIXAttributeValue<num>? width,
-      @UIXWidgetConverter() Widget? child});
+      {FluveraAttributeValue<num>? height,
+      FluveraAttributeValue<num>? width,
+      @FluveraWidgetConverter() Widget? child});
 
-  $UIXAttributeValueCopyWith<num, $Res>? get height;
-  $UIXAttributeValueCopyWith<num, $Res>? get width;
+  $FluveraAttributeValueCopyWith<num, $Res>? get height;
+  $FluveraAttributeValueCopyWith<num, $Res>? get width;
 }
 
 /// @nodoc
@@ -67,11 +67,11 @@ class _$SizedBoxAttributesCopyWithImpl<$Res, $Val extends SizedBoxAttributes>
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>?,
+              as FluveraAttributeValue<num>?,
       width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>?,
+              as FluveraAttributeValue<num>?,
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
@@ -81,24 +81,24 @@ class _$SizedBoxAttributesCopyWithImpl<$Res, $Val extends SizedBoxAttributes>
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXAttributeValueCopyWith<num, $Res>? get height {
+  $FluveraAttributeValueCopyWith<num, $Res>? get height {
     if (_value.height == null) {
       return null;
     }
 
-    return $UIXAttributeValueCopyWith<num, $Res>(_value.height!, (value) {
+    return $FluveraAttributeValueCopyWith<num, $Res>(_value.height!, (value) {
       return _then(_value.copyWith(height: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXAttributeValueCopyWith<num, $Res>? get width {
+  $FluveraAttributeValueCopyWith<num, $Res>? get width {
     if (_value.width == null) {
       return null;
     }
 
-    return $UIXAttributeValueCopyWith<num, $Res>(_value.width!, (value) {
+    return $FluveraAttributeValueCopyWith<num, $Res>(_value.width!, (value) {
       return _then(_value.copyWith(width: value) as $Val);
     });
   }
@@ -113,14 +113,14 @@ abstract class _$$_SizedBoxAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {UIXAttributeValue<num>? height,
-      UIXAttributeValue<num>? width,
-      @UIXWidgetConverter() Widget? child});
+      {FluveraAttributeValue<num>? height,
+      FluveraAttributeValue<num>? width,
+      @FluveraWidgetConverter() Widget? child});
 
   @override
-  $UIXAttributeValueCopyWith<num, $Res>? get height;
+  $FluveraAttributeValueCopyWith<num, $Res>? get height;
   @override
-  $UIXAttributeValueCopyWith<num, $Res>? get width;
+  $FluveraAttributeValueCopyWith<num, $Res>? get width;
 }
 
 /// @nodoc
@@ -142,11 +142,11 @@ class __$$_SizedBoxAttributesCopyWithImpl<$Res>
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>?,
+              as FluveraAttributeValue<num>?,
       width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>?,
+              as FluveraAttributeValue<num>?,
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
@@ -159,17 +159,17 @@ class __$$_SizedBoxAttributesCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SizedBoxAttributes implements _SizedBoxAttributes {
   const _$_SizedBoxAttributes(
-      {this.height, this.width, @UIXWidgetConverter() this.child});
+      {this.height, this.width, @FluveraWidgetConverter() this.child});
 
   factory _$_SizedBoxAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_SizedBoxAttributesFromJson(json);
 
   @override
-  final UIXAttributeValue<num>? height;
+  final FluveraAttributeValue<num>? height;
   @override
-  final UIXAttributeValue<num>? width;
+  final FluveraAttributeValue<num>? width;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   final Widget? child;
 
   @override
@@ -208,19 +208,19 @@ class _$_SizedBoxAttributes implements _SizedBoxAttributes {
 
 abstract class _SizedBoxAttributes implements SizedBoxAttributes {
   const factory _SizedBoxAttributes(
-      {final UIXAttributeValue<num>? height,
-      final UIXAttributeValue<num>? width,
-      @UIXWidgetConverter() final Widget? child}) = _$_SizedBoxAttributes;
+      {final FluveraAttributeValue<num>? height,
+      final FluveraAttributeValue<num>? width,
+      @FluveraWidgetConverter() final Widget? child}) = _$_SizedBoxAttributes;
 
   factory _SizedBoxAttributes.fromJson(Map<String, dynamic> json) =
       _$_SizedBoxAttributes.fromJson;
 
   @override
-  UIXAttributeValue<num>? get height;
+  FluveraAttributeValue<num>? get height;
   @override
-  UIXAttributeValue<num>? get width;
+  FluveraAttributeValue<num>? get width;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get child;
   @override
   @JsonKey(ignore: true)

@@ -1,11 +1,11 @@
 import 'dart:convert';
 
+import 'package:fluvera/fluvera.dart';
 import 'package:http/http.dart' as http;
-import 'package:uix/uix.dart';
 
-class AppHttp implements UIXHttp {
+class AppHttp implements FluveraHttp {
   @override
-  Future<UIXHttpResponse> get(
+  Future<FluveraHttpResponse> get(
     String url, {
     Map<String, String>? headers,
   }) async {
@@ -14,14 +14,14 @@ class AppHttp implements UIXHttp {
       headers: headers,
     );
 
-    return UIXHttpResponse(
+    return FluveraHttpResponse(
       statusCode: response.statusCode,
       data: json.decode(response.body),
     );
   }
 
   @override
-  Future<UIXHttpResponse> post(
+  Future<FluveraHttpResponse> post(
     String url, {
     Map<String, String>? headers,
     body,
@@ -32,14 +32,14 @@ class AppHttp implements UIXHttp {
       body: body,
     );
 
-    return UIXHttpResponse(
+    return FluveraHttpResponse(
       statusCode: response.statusCode,
       data: json.decode(response.body),
     );
   }
 
   @override
-  Future<UIXHttpResponse> put(
+  Future<FluveraHttpResponse> put(
     String url, {
     Map<String, String>? headers,
     body,
@@ -50,14 +50,14 @@ class AppHttp implements UIXHttp {
       body: body,
     );
 
-    return UIXHttpResponse(
+    return FluveraHttpResponse(
       statusCode: response.statusCode,
       data: json.decode(response.body),
     );
   }
 
   @override
-  Future<UIXHttpResponse> delete(
+  Future<FluveraHttpResponse> delete(
     String url, {
     Map<String, String>? headers,
     body,
@@ -68,7 +68,7 @@ class AppHttp implements UIXHttp {
       body: body,
     );
 
-    return UIXHttpResponse(
+    return FluveraHttpResponse(
       statusCode: response.statusCode,
       data: json.decode(response.body),
     );

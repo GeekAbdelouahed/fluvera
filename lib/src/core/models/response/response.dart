@@ -1,5 +1,5 @@
-base class UIXHttpResponse {
-  const UIXHttpResponse({
+base class FluveraHttpResponse {
+  const FluveraHttpResponse({
     required this.statusCode,
     required this.data,
   });

@@ -10,14 +10,14 @@ _$_SingleChildScrollViewAttributes _$$_SingleChildScrollViewAttributesFromJson(
         Map<String, dynamic> json) =>
     _$_SingleChildScrollViewAttributes(
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
-          json['child'], const UIXWidgetConverter().fromJson),
+          json['child'], const FluveraWidgetConverter().fromJson),
     );
 
 Map<String, dynamic> _$$_SingleChildScrollViewAttributesToJson(
         _$_SingleChildScrollViewAttributes instance) =>
     <String, dynamic>{
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
-          instance.child, const UIXWidgetConverter().toJson),
+          instance.child, const FluveraWidgetConverter().toJson),
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

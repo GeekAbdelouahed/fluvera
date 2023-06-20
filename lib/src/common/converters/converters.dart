@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fluvera/fluvera.dart';
+import 'package:fluvera/src/widgets/fluvera.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uix/src/widgets/uix.dart';
-import 'package:uix/uix.dart';
 
 part 'alignment.dart';
 part 'color.dart';

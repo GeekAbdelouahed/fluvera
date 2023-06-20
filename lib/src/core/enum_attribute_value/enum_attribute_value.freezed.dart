@@ -14,37 +14,39 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-UIXEnumAttributeValue<T> _$UIXEnumAttributeValueFromJson<T extends Enum>(
-    Map<String, dynamic> json, T Function(Object?) fromJsonT) {
-  return _UIXEnumAttributeValue<T>.fromJson(json, fromJsonT);
+FluveraEnumAttributeValue<T>
+    _$FluveraEnumAttributeValueFromJson<T extends Enum>(
+        Map<String, dynamic> json, T Function(Object?) fromJsonT) {
+  return _FluveraEnumAttributeValue<T>.fromJson(json, fromJsonT);
 }
 
 /// @nodoc
-mixin _$UIXEnumAttributeValue<T extends Enum> {
+mixin _$FluveraEnumAttributeValue<T extends Enum> {
   String? get key => throw _privateConstructorUsedError;
   String? get value => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson(Object? Function(T) toJsonT) =>
       throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UIXEnumAttributeValueCopyWith<T, UIXEnumAttributeValue<T>> get copyWith =>
-      throw _privateConstructorUsedError;
+  $FluveraEnumAttributeValueCopyWith<T, FluveraEnumAttributeValue<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UIXEnumAttributeValueCopyWith<T extends Enum, $Res> {
-  factory $UIXEnumAttributeValueCopyWith(UIXEnumAttributeValue<T> value,
-          $Res Function(UIXEnumAttributeValue<T>) then) =
-      _$UIXEnumAttributeValueCopyWithImpl<T, $Res, UIXEnumAttributeValue<T>>;
+abstract class $FluveraEnumAttributeValueCopyWith<T extends Enum, $Res> {
+  factory $FluveraEnumAttributeValueCopyWith(FluveraEnumAttributeValue<T> value,
+          $Res Function(FluveraEnumAttributeValue<T>) then) =
+      _$FluveraEnumAttributeValueCopyWithImpl<T, $Res,
+          FluveraEnumAttributeValue<T>>;
   @useResult
   $Res call({String? key, String? value});
 }
 
 /// @nodoc
-class _$UIXEnumAttributeValueCopyWithImpl<T extends Enum, $Res,
-        $Val extends UIXEnumAttributeValue<T>>
-    implements $UIXEnumAttributeValueCopyWith<T, $Res> {
-  _$UIXEnumAttributeValueCopyWithImpl(this._value, this._then);
+class _$FluveraEnumAttributeValueCopyWithImpl<T extends Enum, $Res,
+        $Val extends FluveraEnumAttributeValue<T>>
+    implements $FluveraEnumAttributeValueCopyWith<T, $Res> {
+  _$FluveraEnumAttributeValueCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -71,23 +73,25 @@ class _$UIXEnumAttributeValueCopyWithImpl<T extends Enum, $Res,
 }
 
 /// @nodoc
-abstract class _$$_UIXEnumAttributeValueCopyWith<T extends Enum, $Res>
-    implements $UIXEnumAttributeValueCopyWith<T, $Res> {
-  factory _$$_UIXEnumAttributeValueCopyWith(_$_UIXEnumAttributeValue<T> value,
-          $Res Function(_$_UIXEnumAttributeValue<T>) then) =
-      __$$_UIXEnumAttributeValueCopyWithImpl<T, $Res>;
+abstract class _$$_FluveraEnumAttributeValueCopyWith<T extends Enum, $Res>
+    implements $FluveraEnumAttributeValueCopyWith<T, $Res> {
+  factory _$$_FluveraEnumAttributeValueCopyWith(
+          _$_FluveraEnumAttributeValue<T> value,
+          $Res Function(_$_FluveraEnumAttributeValue<T>) then) =
+      __$$_FluveraEnumAttributeValueCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call({String? key, String? value});
 }
 
 /// @nodoc
-class __$$_UIXEnumAttributeValueCopyWithImpl<T extends Enum, $Res>
-    extends _$UIXEnumAttributeValueCopyWithImpl<T, $Res,
-        _$_UIXEnumAttributeValue<T>>
-    implements _$$_UIXEnumAttributeValueCopyWith<T, $Res> {
-  __$$_UIXEnumAttributeValueCopyWithImpl(_$_UIXEnumAttributeValue<T> _value,
-      $Res Function(_$_UIXEnumAttributeValue<T>) _then)
+class __$$_FluveraEnumAttributeValueCopyWithImpl<T extends Enum, $Res>
+    extends _$FluveraEnumAttributeValueCopyWithImpl<T, $Res,
+        _$_FluveraEnumAttributeValue<T>>
+    implements _$$_FluveraEnumAttributeValueCopyWith<T, $Res> {
+  __$$_FluveraEnumAttributeValueCopyWithImpl(
+      _$_FluveraEnumAttributeValue<T> _value,
+      $Res Function(_$_FluveraEnumAttributeValue<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -96,7 +100,7 @@ class __$$_UIXEnumAttributeValueCopyWithImpl<T extends Enum, $Res>
     Object? key = freezed,
     Object? value = freezed,
   }) {
-    return _then(_$_UIXEnumAttributeValue<T>(
+    return _then(_$_FluveraEnumAttributeValue<T>(
       key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
@@ -111,13 +115,13 @@ class __$$_UIXEnumAttributeValueCopyWithImpl<T extends Enum, $Res>
 
 /// @nodoc
 @JsonSerializable(genericArgumentFactories: true)
-class _$_UIXEnumAttributeValue<T extends Enum>
-    extends _UIXEnumAttributeValue<T> {
-  const _$_UIXEnumAttributeValue({this.key, this.value}) : super._();
+class _$_FluveraEnumAttributeValue<T extends Enum>
+    extends _FluveraEnumAttributeValue<T> {
+  const _$_FluveraEnumAttributeValue({this.key, this.value}) : super._();
 
-  factory _$_UIXEnumAttributeValue.fromJson(
+  factory _$_FluveraEnumAttributeValue.fromJson(
           Map<String, dynamic> json, T Function(Object?) fromJsonT) =>
-      _$$_UIXEnumAttributeValueFromJson(json, fromJsonT);
+      _$$_FluveraEnumAttributeValueFromJson(json, fromJsonT);
 
   @override
   final String? key;
@@ -126,14 +130,14 @@ class _$_UIXEnumAttributeValue<T extends Enum>
 
   @override
   String toString() {
-    return 'UIXEnumAttributeValue<$T>(key: $key, value: $value)';
+    return 'FluveraEnumAttributeValue<$T>(key: $key, value: $value)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UIXEnumAttributeValue<T> &&
+            other is _$_FluveraEnumAttributeValue<T> &&
             (identical(other.key, key) || other.key == key) &&
             (identical(other.value, value) || other.value == value));
   }
@@ -145,25 +149,26 @@ class _$_UIXEnumAttributeValue<T extends Enum>
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UIXEnumAttributeValueCopyWith<T, _$_UIXEnumAttributeValue<T>>
-      get copyWith => __$$_UIXEnumAttributeValueCopyWithImpl<T,
-          _$_UIXEnumAttributeValue<T>>(this, _$identity);
+  _$$_FluveraEnumAttributeValueCopyWith<T, _$_FluveraEnumAttributeValue<T>>
+      get copyWith => __$$_FluveraEnumAttributeValueCopyWithImpl<T,
+          _$_FluveraEnumAttributeValue<T>>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson(Object? Function(T) toJsonT) {
-    return _$$_UIXEnumAttributeValueToJson<T>(this, toJsonT);
+    return _$$_FluveraEnumAttributeValueToJson<T>(this, toJsonT);
   }
 }
 
-abstract class _UIXEnumAttributeValue<T extends Enum>
-    extends UIXEnumAttributeValue<T> {
-  const factory _UIXEnumAttributeValue(
-      {final String? key, final String? value}) = _$_UIXEnumAttributeValue<T>;
-  const _UIXEnumAttributeValue._() : super._();
+abstract class _FluveraEnumAttributeValue<T extends Enum>
+    extends FluveraEnumAttributeValue<T> {
+  const factory _FluveraEnumAttributeValue(
+      {final String? key,
+      final String? value}) = _$_FluveraEnumAttributeValue<T>;
+  const _FluveraEnumAttributeValue._() : super._();
 
-  factory _UIXEnumAttributeValue.fromJson(
+  factory _FluveraEnumAttributeValue.fromJson(
           Map<String, dynamic> json, T Function(Object?) fromJsonT) =
-      _$_UIXEnumAttributeValue<T>.fromJson;
+      _$_FluveraEnumAttributeValue<T>.fromJson;
 
   @override
   String? get key;
@@ -171,6 +176,6 @@ abstract class _UIXEnumAttributeValue<T extends Enum>
   String? get value;
   @override
   @JsonKey(ignore: true)
-  _$$_UIXEnumAttributeValueCopyWith<T, _$_UIXEnumAttributeValue<T>>
+  _$$_FluveraEnumAttributeValueCopyWith<T, _$_FluveraEnumAttributeValue<T>>
       get copyWith => throw _privateConstructorUsedError;
 }

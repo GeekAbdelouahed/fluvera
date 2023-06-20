@@ -1,4 +1,4 @@
-enum UIXImageSource {
+enum FluveraImageSource {
   network,
   assets,
   file,

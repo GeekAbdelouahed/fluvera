@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:fluvera/src/common/converters/converters.dart';
+import 'package:fluvera/src/core/enum_attribute_value/enum_attribute_value.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uix/src/common/converters/converters.dart';
-import 'package:uix/src/core/enum_attribute_value/enum_attribute_value.dart';
 
 part 'text_style.freezed.dart';
 part 'text_style.g.dart';
 
 @freezed
-class UIXTextStyle with _$UIXTextStyle {
-  const factory UIXTextStyle({
+class FluveraTextStyle with _$FluveraTextStyle {
+  const factory FluveraTextStyle({
     double? fontSize,
-    UIXEnumAttributeValue<TextOverflow>? overflow,
-    @UIXColorConverter() Color? color,
-    @UIXFontWeightConverter() FontWeight? fontWeight,
-  }) = _UIXTextStyle;
+    FluveraEnumAttributeValue<TextOverflow>? overflow,
+    @FluveraColorConverter() Color? color,
+    @FluveraFontWeightConverter() FontWeight? fontWeight,
+  }) = _FluveraTextStyle;
 
-  factory UIXTextStyle.fromJson(Map<String, dynamic> json) =>
-      _$UIXTextStyleFromJson(json);
+  factory FluveraTextStyle.fromJson(Map<String, dynamic> json) =>
+      _$FluveraTextStyleFromJson(json);
 }

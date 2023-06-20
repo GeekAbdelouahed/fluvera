@@ -8,18 +8,18 @@ part of 'attributes.dart';
 
 _$_PaddingAttributes _$$_PaddingAttributesFromJson(Map<String, dynamic> json) =>
     _$_PaddingAttributes(
-      padding: const UIXEdgeInsetsConverter()
+      padding: const FluveraEdgeInsetsConverter()
           .fromJson(json['padding'] as Map<String, dynamic>),
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
-          json['child'], const UIXWidgetConverter().fromJson),
+          json['child'], const FluveraWidgetConverter().fromJson),
     );
 
 Map<String, dynamic> _$$_PaddingAttributesToJson(
         _$_PaddingAttributes instance) =>
     <String, dynamic>{
-      'padding': const UIXEdgeInsetsConverter().toJson(instance.padding),
+      'padding': const FluveraEdgeInsetsConverter().toJson(instance.padding),
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
-          instance.child, const UIXWidgetConverter().toJson),
+          instance.child, const FluveraWidgetConverter().toJson),
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

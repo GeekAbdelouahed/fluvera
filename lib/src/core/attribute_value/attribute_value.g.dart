@@ -6,17 +6,17 @@ part of 'attribute_value.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_UIXAttributeValue<T> _$$_UIXAttributeValueFromJson<T>(
+_$_FluveraAttributeValue<T> _$$_FluveraAttributeValueFromJson<T>(
   Map<String, dynamic> json,
   T Function(Object? json) fromJsonT,
 ) =>
-    _$_UIXAttributeValue<T>(
+    _$_FluveraAttributeValue<T>(
       key: json['key'] as String?,
       value: _$nullableGenericFromJson(json['value'], fromJsonT),
     );
 
-Map<String, dynamic> _$$_UIXAttributeValueToJson<T>(
-  _$_UIXAttributeValue<T> instance,
+Map<String, dynamic> _$$_FluveraAttributeValueToJson<T>(
+  _$_FluveraAttributeValue<T> instance,
   Object? Function(T value) toJsonT,
 ) =>
     <String, dynamic>{

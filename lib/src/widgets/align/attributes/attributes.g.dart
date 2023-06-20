@@ -10,18 +10,18 @@ _$_AlignAttributes _$$_AlignAttributesFromJson(Map<String, dynamic> json) =>
     _$_AlignAttributes(
       alignment: _$JsonConverterFromJson<String, AlignmentGeometry>(
               json['alignment'],
-              const UIXAlignmentGeometryConverter().fromJson) ??
+              const FluveraAlignmentGeometryConverter().fromJson) ??
           AlignmentDirectional.center,
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
-          json['child'], const UIXWidgetConverter().fromJson),
+          json['child'], const FluveraWidgetConverter().fromJson),
     );
 
 Map<String, dynamic> _$$_AlignAttributesToJson(_$_AlignAttributes instance) =>
     <String, dynamic>{
       'alignment': _$JsonConverterToJson<String, AlignmentGeometry>(
-          instance.alignment, const UIXAlignmentGeometryConverter().toJson),
+          instance.alignment, const FluveraAlignmentGeometryConverter().toJson),
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
-          instance.child, const UIXWidgetConverter().toJson),
+          instance.child, const FluveraWidgetConverter().toJson),
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

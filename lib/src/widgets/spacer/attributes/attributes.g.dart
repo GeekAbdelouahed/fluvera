@@ -9,8 +9,8 @@ part of 'attributes.dart';
 _$_SpacerAttributes _$$_SpacerAttributesFromJson(Map<String, dynamic> json) =>
     _$_SpacerAttributes(
       flex: json['flex'] == null
-          ? const UIXAttributeValue<num>(value: 1)
-          : UIXAttributeValue<num>.fromJson(
+          ? const FluveraAttributeValue<num>(value: 1)
+          : FluveraAttributeValue<num>.fromJson(
               json['flex'] as Map<String, dynamic>, (value) => value as num),
     );
 

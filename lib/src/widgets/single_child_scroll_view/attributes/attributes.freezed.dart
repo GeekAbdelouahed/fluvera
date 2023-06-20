@@ -21,7 +21,7 @@ SingleChildScrollViewAttributes _$SingleChildScrollViewAttributesFromJson(
 
 /// @nodoc
 mixin _$SingleChildScrollViewAttributes {
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -38,7 +38,7 @@ abstract class $SingleChildScrollViewAttributesCopyWith<$Res> {
       _$SingleChildScrollViewAttributesCopyWithImpl<$Res,
           SingleChildScrollViewAttributes>;
   @useResult
-  $Res call({@UIXWidgetConverter() Widget? child});
+  $Res call({@FluveraWidgetConverter() Widget? child});
 }
 
 /// @nodoc
@@ -75,7 +75,7 @@ abstract class _$$_SingleChildScrollViewAttributesCopyWith<$Res>
       __$$_SingleChildScrollViewAttributesCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@UIXWidgetConverter() Widget? child});
+  $Res call({@FluveraWidgetConverter() Widget? child});
 }
 
 /// @nodoc
@@ -106,14 +106,15 @@ class __$$_SingleChildScrollViewAttributesCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SingleChildScrollViewAttributes
     implements _SingleChildScrollViewAttributes {
-  const _$_SingleChildScrollViewAttributes({@UIXWidgetConverter() this.child});
+  const _$_SingleChildScrollViewAttributes(
+      {@FluveraWidgetConverter() this.child});
 
   factory _$_SingleChildScrollViewAttributes.fromJson(
           Map<String, dynamic> json) =>
       _$$_SingleChildScrollViewAttributesFromJson(json);
 
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   final Widget? child;
 
   @override
@@ -152,14 +153,14 @@ class _$_SingleChildScrollViewAttributes
 abstract class _SingleChildScrollViewAttributes
     implements SingleChildScrollViewAttributes {
   const factory _SingleChildScrollViewAttributes(
-          {@UIXWidgetConverter() final Widget? child}) =
+          {@FluveraWidgetConverter() final Widget? child}) =
       _$_SingleChildScrollViewAttributes;
 
   factory _SingleChildScrollViewAttributes.fromJson(Map<String, dynamic> json) =
       _$_SingleChildScrollViewAttributes.fromJson;
 
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get child;
   @override
   @JsonKey(ignore: true)

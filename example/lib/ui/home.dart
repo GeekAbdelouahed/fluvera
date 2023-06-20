@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:uix/uix.dart';
+import 'package:fluvera/fluvera.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
           );
         }
 
-        return UIXFactory.build(json.decode(snapshot.data!))!;
+        return FluveraFactory.build(json.decode(snapshot.data!))!;
       },
     );
   }

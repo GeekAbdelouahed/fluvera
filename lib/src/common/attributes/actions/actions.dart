@@ -1,66 +1,67 @@
 import 'package:flutter/material.dart';
+import 'package:fluvera/fluvera.dart';
+import 'package:fluvera/src/common/converters/converters.dart';
+import 'package:fluvera/src/core/provider/provider.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uix/src/common/converters/converters.dart';
-import 'package:uix/uix.dart';
 
 part 'actions.freezed.dart';
 part 'actions.g.dart';
 
 @freezed
-class UIXActions with _$UIXActions {
-  const UIXActions._();
+class FluveraActions with _$FluveraActions {
+  const FluveraActions._();
 
-  const factory UIXActions.pushRoute({
+  const factory FluveraActions.pushRoute({
     required String type,
     @Default(false) bool synchronized,
     required String routeName,
     Map<String, dynamic>? queries,
   }) = PushRouteAction;
 
-  const factory UIXActions.popRoute({
+  const factory FluveraActions.popRoute({
     required String type,
     @Default(false) bool synchronized,
     Map<String, dynamic>? queries,
   }) = PopRouteAction;
 
-  const factory UIXActions.showDialog({
+  const factory FluveraActions.showDialog({
     required String type,
     @Default(false) bool synchronized,
     @Default(true) bool barrierDismissible,
-    @UIXWidgetConverter() required Widget child,
+    @FluveraWidgetConverter() required Widget child,
   }) = ShowDialogAction;
 
-  const factory UIXActions.showBottomSheet({
+  const factory FluveraActions.showBottomSheet({
     required String type,
     @Default(false) bool synchronized,
     bool? enableDrag,
     double? elevation,
-    @UIXColorConverter() Color? backgroundColor,
-    @UIXWidgetConverter() required Widget child,
+    @FluveraColorConverter() Color? backgroundColor,
+    @FluveraWidgetConverter() required Widget child,
   }) = ShowBottomSheetAction;
 
-  const factory UIXActions.showSnackbar({
+  const factory FluveraActions.showSnackbar({
     required String type,
     @Default(false) bool synchronized,
-    @UIXColorConverter() Color? backgroundColor,
-    @UIXWidgetConverter() required Widget child,
+    @FluveraColorConverter() Color? backgroundColor,
+    @FluveraWidgetConverter() required Widget child,
   }) = ShowSnackbarAction;
 
-  const factory UIXActions.updateAttribute({
+  const factory FluveraActions.updateAttribute({
     required String type,
     @Default(false) bool synchronized,
     required String key,
     dynamic value,
   }) = UpdateAttributeAction;
 
-  const factory UIXActions.getHttp({
+  const factory FluveraActions.getHttp({
     required String type,
     @Default(false) bool synchronized,
     required String url,
     Map<String, String>? headers,
   }) = GetHttpAction;
 
-  const factory UIXActions.postHttp({
+  const factory FluveraActions.postHttp({
     required String type,
     @Default(false) bool synchronized,
     required String url,
@@ -68,7 +69,7 @@ class UIXActions with _$UIXActions {
     dynamic body,
   }) = PostHttpAction;
 
-  const factory UIXActions.putHttp({
+  const factory FluveraActions.putHttp({
     required String type,
     @Default(false) bool synchronized,
     required String url,
@@ -76,7 +77,7 @@ class UIXActions with _$UIXActions {
     dynamic body,
   }) = PutHttpAction;
 
-  const factory UIXActions.deleteHttp({
+  const factory FluveraActions.deleteHttp({
     required String type,
     @Default(false) bool synchronized,
     required String url,
@@ -84,38 +85,38 @@ class UIXActions with _$UIXActions {
     dynamic body,
   }) = DeleteHttpAction;
 
-  factory UIXActions.fromJson(Map<String, dynamic> json) =>
-      _$UIXActionsFromJson(json);
+  factory FluveraActions.fromJson(Map<String, dynamic> json) =>
+      _$FluveraActionsFromJson(json);
 
   Future<dynamic>? call(BuildContext context) {
     return map(
       updateAttribute: (action) async {
-        return UIXProvider.of<UIXAttributesNotifier>(context)
+        return FluveraProvider.of<FluveraNotifier>(context)
             ?.value
             .update(action.key, action.value);
       },
       pushRoute: (action) {
-        return UIXProvider.of<UIXNavigator>(context)?.value.pushRoute(
+        return FluveraProvider.of<FluveraNavigator>(context)?.value.pushRoute(
               context,
               action.routeName,
               queries: action.queries,
             );
       },
       popRoute: (action) {
-        return UIXProvider.of<UIXNavigator>(context)?.value.popRoute(
+        return FluveraProvider.of<FluveraNavigator>(context)?.value.popRoute(
               context,
               queries: action.queries,
             );
       },
       showDialog: (action) {
-        return UIXProvider.of<UIXNavigator>(context)?.value.dialog(
+        return FluveraProvider.of<FluveraNavigator>(context)?.value.dialog(
               context,
               barrierDismissible: action.barrierDismissible,
               child: action.child,
             );
       },
       showBottomSheet: (action) {
-        return UIXProvider.of<UIXNavigator>(context)?.value.bottomSheet(
+        return FluveraProvider.of<FluveraNavigator>(context)?.value.bottomSheet(
               context,
               enableDrag: action.enableDrag,
               elevation: action.elevation,
@@ -124,34 +125,34 @@ class UIXActions with _$UIXActions {
             );
       },
       showSnackbar: (action) {
-        return UIXProvider.of<UIXNavigator>(context)?.value.snackbar(
+        return FluveraProvider.of<FluveraNavigator>(context)?.value.snackbar(
               context,
               backgroundColor: action.backgroundColor,
               child: action.child,
             );
       },
       getHttp: (GetHttpAction action) async {
-        return UIXProvider.of<UIXHttp>(context)?.value.get(
+        return FluveraProvider.of<FluveraHttp>(context)?.value.get(
               action.url,
               headers: action.headers,
             );
       },
       postHttp: (PostHttpAction action) {
-        return UIXProvider.of<UIXHttp>(context)?.value.post(
+        return FluveraProvider.of<FluveraHttp>(context)?.value.post(
               action.url,
               headers: action.headers,
               body: action.body,
             );
       },
       putHttp: (PutHttpAction action) {
-        return UIXProvider.of<UIXHttp>(context)?.value.put(
+        return FluveraProvider.of<FluveraHttp>(context)?.value.put(
               action.url,
               headers: action.headers,
               body: action.body,
             );
       },
       deleteHttp: (DeleteHttpAction action) {
-        return UIXProvider.of<UIXHttp>(context)?.value.delete(
+        return FluveraProvider.of<FluveraHttp>(context)?.value.delete(
               action.url,
               headers: action.headers,
               body: action.body,

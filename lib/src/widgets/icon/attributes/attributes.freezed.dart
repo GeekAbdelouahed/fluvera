@@ -20,11 +20,11 @@ IconAttributes _$IconAttributesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$IconAttributes {
-  UIXAttributeValue<String> get code => throw _privateConstructorUsedError;
-  UIXAttributeValue<num>? get size => throw _privateConstructorUsedError;
-  UIXAttributeValue<String> get fontFamily =>
+  FluveraAttributeValue<String> get code => throw _privateConstructorUsedError;
+  FluveraAttributeValue<num>? get size => throw _privateConstructorUsedError;
+  FluveraAttributeValue<String> get fontFamily =>
       throw _privateConstructorUsedError;
-  @UIXColorConverter()
+  @FluveraColorConverter()
   Color? get color => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -40,14 +40,14 @@ abstract class $IconAttributesCopyWith<$Res> {
       _$IconAttributesCopyWithImpl<$Res, IconAttributes>;
   @useResult
   $Res call(
-      {UIXAttributeValue<String> code,
-      UIXAttributeValue<num>? size,
-      UIXAttributeValue<String> fontFamily,
-      @UIXColorConverter() Color? color});
+      {FluveraAttributeValue<String> code,
+      FluveraAttributeValue<num>? size,
+      FluveraAttributeValue<String> fontFamily,
+      @FluveraColorConverter() Color? color});
 
-  $UIXAttributeValueCopyWith<String, $Res> get code;
-  $UIXAttributeValueCopyWith<num, $Res>? get size;
-  $UIXAttributeValueCopyWith<String, $Res> get fontFamily;
+  $FluveraAttributeValueCopyWith<String, $Res> get code;
+  $FluveraAttributeValueCopyWith<num, $Res>? get size;
+  $FluveraAttributeValueCopyWith<String, $Res> get fontFamily;
 }
 
 /// @nodoc
@@ -72,15 +72,15 @@ class _$IconAttributesCopyWithImpl<$Res, $Val extends IconAttributes>
       code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<String>,
+              as FluveraAttributeValue<String>,
       size: freezed == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>?,
+              as FluveraAttributeValue<num>?,
       fontFamily: null == fontFamily
           ? _value.fontFamily
           : fontFamily // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<String>,
+              as FluveraAttributeValue<String>,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -90,28 +90,29 @@ class _$IconAttributesCopyWithImpl<$Res, $Val extends IconAttributes>
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXAttributeValueCopyWith<String, $Res> get code {
-    return $UIXAttributeValueCopyWith<String, $Res>(_value.code, (value) {
+  $FluveraAttributeValueCopyWith<String, $Res> get code {
+    return $FluveraAttributeValueCopyWith<String, $Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXAttributeValueCopyWith<num, $Res>? get size {
+  $FluveraAttributeValueCopyWith<num, $Res>? get size {
     if (_value.size == null) {
       return null;
     }
 
-    return $UIXAttributeValueCopyWith<num, $Res>(_value.size!, (value) {
+    return $FluveraAttributeValueCopyWith<num, $Res>(_value.size!, (value) {
       return _then(_value.copyWith(size: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXAttributeValueCopyWith<String, $Res> get fontFamily {
-    return $UIXAttributeValueCopyWith<String, $Res>(_value.fontFamily, (value) {
+  $FluveraAttributeValueCopyWith<String, $Res> get fontFamily {
+    return $FluveraAttributeValueCopyWith<String, $Res>(_value.fontFamily,
+        (value) {
       return _then(_value.copyWith(fontFamily: value) as $Val);
     });
   }
@@ -126,17 +127,17 @@ abstract class _$$_IconAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {UIXAttributeValue<String> code,
-      UIXAttributeValue<num>? size,
-      UIXAttributeValue<String> fontFamily,
-      @UIXColorConverter() Color? color});
+      {FluveraAttributeValue<String> code,
+      FluveraAttributeValue<num>? size,
+      FluveraAttributeValue<String> fontFamily,
+      @FluveraColorConverter() Color? color});
 
   @override
-  $UIXAttributeValueCopyWith<String, $Res> get code;
+  $FluveraAttributeValueCopyWith<String, $Res> get code;
   @override
-  $UIXAttributeValueCopyWith<num, $Res>? get size;
+  $FluveraAttributeValueCopyWith<num, $Res>? get size;
   @override
-  $UIXAttributeValueCopyWith<String, $Res> get fontFamily;
+  $FluveraAttributeValueCopyWith<String, $Res> get fontFamily;
 }
 
 /// @nodoc
@@ -159,15 +160,15 @@ class __$$_IconAttributesCopyWithImpl<$Res>
       code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<String>,
+              as FluveraAttributeValue<String>,
       size: freezed == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<num>?,
+              as FluveraAttributeValue<num>?,
       fontFamily: null == fontFamily
           ? _value.fontFamily
           : fontFamily // ignore: cast_nullable_to_non_nullable
-              as UIXAttributeValue<String>,
+              as FluveraAttributeValue<String>,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -182,21 +183,22 @@ class _$_IconAttributes implements _IconAttributes {
   const _$_IconAttributes(
       {required this.code,
       this.size,
-      this.fontFamily = const UIXAttributeValue<String>(value: 'MaterialIcons'),
-      @UIXColorConverter() this.color});
+      this.fontFamily =
+          const FluveraAttributeValue<String>(value: 'MaterialIcons'),
+      @FluveraColorConverter() this.color});
 
   factory _$_IconAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_IconAttributesFromJson(json);
 
   @override
-  final UIXAttributeValue<String> code;
+  final FluveraAttributeValue<String> code;
   @override
-  final UIXAttributeValue<num>? size;
+  final FluveraAttributeValue<num>? size;
   @override
   @JsonKey()
-  final UIXAttributeValue<String> fontFamily;
+  final FluveraAttributeValue<String> fontFamily;
   @override
-  @UIXColorConverter()
+  @FluveraColorConverter()
   final Color? color;
 
   @override
@@ -236,22 +238,22 @@ class _$_IconAttributes implements _IconAttributes {
 
 abstract class _IconAttributes implements IconAttributes {
   const factory _IconAttributes(
-      {required final UIXAttributeValue<String> code,
-      final UIXAttributeValue<num>? size,
-      final UIXAttributeValue<String> fontFamily,
-      @UIXColorConverter() final Color? color}) = _$_IconAttributes;
+      {required final FluveraAttributeValue<String> code,
+      final FluveraAttributeValue<num>? size,
+      final FluveraAttributeValue<String> fontFamily,
+      @FluveraColorConverter() final Color? color}) = _$_IconAttributes;
 
   factory _IconAttributes.fromJson(Map<String, dynamic> json) =
       _$_IconAttributes.fromJson;
 
   @override
-  UIXAttributeValue<String> get code;
+  FluveraAttributeValue<String> get code;
   @override
-  UIXAttributeValue<num>? get size;
+  FluveraAttributeValue<num>? get size;
   @override
-  UIXAttributeValue<String> get fontFamily;
+  FluveraAttributeValue<String> get fontFamily;
   @override
-  @UIXColorConverter()
+  @FluveraColorConverter()
   Color? get color;
   @override
   @JsonKey(ignore: true)

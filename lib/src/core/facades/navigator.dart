@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract interface class UIXNavigator {
+abstract interface class FluveraNavigator {
   Future<dynamic> pushRoute(
     BuildContext context,
     String routeName, {

@@ -1,7 +1,8 @@
 part of 'converters.dart';
 
-class UIXEdgeInsetsConverter implements JsonConverter<EdgeInsetsGeometry, Map<String, dynamic>> {
-  const UIXEdgeInsetsConverter();
+class FluveraEdgeInsetsConverter
+    implements JsonConverter<EdgeInsetsGeometry, Map<String, dynamic>> {
+  const FluveraEdgeInsetsConverter();
 
   @override
   EdgeInsetsGeometry fromJson(Map<String, dynamic> json) {

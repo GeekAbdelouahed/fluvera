@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:uix/src/widgets/spacer/attributes/attributes.dart';
-import 'package:uix/src/widgets/uix.dart';
+import 'package:fluvera/src/widgets/fluvera.dart';
+import 'package:fluvera/src/widgets/spacer/attributes/attributes.dart';
 
-class UIXSpacer extends UIX<SpacerAttributes> {
-  const UIXSpacer(Map<String, dynamic> json) : super(json);
+class FluveraSpacer extends Fluvera<SpacerAttributes> {
+  const FluveraSpacer(Map<String, dynamic> json) : super(json);
 
   @override
   SpacerAttributes get attributes => SpacerAttributes.fromJson(json);

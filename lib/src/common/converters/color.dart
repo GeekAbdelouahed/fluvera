@@ -1,7 +1,7 @@
 part of 'converters.dart';
 
-class UIXColorConverter implements JsonConverter<Color, String> {
-  const UIXColorConverter();
+class FluveraColorConverter implements JsonConverter<Color, String> {
+  const FluveraColorConverter();
 
   @override
   Color fromJson(String json) {

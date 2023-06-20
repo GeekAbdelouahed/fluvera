@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:uix/uix.dart';
+import 'package:fluvera/fluvera.dart';
 
-class AppRouter implements UIXNavigator {
+class AppRouter implements FluveraNavigator {
   @override
   Future pushRoute(
     BuildContext context,
@@ -33,12 +33,12 @@ class AppRouter implements UIXNavigator {
       context: context,
       barrierDismissible: barrierDismissible,
       builder: (_) {
-        final provider = UIXProvider.of<UIXAttributesNotifier>(context);
+        final provider = FluveraProvider.of<FluveraNotifier>(context);
         if (provider == null) {
           child;
         }
 
-        return UIXProvider<UIXAttributesNotifier>(
+        return FluveraProvider<FluveraNotifier>(
           value: provider!.value,
           child: child,
         );
@@ -54,7 +54,7 @@ class AppRouter implements UIXNavigator {
     Color? backgroundColor,
     required Widget child,
   }) {
-    final provider = UIXProvider.of<UIXAttributesNotifier>(context);
+    final provider = FluveraProvider.of<FluveraNotifier>(context);
     if (provider == null) {
       child;
     }
@@ -65,7 +65,7 @@ class AppRouter implements UIXNavigator {
       elevation: elevation,
       backgroundColor: backgroundColor,
       builder: (_) {
-        return UIXProvider<UIXAttributesNotifier>(
+        return FluveraProvider<FluveraNotifier>(
           value: provider!.value,
           child: child,
         );

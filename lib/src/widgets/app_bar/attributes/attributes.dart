@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fluvera/src/common/converters/converters.dart';
+import 'package:fluvera/src/core/attribute_value/attribute_value.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uix/src/common/converters/converters.dart';
-import 'package:uix/src/core/attribute_value/attribute_value.dart';
 
 part 'attributes.freezed.dart';
 part 'attributes.g.dart';
@@ -9,9 +9,9 @@ part 'attributes.g.dart';
 @freezed
 class AppBarAttributes with _$AppBarAttributes {
   const factory AppBarAttributes({
-    UIXAttributeValue<bool>? centerTitle,
-    @UIXWidgetConverter() Widget? title,
-    @UIXWidgetConverter() List<Widget>? actions,
+    FluveraAttributeValue<bool>? centerTitle,
+    @FluveraWidgetConverter() Widget? title,
+    @FluveraWidgetConverter() List<Widget>? actions,
   }) = _AppBarAttributes;
 
   factory AppBarAttributes.fromJson(Map<String, dynamic> json) =>

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:uix/src/widgets/row/attributes/attributes.dart';
-import 'package:uix/src/widgets/uix.dart';
+import 'package:fluvera/src/widgets/fluvera.dart';
+import 'package:fluvera/src/widgets/row/attributes/attributes.dart';
 
-class UIXRow extends UIX<RowAttributes> {
-  const UIXRow(Map<String, dynamic> json) : super(json);
+class FluveraRow extends Fluvera<RowAttributes> {
+  const FluveraRow(Map<String, dynamic> json) : super(json);
 
   @override
   RowAttributes get attributes => RowAttributes.fromJson(json);

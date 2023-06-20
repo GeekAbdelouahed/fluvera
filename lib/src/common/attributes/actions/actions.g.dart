@@ -41,7 +41,7 @@ _$ShowDialogAction _$$ShowDialogActionFromJson(Map<String, dynamic> json) =>
       type: json['type'] as String,
       synchronized: json['synchronized'] as bool? ?? false,
       barrierDismissible: json['barrierDismissible'] as bool? ?? true,
-      child: const UIXWidgetConverter()
+      child: const FluveraWidgetConverter()
           .fromJson(json['child'] as Map<String, dynamic>),
     );
 
@@ -50,7 +50,7 @@ Map<String, dynamic> _$$ShowDialogActionToJson(_$ShowDialogAction instance) =>
       'type': instance.type,
       'synchronized': instance.synchronized,
       'barrierDismissible': instance.barrierDismissible,
-      'child': const UIXWidgetConverter().toJson(instance.child),
+      'child': const FluveraWidgetConverter().toJson(instance.child),
     };
 
 _$ShowBottomSheetAction _$$ShowBottomSheetActionFromJson(
@@ -61,8 +61,8 @@ _$ShowBottomSheetAction _$$ShowBottomSheetActionFromJson(
       enableDrag: json['enableDrag'] as bool?,
       elevation: (json['elevation'] as num?)?.toDouble(),
       backgroundColor: _$JsonConverterFromJson<String, Color>(
-          json['backgroundColor'], const UIXColorConverter().fromJson),
-      child: const UIXWidgetConverter()
+          json['backgroundColor'], const FluveraColorConverter().fromJson),
+      child: const FluveraWidgetConverter()
           .fromJson(json['child'] as Map<String, dynamic>),
     );
 
@@ -74,8 +74,8 @@ Map<String, dynamic> _$$ShowBottomSheetActionToJson(
       'enableDrag': instance.enableDrag,
       'elevation': instance.elevation,
       'backgroundColor': _$JsonConverterToJson<String, Color>(
-          instance.backgroundColor, const UIXColorConverter().toJson),
-      'child': const UIXWidgetConverter().toJson(instance.child),
+          instance.backgroundColor, const FluveraColorConverter().toJson),
+      'child': const FluveraWidgetConverter().toJson(instance.child),
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(
@@ -95,8 +95,8 @@ _$ShowSnackbarAction _$$ShowSnackbarActionFromJson(Map<String, dynamic> json) =>
       type: json['type'] as String,
       synchronized: json['synchronized'] as bool? ?? false,
       backgroundColor: _$JsonConverterFromJson<String, Color>(
-          json['backgroundColor'], const UIXColorConverter().fromJson),
-      child: const UIXWidgetConverter()
+          json['backgroundColor'], const FluveraColorConverter().fromJson),
+      child: const FluveraWidgetConverter()
           .fromJson(json['child'] as Map<String, dynamic>),
     );
 
@@ -106,8 +106,8 @@ Map<String, dynamic> _$$ShowSnackbarActionToJson(
       'type': instance.type,
       'synchronized': instance.synchronized,
       'backgroundColor': _$JsonConverterToJson<String, Color>(
-          instance.backgroundColor, const UIXColorConverter().toJson),
-      'child': const UIXWidgetConverter().toJson(instance.child),
+          instance.backgroundColor, const FluveraColorConverter().toJson),
+      'child': const FluveraWidgetConverter().toJson(instance.child),
     };
 
 _$UpdateAttributeAction _$$UpdateAttributeActionFromJson(

@@ -20,9 +20,9 @@ AlignAttributes _$AlignAttributesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AlignAttributes {
-  @UIXAlignmentGeometryConverter()
+  @FluveraAlignmentGeometryConverter()
   AlignmentGeometry? get alignment => throw _privateConstructorUsedError;
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -38,8 +38,8 @@ abstract class $AlignAttributesCopyWith<$Res> {
       _$AlignAttributesCopyWithImpl<$Res, AlignAttributes>;
   @useResult
   $Res call(
-      {@UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-      @UIXWidgetConverter() Widget? child});
+      {@FluveraAlignmentGeometryConverter() AlignmentGeometry? alignment,
+      @FluveraWidgetConverter() Widget? child});
 }
 
 /// @nodoc
@@ -80,8 +80,8 @@ abstract class _$$_AlignAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@UIXAlignmentGeometryConverter() AlignmentGeometry? alignment,
-      @UIXWidgetConverter() Widget? child});
+      {@FluveraAlignmentGeometryConverter() AlignmentGeometry? alignment,
+      @FluveraWidgetConverter() Widget? child});
 }
 
 /// @nodoc
@@ -115,20 +115,19 @@ class __$$_AlignAttributesCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_AlignAttributes implements _AlignAttributes {
   const _$_AlignAttributes(
-      {@UIXAlignmentGeometryConverter()
-          this.alignment = AlignmentDirectional.center,
-      @UIXWidgetConverter()
-          this.child});
+      {@FluveraAlignmentGeometryConverter()
+      this.alignment = AlignmentDirectional.center,
+      @FluveraWidgetConverter() this.child});
 
   factory _$_AlignAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_AlignAttributesFromJson(json);
 
   @override
   @JsonKey()
-  @UIXAlignmentGeometryConverter()
+  @FluveraAlignmentGeometryConverter()
   final AlignmentGeometry? alignment;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   final Widget? child;
 
   @override
@@ -166,17 +165,17 @@ class _$_AlignAttributes implements _AlignAttributes {
 
 abstract class _AlignAttributes implements AlignAttributes {
   const factory _AlignAttributes(
-      {@UIXAlignmentGeometryConverter() final AlignmentGeometry? alignment,
-      @UIXWidgetConverter() final Widget? child}) = _$_AlignAttributes;
+      {@FluveraAlignmentGeometryConverter() final AlignmentGeometry? alignment,
+      @FluveraWidgetConverter() final Widget? child}) = _$_AlignAttributes;
 
   factory _AlignAttributes.fromJson(Map<String, dynamic> json) =
       _$_AlignAttributes.fromJson;
 
   @override
-  @UIXAlignmentGeometryConverter()
+  @FluveraAlignmentGeometryConverter()
   AlignmentGeometry? get alignment;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get child;
   @override
   @JsonKey(ignore: true)

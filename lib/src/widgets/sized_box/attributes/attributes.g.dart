@@ -11,14 +11,14 @@ _$_SizedBoxAttributes _$$_SizedBoxAttributesFromJson(
     _$_SizedBoxAttributes(
       height: json['height'] == null
           ? null
-          : UIXAttributeValue<num>.fromJson(
+          : FluveraAttributeValue<num>.fromJson(
               json['height'] as Map<String, dynamic>, (value) => value as num),
       width: json['width'] == null
           ? null
-          : UIXAttributeValue<num>.fromJson(
+          : FluveraAttributeValue<num>.fromJson(
               json['width'] as Map<String, dynamic>, (value) => value as num),
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
-          json['child'], const UIXWidgetConverter().fromJson),
+          json['child'], const FluveraWidgetConverter().fromJson),
     );
 
 Map<String, dynamic> _$$_SizedBoxAttributesToJson(
@@ -31,7 +31,7 @@ Map<String, dynamic> _$$_SizedBoxAttributesToJson(
         (value) => value,
       ),
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
-          instance.child, const UIXWidgetConverter().toJson),
+          instance.child, const FluveraWidgetConverter().toJson),
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

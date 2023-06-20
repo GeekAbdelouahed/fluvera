@@ -9,13 +9,13 @@ part of 'attributes.dart';
 _$_InkWellAttributes _$$_InkWellAttributesFromJson(Map<String, dynamic> json) =>
     _$_InkWellAttributes(
       onTap: (json['onTap'] as List<dynamic>?)
-          ?.map((e) => UIXActions.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => FluveraActions.fromJson(e as Map<String, dynamic>))
           .toList(),
       onLongPress: (json['onLongPress'] as List<dynamic>?)
-          ?.map((e) => UIXActions.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => FluveraActions.fromJson(e as Map<String, dynamic>))
           .toList(),
       child: _$JsonConverterFromJson<Map<String, dynamic>, Widget>(
-          json['child'], const UIXWidgetConverter().fromJson),
+          json['child'], const FluveraWidgetConverter().fromJson),
     );
 
 Map<String, dynamic> _$$_InkWellAttributesToJson(
@@ -24,7 +24,7 @@ Map<String, dynamic> _$$_InkWellAttributesToJson(
       'onTap': instance.onTap,
       'onLongPress': instance.onLongPress,
       'child': _$JsonConverterToJson<Map<String, dynamic>, Widget>(
-          instance.child, const UIXWidgetConverter().toJson),
+          instance.child, const FluveraWidgetConverter().toJson),
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

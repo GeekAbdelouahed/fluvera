@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:uix/uix.dart';
+import 'package:fluvera/fluvera.dart';
 
 class ItemPage extends StatelessWidget {
   const ItemPage({
@@ -21,7 +21,7 @@ class ItemPage extends StatelessWidget {
             child: CircularProgressIndicator(),
           );
         }
-        return UIXFactory.build(json.decode(snapshot.data!))!;
+        return FluveraFactory.build(json.decode(snapshot.data!))!;
       },
     );
   }

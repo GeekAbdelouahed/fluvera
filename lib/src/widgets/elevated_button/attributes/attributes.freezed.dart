@@ -21,9 +21,9 @@ ElevatedButtonAttributes _$ElevatedButtonAttributesFromJson(
 
 /// @nodoc
 mixin _$ElevatedButtonAttributes {
-  List<UIXActions>? get onPressed => throw _privateConstructorUsedError;
-  List<UIXActions>? get onLongPress => throw _privateConstructorUsedError;
-  @UIXWidgetConverter()
+  List<FluveraActions>? get onPressed => throw _privateConstructorUsedError;
+  List<FluveraActions>? get onLongPress => throw _privateConstructorUsedError;
+  @FluveraWidgetConverter()
   Widget? get child => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -39,9 +39,9 @@ abstract class $ElevatedButtonAttributesCopyWith<$Res> {
       _$ElevatedButtonAttributesCopyWithImpl<$Res, ElevatedButtonAttributes>;
   @useResult
   $Res call(
-      {List<UIXActions>? onPressed,
-      List<UIXActions>? onLongPress,
-      @UIXWidgetConverter() Widget? child});
+      {List<FluveraActions>? onPressed,
+      List<FluveraActions>? onLongPress,
+      @FluveraWidgetConverter() Widget? child});
 }
 
 /// @nodoc
@@ -66,11 +66,11 @@ class _$ElevatedButtonAttributesCopyWithImpl<$Res,
       onPressed: freezed == onPressed
           ? _value.onPressed
           : onPressed // ignore: cast_nullable_to_non_nullable
-              as List<UIXActions>?,
+              as List<FluveraActions>?,
       onLongPress: freezed == onLongPress
           ? _value.onLongPress
           : onLongPress // ignore: cast_nullable_to_non_nullable
-              as List<UIXActions>?,
+              as List<FluveraActions>?,
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
@@ -89,9 +89,9 @@ abstract class _$$_ElevatedButtonAttributesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<UIXActions>? onPressed,
-      List<UIXActions>? onLongPress,
-      @UIXWidgetConverter() Widget? child});
+      {List<FluveraActions>? onPressed,
+      List<FluveraActions>? onLongPress,
+      @FluveraWidgetConverter() Widget? child});
 }
 
 /// @nodoc
@@ -114,11 +114,11 @@ class __$$_ElevatedButtonAttributesCopyWithImpl<$Res>
       onPressed: freezed == onPressed
           ? _value._onPressed
           : onPressed // ignore: cast_nullable_to_non_nullable
-              as List<UIXActions>?,
+              as List<FluveraActions>?,
       onLongPress: freezed == onLongPress
           ? _value._onLongPress
           : onLongPress // ignore: cast_nullable_to_non_nullable
-              as List<UIXActions>?,
+              as List<FluveraActions>?,
       child: freezed == child
           ? _value.child
           : child // ignore: cast_nullable_to_non_nullable
@@ -131,18 +131,18 @@ class __$$_ElevatedButtonAttributesCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElevatedButtonAttributes implements _ElevatedButtonAttributes {
   const _$_ElevatedButtonAttributes(
-      {final List<UIXActions>? onPressed,
-      final List<UIXActions>? onLongPress,
-      @UIXWidgetConverter() this.child})
+      {final List<FluveraActions>? onPressed,
+      final List<FluveraActions>? onLongPress,
+      @FluveraWidgetConverter() this.child})
       : _onPressed = onPressed,
         _onLongPress = onLongPress;
 
   factory _$_ElevatedButtonAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_ElevatedButtonAttributesFromJson(json);
 
-  final List<UIXActions>? _onPressed;
+  final List<FluveraActions>? _onPressed;
   @override
-  List<UIXActions>? get onPressed {
+  List<FluveraActions>? get onPressed {
     final value = _onPressed;
     if (value == null) return null;
     if (_onPressed is EqualUnmodifiableListView) return _onPressed;
@@ -150,9 +150,9 @@ class _$_ElevatedButtonAttributes implements _ElevatedButtonAttributes {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<UIXActions>? _onLongPress;
+  final List<FluveraActions>? _onLongPress;
   @override
-  List<UIXActions>? get onLongPress {
+  List<FluveraActions>? get onLongPress {
     final value = _onLongPress;
     if (value == null) return null;
     if (_onLongPress is EqualUnmodifiableListView) return _onLongPress;
@@ -161,7 +161,7 @@ class _$_ElevatedButtonAttributes implements _ElevatedButtonAttributes {
   }
 
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   final Widget? child;
 
   @override
@@ -206,19 +206,20 @@ class _$_ElevatedButtonAttributes implements _ElevatedButtonAttributes {
 
 abstract class _ElevatedButtonAttributes implements ElevatedButtonAttributes {
   const factory _ElevatedButtonAttributes(
-      {final List<UIXActions>? onPressed,
-      final List<UIXActions>? onLongPress,
-      @UIXWidgetConverter() final Widget? child}) = _$_ElevatedButtonAttributes;
+          {final List<FluveraActions>? onPressed,
+          final List<FluveraActions>? onLongPress,
+          @FluveraWidgetConverter() final Widget? child}) =
+      _$_ElevatedButtonAttributes;
 
   factory _ElevatedButtonAttributes.fromJson(Map<String, dynamic> json) =
       _$_ElevatedButtonAttributes.fromJson;
 
   @override
-  List<UIXActions>? get onPressed;
+  List<FluveraActions>? get onPressed;
   @override
-  List<UIXActions>? get onLongPress;
+  List<FluveraActions>? get onLongPress;
   @override
-  @UIXWidgetConverter()
+  @FluveraWidgetConverter()
   Widget? get child;
   @override
   @JsonKey(ignore: true)

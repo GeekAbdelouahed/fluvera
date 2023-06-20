@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:uix/src/widgets/column/attributes/attributes.dart';
-import 'package:uix/src/widgets/uix.dart';
+import 'package:fluvera/src/widgets/column/attributes/attributes.dart';
+import 'package:fluvera/src/widgets/fluvera.dart';
 
-class UIXColumn extends UIX<ColumnAttributes> {
-  const UIXColumn(Map<String, dynamic> json) : super(json);
+class FluveraColumn extends Fluvera<ColumnAttributes> {
+  const FluveraColumn(Map<String, dynamic> json) : super(json);
 
   @override
   ColumnAttributes get attributes => ColumnAttributes.fromJson(json);

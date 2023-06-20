@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:uix/src/widgets/padding/attributes/attributes.dart';
-import 'package:uix/src/widgets/uix.dart';
+import 'package:fluvera/src/widgets/fluvera.dart';
+import 'package:fluvera/src/widgets/padding/attributes/attributes.dart';
 
-class UIXPadding extends UIX<PaddingAttributes> {
-  const UIXPadding(Map<String, dynamic> json) : super(json);
+class FluveraPadding extends Fluvera<PaddingAttributes> {
+  const FluveraPadding(Map<String, dynamic> json) : super(json);
 
   @override
   PaddingAttributes get attributes => PaddingAttributes.fromJson(json);

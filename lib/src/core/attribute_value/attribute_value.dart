@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:fluvera/src/core/provider/provider.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uix/src/core/provider/uix_provider.dart';
 
 part 'attribute_value.freezed.dart';
 part 'attribute_value.g.dart';
 
 @Freezed(genericArgumentFactories: true)
-class UIXAttributeValue<T> with _$UIXAttributeValue<T> {
-  const UIXAttributeValue._();
+class FluveraAttributeValue<T> with _$FluveraAttributeValue<T> {
+  const FluveraAttributeValue._();
 
-  const factory UIXAttributeValue({
+  const factory FluveraAttributeValue({
     String? key,
     T? value,
-  }) = _UIXAttributeValue;
+  }) = _FluveraAttributeValue;
 
-  factory UIXAttributeValue.fromJson(
+  factory FluveraAttributeValue.fromJson(
           Map<String, dynamic> json, T Function(Object?) fromJsonT) =>
-      _$UIXAttributeValueFromJson(json, fromJsonT);
+      _$FluveraAttributeValueFromJson(json, fromJsonT);
 
   // Temporary fix for genericArgumentFactories
   @override
@@ -28,8 +28,8 @@ class UIXAttributeValue<T> with _$UIXAttributeValue<T> {
       return value as T;
     }
 
-    final UIXAttributesNotifier? notifier =
-        UIXProvider.of<UIXAttributesNotifier>(context)?.value;
+    final FluveraNotifier? notifier =
+        FluveraProvider.of<FluveraNotifier>(context)?.value;
 
     if (notifier == null) {
       throw Exception('$key key not found!');

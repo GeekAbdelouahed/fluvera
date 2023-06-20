@@ -14,45 +14,45 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-UIXTextStyle _$UIXTextStyleFromJson(Map<String, dynamic> json) {
-  return _UIXTextStyle.fromJson(json);
+FluveraTextStyle _$FluveraTextStyleFromJson(Map<String, dynamic> json) {
+  return _FluveraTextStyle.fromJson(json);
 }
 
 /// @nodoc
-mixin _$UIXTextStyle {
+mixin _$FluveraTextStyle {
   double? get fontSize => throw _privateConstructorUsedError;
-  UIXEnumAttributeValue<TextOverflow>? get overflow =>
+  FluveraEnumAttributeValue<TextOverflow>? get overflow =>
       throw _privateConstructorUsedError;
-  @UIXColorConverter()
+  @FluveraColorConverter()
   Color? get color => throw _privateConstructorUsedError;
-  @UIXFontWeightConverter()
+  @FluveraFontWeightConverter()
   FontWeight? get fontWeight => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UIXTextStyleCopyWith<UIXTextStyle> get copyWith =>
+  $FluveraTextStyleCopyWith<FluveraTextStyle> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UIXTextStyleCopyWith<$Res> {
-  factory $UIXTextStyleCopyWith(
-          UIXTextStyle value, $Res Function(UIXTextStyle) then) =
-      _$UIXTextStyleCopyWithImpl<$Res, UIXTextStyle>;
+abstract class $FluveraTextStyleCopyWith<$Res> {
+  factory $FluveraTextStyleCopyWith(
+          FluveraTextStyle value, $Res Function(FluveraTextStyle) then) =
+      _$FluveraTextStyleCopyWithImpl<$Res, FluveraTextStyle>;
   @useResult
   $Res call(
       {double? fontSize,
-      UIXEnumAttributeValue<TextOverflow>? overflow,
-      @UIXColorConverter() Color? color,
-      @UIXFontWeightConverter() FontWeight? fontWeight});
+      FluveraEnumAttributeValue<TextOverflow>? overflow,
+      @FluveraColorConverter() Color? color,
+      @FluveraFontWeightConverter() FontWeight? fontWeight});
 
-  $UIXEnumAttributeValueCopyWith<TextOverflow, $Res>? get overflow;
+  $FluveraEnumAttributeValueCopyWith<TextOverflow, $Res>? get overflow;
 }
 
 /// @nodoc
-class _$UIXTextStyleCopyWithImpl<$Res, $Val extends UIXTextStyle>
-    implements $UIXTextStyleCopyWith<$Res> {
-  _$UIXTextStyleCopyWithImpl(this._value, this._then);
+class _$FluveraTextStyleCopyWithImpl<$Res, $Val extends FluveraTextStyle>
+    implements $FluveraTextStyleCopyWith<$Res> {
+  _$FluveraTextStyleCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -75,7 +75,7 @@ class _$UIXTextStyleCopyWithImpl<$Res, $Val extends UIXTextStyle>
       overflow: freezed == overflow
           ? _value.overflow
           : overflow // ignore: cast_nullable_to_non_nullable
-              as UIXEnumAttributeValue<TextOverflow>?,
+              as FluveraEnumAttributeValue<TextOverflow>?,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -89,42 +89,42 @@ class _$UIXTextStyleCopyWithImpl<$Res, $Val extends UIXTextStyle>
 
   @override
   @pragma('vm:prefer-inline')
-  $UIXEnumAttributeValueCopyWith<TextOverflow, $Res>? get overflow {
+  $FluveraEnumAttributeValueCopyWith<TextOverflow, $Res>? get overflow {
     if (_value.overflow == null) {
       return null;
     }
 
-    return $UIXEnumAttributeValueCopyWith<TextOverflow, $Res>(_value.overflow!,
-        (value) {
+    return $FluveraEnumAttributeValueCopyWith<TextOverflow, $Res>(
+        _value.overflow!, (value) {
       return _then(_value.copyWith(overflow: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_UIXTextStyleCopyWith<$Res>
-    implements $UIXTextStyleCopyWith<$Res> {
-  factory _$$_UIXTextStyleCopyWith(
-          _$_UIXTextStyle value, $Res Function(_$_UIXTextStyle) then) =
-      __$$_UIXTextStyleCopyWithImpl<$Res>;
+abstract class _$$_FluveraTextStyleCopyWith<$Res>
+    implements $FluveraTextStyleCopyWith<$Res> {
+  factory _$$_FluveraTextStyleCopyWith(
+          _$_FluveraTextStyle value, $Res Function(_$_FluveraTextStyle) then) =
+      __$$_FluveraTextStyleCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {double? fontSize,
-      UIXEnumAttributeValue<TextOverflow>? overflow,
-      @UIXColorConverter() Color? color,
-      @UIXFontWeightConverter() FontWeight? fontWeight});
+      FluveraEnumAttributeValue<TextOverflow>? overflow,
+      @FluveraColorConverter() Color? color,
+      @FluveraFontWeightConverter() FontWeight? fontWeight});
 
   @override
-  $UIXEnumAttributeValueCopyWith<TextOverflow, $Res>? get overflow;
+  $FluveraEnumAttributeValueCopyWith<TextOverflow, $Res>? get overflow;
 }
 
 /// @nodoc
-class __$$_UIXTextStyleCopyWithImpl<$Res>
-    extends _$UIXTextStyleCopyWithImpl<$Res, _$_UIXTextStyle>
-    implements _$$_UIXTextStyleCopyWith<$Res> {
-  __$$_UIXTextStyleCopyWithImpl(
-      _$_UIXTextStyle _value, $Res Function(_$_UIXTextStyle) _then)
+class __$$_FluveraTextStyleCopyWithImpl<$Res>
+    extends _$FluveraTextStyleCopyWithImpl<$Res, _$_FluveraTextStyle>
+    implements _$$_FluveraTextStyleCopyWith<$Res> {
+  __$$_FluveraTextStyleCopyWithImpl(
+      _$_FluveraTextStyle _value, $Res Function(_$_FluveraTextStyle) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -135,7 +135,7 @@ class __$$_UIXTextStyleCopyWithImpl<$Res>
     Object? color = freezed,
     Object? fontWeight = freezed,
   }) {
-    return _then(_$_UIXTextStyle(
+    return _then(_$_FluveraTextStyle(
       fontSize: freezed == fontSize
           ? _value.fontSize
           : fontSize // ignore: cast_nullable_to_non_nullable
@@ -143,7 +143,7 @@ class __$$_UIXTextStyleCopyWithImpl<$Res>
       overflow: freezed == overflow
           ? _value.overflow
           : overflow // ignore: cast_nullable_to_non_nullable
-              as UIXEnumAttributeValue<TextOverflow>?,
+              as FluveraEnumAttributeValue<TextOverflow>?,
       color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -158,37 +158,37 @@ class __$$_UIXTextStyleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_UIXTextStyle implements _UIXTextStyle {
-  const _$_UIXTextStyle(
+class _$_FluveraTextStyle implements _FluveraTextStyle {
+  const _$_FluveraTextStyle(
       {this.fontSize,
       this.overflow,
-      @UIXColorConverter() this.color,
-      @UIXFontWeightConverter() this.fontWeight});
+      @FluveraColorConverter() this.color,
+      @FluveraFontWeightConverter() this.fontWeight});
 
-  factory _$_UIXTextStyle.fromJson(Map<String, dynamic> json) =>
-      _$$_UIXTextStyleFromJson(json);
+  factory _$_FluveraTextStyle.fromJson(Map<String, dynamic> json) =>
+      _$$_FluveraTextStyleFromJson(json);
 
   @override
   final double? fontSize;
   @override
-  final UIXEnumAttributeValue<TextOverflow>? overflow;
+  final FluveraEnumAttributeValue<TextOverflow>? overflow;
   @override
-  @UIXColorConverter()
+  @FluveraColorConverter()
   final Color? color;
   @override
-  @UIXFontWeightConverter()
+  @FluveraFontWeightConverter()
   final FontWeight? fontWeight;
 
   @override
   String toString() {
-    return 'UIXTextStyle(fontSize: $fontSize, overflow: $overflow, color: $color, fontWeight: $fontWeight)';
+    return 'FluveraTextStyle(fontSize: $fontSize, overflow: $overflow, color: $color, fontWeight: $fontWeight)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UIXTextStyle &&
+            other is _$_FluveraTextStyle &&
             (identical(other.fontSize, fontSize) ||
                 other.fontSize == fontSize) &&
             (identical(other.overflow, overflow) ||
@@ -206,40 +206,40 @@ class _$_UIXTextStyle implements _UIXTextStyle {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UIXTextStyleCopyWith<_$_UIXTextStyle> get copyWith =>
-      __$$_UIXTextStyleCopyWithImpl<_$_UIXTextStyle>(this, _$identity);
+  _$$_FluveraTextStyleCopyWith<_$_FluveraTextStyle> get copyWith =>
+      __$$_FluveraTextStyleCopyWithImpl<_$_FluveraTextStyle>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UIXTextStyleToJson(
+    return _$$_FluveraTextStyleToJson(
       this,
     );
   }
 }
 
-abstract class _UIXTextStyle implements UIXTextStyle {
-  const factory _UIXTextStyle(
+abstract class _FluveraTextStyle implements FluveraTextStyle {
+  const factory _FluveraTextStyle(
           {final double? fontSize,
-          final UIXEnumAttributeValue<TextOverflow>? overflow,
-          @UIXColorConverter() final Color? color,
-          @UIXFontWeightConverter() final FontWeight? fontWeight}) =
-      _$_UIXTextStyle;
+          final FluveraEnumAttributeValue<TextOverflow>? overflow,
+          @FluveraColorConverter() final Color? color,
+          @FluveraFontWeightConverter() final FontWeight? fontWeight}) =
+      _$_FluveraTextStyle;
 
-  factory _UIXTextStyle.fromJson(Map<String, dynamic> json) =
-      _$_UIXTextStyle.fromJson;
+  factory _FluveraTextStyle.fromJson(Map<String, dynamic> json) =
+      _$_FluveraTextStyle.fromJson;
 
   @override
   double? get fontSize;
   @override
-  UIXEnumAttributeValue<TextOverflow>? get overflow;
+  FluveraEnumAttributeValue<TextOverflow>? get overflow;
   @override
-  @UIXColorConverter()
+  @FluveraColorConverter()
   Color? get color;
   @override
-  @UIXFontWeightConverter()
+  @FluveraFontWeightConverter()
   FontWeight? get fontWeight;
   @override
   @JsonKey(ignore: true)
-  _$$_UIXTextStyleCopyWith<_$_UIXTextStyle> get copyWith =>
+  _$$_FluveraTextStyleCopyWith<_$_FluveraTextStyle> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -14,37 +14,37 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-UIXAttributeValue<T> _$UIXAttributeValueFromJson<T>(
+FluveraAttributeValue<T> _$FluveraAttributeValueFromJson<T>(
     Map<String, dynamic> json, T Function(Object?) fromJsonT) {
-  return _UIXAttributeValue<T>.fromJson(json, fromJsonT);
+  return _FluveraAttributeValue<T>.fromJson(json, fromJsonT);
 }
 
 /// @nodoc
-mixin _$UIXAttributeValue<T> {
+mixin _$FluveraAttributeValue<T> {
   String? get key => throw _privateConstructorUsedError;
   T? get value => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson(Object? Function(T) toJsonT) =>
       throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UIXAttributeValueCopyWith<T, UIXAttributeValue<T>> get copyWith =>
+  $FluveraAttributeValueCopyWith<T, FluveraAttributeValue<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UIXAttributeValueCopyWith<T, $Res> {
-  factory $UIXAttributeValueCopyWith(UIXAttributeValue<T> value,
-          $Res Function(UIXAttributeValue<T>) then) =
-      _$UIXAttributeValueCopyWithImpl<T, $Res, UIXAttributeValue<T>>;
+abstract class $FluveraAttributeValueCopyWith<T, $Res> {
+  factory $FluveraAttributeValueCopyWith(FluveraAttributeValue<T> value,
+          $Res Function(FluveraAttributeValue<T>) then) =
+      _$FluveraAttributeValueCopyWithImpl<T, $Res, FluveraAttributeValue<T>>;
   @useResult
   $Res call({String? key, T? value});
 }
 
 /// @nodoc
-class _$UIXAttributeValueCopyWithImpl<T, $Res,
-        $Val extends UIXAttributeValue<T>>
-    implements $UIXAttributeValueCopyWith<T, $Res> {
-  _$UIXAttributeValueCopyWithImpl(this._value, this._then);
+class _$FluveraAttributeValueCopyWithImpl<T, $Res,
+        $Val extends FluveraAttributeValue<T>>
+    implements $FluveraAttributeValueCopyWith<T, $Res> {
+  _$FluveraAttributeValueCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -71,22 +71,23 @@ class _$UIXAttributeValueCopyWithImpl<T, $Res,
 }
 
 /// @nodoc
-abstract class _$$_UIXAttributeValueCopyWith<T, $Res>
-    implements $UIXAttributeValueCopyWith<T, $Res> {
-  factory _$$_UIXAttributeValueCopyWith(_$_UIXAttributeValue<T> value,
-          $Res Function(_$_UIXAttributeValue<T>) then) =
-      __$$_UIXAttributeValueCopyWithImpl<T, $Res>;
+abstract class _$$_FluveraAttributeValueCopyWith<T, $Res>
+    implements $FluveraAttributeValueCopyWith<T, $Res> {
+  factory _$$_FluveraAttributeValueCopyWith(_$_FluveraAttributeValue<T> value,
+          $Res Function(_$_FluveraAttributeValue<T>) then) =
+      __$$_FluveraAttributeValueCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call({String? key, T? value});
 }
 
 /// @nodoc
-class __$$_UIXAttributeValueCopyWithImpl<T, $Res>
-    extends _$UIXAttributeValueCopyWithImpl<T, $Res, _$_UIXAttributeValue<T>>
-    implements _$$_UIXAttributeValueCopyWith<T, $Res> {
-  __$$_UIXAttributeValueCopyWithImpl(_$_UIXAttributeValue<T> _value,
-      $Res Function(_$_UIXAttributeValue<T>) _then)
+class __$$_FluveraAttributeValueCopyWithImpl<T, $Res>
+    extends _$FluveraAttributeValueCopyWithImpl<T, $Res,
+        _$_FluveraAttributeValue<T>>
+    implements _$$_FluveraAttributeValueCopyWith<T, $Res> {
+  __$$_FluveraAttributeValueCopyWithImpl(_$_FluveraAttributeValue<T> _value,
+      $Res Function(_$_FluveraAttributeValue<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -95,7 +96,7 @@ class __$$_UIXAttributeValueCopyWithImpl<T, $Res>
     Object? key = freezed,
     Object? value = freezed,
   }) {
-    return _then(_$_UIXAttributeValue<T>(
+    return _then(_$_FluveraAttributeValue<T>(
       key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
@@ -110,12 +111,12 @@ class __$$_UIXAttributeValueCopyWithImpl<T, $Res>
 
 /// @nodoc
 @JsonSerializable(genericArgumentFactories: true)
-class _$_UIXAttributeValue<T> extends _UIXAttributeValue<T> {
-  const _$_UIXAttributeValue({this.key, this.value}) : super._();
+class _$_FluveraAttributeValue<T> extends _FluveraAttributeValue<T> {
+  const _$_FluveraAttributeValue({this.key, this.value}) : super._();
 
-  factory _$_UIXAttributeValue.fromJson(
+  factory _$_FluveraAttributeValue.fromJson(
           Map<String, dynamic> json, T Function(Object?) fromJsonT) =>
-      _$$_UIXAttributeValueFromJson(json, fromJsonT);
+      _$$_FluveraAttributeValueFromJson(json, fromJsonT);
 
   @override
   final String? key;
@@ -124,14 +125,14 @@ class _$_UIXAttributeValue<T> extends _UIXAttributeValue<T> {
 
   @override
   String toString() {
-    return 'UIXAttributeValue<$T>(key: $key, value: $value)';
+    return 'FluveraAttributeValue<$T>(key: $key, value: $value)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UIXAttributeValue<T> &&
+            other is _$_FluveraAttributeValue<T> &&
             (identical(other.key, key) || other.key == key) &&
             const DeepCollectionEquality().equals(other.value, value));
   }
@@ -144,24 +145,24 @@ class _$_UIXAttributeValue<T> extends _UIXAttributeValue<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UIXAttributeValueCopyWith<T, _$_UIXAttributeValue<T>> get copyWith =>
-      __$$_UIXAttributeValueCopyWithImpl<T, _$_UIXAttributeValue<T>>(
-          this, _$identity);
+  _$$_FluveraAttributeValueCopyWith<T, _$_FluveraAttributeValue<T>>
+      get copyWith => __$$_FluveraAttributeValueCopyWithImpl<T,
+          _$_FluveraAttributeValue<T>>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson(Object? Function(T) toJsonT) {
-    return _$$_UIXAttributeValueToJson<T>(this, toJsonT);
+    return _$$_FluveraAttributeValueToJson<T>(this, toJsonT);
   }
 }
 
-abstract class _UIXAttributeValue<T> extends UIXAttributeValue<T> {
-  const factory _UIXAttributeValue({final String? key, final T? value}) =
-      _$_UIXAttributeValue<T>;
-  const _UIXAttributeValue._() : super._();
+abstract class _FluveraAttributeValue<T> extends FluveraAttributeValue<T> {
+  const factory _FluveraAttributeValue({final String? key, final T? value}) =
+      _$_FluveraAttributeValue<T>;
+  const _FluveraAttributeValue._() : super._();
 
-  factory _UIXAttributeValue.fromJson(
+  factory _FluveraAttributeValue.fromJson(
           Map<String, dynamic> json, T Function(Object?) fromJsonT) =
-      _$_UIXAttributeValue<T>.fromJson;
+      _$_FluveraAttributeValue<T>.fromJson;
 
   @override
   String? get key;
@@ -169,6 +170,6 @@ abstract class _UIXAttributeValue<T> extends UIXAttributeValue<T> {
   T? get value;
   @override
   @JsonKey(ignore: true)
-  _$$_UIXAttributeValueCopyWith<T, _$_UIXAttributeValue<T>> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_FluveraAttributeValueCopyWith<T, _$_FluveraAttributeValue<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
