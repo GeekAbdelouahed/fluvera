@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
           );
         }
 
-        return FluveraFactory.build(json.decode(snapshot.data!))!;
+        return FluveraFactory.build(json.decode(snapshot.data!));
       },
     );
   }

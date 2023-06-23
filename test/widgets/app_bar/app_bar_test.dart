@@ -15,7 +15,7 @@ void main() {
           },
         }
       };
-      widget = FluveraFactory.build(json)!;
+      widget = FluveraFactory.build(json);
     },
   );
   group(

@@ -21,7 +21,7 @@ class ItemPage extends StatelessWidget {
             child: CircularProgressIndicator(),
           );
         }
-        return FluveraFactory.build(json.decode(snapshot.data!))!;
+        return FluveraFactory.build(json.decode(snapshot.data!));
       },
     );
   }

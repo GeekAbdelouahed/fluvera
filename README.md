@@ -1,6 +1,6 @@
 # Fluvera
 
-Fluvera is a powerful Flutter package designed to simplify the process of building user interfaces (UIs) based on JSON server responses. It provides an intuitive and efficient way to transform server data into dynamic and visually appealing UI components.
+Fluvera is a Flutter package designed to simplify the process of building user interfaces (UIs) based on JSON server responses. It provides an intuitive and efficient way to transform server data into dynamic and visually appealing UI components.
 
 ## Getting Started
 
@@ -32,6 +32,18 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     const Map<String, dynamic> jsonContent = {
       'type': 'Scaffold',
+      "appBar": {
+        "type": "AppBar",
+        "centerTitle": {
+          "value": true
+        },
+        "title": {
+          "type": "Text",
+          "text": {
+            "value": "Fluvera"
+          }
+        },
+      },
       'body': {
         'type': 'Center',
         'child': {
@@ -42,7 +54,7 @@ class HomePage extends StatelessWidget {
         },
       }
     };
-    return FluveraFactory.build(jsonContent)!;
+    return FluveraFactory.build(jsonContent);
   }
 }
 ```

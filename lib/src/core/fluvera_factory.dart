@@ -18,12 +18,12 @@ import 'package:fluvera/src/widgets/sized_box/sized_box.dart';
 import 'package:fluvera/src/widgets/spacer/spacer.dart';
 import 'package:fluvera/src/widgets/text/text.dart';
 
-base class FluveraFactory {
+final class FluveraFactory {
   const FluveraFactory._();
 
-  static Widget? build(Map<String, dynamic>? json) {
+  static Widget build(Map<String, dynamic>? json) {
     if (json == null) {
-      return null;
+      return const SizedBox();
     }
 
     return switch (json['type']) {
@@ -45,7 +45,7 @@ base class FluveraFactory {
       'SizedBox' => FluveraSizedBox(json),
       'Space' => FluveraSpacer(json),
       'Text' => FluveraText(json),
-      _ => null,
+      _ => const SizedBox(),
     };
   }
 }

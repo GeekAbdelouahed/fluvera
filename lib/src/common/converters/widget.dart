@@ -6,7 +6,7 @@ class FluveraWidgetConverter
 
   @override
   Widget fromJson(Map<String, dynamic> json) {
-    return FluveraFactory.build(json)!;
+    return FluveraFactory.build(json);
   }
 
   @override
