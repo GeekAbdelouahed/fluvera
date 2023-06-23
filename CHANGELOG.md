@@ -1,3 +1,6 @@
+## 0.0.2+2
+
+* Update FluveraFactory
 ## 0.0.2+1
 
 * Fix broken link
