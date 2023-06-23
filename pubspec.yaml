@@ -1,8 +1,7 @@
 name: fluvera
 description: Fluvera is a powerful Flutter package designed to simplify the process of building user interfaces (UIs) based on JSON server responses. It provides an intuitive and efficient way to transform server data into dynamic and visually appealing UI components.
-version: 0.0.2
-homepage: https://github.com/GeekAbdelouahed/fluvera
-repository: https://github.com/GeekAbdelouahed/fluvera.git
+version: 0.0.2+1
+repository: https://github.com/GeekAbdelouahed/fluvera
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
