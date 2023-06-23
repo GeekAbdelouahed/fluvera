@@ -1,7 +1,10 @@
+## 0.0.1+2
+
+* Update documentation
 ## 0.0.1+1
 
-* TODO: Describe initial release.
+* Minor updates
 
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Initial version
