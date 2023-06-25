@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluvera/src/widgets/fluvera.dart';
 import 'package:fluvera/src/widgets/ink_well/attributes/attributes.dart';
 
-class FluveraInkWell extends Fluvera<InkWellAttributes> {
+class FluveraInkWell extends FluveraWidget<InkWellAttributes> {
   const FluveraInkWell(Map<String, dynamic> json) : super(json);
 
   @override

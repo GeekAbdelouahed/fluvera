@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluvera/src/widgets/fluvera.dart';
 import 'package:fluvera/src/widgets/sized_box/attributes/attributes.dart';
 
-class FluveraSizedBox extends Fluvera<SizedBoxAttributes> {
+class FluveraSizedBox extends FluveraWidget<SizedBoxAttributes> {
   const FluveraSizedBox(Map<String, dynamic> json) : super(json);
 
   @override

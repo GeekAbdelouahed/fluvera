@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluvera/src/widgets/column/attributes/attributes.dart';
 import 'package:fluvera/src/widgets/fluvera.dart';
 
-class FluveraColumn extends Fluvera<ColumnAttributes> {
+class FluveraColumn extends FluveraWidget<ColumnAttributes> {
   const FluveraColumn(Map<String, dynamic> json) : super(json);
 
   @override

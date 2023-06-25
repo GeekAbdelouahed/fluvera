@@ -11,6 +11,6 @@ class FluveraWidgetConverter
 
   @override
   Map<String, dynamic> toJson(Widget data) {
-    return (data as Fluvera).json;
+    return (data as FluveraWidget).json;
   }
 }

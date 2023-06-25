@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluvera/src/widgets/app_bar/attributes/attributes.dart';
 import 'package:fluvera/src/widgets/fluvera.dart';
 
-class FluveraAppBar extends Fluvera<AppBarAttributes> {
+class FluveraAppBar extends FluveraWidget<AppBarAttributes> {
   const FluveraAppBar(Map<String, dynamic> json) : super(json);
 
   @override

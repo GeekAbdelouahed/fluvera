@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluvera/src/widgets/expanded/attributes/attributes.dart';
 import 'package:fluvera/src/widgets/fluvera.dart';
 
-class FluveraExpanded extends Fluvera<ExpandedAttributes> {
+class FluveraExpanded extends FluveraWidget<ExpandedAttributes> {
   const FluveraExpanded(Map<String, dynamic> json) : super(json);
 
   @override

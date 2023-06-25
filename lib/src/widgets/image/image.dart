@@ -5,7 +5,7 @@ import 'package:fluvera/src/common/enums/enums.dart';
 import 'package:fluvera/src/widgets/fluvera.dart';
 import 'package:fluvera/src/widgets/image/attributes/attributes.dart';
 
-class FluveraImage extends Fluvera<ImageAttributes> {
+class FluveraImage extends FluveraWidget<ImageAttributes> {
   const FluveraImage(Map<String, dynamic> json) : super(json);
 
   @override

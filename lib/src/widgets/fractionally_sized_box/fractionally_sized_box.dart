@@ -3,7 +3,7 @@ import 'package:fluvera/src/widgets/fluvera.dart';
 import 'package:fluvera/src/widgets/fractionally_sized_box/attributes/attributes.dart';
 
 class FluveraFractionallySizedBox
-    extends Fluvera<FractionallySizedBoxAttributes> {
+    extends FluveraWidget<FractionallySizedBoxAttributes> {
   const FluveraFractionallySizedBox(Map<String, dynamic> json) : super(json);
 
   @override

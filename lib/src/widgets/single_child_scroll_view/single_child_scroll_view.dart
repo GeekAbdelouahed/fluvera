@@ -3,7 +3,7 @@ import 'package:fluvera/src/widgets/fluvera.dart';
 import 'package:fluvera/src/widgets/single_child_scroll_view/attributes/attributes.dart';
 
 class FluveraSingleChildScrollView
-    extends Fluvera<SingleChildScrollViewAttributes> {
+    extends FluveraWidget<SingleChildScrollViewAttributes> {
   const FluveraSingleChildScrollView(Map<String, dynamic> json) : super(json);
 
   @override

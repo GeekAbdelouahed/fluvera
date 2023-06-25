@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluvera/src/widgets/fluvera.dart';
 import 'package:fluvera/src/widgets/padding/attributes/attributes.dart';
 
-class FluveraPadding extends Fluvera<PaddingAttributes> {
+class FluveraPadding extends FluveraWidget<PaddingAttributes> {
   const FluveraPadding(Map<String, dynamic> json) : super(json);
 
   @override

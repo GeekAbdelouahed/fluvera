@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluvera/src/widgets/align/attributes/attributes.dart';
 import 'package:fluvera/src/widgets/fluvera.dart';
 
-class FluveraAlign extends Fluvera<AlignAttributes> {
+class FluveraAlign extends FluveraWidget<AlignAttributes> {
   const FluveraAlign(Map<String, dynamic> json) : super(json);
 
   @override

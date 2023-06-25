@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluvera/src/widgets/fluvera.dart';
 import 'package:fluvera/src/widgets/scaffold/attributes/attributes.dart';
 
-class FluveraScaffold extends Fluvera<ScaffoldAttributes> {
+class FluveraScaffold extends FluveraWidget<ScaffoldAttributes> {
   const FluveraScaffold(Map<String, dynamic> json) : super(json);
 
   @override

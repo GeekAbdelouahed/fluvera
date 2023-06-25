@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-abstract class Fluvera<T> extends StatelessWidget {
-  const Fluvera(this.json) : super(key: null);
+abstract class FluveraWidget<T> extends StatelessWidget {
+  const FluveraWidget(this.json) : super(key: null);
 
   final Map<String, dynamic> json;
 

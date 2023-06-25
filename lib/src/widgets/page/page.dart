@@ -3,7 +3,7 @@ import 'package:fluvera/src/core/provider/provider.dart';
 import 'package:fluvera/src/widgets/fluvera.dart';
 import 'package:fluvera/src/widgets/page/attributes/attributes.dart';
 
-class FluveraPage extends Fluvera<PageAttributes> {
+class FluveraPage extends FluveraWidget<PageAttributes> {
   const FluveraPage(Map<String, dynamic> json) : super(json);
 
   @override

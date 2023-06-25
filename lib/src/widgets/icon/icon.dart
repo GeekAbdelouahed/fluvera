@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluvera/src/widgets/fluvera.dart';
 import 'package:fluvera/src/widgets/icon/attributes/attributes.dart';
 
-class FluveraIcon extends Fluvera<IconAttributes> {
+class FluveraIcon extends FluveraWidget<IconAttributes> {
   const FluveraIcon(Map<String, dynamic> json) : super(json);
 
   @override
