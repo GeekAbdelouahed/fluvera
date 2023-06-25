@@ -1,3 +1,6 @@
+## 0.0.2+3
+
+* Update Fluvera base widget and base classes
 ## 0.0.2+2
 
 * Update FluveraFactory
