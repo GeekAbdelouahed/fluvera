@@ -1,7 +1,7 @@
 # Fluvera
 [![pub package](https://img.shields.io/pub/v/fluvera.svg)](https://pub.dartlang.org/packages/fluvera)
 
-Fluvera is a Flutter package designed to simplify the process of building user interfaces (UIs) based on JSON server responses. It provides an intuitive and efficient way to transform server data into dynamic and visually appealing UI components.
+Fluvera is a Flutter SDUI package designed to simplify the process of building user interfaces (UIs) based on JSON server responses. It provides an intuitive and efficient way to transform server data into dynamic and visually appealing UI components.
 
 ## Getting Started
 
