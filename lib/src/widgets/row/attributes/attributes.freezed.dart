@@ -259,7 +259,7 @@ abstract class _RowAttributes implements RowAttributes {
       final FluveraEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
       final FluveraEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
       @FluveraWidgetConverter()
-      required final List<Widget> children}) = _$_RowAttributes;
+          required final List<Widget> children}) = _$_RowAttributes;
 
   factory _RowAttributes.fromJson(Map<String, dynamic> json) =
       _$_RowAttributes.fromJson;

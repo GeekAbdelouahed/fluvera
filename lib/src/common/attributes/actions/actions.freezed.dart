@@ -52,8 +52,7 @@ mixin _$FluveraActions {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, @FluveraWidgetConverter() Widget child)
@@ -72,21 +71,14 @@ mixin _$FluveraActions {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(
-            String type, bool synchronized, String key, dynamic value)
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        putHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        deleteHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -94,8 +86,7 @@ mixin _$FluveraActions {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -114,21 +105,14 @@ mixin _$FluveraActions {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(
-            String type, bool synchronized, String key, dynamic value)?
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -136,8 +120,7 @@ mixin _$FluveraActions {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -158,18 +141,12 @@ mixin _$FluveraActions {
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -378,8 +355,7 @@ class _$PushRouteAction extends PushRouteAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, @FluveraWidgetConverter() Widget child)
@@ -398,21 +374,14 @@ class _$PushRouteAction extends PushRouteAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(
-            String type, bool synchronized, String key, dynamic value)
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        putHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        deleteHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
     return pushRoute(type, synchronized, routeName, queries);
   }
@@ -423,8 +392,7 @@ class _$PushRouteAction extends PushRouteAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -443,21 +411,14 @@ class _$PushRouteAction extends PushRouteAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(
-            String type, bool synchronized, String key, dynamic value)?
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
     return pushRoute?.call(type, synchronized, routeName, queries);
   }
@@ -468,8 +429,7 @@ class _$PushRouteAction extends PushRouteAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -490,18 +450,12 @@ class _$PushRouteAction extends PushRouteAction {
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
   }) {
     if (pushRoute != null) {
@@ -700,8 +654,7 @@ class _$PopRouteAction extends PopRouteAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, @FluveraWidgetConverter() Widget child)
@@ -720,21 +673,14 @@ class _$PopRouteAction extends PopRouteAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(
-            String type, bool synchronized, String key, dynamic value)
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        putHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        deleteHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
     return popRoute(type, synchronized, queries);
   }
@@ -745,8 +691,7 @@ class _$PopRouteAction extends PopRouteAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -765,21 +710,14 @@ class _$PopRouteAction extends PopRouteAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(
-            String type, bool synchronized, String key, dynamic value)?
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
     return popRoute?.call(type, synchronized, queries);
   }
@@ -790,8 +728,7 @@ class _$PopRouteAction extends PopRouteAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -812,18 +749,12 @@ class _$PopRouteAction extends PopRouteAction {
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
   }) {
     if (popRoute != null) {
@@ -1028,8 +959,7 @@ class _$ShowDialogAction extends ShowDialogAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, @FluveraWidgetConverter() Widget child)
@@ -1048,21 +978,14 @@ class _$ShowDialogAction extends ShowDialogAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(
-            String type, bool synchronized, String key, dynamic value)
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        putHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        deleteHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
     return showDialog(type, synchronized, barrierDismissible, child);
   }
@@ -1073,8 +996,7 @@ class _$ShowDialogAction extends ShowDialogAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -1093,21 +1015,14 @@ class _$ShowDialogAction extends ShowDialogAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(
-            String type, bool synchronized, String key, dynamic value)?
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
     return showDialog?.call(type, synchronized, barrierDismissible, child);
   }
@@ -1118,8 +1033,7 @@ class _$ShowDialogAction extends ShowDialogAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -1140,18 +1054,12 @@ class _$ShowDialogAction extends ShowDialogAction {
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
   }) {
     if (showDialog != null) {
@@ -1383,8 +1291,7 @@ class _$ShowBottomSheetAction extends ShowBottomSheetAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, @FluveraWidgetConverter() Widget child)
@@ -1403,21 +1310,14 @@ class _$ShowBottomSheetAction extends ShowBottomSheetAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(
-            String type, bool synchronized, String key, dynamic value)
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        putHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        deleteHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
     return showBottomSheet(
         type, synchronized, enableDrag, elevation, backgroundColor, child);
@@ -1429,8 +1329,7 @@ class _$ShowBottomSheetAction extends ShowBottomSheetAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -1449,21 +1348,14 @@ class _$ShowBottomSheetAction extends ShowBottomSheetAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(
-            String type, bool synchronized, String key, dynamic value)?
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
     return showBottomSheet?.call(
         type, synchronized, enableDrag, elevation, backgroundColor, child);
@@ -1475,8 +1367,7 @@ class _$ShowBottomSheetAction extends ShowBottomSheetAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -1497,18 +1388,12 @@ class _$ShowBottomSheetAction extends ShowBottomSheetAction {
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
   }) {
     if (showBottomSheet != null) {
@@ -1724,8 +1609,7 @@ class _$ShowSnackbarAction extends ShowSnackbarAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, @FluveraWidgetConverter() Widget child)
@@ -1744,21 +1628,14 @@ class _$ShowSnackbarAction extends ShowSnackbarAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(
-            String type, bool synchronized, String key, dynamic value)
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        putHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        deleteHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
     return showSnackbar(type, synchronized, backgroundColor, child);
   }
@@ -1769,8 +1646,7 @@ class _$ShowSnackbarAction extends ShowSnackbarAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -1789,21 +1665,14 @@ class _$ShowSnackbarAction extends ShowSnackbarAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(
-            String type, bool synchronized, String key, dynamic value)?
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
     return showSnackbar?.call(type, synchronized, backgroundColor, child);
   }
@@ -1814,8 +1683,7 @@ class _$ShowSnackbarAction extends ShowSnackbarAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -1836,18 +1704,12 @@ class _$ShowSnackbarAction extends ShowSnackbarAction {
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
   }) {
     if (showSnackbar != null) {
@@ -2051,8 +1913,7 @@ class _$UpdateAttributeAction extends UpdateAttributeAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, @FluveraWidgetConverter() Widget child)
@@ -2071,21 +1932,14 @@ class _$UpdateAttributeAction extends UpdateAttributeAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(
-            String type, bool synchronized, String key, dynamic value)
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        putHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        deleteHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
     return updateAttribute(type, synchronized, key, value);
   }
@@ -2096,8 +1950,7 @@ class _$UpdateAttributeAction extends UpdateAttributeAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -2116,21 +1969,14 @@ class _$UpdateAttributeAction extends UpdateAttributeAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(
-            String type, bool synchronized, String key, dynamic value)?
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
     return updateAttribute?.call(type, synchronized, key, value);
   }
@@ -2141,8 +1987,7 @@ class _$UpdateAttributeAction extends UpdateAttributeAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -2163,18 +2008,12 @@ class _$UpdateAttributeAction extends UpdateAttributeAction {
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
   }) {
     if (updateAttribute != null) {
@@ -2386,8 +2225,7 @@ class _$GetHttpAction extends GetHttpAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, @FluveraWidgetConverter() Widget child)
@@ -2406,21 +2244,14 @@ class _$GetHttpAction extends GetHttpAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(
-            String type, bool synchronized, String key, dynamic value)
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        putHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        deleteHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
     return getHttp(type, synchronized, url, headers);
   }
@@ -2431,8 +2262,7 @@ class _$GetHttpAction extends GetHttpAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -2451,21 +2281,14 @@ class _$GetHttpAction extends GetHttpAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(
-            String type, bool synchronized, String key, dynamic value)?
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
     return getHttp?.call(type, synchronized, url, headers);
   }
@@ -2476,8 +2299,7 @@ class _$GetHttpAction extends GetHttpAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -2498,18 +2320,12 @@ class _$GetHttpAction extends GetHttpAction {
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
   }) {
     if (getHttp != null) {
@@ -2737,8 +2553,7 @@ class _$PostHttpAction extends PostHttpAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, @FluveraWidgetConverter() Widget child)
@@ -2757,21 +2572,14 @@ class _$PostHttpAction extends PostHttpAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(
-            String type, bool synchronized, String key, dynamic value)
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        putHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        deleteHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
     return postHttp(type, synchronized, url, headers, body);
   }
@@ -2782,8 +2590,7 @@ class _$PostHttpAction extends PostHttpAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -2802,21 +2609,14 @@ class _$PostHttpAction extends PostHttpAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(
-            String type, bool synchronized, String key, dynamic value)?
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
     return postHttp?.call(type, synchronized, url, headers, body);
   }
@@ -2827,8 +2627,7 @@ class _$PostHttpAction extends PostHttpAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -2849,18 +2648,12 @@ class _$PostHttpAction extends PostHttpAction {
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
   }) {
     if (postHttp != null) {
@@ -3090,8 +2883,7 @@ class _$PutHttpAction extends PutHttpAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, @FluveraWidgetConverter() Widget child)
@@ -3110,21 +2902,14 @@ class _$PutHttpAction extends PutHttpAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(
-            String type, bool synchronized, String key, dynamic value)
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        putHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        deleteHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
     return putHttp(type, synchronized, url, headers, body);
   }
@@ -3135,8 +2920,7 @@ class _$PutHttpAction extends PutHttpAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -3155,21 +2939,14 @@ class _$PutHttpAction extends PutHttpAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(
-            String type, bool synchronized, String key, dynamic value)?
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
     return putHttp?.call(type, synchronized, url, headers, body);
   }
@@ -3180,8 +2957,7 @@ class _$PutHttpAction extends PutHttpAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -3202,18 +2978,12 @@ class _$PutHttpAction extends PutHttpAction {
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
   }) {
     if (putHttp != null) {
@@ -3443,8 +3213,7 @@ class _$DeleteHttpAction extends DeleteHttpAction {
     required TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)
         pushRoute,
-    required TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)
+    required TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)
         popRoute,
     required TResult Function(String type, bool synchronized,
             bool barrierDismissible, @FluveraWidgetConverter() Widget child)
@@ -3463,21 +3232,14 @@ class _$DeleteHttpAction extends DeleteHttpAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)
         showSnackbar,
-    required TResult Function(
-            String type, bool synchronized, String key, dynamic value)
+    required TResult Function(String type, bool synchronized, String key, dynamic value)
         updateAttribute,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)
+    required TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)
         getHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        postHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        putHttp,
-    required TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)
-        deleteHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) postHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) putHttp,
+    required TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body) deleteHttp,
   }) {
     return deleteHttp(type, synchronized, url, headers, body);
   }
@@ -3488,8 +3250,7 @@ class _$DeleteHttpAction extends DeleteHttpAction {
     TResult? Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult? Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult? Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult? Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -3508,21 +3269,14 @@ class _$DeleteHttpAction extends DeleteHttpAction {
             @FluveraColorConverter() Color? backgroundColor,
             @FluveraWidgetConverter() Widget child)?
         showSnackbar,
-    TResult? Function(
-            String type, bool synchronized, String key, dynamic value)?
+    TResult? Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult? Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult? Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult? Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
   }) {
     return deleteHttp?.call(type, synchronized, url, headers, body);
   }
@@ -3533,8 +3287,7 @@ class _$DeleteHttpAction extends DeleteHttpAction {
     TResult Function(String type, bool synchronized, String routeName,
             Map<String, dynamic>? queries)?
         pushRoute,
-    TResult Function(
-            String type, bool synchronized, Map<String, dynamic>? queries)?
+    TResult Function(String type, bool synchronized, Map<String, dynamic>? queries)?
         popRoute,
     TResult Function(String type, bool synchronized, bool barrierDismissible,
             @FluveraWidgetConverter() Widget child)?
@@ -3555,18 +3308,12 @@ class _$DeleteHttpAction extends DeleteHttpAction {
         showSnackbar,
     TResult Function(String type, bool synchronized, String key, dynamic value)?
         updateAttribute,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers)?
+    TResult Function(
+            String type, bool synchronized, String url, Map<String, String>? headers)?
         getHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        postHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        putHttp,
-    TResult Function(String type, bool synchronized, String url,
-            Map<String, String>? headers, dynamic body)?
-        deleteHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? postHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? putHttp,
+    TResult Function(String type, bool synchronized, String url, Map<String, String>? headers, dynamic body)? deleteHttp,
     required TResult orElse(),
   }) {
     if (deleteHttp != null) {

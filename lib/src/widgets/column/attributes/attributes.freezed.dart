@@ -261,7 +261,7 @@ abstract class _ColumnAttributes implements ColumnAttributes {
       final FluveraEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
       final FluveraEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
       @FluveraWidgetConverter()
-      required final List<Widget> children}) = _$_ColumnAttributes;
+          required final List<Widget> children}) = _$_ColumnAttributes;
 
   factory _ColumnAttributes.fromJson(Map<String, dynamic> json) =
       _$_ColumnAttributes.fromJson;

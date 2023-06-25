@@ -116,8 +116,9 @@ class __$$_AlignAttributesCopyWithImpl<$Res>
 class _$_AlignAttributes implements _AlignAttributes {
   const _$_AlignAttributes(
       {@FluveraAlignmentGeometryConverter()
-      this.alignment = AlignmentDirectional.center,
-      @FluveraWidgetConverter() this.child});
+          this.alignment = AlignmentDirectional.center,
+      @FluveraWidgetConverter()
+          this.child});
 
   factory _$_AlignAttributes.fromJson(Map<String, dynamic> json) =>
       _$$_AlignAttributesFromJson(json);

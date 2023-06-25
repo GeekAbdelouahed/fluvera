@@ -188,8 +188,9 @@ class _$_FractionallySizedBoxAttributes
       {this.widthFactor,
       this.heightFactor,
       @FluveraAlignmentGeometryConverter()
-      this.alignment = AlignmentDirectional.center,
-      @FluveraWidgetConverter() this.child});
+          this.alignment = AlignmentDirectional.center,
+      @FluveraWidgetConverter()
+          this.child});
 
   factory _$_FractionallySizedBoxAttributes.fromJson(
           Map<String, dynamic> json) =>
@@ -251,9 +252,10 @@ abstract class _FractionallySizedBoxAttributes
   const factory _FractionallySizedBoxAttributes(
       {final FluveraAttributeValue<num>? widthFactor,
       final FluveraAttributeValue<num>? heightFactor,
-      @FluveraAlignmentGeometryConverter() final AlignmentGeometry? alignment,
+      @FluveraAlignmentGeometryConverter()
+          final AlignmentGeometry? alignment,
       @FluveraWidgetConverter()
-      final Widget? child}) = _$_FractionallySizedBoxAttributes;
+          final Widget? child}) = _$_FractionallySizedBoxAttributes;
 
   factory _FractionallySizedBoxAttributes.fromJson(Map<String, dynamic> json) =
       _$_FractionallySizedBoxAttributes.fromJson;
