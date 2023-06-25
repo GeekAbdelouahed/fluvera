@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
 ```
 
 ## Contributing
-We welcome contributions from the Flutter community to help improve Fluvera. If you have suggestions, bug reports, or would like to contribute code, please refer to our contribution guidelines.
+We welcome contributions from the Flutter community to help improve Fluvera.
 
 ## LICENSE
 
