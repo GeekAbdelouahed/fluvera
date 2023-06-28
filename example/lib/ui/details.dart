@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fluvera/fluvera.dart';
 
-class ItemPage extends StatelessWidget {
-  const ItemPage({
+class DetailsPage extends StatelessWidget {
+  const DetailsPage({
     Key? key,
     required this.id,
   }) : super(key: key);
