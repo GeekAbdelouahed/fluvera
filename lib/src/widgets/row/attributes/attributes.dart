@@ -15,7 +15,7 @@ class RowAttributes with _$RowAttributes {
     FluveraEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
     @Default(FluveraEnumAttributeValue(value: 'center'))
     FluveraEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
-    @FluveraWidgetConverter() required List<Widget> children,
+    @Default(<Widget>[]) @FluveraWidgetConverter() List<Widget> children,
   }) = _RowAttributes;
 
   factory RowAttributes.fromJson(Map<String, dynamic> json) =>

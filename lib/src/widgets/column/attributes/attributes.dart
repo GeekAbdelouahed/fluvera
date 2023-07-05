@@ -15,7 +15,7 @@ class ColumnAttributes with _$ColumnAttributes {
     FluveraEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
     @Default(FluveraEnumAttributeValue<CrossAxisAlignment>(value: 'center'))
     FluveraEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
-    @FluveraWidgetConverter() required List<Widget> children,
+    @Default(<Widget>[]) @FluveraWidgetConverter() List<Widget> children,
   }) = _ColumnAttributes;
 
   factory ColumnAttributes.fromJson(Map<String, dynamic> json) =>

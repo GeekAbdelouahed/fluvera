@@ -191,7 +191,7 @@ class _$_RowAttributes implements _RowAttributes {
       this.mainAxisAlignment = const FluveraEnumAttributeValue(value: 'start'),
       this.crossAxisAlignment =
           const FluveraEnumAttributeValue(value: 'center'),
-      @FluveraWidgetConverter() required final List<Widget> children})
+      @FluveraWidgetConverter() final List<Widget> children = const <Widget>[]})
       : _children = children;
 
   factory _$_RowAttributes.fromJson(Map<String, dynamic> json) =>
@@ -208,6 +208,7 @@ class _$_RowAttributes implements _RowAttributes {
   final FluveraEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment;
   final List<Widget> _children;
   @override
+  @JsonKey()
   @FluveraWidgetConverter()
   List<Widget> get children {
     if (_children is EqualUnmodifiableListView) return _children;
@@ -259,7 +260,7 @@ abstract class _RowAttributes implements RowAttributes {
       final FluveraEnumAttributeValue<MainAxisAlignment> mainAxisAlignment,
       final FluveraEnumAttributeValue<CrossAxisAlignment> crossAxisAlignment,
       @FluveraWidgetConverter()
-          required final List<Widget> children}) = _$_RowAttributes;
+          final List<Widget> children}) = _$_RowAttributes;
 
   factory _RowAttributes.fromJson(Map<String, dynamic> json) =
       _$_RowAttributes.fromJson;

@@ -23,10 +23,11 @@ _$_RowAttributes _$$_RowAttributesFromJson(Map<String, dynamic> json) =>
           : FluveraEnumAttributeValue<CrossAxisAlignment>.fromJson(
               json['crossAxisAlignment'] as Map<String, dynamic>,
               (value) => $enumDecode(_$CrossAxisAlignmentEnumMap, value)),
-      children: (json['children'] as List<dynamic>)
-          .map((e) => const FluveraWidgetConverter()
-              .fromJson(e as Map<String, dynamic>))
-          .toList(),
+      children: (json['children'] as List<dynamic>?)
+              ?.map((e) => const FluveraWidgetConverter()
+                  .fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <Widget>[],
     );
 
 Map<String, dynamic> _$$_RowAttributesToJson(_$_RowAttributes instance) =>
