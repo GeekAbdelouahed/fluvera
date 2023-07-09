@@ -1,5 +1,5 @@
 name: fluvera
-description: Fluvera is a package designed to simplify the process of UI based on JSON.
+description: Fluvera is a Flutter package simplify the process of converting JSON to user interfaces.
 version: 0.0.2+3
 repository: https://github.com/GeekAbdelouahed/fluvera
 
